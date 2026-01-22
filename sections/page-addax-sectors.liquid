@@ -1,0 +1,1163 @@
+{% comment %}
+  Section: Addax Sectors Page
+  File: sections/page-addax-sectors.liquid
+{% endcomment %}
+
+<div class="addax-sectors-page section-{{ section.id }}">
+  
+  <!-- Hero Section -->
+  <section class="sectors-hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-image">
+          {%- if section.settings.hero_image != blank -%}
+            <img src="{{ section.settings.hero_image | image_url: width: 800 }}" alt="{{ section.settings.hero_title }}" loading="lazy">
+          {%- else -%}
+            <div class="placeholder-img">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="hero-content">
+          {%- if section.settings.hero_subtitle != blank -%}
+            <span class="hero-subtitle">{{ section.settings.hero_subtitle }}</span>
+          {%- endif -%}
+          <h1 class="hero-title">{{ section.settings.hero_title }}</h1>
+          <div class="hero-text">{{ section.settings.hero_text }}</div>
+          
+          {%- if section.settings.hero_feature_1 != blank -%}
+            <div class="hero-features">
+              <div class="feature-item">
+                <strong>{{ section.settings.hero_feature_1_title }}</strong>
+                <p>{{ section.settings.hero_feature_1 }}</p>
+              </div>
+              {%- if section.settings.hero_feature_2 != blank -%}
+                <div class="feature-item">
+                  <strong>{{ section.settings.hero_feature_2_title }}</strong>
+                  <p>{{ section.settings.hero_feature_2 }}</p>
+                </div>
+              {%- endif -%}
+              {%- if section.settings.hero_feature_3 != blank -%}
+                <div class="feature-item">
+                  <strong>{{ section.settings.hero_feature_3_title }}</strong>
+                  <p>{{ section.settings.hero_feature_3 }}</p>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          
+          {%- if section.settings.hero_btn_text != blank -%}
+            <a href="{{ section.settings.hero_btn_link }}" class="btn-primary">{{ section.settings.hero_btn_text }}</a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="section-divider"></div>
+  
+  <!-- Sector Sections -->
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      
+      {%- when 'sector_section' -%}
+        <section class="sector-section" {{ block.shopify_attributes }}>
+          <div class="container">
+            <div class="sector-header">
+              <h2 class="sector-title">{{ block.settings.title }}</h2>
+              {%- if block.settings.description != blank -%}
+                <p class="sector-description">{{ block.settings.description }}</p>
+              {%- endif -%}
+            </div>
+            
+            <div class="sector-cards">
+              {%- if block.settings.card_1_title != blank -%}
+                <div class="sector-card">
+                  <div class="card-image">
+                    {%- if block.settings.card_1_image != blank -%}
+                      <img src="{{ block.settings.card_1_image | image_url: width: 400 }}" alt="{{ block.settings.card_1_title }}" loading="lazy">
+                    {%- else -%}
+                      <div class="placeholder-img small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                  <div class="card-content">
+                    <h3>{{ block.settings.card_1_title }}</h3>
+                    <p>{{ block.settings.card_1_text }}</p>
+                  </div>
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.card_2_title != blank -%}
+                <div class="sector-card">
+                  <div class="card-image">
+                    {%- if block.settings.card_2_image != blank -%}
+                      <img src="{{ block.settings.card_2_image | image_url: width: 400 }}" alt="{{ block.settings.card_2_title }}" loading="lazy">
+                    {%- else -%}
+                      <div class="placeholder-img small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                  <div class="card-content">
+                    <h3>{{ block.settings.card_2_title }}</h3>
+                    <p>{{ block.settings.card_2_text }}</p>
+                  </div>
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.card_3_title != blank -%}
+                <div class="sector-card">
+                  <div class="card-image">
+                    {%- if block.settings.card_3_image != blank -%}
+                      <img src="{{ block.settings.card_3_image | image_url: width: 400 }}" alt="{{ block.settings.card_3_title }}" loading="lazy">
+                    {%- else -%}
+                      <div class="placeholder-img small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                  <div class="card-content">
+                    <h3>{{ block.settings.card_3_title }}</h3>
+                    <p>{{ block.settings.card_3_text }}</p>
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="section-divider"></div>
+        </section>
+      
+      {%- when 'why_choose' -%}
+        <section class="why-choose-section" {{ block.shopify_attributes }}>
+          <div class="container">
+            {%- if block.settings.logo != blank -%}
+              <div class="why-logo">
+                <img src="{{ block.settings.logo | image_url: width: 200 }}" alt="{{ block.settings.title }}">
+              </div>
+            {%- endif -%}
+            <h2 class="why-title">{{ block.settings.title }}</h2>
+            <p class="why-text">{{ block.settings.text }}</p>
+          </div>
+          <div class="section-divider"></div>
+        </section>
+      
+      {%- when 'product_range' -%}
+        <section class="product-range-section" {{ block.shopify_attributes }}>
+          <div class="container">
+            <h2 class="range-title">{{ block.settings.title }}</h2>
+            
+            <div class="range-grid">
+              {%- if block.settings.product_1_title != blank -%}
+                <div class="range-item">
+                  <div class="range-image">
+                    {%- if block.settings.product_1_image != blank -%}
+                      <img src="{{ block.settings.product_1_image | image_url: width: 600 }}" alt="{{ block.settings.product_1_title }}" loading="lazy">
+                    {%- endif -%}
+                  </div>
+                  <h3>{{ block.settings.product_1_title }}</h3>
+                  <p>{{ block.settings.product_1_text }}</p>
+                  {%- if block.settings.product_1_btn != blank -%}
+                    <a href="{{ block.settings.product_1_link }}" class="btn-primary">{{ block.settings.product_1_btn }}</a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.product_2_title != blank -%}
+                <div class="range-item">
+                  <div class="range-image">
+                    {%- if block.settings.product_2_image != blank -%}
+                      <img src="{{ block.settings.product_2_image | image_url: width: 600 }}" alt="{{ block.settings.product_2_title }}" loading="lazy">
+                    {%- endif -%}
+                  </div>
+                  <h3>{{ block.settings.product_2_title }}</h3>
+                  <p>{{ block.settings.product_2_text }}</p>
+                  {%- if block.settings.product_2_btn != blank -%}
+                    <a href="{{ block.settings.product_2_link }}" class="btn-primary">{{ block.settings.product_2_btn }}</a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="section-divider"></div>
+        </section>
+      
+      {%- when 'cta_form' -%}
+        <section class="cta-form-section" {{ block.shopify_attributes }}>
+          <div class="container">
+            <div class="cta-grid">
+              <div class="cta-content">
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.text }}</p>
+                {%- if block.settings.btn_text != blank -%}
+                  <a href="{{ block.settings.btn_link }}" class="btn-primary">{{ block.settings.btn_text }}</a>
+                {%- endif -%}
+                {%- if block.settings.footer_image != blank -%}
+                  <div class="cta-footer-image">
+                    <img src="{{ block.settings.footer_image | image_url: width: 600 }}" alt="{{ block.settings.title }}" loading="lazy">
+                  </div>
+                {%- endif -%}
+              </div>
+              
+              <div class="cta-form">
+                {%- if block.settings.phone != blank -%}
+                  <a href="tel:{{ block.settings.phone | remove: ' ' }}" class="call-btn">CALL NOW</a>
+                {%- endif -%}
+                
+                <div class="enquiry-form">
+                  <h5>{{ block.settings.form_title | default: 'GO GREEN TODAY ENQUIRE NOW' }}</h5>
+                  
+                  {% form 'contact', class: 'sectors-contact-form' %}
+                    {%- if form.posted_successfully? -%}
+                      <div class="form-success">
+                        <p>Thank you for your enquiry! We'll be in touch soon.</p>
+                      </div>
+                    {%- endif -%}
+                    
+                    {%- if form.errors -%}
+                      <div class="form-errors">
+                        {{ form.errors | default_errors }}
+                      </div>
+                    {%- endif -%}
+                    
+                    <input type="hidden" name="contact[subject]" value="Addax Sectors Page Enquiry">
+                    
+                    <div class="form-group">
+                      <input type="text" name="contact[name]" placeholder="NAME" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <input type="email" name="contact[email]" placeholder="EMAIL" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <input type="tel" name="contact[phone]" placeholder="Phone Number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <textarea name="contact[body]" rows="4" placeholder="MESSAGE" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Submit</button>
+                  {% endform %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+    {%- endcase -%}
+  {%- endfor -%}
+  
+</div>
+
+<style>
+.section-{{ section.id }} {
+  --primary-color: {{ section.settings.primary_color }};
+  --text-color: {{ section.settings.text_color }};
+  --heading-color: {{ section.settings.heading_color }};
+}
+
+.addax-sectors-page {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.addax-sectors-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* Section Divider */
+.addax-sectors-page .section-divider {
+  width: 100%;
+  max-width: 1500px;
+  margin: 20px auto;
+  height: 4px;
+  background-color: #6fb31a;
+  display: block;
+}
+
+
+/* ========== HERO SECTION ========== */
+.sectors-hero {
+  padding: 60px 0 40px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.hero-text {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: var(--text-color);
+}
+
+.hero-features {
+  margin-bottom: 30px;
+}
+
+.hero-features .feature-item {
+  margin-bottom: 20px;
+}
+
+.hero-features .feature-item strong {
+  display: block;
+  font-size: 16px;
+  color: var(--heading-color);
+  margin-bottom: 5px;
+}
+
+.hero-features .feature-item p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background: #5a9216;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ========== SECTOR SECTIONS ========== */
+.sector-section {
+  padding: 40px 0;
+}
+
+.sector-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sector-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 15px;
+}
+
+.sector-description {
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+.sector-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.sector-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.sector-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.sector-card .card-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.sector-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.sector-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.sector-card .card-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.sector-card .card-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 15px;
+}
+
+.sector-card .card-content p {
+  font-size: 14px;
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* ========== WHY CHOOSE SECTION ========== */
+.why-choose-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.why-logo {
+  margin-bottom: 20px;
+}
+
+.why-logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+  height: auto;
+}
+
+.why-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 15px;
+}
+
+.why-text {
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+/* ========== PRODUCT RANGE SECTION ========== */
+.product-range-section {
+  padding: 40px 0;
+}
+
+.range-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-color);
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.range-item {
+  text-align: center;
+}
+
+.range-item .range-image {
+  margin-bottom: 20px;
+}
+
+.range-item .range-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.range-item h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 15px;
+}
+
+.range-item p {
+  font-size: 15px;
+  color: var(--text-color);
+  margin: 0 0 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== CTA FORM SECTION ========== */
+.cta-form-section {
+  padding: 40px 0 60px;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.cta-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-color);
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.cta-content > p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0 0 25px;
+}
+
+.cta-content .btn-primary {
+  display: block;
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto 30px;
+}
+
+.cta-footer-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Form Styles */
+.call-btn {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+  transition: background 0.3s ease;
+  margin-bottom:15px;
+}
+
+.call-btn:hover {
+  background:rgb(23, 42, 53);
+  color: #fff;
+}
+
+.enquiry-form {
+  background: #ffffff;
+  padding: 10px;
+  border:2px solid #6fb31a;
+}
+
+.enquiry-form h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.enquiry-form .form-group {
+  margin-bottom: 15px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.enquiry-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.enquiry-form .btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enquiry-form .btn-submit:hover {
+  background: #5a9216;
+}
+
+.form-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.form-errors {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Placeholder */
+.placeholder-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-img svg {
+  width: 60px;
+  height: 60px;
+}
+
+.placeholder-img.small svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 991px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .hero-image {
+    order: -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .sector-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .sector-cards {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
+  .range-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .section-divider {
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+  }
+  
+  .sector-title,
+  .why-title,
+  .range-title {
+    font-size: 18px;
+  }
+  
+  .enquiry-form {
+    padding: 20px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Addax Sectors Page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Color",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Subtitle",
+      "default": "ELECTRIC UTILITY VEHICLES"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Addax Serving All Sectors"
+    },
+    {
+      "type": "richtext",
+      "id": "hero_text",
+      "label": "Description",
+      "default": "<p>Addax have a range of turnkey solutions available for all sectors. Whether you work in a county or city council, logistic and deliveries, or facilities management, Addax EUVs can help.</p>"
+    },
+    {
+      "type": "text",
+      "id": "hero_feature_1_title",
+      "label": "Feature 1 Title",
+      "default": "County and city management:"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_feature_1",
+      "label": "Feature 1 Text",
+      "default": "Addax have options for city management, whether you need solutions for waste management, maintaining parks and playgrounds, or road construction and maintenance."
+    },
+    {
+      "type": "text",
+      "id": "hero_feature_2_title",
+      "label": "Feature 2 Title",
+      "default": "Delivery and postal services:"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_feature_2",
+      "label": "Feature 2 Text",
+      "default": "With both standard and refrigerated trailer options available, Addax can help make your last mile deliveries more efficient, sustainable, and cost you less."
+    },
+    {
+      "type": "text",
+      "id": "hero_feature_3_title",
+      "label": "Feature 3 Title",
+      "default": "Facilities management:"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_feature_3",
+      "label": "Feature 3 Text",
+      "default": "Electric utility vehicles are ideal for intralogistics on large facilities, for helping out at amusement or holiday parks, or for transporting goods locally."
+    },
+    {
+      "type": "text",
+      "id": "hero_btn_text",
+      "label": "Button Text",
+      "default": "Explore Addax Range"
+    },
+    {
+      "type": "url",
+      "id": "hero_btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "sector_section",
+      "name": "Sector Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section Title",
+          "default": "Cities & Towns"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Section Description"
+        },
+        {
+          "type": "header",
+          "content": "Card 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_1_image",
+          "label": "Image 1"
+        },
+        {
+          "type": "text",
+          "id": "card_1_title",
+          "label": "Title 1",
+          "default": "City Management & Maintenance"
+        },
+        {
+          "type": "textarea",
+          "id": "card_1_text",
+          "label": "Text 1"
+        },
+        {
+          "type": "header",
+          "content": "Card 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_2_image",
+          "label": "Image 2"
+        },
+        {
+          "type": "text",
+          "id": "card_2_title",
+          "label": "Title 2",
+          "default": "Parks & Playground Management"
+        },
+        {
+          "type": "textarea",
+          "id": "card_2_text",
+          "label": "Text 2"
+        },
+        {
+          "type": "header",
+          "content": "Card 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_3_image",
+          "label": "Image 3"
+        },
+        {
+          "type": "text",
+          "id": "card_3_title",
+          "label": "Title 3",
+          "default": "Road Construction & Maintenance"
+        },
+        {
+          "type": "textarea",
+          "id": "card_3_text",
+          "label": "Text 3"
+        }
+      ]
+    },
+    {
+      "type": "why_choose",
+      "name": "Why Choose Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Why Choose Clenli Direct"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "product_range",
+      "name": "Product Range",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section Title",
+          "default": "The Addax Range"
+        },
+        {
+          "type": "header",
+          "content": "Product 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_1_image",
+          "label": "Image 1"
+        },
+        {
+          "type": "text",
+          "id": "product_1_title",
+          "label": "Title 1",
+          "default": "Addax MTN"
+        },
+        {
+          "type": "textarea",
+          "id": "product_1_text",
+          "label": "Text 1"
+        },
+        {
+          "type": "text",
+          "id": "product_1_btn",
+          "label": "Button Text 1",
+          "default": "View the Addax MTN"
+        },
+        {
+          "type": "url",
+          "id": "product_1_link",
+          "label": "Button Link 1"
+        },
+        {
+          "type": "header",
+          "content": "Product 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_2_image",
+          "label": "Image 2"
+        },
+        {
+          "type": "text",
+          "id": "product_2_title",
+          "label": "Title 2",
+          "default": "Addax MTX"
+        },
+        {
+          "type": "textarea",
+          "id": "product_2_text",
+          "label": "Text 2"
+        },
+        {
+          "type": "text",
+          "id": "product_2_btn",
+          "label": "Button Text 2",
+          "default": "View the Addax MTX"
+        },
+        {
+          "type": "url",
+          "id": "product_2_link",
+          "label": "Button Link 2"
+        }
+      ]
+    },
+    {
+      "type": "cta_form",
+      "name": "CTA with Form",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Don't Get Left Behind"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business."
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "footer_image",
+          "label": "Footer Image"
+        },
+        {
+          "type": "header",
+          "content": "Form Settings"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "Phone Number",
+          "default": "01 811 89 20"
+        },
+        {
+          "type": "text",
+          "id": "form_title",
+          "label": "Form Title",
+          "default": "GO GREEN TODAY ENQUIRE NOW"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Addax Sectors Page",
+      "blocks": [
+        {
+          "type": "sector_section",
+          "settings": {
+            "title": "Cities & Towns",
+            "description": "Addax electric utility vehicles combine compact design with exceptional agility, making them the ideal solution for maintaining clean and orderly cities and towns.",
+            "card_1_title": "City Management & Maintenance",
+            "card_1_text": "Efficient waste management is essential for maintaining a healthy and thriving city. Addax all-electric utility vehicles are designed to meet your city's unique needs.",
+            "card_2_title": "Parks & Playground Management",
+            "card_2_text": "Addax electric vehicles are perfect for managing parks and playgrounds. When customized as cargo vans, they're ideal for transporting toys, tools, and equipment.",
+            "card_3_title": "Road Construction & Maintenance",
+            "card_3_text": "For road construction and maintenance, Addax electric vehicles are a top choice. Their impressive loading capacity makes transporting materials efficient."
+          }
+        },
+        {
+          "type": "sector_section",
+          "settings": {
+            "title": "Industrial & Facilities Management",
+            "description": "Built with a focus on sustainability, innovation, and reliability, Addax electric utility vehicles offer unmatched performance and efficiency.",
+            "card_1_title": "Environmentally Friendly",
+            "card_1_text": "Addax electric vehicles enhance efficiency while promoting sustainability. Powered by fully recyclable lithium-iron-phosphate batteries.",
+            "card_2_title": "Designed for Intralogistics",
+            "card_2_text": "Addax lightweight vehicles are tailored to meet your logistics and transportation needs, seamlessly integrating into your workflow.",
+            "card_3_title": "Amusement & Holiday Parks",
+            "card_3_text": "Addax electric vehicles are perfect for amusement and holiday parks, blending functionality with eco-friendliness."
+          }
+        },
+        {
+          "type": "sector_section",
+          "settings": {
+            "title": "Last Mile Delivery",
+            "description": "Streamline urban deliveries with the reliable and efficient electric utility vehicles from Addax Motors.",
+            "card_1_title": "Urban Delivery Vehicles",
+            "card_1_text": "With urban areas tightening restrictions on traditional vehicles, emission-free delivery solutions are more crucial than ever.",
+            "card_2_title": "Agile for Evolving Markets",
+            "card_2_text": "Ecommerce growth poses new challenges for urban logistics. Addax light utility vehicles are designed to navigate narrow streets effortlessly.",
+            "card_3_title": "Efficient & Reliable Delivery",
+            "card_3_text": "Proudly 100% Belgian, Addax creates adaptable light electric utility vehicles that combine functionality, agility, and customer satisfaction."
+          }
+        },
+        {
+          "type": "sector_section",
+          "settings": {
+            "title": "Postal Services",
+            "description": "For companies prioritizing efficient delivery, Addax electric utility vehicles deliver the ideal combination of performance and adaptability.",
+            "card_1_title": "Post Delivery Reimagined",
+            "card_1_text": "Addax electric utility vehicles redefine efficiency for postal deliveries. Customizable interiors keep everything organized.",
+            "card_2_title": "Silent, Efficient Vehicles",
+            "card_2_text": "Unlike noisy diesel vans, Addax electric vehicles operate silently, allowing for early-morning or late-night deliveries.",
+            "card_3_title": "Best-in-Class Manoeuvrability",
+            "card_3_text": "Addax light electric vehicles excel in agility. With a tight 4.5m turning radius, they navigate narrow streets effortlessly."
+          }
+        },
+        {
+          "type": "why_choose",
+          "settings": {
+            "title": "Why Choose Clenli Direct",
+            "text": "With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader in the cleaning industry, offering award-winning cleaning solutions, comprehensive support, and our own expert in-house service team."
+          }
+        },
+        {
+          "type": "product_range",
+          "settings": {
+            "title": "The Addax Range",
+            "product_1_title": "Addax MTN",
+            "product_1_text": "The Addax MTN is a compact, fully electric utility vehicle built for urban logistics. With a 6m³ cargo volume, 1,000 kg payload, and a 4.5-meter turning radius.",
+            "product_1_btn": "View the Addax MTN",
+            "product_2_title": "Addax MTX",
+            "product_2_text": "The Addax MTX is a robust, fully electric utility vehicle with a 7 m³ cargo space, 1,000 kg payload, and compact 1.40 m width.",
+            "product_2_btn": "View the Addax MTX"
+          }
+        },
+        {
+          "type": "cta_form",
+          "settings": {
+            "title": "Don't Get Left Behind",
+            "text": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.",
+            "btn_text": "Learn More",
+            "phone": "01 811 89 20",
+            "form_title": "GO GREEN TODAY ENQUIRE NOW"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

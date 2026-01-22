@@ -1,0 +1,1284 @@
+{% comment %}
+  =====================================================
+  BLOG PAGE - SHOPIFY SECTION
+  Clenli Direct Clone - Single File (CSS Included)
+  =====================================================
+  
+  INSTALLATION:
+  1. Shopify Admin → Online Store → Themes → Edit Code
+  2. Sections folder → Add new section → Name: blog-page
+  3. Delete default code → Paste this entire file → Save
+  4. Use as main-blog.liquid or create custom blog template
+  
+{% endcomment %}
+
+{%- style -%}
+/* =====================================================
+   BLOG PAGE - COMPLETE CSS
+   ===================================================== */
+
+/* Variables */
+.blog-page {
+  --clenli-green: {{ section.settings.primary_color }};
+  --clenli-green-dark: {{ section.settings.primary_color | color_darken: 15 }};
+  --clenli-dark: #333;
+  --clenli-gray: #666;
+  --clenli-light-gray: #999;
+  --clenli-border: #eee;
+  --clenli-bg-light: #f8f9fa;
+  --clenli-white: #fff;
+  --clenli-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  --clenli-transition: all 0.3s ease;
+}
+
+.blog-page * {
+  box-sizing: border-box;
+}
+
+.blog-page {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--clenli-dark);
+  background: var(--clenli-white);
+}
+
+/* Container */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* =====================================================
+   BREADCRUMB
+   ===================================================== */
+.blog-breadcrumb {
+  background: var(--clenli-bg-light);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.blog-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.blog-breadcrumb__list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blog-breadcrumb__list li:not(:last-child)::after {
+  content: '/';
+  color: var(--clenli-light-gray);
+}
+
+.blog-breadcrumb__list a {
+  color: var(--clenli-gray);
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.blog-breadcrumb__list a:hover {
+  color: var(--clenli-green);
+}
+
+.blog-breadcrumb__list strong {
+  color: var(--clenli-dark);
+  font-weight: 600;
+}
+
+/* =====================================================
+   PAGE TITLE
+   ===================================================== */
+.blog-page-title {
+  padding: 40px 0 30px;
+  text-align: center;
+  border-bottom: 1px solid var(--clenli-border);
+  margin-bottom: 40px;
+}
+
+.blog-page-title h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--clenli-dark);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   MAIN LAYOUT
+   ===================================================== */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  padding: 0 0 60px;
+}
+
+@media (max-width: 991px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .blog-sidebar {
+    order: 2;
+  }
+}
+
+/* =====================================================
+   POST LIST
+   ===================================================== */
+.blog-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-post-item {
+  border-bottom: 1px solid var(--clenli-border);
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+}
+
+.blog-post-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Post Header */
+.blog-post__header {
+  margin-bottom: 15px;
+}
+
+.blog-post__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.blog-post__title a {
+  color: var(--clenli-dark);
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.blog-post__title a:hover {
+  color: var(--clenli-green);
+}
+
+/* Post Meta */
+.blog-post__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+  color: var(--clenli-gray);
+}
+
+.blog-post__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog-post__meta-item .label {
+  color: var(--clenli-light-gray);
+}
+
+.blog-post__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.blog-post__category {
+  color: var(--clenli-green);
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.blog-post__category:hover {
+  color: var(--clenli-green-dark);
+  text-decoration: underline;
+}
+
+.blog-post__date {
+  color: var(--clenli-gray);
+}
+
+/* Post Content */
+.blog-post__content {
+  margin-bottom: 15px;
+}
+
+.blog-post__image {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog-post__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--clenli-transition);
+}
+
+.blog-post__image:hover img {
+  transform: scale(1.02);
+}
+
+.blog-post__excerpt {
+  color: var(--clenli-gray);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Read More */
+.blog-post__read-more {
+  display: inline-block;
+  color: var(--clenli-green);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.blog-post__read-more:hover {
+  color: var(--clenli-green-dark);
+  text-decoration: underline;
+}
+
+/* Social Share */
+.blog-post__share {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.blog-post__share-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clenli-white);
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.blog-post__share-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.blog-post__share-btn--facebook {
+  background: #3b5998;
+}
+
+.blog-post__share-btn--twitter {
+  background: #1da1f2;
+}
+
+.blog-post__share-btn--email {
+  background: #666;
+}
+
+.blog-post__share-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* =====================================================
+   PAGINATION
+   ===================================================== */
+.blog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 30px 0;
+  border-top: 1px solid var(--clenli-border);
+  margin-top: 20px;
+}
+
+.blog-pagination__item {
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--clenli-border);
+  border-radius: 4px;
+  color: var(--clenli-gray);
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--clenli-transition);
+  padding: 0 12px;
+}
+
+.blog-pagination__item:hover {
+  border-color: var(--clenli-green);
+  color: var(--clenli-green);
+}
+
+.blog-pagination__item--current {
+  background: var(--clenli-green);
+  border-color: var(--clenli-green);
+  color: var(--clenli-white);
+}
+
+.blog-pagination__item--current:hover {
+  color: var(--clenli-white);
+}
+
+.blog-pagination__item--next,
+.blog-pagination__item--prev {
+  font-weight: 600;
+}
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Widget Block */
+.blog-widget {
+  background: var(--clenli-white);
+  border: 1px solid var(--clenli-border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.blog-widget__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--clenli-dark);
+  margin: 0 0 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--clenli-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Categories Widget */
+.blog-widget__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-widget__list-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.blog-widget__list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-widget__list-item:first-child {
+  padding-top: 0;
+}
+
+.blog-widget__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--clenli-gray);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--clenli-transition);
+}
+
+.blog-widget__link:hover {
+  color: var(--clenli-green);
+}
+
+.blog-widget__count {
+  color: var(--clenli-light-gray);
+  font-size: 13px;
+}
+
+/* Recent Posts Widget */
+.blog-widget__recent-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.blog-widget__recent-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-widget__recent-item:first-child {
+  padding-top: 0;
+}
+
+.blog-widget__recent-link {
+  color: var(--clenli-gray);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  display: block;
+  transition: var(--clenli-transition);
+}
+
+.blog-widget__recent-link:hover {
+  color: var(--clenli-green);
+}
+
+/* Tags Widget */
+.blog-widget__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.blog-widget__tag {
+  display: inline-block;
+  padding: 5px 12px;
+  background: var(--clenli-bg-light);
+  border: 1px solid var(--clenli-border);
+  border-radius: 20px;
+  color: var(--clenli-gray);
+  font-size: 12px;
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.blog-widget__tag:hover {
+  background: var(--clenli-green);
+  border-color: var(--clenli-green);
+  color: var(--clenli-white);
+}
+
+.blog-widget__tag--large {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   FEATURED PRODUCTS SECTION
+   ===================================================== */
+.blog-products-section {
+  background: var(--clenli-bg-light);
+  padding: 50px 0;
+  margin-top: 40px;
+}
+
+.blog-products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .blog-products__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-products__column {
+  background: var(--clenli-white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--clenli-shadow);
+}
+
+.blog-products__column-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--clenli-dark);
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--clenli-green);
+  text-transform: uppercase;
+}
+
+/* Product Card */
+.blog-product-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.blog-product-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-product-card:first-child {
+  padding-top: 0;
+}
+
+.blog-product-card__image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--clenli-bg-light);
+}
+
+.blog-product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-product-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-product-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.blog-product-card__title a {
+  color: var(--clenli-dark);
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.blog-product-card__title a:hover {
+  color: var(--clenli-green);
+}
+
+.blog-product-card__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--clenli-green);
+  margin: 0;
+}
+
+.blog-product-card__price-old {
+  font-size: 13px;
+  color: var(--clenli-light-gray);
+  text-decoration: line-through;
+  margin-right: 8px;
+  font-weight: 400;
+}
+
+.blog-product-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.blog-product-card__stars {
+  color: #ffc107;
+  font-size: 12px;
+}
+
+.blog-product-card__reviews {
+  font-size: 12px;
+  color: var(--clenli-light-gray);
+}
+
+/* =====================================================
+   NEWSLETTER
+   ===================================================== */
+.blog-newsletter {
+  background: linear-gradient(135deg, var(--clenli-green) 0%, var(--clenli-green-dark) 100%);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.blog-newsletter__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--clenli-white);
+  margin: 0 0 10px;
+}
+
+.blog-newsletter__subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 25px;
+}
+
+.blog-newsletter__form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .blog-newsletter__form {
+    flex-direction: column;
+  }
+}
+
+.blog-newsletter__input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.blog-newsletter__input:focus {
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.blog-newsletter__btn {
+  padding: 14px 30px;
+  background: var(--clenli-dark);
+  color: var(--clenli-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--clenli-transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.blog-newsletter__btn:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   NO POSTS
+   ===================================================== */
+.blog-no-posts {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--clenli-bg-light);
+  border-radius: 8px;
+}
+
+.blog-no-posts__icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  fill: var(--clenli-light-gray);
+}
+
+.blog-no-posts__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin: 0 0 10px;
+}
+
+.blog-no-posts__text {
+  color: var(--clenli-gray);
+  margin: 0;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+  .blog-page-title {
+    padding: 30px 0 20px;
+  }
+  
+  .blog-page-title h1 {
+    font-size: 28px;
+  }
+  
+  .blog-layout {
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .blog-post__title {
+    font-size: 18px;
+  }
+  
+  .blog-post__meta {
+    gap: 10px;
+    font-size: 12px;
+  }
+  
+  .blog-products-section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-container {
+    padding: 0 12px;
+  }
+  
+  .blog-page-title h1 {
+    font-size: 24px;
+  }
+  
+  .blog-widget {
+    padding: 15px;
+  }
+  
+  .blog-pagination {
+    gap: 5px;
+  }
+  
+  .blog-pagination__item {
+    min-width: 32px;
+    height: 32px;
+    font-size: 13px;
+    padding: 0 8px;
+  }
+}
+{%- endstyle -%}
+
+<!-- =====================================================
+     HTML STRUCTURE START
+     ===================================================== -->
+<div class="blog-page">
+
+  <!-- BREADCRUMB -->
+  <nav class="blog-breadcrumb">
+    <div class="blog-container">
+      <ul class="blog-breadcrumb__list">
+        <li><a href="{{ routes.root_url }}">Home</a></li>
+        <li><strong>{{ blog.title | default: section.settings.page_title }}</strong></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE TITLE -->
+  <div class="blog-page-title">
+    <div class="blog-container">
+      <h1>{{ blog.title | default: section.settings.page_title }}</h1>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="blog-container">
+    <div class="blog-layout">
+      
+      <!-- POSTS LIST -->
+      <main class="blog-main">
+        {%- if blog.articles.size > 0 -%}
+          <ol class="blog-post-list">
+            {%- paginate blog.articles by section.settings.posts_per_page -%}
+              {%- for article in blog.articles -%}
+                <li class="blog-post-item">
+                  <!-- Post Header -->
+                  <div class="blog-post__header">
+                    <h2 class="blog-post__title">
+                      <a href="{{ article.url }}">{{ article.title | truncate: 60 }}</a>
+                    </h2>
+                    
+                    <!-- Social Share (next to title) -->
+                    <div class="blog-post__share">
+                      <a href="https://www.facebook.com/sharer/sharer.php?u={{ article.url | prepend: shop.url }}" 
+                         target="_blank" 
+                         rel="noopener" 
+                         class="blog-post__share-btn blog-post__share-btn--facebook"
+                         aria-label="Share on Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                      </a>
+                      <a href="https://twitter.com/intent/tweet?url={{ article.url | prepend: shop.url }}&text={{ article.title | url_encode }}" 
+                         target="_blank" 
+                         rel="noopener" 
+                         class="blog-post__share-btn blog-post__share-btn--twitter"
+                         aria-label="Share on Twitter">
+                        <svg viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
+                      </a>
+                      <a href="mailto:?subject={{ article.title | url_encode }}&body={{ article.url | prepend: shop.url }}" 
+                         class="blog-post__share-btn blog-post__share-btn--email"
+                         aria-label="Share via Email">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                      </a>
+                    </div>
+                    
+                    <!-- Meta Info -->
+                    <div class="blog-post__meta">
+                      {%- if article.tags.size > 0 -%}
+                        <div class="blog-post__meta-item">
+                          <span class="label">Categories:</span>
+                          <div class="blog-post__categories">
+                            {%- for tag in article.tags limit: 3 -%}
+                              <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="blog-post__category">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                            {%- endfor -%}
+                          </div>
+                        </div>
+                      {%- endif -%}
+                      
+                      <div class="blog-post__meta-item">
+                        <span class="label">Posted:</span>
+                        <span class="blog-post__date">{{ article.published_at | date: "%B %d, %Y" }}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Post Content -->
+                  <div class="blog-post__content">
+                    {%- if section.settings.show_featured_image and article.image -%}
+                      <a href="{{ article.url }}" class="blog-post__image">
+                        <img 
+                          src="{{ article.image | image_url: width: 800 }}" 
+                          alt="{{ article.image.alt | default: article.title }}"
+                          loading="lazy"
+                          width="800"
+                          height="{{ 800 | divided_by: article.image.aspect_ratio | round }}"
+                        >
+                      </a>
+                    {%- endif -%}
+                    
+                    <p class="blog-post__excerpt">{{ article.excerpt_or_content | strip_html | truncate: 350 }}</p>
+                  </div>
+                  
+                  <!-- Read More -->
+                  <a href="{{ article.url }}" class="blog-post__read-more">Read more »</a>
+                </li>
+              {%- endfor -%}
+              
+              <!-- PAGINATION -->
+              {%- if paginate.pages > 1 -%}
+                <nav class="blog-pagination" aria-label="Pagination">
+                  {%- if paginate.previous -%}
+                    <a href="{{ paginate.previous.url }}" class="blog-pagination__item blog-pagination__item--prev">
+                      « Prev
+                    </a>
+                  {%- endif -%}
+                  
+                  {%- for part in paginate.parts -%}
+                    {%- if part.is_link -%}
+                      <a href="{{ part.url }}" class="blog-pagination__item">{{ part.title }}</a>
+                    {%- else -%}
+                      {%- if part.title == paginate.current_page -%}
+                        <span class="blog-pagination__item blog-pagination__item--current">{{ part.title }}</span>
+                      {%- else -%}
+                        <span class="blog-pagination__item">{{ part.title }}</span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                  
+                  {%- if paginate.next -%}
+                    <a href="{{ paginate.next.url }}" class="blog-pagination__item blog-pagination__item--next">
+                      Next »
+                    </a>
+                  {%- endif -%}
+                </nav>
+              {%- endif -%}
+            {%- endpaginate -%}
+          </ol>
+        {%- else -%}
+          <div class="blog-no-posts">
+            <svg class="blog-no-posts__icon" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+            <h3 class="blog-no-posts__title">No posts yet</h3>
+            <p class="blog-no-posts__text">Check back soon for new content!</p>
+          </div>
+        {%- endif -%}
+      </main>
+      
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar">
+        
+        <!-- Categories Widget -->
+        {%- if section.settings.show_categories -%}
+          <div class="blog-widget">
+            <h3 class="blog-widget__title">Categories</h3>
+            <ul class="blog-widget__list">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'category' -%}
+                  <li class="blog-widget__list-item" {{ block.shopify_attributes }}>
+                    <a href="{{ blog.url }}/tagged/{{ block.settings.category_handle }}" class="blog-widget__link">
+                      <span>{{ block.settings.category_name }}</span>
+                      {%- if block.settings.category_count != blank -%}
+                        <span class="blog-widget__count">({{ block.settings.category_count }})</span>
+                      {%- endif -%}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+        
+        <!-- Recent Posts Widget -->
+        {%- if section.settings.show_recent_posts -%}
+          <div class="blog-widget">
+            <h3 class="blog-widget__title">Recent Posts</h3>
+            <div class="blog-widget__recent">
+              {%- for article in blog.articles limit: section.settings.recent_posts_count -%}
+                <div class="blog-widget__recent-item">
+                  <a href="{{ article.url }}" class="blog-widget__recent-link">{{ article.title }}</a>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+        
+        <!-- Archive Widget -->
+        {%- if section.settings.show_archive -%}
+          <div class="blog-widget">
+            <h3 class="blog-widget__title">Archive</h3>
+            <div class="blog-widget__archive">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'archive_month' -%}
+                  <div class="blog-widget__list-item" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.archive_url }}" class="blog-widget__link">
+                      {{ block.settings.archive_month }}
+                    </a>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+        
+        <!-- Tags Widget -->
+        {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
+          <div class="blog-widget">
+            <h3 class="blog-widget__title">Tags</h3>
+            <div class="blog-widget__tags">
+              {%- for tag in blog.all_tags limit: 20 -%}
+                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="blog-widget__tag">{{ tag }}</a>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+        
+      </aside>
+      
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS SECTION -->
+  {%- if section.settings.show_products -%}
+    <section class="blog-products-section">
+      <div class="blog-container">
+        <div class="blog-products__grid">
+          
+          <!-- Featured Products -->
+          {%- if section.settings.featured_collection != blank -%}
+            <div class="blog-products__column">
+              <h3 class="blog-products__column-title">Featured Products</h3>
+              {%- assign featured_collection = collections[section.settings.featured_collection] -%}
+              {%- for product in featured_collection.products limit: 3 -%}
+                <div class="blog-product-card">
+                  <a href="{{ product.url }}" class="blog-product-card__image">
+                    {%- if product.featured_image -%}
+                      <img src="{{ product.featured_image | image_url: width: 160 }}" alt="{{ product.title }}" loading="lazy">
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    {%- endif -%}
+                  </a>
+                  <div class="blog-product-card__info">
+                    <h4 class="blog-product-card__title">
+                      <a href="{{ product.url }}">{{ product.title | truncate: 50 }}</a>
+                    </h4>
+                    <p class="blog-product-card__price">
+                      {%- if product.compare_at_price > product.price -%}
+                        <span class="blog-product-card__price-old">{{ product.compare_at_price | money }}</span>
+                      {%- endif -%}
+                      {{ product.price | money }}
+                    </p>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+          
+          <!-- New Products -->
+          {%- if section.settings.new_collection != blank -%}
+            <div class="blog-products__column">
+              <h3 class="blog-products__column-title">New Products</h3>
+              {%- assign new_collection = collections[section.settings.new_collection] -%}
+              {%- for product in new_collection.products limit: 3 -%}
+                <div class="blog-product-card">
+                  <a href="{{ product.url }}" class="blog-product-card__image">
+                    {%- if product.featured_image -%}
+                      <img src="{{ product.featured_image | image_url: width: 160 }}" alt="{{ product.title }}" loading="lazy">
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    {%- endif -%}
+                  </a>
+                  <div class="blog-product-card__info">
+                    <h4 class="blog-product-card__title">
+                      <a href="{{ product.url }}">{{ product.title | truncate: 50 }}</a>
+                    </h4>
+                    <p class="blog-product-card__price">
+                      {%- if product.compare_at_price > product.price -%}
+                        <span class="blog-product-card__price-old">{{ product.compare_at_price | money }}</span>
+                      {%- endif -%}
+                      {{ product.price | money }}
+                    </p>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+          
+          <!-- Best Seller -->
+          {%- if section.settings.bestseller_collection != blank -%}
+            <div class="blog-products__column">
+              <h3 class="blog-products__column-title">Best Seller</h3>
+              {%- assign bestseller_collection = collections[section.settings.bestseller_collection] -%}
+              {%- for product in bestseller_collection.products limit: 3 -%}
+                <div class="blog-product-card">
+                  <a href="{{ product.url }}" class="blog-product-card__image">
+                    {%- if product.featured_image -%}
+                      <img src="{{ product.featured_image | image_url: width: 160 }}" alt="{{ product.title }}" loading="lazy">
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    {%- endif -%}
+                  </a>
+                  <div class="blog-product-card__info">
+                    <h4 class="blog-product-card__title">
+                      <a href="{{ product.url }}">{{ product.title | truncate: 50 }}</a>
+                    </h4>
+                    <p class="blog-product-card__price">
+                      {%- if product.compare_at_price > product.price -%}
+                        <span class="blog-product-card__price-old">{{ product.compare_at_price | money }}</span>
+                      {%- endif -%}
+                      {{ product.price | money }}
+                    </p>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+          
+        </div>
+      </div>
+    </section>
+  {%- endif -%}
+
+  <!-- NEWSLETTER -->
+
+
+</div>
+
+{% schema %}
+{
+  "name": "Blog Page",
+  "tag": "section",
+  "class": "blog-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "🎨 Colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Color (Green)",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "header",
+      "content": "📝 Page Settings"
+    },
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title",
+      "default": "Blog"
+    },
+    {
+      "type": "range",
+      "id": "posts_per_page",
+      "label": "Posts Per Page",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "checkbox",
+      "id": "show_featured_image",
+      "label": "Show Featured Images",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "📂 Sidebar Widgets"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_categories",
+      "label": "Show Categories Widget",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_recent_posts",
+      "label": "Show Recent Posts Widget",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "recent_posts_count",
+      "label": "Recent Posts Count",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_archive",
+      "label": "Show Archive Widget",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show Tags Widget",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "🛒 Product Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_products",
+      "label": "Show Products Section",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Featured Products Collection"
+    },
+    {
+      "type": "collection",
+      "id": "new_collection",
+      "label": "New Products Collection"
+    },
+    {
+      "type": "collection",
+      "id": "bestseller_collection",
+      "label": "Best Seller Collection"
+    },
+    {
+      "type": "header",
+      "content": "📧 Newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show Newsletter Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter Title",
+      "default": "Sign up to Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_subtitle",
+      "label": "Newsletter Subtitle",
+      "default": "And receive latest updates."
+    },
+    {
+      "type": "text",
+      "id": "newsletter_placeholder",
+      "label": "Email Placeholder",
+      "default": "Enter your email address"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_button",
+      "label": "Button Text",
+      "default": "Sign up"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name",
+          "default": "Category"
+        },
+        {
+          "type": "text",
+          "id": "category_handle",
+          "label": "Category Handle (Tag)",
+          "info": "Use the tag handle (e.g., 'cleaning-tips')"
+        },
+        {
+          "type": "text",
+          "id": "category_count",
+          "label": "Post Count",
+          "default": "5"
+        }
+      ]
+    },
+    {
+      "type": "archive_month",
+      "name": "Archive Month",
+      "settings": [
+        {
+          "type": "text",
+          "id": "archive_month",
+          "label": "Month/Year",
+          "default": "January 2025"
+        },
+        {
+          "type": "url",
+          "id": "archive_url",
+          "label": "Archive URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Page",
+      "blocks": [
+        { "type": "category", "settings": { "category_name": "Sweepers", "category_handle": "sweepers", "category_count": "3" } },
+        { "type": "category", "settings": { "category_name": "Robotics", "category_handle": "robotics", "category_count": "2" } },
+        { "type": "category", "settings": { "category_name": "Vacuums", "category_handle": "vacuums", "category_count": "6" } },
+        { "type": "category", "settings": { "category_name": "Carpet Cleaning", "category_handle": "carpet-cleaning", "category_count": "6" } },
+        { "type": "category", "settings": { "category_name": "Window Cleaning", "category_handle": "window-cleaning", "category_count": "4" } },
+        { "type": "category", "settings": { "category_name": "Sustainability", "category_handle": "sustainability", "category_count": "4" } },
+        { "type": "category", "settings": { "category_name": "Cleaning Tips", "category_handle": "cleaning-tips", "category_count": "12" } },
+        { "type": "category", "settings": { "category_name": "Scrubber Dryers", "category_handle": "scrubber-dryers", "category_count": "14" } },
+        { "type": "category", "settings": { "category_name": "Announcements", "category_handle": "announcements", "category_count": "11" } },
+        { "type": "archive_month", "settings": { "archive_month": "November 2025" } },
+        { "type": "archive_month", "settings": { "archive_month": "April 2025" } },
+        { "type": "archive_month", "settings": { "archive_month": "November 2022" } },
+        { "type": "archive_month", "settings": { "archive_month": "July 2022" } },
+        { "type": "archive_month", "settings": { "archive_month": "May 2022" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,525 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-about-2-page",
+      "blocks": {
+        "d4bab6c1-ab4b-442b-8884-47890038f054": {
+          "type": "content",
+          "settings": {
+            "title": "About Clenli Direct",
+            "content": "At Clenli Direct, we're at the forefront of innovation when it comes to Cleaning Machines &amp; Janitorial",
+            "content_max_width": 550,
+            "align": "center",
+            "content_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "d4bab6c1-ab4b-442b-8884-47890038f054"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "full",
+        "padding_full_width": 0,
+        "about_bg_image": "shopify://shop_images/clenli-buildings_2.webp",
+        "about_bg_image_height": 470,
+        "enable_parallax": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0.5,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "massage_p7EhJN": {
+      "type": "massage",
+      "blocks": {
+        "value_item_ELA4PC": {
+          "type": "value_item",
+          "settings": {
+            "title": "Reliability",
+            "description": "We value reliability. Through our strategic location, our logistic network, and our own large fleet of in-house delivery trucks, we have an exceptional record for delivering on time."
+          }
+        },
+        "value_item_PqFQzj": {
+          "type": "value_item",
+          "settings": {
+            "title": "Innovation",
+            "description": "We strive to always do better. We are always on the lookout for new innovative solutions for our client's cleaning requirements."
+          }
+        },
+        "value_item_PMGqmk": {
+          "type": "value_item",
+          "settings": {
+            "title": "Quality",
+            "description": "We understand the importance of quality. That is why every piece of equipment we provide has been sampled, tested, and handpicked by our team."
+          }
+        },
+        "value_item_yCVyLX": {
+          "type": "value_item",
+          "settings": {
+            "title": "Expertise",
+            "description": "Our expertise is unmatched. Every member of our service team receives extensive training on new equipment so that they can answer your questions and offer solutions."
+          }
+        }
+      },
+      "block_order": [
+        "value_item_ELA4PC",
+        "value_item_PqFQzj",
+        "value_item_PMGqmk",
+        "value_item_yCVyLX"
+      ],
+      "disabled": true,
+      "name": "Our Values",
+      "settings": {
+        "heading": "Our Values",
+        "heading_color": "#232323",
+        "heading_size": 32,
+        "bg_color": "#ffffff",
+        "container": "1570",
+        "columns_desktop": 4,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "item_gap": 30,
+        "text_align": "center",
+        "enable_separator": true,
+        "separator_color": "#e0e0e0",
+        "enable_border": false,
+        "border_color": "#e0e0e0",
+        "item_title_color": "#232323",
+        "item_title_size": 18,
+        "item_desc_color": "#666666",
+        "item_desc_size": 14,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "what_to_qYJcAz": {
+      "type": "what-to",
+      "blocks": {
+        "service_box_QGwaWd": {
+          "type": "service_box",
+          "settings": {
+            "image": "shopify://shop_images/AdobeStock_246515233-1574x787.jpg",
+            "title": "Cleaning Machinery & Equipment",
+            "link_1_text": "Scrubber Dryers & Sweepers",
+            "link_1_url": "",
+            "link_2_text": "Innovative Solutions",
+            "link_2_url": "",
+            "link_3_text": "Equipment For All Sectors",
+            "link_3_url": "",
+            "link_4_text": "Training & Certification",
+            "link_4_url": "",
+            "link_5_text": "",
+            "link_5_url": ""
+          }
+        },
+        "service_box_fLdTpW": {
+          "type": "service_box",
+          "settings": {
+            "image": "shopify://shop_images/clenli-buildings_2.webp",
+            "title": "Janitorial & Consumables",
+            "link_1_text": "Paper, Dispensers & Soap",
+            "link_1_url": "",
+            "link_2_text": "Eco Solutions",
+            "link_2_url": "",
+            "link_3_text": "Powerful Cleaning Agents",
+            "link_3_url": "",
+            "link_4_text": "Order Management Software",
+            "link_4_url": "",
+            "link_5_text": "",
+            "link_5_url": ""
+          }
+        },
+        "service_box_zF3wCc": {
+          "type": "service_box",
+          "settings": {
+            "image": "shopify://shop_images/Clenli_Direct_-_Counter_Top-min.webp",
+            "title": "Sourcing & Distribution",
+            "link_1_text": "Direct To Site Delivery",
+            "link_1_url": "",
+            "link_2_text": "Global Logistic Network",
+            "link_2_url": "",
+            "link_3_text": "Import & Export",
+            "link_3_url": "",
+            "link_4_text": "Container Shipments",
+            "link_4_url": "",
+            "link_5_text": "",
+            "link_5_url": ""
+          }
+        },
+        "service_box_RWCW97": {
+          "type": "service_box",
+          "settings": {
+            "image": "shopify://shop_images/service-fleet-new.jpg",
+            "title": "Service & Maintenance",
+            "link_1_text": "Scrubber Dryers & Sweepers",
+            "link_1_url": "",
+            "link_2_text": "Fleet Management Software",
+            "link_2_url": "",
+            "link_3_text": "Nationwide Engineer Coverage",
+            "link_3_url": "",
+            "link_4_text": "Spare Parts",
+            "link_4_url": "",
+            "link_5_text": "",
+            "link_5_url": ""
+          }
+        },
+        "service_box_tXLwcW": {
+          "type": "service_box",
+          "settings": {
+            "image": "shopify://shop_images/servicing-outdoor-sweeper.jpg",
+            "title": "Manufacturing",
+            "link_1_text": "Floor Pads",
+            "link_1_url": "",
+            "link_2_text": "Cleaning Agents",
+            "link_2_url": "",
+            "link_3_text": "White Labeling",
+            "link_3_url": "",
+            "link_4_text": "Container Shipments",
+            "link_4_url": "",
+            "link_5_text": "",
+            "link_5_url": ""
+          }
+        },
+        "service_box_jKnnV4": {
+          "type": "service_box",
+          "settings": {
+            "image": "shopify://shop_images/AdobeStock_246515233-1574x787.jpg",
+            "title": "Robotics & Innovation",
+            "link_1_text": "Robotic Cleaning Machines",
+            "link_1_url": "",
+            "link_2_text": "Innovative Cost Savings",
+            "link_2_url": "",
+            "link_3_text": "Chemical Free Cleaning",
+            "link_3_url": "",
+            "link_4_text": "Water Saving Equipment",
+            "link_4_url": "",
+            "link_5_text": "",
+            "link_5_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "service_box_QGwaWd",
+        "service_box_fLdTpW",
+        "service_box_zF3wCc",
+        "service_box_RWCW97",
+        "service_box_tXLwcW",
+        "service_box_jKnnV4"
+      ],
+      "disabled": true,
+      "name": "What We Do",
+      "settings": {
+        "heading": "What We Do",
+        "heading_color": "#232323",
+        "heading_size": 32,
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "columns_desktop": 3,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "item_gap": 20,
+        "box_min_height": 280,
+        "overlay_color": "#767779",
+        "overlay_opacity": 0.7,
+        "title_color": "#ffffff",
+        "title_size": 20,
+        "link_color": "#ffffff",
+        "link_hover_color": "#90cdf4",
+        "link_size": 15,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "client_centre_cLBHVQ": {
+      "type": "Client-Centre",
+      "blocks": {
+        "text_block_fBcbfz": {
+          "type": "text_block",
+          "settings": {
+            "title": "Training",
+            "description": "The Client Centre has built in state of the art training facilities for staff and operators. Machine Operator Training, Best Cleaning Practices & Safety Training"
+          }
+        },
+        "text_block_rUnzzr": {
+          "type": "text_block",
+          "settings": {
+            "title": "Demonstrations",
+            "description": "See our products in action and try them for yourself. Gather all the information you need to make informed decisions"
+          }
+        },
+        "text_block_9JnRLa": {
+          "type": "text_block",
+          "settings": {
+            "title": "Customer/Client Visits",
+            "description": "Clients are free to invite customers to the client centre for demonstrations and training."
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fBcbfz",
+        "text_block_rUnzzr",
+        "text_block_9JnRLa"
+      ],
+      "disabled": true,
+      "name": "Client Centre",
+      "settings": {
+        "heading": "The Clenli Client Centre",
+        "heading_color": "#1a365d",
+        "heading_size": 28,
+        "underline_color": "#6fb31a",
+        "underline_width": 60,
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "content_width": 50,
+        "title_color": "#232323",
+        "title_size": 18,
+        "desc_color": "#555555",
+        "desc_size": 15,
+        "image_1": "shopify://shop_images/Clenli_Direct_-_Large_Screen.jpg",
+        "image_1_alt": "Gallery Image 1",
+        "image_2": "shopify://shop_images/Clenli_Direct_-_Client_Centre-min.webp",
+        "image_2_alt": "Gallery Image 2",
+        "image_3": "shopify://shop_images/Clenli_Direct_-_Counter_Top-min.webp",
+        "image_3_alt": "Gallery Image 3",
+        "image_4": "shopify://shop_images/servicing-outdoor-sweeper.jpg",
+        "image_4_alt": "Gallery Image 4",
+        "image_gap": 15,
+        "image_border_radius": 4,
+        "stagger_offset": 30,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "about_form_VFMzwb": {
+      "type": "about-form",
+      "disabled": true,
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Get In Touch",
+        "heading_color": "#1a365d",
+        "heading_size": 32,
+        "underline_color": "#1a365d",
+        "underline_width": 100,
+        "name_label": "Name",
+        "name_placeholder": "Enter your name",
+        "company_label": "Company",
+        "company_placeholder": "Enter your company name",
+        "phone_label": "Phone Number",
+        "phone_placeholder": "Enter your phone number",
+        "email_label": "Email",
+        "email_placeholder": "Enter your email",
+        "message_label": "Message",
+        "message_placeholder": "Enter your message",
+        "label_color": "#232323",
+        "label_size": 15,
+        "required_color": "#dc3545",
+        "input_border_color": "#cccccc",
+        "input_bg_color": "#ffffff",
+        "input_text_color": "#333333",
+        "button_text": "Submit",
+        "button_bg_color": "#6fb31a",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#8bc34a",
+        "success_message": "Thank you for your message! We will get back to you soon.",
+        "bg_color": "#f5f5f5",
+        "container": "1170",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "about_us_Gm8TR4": {
+      "type": "about-us",
+      "name": "About Us Page",
+      "settings": {
+        "hero_bg": "shopify://shop_images/clenli-buildings_2_4c05fcfb-fb6b-4ec4-9eb2-f5615db80ee2.webp",
+        "hero_title": "About Clenli Direct",
+        "hero_subtitle": "At Clenli Direct, we're at the forefront of innovation when it comes to Cleaning Machines & Janitorial",
+        "overview_bg": "shopify://shop_images/Clenli_Direct_-_Large_Screen_3d034d7c-f5b2-443e-b6e0-f8b39f5cbcee.jpg",
+        "overview_1": "Founded In 1993",
+        "overview_2": "100% Irish Owned",
+        "overview_3": "40,000 ft² Warehouse",
+        "overview_4": "ISO 9001:2015",
+        "overview_5": "ISO 14001:2015",
+        "overview_6": "ISO 45001:2018",
+        "about_text": "<p>Founded in 1993, Clenli Direct is the leading provider of innovative cleaning solutions in Ireland.</p>",
+        "value1_title": "Reliability",
+        "value1_text": "We value reliability. Through our strategic location and logistic network, we have an exceptional record for delivering on time.",
+        "value2_title": "Innovation",
+        "value2_text": "We strive to always do better. We are always on the lookout for new innovative solutions.",
+        "value3_title": "Quality",
+        "value3_text": "We understand the importance of quality. Every equipment is sampled, tested, and handpicked.",
+        "value4_title": "Expertise",
+        "value4_text": "Our expertise is unmatched. Every team member receives extensive training.",
+        "service1_bg": "shopify://shop_images/1637249208712-comac-antea-lavasciuga-pavimenti-carrozzeria_95ca97b3-fcc1-4c7c-911d-c4d7a580bd6a.webp",
+        "service1_title": "Cleaning Machinery & Equipment",
+        "service1_items": "Scrubber Dryers & Sweepers, Innovative Solutions, Equipment For All Sectors, Training & Certification",
+        "service2_bg": "shopify://shop_images/csm_public_restroom_-_washing_hands_woman_3_0900dde1b9.jpg",
+        "service2_title": "Janitorial & Consumables",
+        "service2_items": "Paper Dispensers & Soap, Eco Solutions, Powerful Cleaning Agents, Order Management Software",
+        "service3_bg": "shopify://shop_images/AdobeStock_246515233-1574x787_5572e1ca-ded7-4659-a983-353f62765a1b.jpg",
+        "service3_title": "Sourcing & Distribution",
+        "service3_items": "Direct To Site Delivery, Global Logistic Network, Import & Export, Container Shipments",
+        "service4_bg": "shopify://shop_images/servicing-outdoor-sweeper_66219433-5174-4c1e-ba51-7ad98c715856.jpg",
+        "service4_title": "Service & Maintenance",
+        "service4_items": "Scrubber Dryers & Sweepers, Fleet Management Software, Nationwide Coverage, Spare Parts",
+        "service5_bg": "shopify://shop_images/floor-pad-manufacturing-min.png",
+        "service5_title": "Manufacturing",
+        "service5_items": "Floor Pads, Cleaning Agents, White Labeling, Container Shipments",
+        "service6_bg": "shopify://shop_images/LionsBot_Range.webp",
+        "service6_title": "Robotics & Innovation",
+        "service6_items": "Robotic Cleaning Machines, Cost Savings, Chemical Free Cleaning, Water Saving Equipment",
+        "client_title": "The Clenli Client Centre",
+        "feature1_title": "Training",
+        "feature1_text": "State of the art training facilities for staff and operators.",
+        "feature2_title": "Demonstrations",
+        "feature2_text": "See our products in action and try them for yourself.",
+        "feature3_title": "Customer/Client Visits",
+        "feature3_text": "Clients are free to invite customers to the client centre.",
+        "client_img1": "shopify://shop_images/client-thumbnail_6dbc57e9-1590-4a03-af0d-3e63c53a3a4e.webp",
+        "client_img2": "shopify://shop_images/Clenli_Direct_-_Large_Screen_dad8b89c-0685-465b-b368-5263bcb168ea.jpg",
+        "client_img3": "shopify://shop_images/Clenli_Direct_-_Large_Screen_3d034d7c-f5b2-443e-b6e0-f8b39f5cbcee.jpg",
+        "client_img4": "shopify://shop_images/Clenli_Direct_-_Client_Centre-min_30991135-749b-4df0-baf4-61fc974a477e.webp"
+      }
+    },
+    "featured_product_we_AKYFTJ": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_NYHhQE": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_kVkCgX": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 28,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for  newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_kVkCgX"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "massage_p7EhJN",
+    "what_to_qYJcAz",
+    "client_centre_cLBHVQ",
+    "about_form_VFMzwb",
+    "about_us_Gm8TR4",
+    "featured_product_we_AKYFTJ",
+    "newsletter_NYHhQE"
+  ]
+}

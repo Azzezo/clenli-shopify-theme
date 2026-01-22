@@ -1,0 +1,362 @@
+{% comment %}
+  Data Driven / Product Range Layout
+  Replicates the "Data Driven Cleaning" and "Award Winning Robotics" page
+{% endcomment %}
+
+<div class="dd-wrapper section-{{ section.id }}">
+  <div class="dd-container">
+    
+    {% for block in section.blocks %}
+      {% case block.type %}
+        
+        {% comment %} === ZIG-ZAG CONTENT ROWS === {% endcomment %}
+        {% when 'content_row' %}
+        <div class="dd-block content-block" {{ block.shopify_attributes }}>
+          <div class="dd-grid {% if block.settings.layout == 'left' %}image-left{% else %}image-right{% endif %}">
+            
+            <div class="dd-content">
+              {% if block.settings.heading != blank %}
+                <h3 class="feature-heading">{{ block.settings.heading }}</h3>
+              {% endif %}
+              <div class="rte-text">{{ block.settings.text }}</div>
+              
+              {% if block.settings.btn_text != blank %}
+                <a href="{{ block.settings.btn_link }}" class="dd-btn">{{ block.settings.btn_text }}</a>
+              {% endif %}
+            </div>
+
+            <div class="dd-media">
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.heading }}" loading="lazy" class="rounded-img">
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+
+          </div>
+          {% if block.settings.show_divider %}
+            <div class="dd-divider"></div>
+          {% endif %}
+        </div>
+
+        {% comment %} === CENTERED LOGO CTA === {% endcomment %}
+        {% when 'logo_cta' %}
+        <div class="dd-block logo-block" {{ block.shopify_attributes }}>
+          <div class="logo-inner">
+            {% if block.settings.logo != blank %}
+              <div class="logo-img">
+                <img src="{{ block.settings.logo | image_url: width: 300 }}" loading="lazy">
+              </div>
+            {% endif %}
+            
+            <h3 class="feature-heading">{{ block.settings.heading }}</h3>
+            <div class="rte-text logo-text">{{ block.settings.text }}</div>
+            
+            {% if block.settings.btn_text != blank %}
+              <a href="{{ block.settings.btn_link }}" class="dd-btn">{{ block.settings.btn_text }}</a>
+            {% endif %}
+          </div>
+          <div class="dd-divider"></div>
+        </div>
+
+        {% comment %} === 3-COLUMN PRODUCT RANGE GRID === {% endcomment %}
+        {% when 'product_range' %}
+        <div class="dd-block range-block" {{ block.shopify_attributes }}>
+          <h2 class="range-main-heading">{{ block.settings.main_heading }}</h2>
+          
+          <div class="range-grid">
+            
+            <!-- Product 1 -->
+            <div class="range-card">
+              <div class="range-img">
+                {% if block.settings.img_1 != blank %}
+                  <img src="{{ block.settings.img_1 | image_url: width: 400 }}" loading="lazy">
+                {% else %}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              <h4 class="range-title">{{ block.settings.title_1 }}</h4>
+              <p class="range-desc">{{ block.settings.text_1 }}</p>
+              {% if block.settings.btn_1 != blank %}
+                <a href="{{ block.settings.link_1 }}" class="dd-btn full-width-btn">{{ block.settings.btn_1 }}</a>
+              {% endif %}
+            </div>
+
+            <!-- Product 2 -->
+            <div class="range-card">
+              <div class="range-img">
+                {% if block.settings.img_2 != blank %}
+                  <img src="{{ block.settings.img_2 | image_url: width: 400 }}" loading="lazy">
+                {% else %}
+                  {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              <h4 class="range-title">{{ block.settings.title_2 }}</h4>
+              <p class="range-desc">{{ block.settings.text_2 }}</p>
+              {% if block.settings.btn_2 != blank %}
+                <a href="{{ block.settings.link_2 }}" class="dd-btn full-width-btn">{{ block.settings.btn_2 }}</a>
+              {% endif %}
+            </div>
+
+            <!-- Product 3 -->
+            <div class="range-card">
+              <div class="range-img">
+                {% if block.settings.img_3 != blank %}
+                  <img src="{{ block.settings.img_3 | image_url: width: 400 }}" loading="lazy">
+                {% else %}
+                  {{ 'product-3' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              <h4 class="range-title">{{ block.settings.title_3 }}</h4>
+              <p class="range-desc">{{ block.settings.text_3 }}</p>
+              {% if block.settings.btn_3 != blank %}
+                <a href="{{ block.settings.link_3 }}" class="dd-btn full-width-btn">{{ block.settings.btn_3 }}</a>
+              {% endif %}
+            </div>
+
+          </div>
+          <div class="dd-divider"></div>
+        </div>
+
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  /* --- Variables --- */
+  .section-{{ section.id }} {
+    --green-accent: {{ section.settings.accent_color }}; /* #78be20 */
+    --text-color: #333333;
+    padding: 50px 0;
+    background: #fff;
+  }
+
+  .dd-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .dd-block { margin-bottom: 50px; }
+
+  /* --- Typography --- */
+  .feature-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+    line-height: 1.3;
+  }
+  .rte-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  /* --- Divider --- */
+  .dd-divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--green-accent);
+    margin-top: 50px;
+    opacity: 0.8;
+  }
+
+  /* --- Buttons --- */
+  .dd-btn {
+    display: inline-block;
+    background-color: var(--green-accent);
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  .dd-btn:hover { opacity: 0.9; }
+  
+  .full-width-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- Zig Zag Rows --- */
+  .dd-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  .dd-grid > div { flex: 1; }
+  
+  .dd-grid.image-right { flex-direction: row; }
+  .dd-grid.image-left { flex-direction: row-reverse; }
+
+  .dd-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+
+  /* --- Logo Center Block --- */
+  .logo-block { text-align: center; }
+  .logo-inner { max-width: 800px; margin: 0 auto; }
+  .logo-img img { max-width: 180px; margin-bottom: 20px; }
+
+  /* --- Product Range Grid (Bottom) --- */
+  .range-main-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 40px;
+  }
+  .range-grid {
+    display: flex;
+    gap: 20px;
+  }
+  .range-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    text-align: center;
+  }
+  .range-img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .range-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .range-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    min-height: 20px;
+  }
+  .range-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes button to bottom */
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .dd-grid, .dd-grid.image-left, .dd-grid.image-right {
+      flex-direction: column-reverse; /* Image Top */
+      gap: 30px;
+    }
+    .range-grid {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .range-img { height: auto; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Data Driven Layout",
+  "settings": [
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color (Green)",
+      "default": "#78be20"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_row",
+      "name": "Image/Text Row",
+      "settings": [
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Image Position",
+          "default": "right",
+          "options": [
+            { "value": "left", "label": "Image Left" },
+            { "value": "right", "label": "Image Right" }
+          ]
+        },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "heading", "label": "Heading" },
+        { "type": "richtext", "id": "text", "label": "Content" },
+        { "type": "text", "id": "btn_text", "label": "Button Text" },
+        { "type": "url", "id": "btn_link", "label": "Button Link" },
+        { "type": "checkbox", "id": "show_divider", "label": "Show Green Divider", "default": true }
+      ]
+    },
+    {
+      "type": "logo_cta",
+      "name": "Logo CTA (Center)",
+      "limit": 1,
+      "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Logo Image" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Why Choose Clenli Direct" },
+        { "type": "richtext", "id": "text", "label": "Text" },
+        { "type": "text", "id": "btn_text", "label": "Button Text", "default": "Learn More" },
+        { "type": "url", "id": "btn_link", "label": "Button Link" }
+      ]
+    },
+    {
+      "type": "product_range",
+      "name": "Product Grid (Bottom)",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "main_heading", "label": "Main Section Heading", "default": "Award Winning Robotics Range" },
+        
+        { "type": "header", "content": "Product 1" },
+        { "type": "image_picker", "id": "img_1", "label": "Image" },
+        { "type": "text", "id": "title_1", "label": "Title", "default": "R3 Vac" },
+        { "type": "textarea", "id": "text_1", "label": "Description" },
+        { "type": "text", "id": "btn_1", "label": "Button Text", "default": "View the R3 Vac" },
+        { "type": "url", "id": "link_1", "label": "Link" },
+
+        { "type": "header", "content": "Product 2" },
+        { "type": "image_picker", "id": "img_2", "label": "Image" },
+        { "type": "text", "id": "title_2", "label": "Title", "default": "R3 Scrub Pro" },
+        { "type": "textarea", "id": "text_2", "label": "Description" },
+        { "type": "text", "id": "btn_2", "label": "Button Text", "default": "View the R3 Scrub Pro" },
+        { "type": "url", "id": "link_2", "label": "Link" },
+
+        { "type": "header", "content": "Product 3" },
+        { "type": "image_picker", "id": "img_3", "label": "Image" },
+        { "type": "text", "id": "title_3", "label": "Title", "default": "R12 Rex Scrub" },
+        { "type": "textarea", "id": "text_3", "label": "Description" },
+        { "type": "text", "id": "btn_3", "label": "Button Text", "default": "View the Rex" },
+        { "type": "url", "id": "link_3", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Data Driven Layout",
+      "blocks": [
+        { "type": "content_row", "settings": { "layout": "right" } },
+        { "type": "content_row", "settings": { "layout": "left" } },
+        { "type": "content_row", "settings": { "layout": "right" } },
+        { "type": "content_row", "settings": { "layout": "left" } },
+        { "type": "logo_cta" },
+        { "type": "product_range" }
+      ]
+    }
+  ]
+}
+{% endschema %}

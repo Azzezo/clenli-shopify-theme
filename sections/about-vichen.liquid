@@ -1,0 +1,417 @@
+<div class="sectors-cards-section section-{{ section.id }}">
+    <div class="sc-container">
+        
+        <!-- Green Underline Top -->
+        <div class="sc-underline-top"></div>
+        
+        <!-- Header -->
+        <div class="sc-header">
+            {%- if section.settings.heading != blank -%}
+                <h2 class="sc-heading">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+                <p class="sc-description">{{ section.settings.description }}</p>
+            {%- endif -%}
+            {%- if section.settings.button_text != blank -%}
+                <a href="{{ section.settings.button_link | default: '#' }}" class="sc-button">{{ section.settings.button_text }}</a>
+            {%- endif -%}
+        </div>
+        
+        <!-- Cards Grid - 4 Cards -->
+        <div class="sc-grid">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'card' -%}
+                    <div class="sc-card" {{ block.shopify_attributes }}>
+                        <div class="card-image">
+                            {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title }}" loading="lazy">
+                            {%- else -%}
+                                <div class="placeholder-img"></div>
+                            {%- endif -%}
+                        </div>
+                        <div class="card-content">
+                            {%- if block.settings.title != blank -%}
+                                <h3 class="card-title">{{ block.settings.title }}</h3>
+                            {%- endif -%}
+                            {%- if block.settings.description != blank -%}
+                                <p class="card-desc">{{ block.settings.description }}</p>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                    <div class="sc-underline-top"></div>
+                {%- endif -%}
+            {%- endfor -%}
+            
+        </div>
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .sc-container {
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Underline */
+.section-{{ section.id }} .sc-underline-top {
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin-bottom: 40px;
+}
+
+/* Header */
+.section-{{ section.id }} .sc-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-{{ section.id }} .sc-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+}
+
+.section-{{ section.id }} .sc-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    max-width: 1000px;
+    margin: 0 auto 25px;
+}
+
+.section-{{ section.id }} .sc-button {
+    display: inline-block;
+    padding: 14px 35px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .sc-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+}
+
+/* Cards Grid - 2 columns */
+.section-{{ section.id }} .sc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* Card - Border around entire card */
+.section-{{ section.id }} .sc-card {
+    border: {{ section.settings.border_width }}px solid {{ section.settings.card_border_color }};
+    border-radius: {{ section.settings.card_radius }}px;
+    overflow: hidden;
+    background: {{ section.settings.card_bg }};
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .sc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Card Image */
+.section-{{ section.id }} .card-image {
+    overflow: hidden;
+}
+
+.section-{{ section.id }} .card-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.section-{{ section.id }} .sc-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.section-{{ section.id }} .placeholder-img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: #e0e0e0;
+}
+
+/* Card Content */
+.section-{{ section.id }} .card-content {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.section-{{ section.id }} .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 12px 0;
+}
+
+.section-{{ section.id }} .card-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .sc-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-{{ section.id }} .sc-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .section-{{ section.id }} .sc-heading {
+        font-size: 24px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Sectors Cards",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Header"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Serving All Sectors"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "Addax can be used in almost all sectors across Ireland. With solutions for cities, industrial use, facilities management, and last mile deliveries, Addax are the complete solution no matter your requirements!"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "Button"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "View Sectors"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "header",
+            "content": "Underline"
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Height",
+            "min": 2,
+            "max": 8,
+            "step": 1,
+            "unit": "px",
+            "default": 4
+        },
+        {
+            "type": "header",
+            "content": "Card Settings"
+        },
+        {
+            "type": "color",
+            "id": "card_border_color",
+            "label": "Card Border Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "border_width",
+            "label": "Border Width",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "unit": "px",
+            "default": 3
+        },
+        {
+            "type": "range",
+            "id": "card_radius",
+            "label": "Card Radius",
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "color",
+            "id": "card_bg",
+            "label": "Card Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background",
+            "default": "#f5f5f5"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "card",
+            "name": "Sector Card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Cities & Towns"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Boasting an impressive loading capacity of up to 6 m³, Addax electric utility vehicles are versatile enough to handle a wide range of tasks."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Sectors Cards",
+            "blocks": [
+                {
+                    "type": "card",
+                    "settings": {
+                        "title": "Cities & Towns",
+                        "description": "Boasting an impressive loading capacity of up to 6 m³, Addax electric utility vehicles are versatile enough to handle a wide range of tasks."
+                    }
+                },
+                {
+                    "type": "card",
+                    "settings": {
+                        "title": "Industrial & Facilities Management",
+                        "description": "Offering reduced operational costs, sustainability, reliability, and innovation. Addax electric utility vehicles are perfectly suited for both indoor and outdoor applications."
+                    }
+                },
+                {
+                    "type": "card",
+                    "settings": {
+                        "title": "Last Mile Deliveries",
+                        "description": "Perfect for urban deliveries with zero emissions. Navigate city streets efficiently while reducing your carbon footprint and operational costs."
+                    }
+                },
+                {
+                    "type": "card",
+                    "settings": {
+                        "title": "Parks & Recreation",
+                        "description": "Ideal for maintaining parks, golf courses, and recreational facilities. Quiet operation ensures minimal disturbance to visitors and wildlife."
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

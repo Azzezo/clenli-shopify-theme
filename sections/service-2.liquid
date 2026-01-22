@@ -1,0 +1,651 @@
+{%- liquid
+    assign section_id = section.id
+    assign main_heading = section.settings.main_heading
+    assign main_heading_color = section.settings.main_heading_color
+    assign main_heading_size = section.settings.main_heading_size
+    assign underline_color = section.settings.underline_color
+    assign underline_width = section.settings.underline_width
+    assign left_image = section.settings.left_image
+    assign bg_color = section.settings.bg_color
+    assign container = section.settings.container
+    assign left_width = section.settings.left_width
+    assign padding_top = section.settings.padding_top
+    assign padding_bottom = section.settings.padding_bottom
+    assign padding_top_mobile = section.settings.padding_top_mobile
+    assign padding_bottom_mobile = section.settings.padding_bottom_mobile
+-%}
+
+<style>
+    #nationwide-{{ section_id }} {
+        background-color: {{ bg_color }};
+        padding-top: {{ padding_top }}px;
+        padding-bottom: {{ padding_bottom }}px;
+    }
+    
+    #nationwide-{{ section_id }} .nw-container {
+        max-width: {% if container == '1170' %}1170px{% elsif container == '1370' %}1370px{% elsif container == '1570' %}1570px{% else %}1170px{% endif %};
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    /* ============ MAIN HEADING ============ */
+    #nationwide-{{ section_id }} .nw-main-heading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    #nationwide-{{ section_id }} .nw-main-heading h2 {
+        font-size: {{ main_heading_size }}px;
+        font-weight: 700;
+        color: {{ main_heading_color }};
+        margin: 0 0 15px 0;
+        line-height: 1.3;
+    }
+    
+    {% comment %} #nationwide-{{ section_id }} .nw-main-underline {
+
+    width: 100%;              /* ← ADDED - Full width */
+    height: 4px;
+    background: #6fb31a;
+    border: none;             /* ← ADDED - Remove conflicts */
+    opacity: 1 !important;    /* ← ADDED - Force visible */
+    display: block !important;/* ← ADDED - Force display */
+    margin: 0 0 40px 0;
+
+    } {% endcomment %}
+    .section-{{ section.id }} .fh-underline {
+
+    width: 100%;              /* ← ADDED - Full width */
+    height: 4px;
+    background: #6fb31a;
+    border: none;             /* ← ADDED - Remove conflicts */
+    opacity: 1 !important;    /* ← ADDED - Force visible */
+    display: block !important;/* ← ADDED - Force display */
+    margin: 0 0 40px 0;
+}
+    
+    /* ============ CONTENT WRAPPER ============ */
+    #nationwide-{{ section_id }} .nw-content-wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: {{ section.settings.content_gap }}px;
+        margin-bottom: 50px;
+    }
+    
+    /* ============ LEFT SIDE - IMAGE ============ */
+    #nationwide-{{ section_id }} .nw-left {
+        width: {{ left_width }}%;
+        flex-shrink: 0;
+    }
+    
+    #nationwide-{{ section_id }} .nw-left img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    #nationwide-{{ section_id }} .nw-left-placeholder {
+        width: 100%;
+        height: 400px;
+        background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    /* ============ RIGHT SIDE - CONTENT BLOCKS ============ */
+    #nationwide-{{ section_id }} .nw-right {
+        flex: 1;
+    }
+    
+    #nationwide-{{ section_id }} .nw-content-block {
+        margin-bottom: {{ section.settings.block_spacing }}px;
+    }
+    
+    #nationwide-{{ section_id }} .nw-content-block:last-child {
+        margin-bottom: 0;
+    }
+    
+    #nationwide-{{ section_id }} .nw-block-title {
+        font-size: {{ section.settings.block_title_size }}px;
+        font-weight: 700;
+        color: {{ section.settings.block_title_color }};
+        margin: 0 0 10px 0;
+        line-height: 1.3;
+    }
+    
+    #nationwide-{{ section_id }} .nw-block-desc {
+        font-size: {{ section.settings.block_desc_size }}px;
+        color: {{ section.settings.block_desc_color }};
+        margin: 0;
+        line-height: 1.7;
+    }
+    
+    /* ============ BOTTOM FEATURES ============ */
+    #nationwide-{{ section_id }} .nw-bottom-features {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        border-top: 1px solid {{ section.settings.feature_border_color }};
+        padding-top: 30px;
+    }
+    
+    #nationwide-{{ section_id }} .nw-feature-item {
+        flex: 1;
+        text-align: center;
+    }
+    
+    #nationwide-{{ section_id }} .nw-feature-title {
+        font-size: {{ section.settings.feature_title_size }}px;
+        font-weight: 600;
+        color: {{ section.settings.feature_title_color }};
+        margin: 0;
+        line-height: 1.4;
+    }
+    
+    #nationwide-{{ section_id }} .nw-feature-item a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    #nationwide-{{ section_id }} .nw-feature-item a:hover {
+        color: {{ underline_color }};
+    }
+    /* Buttons */
+    .btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    }
+
+    .btn-primary:hover {
+    background: #5a9216;
+    color: #fff;
+    transform: translateY(-2px);
+    }
+    
+    /* ============ TABLET ============ */
+    @media (max-width: 1024px) {
+        #nationwide-{{ section_id }} .nw-content-wrapper {
+            gap: 30px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-left {
+            width: 45%;
+        }
+        
+        #nationwide-{{ section_id }} .nw-main-heading h2 {
+            font-size: {{ main_heading_size | minus: 4 }}px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-bottom-features {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-feature-item {
+            flex: 1 1 45%;
+        }
+    }
+    
+    /* ============ MOBILE ============ */
+    @media (max-width: 767px) {
+        #nationwide-{{ section_id }} {
+            padding-top: {{ padding_top_mobile }}px;
+            padding-bottom: {{ padding_bottom_mobile }}px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-main-heading {
+            margin-bottom: 30px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-main-heading h2 {
+            font-size: {{ main_heading_size | minus: 8 }}px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-content-wrapper {
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-left {
+            width: 100%;
+        }
+        
+        #nationwide-{{ section_id }} .nw-left-placeholder {
+            height: 280px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-block-title {
+            font-size: {{ section.settings.block_title_size | minus: 2 }}px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-block-desc {
+            font-size: {{ section.settings.block_desc_size | minus: 1 }}px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-bottom-features {
+            flex-direction: column;
+            gap: 15px;
+            padding-top: 20px;
+        }
+        
+        #nationwide-{{ section_id }} .nw-feature-item {
+            flex: 1 1 100%;
+            padding: 10px 0;
+            border-bottom: 1px solid {{ section.settings.feature_border_color }};
+        }
+        
+        #nationwide-{{ section_id }} .nw-feature-item:last-child {
+            border-bottom: none;
+        }
+    }
+</style>
+
+<section id="nationwide-{{ section_id }}" class="nationwide-section">
+    <div class="nw-container">
+        
+        <!-- Main Heading -->
+        {%- if main_heading != blank -%}
+        <div class="nw-main-heading">
+            <h2>{{ main_heading }}</h2>
+            {% comment %} <div class="nw-main-underline"></div> {% endcomment %}
+                <div class="fh-underline"></div>
+        </div>
+        {%- endif -%}
+        
+        <!-- Content Wrapper - Left Image + Right Text -->
+        <div class="nw-content-wrapper">
+            
+            <!-- Left Side - Image -->
+            <div class="nw-left">
+                {%- if left_image != blank -%}
+                    <img src="{{ left_image | image_url: width: 800 }}" alt="{{ section.settings.left_image_alt | default: 'Coverage Map' }}" loading="lazy">
+                {%- else -%}
+                    <div class="nw-left-placeholder">
+                        <span>Add Image</span>
+                    </div>
+                {%- endif -%}
+            </div>
+            
+            <!-- Right Side - Content Blocks -->
+            <div class="nw-right">
+                {%- for block in section.blocks -%}
+                    {%- if block.type == 'content_block' -%}
+                        <div class="nw-content-block" {{ block.shopify_attributes }}>
+                            {%- if block.settings.block_title != blank -%}
+                                <h3 class="nw-block-title">{{ block.settings.block_title }}</h3>
+                            {%- endif -%}
+                            {%- if block.settings.block_description != blank -%}
+                                <p class="nw-block-desc">{{ block.settings.block_description }}</p>
+                            {%- endif -%}
+                           
+                        </div>
+                    {%- endif -%}
+                     
+                {%- endfor -%}
+                
+            </div>
+
+           
+            
+        </div>
+        
+        <!-- Bottom Features Row -->
+        {%- if section.settings.enable_bottom_features -%}
+        <div class="nw-bottom-features">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'feature_item' -%}
+                    <div class="nw-feature-item" {{ block.shopify_attributes }}>
+                        {%- if block.settings.feature_link != blank -%}
+                            <a href="{{ block.settings.feature_link }}">
+                                <h4 class="nw-feature-title">{{ block.settings.feature_title }}</h4>
+                            </a>
+                        {%- else -%}
+                            <h4 class="nw-feature-title">{{ block.settings.feature_title }}</h4>
+                        {%- endif -%}
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        {%- endif -%}
+        
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Nationwide Coverage",
+    "tag": "section",
+    "class": "nationwide-coverage-block",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Main Heading"
+        },
+        {
+            "type": "text",
+            "id": "main_heading",
+            "label": "Main Heading",
+            "default": "Nationwide Engineer Coverage"
+        },
+        {
+            "type": "color",
+            "id": "main_heading_color",
+            "label": "Heading Color",
+            "default": "#232323"
+        },
+        {
+            "type": "range",
+            "id": "main_heading_size",
+            "label": "Heading Size",
+            "min": 20,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_width",
+            "label": "Underline Width",
+            "min": 50,
+            "max": 200,
+            "step": 10,
+            "unit": "px",
+            "default": 100
+        },
+        {
+            "type": "header",
+            "content": "Left Side - Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Image (Map + Van)"
+        },
+        {
+            "type": "text",
+            "id": "left_image_alt",
+            "label": "Image Alt Text",
+            "default": "Coverage Map"
+        },
+        {
+            "type": "range",
+            "id": "left_width",
+            "label": "Left Image Width (%)",
+            "min": 30,
+            "max": 60,
+            "step": 5,
+            "unit": "%",
+            "default": 45
+        },
+        {
+            "type": "header",
+            "content": "Content Block Styling"
+        },
+        {
+            "type": "color",
+            "id": "block_title_color",
+            "label": "Block Title Color",
+            "default": "#232323"
+        },
+        {
+            "type": "range",
+            "id": "block_title_size",
+            "label": "Block Title Size",
+            "min": 14,
+            "max": 28,
+            "step": 1,
+            "unit": "px",
+            "default": 18
+        },
+        {
+            "type": "color",
+            "id": "block_desc_color",
+            "label": "Block Description Color",
+            "default": "#555555"
+        },
+        {
+            "type": "range",
+            "id": "block_desc_size",
+            "label": "Block Description Size",
+            "min": 13,
+            "max": 18,
+            "step": 1,
+            "unit": "px",
+            "default": 15
+        },
+        {
+            "type": "range",
+            "id": "block_spacing",
+            "label": "Space Between Blocks",
+            "min": 15,
+            "max": 50,
+            "step": 5,
+            "unit": "px",
+            "default": 30
+        },
+        {
+            "type": "header",
+            "content": "Bottom Features"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_bottom_features",
+            "label": "Enable Bottom Features",
+            "default": true
+        },
+        {
+            "type": "color",
+            "id": "feature_title_color",
+            "label": "Feature Title Color",
+            "default": "#232323"
+        },
+        {
+            "type": "range",
+            "id": "feature_title_size",
+            "label": "Feature Title Size",
+            "min": 12,
+            "max": 20,
+            "step": 1,
+            "unit": "px",
+            "default": 16
+        },
+        {
+            "type": "color",
+            "id": "feature_border_color",
+            "label": "Feature Border Color",
+            "default": "#eeeeee"
+        },
+        {
+            "type": "header",
+            "content": "Layout Settings"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "select",
+            "id": "container",
+            "label": "Container Width",
+            "default": "1170",
+            "options": [
+                {"value": "1170", "label": "1170px"},
+                {"value": "1370", "label": "1370px"},
+                {"value": "1570", "label": "1570px"}
+            ]
+        },
+        {
+            "type": "range",
+            "id": "content_gap",
+            "label": "Gap Between Image & Content",
+            "min": 20,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top (Desktop)",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom (Desktop)",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "Padding Top (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "Padding Bottom (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+    ],
+    "blocks": [
+        {
+            "type": "content_block",
+            "name": "Content Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "block_title",
+                    "label": "Title",
+                    "default": "Block Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "block_description",
+                    "label": "Description",
+                    "default": "Add your description text here."
+                },
+                {
+                    "type": "text",
+                    "id": "hero_btn_text",
+                    "label": "Button Text",
+                    "default": "Explore Addax Range"
+                },
+                {
+                    "type": "url",
+                    "id": "hero_btn_link",
+                    "label": "Button Link"
+                }
+                    ]
+        },
+        {
+            "type": "feature_item",
+            "name": "Bottom Feature",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "feature_title",
+                    "label": "Feature Title",
+                    "default": "Feature Name"
+                },
+                {
+                    "type": "url",
+                    "id": "feature_link",
+                    "label": "Feature Link (Optional)"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Nationwide Coverage",
+            "blocks": [
+                {
+                    "type": "content_block",
+                    "settings": {
+                        "block_title": "Service Fleet",
+                        "block_description": "Our Engineers can have access to all of Ireland no matter how remote. Thanks to our engineer and distribution network we can offer our exceptional service nationwide."
+                    }
+                },
+                {
+                    "type": "content_block",
+                    "settings": {
+                        "block_title": "Job Scheduling Optimisation",
+                        "block_description": "Our service jobs are scheduled for maximum efficiency to prevent delays. Jobs can be tracked through software SAM."
+                    }
+                },
+                {
+                    "type": "content_block",
+                    "settings": {
+                        "block_title": "Fully Stocked Vans",
+                        "block_description": "Our service engineer's vans are fully stocked to fix problems on first-time call-outs. This allows them to solve problems on the spot without long lead times."
+                    }
+                },
+                {
+                    "type": "feature_item",
+                    "settings": {
+                        "feature_title": "Emergency Call Outs"
+                    }
+                },
+                {
+                    "type": "feature_item",
+                    "settings": {
+                        "feature_title": "Instant Call Logging"
+                    }
+                },
+                {
+                    "type": "feature_item",
+                    "settings": {
+                        "feature_title": "Portable Appliance Testing"
+                    }
+                },
+                {
+                    "type": "feature_item",
+                    "settings": {
+                        "feature_title": "Service Reporting"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

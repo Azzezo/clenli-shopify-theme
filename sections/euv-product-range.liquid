@@ -1,0 +1,324 @@
+<div class="product-range section-{{ section.id }}">
+    
+    <div class="pr-container">
+        <div class="euv-underline-top"></div>
+        <!-- Heading -->
+        {%- if section.settings.heading != blank -%}
+            <h2 class="pr-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        
+        <!-- Products Grid -->
+        <div class="pr-grid">
+            {%- for block in section.blocks -%}
+                <div class="pr-card" {{ block.shopify_attributes }}>
+                    
+                    <!-- Image -->
+                    <div class="pr-image">
+                        {%- if block.settings.image != blank -%}
+                            <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title }}" loading="lazy">
+                        {%- else -%}
+                            <div class="placeholder-img">Product Image</div>
+                        {%- endif -%}
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="pr-content">
+                        {%- if block.settings.title != blank -%}
+                            <h3 class="pr-title">{{ block.settings.title }}</h3>
+                        {%- endif -%}
+                        {%- if block.settings.description != blank -%}
+                            <p class="pr-desc">{{ block.settings.description }}</p>
+                        {%- endif -%}
+                        {%- if block.settings.button_text != blank -%}
+                            <a href="{{ block.settings.button_link | default: '#' }}" class="pr-btn">{{ block.settings.button_text }}</a>
+                        {%- endif -%}
+                    </div>
+                    
+                </div>
+            {%- endfor -%}
+        </div>
+        
+        <!-- Underline -->
+             <div class="euv-underline"></div>
+        {% comment %} <div class="pr-underline"></div> {% endcomment %}
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .pr-container {
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-{{ section.id }} .pr-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+/* Grid - 2 Columns */
+.section-{{ section.id }} .pr-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Card */
+.section-{{ section.id }} .pr-card {
+    text-align: center;
+}
+
+.section-{{ section.id }} .pr-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section-{{ section.id }} .placeholder-img {
+    width: 100%;
+    height: 250px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border-radius: 8px;
+}
+
+.section-{{ section.id }} .pr-content {
+    padding: 25px 10px;
+}
+
+.section-{{ section.id }} .pr-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+}
+
+.section-{{ section.id }} .pr-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: {{ section.settings.text_color }};
+    margin: 0 0 20px 0;
+}
+
+.section-{{ section.id }} .pr-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .pr-btn:hover {
+    background: {{ section.settings.button_hover_bg }};
+}
+
+/* Underline */
+.section-{{ section.id }} .pr-underline {
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+}
+.section-{{ section.id }} .euv-underline {
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin: 0;
+    display: block;
+    clear: both;
+}
+.section-{{ section.id }} .euv-underline-top {
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin-bottom: 20px;
+    display: block;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-{{ section.id }} .pr-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .section-{{ section.id }} .pr-title {
+        font-size: 20px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "EUV Product Range",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "The Addax Range"
+        },
+        {
+            "type": "header",
+            "content": "Underline"
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Height",
+            "min": 2,
+            "max": 8,
+            "step": 1,
+            "unit": "px",
+            "default": 4
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 50
+        }
+    ],
+    "blocks": [
+        {
+            "type": "product",
+            "name": "Product",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Addax MTN"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "The Addax MTN is a compact, fully electric utility vehicle built for urban logistics."
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text",
+                    "default": "View the Addax MTN"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "EUV Product Range",
+            "blocks": [
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Addax MTN",
+                        "description": "The Addax MTN is a compact, fully electric utility vehicle built for urban logistics. With a 6m³ cargo volume, 1,000 kg payload, and a 4.5-meter turning radius, it offers exceptional versatility.",
+                        "button_text": "View the Addax MTN"
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Addax MTX",
+                        "description": "The Addax MTX is a robust, fully electric utility vehicle with a 7 m³ cargo space, 1,000 kg payload, and compact 1.40 m width for easy urban navigation.",
+                        "button_text": "View the Addax MTX"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,951 @@
+{% comment %}
+  Clenli Direct - Robotic Cleaning Solutions Page
+{% endcomment %}
+
+<div class="robotics-page">
+  <!-- Hero Section -->
+  <section class="robotics-hero">
+    <div class="robotics-container">
+      <div class="robotics-hero__grid">
+        <div class="robotics-hero__image">
+          {% if section.settings.hero_image != blank %}
+            <img
+              src="{{ section.settings.hero_image | image_url: width: 800 }}"
+              alt="{{ section.settings.hero_title }}"
+            >
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/R_-_Main.png" alt="Robotic Cleaning Solutions">
+          {% endif %}
+        </div>
+        <div class="robotics-hero__content">
+          <span class="robotics-tag">{{ section.settings.hero_tag }}</span>
+          <h1 class="robotics-hero__title">{{ section.settings.hero_title }}</h1>
+          <p class="robotics-text">{{ section.settings.hero_desc }}</p>
+
+          <div class="robotics-features">
+            <div class="robotics-feature">
+              <strong>{{ section.settings.feature1_title }}</strong>
+              <p>{{ section.settings.feature1_text }}</p>
+            </div>
+            <div class="robotics-feature">
+              <strong>{{ section.settings.feature2_title }}</strong>
+              <p>{{ section.settings.feature2_text }}</p>
+            </div>
+            <div class="robotics-feature">
+              <strong>{{ section.settings.feature3_title }}</strong>
+              <p>{{ section.settings.feature3_text }}</p>
+            </div>
+          </div>
+
+          <a href="{{ section.settings.hero_btn_link }}" class="robotics-btn">{{ section.settings.hero_btn_text }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="robotics-divider"></div> {% endcomment %}
+
+  <!-- Why Invest Section -->
+  <section class="robotics-info">
+    <div class="robotics-container">
+      <div class="robotics-info__grid">
+        <div class="robotics-info__content robotics-info__content--center">
+          <h2 class="robotics-subtitle">{{ section.settings.invest_title }}</h2>
+          <p class="robotics-text">{{ section.settings.invest_text }}</p>
+          <a href="{{ section.settings.invest_btn_link }}" class="robotics-btn">
+            {{- section.settings.invest_btn_text -}}
+          </a>
+        </div>
+        <div class="robotics-info__image">
+          {% if section.settings.invest_image != blank %}
+            <img
+              src="{{ section.settings.invest_image | image_url: width: 800 }}"
+              alt="{{ section.settings.invest_title }}"
+            >
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Bootstrap_Images_14_.png" alt="Why Invest">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="robotics-divider"></div> {% endcomment %}
+
+  <!-- About LionsBot Section -->
+  <!-- About LionsBot Section -->
+  <section class="robotics-info">
+    <div class="robotics-container">
+      <div class="robotics-info__grid">
+        <div class="robotics-info__image">
+          {% if section.settings.about_image != blank %}
+            <img
+              src="{{ section.settings.about_image | image_url: width: 800 }}"
+              alt="{{ section.settings.about_title }}"
+            >
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Bootstrap_Images_13_.png" alt="About LionsBot">
+          {% endif %}
+        </div>
+        <div class="robotics-info__content robotics-info__content--center">
+          <h2 class="robotics-subtitle">{{ section.settings.about_title }}</h2>
+          <p class="robotics-text">{{ section.settings.about_text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="robotics-divider"></div> {% endcomment %}
+
+  <!-- Highlights Section -->
+  <section class="robotics-highlights">
+    <div class="robotics-container">
+      <h2 class="robotics-section-title">{{ section.settings.highlights_title }}</h2>
+
+      <div class="robotics-highlights__grid">
+        <div class="robotics-highlight-card">
+          <div class="robotics-highlight-card__img">
+            {% if section.settings.highlight1_image != blank %}
+              <img
+                src="{{ section.settings.highlight1_image | image_url: width: 500 }}"
+                alt="{{ section.settings.highlight1_title }}"
+              >
+            {% else %}
+              <img
+                src="https://clenlidirect.com/media/.renditions/wysiwyg/Bootstrap_Images_11_.png"
+                alt="Sustainability"
+              >
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.highlight1_title }}</h3>
+          <p>{{ section.settings.highlight1_text }}</p>
+          <a href="{{ section.settings.highlight1_link }}" class="robotics-btn">Learn More</a>
+        </div>
+
+        <div class="robotics-highlight-card">
+          <div class="robotics-highlight-card__img">
+            {% if section.settings.highlight2_image != blank %}
+              <img
+                src="{{ section.settings.highlight2_image | image_url: width: 500 }}"
+                alt="{{ section.settings.highlight2_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Offices.png" alt="Serving All Sectors">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.highlight2_title }}</h3>
+          <p>{{ section.settings.highlight2_text }}</p>
+          <a href="{{ section.settings.highlight2_link }}" class="robotics-btn">Learn More</a>
+        </div>
+
+        <div class="robotics-highlight-card">
+          <div class="robotics-highlight-card__img">
+            {% if section.settings.highlight3_image != blank %}
+              <img
+                src="{{ section.settings.highlight3_image | image_url: width: 500 }}"
+                alt="{{ section.settings.highlight3_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Bootstrap_Images_9_.png" alt="Data Driven">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.highlight3_title }}</h3>
+          <p>{{ section.settings.highlight3_text }}</p>
+          <a href="{{ section.settings.highlight3_link }}" class="robotics-btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="robotics-divider"></div> {% endcomment %}
+
+  <!-- Why Choose Clenli Section -->
+  <section class="robotics-clenli">
+    <div class="robotics-container">
+      {% if section.settings.clenli_logo != blank %}
+        <img
+          src="{{ section.settings.clenli_logo | image_url: width: 200 }}"
+          alt="Clenli Direct"
+          class="robotics-clenli__logo"
+        >
+      {% else %}
+        <img
+          src="https://clenlidirect.com/media/.renditions/wysiwyg/Untitled_design_-_2024-02-08T162909.668.png"
+          alt="Clenli Direct"
+          class="robotics-clenli__logo"
+        >
+      {% endif %}
+      <h2 class="robotics-section-title">{{ section.settings.clenli_title }}</h2>
+      <p class="robotics-section-subtitle">{{ section.settings.clenli_text }}</p>
+      <a href="{{ section.settings.clenli_btn_link }}" class="robotics-btn">{{ section.settings.clenli_btn_text }}</a>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="robotics-divider"></div> {% endcomment %}
+
+  <!-- LionsBot Range Section -->
+  <section class="robotics-range">
+    <div class="robotics-container">
+      <h2 class="robotics-section-title">{{ section.settings.range_title }}</h2>
+
+      <div class="robotics-range__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'robot' %}
+            <div class="robotics-robot-card" {{ block.shopify_attributes }}>
+              <div class="robotics-robot-card__img">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | image_url: width: 500 }}" alt="{{ block.settings.name }}">
+                {% else %}
+                  <div class="robotics-robot-placeholder"></div>
+                {% endif %}
+              </div>
+              <h3 class="robotics-robot-card__name">{{ block.settings.name }}</h3>
+              <p class="robotics-robot-card__desc">{{ block.settings.description }}</p>
+              <a href="{{ block.settings.link }}" class="robotics-btn">View the {{ block.settings.name }}</a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="robotics-divider"></div> {% endcomment %}
+
+  <!-- CTA Section -->
+  <section class="robotics-cta">
+    <div class="robotics-container">
+      <div class="robotics-cta__grid">
+        <div class="robotics-cta__content">
+          <h2 class="robotics-subtitle">{{ section.settings.cta_title }}</h2>
+          <p class="robotics-text">{{ section.settings.cta_text }}</p>
+          {% if section.settings.cta_banner != blank %}
+            <img
+              src="{{ section.settings.cta_banner | image_url: width: 1000 }}"
+              alt="{{ section.settings.cta_title }}"
+              class="robotics-cta__banner"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Don_t_Get_left_Behind_Banner.png"
+              alt="Don't Get Left Behind"
+              class="robotics-cta__banner"
+            >
+          {% endif %}
+        </div>
+        <div class="robotics-cta__form">
+          <a href="tel:{{ section.settings.phone_number }}" class="robotics-btn robotics-btn--call">CALL NOW</a>
+          <div class="robotics-enquiry-form">
+            <h3>GO GREEN TODAY ENQUIRE NOW</h3>
+            {% form 'contact' %}
+              <div class="robotics-form-group">
+                <input type="text" name="contact[name]" placeholder="NAME" required>
+              </div>
+              <div class="robotics-form-group">
+                <input type="email" name="contact[email]" placeholder="EMAIL" required>
+              </div>
+              <div class="robotics-form-group">
+                <input type="tel" name="contact[phone]" placeholder="PHONE NUMBER" required>
+              </div>
+              <div class="robotics-form-group">
+                <textarea name="contact[body]" placeholder="MESSAGE" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="robotics-btn robotics-btn--submit">Submit</button>
+            {% endform %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="robotics-divider"></div> {% endcomment %}
+</div>
+
+<style>
+  .robotics-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+  }
+  .robotics-container {
+    max-width: 1570px !important;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  hr.imop-divider {
+    width: 100% !important;
+    max-width: 1570px !important;
+    height: 4px !important;
+    margin: 40px auto !important;
+    background-color: #6fb31a !important;
+    border: 0 !important;
+    border: none !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+
+  {% comment %} .robotics-divider {
+    height: 4px;
+    background: #6fb31a;
+    max-width: 1200px;
+    margin: 0 auto;
+  } {% endcomment %}
+  .robotics-tag {
+    display: inline-block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .robotics-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+  }
+  .robotics-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  .robotics-section-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .robotics-section-subtitle {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+  }
+  .robotics-btn {
+    display: inline-block;
+    background: #6fb31a;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .robotics-btn:hover {
+    background: #5a9615;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+  .robotics-btn--call {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding: 18px 35px;
+    margin-bottom: 20px;
+  }
+  .robotics-btn--submit {
+    width: 100%;
+    padding: 16px;
+  }
+  .robotics-hero {
+    padding: 60px 0;
+    background: #fff;
+  }
+  .robotics-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .robotics-hero__image img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .robotics-hero__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  .robotics-features {
+    margin: 25px 0;
+  }
+  .robotics-feature {
+    margin-bottom: 20px;
+  }
+  .robotics-feature strong {
+    display: block;
+    color: #1a1a2e;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .robotics-feature p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .robotics-info {
+    padding: 60px 0;
+    background: #fff;
+  }
+  .robotics-info__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .robotics-info__grid--reverse {
+    direction: rtl;
+  }
+  .robotics-info__grid--reverse > * {
+    direction: ltr;
+  }
+  .robotics-info__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    {% comment %} box-shadow: 0 10px 30px rgba(0,0,0,0.1); {% endcomment %}
+  }
+  .robotics-info__content--center {
+    text-align: center;
+  }
+  .robotics-highlights {
+    padding: 60px 0;
+    background: #fff;
+  }
+  .robotics-highlights__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .robotics-highlight-card {
+    text-align: center;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  .robotics-highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+  .robotics-highlight-card__img {
+    margin-bottom: 20px;
+  }
+  .robotics-highlight-card__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .robotics-highlight-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+  }
+  .robotics-highlight-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .robotics-clenli {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+  }
+  .robotics-clenli__logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .robotics-range {
+    padding: 60px 0;
+    background: #fff;
+  }
+  .robotics-range__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .robotics-robot-card {
+    text-align: center;
+    padding: 25px;
+    background: #fff;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+  .robotics-robot-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+  .robotics-robot-card__img {
+    margin-bottom: 20px;
+  }
+  .robotics-robot-card__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .robotics-robot-placeholder {
+    height: 250px;
+    background: linear-gradient(135deg, #e8f5e0 0%, #d4edc4 100%);
+    border-radius: 10px;
+  }
+  .robotics-robot-card__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+  }
+  .robotics-robot-card__desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .robotics-cta {
+    padding: 60px 0;
+    background: #fff;
+  }
+  .robotics-cta__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+  .robotics-cta__content {
+    text-align: center;
+  }
+  .robotics-cta__banner {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  .robotics-enquiry-form {
+
+    background: #ffffff;
+    padding: 10px;
+    {% comment %} border-radius: 15px; {% endcomment %}
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border:2px solid #6fb31a;
+  }
+  .robotics-enquiry-form h3 {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 25px;
+  }
+  .robotics-form-group {
+    margin-bottom: 15px;
+  }
+  .robotics-form-group input,
+  .robotics-form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  .robotics-form-group input:focus,
+  .robotics-form-group textarea:focus {
+    outline: none;
+    border-color: #6fb31a;
+  }
+  .robotics-form-group textarea {
+    resize: vertical;
+  }
+  @media (max-width: 1024px) {
+    .robotics-highlights__grid,
+    .robotics-range__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .robotics-hero__grid,
+    .robotics-info__grid,
+    .robotics-info__grid--reverse,
+    .robotics-cta__grid {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      text-align: center;
+    }
+    .robotics-hero__title {
+      font-size: 32px;
+    }
+    .robotics-highlights__grid,
+    .robotics-range__grid {
+      grid-template-columns: 1fr;
+    }
+    .robotics-hero__image,
+    .robotics-info__image {
+      order: -1;
+    }
+    .robotics-info__content {
+      text-align: center;
+    }
+    .robotics-section-title {
+      font-size: 24px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Robotics Page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_tag",
+      "label": "Tag Text",
+      "default": "AUTONOMOUS CLEANING"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Robotic Cleaning Solutions Ireland"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_desc",
+      "label": "Description",
+      "default": "Boost efficiency, save time, and improve results with robotic cleaning solutions."
+    },
+    {
+      "type": "text",
+      "id": "feature1_title",
+      "label": "Feature 1 Title",
+      "default": "Time management:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature1_text",
+      "label": "Feature 1 Text",
+      "default": "Give you and your team time back to focus on the more detailed parts of your daily tasks."
+    },
+    {
+      "type": "text",
+      "id": "feature2_title",
+      "label": "Feature 2 Title",
+      "default": "Boost productivity:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature2_text",
+      "label": "Feature 2 Text",
+      "default": "Enjoy data driven, highly efficient cleaning results with our fleet of robotic cleaning solutions."
+    },
+    {
+      "type": "text",
+      "id": "feature3_title",
+      "label": "Feature 3 Title",
+      "default": "Turnkey solutions:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature3_text",
+      "label": "Feature 3 Text",
+      "default": "No matter what sector you work in, our robots are ready to instantly make life easier."
+    },
+    {
+      "type": "text",
+      "id": "hero_btn_text",
+      "label": "Button Text",
+      "default": "Explore Robotics Range"
+    },
+    {
+      "type": "url",
+      "id": "hero_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Why Invest Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "invest_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "invest_title",
+      "label": "Title",
+      "default": "Why Invest in Robotic Cleaning?"
+    },
+    {
+      "type": "textarea",
+      "id": "invest_text",
+      "label": "Text",
+      "default": "In today's fast-paced business world, staying ahead means keeping up with the times. Upgrade your business with state-of-the-art robotic cleaning solutions."
+    },
+    {
+      "type": "text",
+      "id": "invest_btn_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "invest_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "About LionsBot Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "about_title",
+      "label": "Title",
+      "default": "About LionsBot"
+    },
+    {
+      "type": "textarea",
+      "id": "about_text",
+      "label": "Text",
+      "default": "Founded in Singapore in 2018, LionsBot are industry leaders in autonomous cleaning robots."
+    },
+    {
+      "type": "header",
+      "content": "Highlights Section"
+    },
+    {
+      "type": "text",
+      "id": "highlights_title",
+      "label": "Section Title",
+      "default": "Highlights"
+    },
+    {
+      "type": "image_picker",
+      "id": "highlight1_image",
+      "label": "Highlight 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "highlight1_title",
+      "label": "Highlight 1 Title",
+      "default": "Sustainability"
+    },
+    {
+      "type": "textarea",
+      "id": "highlight1_text",
+      "label": "Highlight 1 Text",
+      "default": "LionsBot are committed to reducing environmental impact through sustainable robot design."
+    },
+    {
+      "type": "url",
+      "id": "highlight1_link",
+      "label": "Highlight 1 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "highlight2_image",
+      "label": "Highlight 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "highlight2_title",
+      "label": "Highlight 2 Title",
+      "default": "Serving All Sectors"
+    },
+    {
+      "type": "textarea",
+      "id": "highlight2_text",
+      "label": "Highlight 2 Text",
+      "default": "From healthcare to hospitality, our robotic cleaning solutions cover all industries."
+    },
+    {
+      "type": "url",
+      "id": "highlight2_link",
+      "label": "Highlight 2 Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "highlight3_image",
+      "label": "Highlight 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "highlight3_title",
+      "label": "Highlight 3 Title",
+      "default": "Data Driven Cleaning"
+    },
+    {
+      "type": "textarea",
+      "id": "highlight3_text",
+      "label": "Highlight 3 Text",
+      "default": "Each Robot is connected online to get real time updates via the LionsBot dashboard."
+    },
+    {
+      "type": "url",
+      "id": "highlight3_link",
+      "label": "Highlight 3 Link"
+    },
+    {
+      "type": "header",
+      "content": "Why Choose Clenli Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "clenli_logo",
+      "label": "Clenli Logo"
+    },
+    {
+      "type": "text",
+      "id": "clenli_title",
+      "label": "Title",
+      "default": "Why Choose Clenli Direct"
+    },
+    {
+      "type": "textarea",
+      "id": "clenli_text",
+      "label": "Text",
+      "default": "With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader."
+    },
+    {
+      "type": "text",
+      "id": "clenli_btn_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "clenli_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "LionsBot Range Section"
+    },
+    {
+      "type": "text",
+      "id": "range_title",
+      "label": "Section Title",
+      "default": "The LionsBot Range"
+    },
+    {
+      "type": "header",
+      "content": "CTA Section"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Title",
+      "default": "Don't Get Left Behind"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "Text",
+      "default": "Embrace the future of cleaning and be a part of the new cleaning revolution!"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_banner",
+      "label": "CTA Banner"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "01 811 89 20"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "robot",
+      "name": "Robot Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "R3 Vac"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Say hello to the R3 Vac, the complete vacuum solution."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Product Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Robotics Page",
+      "blocks": [
+        {
+          "type": "robot",
+          "settings": {
+            "name": "R3 Vac",
+            "description": "Say hello to the R3 Vac, the complete vacuum solution. Specially designed for offices, retail stores, community spaces and other indoor areas with high traffic."
+          }
+        },
+        {
+          "type": "robot",
+          "settings": {
+            "name": "R3 Scrub Pro",
+            "description": "Introducing the R3 Scrub Pro, pro cleaning made easy. The R3 Scrub Pro makes heavy-duty cleaning possible even in tight spaces."
+          }
+        },
+        {
+          "type": "robot",
+          "settings": {
+            "name": "R12 Rex Scrub",
+            "description": "With up to 80kg of unadulterated scrubbing power, the Rex is a cleaning powerhouse, delivering dramatic results in just one pass."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

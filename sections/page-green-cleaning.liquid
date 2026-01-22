@@ -1,0 +1,653 @@
+{% comment %}
+  Green Cleaning Landing Page Section
+  Shopify 2.0 Compatible
+{% endcomment %}
+
+<style>
+/* ===== GREEN CLEANING PAGE STYLES ===== */
+.green-cleaning-page {
+  max-width: 1570px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Hero Banner */
+.gc-hero-banner {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.gc-hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Page Header */
+.gc-page-header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.gc-page-header h1 {
+  color: #6fb31a;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.gc-page-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.gc-divider {
+  border: none;
+  border-bottom: 4px solid #6fb31a;
+  margin: 30px 0;
+}
+
+/* CTA Button */
+.btn-green {
+  display: inline-block;
+  background-color: #6fb31a;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-green:hover {
+  background-color: #5a9415;
+  color: #fff;
+}
+
+/* Content Sections */
+.gc-content-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.gc-content-section.reverse {
+  direction: rtl;
+}
+
+.gc-content-section.reverse > * {
+  direction: ltr;
+}
+
+.gc-content-text h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.gc-content-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.gc-content-text .btn-green {
+  margin-top: 15px;
+}
+
+.gc-content-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== QUOTE FORM SECTION - ORIGINAL STYLE ===== */
+.gc-quote-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.gc-quote-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.gc-quote-section > p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Form Wrapper */
+.gc-form-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Call Now Button */
+.gc-callnow-btn {
+  display: block;
+  background: #ffa800;
+  color: #fff;
+  text-align: center;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.gc-callnow-btn:hover {
+  background: #e69500;
+  color: #fff;
+}
+
+/* Enquiry Form - Original Style */
+.gc-enquiry-form {
+  background: #3d3d3d;
+  padding: 30px;
+}
+
+.gc-enquiry-form h5 {
+  color: #ffa800;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gc-form-group {
+  margin-bottom: 15px;
+}
+
+.gc-form-group input,
+.gc-form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+}
+
+.gc-form-group input::placeholder,
+.gc-form-group textarea::placeholder {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.gc-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.gc-submit-btn {
+  width: 100%;
+  background: #ffa800;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gc-submit-btn:hover {
+  background: #e69500;
+}
+
+.gc-form-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.gc-form-error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .gc-content-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .gc-content-section.reverse {
+    direction: ltr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gc-page-header h1 {
+    font-size: 32px;
+  }
+  
+  .gc-page-header h2 {
+    font-size: 18px;
+  }
+  
+  .gc-content-text h3 {
+    font-size: 24px;
+  }
+  
+  .gc-quote-section h3 {
+    font-size: 26px;
+  }
+  
+  .gc-form-wrapper {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gc-page-header h1 {
+    font-size: 28px;
+  }
+  
+  .gc-enquiry-form {
+    padding: 20px;
+  }
+  
+  .gc-callnow-btn {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+}
+</style>
+
+<div class="green-cleaning-page">
+  
+  {% comment %} Hero Banner {% endcomment %}
+  {% if section.settings.show_banner and section.settings.banner_image != blank %}
+    <div class="gc-hero-banner">
+      {% if section.settings.banner_link != blank %}
+        <a href="{{ section.settings.banner_link }}">
+      {% endif %}
+      <img src="{{ section.settings.banner_image | image_url: width: 1920 }}" 
+           alt="{{ section.settings.banner_alt | default: 'Green Cleaning' }}"
+           loading="eager">
+      {% if section.settings.banner_link != blank %}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% comment %} Page Header {% endcomment %}
+  <div class="gc-page-header">
+    <h1>{{ section.settings.page_title }}</h1>
+    <h2>{{ section.settings.page_subtitle }}</h2>
+    {% if section.settings.show_header_cta %}
+      <a href="#contact_form" class="btn-green">{{ section.settings.header_cta_text }}</a>
+    {% endif %}
+  </div>
+
+  <hr class="gc-divider">
+
+  {% comment %} Section 1: Why Invest {% endcomment %}
+  {% if section.settings.show_section1 %}
+    <div class="gc-content-section">
+      <div class="gc-content-text">
+        <h3>{{ section.settings.section1_title }}</h3>
+        {{ section.settings.section1_content }}
+      </div>
+      <div class="gc-content-image">
+        {% if section.settings.section1_image != blank %}
+          <img src="{{ section.settings.section1_image | image_url: width: 800 }}" 
+               alt="{{ section.settings.section1_title }}"
+               loading="lazy">
+        {% endif %}
+      </div>
+    </div>
+    <hr class="gc-divider">
+  {% endif %}
+
+  {% comment %} Section 2: Tersano {% endcomment %}
+  {% if section.settings.show_section2 %}
+    <div class="gc-content-section reverse">
+      <div class="gc-content-text">
+        <h3>{{ section.settings.section2_title }}</h3>
+        {{ section.settings.section2_content }}
+        {% if section.settings.section2_link != blank %}
+          <a href="{{ section.settings.section2_link }}" class="btn-green">{{ section.settings.section2_link_text }}</a>
+        {% endif %}
+      </div>
+      <div class="gc-content-image">
+        {% if section.settings.section2_image != blank %}
+          <img src="{{ section.settings.section2_image | image_url: width: 800 }}" 
+               alt="{{ section.settings.section2_title }}"
+               loading="lazy">
+        {% endif %}
+      </div>
+    </div>
+    <hr class="gc-divider">
+  {% endif %}
+
+  {% comment %} Section 3: PVA Sachets {% endcomment %}
+  {% if section.settings.show_section3 %}
+    <div class="gc-content-section">
+      <div class="gc-content-text">
+        <h3>{{ section.settings.section3_title }}</h3>
+        {{ section.settings.section3_content }}
+        {% if section.settings.section3_link != blank %}
+          <a href="{{ section.settings.section3_link }}" class="btn-green">{{ section.settings.section3_link_text }}</a>
+        {% endif %}
+      </div>
+      <div class="gc-content-image">
+        {% if section.settings.section3_image != blank %}
+          <img src="{{ section.settings.section3_image | image_url: width: 800 }}" 
+               alt="{{ section.settings.section3_title }}"
+               loading="lazy">
+        {% endif %}
+      </div>
+    </div>
+    <hr class="gc-divider">
+  {% endif %}
+
+  {% comment %} Quote Form Section - Original Style {% endcomment %}
+  {% if section.settings.show_quote_form %}
+    <div class="gc-quote-section" id="gc-quote-form">
+      <h3>{{ section.settings.form_title }}</h3>
+      <p>{{ section.settings.form_subtitle }}</p>
+      
+      <div class="gc-form-wrapper">
+        
+        {% comment %} Call Now Button {% endcomment %}
+        {% if section.settings.phone_number != blank %}
+          <a href="tel:{{ section.settings.phone_number | remove: ' ' | remove: '(' | remove: ')' }}" class="gc-callnow-btn">
+            CALL NOW
+          </a>
+        {% endif %}
+
+        {% comment %} Enquiry Form {% endcomment %}
+        <div class="gc-enquiry-form">
+          <h5>{{ section.settings.form_heading }}</h5>
+          
+          {% form 'contact', id: 'green-enquiry-form' %}
+            {% if form.posted_successfully? %}
+              <div class="gc-form-success">
+                Thank you for your enquiry! We'll get back to you soon.
+              </div>
+            {% endif %}
+
+            {% if form.errors %}
+              <div class="gc-form-error">
+                {{ form.errors | default_errors }}
+              </div>
+            {% endif %}
+
+            <input type="hidden" name="contact[subject]" value="Green Cleaning Enquiry">
+            
+            <div class="gc-form-group">
+              <input type="text" 
+                     name="contact[name]" 
+                     placeholder="NAME" 
+                     required
+                     value="{{ form.name }}">
+            </div>
+            
+            <div class="gc-form-group">
+              <input type="email" 
+                     name="contact[email]" 
+                     placeholder="MAIL" 
+                     required
+                     value="{{ form.email }}">
+            </div>
+            
+            <div class="gc-form-group">
+              <input type="tel" 
+                     name="contact[phone]" 
+                     placeholder="PHONE NUMBER" 
+                     required>
+            </div>
+            
+            <div class="gc-form-group">
+              <textarea name="contact[body]" 
+                        placeholder="MESSAGE" 
+                        required>{{ form.body }}</textarea>
+            </div>
+            
+            <button type="submit" class="gc-submit-btn">Submit</button>
+          {% endform %}
+        </div>
+        
+      </div>
+    </div>
+  {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "Green Cleaning Page",
+  "tag": "section",
+  "class": "green-cleaning-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_banner",
+      "label": "Show Banner",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_alt",
+      "label": "Banner Alt Text",
+      "default": "Green Cleaning"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Banner Link"
+    },
+    {
+      "type": "header",
+      "content": "Page Header"
+    },
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title",
+      "default": "Green Cleaning"
+    },
+    {
+      "type": "text",
+      "id": "page_subtitle",
+      "label": "Page Subtitle",
+      "default": "Sustainable Solutions for Businesses"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header_cta",
+      "label": "Show CTA Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "header_cta_text",
+      "label": "CTA Button Text",
+      "default": "Get a Quote Today"
+    },
+    {
+      "type": "header",
+      "content": "Section 1: Why Invest"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section1",
+      "label": "Show Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "section1_title",
+      "label": "Title",
+      "default": "Why Invest in Green Cleaning?"
+    },
+    {
+      "type": "richtext",
+      "id": "section1_content",
+      "label": "Content",
+      "default": "<p>As a leading supplier of cleaning solutions, we are always on the lookout for new and innovative products that give our clients the edge in an increasingly competitive market.</p><p>As we look to the marketplace, it is evident that the need for sustainable cleaning solutions has become essential. Today more than ever, we are aware of our potential carbon footprint and our ability to implement incremental changes that will have a really positive impact on the environment and on our future.</p><p>Below are some sustainable cleaning solutions, proven to deliver excellent cleaning results at a competitive price.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 2: Tersano"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section2",
+      "label": "Show Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "section2_title",
+      "label": "Title",
+      "default": "Tersano"
+    },
+    {
+      "type": "richtext",
+      "id": "section2_content",
+      "label": "Content",
+      "default": "<p>Tersano is a chemical-free cleaning solution that is driving world-wide sustainability in the cleaning industry. Tersano is a remarkable system that converts ordinary tap water into a chemical-free sanitiser and powerful cleaner.</p><p>A single Tersano cartridge produces 12,000 litres of solution.</p><p>Tersano is the perfect solution for high traffic areas such as, schools and colleges, hospitals and residential homes, airports, bus and rail stations, retail outlets, hotels and restaurants, plus many more.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section2_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "section2_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "section2_link_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "header",
+      "content": "Section 3: PVA Sachets"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section3",
+      "label": "Show Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "section3_title",
+      "label": "Title",
+      "default": "PVA Soluble Sachets"
+    },
+    {
+      "type": "richtext",
+      "id": "section3_content",
+      "label": "Content",
+      "default": "<p>The PVA Sachet System is the first complete range of cleaning products, delivered in soluble capsules. The Sachet System is a sustainable alternative to traditional chemicals. The product range is 100% biodegradable and phosphate free.</p><p>This clever system allows you to calculate the cost of implementing a sustainable cleaning schedule at any location. The Sachet System is the perfect cleaning partner for companies seeking to implement a low-cost sustainable solution.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "section3_image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "section3_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "section3_link_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "header",
+      "content": "Quote Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quote_form",
+      "label": "Show Quote Form",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Section Title",
+      "default": "Make the Change Today"
+    },
+    {
+      "type": "textarea",
+      "id": "form_subtitle",
+      "label": "Section Subtitle",
+      "default": "Lower your environmental impact while saving on costs - all while keeping your facility cleaner than ever. To learn more about our Green Cleaning Solutions, contact us today!"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "01 811 89 20"
+    },
+    {
+      "type": "text",
+      "id": "form_heading",
+      "label": "Form Heading",
+      "default": "GO GREEN TODAY ENQUIRE NOW"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Green Cleaning Page"
+    }
+  ]
+}
+{% endschema %}

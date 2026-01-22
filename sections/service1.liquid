@@ -1,0 +1,594 @@
+{%- liquid
+    assign section_id = section.id
+    assign left_image = section.settings.left_image
+    assign left_heading = section.settings.left_heading
+    assign left_heading_color = section.settings.left_heading_color
+    assign left_heading_size = section.settings.left_heading_size
+    assign underline_color = section.settings.underline_color
+    assign underline_width = section.settings.underline_width
+    assign overlay_color = section.settings.overlay_color
+    assign overlay_opacity = section.settings.overlay_opacity
+    assign right_heading = section.settings.right_heading
+    assign right_heading_color = section.settings.right_heading_color
+    assign right_heading_size = section.settings.right_heading_size
+    assign right_description = section.settings.right_description
+    assign right_desc_color = section.settings.right_desc_color
+    assign right_desc_size = section.settings.right_desc_size
+    assign bg_color = section.settings.bg_color
+    assign container = section.settings.container
+    assign left_width = section.settings.left_width
+    assign padding_top = section.settings.padding_top
+    assign padding_bottom = section.settings.padding_bottom
+    assign padding_top_mobile = section.settings.padding_top_mobile
+    assign padding_bottom_mobile = section.settings.padding_bottom_mobile
+-%}
+
+<style>
+    #service-overview-{{ section_id }} {
+        background-color: {{ bg_color }};
+        padding-top: {{ padding_top }}px;
+        padding-bottom: {{ padding_bottom }}px;
+    }
+    
+    #service-overview-{{ section_id }} .so-container {
+        max-width: {% if container == '1170' %}1170px{% elsif container == '1370' %}1370px{% elsif container == '1570' %}1570px{% else %}1170px{% endif %};
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    #service-overview-{{ section_id }} .so-wrapper {
+        display: flex;
+        align-items: stretch;
+        gap: {{ section.settings.content_gap }}px;
+    }
+    
+    /* ============ LEFT SIDE - IMAGE WITH OVERLAY ============ */
+    #service-overview-{{ section_id }} .so-left {
+        width: {{ left_width }}%;
+        flex-shrink: 0;
+        position: relative;
+        border-radius: {{ section.settings.image_radius }}px;
+        overflow: hidden;
+        min-height: 400px;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: {{ overlay_color }};
+        opacity: {{ overlay_opacity }};
+    }
+    
+    #service-overview-{{ section_id }} .so-left-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    }
+    
+    #service-overview-{{ section_id }} .so-left-content {
+        position: relative;
+        z-index: 2;
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-heading {
+        font-size: {{ left_heading_size }}px;
+        font-weight: 700;
+        color: {{ left_heading_color }};
+        margin: 0 0 10px 0;
+        line-height: 1.3;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-underline {
+        width: {{ underline_width }}px;
+        height: 3px;
+        background-color: {{ underline_color }};
+        margin-bottom: 25px;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-list li {
+        font-size: {{ section.settings.list_font_size }}px;
+        font-weight: {{ section.settings.list_font_weight }};
+        color: {{ section.settings.list_color }};
+        padding: {{ section.settings.list_item_padding }}px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-list li:last-child {
+        border-bottom: none;
+    }
+    
+    #service-overview-{{ section_id }} .so-left-list li:hover {
+        padding-left: 10px;
+        color: {{ underline_color }};
+    }
+    
+    #service-overview-{{ section_id }} .so-left-list li a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    /* ============ RIGHT SIDE - TEXT CONTENT ============ */
+    #service-overview-{{ section_id }} .so-right {
+        flex: 1;
+        padding: 20px 0;
+    }
+    
+    #service-overview-{{ section_id }} .so-right-heading {
+        font-size: {{ right_heading_size }}px;
+        font-weight: 700;
+        color: {{ right_heading_color }};
+        margin: 0 0 20px 0;
+        line-height: 1.3;
+    }
+    
+    #service-overview-{{ section_id }} .so-right-description {
+        font-size: {{ right_desc_size }}px;
+        color: {{ right_desc_color }};
+        line-height: 1.8;
+        margin: 0;
+    }
+    
+    #service-overview-{{ section_id }} .so-right-description p {
+        margin: 0 0 15px 0;
+    }
+    
+    #service-overview-{{ section_id }} .so-right-description p:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* ============ TABLET ============ */
+    @media (max-width: 1024px) {
+        #service-overview-{{ section_id }} .so-wrapper {
+            gap: 30px;
+        }
+        
+        #service-overview-{{ section_id }} .so-left {
+            width: 45%;
+            min-height: 350px;
+        }
+        
+        #service-overview-{{ section_id }} .so-left-heading {
+            font-size: {{ left_heading_size | minus: 4 }}px;
+        }
+        
+        #service-overview-{{ section_id }} .so-right-heading {
+            font-size: {{ right_heading_size | minus: 4 }}px;
+        }
+    }
+    
+    /* ============ MOBILE ============ */
+    @media (max-width: 767px) {
+        #service-overview-{{ section_id }} {
+            padding-top: {{ padding_top_mobile }}px;
+            padding-bottom: {{ padding_bottom_mobile }}px;
+        }
+        
+        #service-overview-{{ section_id }} .so-wrapper {
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        #service-overview-{{ section_id }} .so-left {
+            width: 100%;
+            min-height: 300px;
+        }
+        
+        #service-overview-{{ section_id }} .so-left-content {
+            padding: 25px;
+        }
+        
+        #service-overview-{{ section_id }} .so-left-heading {
+            font-size: {{ left_heading_size | minus: 6 }}px;
+        }
+        
+        #service-overview-{{ section_id }} .so-left-list li {
+            font-size: {{ section.settings.list_font_size | minus: 2 }}px;
+        }
+        
+        #service-overview-{{ section_id }} .so-right {
+            padding: 0;
+        }
+        
+        #service-overview-{{ section_id }} .so-right-heading {
+            font-size: {{ right_heading_size | minus: 6 }}px;
+            margin-bottom: 15px;
+        }
+        
+        #service-overview-{{ section_id }} .so-right-description {
+            font-size: {{ right_desc_size | minus: 1 }}px;
+        }
+    }
+</style>
+
+<section id="service-overview-{{ section_id }}" class="service-overview-section">
+    <div class="so-container">
+        <div class="so-wrapper">
+            
+            <!-- Left Side - Image with Overlay & List -->
+            <div class="so-left">
+                {%- if left_image != blank -%}
+                    <div class="so-left-bg" style="background-image: url('{{ left_image | image_url: width: 800 }}');"></div>
+                    <div class="so-left-overlay"></div>
+                {%- else -%}
+                    <div class="so-left-placeholder"></div>
+                {%- endif -%}
+                
+                <div class="so-left-content">
+                    {%- if left_heading != blank -%}
+                        <h2 class="so-left-heading">{{ left_heading }}</h2>
+                        <div class="so-left-underline"></div>
+                    {%- endif -%}
+                    
+                    <ul class="so-left-list">
+                        {%- for block in section.blocks -%}
+                            {%- if block.type == 'list_item' -%}
+                                <li {{ block.shopify_attributes }}>
+                                    {%- if block.settings.item_link != blank -%}
+                                        <a href="{{ block.settings.item_link }}">{{ block.settings.item_text }}</a>
+                                    {%- else -%}
+                                        {{ block.settings.item_text }}
+                                    {%- endif -%}
+                                </li>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Right Side - Heading & Description -->
+            <div class="so-right">
+                {%- if right_heading != blank -%}
+                    <h2 class="so-right-heading">{{ right_heading }}</h2>
+                {%- endif -%}
+                
+                {%- if right_description != blank -%}
+                    <div class="so-right-description">{{ right_description }}</div>
+                {%- endif -%}
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Service Overview",
+    "tag": "section",
+    "class": "service-overview-block",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Left Side - Image & List"
+        },
+        {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "range",
+            "id": "image_radius",
+            "label": "Image Border Radius",
+            "min": 0,
+            "max": 30,
+            "step": 2,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "Overlay Color",
+            "default": "#1a365d"
+        },
+        {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Overlay Opacity",
+            "min": 0,
+            "max": 1,
+            "step": 0.1,
+            "default": 0.7
+        },
+        {
+            "type": "text",
+            "id": "left_heading",
+            "label": "Left Heading",
+            "default": "Service Overview"
+        },
+        {
+            "type": "color",
+            "id": "left_heading_color",
+            "label": "Left Heading Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "range",
+            "id": "left_heading_size",
+            "label": "Left Heading Size",
+            "min": 18,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "default": 24
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_width",
+            "label": "Underline Width",
+            "min": 30,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "header",
+            "content": "List Styling"
+        },
+        {
+            "type": "color",
+            "id": "list_color",
+            "label": "List Text Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "range",
+            "id": "list_font_size",
+            "label": "List Font Size",
+            "min": 12,
+            "max": 20,
+            "step": 1,
+            "unit": "px",
+            "default": 15
+        },
+        {
+            "type": "select",
+            "id": "list_font_weight",
+            "label": "List Font Weight",
+            "default": "400",
+            "options": [
+                {"value": "400", "label": "Normal"},
+                {"value": "500", "label": "Medium"},
+                {"value": "600", "label": "Semi Bold"},
+                {"value": "700", "label": "Bold"}
+            ]
+        },
+        {
+            "type": "range",
+            "id": "list_item_padding",
+            "label": "List Item Padding",
+            "min": 5,
+            "max": 20,
+            "step": 1,
+            "unit": "px",
+            "default": 12
+        },
+        {
+            "type": "header",
+            "content": "Right Side - Content"
+        },
+        {
+            "type": "text",
+            "id": "right_heading",
+            "label": "Right Heading",
+            "default": "About Service"
+        },
+        {
+            "type": "color",
+            "id": "right_heading_color",
+            "label": "Right Heading Color",
+            "default": "#232323"
+        },
+        {
+            "type": "range",
+            "id": "right_heading_size",
+            "label": "Right Heading Size",
+            "min": 18,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "default": 24
+        },
+        {
+            "type": "richtext",
+            "id": "right_description",
+            "label": "Right Description",
+            "default": "<p>Clenli Direct has a fully qualified service and maintenance team with over 20 years of industry experience. We provide our clients with a 24-hour emergency response service to ensure that you can contact someone in case of emergency any time, day or night.</p><p>At Clenli Direct we are acutely aware of the importance of after-sales service and you will find us to be very client-focused. Our commitment to our customers has served us well, as is evident from our very loyal customer base.</p>"
+        },
+        {
+            "type": "color",
+            "id": "right_desc_color",
+            "label": "Description Color",
+            "default": "#555555"
+        },
+        {
+            "type": "range",
+            "id": "right_desc_size",
+            "label": "Description Font Size",
+            "min": 13,
+            "max": 20,
+            "step": 1,
+            "unit": "px",
+            "default": 15
+        },
+        {
+            "type": "header",
+            "content": "Layout Settings"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "select",
+            "id": "container",
+            "label": "Container Width",
+            "default": "1170",
+            "options": [
+                {"value": "1170", "label": "1170px"},
+                {"value": "1370", "label": "1370px"},
+                {"value": "1570", "label": "1570px"}
+            ]
+        },
+        {
+            "type": "range",
+            "id": "left_width",
+            "label": "Left Side Width (%)",
+            "min": 30,
+            "max": 60,
+            "step": 5,
+            "unit": "%",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "content_gap",
+            "label": "Gap Between Left & Right",
+            "min": 20,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top (Desktop)",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom (Desktop)",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "Padding Top (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "Padding Bottom (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        }
+    ],
+    "blocks": [
+        {
+            "type": "list_item",
+            "name": "List Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "item_text",
+                    "label": "Text",
+                    "default": "List Item"
+                },
+                {
+                    "type": "url",
+                    "id": "item_link",
+                    "label": "Link (Optional)"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Service Overview",
+            "blocks": [
+                {
+                    "type": "list_item",
+                    "settings": {
+                        "item_text": "Nationwide Engineer Coverage"
+                    }
+                },
+                {
+                    "type": "list_item",
+                    "settings": {
+                        "item_text": "26,752 Cleaning Equipment Under Care"
+                    }
+                },
+                {
+                    "type": "list_item",
+                    "settings": {
+                        "item_text": "€500,000 Worth of Spare Parts in Stock"
+                    }
+                },
+                {
+                    "type": "list_item",
+                    "settings": {
+                        "item_text": "Asset Management Software"
+                    }
+                },
+                {
+                    "type": "list_item",
+                    "settings": {
+                        "item_text": "Job Scheduling Optimisation"
+                    }
+                },
+                {
+                    "type": "list_item",
+                    "settings": {
+                        "item_text": "PAT Testing"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

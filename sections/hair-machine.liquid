@@ -1,0 +1,1350 @@
+{%- comment -%}
+  Machine Hire Page - Clenli Direct Clone
+  Complete Shopify section with embedded CSS
+  
+  Installation:
+  1. Go to Online Store > Themes > Edit Code
+  2. Under Sections, click Add a new section
+  3. Name it: machine-hire
+  4. Paste this entire file and save
+  5. Create a new page template that includes this section
+{%- endcomment -%}
+
+{%- style -%}
+/* ==========================================
+   MACHINE HIRE PAGE - CSS VARIABLES
+   ========================================== */
+:root {
+  --mh-green: {{ section.settings.primary_color }};
+  --mh-green-dark: {{ section.settings.primary_color | color_darken: 15 }};
+  --mh-green-light: {{ section.settings.primary_color | color_lighten: 45 }};
+  --mh-dark: #1a1b1f;
+  --mh-gray: #777777;
+  --mh-light-gray: #f4f4f4;
+  --mh-border: #eeeeee;
+  --mh-white: #ffffff;
+  --mh-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  --mh-transition: all 0.3s ease;
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+.machine-hire-page {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--mh-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.machine-hire-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.machine-hire-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.machine-hire-page a {
+  color: var(--mh-green);
+  text-decoration: none;
+  transition: var(--mh-transition);
+}
+
+.machine-hire-page a:hover {
+  color: var(--mh-green-dark);
+}
+
+/* ==========================================
+   CONTAINER
+   ========================================== */
+.mh-container {
+  width: 100%;
+  max-width: 1315px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================
+   SECTION WRAPPER
+   ========================================== */
+.mh-section-wrap {
+  margin: 0 30px;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.mh-hero {
+  display: flex;
+  min-height: {{ section.settings.hero_height }}px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--mh-light-gray);
+  margin-bottom: 20px;
+}
+
+.mh-hero-content {
+  width: 100%;
+  max-width: 900px;
+}
+
+.mh-hero-title {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--mh-dark);
+}
+
+.mh-hero-subtitle {
+  font-size: 20px;
+  line-height: 1.7;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+/* ==========================================
+   MOTTO SECTION
+   ========================================== */
+.mh-motto {
+  width: 80%;
+  margin: 0 auto 85px;
+  text-align: center;
+}
+
+.mh-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.mh-motto-title {
+  font-size: 36px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* ==========================================
+   DIVIDER
+   ========================================== */
+.mh-divider {
+  height: 1px;
+  background-color: var(--mh-border);
+  margin: 30px 0;
+}
+
+/* ==========================================
+   CONTENT SECTION
+   ========================================== */
+.mh-content-wrap {
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+/* ==========================================
+   ABOUT GRID
+   ========================================== */
+.mh-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.mh-about-grid.reverse {
+  grid-template-columns: 2fr 1fr;
+}
+
+.mh-about-grid.reverse .mh-about-text {
+  order: 1;
+}
+
+.mh-about-grid.reverse .mh-about-image {
+  order: 0;
+}
+
+.mh-section-heading {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.mh-paragraph-light {
+  opacity: 0.6;
+  line-height: 1.7;
+}
+
+.mh-about-image img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   MACHINE CATEGORIES HEADING
+   ========================================== */
+.mh-categories-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mh-categories-heading .mh-label {
+  margin-bottom: 15px;
+}
+
+.mh-categories-heading h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+/* ==========================================
+   MACHINE GRID
+   ========================================== */
+.mh-machine-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 20px;
+  margin-bottom: 60px;
+}
+
+.mh-machine-card {
+  text-align: center;
+  transition: var(--mh-transition);
+}
+
+.mh-machine-card:hover {
+  transform: translateY(-5px);
+}
+
+.mh-machine-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.mh-machine-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.mh-machine-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--mh-dark);
+  margin: 0;
+}
+
+.mh-machine-card a:hover .mh-machine-title {
+  color: var(--mh-green);
+}
+
+/* ==========================================
+   CONTACT SECTION
+   ========================================== */
+.mh-contact-section {
+  background-color: var(--mh-white);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.mh-contact-title {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 40px;
+  color: var(--mh-dark);
+}
+
+.mh-contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ==========================================
+   CALL NOW BUTTON
+   ========================================== */
+.mh-callnow-btn {
+  display: inline-block;
+}
+
+.mh-callnow-btn a {
+  display: inline-block;
+  padding: 20px 50px;
+  background-color: var(--mh-green);
+  color: var(--mh-white);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: var(--mh-transition);
+}
+
+.mh-callnow-btn a:hover {
+  background-color: var(--mh-green-dark);
+  color: var(--mh-white);
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   ENQUIRY FORM
+   ========================================== */
+.mh-enquiry-form {
+  background: linear-gradient(135deg, var(--mh-green), var(--mh-green-dark));
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+}
+
+.mh-enquiry-form h5 {
+  color: var(--mh-white);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mh-form-group {
+  margin-bottom: 15px;
+}
+
+.mh-form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--mh-white);
+  transition: var(--mh-transition);
+}
+
+.mh-form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.mh-form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.mh-form-submit {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: var(--mh-dark);
+  color: var(--mh-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--mh-transition);
+}
+
+.mh-form-submit:hover {
+  background-color: #32343a;
+}
+
+/* ==========================================
+   PRODUCTS SECTION
+   ========================================== */
+.mh-products-section {
+  padding: 60px 0;
+  background-color: var(--mh-light-gray);
+}
+
+.mh-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.mh-products-column {
+  background: var(--mh-white);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: var(--mh-shadow);
+}
+
+.mh-products-column-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--mh-green);
+  color: var(--mh-dark);
+}
+
+/* ==========================================
+   PRODUCT CARD
+   ========================================== */
+.mh-product-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--mh-border);
+  transition: var(--mh-transition);
+}
+
+.mh-product-card:last-child {
+  border-bottom: none;
+}
+
+.mh-product-card:hover {
+  background-color: var(--mh-light-gray);
+  margin: 0 -10px;
+  padding: 15px 10px;
+  border-radius: 4px;
+}
+
+.mh-product-image-wrap {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.mh-product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mh-product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mh-product-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mh-dark);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.mh-product-name:hover {
+  color: var(--mh-green);
+}
+
+.mh-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.mh-product-stars {
+  color: #ffc107;
+  font-size: 12px;
+}
+
+.mh-product-reviews {
+  font-size: 11px;
+  color: var(--mh-gray);
+}
+
+.mh-product-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mh-green);
+}
+
+.mh-product-price-old {
+  font-size: 12px;
+  color: var(--mh-gray);
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+/* ==========================================
+   NEWSLETTER SECTION
+   ========================================== */
+.mh-newsletter {
+  background: linear-gradient(135deg, var(--mh-green), var(--mh-green-dark));
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mh-newsletter-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--mh-white);
+  margin-bottom: 10px;
+}
+
+.mh-newsletter-subtitle {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 30px;
+}
+
+.mh-newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.mh-newsletter-input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.mh-newsletter-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.mh-newsletter-btn {
+  padding: 15px 30px;
+  background-color: var(--mh-dark);
+  color: var(--mh-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--mh-transition);
+}
+
+.mh-newsletter-btn:hover {
+  background-color: #32343a;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media screen and (max-width: 991px) {
+  .mh-section-wrap {
+    margin: 0 15px;
+  }
+
+  .mh-hero-title {
+    font-size: 42px;
+  }
+
+  .mh-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mh-about-grid.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .mh-about-grid.reverse .mh-about-text {
+    order: 1;
+  }
+
+  .mh-about-grid.reverse .mh-about-image {
+    order: 0;
+  }
+
+  .mh-about-grid .mh-about-image {
+    order: 0;
+  }
+
+  .mh-about-grid .mh-about-text {
+    order: 1;
+  }
+
+  .mh-section-heading {
+    text-align: center;
+  }
+
+  .mh-paragraph-light {
+    text-align: center;
+  }
+
+  .mh-machine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mh-products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mh-hero-title {
+    font-size: 36px;
+  }
+
+  .mh-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .mh-motto {
+    width: 100%;
+  }
+
+  .mh-motto-title {
+    font-size: 28px;
+  }
+
+  .mh-section-heading {
+    font-size: 28px;
+  }
+
+  .mh-content-wrap {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+
+  .mh-about-grid {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .mh-contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mh-enquiry-form {
+    max-width: 100%;
+  }
+
+  .mh-newsletter-form {
+    flex-direction: column;
+  }
+
+  .mh-newsletter-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .mh-hero {
+    min-height: auto;
+    padding: 40px 15px;
+  }
+
+  .mh-hero-title {
+    font-size: 28px;
+  }
+
+  .mh-machine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mh-machine-image {
+    height: 180px;
+  }
+
+  .mh-contact-title {
+    font-size: 22px;
+  }
+
+  .mh-callnow-btn a {
+    padding: 15px 35px;
+    font-size: 16px;
+  }
+}
+{%- endstyle -%}
+
+<div class="machine-hire-page">
+  <!-- Hero Section -->
+  <section class="mh-hero">
+    <div class="mh-hero-content">
+      <h1 class="mh-hero-title">{{ section.settings.hero_title }}</h1>
+      <p class="mh-hero-subtitle">{{ section.settings.hero_subtitle }}</p>
+    </div>
+  </section>
+
+  <div class="mh-section-wrap">
+    <div class="mh-container">
+      <!-- Motto Section -->
+      <div class="mh-motto">
+        <span class="mh-label">{{ section.settings.motto_label }}</span>
+        <h2 class="mh-motto-title">{{ section.settings.motto_title }}</h2>
+      </div>
+
+      <div class="mh-divider"></div>
+
+      <!-- Content Sections -->
+      <div class="mh-content-wrap">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'content_section' -%}
+              <div class="mh-about-grid{% if block.settings.reverse_layout %} reverse{% endif %}" {{ block.shopify_attributes }}>
+                <div class="mh-about-text">
+                  <h2 class="mh-section-heading">{{ block.settings.heading }}</h2>
+                  <p class="mh-paragraph-light">{{ block.settings.content }}</p>
+                </div>
+                <div class="mh-about-image">
+                  {%- if block.settings.image != blank -%}
+                    <img src="{{ block.settings.image | image_url: width: 800 }}" 
+                         alt="{{ block.settings.heading | escape }}"
+                         loading="lazy">
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+      <!-- Machine Categories Section -->
+      {%- if section.settings.show_categories -%}
+        <div class="mh-categories-heading">
+          <span class="mh-label">{{ section.settings.categories_label }}</span>
+          <h2>{{ section.settings.categories_title }}</h2>
+        </div>
+
+        <div class="mh-machine-grid">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'machine_category' -%}
+              <div class="mh-machine-card" {{ block.shopify_attributes }}>
+                <a href="{{ block.settings.link }}">
+                  {%- if block.settings.image != blank -%}
+                    <img src="{{ block.settings.image | image_url: width: 400 }}" 
+                         alt="{{ block.settings.title | escape }}"
+                         class="mh-machine-image"
+                         loading="lazy">
+                  {%- else -%}
+                    {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg mh-machine-image' }}
+                  {%- endif -%}
+                  <h3 class="mh-machine-title">{{ block.settings.title }}</h3>
+                </a>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  {%- if section.settings.show_contact -%}
+    <section class="mh-contact-section">
+      <div class="mh-container">
+        <p class="mh-contact-title">{{ section.settings.contact_title }}</p>
+        
+        <div class="mh-contact-content">
+          <!-- Call Now Button -->
+          <div class="mh-callnow-btn">
+            <a href="tel:{{ section.settings.phone_number | replace: ' ', '' }}">
+              {{ section.settings.call_button_text }}
+            </a>
+          </div>
+
+          <!-- Enquiry Form -->
+          <div class="mh-enquiry-form">
+            <h5>{{ section.settings.form_title }}</h5>
+            {%- form 'contact', class: 'mh-enquire-contact-form' -%}
+              <input type="hidden" name="contact[subject]" value="Machine Hire Enquiry">
+              
+              <div class="mh-form-group">
+                <input type="text" 
+                       name="contact[name]" 
+                       class="mh-form-input" 
+                       placeholder="{{ section.settings.form_name_placeholder }}"
+                       required>
+              </div>
+              
+              <div class="mh-form-group">
+                <input type="email" 
+                       name="contact[email]" 
+                       class="mh-form-input" 
+                       placeholder="{{ section.settings.form_email_placeholder }}"
+                       required>
+              </div>
+              
+              <div class="mh-form-group">
+                <input type="tel" 
+                       name="contact[phone]" 
+                       class="mh-form-input" 
+                       placeholder="{{ section.settings.form_phone_placeholder }}"
+                       required>
+              </div>
+              
+              <div class="mh-form-group">
+                <textarea name="contact[body]" 
+                          class="mh-form-input mh-form-textarea" 
+                          placeholder="{{ section.settings.form_message_placeholder }}"
+                          required></textarea>
+              </div>
+              
+              <button type="submit" class="mh-form-submit">
+                {{ section.settings.form_submit_text }}
+              </button>
+            {%- endform -%}
+          </div>
+        </div>
+      </div>
+    </section>
+  {%- endif -%}
+
+  <!-- Products Section -->
+  {%- if section.settings.show_products -%}
+    <section class="mh-products-section">
+      <div class="mh-container">
+        <div class="mh-products-grid">
+          <!-- Featured Products Column -->
+          <div class="mh-products-column">
+            <h3 class="mh-products-column-title">{{ section.settings.featured_title }}</h3>
+            {%- if section.settings.featured_collection != blank -%}
+              {%- assign featured_products = collections[section.settings.featured_collection].products | limit: 3 -%}
+              {%- for product in featured_products -%}
+                <div class="mh-product-card">
+                  <div class="mh-product-image-wrap">
+                    {%- if product.featured_image != blank -%}
+                      <img src="{{ product.featured_image | image_url: width: 160 }}" 
+                           alt="{{ product.title | escape }}"
+                           loading="lazy">
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    {%- endif -%}
+                  </div>
+                  <div class="mh-product-info">
+                    <a href="{{ product.url }}" class="mh-product-name">
+                      {{ product.title | truncate: 50 }}
+                    </a>
+                    {%- if product.metafields.reviews.rating != blank -%}
+                      <div class="mh-product-rating">
+                        <span class="mh-product-stars">★★★★★</span>
+                        <span class="mh-product-reviews">({{ product.metafields.reviews.rating_count }} Reviews)</span>
+                      </div>
+                    {%- endif -%}
+                    <div class="mh-product-price">
+                      {%- if product.compare_at_price > product.price -%}
+                        <span class="mh-product-price-old">{{ product.compare_at_price | money }}</span>
+                      {%- endif -%}
+                      {{ product.price | money }}
+                    </div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for i in (1..3) -%}
+                <div class="mh-product-card">
+                  <div class="mh-product-image-wrap">
+                    {{ 'product-1' | placeholder_svg_tag }}
+                  </div>
+                  <div class="mh-product-info">
+                    <a href="#" class="mh-product-name">Sample Product {{ i }}</a>
+                    <div class="mh-product-price">{{ 9999 | money }}</div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+
+          <!-- New Products Column -->
+          <div class="mh-products-column">
+            <h3 class="mh-products-column-title">{{ section.settings.new_title }}</h3>
+            {%- if section.settings.new_collection != blank -%}
+              {%- assign new_products = collections[section.settings.new_collection].products | limit: 3 -%}
+              {%- for product in new_products -%}
+                <div class="mh-product-card">
+                  <div class="mh-product-image-wrap">
+                    {%- if product.featured_image != blank -%}
+                      <img src="{{ product.featured_image | image_url: width: 160 }}" 
+                           alt="{{ product.title | escape }}"
+                           loading="lazy">
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    {%- endif -%}
+                  </div>
+                  <div class="mh-product-info">
+                    <a href="{{ product.url }}" class="mh-product-name">
+                      {{ product.title | truncate: 50 }}
+                    </a>
+                    {%- if product.metafields.reviews.rating != blank -%}
+                      <div class="mh-product-rating">
+                        <span class="mh-product-stars">★★★★★</span>
+                        <span class="mh-product-reviews">({{ product.metafields.reviews.rating_count }} Reviews)</span>
+                      </div>
+                    {%- endif -%}
+                    <div class="mh-product-price">
+                      {%- if product.compare_at_price > product.price -%}
+                        <span class="mh-product-price-old">{{ product.compare_at_price | money }}</span>
+                      {%- endif -%}
+                      {{ product.price | money }}
+                    </div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for i in (1..3) -%}
+                <div class="mh-product-card">
+                  <div class="mh-product-image-wrap">
+                    {{ 'product-2' | placeholder_svg_tag }}
+                  </div>
+                  <div class="mh-product-info">
+                    <a href="#" class="mh-product-name">New Product {{ i }}</a>
+                    <div class="mh-product-price">{{ 8999 | money }}</div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+
+          <!-- Best Seller Column -->
+          <div class="mh-products-column">
+            <h3 class="mh-products-column-title">{{ section.settings.bestseller_title }}</h3>
+            {%- if section.settings.bestseller_collection != blank -%}
+              {%- assign bestseller_products = collections[section.settings.bestseller_collection].products | limit: 3 -%}
+              {%- for product in bestseller_products -%}
+                <div class="mh-product-card">
+                  <div class="mh-product-image-wrap">
+                    {%- if product.featured_image != blank -%}
+                      <img src="{{ product.featured_image | image_url: width: 160 }}" 
+                           alt="{{ product.title | escape }}"
+                           loading="lazy">
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    {%- endif -%}
+                  </div>
+                  <div class="mh-product-info">
+                    <a href="{{ product.url }}" class="mh-product-name">
+                      {{ product.title | truncate: 50 }}
+                    </a>
+                    {%- if product.metafields.reviews.rating != blank -%}
+                      <div class="mh-product-rating">
+                        <span class="mh-product-stars">★★★★★</span>
+                        <span class="mh-product-reviews">({{ product.metafields.reviews.rating_count }} Reviews)</span>
+                      </div>
+                    {%- endif -%}
+                    <div class="mh-product-price">
+                      {%- if product.compare_at_price > product.price -%}
+                        <span class="mh-product-price-old">{{ product.compare_at_price | money }}</span>
+                      {%- endif -%}
+                      {{ product.price | money }}
+                    </div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for i in (1..3) -%}
+                <div class="mh-product-card">
+                  <div class="mh-product-image-wrap">
+                    {{ 'product-3' | placeholder_svg_tag }}
+                  </div>
+                  <div class="mh-product-info">
+                    <a href="#" class="mh-product-name">Best Seller {{ i }}</a>
+                    <div class="mh-product-price">{{ 7999 | money }}</div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </section>
+  {%- endif -%}
+
+  <!-- Newsletter Section -->
+  {%- if section.settings.show_newsletter -%}
+    <section class="mh-newsletter">
+      <div class="mh-container">
+        <h3 class="mh-newsletter-title">{{ section.settings.newsletter_title }}</h3>
+        <p class="mh-newsletter-subtitle">{{ section.settings.newsletter_subtitle }}</p>
+        
+        {%- form 'customer', class: 'mh-newsletter-form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter,machine-hire">
+          <input type="email" 
+                 name="contact[email]" 
+                 class="mh-newsletter-input" 
+                 placeholder="{{ section.settings.newsletter_placeholder }}"
+                 required
+                 autocomplete="email">
+          <button type="submit" class="mh-newsletter-btn">
+            {{ section.settings.newsletter_button }}
+          </button>
+        {%- endform -%}
+      </div>
+    </section>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Machine Hire Page",
+  "tag": "section",
+  "class": "machine-hire-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Color",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Cleaning Machine Hire Ireland"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero Subtitle",
+      "default": "Hire a range of cleaning equipment from floor scrubbers to carpet cleaners"
+    },
+    {
+      "type": "range",
+      "id": "hero_height",
+      "label": "Hero Height (px)",
+      "min": 200,
+      "max": 500,
+      "step": 20,
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "Motto Section"
+    },
+    {
+      "type": "text",
+      "id": "motto_label",
+      "label": "Motto Label",
+      "default": "Don't want to buy?"
+    },
+    {
+      "type": "text",
+      "id": "motto_title",
+      "label": "Motto Title",
+      "default": "Why not Hire?"
+    },
+    {
+      "type": "header",
+      "content": "Machine Categories"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_categories",
+      "label": "Show Machine Categories",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "categories_label",
+      "label": "Categories Label",
+      "default": "our cleaning machine hire range"
+    },
+    {
+      "type": "text",
+      "id": "categories_title",
+      "label": "Categories Title",
+      "default": "A Machine For Every Job"
+    },
+    {
+      "type": "header",
+      "content": "Contact Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact",
+      "label": "Show Contact Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Title",
+      "default": "For More Info on Machine Hire, Contact Us Today!"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "01 811 89 20"
+    },
+    {
+      "type": "text",
+      "id": "call_button_text",
+      "label": "Call Button Text",
+      "default": "CALL NOW"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form Title",
+      "default": "GO GREEN TODAY ENQUIRE NOW"
+    },
+    {
+      "type": "text",
+      "id": "form_name_placeholder",
+      "label": "Name Placeholder",
+      "default": "NAME"
+    },
+    {
+      "type": "text",
+      "id": "form_email_placeholder",
+      "label": "Email Placeholder",
+      "default": "EMAIL"
+    },
+    {
+      "type": "text",
+      "id": "form_phone_placeholder",
+      "label": "Phone Placeholder",
+      "default": "Phone Number"
+    },
+    {
+      "type": "text",
+      "id": "form_message_placeholder",
+      "label": "Message Placeholder",
+      "default": "MESSAGE"
+    },
+    {
+      "type": "text",
+      "id": "form_submit_text",
+      "label": "Submit Button Text",
+      "default": "Submit"
+    },
+    {
+      "type": "header",
+      "content": "Products Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_products",
+      "label": "Show Products Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "featured_title",
+      "label": "Featured Products Title",
+      "default": "Featured Products"
+    },
+    {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Featured Products Collection"
+    },
+    {
+      "type": "text",
+      "id": "new_title",
+      "label": "New Products Title",
+      "default": "New Products"
+    },
+    {
+      "type": "collection",
+      "id": "new_collection",
+      "label": "New Products Collection"
+    },
+    {
+      "type": "text",
+      "id": "bestseller_title",
+      "label": "Best Seller Title",
+      "default": "Best Seller"
+    },
+    {
+      "type": "collection",
+      "id": "bestseller_collection",
+      "label": "Best Seller Collection"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show Newsletter Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter Title",
+      "default": "Sign up to Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_subtitle",
+      "label": "Newsletter Subtitle",
+      "default": "And receive latest updates."
+    },
+    {
+      "type": "text",
+      "id": "newsletter_placeholder",
+      "label": "Newsletter Placeholder",
+      "default": "Enter your email address"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_button",
+      "label": "Newsletter Button Text",
+      "default": "Sign up"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_section",
+      "name": "Content Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Section Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Add your content here. This section supports rich text formatting.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "reverse_layout",
+          "label": "Reverse Layout (Image on Left)",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "machine_category",
+      "name": "Machine Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Machine Category"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Category Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Machine Hire Page",
+      "blocks": [
+        {
+          "type": "content_section",
+          "settings": {
+            "heading": "Hire What You Need, When you Need it",
+            "content": "<p>At Clenli Direct, we understand that buying isn't always an option. That is why we offer a hiring option! Only pay when you need to use!</p>",
+            "reverse_layout": false
+          }
+        },
+        {
+          "type": "content_section",
+          "settings": {
+            "heading": "Robotic Machine Hire",
+            "content": "<p>At Clenli Direct, we pride ourselves on our ability to find innovative solutions to any cleaning problem. We have a wide range of robotic machinery designed to automate cleaning, lower time, and lower costs. Available now for hire!</p>",
+            "reverse_layout": true
+          }
+        },
+        {
+          "type": "content_section",
+          "settings": {
+            "heading": "Collect, Or We Can Deliver",
+            "content": "<p>Choose what is convenient to you. Through our strategic location, our partnerships with major delivery services, and our own large fleet of in-house vehicles, we have a perfect system in place for collection or delivery.</p>",
+            "reverse_layout": false
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Walk Behind Scrubber Dryers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Ride On Scrubber Dryers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Carpet Machines"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Sweepers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Rotaries/Buffers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Label/Gum Removers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Stone Polishers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "title": "Pressure Washers"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

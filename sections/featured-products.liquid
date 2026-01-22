@@ -1,0 +1,445 @@
+
+{%- liquid
+    assign heading = section.settings.heading
+    assign address = section.settings.address
+    assign phone = section.settings.phone
+    assign email = section.settings.email
+    assign hours_title = section.settings.hours_title
+    assign hours_weekday = section.settings.hours_weekday
+    assign hours_weekend = section.settings.hours_weekend
+    assign map_url = section.settings.map_url
+-%}
+
+<style>
+    .contact-section-{{ section.id }} {
+        padding: {{ section.settings.padding_y }}px {{ section.settings.padding_x }}px;
+        background: {{ section.settings.bg_color }};
+    }
+    
+    .contact-section-{{ section.id }} .contact-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        gap: 30px;
+        align-items: start;
+    }
+    
+    /* Left Side - Form (75%) */
+    .contact-section-{{ section.id }} .contact-form-wrapper {
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+    }
+    
+    .contact-section-{{ section.id }} .form-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #333;
+        margin: 0 0 30px 0;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .contact-section-{{ section.id }} .form-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: #28a745;
+        border-radius: 2px;
+    }
+    
+    .contact-section-{{ section.id }} .contact-form .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .contact-section-{{ section.id }} .contact-form label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+    }
+    
+    .contact-section-{{ section.id }} .contact-form input,
+    .contact-section-{{ section.id }} .contact-form textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        background: #fff;
+    }
+    
+    .contact-section-{{ section.id }} .contact-form input:focus,
+    .contact-section-{{ section.id }} .contact-form textarea:focus {
+        outline: none;
+        border-color: #28a745;
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+    }
+    
+    .contact-section-{{ section.id }} .contact-form textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+    
+    .contact-section-{{ section.id }} .contact-form .submit-btn {
+        background: #28a745;
+        color: #fff;
+        border: none;
+        padding: 16px 40px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .contact-section-{{ section.id }} .contact-form .submit-btn:hover {
+        background: #218838;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(40, 167, 69, 0.3);
+    }
+    
+    /* Google Map - 100% Full Width */
+    .contact-section-{{ section.id }} .map-wrapper {
+        margin-top: 40px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .contact-section-{{ section.id }} .map-wrapper iframe {
+        width: 100%;
+        height: 350px;
+        border: none;
+        display: block;
+    }
+    
+    /* Right Side - Info (25%) */
+    .contact-section-{{ section.id }} .contact-info-wrapper {
+        padding: 0;
+        background: transparent;
+    }
+    
+    .contact-section-{{ section.id }} .info-block {
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+        border-bottom: 1px dashed #ddd;
+    }
+    
+    .contact-section-{{ section.id }} .info-block:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    
+    .contact-section-{{ section.id }} .info-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+        margin: 0 0 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .contact-section-{{ section.id }} .info-title svg {
+        width: 20px;
+        height: 20px;
+        color: #28a745;
+        fill: #28a745;
+        flex-shrink: 0;
+    }
+    
+    .contact-section-{{ section.id }} .info-text {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.8;
+        margin: 0;
+    }
+    
+    .contact-section-{{ section.id }} .info-text a {
+        color: #28a745;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        word-break: break-word;
+    }
+    
+    .contact-section-{{ section.id }} .info-text a:hover {
+        color: #218838;
+        text-decoration: underline;
+    }
+    
+    .contact-section-{{ section.id }} .hours-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .contact-section-{{ section.id }} .hours-list li {
+        font-size: 14px;
+        color: #666;
+        padding: 6px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    .contact-section-{{ section.id }} .hours-list .day {
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .contact-section-{{ section.id }} .hours-list .closed {
+        color: #dc3545;
+    }
+    
+    /* Responsive */
+    @media (max-width: 991px) {
+        .contact-section-{{ section.id }} .contact-container {
+            grid-template-columns: 65% 35%;
+            gap: 25px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .contact-section-{{ section.id }} {
+            padding: 30px 15px;
+        }
+        
+        .contact-section-{{ section.id }} .contact-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .contact-section-{{ section.id }} .form-title {
+            font-size: 24px;
+        }
+        
+        .contact-section-{{ section.id }} .contact-form .submit-btn {
+            width: 100%;
+        }
+        
+        .contact-section-{{ section.id }} .map-wrapper iframe {
+            height: 250px;
+        }
+    }
+</style>
+
+<section class="contact-section-{{ section.id }}">
+    <div class="contact-container">
+        <!-- Left Side - Form (75%) -->
+        <div class="contact-form-wrapper">
+            <h2 class="form-title">{{ heading }}</h2>
+            
+            {%- form 'contact', class: 'contact-form' -%}
+                {%- if form.posted_successfully? -%}
+                    <div class="form-success" style="background: #d4edda; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <strong>Thank you!</strong> Your message has been sent successfully.
+                    </div>
+                {%- endif -%}
+                
+                {%- if form.errors -%}
+                    <div class="form-error" style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        {{ form.errors | default_errors }}
+                    </div>
+                {%- endif -%}
+                
+                <div class="form-group">
+                    <label for="ContactName-{{ section.id }}">Name</label>
+                    <input type="text" id="ContactName-{{ section.id }}" name="contact[name]" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ContactEmail-{{ section.id }}">Email</label>
+                    <input type="email" id="ContactEmail-{{ section.id }}" name="contact[email]" placeholder="Your email address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ContactPhone-{{ section.id }}">Phone Number</label>
+                    <input type="tel" id="ContactPhone-{{ section.id }}" name="contact[phone]" placeholder="Your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="ContactMessage-{{ section.id }}">What's on your mind?</label>
+                    <textarea id="ContactMessage-{{ section.id }}" name="contact[body]" placeholder="Write your message here..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            {%- endform -%}
+        </div>
+        
+        <!-- Right Side - Info (25%) -->
+        <div class="contact-info-wrapper">
+            <!-- Address -->
+            <div class="info-block">
+                <h3 class="info-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Our Address
+                </h3>
+                <p class="info-text">{{ address }}</p>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="info-block">
+                <h3 class="info-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Contact Info
+                </h3>
+                <p class="info-text">
+                    Support:<br><a href="tel:{{ phone | remove: ' ' | remove: '(' | remove: ')' }}">{{ phone }}</a><br><br>
+                    E-mail:<br><a href="mailto:{{ email }}">{{ email }}</a>
+                </p>
+            </div>
+            
+            <!-- Opening Hours -->
+            <div class="info-block">
+                <h3 class="info-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    {{ hours_title }}
+                </h3>
+                <ul class="hours-list">
+                    <li>
+                        <span class="day">Monday to Friday</span>
+                        <span>{{ hours_weekday }}</span>
+                    </li>
+                    <li>
+                        <span class="day">Saturday to Sunday</span>
+                        <span class="closed">{{ hours_weekend }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Google Map - 100% Full Width Outside Grid -->
+    {%- if map_url != blank -%}
+        <div class="map-wrapper" style="max-width: 1400px; margin: 40px auto 0; padding: 0 {{ section.settings.padding_x }}px;">
+            <iframe src="{{ map_url }}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    {%- endif -%}
+</section>
+
+{% schema %}
+{
+    "name": "Contact Page",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Form Settings"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Form Heading",
+            "default": "Leave us a Message"
+        },
+        {
+            "type": "header",
+            "content": "Google Map"
+        },
+        {
+            "type": "text",
+            "id": "map_url",
+            "label": "Google Map Embed URL",
+            "info": "Google Maps > Share > Embed > Copy src URL",
+            "default": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.8876593346397!2d-6.355684!3d53.409444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9f5c8b5e67%3A0x8f6c4c9c5d5b5b5b!2sStadium%20Business%20Park!5e0!3m2!1sen!2sie!4v1699999999999!5m2!1sen!2sie"
+        },
+        {
+            "type": "header",
+            "content": "Address"
+        },
+        {
+            "type": "textarea",
+            "id": "address",
+            "label": "Address",
+            "default": "Unit 14a Stadium Business Park, Ballycoolin Rd, Cappoge, Dublin 11, Ireland"
+        },
+        {
+            "type": "header",
+            "content": "Contact Info"
+        },
+        {
+            "type": "text",
+            "id": "phone",
+            "label": "Phone Number",
+            "default": "+353 (0)1 811 8920"
+        },
+        {
+            "type": "text",
+            "id": "email",
+            "label": "Email",
+            "default": "sales@clenlidirect.com"
+        },
+        {
+            "type": "header",
+            "content": "Opening Hours"
+        },
+        {
+            "type": "text",
+            "id": "hours_title",
+            "label": "Hours Title",
+            "default": "Opening hours"
+        },
+        {
+            "type": "text",
+            "id": "hours_weekday",
+            "label": "Weekday Hours",
+            "default": "9am - 5pm"
+        },
+        {
+            "type": "text",
+            "id": "hours_weekend",
+            "label": "Weekend Hours",
+            "default": "Closed"
+        },
+        {
+            "type": "header",
+            "content": "Styling"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#f5f5f5"
+        },
+        {
+            "type": "range",
+            "id": "padding_y",
+            "label": "Padding Top/Bottom",
+            "min": 20,
+            "max": 100,
+            "step": 10,
+            "default": 60,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "padding_x",
+            "label": "Padding Left/Right",
+            "min": 0,
+            "max": 50,
+            "step": 5,
+            "default": 15,
+            "unit": "px"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact Page"
+        }
+    ]
+}
+{% endschema %}
+

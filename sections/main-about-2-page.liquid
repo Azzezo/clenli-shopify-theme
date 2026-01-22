@@ -1,0 +1,540 @@
+<link rel="stylesheet" href="{{ 'component-about.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-about.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- liquid
+    assign padding_top = section.settings.mg_top_desktop | append: 'px'
+    assign padding_bottom = section.settings.mg_bottom_desktop | append: 'px'
+    assign padding_top_tablet = section.settings.mg_top_tablet | append: 'px'
+    assign padding_bottom_tablet = section.settings.mg_bottom_tablet | append: 'px'
+    assign padding_top_mobile = section.settings.mg_top_mobile | append: 'px'
+    assign padding_bottom_mobile = section.settings.mg_bottom_mobile | append: 'px'
+    assign container = section.settings.container
+    assign about_image = section.settings.about_bg_image
+    assign about_bg_image_height = section.settings.about_bg_image_height
+    assign parallax = section.settings.enable_parallax
+    assign padding_full_width = section.settings.padding_full_width
+    assign show_about_info = false
+    assign overlay_color = section.settings.overlay_color
+    assign overlay_opacity = section.settings.overlay_opacity
+    if section.blocks.size > 0
+        assign show_about_info = true
+    endif
+-%}
+
+<div data-section-id="{{ section.id }}" data-section-type="about" id="AboutSection-{{ section.id }}" data-section="{{ section.id }}">
+    <div class="{% if container == '1170' %}container-1170{% elsif container == '1770' %}container-1770{% elsif container == 'fullwidth'%}container-full{% else %}container{% endif %} {% if about_image != blank %}has-bg-image{% endif %} about-2-container">
+
+        {% if about_image != blank %}
+        <div class="about-content-wrapper">
+        {% endif %}
+        
+        <div class="halo-page-content halo-about-content{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+            <div class="about about-1">
+                {%- if show_about_info -%}
+                    {%- for block in section.blocks -%}
+                        <div class="about-item item-{{ block.id }}">
+                            {%- liquid
+                                assign title = block.settings.title
+                                assign content_text_color = block.settings.content_text_color
+                                assign content_max_width = block.settings.content_max_width
+                                if block.type == 'content'
+                                    assign content = block.settings.content
+                                    assign align = block.settings.align
+                                elsif block.type == 'image'
+                                    assign style = block.settings.style
+                                    assign image_1 = block.settings.image_1
+                                    assign link_1 = block.settings.link_1
+                                    assign image_2 = block.settings.image_2
+                                    assign link_2 = block.settings.link_2
+                                    assign image_3 = block.settings.image_3
+                                    assign link_3 = block.settings.link_3
+                                endif
+                            -%}
+                            {%- if title != blank -%}
+                                <h2 class="page-subheader about-title text-center{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="color: {{ content_text_color }};">
+                                    {{ title | escape }}
+                                </h2>
+                            {%- endif -%}
+                            {%- if block.type == 'content' -%}
+                                <div class="about-content halo-text-format text-{{ align }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="color: {{ content_text_color }};">
+                                    {{ content }}
+                                </div>
+                            {%- elsif block.type == 'image' -%}
+                                <div class="about-row style-{{ style }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+                                    <div class="about-row-item about-row-itemFirst">
+                                        <div class="item">
+                                            {%- if image_1 != blank -%}
+                                                {%- if link_1 != blank -%}
+                                                    <a class="image image-zoom"{% if link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ link_1 }}"{% endif %} style="padding-top: {{ 1 | divided_by: image_1.aspect_ratio | times: 100 | append: '%' }}">
+                                                {%- else -%}
+                                                    <div class="image image-zoom" style="padding-top: {{ 1 | divided_by: image_1.aspect_ratio | times: 100 | append: '%' }}">
+                                                {%- endif -%}
+                                                    <img srcset="{{ image_1 | img_url: 'master' }}"
+                                                        src="{{ image_1 | img_url: 'master' }}"
+                                                        {% unless settings.enable_layout_rtl %}{% if settings.enable_lazyload %} loading="lazy"{% endif %}{% endunless %}
+                                                        alt="{{ image_1.alt | default: shop.name | escape }}"
+                                                        width="{{ image_1.width }}"
+                                                        height="{{ image_1.height }}"
+                                                    >
+                                                {%- if link_1 != blank -%}
+                                                    </a>
+                                                {%- else -%}
+                                                    </div>
+                                                {%- endif -%}
+                                            {%- else -%}
+                                                <div class="image placeholder">
+                                                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                </div>
+                                            {%- endif -%}
+                                        </div>
+                                    </div>
+                                    <div class="about-row-item about-row-itemSecond">
+                                        <div class="item">
+                                            {%- if image_2 != blank -%}
+                                                {%- if link_2 != blank -%}
+                                                    <a class="image image-zoom"{% if link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ link_2 }}"{% endif %} style="padding-top: {{ 1 | divided_by: image_2.aspect_ratio | times: 100 | append: '%' }}">
+                                                {%- else -%}
+                                                    <div class="image image-zoom" style="padding-top: {{ 1 | divided_by: image_2.aspect_ratio | times: 100 | append: '%' }}">
+                                                {%- endif -%}
+                                                    <img srcset="{{ image_2 | img_url: 'master' }}"
+                                                        src="{{ image_2 | img_url: 'master' }}"
+                                                        {% unless settings.enable_layout_rtl %}{% if settings.enable_lazyload %} loading="lazy"{% endif %}{% endunless %}
+                                                        alt="{{ image_2.alt | default: shop.name | escape }}"
+                                                        width="{{ image_2.width }}"
+                                                        height="{{ image_2.height }}"
+                                                    >
+                                                {%- if link_2 != blank -%}
+                                                    </a>
+                                                {%- else -%}
+                                                    </div>
+                                                {%- endif -%}
+                                            {%- else -%}
+                                                <div class="image placeholder">
+                                                    {{ 'collection-apparel-3' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                </div>
+                                            {%- endif -%}
+                                        </div>
+                                        <div class="item">
+                                            {%- if image_3 != blank -%}
+                                                {%- if link_3 != blank -%}
+                                                    <a class="image image-zoom"{% if link_3 == blank %} role="link" aria-disabled="true"{% else %} href="{{ link_3 }}"{% endif %} style="padding-top: {{ 1 | divided_by: image_3.aspect_ratio | times: 100 | append: '%' }}">
+                                                {%- else -%}
+                                                    <div class="image image-zoom" style="padding-top: {{ 1 | divided_by: image_3.aspect_ratio | times: 100 | append: '%' }}">
+                                                {%- endif -%}
+                                                    <img srcset="{{ image_3 | img_url: 'master' }}"
+                                                        src="{{ image_3 | img_url: 'master' }}"
+                                                        {% unless settings.enable_layout_rtl %}{% if settings.enable_lazyload %} loading="lazy"{% endif %}{% endunless %}
+                                                        alt="{{ image_3.alt | default: shop.name | escape }}"
+                                                        width="{{ image_3.width }}"
+                                                        height="{{ image_3.height }}"
+                                                    >
+                                                {%- if link_3 != blank -%}
+                                                    </a>
+                                                {%- else -%}
+                                                    </div>
+                                                {%- endif -%}
+                                            {%- else -%}
+                                                <div class="image placeholder">
+                                                    {{ 'collection-apparel-4' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                </div>
+                                            {%- endif -%}
+                                        </div>
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                        </div>
+                        <style>
+                            .item-{{ block.id }} .about-content.text-center {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+
+                            .item-{{ block.id }} .about-content.text-left {
+                                margin-left: 0;
+                                margin-right: auto;
+                            }
+
+                            .item-{{ block.id }} .about-content.text-right {
+                                margin-left: auto;
+                                margin-right: 0;
+                            }
+
+                            @media (min-width: 375px) {
+                                .item-{{ block.id }} .about-content {
+                                    max-width: 80%;
+                                    width: 80%;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                }
+                            }
+
+                            @media (min-width: 651px) {
+                                .item-{{ block.id }} .about-content {
+                                    max-width: {{ content_max_width | append: 'px' }};
+                                }
+                            }
+
+                            @media (min-width: 1024px) {
+                                .item-{{ block.id }} .about-content {
+                                    padding-left: 30px;
+                                    padding-right: 30px;
+                                }
+                            }
+                        </style>
+                    {%- endfor -%}
+                {%- endif -%}
+            </div>
+        </div>
+        {% if about_image != blank %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<style type="text/css" media="screen">
+    #AboutSection-{{ section.id }} {
+        padding-top: {{ padding_top }};
+        padding-bottom: {{ padding_bottom }};
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        {% if about_image == blank %}
+            background-color: #8f8b8b;
+        {% endif %}
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image {
+        position: relative;
+        overflow: clip;
+        height: {{ about_bg_image_height | append: 'px' }};
+        background-image: url({{ about_image | image_url: width: 1860, height: 970 }});
+        background-size: cover;
+        background-repeat: repeat-x;
+        background-position: center top;
+        {% if parallax %}
+            background-attachment: fixed;
+        {% endif %}
+    }
+    
+    /* ============ BLACK OVERLAY ON IMAGE ============ */
+    #AboutSection-{{ section.id }} .has-bg-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: {{ overlay_color }};
+        opacity: {{ overlay_opacity }};
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    #AboutSection-{{ section.id }} .has-bg-image .about-content-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+    /* ============ END BLACK OVERLAY ============ */
+
+    #AboutSection-{{ section.id }} .has-bg-image {
+        {% if container == '1170' %} 
+            max-width: 1170px;
+        {% elsif container == '1770'%}
+            max-width: 1770px;
+        {% elsif container == 'fullwidth' %}
+            max-width: calc(100% - {{ padding_full_width | times: 2 | append: 'px' }});
+        {% endif %}
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image .page-subheader {
+        padding-bottom: 15px;
+        font-size: 24px;
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image .about-content-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image .about-content {
+        margin-top: 5px;
+    }
+
+    @media (min-width: 1025px) {
+        {% if container == 'fullwidth' %}
+            #AboutSection-{{ section.id }} > .container-full {
+                padding-left: {{ padding_full_width | append: 'px' }};
+                padding-right: {{ padding_full_width | append: 'px' }};
+            }
+        {% endif %}
+    }
+
+    @media (max-width: 1024px) {
+        #AboutSection-{{ section.id }}{
+            padding-top: {{ padding_top_tablet }};
+            padding-bottom: {{ padding_bottom_tablet }};
+        }
+    }
+
+    @media (max-width: 550px) {
+        #AboutSection-{{ section.id }}{
+            padding-top: {{ padding_top_mobile }};
+            padding-bottom: {{ padding_bottom_mobile }};
+        }
+    }
+</style>
+
+{% schema %}
+{
+    "name": "About Page",
+    "settings": [
+        {
+            "type": "select",
+            "id": "container",
+            "label": "Container",
+            "default": "container",
+            "options": [
+                {"value": "container", "label": "Default"},
+                {"value": "1170", "label": "1170px"},
+                {"value": "1770", "label": "1770px"},
+                {"value": "fullwidth", "label": "Full Width"}
+            ]
+        },
+        {
+            "type": "range",
+            "id": "padding_full_width",
+            "label": "Full Width Padding",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0,
+            "unit": "px"
+        },
+        {
+            "type": "header",
+            "content": "Background Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "about_bg_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "range",
+            "id": "about_bg_image_height",
+            "label": "Image Height",
+            "default": 270,
+            "min": 200,
+            "max": 700,
+            "step": 10,
+            "unit": "px"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_parallax",
+            "label": "Enable Parallax Effect",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Image Overlay"
+        },
+        {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "Overlay Color",
+            "default": "#000000"
+        },
+        {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Overlay Opacity",
+            "min": 0,
+            "max": 1,
+            "step": 0.1,
+            "default": 0.5
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "range",
+            "id": "mg_top_desktop",
+            "label": "Desktop",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "mg_top_tablet",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "mg_top_mobile",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "range",
+            "id": "mg_bottom_desktop",
+            "label": "Desktop",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "mg_bottom_tablet",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "mg_bottom_mobile",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        }
+    ],
+    "blocks": [
+        {
+            "type": "content",
+            "name": "Content",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "About HALO"
+                },
+                {
+                    "type": "html",
+                    "id": "content",
+                    "label": "Content"
+                },
+                {
+                    "type": "range",
+                    "id": "content_max_width",
+                    "label": "Content Max Width",
+                    "min": 100,
+                    "max": 2000,
+                    "step": 50,
+                    "default": 700,
+                    "unit": "px"
+                },
+                {
+                    "type": "select",
+                    "id": "align",
+                    "label": "Content Alignment",
+                    "options": [
+                        {"value": "left", "label": "Left"},
+                        {"value": "center", "label": "Center"},
+                        {"value": "right", "label": "Right"}
+                    ],
+                    "default": "center"
+                },
+                {
+                    "type": "color",
+                    "id": "content_text_color",
+                    "label": "Text Color",
+                    "default": "#ffffff"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "About HALO"
+                },
+                {
+                    "type": "select",
+                    "id": "style",
+                    "label": "Style",
+                    "default": "1",
+                    "options": [
+                        {"value": "1", "label": "Style 1"},
+                        {"value": "2", "label": "Style 2"}
+                    ]
+                },
+                {
+                    "type": "header",
+                    "content": "Image 1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_1",
+                    "label": "Image"
+                },
+                {
+                    "type": "url",
+                    "id": "link_1",
+                    "label": "Link"
+                },
+                {
+                    "type": "header",
+                    "content": "Image 2"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_2",
+                    "label": "Image"
+                },
+                {
+                    "type": "url",
+                    "id": "link_2",
+                    "label": "Link"
+                },
+                {
+                    "type": "header",
+                    "content": "Image 3"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_3",
+                    "label": "Image"
+                },
+                {
+                    "type": "url",
+                    "id": "link_3",
+                    "label": "Link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

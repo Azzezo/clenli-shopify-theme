@@ -1,0 +1,437 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "banner_copy_kTD6Fw": {
+      "type": "banner-copy",
+      "blocks": {
+        "content_qUKkmU": {
+          "type": "content",
+          "settings": {
+            "title": "Service & Maintenance",
+            "content": "Our Service team protects and maintains cleaning machines and equipment to ensure longevity and optimal performance.",
+            "content_max_width": 700,
+            "align": "center",
+            "content_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "content_qUKkmU"
+      ],
+      "name": "Banner Copy",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "about_bg_image": "shopify://shop_images/service-fleet-new.jpg",
+        "about_bg_image_height": 410,
+        "enable_parallax": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0.5,
+        "enable_bottom_section": true,
+        "bottom_image": "shopify://shop_images/i-mop_products.png",
+        "bottom_image_alt": "Product Image",
+        "image_max_width": 280,
+        "image_overlap": 40,
+        "bottom_bg_color": "#ffffff",
+        "left_width": 25,
+        "bottom_gap": 40,
+        "bottom_padding_top": 40,
+        "bottom_padding_bottom": 40,
+        "text_color": "#232323",
+        "text_hover_color": "#6fb31a",
+        "text_font_size": 16,
+        "text_font_weight": "400",
+        "text_item_padding": 12,
+        "text_border_color": "#eeeeee",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "custom_liquid_MfDecQ": {
+      "type": "custom-liquid",
+      "name": "Contact Page",
+      "settings": {}
+    },
+    "service1_wrfXK7": {
+      "type": "service1",
+      "blocks": {
+        "list_item_abKzee": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Nationwide Engineer Coverage",
+            "item_link": ""
+          }
+        },
+        "list_item_qkLUEF": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "26,752 Cleaning Equipment Under Care",
+            "item_link": ""
+          }
+        },
+        "list_item_bkWpyX": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "€500,000 Worth of Spare Parts in Stock",
+            "item_link": ""
+          }
+        },
+        "list_item_EGhDNX": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Asset Management Software",
+            "item_link": ""
+          }
+        },
+        "list_item_4zzGDf": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "Job Scheduling Optimisation",
+            "item_link": ""
+          }
+        },
+        "list_item_RMydhK": {
+          "type": "list_item",
+          "settings": {
+            "item_text": "PAT Testing",
+            "item_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "list_item_abKzee",
+        "list_item_qkLUEF",
+        "list_item_bkWpyX",
+        "list_item_EGhDNX",
+        "list_item_4zzGDf",
+        "list_item_RMydhK"
+      ],
+      "name": "Service Overview",
+      "settings": {
+        "left_image": "shopify://shop_images/servicing-outdoor-sweeper.jpg",
+        "image_radius": 0,
+        "overlay_color": "#1a365d",
+        "overlay_opacity": 0.7,
+        "left_heading": "Service Overview",
+        "left_heading_color": "#ffffff",
+        "left_heading_size": 24,
+        "underline_color": "#6fb31a",
+        "underline_width": 60,
+        "list_color": "#ffffff",
+        "list_font_size": 15,
+        "list_font_weight": "400",
+        "list_item_padding": 12,
+        "right_heading": "About Service",
+        "right_heading_color": "#232323",
+        "right_heading_size": 24,
+        "right_description": "<p>Clenli Direct has a fully qualified service and maintenance team with over 20 years of industry experience. We provide our clients with a 24-hour emergency response service to ensure that you can contact someone in case of emergency any time, day or night.</p><p>At Clenli Direct we are acutely aware of the importance of after-sales service and you will find us to be very client-focused. Our commitment to our customers has served us well, as is evident from our very loyal customer base.</p>",
+        "right_desc_color": "#555555",
+        "right_desc_size": 15,
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "left_width": 40,
+        "content_gap": 40,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "service_2_BayaEJ": {
+      "type": "service-2",
+      "blocks": {
+        "content_block_jNtzwX": {
+          "type": "content_block",
+          "settings": {
+            "block_title": "Service Fleet",
+            "block_description": "Our Engineers can have access to all of Ireland no matter how remote. Thanks to our engineer and distribution network we can offer our exceptional service nationwide."
+          }
+        },
+        "content_block_RnBzRj": {
+          "type": "content_block",
+          "settings": {
+            "block_title": "Job Scheduling Optimisation",
+            "block_description": "Our service jobs are scheduled for maximum efficiency to prevent delays. Jobs can be tracked through software SAM."
+          }
+        },
+        "content_block_MFhbVe": {
+          "type": "content_block",
+          "settings": {
+            "block_title": "Fully Stocked Vans",
+            "block_description": "Our service engineer's vans are fully stocked to fix problems on first-time call-outs. This allows them to solve problems on the spot without long lead times."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_jNtzwX",
+        "content_block_RnBzRj",
+        "content_block_MFhbVe"
+      ],
+      "name": "Nationwide Coverage",
+      "settings": {
+        "main_heading": "Nationwide Engineer Coverage",
+        "main_heading_color": "#232323",
+        "main_heading_size": 32,
+        "underline_color": "#6fb31a",
+        "underline_width": 100,
+        "left_image": "shopify://shop_images/service-fleet-new.jpg",
+        "left_image_alt": "Coverage Map",
+        "left_width": 45,
+        "block_title_color": "#232323",
+        "block_title_size": 18,
+        "block_desc_color": "#555555",
+        "block_desc_size": 15,
+        "block_spacing": 30,
+        "enable_bottom_features": true,
+        "feature_title_color": "#232323",
+        "feature_title_size": 16,
+        "feature_border_color": "#eeeeee",
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "content_gap": 50,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "massage_akxeVz": {
+      "type": "massage",
+      "blocks": {
+        "value_item_rtHFeB": {
+          "type": "value_item",
+          "settings": {
+            "title": "Reliability",
+            "description": "We value reliability. Through our strategic location, our logistic network, and our own large fleet of in-house delivery trucks, we have an exceptional record for delivering on time."
+          }
+        },
+        "value_item_6jKrhx": {
+          "type": "value_item",
+          "settings": {
+            "title": "Innovation",
+            "description": "We strive to always do better. We are always on the lookout for new innovative solutions for our client's cleaning requirements."
+          }
+        },
+        "value_item_kaT6pw": {
+          "type": "value_item",
+          "settings": {
+            "title": "Quality",
+            "description": "We understand the importance of quality. That is why every piece of equipment we provide has been sampled, tested, and handpicked by our team."
+          }
+        },
+        "value_item_TGR49E": {
+          "type": "value_item",
+          "settings": {
+            "title": "Expertise",
+            "description": "Our expertise is unmatched. Every member of our service team receives extensive training on new equipment so that they can answer your questions and offer solutions."
+          }
+        }
+      },
+      "block_order": [
+        "value_item_rtHFeB",
+        "value_item_6jKrhx",
+        "value_item_kaT6pw",
+        "value_item_TGR49E"
+      ],
+      "name": "Our Values",
+      "settings": {
+        "heading": "Our Values",
+        "heading_color": "#232323",
+        "heading_size": 32,
+        "bg_color": "#f8f8f8",
+        "container": "1170",
+        "columns_desktop": 4,
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "item_gap": 30,
+        "text_align": "center",
+        "enable_separator": true,
+        "separator_color": "#e0e0e0",
+        "enable_border": false,
+        "border_color": "#e0e0e0",
+        "item_title_color": "#232323",
+        "item_title_size": 18,
+        "item_desc_color": "#666666",
+        "item_desc_size": 14,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "featured_product_we_xexHeF": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "",
+        "new_title": "New Products",
+        "new_collection": "",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_zzxQnA": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_qnCPtB": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_qnCPtB"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "about_form_LGXz6n": {
+      "type": "about-form",
+      "name": "Contact Form",
+      "settings": {
+        "heading": "Get In Touch",
+        "heading_color": "#1a365d",
+        "heading_size": 32,
+        "underline_color": "#1a365d",
+        "underline_width": 100,
+        "name_label": "Name",
+        "name_placeholder": "Enter your name",
+        "company_label": "Company",
+        "company_placeholder": "Enter your company name",
+        "phone_label": "Phone Number",
+        "phone_placeholder": "Enter your phone number",
+        "email_label": "Email",
+        "email_placeholder": "Enter your email",
+        "message_label": "Message",
+        "message_placeholder": "Enter your message",
+        "label_color": "#232323",
+        "label_size": 15,
+        "required_color": "#dc3545",
+        "input_border_color": "#cccccc",
+        "input_bg_color": "#ffffff",
+        "input_text_color": "#333333",
+        "button_text": "Submit",
+        "button_bg_color": "#6fb31a",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#8bc34a",
+        "success_message": "Thank you for your message! We will get back to you soon.",
+        "bg_color": "#f5f5f5",
+        "container": "1170",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_copy_kTD6Fw",
+    "custom_liquid_MfDecQ",
+    "service1_wrfXK7",
+    "service_2_BayaEJ",
+    "massage_akxeVz",
+    "about_form_LGXz6n",
+    "featured_product_we_xexHeF",
+    "newsletter_zzxQnA"
+  ]
+}

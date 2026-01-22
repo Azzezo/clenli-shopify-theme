@@ -1,0 +1,278 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "container": "default",
+        "padding_full_width": 0,
+        "layout": "1",
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_color": "#999999",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_gradient": "",
+        "breadcrumb_color_mb": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": false,
+        "page_title_alignment": "left",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "collection_clenli_ajax_bxjdJP": {
+      "type": "collection-clenli-ajax",
+      "name": "Collection AJAX Filters",
+      "settings": {
+        "collection_banner_link": "",
+        "show_collection_image": false,
+        "grid_columns": 4,
+        "products_per_page": 12,
+        "primary_color": "#6fb31a",
+        "text_color": "#333333",
+        "show_category_filter": true,
+        "category_menu": "",
+        "show_manufacturer_filter": true,
+        "show_type_filter": true,
+        "show_price_filter": true,
+        "show_reviews": true,
+        "show_description": true,
+        "show_sku": true,
+        "show_add_to_cart": true,
+        "show_request_quote": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "subcategory_efRXhW": {
+          "type": "subcategory",
+          "settings": {
+            "enable_subcategory": true,
+            "show_on_collection": "",
+            "subcategory_collection": "",
+            "subcategory_image": "shopify://shop_images/comac_antea_50bt.png",
+            "subcategory_title": "Walk Behind",
+            "subcategory_link": "shopify://collections/machines-scrubber-dryers-walk-behind",
+            "show_product_count": false
+          }
+        },
+        "subcategory_cxwL7V": {
+          "type": "subcategory",
+          "settings": {
+            "enable_subcategory": true,
+            "show_on_collection": "",
+            "subcategory_collection": "",
+            "subcategory_image": "shopify://shop_images/comac_c85_ride_on_scrubber_dryer_1.png",
+            "subcategory_title": "Ride On",
+            "subcategory_link": "shopify://collections/machines-scrubber-dryers-ride-on",
+            "show_product_count": false
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_efRXhW",
+        "subcategory_cxwL7V"
+      ],
+      "disabled": true,
+      "settings": {
+        "collection_banner_link": "",
+        "show_collection_image": false,
+        "primary_color": "#6fb31a",
+        "text_color": "#333333",
+        "show_category_filter": true,
+        "category_menu": "category-menu-shop-page",
+        "show_manufacturer_filter": true,
+        "show_type_filter": true,
+        "show_price_filter": true,
+        "show_reviews": true,
+        "show_description": true,
+        "show_sku": true
+      }
+    },
+    "product-recently-viewed": {
+      "type": "product-recently-viewed",
+      "disabled": true,
+      "settings": {
+        "display_product_recently_viewed": true,
+        "product_recently_viewed_container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_recently_viewed_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style1",
+        "product_recently_viewed_title": "Recently Viewed Products",
+        "enable_border_title": false,
+        "mg_top_title": 26,
+        "mg_bottom_title": 3,
+        "fontsize_title": 18,
+        "fontsize_title_mb": 18,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "product_recently_viewed_title_align": "center",
+        "product_recently_viewed_limit": 10,
+        "product_recently_viewed_image_ratio": "adapt",
+        "grid_gap": 30,
+        "product_recently_viewed_per_row": "5",
+        "product_recently_viewed_swipe_on_mobile": true,
+        "product_recently_viewed_dots": false,
+        "product_recently_viewed_dots_mb": true,
+        "product_recently_viewed_arrows": true,
+        "product_recently_viewed_arrows_mb": false,
+        "product_recently_viewed_show": "5",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "featured_product_we_8dTArc": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_Dh69N3": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_74hQmd": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_74hQmd"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "collection_clenli_ajax_bxjdJP",
+    "product-grid",
+    "product-recently-viewed",
+    "featured_product_we_8dTArc",
+    "newsletter_Dh69N3"
+  ]
+}

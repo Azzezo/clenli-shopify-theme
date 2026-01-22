@@ -1,0 +1,405 @@
+<div class="features-highlights-section section-{{ section.id }}">
+    <div class="fh-container">
+        
+        <!-- Top Heading -->
+        {%- if section.settings.heading != blank -%}
+            <h2 class="fh-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        
+        <!-- Features - 1 Row, 4 Items -->
+        <div class="fh-row">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'feature' -%}
+                    <div class="fh-item" {{ block.shopify_attributes }}>
+                        <div class="fh-image">
+                            {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 200 }}" alt="{{ block.settings.title }}" loading="lazy">
+                            {%- else -%}
+                                <div class="placeholder-img"></div>
+                            {%- endif -%}
+                        </div>
+                        {%- if block.settings.title != blank -%}
+                            <h3 class="fh-title">{{ block.settings.title }}</h3>
+                        {%- endif -%}
+                        {%- if block.settings.description != blank -%}
+                            <p class="fh-desc">{{ block.settings.description }}</p>
+                        {%- endif -%}
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        
+        <!-- Green Underline -->
+        <div class="fh-underline"></div>
+        
+        <!-- Bottom Section -->
+        <div class="fh-bottom">
+            {%- if section.settings.bottom_heading != blank -%}
+                <h3 class="bottom-heading">{{ section.settings.bottom_heading }}</h3>
+            {%- endif -%}
+            {%- if section.settings.bottom_text != blank -%}
+                <p class="bottom-text">{{ section.settings.bottom_text }}</p>
+            {%- endif -%}
+            {%- if section.settings.button_text != blank -%}
+                <a href="{{ section.settings.button_link | default: '#' }}" class="fh-button">{{ section.settings.button_text }}</a>
+            {%- endif -%}
+        </div>
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .fh-container {
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-{{ section.id }} .fh-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+/* 1 Row - 4 Items */
+.section-{{ section.id }} .fh-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Each Item */
+.section-{{ section.id }} .fh-item {
+    flex: 1;
+    text-align: center;
+}
+
+/* Image */
+.section-{{ section.id }} .fh-image {
+    width: 333px;
+    height: 246px;
+    margin: 0 auto 20px;
+}
+
+.section-{{ section.id }} .fh-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section-{{ section.id }} .placeholder-img {
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Title */
+.section-{{ section.id }} .fh-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+/* Description */
+.section-{{ section.id }} .fh-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+}
+
+/* Underline */
+.section-{{ section.id }} .fh-underline {
+
+    width: 100%;              /* ← ADDED - Full width */
+    height: 4px;
+    background: #6fb31a;
+    border: none;             /* ← ADDED - Remove conflicts */
+    opacity: 1 !important;    /* ← ADDED - Force visible */
+    display: block !important;/* ← ADDED - Force display */
+    margin: 0 0 40px 0;
+}
+
+/* Bottom Section */
+.section-{{ section.id }} .fh-bottom {
+    text-align: center;
+}
+
+.section-{{ section.id }} .bottom-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+}
+
+.section-{{ section.id }} .bottom-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    max-width: 1000px;
+    margin: 0 auto 25px;
+}
+
+.section-{{ section.id }} .fh-button {
+    display: inline-block;
+    padding: 14px 35px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .fh-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .fh-row {
+        flex-wrap: wrap;
+    }
+    
+    .section-{{ section.id }} .fh-item {
+        flex: 0 0 calc(50% - 15px);
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-{{ section.id }} .fh-item {
+        flex: 0 0 100%;
+    }
+    
+    .section-{{ section.id }} .fh-heading {
+        font-size: 24px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Features Highlights",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Top Section"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Addax Utility Vehicle Highlights"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "Image Settings"
+        },
+        {
+            "type": "range",
+            "id": "image_size",
+            "label": "Image Size",
+            "min": 60,
+            "max": 150,
+            "step": 10,
+            "unit": "px",
+            "default": 100
+        },
+        {
+            "type": "header",
+            "content": "Underline"
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Height",
+            "min": 2,
+            "max": 8,
+            "step": 1,
+            "unit": "px",
+            "default": 4
+        },
+        {
+            "type": "header",
+            "content": "Bottom Section"
+        },
+        {
+            "type": "text",
+            "id": "bottom_heading",
+            "label": "Bottom Heading",
+            "default": "Serving All Sectors"
+        },
+        {
+            "type": "textarea",
+            "id": "bottom_text",
+            "label": "Bottom Text",
+            "default": "Addax can be used in almost all sectors across Ireland. With solutions for cities, industrial use, facilities management, and last mile deliveries, Addax are the complete solution no matter your requirements."
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "View Sectors"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#f5f5f5"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "feature",
+            "name": "Feature",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Feature Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Feature description goes here."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Features Highlights",
+            "blocks": [
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Fully Customisable",
+                        "description": "Every Addax vehicle is designed to adapt to your specific needs."
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Easy on Environment",
+                        "description": "Addax utility vehicles are 100% electric, producing zero emissions."
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Remote Diagnostics",
+                        "description": "Equipped with integrated 4G monitoring for seamless diagnostics."
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Eight Year Warranty",
+                        "description": "Enjoy robust eight-year battery warranty with every vehicle."
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

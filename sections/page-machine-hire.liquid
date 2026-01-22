@@ -1,0 +1,776 @@
+{% comment %}
+  Machine Hire Page - Clenli Direct
+  Full Width Version
+{% endcomment %}
+
+<style>
+  .machine-hire-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Hero Section - Full Width */
+  .hire-hero {
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    {% comment %} background-color: #f5f5f5; {% endcomment %}
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hire-hero__content {
+    width: 90%;
+    max-width: 1400px;
+    margin-bottom: 35px;
+  }
+
+  .hire-hero__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    line-height: 80px;
+    font-weight: 700;
+  }
+
+  .hire-hero__subtitle {
+    margin-bottom: 10px;
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  /* Full Width Container */
+  .hire-page-width {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+
+  /* Motto Section */
+  .hire-motto {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 85px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hire-motto__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .hire-motto__heading {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 400;
+  }
+
+  /* Green Divider - Full Width */
+  hr.hire-divider {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 4px !important;
+    margin: 40px 0 !important;
+    background-color: #6fb31a !important;
+    border: 0 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Content Section */
+  .hire-content {
+    margin-top: 80px;
+    margin-bottom: 120px;
+    width: 100%;
+  }
+
+  /* Grid Layout - Full Width */
+  .hire-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .hire-grid--reverse {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .hire-grid--reverse .hire-grid__text {
+    order: 2;
+  }
+
+  .hire-grid--reverse .hire-grid__image {
+    order: 1;
+  }
+
+  .hire-grid__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .hire-grid__description {
+    opacity: 0.6;
+    line-height: 1.7;
+  }
+
+  .hire-grid__description a {
+    color: #6fb31a;
+    text-decoration: underline;
+  }
+
+  .hire-grid__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  /* Categories Section - Full Width */
+  .hire-categories {
+    margin-bottom: 80px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .hire-categories__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .hire-categories__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .hire-categories__title {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .hire-categories__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+
+  .hire-category-card {
+    text-align: center;
+  }
+
+  .hire-category-card__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .hire-category-card__link:hover {
+    opacity: 0.8;
+  }
+
+  .hire-category-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .hire-category-card__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* CTA Section - Full Width */
+  .hire-cta {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hire-cta__title {
+    font-size: 30px;
+    font-style: italic;
+    {% comment %} font-weight: 700; {% endcomment %}
+    margin-bottom: 40px;
+  }
+
+  .hire-cta__call-btn {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 20px;
+    background-color: #6fb31a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    {% comment %} font-weight: 600; {% endcomment %}
+    {% comment %} border-radius: 4px; {% endcomment %}
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hire-cta__call-btn:hover {
+    background-color:rgb(12, 19, 26);
+    color: #fff;
+  }
+
+  /* Enquiry Form - Full Width */
+  .hire-enquiry-form {
+    height:450px;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #6fb31a;
+    {% comment %} border-radius: 8px; {% endcomment %}
+    box-sizing: border-box;
+  }
+
+  .hire-enquiry-form h3 {
+    text-align: center;
+    color:rgb(14, 14, 13);
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .hire-enquiry-form .form-row {
+    {% comment %} display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; {% endcomment %}
+    margin-bottom: 20px;
+  }
+
+  .hire-enquiry-form .form-group {
+    margin-bottom: 10px;
+  }
+{% comment %} 
+  .hire-enquiry-form .form-group.full-width {
+    grid-column: span ;
+  } {% endcomment %}
+
+  .hire-enquiry-form input,
+  .hire-enquiry-form textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    {% comment %} border-radius: 4px; {% endcomment %}
+    font-size: 10px;
+    box-sizing: border-box;
+  }
+
+  .hire-enquiry-form input:focus,
+  .hire-enquiry-form textarea:focus {
+    outline: none;
+    border-color: #6fb31a;
+  }
+
+  .hire-enquiry-form textarea {
+    min-height: 90px;
+    resize: vertical;
+  }
+
+  .hire-enquiry-form button {
+    width: 10%;
+    padding: 10px;
+    background-color: #6fb31a;
+    color: #fff;
+    border: none;
+    {% comment %} border-radius: 4px; {% endcomment %}
+    font-size: 18px;
+    {% comment %} font-weight: 600; {% endcomment %}
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .hire-enquiry-form button:hover {
+    background-color:rgb(5, 10, 18);
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 991px) {
+    .hire-hero__title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .hire-grid,
+    .hire-grid--reverse {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .hire-grid--reverse .hire-grid__text,
+    .hire-grid--reverse .hire-grid__image {
+      order: unset;
+    }
+
+    .hire-grid__title {
+      text-align: center;
+    }
+
+    .hire-categories__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hire-enquiry-form .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .hire-enquiry-form .form-group.full-width {
+      grid-column: span 1;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .hire-page-width {
+      padding: 0 15px;
+    }
+
+    .hire-hero {
+      padding: 30px 15px;
+    }
+
+    .hire-hero__title {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    .hire-hero__subtitle {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    .hire-motto {
+      margin-bottom: 40px;
+    }
+
+    .hire-motto__heading {
+      font-size: 28px;
+      line-height: 38px;
+    }
+
+    .hire-grid {
+      padding: 0 10px;
+    }
+
+    .hire-grid__title {
+      font-size: 26px;
+    }
+
+    .hire-content {
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    .hire-cta {
+      padding: 40px 15px;
+    }
+
+    .hire-enquiry-form {
+      padding: 20px 15px;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .hire-hero__title {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    .hire-categories__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="machine-hire-page">
+  <!-- Hero Section -->
+  <section class="hire-hero">
+    <div class="hire-hero__content">
+      <h1 class="hire-hero__title">{{ section.settings.hero_title | default: 'Cleaning Machine Hire Ireland' }}</h1>
+      <p class="hire-hero__subtitle">{{ section.settings.hero_subtitle | default: 'Hire a range of cleaning equipment from floor scrubbers to carpet cleaners' }}</p>
+    </div>
+  </section>
+
+  <div class="hire-page-width">
+    <!-- Motto Section -->
+    <div class="hire-motto">
+      <span class="hire-motto__label">{{ section.settings.motto_label | default: "Don't want to buy?" }}</span>
+      <h2 class="hire-motto__heading">{{ section.settings.motto_heading | default: 'Why not Hire?' }}</h2>
+    </div>
+
+    <hr class="hire-divider">
+
+    <!-- Content Grid Sections -->
+    <div class="hire-content">
+      
+      <!-- Section 1 -->
+      <div class="hire-grid">
+        <div class="hire-grid__text">
+          <h2 class="hire-grid__title">{{ section.settings.section1_title | default: 'Hire What You Need, When you Need it' }}</h2>
+          <p class="hire-grid__description">{{ section.settings.section1_text | default: "At Clenli Direct, we understand that buying isn't always an option. That is why we offer a hiring option! Only pay when you need to use!" }}</p>
+        </div>
+        <div class="hire-grid__image">
+          {% if section.settings.section1_image != blank %}
+            {{ section.settings.section1_image | image_url: width: 1115 | image_tag: loading: 'lazy', alt: section.settings.section1_title }}
+          {% else %}
+            <img src="https://uploads-ssl.webflow.com/61e94c87e9c133c17ebb5978/61e952c74aa2ddbb9b8941f4_thumbnail.jpg" alt="Cleaning Machine Hire Ireland" loading="lazy">
+          {% endif %}
+        </div>
+      </div>
+
+      <hr class="hire-divider">
+
+      <!-- Section 2 -->
+      <div class="hire-grid hire-grid--reverse">
+        <div class="hire-grid__text">
+          <h2 class="hire-grid__title">{{ section.settings.section2_title | default: 'Robotic Machine Hire' }}</h2>
+          <p class="hire-grid__description">{{ section.settings.section2_text | default: 'At Clenli Direct, we pride ourselves on our ability to find innovative solutions to any cleaning problem. We have a wide range of robotic machinery designed to automate cleaning, lower time, and lower costs. Available now for hire!' }}</p>
+        </div>
+        <div class="hire-grid__image">
+          {% if section.settings.section2_image != blank %}
+            {{ section.settings.section2_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: section.settings.section2_title }}
+          {% else %}
+            <img src="https://clenlidirect.com/media/amasty/webp/wysiwyg/robotic-cleaning-hire.webp" alt="Robotic Machine Hire Ireland" loading="lazy">
+          {% endif %}
+        </div>
+      </div>
+
+      <hr class="hire-divider">
+
+      <!-- Section 3 -->
+      <div class="hire-grid">
+        <div class="hire-grid__text">
+          <h2 class="hire-grid__title">{{ section.settings.section3_title | default: 'Collect, Or We Can Deliver' }}</h2>
+          <p class="hire-grid__description">{{ section.settings.section3_text | default: 'Choose what is convenient to you. Through our strategic location near Blanchardstown, our partnerships with UPS and DSV, and our own large fleet of in-house vehicles, we have a perfect system in place for collection or delivery.' }}</p>
+        </div>
+        <div class="hire-grid__image">
+          {% if section.settings.section3_image != blank %}
+            {{ section.settings.section3_image | image_url: width: 1115 | image_tag: loading: 'lazy', alt: section.settings.section3_title }}
+          {% else %}
+            <img src="https://clenlidirect.com/media/amasty/webp/wysiwyg/C130_Trailer_1_.webp" alt="Commercial Cleaning Machine Hire" loading="lazy">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <hr class="hire-divider">
+
+    <!-- Machine Categories Section -->
+    <div class="hire-categories">
+      <div class="hire-categories__header">
+        <span class="hire-categories__label">{{ section.settings.categories_label | default: 'our cleaning machine hire range' }}</span>
+        <h2 class="hire-categories__title">{{ section.settings.categories_title | default: 'A Machine For Every Job' }}</h2>
+      </div>
+
+      <div class="hire-categories__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'machine_category' %}
+            <div class="hire-category-card" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.category_link }}" class="hire-category-card__link">
+                {% if block.settings.category_image != blank %}
+                  {{ block.settings.category_image | image_url: width: 700 | image_tag: class: 'hire-category-card__image', loading: 'lazy', alt: block.settings.category_name }}
+                {% endif %}
+                <h3 class="hire-category-card__title">{{ block.settings.category_name }}</h3>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <hr class="hire-divider">
+
+    <!-- CTA Section -->
+    <div class="hire-cta">
+      <h2 class="hire-cta__title">{{ section.settings.cta_title | default: 'For More Info on Machine Hire, Contact Us Today!' }}</h2>
+      
+      <a href="tel:{{ section.settings.phone_number | default: '018118920' }}" class="hire-cta__call-btn">
+        CALL NOW
+      </a>
+
+      <!-- Enquiry Form -->
+      <div class="hire-enquiry-form">
+        <h3>GO GREEN TODAY ENQUIRE NOW</h3>
+        {% form 'contact' %}
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="contact[name]" placeholder="NAME" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="contact[email]" placeholder="EMAIL" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" name="contact[phone]" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="contact[subject]" placeholder="Subject">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="contact[body]" placeholder="MESSAGE" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        {% endform %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Machine Hire Page",
+  "tag": "section",
+  "class": "section-machine-hire",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Cleaning Machine Hire Ireland"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero Subtitle",
+      "default": "Hire a range of cleaning equipment from floor scrubbers to carpet cleaners"
+    },
+    {
+      "type": "header",
+      "content": "Motto Section"
+    },
+    {
+      "type": "text",
+      "id": "motto_label",
+      "label": "Motto Label",
+      "default": "Don't want to buy?"
+    },
+    {
+      "type": "text",
+      "id": "motto_heading",
+      "label": "Motto Heading",
+      "default": "Why not Hire?"
+    },
+    {
+      "type": "header",
+      "content": "Section 1 - Hire What You Need"
+    },
+    {
+      "type": "text",
+      "id": "section1_title",
+      "label": "Section 1 Title",
+      "default": "Hire What You Need, When you Need it"
+    },
+    {
+      "type": "textarea",
+      "id": "section1_text",
+      "label": "Section 1 Text",
+      "default": "At Clenli Direct, we understand that buying isn't always an option. That is why we offer a hiring option! Only pay when you need to use!"
+    },
+    {
+      "type": "image_picker",
+      "id": "section1_image",
+      "label": "Section 1 Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 2 - Robotic Machine Hire"
+    },
+    {
+      "type": "text",
+      "id": "section2_title",
+      "label": "Section 2 Title",
+      "default": "Robotic Machine Hire"
+    },
+    {
+      "type": "textarea",
+      "id": "section2_text",
+      "label": "Section 2 Text",
+      "default": "At Clenli Direct, we pride ourselves on our ability to find innovative solutions to any cleaning problem. We have a wide range of robotic machinery designed to automate cleaning, lower time, and lower costs. Available now for hire!"
+    },
+    {
+      "type": "image_picker",
+      "id": "section2_image",
+      "label": "Section 2 Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 3 - Collect or Deliver"
+    },
+    {
+      "type": "text",
+      "id": "section3_title",
+      "label": "Section 3 Title",
+      "default": "Collect, Or We Can Deliver"
+    },
+    {
+      "type": "textarea",
+      "id": "section3_text",
+      "label": "Section 3 Text",
+      "default": "Choose what is convenient to you. Through our strategic location near Blanchardstown, our partnerships with UPS and DSV, and our own large fleet of in-house vehicles, we have a perfect system in place for collection or delivery."
+    },
+    {
+      "type": "image_picker",
+      "id": "section3_image",
+      "label": "Section 3 Image"
+    },
+    {
+      "type": "header",
+      "content": "Categories Section"
+    },
+    {
+      "type": "text",
+      "id": "categories_label",
+      "label": "Categories Label",
+      "default": "our cleaning machine hire range"
+    },
+    {
+      "type": "text",
+      "id": "categories_title",
+      "label": "Categories Title",
+      "default": "A Machine For Every Job"
+    },
+    {
+      "type": "header",
+      "content": "CTA Section"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "CTA Title",
+      "default": "For More Info on Machine Hire, Contact Us Today!"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "018118920"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "machine_category",
+      "name": "Machine Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name",
+          "default": "Category Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "category_image",
+          "label": "Category Image"
+        },
+        {
+          "type": "url",
+          "id": "category_link",
+          "label": "Category Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Machine Hire Page",
+      "blocks": [
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Walk Behind Scrubber Dryers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Ride On Scrubber Dryers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Carpet Machines"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Sweepers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Rotaries/Buffers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Label/Gum Removers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Stone Polishers"
+          }
+        },
+        {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Pressure Washers"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

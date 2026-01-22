@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "addax-configurations11": {
+      "type": "addax-configurations11",
+      "settings": {
+        "hero_subtitle": "ELECTRIC UTILITY VEHICLES",
+        "hero_title": "Addax Trailer Options",
+        "hero_description": "Wide range of configurations available",
+        "primary_color": "#529901",
+        "secondary_color": "#6fb31a",
+        "contact_title": "Go Green Today",
+        "phone_number": "01 811 89 20",
+        "email_address": "info@clenlidirect.com"
+      },
+      "blocks": {
+        "config-1": {
+          "type": "configuration",
+          "settings": {
+            "section_title": "Electric Tipper Van",
+            "section_description": "Compact and user-friendly",
+            "feature_1_title": "Convenience & Comfort",
+            "feature_2_title": "Complete Flexibility",
+            "feature_3_title": "Fully Electric"
+          }
+        },
+        "highlight-1": {
+          "type": "highlight",
+          "settings": {
+            "highlight_title": "Fully Customisable"
+          }
+        },
+        "model-1": {
+          "type": "model",
+          "settings": {
+            "model_name": "Addax MTN",
+            "model_button_text": "View Details"
+          }
+        }
+      },
+      "block_order": [
+        "config-1",
+        "highlight-1",
+        "model-1"
+      ]
+    }
+  },
+  "order": [
+    "addax-configurations11"
+  ]
+}

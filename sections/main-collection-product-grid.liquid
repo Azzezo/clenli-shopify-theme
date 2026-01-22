@@ -1,0 +1,665 @@
+{% comment %}
+  Collection Page - Clenli Direct Style
+  Features: Left sidebar filters, product grid, toolbar, ratings, SKU display, Subcategory Images
+  Updated: Added Enable checkbox for each subcategory block
+{% endcomment %}
+
+<div class="clenli-collection section-{{ section.id }}">
+  <div class="clenli-container">
+    <!-- Collection Header -->
+    <div class="collection-header">
+      <h1 class="collection-title">{{ collection.title }}</h1>
+      {% if collection.description != blank %}
+        <div class="collection-description">{{ collection.description }}</div>
+      {% endif %}
+      
+      <!-- Collection Banner Image (below description) -->
+      {% assign show_banner = false %}
+      {% assign banner_image = nil %}
+      
+      {% if section.settings.collection_banner_image != blank %}
+        {% assign show_banner = true %}
+        {% assign banner_image = section.settings.collection_banner_image %}
+      {% elsif section.settings.show_collection_image and collection.image %}
+        {% assign show_banner = true %}
+        {% assign banner_image = collection.image %}
+      {% endif %}
+      
+      {% if show_banner and banner_image %}
+        <div class="collection-banner">
+          {% if section.settings.collection_banner_link != blank %}
+            <a href="{{ section.settings.collection_banner_link }}">
+              <img src="{{ banner_image | image_url: width: 1400 }}" alt="{{ collection.title }}" class="collection-banner-image">
+            </a>
+          {% else %}
+            <img src="{{ banner_image | image_url: width: 1400 }}" alt="{{ collection.title }}" class="collection-banner-image">
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Subcategory Images Section -->
+    {% assign has_visible_subcategories = false %}
+    {% for block in section.blocks %}
+      {% if block.type == 'subcategory' %}
+        {% comment %} Check if block is enabled {% endcomment %}
+        {% if block.settings.enable_subcategory %}
+          {% comment %} Check if this block should show on current collection {% endcomment %}
+          {% assign show_on = block.settings.show_on_collection %}
+          {% if show_on == blank or show_on == collection.handle %}
+            {% assign has_visible_subcategories = true %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if section.blocks.size > 0 and has_visible_subcategories %}
+      <div class="subcategory-boxes">
+        {% for block in section.blocks %}
+          {% if block.type == 'subcategory' %}
+            {% comment %} Skip if not enabled {% endcomment %}
+            {% unless block.settings.enable_subcategory %}
+              {% continue %}
+            {% endunless %}
+            
+            {% comment %} Check if this block should show on current collection {% endcomment %}
+            {% assign show_on = block.settings.show_on_collection %}
+            {% if show_on != blank and show_on != collection.handle %}
+              {% continue %}
+            {% endif %}
+            
+            {% comment %} Determine image, title, and link based on settings {% endcomment %}
+            {% assign sub_image = block.settings.subcategory_image %}
+            {% assign sub_title = block.settings.subcategory_title %}
+            {% assign sub_link = block.settings.subcategory_link %}
+            
+            {% comment %} If collection is selected, use its data {% endcomment %}
+            {% if block.settings.subcategory_collection != blank %}
+              {% assign selected_collection = collections[block.settings.subcategory_collection] %}
+              {% if selected_collection %}
+                {% comment %} Use collection image if no custom image {% endcomment %}
+                {% if sub_image == blank and selected_collection.image %}
+                  {% assign sub_image = selected_collection.image %}
+                {% elsif sub_image == blank and selected_collection.products.first.featured_image %}
+                  {% assign sub_image = selected_collection.products.first.featured_image %}
+                {% endif %}
+                
+                {% comment %} Use collection title if no custom title {% endcomment %}
+                {% if sub_title == blank or sub_title == 'Category Name' %}
+                  {% assign sub_title = selected_collection.title %}
+                {% endif %}
+                
+                {% comment %} Use collection URL if no custom link {% endcomment %}
+                {% if sub_link == blank %}
+                  {% assign sub_link = selected_collection.url %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+            
+            <a href="{{ sub_link }}" class="subcategory-box" {{ block.shopify_attributes }}>
+              <div class="subcategory-image-wrapper">
+                {% if sub_image != blank %}
+                  <img src="{{ sub_image | image_url: width: 300 }}" alt="{{ sub_title }}" class="subcategory-image">
+                {% else %}
+                  {{ 'product-1' | placeholder_svg_tag: 'subcategory-placeholder' }}
+                {% endif %}
+              </div>
+              <span class="subcategory-title">{{ sub_title }}</span>
+              {% if block.settings.show_product_count and block.settings.subcategory_collection != blank %}
+                <span class="subcategory-count">{{ selected_collection.products_count }} Products</span>
+              {% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="collection-content">
+      <!-- Left Sidebar Filters -->
+      <aside class="collection-sidebar">
+        <div class="filter-block">
+          <h3 class="filter-title">Filter</h3>
+          <div class="filter-divider"></div>
+        </div>
+
+        <!-- Category Filter -->
+        {% if section.settings.show_category_filter %}
+          <div class="filter-item">
+            <div class="filter-header" data-filter-toggle>
+              <span class="filter-name">Category</span>
+              <span class="filter-icon">+</span>
+            </div>
+            <div class="filter-content">
+              <ul class="filter-list">
+                {% for link in linklists[section.settings.category_menu].links %}
+                  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Manufacturer Filter -->
+        {% if section.settings.show_manufacturer_filter %}
+          <div class="filter-item">
+            <div class="filter-header" data-filter-toggle>
+              <span class="filter-name">Manufacturer</span>
+              <span class="filter-icon">+</span>
+            </div>
+            <div class="filter-content">
+              <ul class="filter-list">
+                {% assign vendors = collection.all_products | map: 'vendor' | uniq %}
+                {% for vendor in vendors %}
+                  {% if vendor != blank %}
+                    <li><a href="{{ collection.url }}?filter.p.vendor={{ vendor | url_encode }}">{{ vendor }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Type Filter -->
+        {% if section.settings.show_type_filter %}
+          <div class="filter-item">
+            <div class="filter-header" data-filter-toggle>
+              <span class="filter-name">Type</span>
+              <span class="filter-icon">+</span>
+            </div>
+            <div class="filter-content">
+              <ul class="filter-list">
+                {% assign product_types = collection.all_products | map: 'type' | uniq %}
+                {% for type in product_types %}
+                  {% if type != blank %}
+                    <li><a href="{{ collection.url }}?filter.p.product_type={{ type | url_encode }}">{{ type }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Price Filter -->
+        {% if section.settings.show_price_filter %}
+          <div class="filter-item">
+            <div class="filter-header" data-filter-toggle>
+              <span class="filter-name">Price</span>
+              <span class="filter-icon">+</span>
+            </div>
+            <div class="filter-content">
+              <ul class="filter-list price-ranges">
+                <li><a href="{{ collection.url }}?filter.v.price.gte=0&filter.v.price.lte=10">{{ cart.currency.symbol }}0.00 - {{ cart.currency.symbol }}10.00</a></li>
+                <li><a href="{{ collection.url }}?filter.v.price.gte=10&filter.v.price.lte=20">{{ cart.currency.symbol }}10.00 - {{ cart.currency.symbol }}20.00</a></li>
+                <li><a href="{{ collection.url }}?filter.v.price.gte=20&filter.v.price.lte=50">{{ cart.currency.symbol }}20.00 - {{ cart.currency.symbol }}50.00</a></li>
+                <li><a href="{{ collection.url }}?filter.v.price.gte=50">{{ cart.currency.symbol }}50.00+</a></li>
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+      </aside>
+
+      <!-- Main Products Area -->
+      <main class="collection-main">
+        <!-- Toolbar -->
+        <div class="collection-toolbar">
+          <div class="toolbar-left">
+            <div class="view-modes">
+              <button class="view-mode active" data-view="grid" title="Grid View">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                </svg>
+              </button>
+              <button class="view-mode" data-view="list" title="List View">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="3" y="4" width="18" height="4"></rect>
+                  <rect x="3" y="10" width="18" height="4"></rect>
+                  <rect x="3" y="16" width="18" height="4"></rect>
+                </svg>
+              </button>
+            </div>
+            <span class="product-count">{{ collection.products_count }} Items</span>
+          </div>
+
+          <div class="toolbar-right">
+            <label class="sort-label">Sort By</label>
+            <select class="sort-select" id="sort-by-{{ section.id }}">
+              <option value="manual" {% if collection.sort_by == 'manual' %}selected{% endif %}>Position</option>
+              <option value="title-ascending" {% if collection.sort_by == 'title-ascending' %}selected{% endif %}>Product Name</option>
+              <option value="price-ascending" {% if collection.sort_by == 'price-ascending' %}selected{% endif %}>Price</option>
+              <option value="best-selling" {% if collection.sort_by == 'best-selling' %}selected{% endif %}>Best Selling</option>
+              <option value="created-descending" {% if collection.sort_by == 'created-descending' %}selected{% endif %}>Newest</option>
+            </select>
+            <button class="sort-direction" id="sort-direction-{{ section.id }}" title="Sort Direction">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Green Divider -->
+        <div class="toolbar-divider"></div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-container-{{ section.id }}" data-view="grid">
+          {% paginate collection.products by 12 %}
+            {% for product in collection.products %}
+              <div class="product-card">
+                <a href="{{ product.url }}" class="product-image-link">
+                  {% if product.featured_image %}
+                    <img src="{{ product.featured_image | image_url: width: 300 }}" alt="{{ product.title }}" loading="lazy" class="product-image">
+                  {% else %}
+                    {{ 'product-1' | placeholder_svg_tag: 'product-placeholder' }}
+                  {% endif %}
+                </a>
+
+                <div class="product-info">
+                  <h2 class="product-title">
+                    <a href="{{ product.url }}">{{ product.title }}</a>
+                  </h2>
+
+                  {% if section.settings.show_reviews %}
+                    <div class="product-rating">
+                      {% assign rating = product.metafields.reviews.rating.value | default: 5 %}
+                      {% assign review_count = product.metafields.reviews.rating_count | default: 0 %}
+                      <div class="stars">
+                        {% for i in (1..5) %}
+                          {% if i <= rating %}
+                            <svg class="star filled" width="14" height="14" viewBox="0 0 24 24" fill="#6fb31a">
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                          {% else %}
+                            <svg class="star" width="14" height="14" viewBox="0 0 24 24" fill="#ddd">
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                      {% if review_count > 0 %}
+                        <span class="review-count">{{ review_count }} {% if review_count == 1 %}review{% else %}reviews{% endif %}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  {% if section.settings.show_description %}
+                    <div class="product-description">
+                      {{ product.description | strip_html | truncate: 120 }}
+                    </div>
+                  {% endif %}
+
+                  {% if section.settings.show_sku %}
+                    <div class="product-sku">
+                      <span class="sku-label">SKU:</span>
+                      <span class="sku-value">{{ product.selected_or_first_available_variant.sku | default: 'N/A' }}</span>
+                    </div>
+                  {% endif %}
+
+                  <div class="product-actions">
+                    <div class="product-price">
+                      {% if product.compare_at_price > product.price %}
+                        <span class="price-compare">{{ product.compare_at_price | money }}</span>
+                      {% endif %}
+                      <span class="price-current">{{ product.price | money }}</span>
+                      <span class="price-vat">Incl. VAT</span>
+                    </div>
+
+                    <form action="/cart/add" method="post" class="add-to-cart-form">
+                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                      <input type="hidden" name="quantity" value="1">
+                      <button type="submit" class="btn-add-cart" {% unless product.available %}disabled{% endunless %}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="9" cy="21" r="1"></circle>
+                          <circle cx="20" cy="21" r="1"></circle>
+                          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                        <span>{% if product.available %}Add to Cart{% else %}Sold Out{% endif %}</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+
+            {% if paginate.pages > 1 %}
+              <div class="pagination">
+                {{ paginate | default_pagination: next: '→', previous: '←' }}
+              </div>
+            {% endif %}
+          {% endpaginate %}
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-{{ section.id }} {
+    --primary-color: {{ section.settings.primary_color }};
+    --text-color: {{ section.settings.text_color }};
+    --border-color: #e0e0e0;
+  }
+
+  .clenli-collection { padding: 30px 0; background: #fff; }
+  .clenli-container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+  .collection-header { margin-bottom: 25px; }
+  .collection-title { font-size: 28px; font-weight: 700; color: #333; margin: 0 0 15px 0; }
+  .collection-description { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+  
+  /* Collection Banner Image */
+  .collection-banner { margin-top: 20px; margin-bottom: 10px; }
+  .collection-banner-image { width: 100%; max-width: 100%; height: auto; border-radius: 5px; display: block; }
+
+  /* Subcategory Boxes Styles */
+  .subcategory-boxes { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 1px solid var(--border-color); }
+  .subcategory-box { display: flex; flex-direction: column; align-items: center; padding: 20px; border: 1px solid var(--border-color); border-radius: 5px; text-decoration: none; transition: all 0.3s ease; min-width: 180px; background: #fff; }
+  .subcategory-box:hover { border-color: var(--primary-color); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+  .subcategory-image-wrapper { width: 150px; height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .subcategory-image { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .subcategory-placeholder { width: 100%; height: 100%; background: #f5f5f5; }
+  .subcategory-title { font-size: 14px; font-weight: 600; color: #333; text-align: center; }
+  .subcategory-count { font-size: 12px; color: #888; margin-top: 5px; }
+  .subcategory-box:hover .subcategory-title { color: var(--primary-color); }
+
+  .collection-content { display: flex; gap: 30px; }
+  .collection-sidebar { width: 250px; flex-shrink: 0; }
+  .filter-block { margin-bottom: 15px; }
+  .filter-title { font-size: 18px; font-weight: 600; color: #333; margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 3px solid var(--primary-color); display: inline-block; }
+  .filter-divider { border-bottom: 1px solid var(--border-color); margin-bottom: 15px; }
+  .filter-item { border-bottom: 1px solid var(--border-color); }
+  .filter-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; cursor: pointer; font-size: 14px; font-weight: 600; color: #333; }
+  .filter-header:hover { color: var(--primary-color); }
+  .filter-icon { font-size: 16px; font-weight: 400; }
+  .filter-content { display: none; padding-bottom: 15px; }
+  .filter-item.open .filter-content { display: block; }
+  .filter-list { list-style: none; padding: 0; margin: 0; }
+  .filter-list li { margin: 8px 0; }
+  .filter-list a { font-size: 13px; color: #555; text-decoration: none; display: flex; justify-content: space-between; }
+  .filter-list a:hover { color: var(--primary-color); }
+  .collection-main { flex: 1; min-width: 0; }
+  .collection-toolbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+  .toolbar-left { display: flex; align-items: center; gap: 15px; }
+  .view-modes { display: flex; gap: 5px; }
+  .view-mode { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--border-color); border-radius: 3px; cursor: pointer; color: #999; transition: all 0.2s; }
+  .view-mode:hover, .view-mode.active { color: var(--primary-color); border-color: var(--primary-color); }
+  .product-count { font-size: 14px; color: #666; }
+  .toolbar-right { display: flex; align-items: center; gap: 10px; }
+  .sort-label { font-size: 14px; color: #666; }
+  .sort-select { padding: 8px 30px 8px 12px; border: 1px solid var(--border-color); border-radius: 3px; font-size: 14px; color: #333; background: #fff; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+  .sort-direction { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--border-color); border-radius: 3px; cursor: pointer; }
+  .sort-direction:hover { border-color: var(--primary-color); }
+  .toolbar-divider { height: 3px; background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-color) 70%, #e0e0e0 70%, #e0e0e0 100%); margin-bottom: 25px; }
+  .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+  .products-grid[data-view="list"] { grid-template-columns: 1fr; }
+  .products-grid[data-view="list"] .product-card { display: flex; gap: 25px; }
+  .products-grid[data-view="list"] .product-image-link { width: 200px; flex-shrink: 0; }
+  .products-grid[data-view="list"] .product-info { flex: 1; }
+  .product-card { background: #fff; padding: 15px; border-radius: 5px; transition: box-shadow 0.3s; }
+  .product-card:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+  .product-image-link { display: block; text-align: center; margin-bottom: 15px; }
+  .product-image { max-width: 100%; height: auto; max-height: 200px; object-fit: contain; }
+  .product-placeholder { width: 100%; height: 180px; background: #f5f5f5; }
+  .product-title { font-size: 15px; font-weight: 600; margin: 0 0 8px 0; line-height: 1.4; }
+  .product-title a { color: #333; text-decoration: none; }
+  .product-title a:hover { color: var(--primary-color); }
+  .product-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .stars { display: flex; gap: 2px; }
+  .review-count { font-size: 12px; color: #666; }
+  .product-description { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 10px; }
+  .product-sku { font-size: 12px; color: #888; margin-bottom: 12px; }
+  .sku-label { margin-right: 5px; }
+  .product-actions { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+  .product-price { display: flex; flex-direction: column; }
+  .price-compare { font-size: 13px; color: #999; text-decoration: line-through; }
+  .price-current { font-size: 20px; font-weight: 700; color: #333; }
+  .price-vat { font-size: 11px; color: #888; }
+  .btn-add-cart { display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--primary-color); color: #fff; border: none; border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+  .btn-add-cart:hover { background: #5a9216; }
+  .btn-add-cart:disabled { background: #ccc; cursor: not-allowed; }
+  .btn-add-cart svg { stroke: #fff; }
+  .pagination { grid-column: 1 / -1; display: flex; justify-content: center; gap: 5px; margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border-color); }
+  .pagination a, .pagination span { padding: 8px 14px; border: 1px solid var(--border-color); border-radius: 3px; font-size: 14px; color: #333; text-decoration: none; }
+  .pagination a:hover { border-color: var(--primary-color); color: var(--primary-color); }
+  .pagination .current { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+
+  @media (max-width: 1024px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .collection-content { flex-direction: column; }
+    .collection-sidebar { width: 100%; display: flex; flex-wrap: wrap; gap: 10px; }
+    .filter-item { flex: 1; min-width: 150px; border: 1px solid var(--border-color); border-radius: 5px; padding: 0 10px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .collection-toolbar { flex-direction: column; gap: 15px; align-items: flex-start; }
+    .toolbar-right { width: 100%; justify-content: space-between; }
+    .subcategory-boxes { justify-content: center; }
+    .subcategory-box { min-width: 140px; padding: 15px; }
+    .subcategory-image-wrapper { width: 120px; height: 100px; }
+  }
+  @media (max-width: 480px) {
+    .products-grid { grid-template-columns: 1fr; }
+    .product-actions { flex-direction: column; align-items: stretch; }
+    .btn-add-cart { justify-content: center; }
+    .subcategory-box { min-width: 120px; flex: 1; }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var sectionId = '{{ section.id }}';
+  
+  document.querySelectorAll('[data-filter-toggle]').forEach(function(header) {
+    header.addEventListener('click', function() {
+      this.closest('.filter-item').classList.toggle('open');
+      var icon = this.querySelector('.filter-icon');
+      icon.textContent = this.closest('.filter-item').classList.contains('open') ? '−' : '+';
+    });
+  });
+
+  document.querySelectorAll('.view-mode').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.view-mode').forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      document.getElementById('products-container-' + sectionId).setAttribute('data-view', this.getAttribute('data-view'));
+    });
+  });
+
+  var sortSelect = document.getElementById('sort-by-' + sectionId);
+  if (sortSelect) {
+    sortSelect.addEventListener('change', function() {
+      var url = new URL(window.location.href);
+      url.searchParams.set('sort_by', this.value);
+      window.location.href = url.toString();
+    });
+  }
+
+  var ascending = true;
+  var sortDirection = document.getElementById('sort-direction-' + sectionId);
+  if (sortDirection && sortSelect) {
+    sortDirection.addEventListener('click', function() {
+      ascending = !ascending;
+      this.querySelector('svg').style.transform = ascending ? 'rotate(0deg)' : 'rotate(180deg)';
+      var currentValue = sortSelect.value;
+      if (currentValue.includes('-ascending')) {
+        sortSelect.value = currentValue.replace('-ascending', '-descending');
+      } else if (currentValue.includes('-descending')) {
+        sortSelect.value = currentValue.replace('-descending', '-ascending');
+      }
+      sortSelect.dispatchEvent(new Event('change'));
+    });
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Collection Clenli Style",
+  "class": "collection-clenli-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_banner_image",
+      "label": "Banner Image (Below Description)",
+      "info": "Leave empty to use collection's featured image"
+    },
+    {
+      "type": "url",
+      "id": "collection_banner_link",
+      "label": "Banner Link (Optional)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "label": "Show Collection Image as Banner",
+      "default": false,
+      "info": "If no custom banner, show collection's featured image"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Color",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Filters"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category_filter",
+      "label": "Show Category Filter",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "category_menu",
+      "label": "Category Menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_manufacturer_filter",
+      "label": "Show Manufacturer Filter",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_type_filter",
+      "label": "Show Type Filter",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price_filter",
+      "label": "Show Price Filter",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Product Display"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show Star Rating",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show Description",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sku",
+      "label": "Show SKU",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subcategory",
+      "name": "Subcategory Box",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_subcategory",
+          "label": "✓ Enable This Subcategory",
+          "default": true,
+          "info": "Uncheck to hide this subcategory box"
+        },
+        {
+          "type": "collection",
+          "id": "show_on_collection",
+          "label": "Show On Collection (Parent)",
+          "info": "Select which collection page this should appear on. Leave empty to show on all."
+        },
+        {
+          "type": "header",
+          "content": "Subcategory Details"
+        },
+        {
+          "type": "collection",
+          "id": "subcategory_collection",
+          "label": "Subcategory Collection",
+          "info": "Select the subcategory collection to link to"
+        },
+        {
+          "type": "image_picker",
+          "id": "subcategory_image",
+          "label": "Custom Image (Optional)",
+          "info": "Leave empty to use collection's image"
+        },
+        {
+          "type": "text",
+          "id": "subcategory_title",
+          "label": "Custom Title (Optional)",
+          "info": "Leave empty to use collection's title"
+        },
+        {
+          "type": "url",
+          "id": "subcategory_link",
+          "label": "Custom Link (Optional)",
+          "info": "Leave empty to use collection's URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_product_count",
+          "label": "Show Product Count",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Clenli Style",
+      "blocks": [
+        {
+          "type": "subcategory"
+        },
+        {
+          "type": "subcategory"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,247 @@
+{% comment %}
+  Clenli Direct - Service Coverage Section
+  Section: service-coverage.liquid
+{% endcomment %}
+
+<section class="service-coverage">
+  <div class="service-coverage__container">
+    <div class="service-coverage__content">
+      <span class="service-coverage__label">{{ section.settings.label }}</span>
+      <h2 class="service-coverage__title">{{ section.settings.title }}</h2>
+      <p class="service-coverage__text">{{ section.settings.text }}</p>
+      
+      <div class="service-coverage__regions">
+        {% for block in section.blocks %}
+          <div class="service-coverage__region">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>{{ block.settings.region }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="service-coverage__map">
+      <div class="service-coverage__map-container">
+        {% if section.settings.map_image != blank %}
+          <img 
+            src="{{ section.settings.map_image | image_url: width: 600 }}" 
+            alt="Service Coverage Map"
+            class="service-coverage__map-image"
+            loading="lazy"
+          >
+        {% else %}
+          <div class="service-coverage__map-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>Ireland & Northern Ireland</span>
+          </div>
+        {% endif %}
+        
+        <div class="service-coverage__badge">
+          <span class="service-coverage__badge-title">All-Ireland</span>
+          <span class="service-coverage__badge-text">Coverage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.service-coverage {
+  background: #f8fafb;
+  padding: 100px 0;
+}
+
+.service-coverage__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.service-coverage__label {
+  display: inline-block;
+  color: #0a4d3c;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.service-coverage__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+}
+
+.service-coverage__text {
+  font-size: 17px;
+  color: #6a6a7a;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.service-coverage__regions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.service-coverage__region {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-coverage__region svg {
+  color: #0a4d3c;
+  flex-shrink: 0;
+}
+
+.service-coverage__region span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.service-coverage__map-container {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-coverage__map-image {
+  width: 100%;
+  height: auto;
+}
+
+.service-coverage__map-placeholder {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #c5d5cf;
+  gap: 15px;
+}
+
+.service-coverage__map-placeholder span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.service-coverage__badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #0a4d3c 0%, #1a7a5c 100%);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(10, 77, 60, 0.3);
+}
+
+.service-coverage__badge-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.service-coverage__badge-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+  .service-coverage__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-coverage__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-coverage__regions {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Service Coverage",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Section Label",
+      "default": "Coverage Area"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Nationwide Service Coverage"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Section Text",
+      "default": "Our service engineers are based at our warehouse in Dublin and provide daily service calls throughout the Republic of Ireland and Northern Ireland."
+    },
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Map Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "region",
+      "name": "Region",
+      "settings": [
+        {
+          "type": "text",
+          "id": "region",
+          "label": "Region Name",
+          "default": "Dublin"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Coverage",
+      "blocks": [
+        { "type": "region", "settings": { "region": "Dublin" } },
+        { "type": "region", "settings": { "region": "Cork" } },
+        { "type": "region", "settings": { "region": "Galway" } },
+        { "type": "region", "settings": { "region": "Limerick" } },
+        { "type": "region", "settings": { "region": "Belfast" } },
+        { "type": "region", "settings": { "region": "Waterford" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

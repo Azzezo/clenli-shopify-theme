@@ -1,0 +1,218 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "comac-main": {
+      "type": "comac-page",
+      "blocks": {
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Comac_Antea_d5d3d473-72c7-4127-b13e-538a191ca6da.png",
+            "name": "Comac Antea",
+            "type": "Walk Behind Scrubber Dryer",
+            "link": "/products/comac-antea"
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/5_910.79_11_020.29_68_529.26_4.png",
+            "name": "Comac Versa",
+            "type": "Walk Behind Scrubber Dryer",
+            "link": "/products/comac-versa"
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Comac_C85_ef969d37-c1db-402e-9754-122bd66810e9.png",
+            "name": "Comac Innova 55",
+            "type": "Ride On Scrubber Dryer",
+            "link": "/products/comac-innova-55"
+          }
+        },
+        "product-4": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Comac_Innova_55_e2b613af-e5bb-47dc-9363-1bedbbe181db.png",
+            "name": "Comac C85",
+            "type": "Ride On Scrubber Dryer",
+            "link": "/products/comac-c85"
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2",
+        "product-3",
+        "product-4"
+      ],
+      "settings": {
+        "hero_tag": "SCRUBBER DRYERS",
+        "hero_title": "Comac Scrubber Dryers",
+        "hero_desc": "Robust and reliable, Comac are a longstanding brand in the world of cleaning. Known for their high quality floor scrubber dryers, Comac lead the line in driving efficiency, results, and sustainability in cleaning.",
+        "feature1_title": "Effective deep cleaning:",
+        "feature1_text": "Comac scrubber dryers effortlessly remove stubborn dirt and stains, making them a reliable choice for all hard flooring surfaces.",
+        "feature2_title": "Cleaner floors, safer spaces:",
+        "feature2_text": "Designed to leave floors dry and free from residue, Comac scrubber dryers help minimise slip hazards. With advanced water and chemical management, they provide powerful cleaning while promoting sustainability.",
+        "feature3_title": "Tailored cleaning solutions:",
+        "feature3_text": "From expansive warehouses to small offices, our selection of walk-behind and ride-on scrubber dryers ensures there's an option suited to every environment.",
+        "hero_btn_text": "Explore Comac Range",
+        "hero_btn_link": "/collections/comac",
+        "about_title": "About Comac",
+        "about_text": "Synonymous with quality, Comac are a leading provider of scrubber dryers worldwide. Robust and hardworking, Comac floor scrubbers make light work of cleaning, and come with some great features including Eco Mode, Stop & Go System, Anti-Bacterial Tanks, and much more. Through our exclusive partnership, Clenli Direct offer a range of Comac scrubber dryers to suit all needs and sizes!",
+        "carbon_title": "Carbon Passports",
+        "carbon_text": "As part of their drive for a more sustainable future, Comac have embraced the international standard ISO 14067 that requires the quantification of the climatic footprint of their range. Carbon Passports have been created for their newer range to show the CO2 production of each model, with the figures being verified by third parties. The Carbon Passports allow users to understand their potential impact on the environment, allowing them to make an informed decision.",
+        "tech_title": "Comac Sustainable Technologies",
+        "tech_text": "Comac have created technologies tailored to minimize the environmental impact of their scrubber dryers. Their sustainable technologies efficiently utilize resources, reducing noise pollution, and preventing wastage of water, energy, and detergent. This not only helps the environment, but also minimizes cleaning time.",
+        "tech1_title": "Eco Mode",
+        "tech1_text": "Pressing a single button reduces machine energy consumption and noise level. It is an ideal working setting to save energy by increasing autonomy.",
+        "tech2_title": "Stop & Go System",
+        "tech2_text": "When the machine is temporarily idle, the solution flow stops and the brushes are halted. This serves to optimize consumption and reduce waste.",
+        "tech3_title": "LED Lights",
+        "tech3_text": "The energy savings obtained thanks to the use of LED technology is considerable and can reach up to 80% than the standard lights.",
+        "tech4_title": "Emergency Button",
+        "tech4_text": "Emergency stop is a control designed to be easily identifiable, clearly visible and above all rapidly accessible. By pressing the button, the machine stops all the functions.",
+        "tech5_title": "Comac Dosing System",
+        "tech5_text": "The Comac Dosing Solution is a system where the amount of solution can be immediately adapted to the specific dirt to be cleaned, thus eliminating the excesses that can occur with traditional floor scrubbers.",
+        "tech6_title": "Anti Bacterial Tanks",
+        "tech6_text": "An additive is included when moulding the tanks that allows the bacterial load to be kept at lower average levels than on standard tanks.",
+        "tech7_title": "Comac Corrosion Protection",
+        "tech7_text": "Comac Corrosion Protection is the treatment created by Comac that is used to coat and protect the metallic parts of floor scrubbers which are exposed to corrosion.",
+        "tech8_title": "Constant Solution Flow",
+        "tech8_text": "As machines with a double brush may have irregular distribution of the solution, Comac has designed differentiated flow that ensures proper solution delivery on both brushes, improving efficiency even in low flow rates.",
+        "tech9_title": "Pressure Monitoring",
+        "tech9_text": "Constantly monitors the power dispensed by the brush motors in order to guarantee maximum effectiveness on any type of flooring.",
+        "tech10_title": "Smart Solution Control",
+        "tech10_text": "Solution Smart Control means that if the floor scrubber works at reduced speed, the solution flow automatically decreases. This enables waste and solution to be reduced.",
+        "tech11_title": "Program Selector",
+        "tech11_text": "The working program selector enables the user to select the type of activity to be carried out. Depending on the model, this enables the operator to select traction only, scrubbing only, vacuum only, or all the functions.",
+        "models_title": "Most Popular Comac Models",
+        "models_text": "See our most popular options below or browse our full range to find the perfect scrubber dryer for you!",
+        "models_btn_text": "Explore Comac Range",
+        "models_btn_link": "/collections/comac"
+      }
+    },
+    "featured_product_we_Lrf7aG": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_AQa9Ax": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_L4eAUb": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_L4eAUb"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "comac-main",
+    "featured_product_we_Lrf7aG",
+    "newsletter_AQa9Ax"
+  ]
+}

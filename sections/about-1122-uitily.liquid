@@ -1,0 +1,1186 @@
+{% comment %}
+  Addax Electric Utility Vehicles Section
+  Fully Customizable from Shopify Admin
+{% endcomment %}
+
+<div class="addax-section-wrapper section-{{ section.id }}-padding">
+  {%- comment -%} Hero Section {%- endcomment -%}
+  <div class="addax-hero container">
+    <div class="row">
+      <div class="col-sm-6">
+        {% if section.settings.hero_image != blank %}
+          <img src="{{ section.settings.hero_image | image_url: width: 800 }}" 
+               alt="{{ section.settings.hero_title }}" 
+               width="100%"
+               loading="lazy">
+        {% endif %}
+      </div>
+      <div class="col-sm-6">
+        {% if section.settings.hero_subtitle != blank %}
+          <h3 class="hero-subtitle">{{ section.settings.hero_subtitle }}</h3>
+        {% endif %}
+        
+        {% if section.settings.hero_title != blank %}
+          <h1 class="hero-title">{{ section.settings.hero_title }}</h1>
+        {% endif %}
+        
+        {% if section.settings.hero_description != blank %}
+          <div class="hero-description">{{ section.settings.hero_description }}</div>
+        {% endif %}
+        
+        {% if section.settings.hero_button_text != blank %}
+          <p>
+            <a class="btn-robotic" href="{{ section.settings.hero_button_link }}">
+              {{ section.settings.hero_button_text }}
+            </a>
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} Separator {%- endcomment -%}
+  <div class="section-separator"></div>
+
+  {%- comment -%} Why Consider Section {%- endcomment -%}
+  {% if section.settings.show_why_section %}
+    <div class="why-consider-section container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="why-content">
+            {% if section.settings.why_title != blank %}
+              <h3>{{ section.settings.why_title }}</h3>
+            {% endif %}
+            {% if section.settings.why_description != blank %}
+              <p>{{ section.settings.why_description }}</p>
+            {% endif %}
+            {% if section.settings.why_button_text != blank %}
+              <p class="text-center">
+                <a class="btn-robotic" href="{{ section.settings.why_button_link }}">
+                  {{ section.settings.why_button_text }}
+                </a>
+              </p>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-sm-6">
+          {% if section.settings.why_image != blank %}
+            <img src="{{ section.settings.why_image | image_url: width: 800 }}" 
+                 alt="{{ section.settings.why_title }}" 
+                 width="100%"
+                 loading="lazy">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} About Section {%- endcomment -%}
+  {% if section.settings.show_about_section %}
+    <div class="about-section container">
+      <div class="row">
+        <div class="col-sm-6">
+          {% if section.settings.about_image != blank %}
+            <img src="{{ section.settings.about_image | image_url: width: 800 }}" 
+                 alt="{{ section.settings.about_title }}" 
+                 width="100%"
+                 loading="lazy">
+          {% endif %}
+        </div>
+        <div class="col-sm-6">
+          <div class="about-content">
+            {% if section.settings.about_title != blank %}
+              <h3>{{ section.settings.about_title }}</h3>
+            {% endif %}
+            {% if section.settings.about_description != blank %}
+              <p>{{ section.settings.about_description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} Highlights Section {%- endcomment -%}
+  {% if section.settings.show_highlights %}
+    <div class="highlights-section container">
+      {% if section.settings.highlights_title != blank %}
+        <h2 class="section-title text-center">{{ section.settings.highlights_title }}</h2>
+      {% endif %}
+      
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'highlight' %}
+              <div class="col-sm-3" {{ block.shopify_attributes }}>
+                <div class="highlight-card">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 400 }}" 
+                         alt="{{ block.settings.title }}" 
+                         width="100%"
+                         loading="lazy">
+                  {% endif %}
+                  <p>&nbsp;</p>
+                  {% if block.settings.title != blank %}
+                    <h3 class="text-center">{{ block.settings.title }}</h3>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <p class="text-center">{{ block.settings.description }}</p>
+                  {% endif %}
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} Sectors Section {%- endcomment -%}
+  {% if section.settings.show_sectors %}
+    <div class="sectors-section container">
+      {% if section.settings.sectors_title != blank %}
+        <h2 class="section-title text-center">{{ section.settings.sectors_title }}</h2>
+      {% endif %}
+      {% if section.settings.sectors_description != blank %}
+        <p class="text-center">{{ section.settings.sectors_description }}</p>
+      {% endif %}
+      {% if section.settings.sectors_button_text != blank %}
+        <p class="text-center">
+          <a class="btn-robotic" href="{{ section.settings.sectors_button_link }}">
+            {{ section.settings.sectors_button_text }}
+          </a>
+        </p>
+      {% endif %}
+      
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'sector' %}
+              <div class="col-md-6" {{ block.shopify_attributes }}>
+                <div class="sector-card">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 600 }}" 
+                         alt="{{ block.settings.title }}" 
+                         width="100%"
+                         loading="lazy">
+                  {% endif %}
+                  {% if block.settings.title != blank %}
+                    <h3 class="text-center">{{ block.settings.title }}</h3>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <p>{{ block.settings.description }}</p>
+                  {% endif %}
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} Models Section {%- endcomment -%}
+  {% if section.settings.show_models %}
+    <div class="models-section container">
+      {% if section.settings.models_title != blank %}
+        <h2 class="section-title text-center">{{ section.settings.models_title }}</h2>
+      {% endif %}
+      
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'model' %}
+              <div class="col-sm-6" {{ block.shopify_attributes }}>
+                <div class="model-card">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 600 }}" 
+                         alt="{{ block.settings.title }}" 
+                         width="100%"
+                         loading="lazy">
+                  {% endif %}
+                  <p>&nbsp;</p>
+                  {% if block.settings.title != blank %}
+                    <h3 class="text-center">{{ block.settings.title }}</h3>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <p class="text-center">{{ block.settings.description }}</p>
+                  {% endif %}
+                  {% if block.settings.button_text != blank %}
+                    <p class="text-center">
+                      <a class="btn-robotic" href="{{ block.settings.button_link }}">
+                        {{ block.settings.button_text }}
+                      </a>
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} Configurations Section {%- endcomment -%}
+  {% if section.settings.show_configurations %}
+    <div class="configurations-section container">
+      {% if section.settings.config_title != blank %}
+        <h2 class="section-title text-center">{{ section.settings.config_title }}</h2>
+      {% endif %}
+      {% if section.settings.config_description != blank %}
+        <p class="text-center">{{ section.settings.config_description }}</p>
+      {% endif %}
+      {% if section.settings.config_button_text != blank %}
+        <p class="text-center">
+          <a class="btn-robotic" href="{{ section.settings.config_button_link }}">
+            {{ section.settings.config_button_text }}
+          </a>
+        </p>
+      {% endif %}
+      
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'configuration' %}
+              <div class="col-sm-4" {{ block.shopify_attributes }}>
+                <div class="config-card">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 400 }}" 
+                         alt="{{ block.settings.title }}" 
+                         width="100%"
+                         loading="lazy">
+                  {% endif %}
+                  <p>&nbsp;</p>
+                  {% if block.settings.title != blank %}
+                    <h3 class="text-center">{{ block.settings.title }}</h3>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <p class="text-center">{{ block.settings.description }}</p>
+                  {% endif %}
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} Custom Build CTA {%- endcomment -%}
+  {% if section.settings.show_custom_cta %}
+    <div class="custom-cta-section container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="cta-content">
+            {% if section.settings.cta_title != blank %}
+              <h3>{{ section.settings.cta_title }}</h3>
+            {% endif %}
+            {% if section.settings.cta_description != blank %}
+              <p>{{ section.settings.cta_description }}</p>
+            {% endif %}
+            {% if section.settings.cta_button_text != blank %}
+              <p class="text-center">
+                <a class="btn-robotic" href="{{ section.settings.cta_button_link }}">
+                  {{ section.settings.cta_button_text }}
+                </a>
+              </p>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-sm-6">
+          {% if section.settings.cta_image != blank %}
+            <img src="{{ section.settings.cta_image | image_url: width: 800 }}" 
+                 alt="{{ section.settings.cta_title }}" 
+                 width="100%"
+                 loading="lazy">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} Why Choose Clenli {%- endcomment -%}
+  {% if section.settings.show_why_clenli %}
+    <div class="why-clenli-section container text-center">
+      {% if section.settings.clenli_logo != blank %}
+        <img src="{{ section.settings.clenli_logo | image_url: width: 300 }}" 
+             alt="Clenli Direct" 
+             class="clenli-logo"
+             loading="lazy">
+      {% endif %}
+      {% if section.settings.clenli_title != blank %}
+        <h2 class="section-title">{{ section.settings.clenli_title }}</h2>
+      {% endif %}
+      {% if section.settings.clenli_description != blank %}
+        <p>{{ section.settings.clenli_description }}</p>
+      {% endif %}
+    </div>
+    <div class="section-separator"></div>
+  {% endif %}
+
+  {%- comment -%} Contact Form Section {%- endcomment -%}
+  {% if section.settings.show_contact_form %}
+    <div class="contact-form-section container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contact-info">
+            {% if section.settings.form_title != blank %}
+              <h3 class="text-center">{{ section.settings.form_title }}</h3>
+            {% endif %}
+            {% if section.settings.form_description != blank %}
+              <p class="text-center">{{ section.settings.form_description }}</p>
+            {% endif %}
+            {% if section.settings.footer_image != blank %}
+              <p class="text-center">
+                <img src="{{ section.settings.footer_image | image_url: width: 1000 }}" 
+                     alt="Contact Us" 
+                     width="100%"
+                     loading="lazy">
+              </p>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-sm-6">
+          {% if section.settings.phone_number != blank %}
+            <div class="callnow-btn">
+              <a href="tel:{{ section.settings.phone_number | replace: ' ', '' }}">
+                {{ section.settings.phone_button_text | default: 'CALL NOW' }}
+              </a>
+            </div>
+          {% endif %}
+          
+          <div class="sidebar-enquire">
+            {% form 'contact' %}
+              <h5>{{ section.settings.form_heading | default: 'GO GREEN TODAY ENQUIRE NOW' }}</h5>
+              
+              {% if form.posted_successfully? %}
+                <p class="form-success">Thanks for contacting us. We'll get back to you as soon as possible.</p>
+              {% endif %}
+              
+              {% if form.errors %}
+                <div class="form-errors">
+                  {{ form.errors | default_errors }}
+                </div>
+              {% endif %}
+              
+              <div class="form-group">
+                <input 
+                  type="text" 
+                  name="contact[name]" 
+                  id="ContactFormName" 
+                  class="form-control" 
+                  placeholder="NAME" 
+                  required>
+              </div>
+              
+              <div class="form-group">
+                <input 
+                  type="email" 
+                  name="contact[email]" 
+                  id="ContactFormEmail" 
+                  class="form-control" 
+                  placeholder="MAIL" 
+                  required>
+              </div>
+              
+              <div class="form-group">
+                <input 
+                  type="tel" 
+                  name="contact[phone]" 
+                  id="ContactFormPhone" 
+                  class="form-control" 
+                  placeholder="Phone Number" 
+                  required>
+              </div>
+              
+              <div class="form-group">
+                <textarea 
+                  name="contact[body]" 
+                  id="ContactFormMessage" 
+                  class="form-control" 
+                  rows="3" 
+                  placeholder="MESSAGE" 
+                  required></textarea>
+              </div>
+              
+              <div class="btn-group">
+                <button type="submit" class="btn-submit">
+                  <span>Submit</span>
+                </button>
+              </div>
+            {% endform %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+.addax-section-wrapper {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-sm-3, .col-sm-4, .col-sm-6, .col-md-6 {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.col-sm-3 { width: 25%; }
+.col-sm-4 { width: 33.333%; }
+.col-sm-6, .col-md-6 { width: 50%; }
+
+/* Separator */
+.section-separator {
+  width: 100%;
+  border-bottom: 4px solid {{ section.settings.accent_color }};
+  margin: 40px 0;
+}
+
+/* Typography */
+.hero-subtitle {
+  font-size: 20px;
+  color: {{ section.settings.subtitle_color }};
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: {{ section.settings.title_color }};
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 16px;
+  color: {{ section.settings.text_color }};
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: {{ section.settings.title_color }};
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: {{ section.settings.title_color }};
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  color: {{ section.settings.text_color }};
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.text-center { text-align: center; }
+
+/* Buttons */
+.btn-robotic {
+  display: inline-block;
+  padding: 12px 30px;
+  background: {{ section.settings.button_bg }};
+  color: {{ section.settings.button_color }} !important;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: 2px solid {{ section.settings.button_bg }};
+}
+
+.btn-robotic:hover {
+  background: {{ section.settings.button_bg_hover }};
+  border-color: {{ section.settings.button_bg_hover }};
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(111, 179, 26, 0.3);
+}
+
+/* Sections Spacing */
+.addax-hero,
+.why-consider-section,
+.about-section,
+.highlights-section,
+.sectors-section,
+.models-section,
+.configurations-section,
+.custom-cta-section,
+.why-clenli-section,
+.contact-form-section {
+  margin-bottom: 40px;
+}
+
+/* Content Alignment */
+.why-content,
+.about-content,
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+/* Cards */
+.highlight-card,
+.sector-card,
+.model-card,
+.config-card {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sector-card,
+.model-card,
+.config-card {
+  height: 100%;
+}
+
+.sector-card img,
+.model-card img,
+.config-card img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Clenli Logo */
+.clenli-logo {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 300px;
+}
+
+/* Contact Form */
+.callnow-btn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.callnow-btn a {
+  display: inline-block;
+  padding: 15px 40px;
+  background: {{ section.settings.accent_color }};
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.callnow-btn a:hover {
+  background: {{ section.settings.button_bg_hover }};
+  transform: scale(1.05);
+}
+
+.sidebar-enquire {
+  background: #f7f8fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.sidebar-enquire h5 {
+  text-align: center;
+  color: {{ section.settings.accent_color }};
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: {{ section.settings.accent_color }};
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: {{ section.settings.accent_color }};
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  background: {{ section.settings.button_bg_hover }};
+  transform: translateY(-2px);
+}
+
+.form-success {
+  padding: 15px;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-errors {
+  padding: 15px;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col-sm-3, .col-sm-4, .col-sm-6, .col-md-6 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .hero-title {
+    font-size: 28px !important;
+  }
+  
+  .section-title {
+    font-size: 18px !important;
+  }
+  
+  h3 {
+    font-size: 16px !important;
+  }
+  
+  p {
+    font-size: 14px !important;
+  }
+  
+  .row {
+    margin: 0;
+  }
+  
+  .col-sm-3, .col-sm-4, .col-sm-6, .col-md-6 {
+    padding: 0;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Addax Utility Vehicles",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#5a9315"
+    },
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Subtitle",
+      "default": "ELECTRIC UTILITY VEHICLE"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Main Title",
+      "default": "Addax Electric Utility Vehicles"
+    },
+    {
+      "type": "richtext",
+      "id": "hero_description",
+      "label": "Description",
+      "default": "<p>Introducing Addax EUVs, a durable and agile utility vehicle solution for all sectors.</p>"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Button Text",
+      "default": "Explore Addax Range"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Why Consider Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_why_section",
+      "label": "Show Why Consider Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "why_title",
+      "label": "Title",
+      "default": "Why Consider Electric Utility Vehicles?"
+    },
+    {
+      "type": "textarea",
+      "id": "why_description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "why_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "why_button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "why_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "About Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_about_section",
+      "label": "Show About Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "about_title",
+      "label": "Title",
+      "default": "About Addax"
+    },
+    {
+      "type": "textarea",
+      "id": "about_description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Highlights Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_highlights",
+      "label": "Show Highlights",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "highlights_title",
+      "label": "Section Title",
+      "default": "Addax Utility Vehicle Highlights"
+    },
+    {
+      "type": "header",
+      "content": "Sectors Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sectors",
+      "label": "Show Sectors",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "sectors_title",
+      "label": "Section Title",
+      "default": "Serving All Sectors"
+    },
+    {
+      "type": "textarea",
+      "id": "sectors_description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "sectors_button_text",
+      "label": "Button Text",
+      "default": "View Sectors"
+    },
+    {
+      "type": "url",
+      "id": "sectors_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Models Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_models",
+      "label": "Show Models",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "models_title",
+      "label": "Section Title",
+      "default": "Choose Your Model"
+    },
+    {
+      "type": "header",
+      "content": "Configurations Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_configurations",
+      "label": "Show Configurations",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "config_title",
+      "label": "Section Title",
+      "default": "Choose Your Configuration"
+    },
+    {
+      "type": "textarea",
+      "id": "config_description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "config_button_text",
+      "label": "Button Text",
+      "default": "View All Configurations"
+    },
+    {
+      "type": "url",
+      "id": "config_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Custom Build CTA"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_custom_cta",
+      "label": "Show Custom Build CTA",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Title",
+      "default": "Get a Custom Built Addax"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "cta_button_text",
+      "label": "Button Text",
+      "default": "Contact Us Today"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Why Choose Clenli"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_why_clenli",
+      "label": "Show Why Clenli Section",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "clenli_logo",
+      "label": "Clenli Logo"
+    },
+    {
+      "type": "text",
+      "id": "clenli_title",
+      "label": "Title",
+      "default": "Why Choose Clenli Direct"
+    },
+    {
+      "type": "textarea",
+      "id": "clenli_description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Contact Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact_form",
+      "label": "Show Contact Form",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form Title",
+      "default": "Don't Get Left Behind"
+    },
+    {
+      "type": "textarea",
+      "id": "form_description",
+      "label": "Form Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_image",
+      "label": "Footer Image"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "018118920"
+    },
+    {
+      "type": "text",
+      "id": "phone_button_text",
+      "label": "Phone Button Text",
+      "default": "CALL NOW"
+    },
+    {
+      "type": "text",
+      "id": "form_heading",
+      "label": "Form Heading",
+      "default": "GO GREEN TODAY ENQUIRE NOW"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "highlight",
+      "name": "Highlight Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "sector",
+      "name": "Sector Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "model",
+      "name": "Model Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    },
+    {
+      "type": "configuration",
+      "name": "Configuration Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Addax Utility Vehicles",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

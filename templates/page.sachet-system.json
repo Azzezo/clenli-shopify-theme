@@ -1,0 +1,390 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-sachet-system",
+      "blocks": {
+        "content_1": {
+          "type": "content_section",
+          "settings": {
+            "content_title": "What are PVA Soluble Sachets?",
+            "content_text": "<p>PVA Soluble Sachets are a revolutionary solution that will lower make your cleaning routine safer, simpler, more sustainable, and will lower your costs.</p><p>By simply adding these sachets to water, you can produce powerful cleaning agents that will keep your premises clean!</p>",
+            "content_image": "shopify://shop_images/What_Are_PVA_Soluble_Sachets.png",
+            "reverse_layout": false
+          }
+        },
+        "content_2": {
+          "type": "content_section",
+          "settings": {
+            "content_title": "How PVA Sachets Work",
+            "content_text": "<p>To create the sachets, the unique formulations are contained within sachets until the point of use. The sachets are dry, compact, and light, they reduce storage space, transportation costs and heavily reduce the environmental implications often associated with delivering industrial cleaning supplies.</p><p>PVA Hygiene use planet friendly packaging that can either be composted or recycled, helping you to eliminate single-use plastic from your current cleaning procedure.</p>",
+            "content_image": "shopify://shop_images/How_PVA_Sachets_Work.png",
+            "reverse_layout": true
+          }
+        },
+        "content_3": {
+          "type": "content_section",
+          "settings": {
+            "content_title": "What Can PVA Soluble Sachets Replace?",
+            "content_text": "<p>PVA have a wide range of solutions for a complete cleaning experience. PVA have solutions that can replace all common cleaning agents, including:</p><p>- Degreaser<br/>- Multi Surface<br/>- Bathroom Cleaner<br/>- Glass & Stainless Steel<br/>- Toilet Cleaner<br/>- Laundry Tablets<br/>- Dishwasher Tablets<br/>- Hand Soap</p><p></p>",
+            "content_image": "shopify://shop_images/What_Can_PVA_Sachets_Replace_664f3ee2-8ebd-4756-acc4-4c927760049e.png",
+            "reverse_layout": false
+          }
+        },
+        "benefits_1": {
+          "type": "benefits_section",
+          "settings": {
+            "benefits_title": "PVA Sustainable Benefits",
+            "benefits_subtitle": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+            "benefit_1_image": "shopify://shop_images/Recyclable_Packaging.png",
+            "benefit_1_title": "Recyclable Packaging",
+            "benefit_1_text": "All packaging is recyclable, and the pouches are also compostable.",
+            "benefit_2_image": "shopify://shop_images/No_Single_Use_Plastic.png",
+            "benefit_2_title": "No Single Use Plastic",
+            "benefit_2_text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%.",
+            "benefit_3_image": "shopify://shop_images/Less_Deliveries_Needed.png",
+            "benefit_3_title": "Less Deliveries Needed",
+            "benefit_3_text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%"
+          }
+        },
+        "benefits_2": {
+          "type": "benefits_section",
+          "settings": {
+            "benefits_title": "PVA Safety Benefits",
+            "benefits_subtitle": "PVA Hygiene sachets allow businesses to reduce and eliminate risks associated with the use of cleaning chemicals. With PVA sachets, you significantly reduce your exposure to chemicals, spillage, and even the chance of manual handling injuries.",
+            "benefit_1_image": "shopify://shop_images/No_Exposure_to_Products.png",
+            "benefit_1_title": "No Exposure to Concentrated Products",
+            "benefit_1_text": "As PVA is safely in sachet form, there is no risk of exposure to concentrated product.",
+            "benefit_2_image": "shopify://shop_images/Reduced_Manual_Handling_Risk.png",
+            "benefit_2_title": "Reduced Manual Handling Risk",
+            "benefit_2_text": "As PVA Sachets are much smaller in size and weight, this significantly reduces the risk of manual handling errors.",
+            "benefit_3_image": "shopify://shop_images/No_Spillages.png",
+            "benefit_3_title": "No Spillages of Hazardous Chemicals",
+            "benefit_3_text": "As the Sachets are not in liquid form, there is no risk of accidental spills."
+          }
+        },
+        "benefits_3": {
+          "type": "benefits_section",
+          "settings": {
+            "benefits_title": "PVA Simplicity Benefits",
+            "benefits_subtitle": "PVA sachets will simplify your cleaning process. Each sachet has simple to follow instructions where you mix the sachet with water. Spray bottles are color coded to avoid cross contamination, and the sachet packs are resealable.",
+            "benefit_1_image": "shopify://shop_images/Minimal_Training_Needed.png",
+            "benefit_1_title": "Minimal Training Needed",
+            "benefit_1_text": "Soluble Sachets are simple to use, meaning minimal training is needed.",
+            "benefit_2_image": "shopify://shop_images/Color_Coded_Bottles.png",
+            "benefit_2_title": "Color Coded Reusable Spray Bottles",
+            "benefit_2_text": "Our reusable bottles are clearly labelled and color coded, meaning no risk of cross contamination.",
+            "benefit_3_image": "shopify://shop_images/Resealable_Packaging.png",
+            "benefit_3_title": "Resealable Packaging",
+            "benefit_3_text": "The pouches are resealable to help keep the sachets fresh"
+          }
+        },
+        "benefits_4": {
+          "type": "benefits_section",
+          "settings": {
+            "benefits_title": "PVA Savings Benefits",
+            "benefits_subtitle": "PVA sachets offer a wide range of savings, including financially, with delivery costs as less deliveries are needed, reduced training costs, particularly around health and safety, and manual handling, and less storage space is required.",
+            "benefit_1_image": "shopify://shop_images/Low_Storage_Costs.png",
+            "benefit_1_title": "Lower Storage Costs",
+            "benefit_1_text": "The Soluble Sachets significantly reduce the amount of storage needed compared to standard chemicals.",
+            "benefit_2_image": "shopify://shop_images/Reduced_Delivery_Costs.png",
+            "benefit_2_title": "Reduced Delivery Costs",
+            "benefit_2_text": "You can hold a month's supply of cleaning agent in the palm of your hands with the Soluble Sachets, meaning less deliveries are needed.",
+            "benefit_3_image": "shopify://shop_images/Less_Training_Costs.png",
+            "benefit_3_title": "Less Training Costs",
+            "benefit_3_text": "PVA is a simple product to use, meaning little to no training is needed."
+          }
+        },
+        "content_4": {
+          "type": "content_section",
+          "settings": {
+            "content_title": "Pack Capacity",
+            "content_text": "<p>By condensing your everyday cleaning agents into a sachet form, you are no longer transporting and storing liquids. Instead, you have a ready-made solution that takes minutes to create, and that is safer and more sustainable to boot.</p><p>Our trigger spray range will produce up to 15 Litres of cleaning agent per pouch, while our bucket range will allow you to hold up to 400 Litres of cleaning agent in the palm of your hand!</p>",
+            "content_image": "shopify://shop_images/Pack_Capacity_1.png",
+            "reverse_layout": false
+          }
+        },
+        "content_5": {
+          "type": "content_section",
+          "settings": {
+            "content_title": "Simple to Use",
+            "content_text": "<p>PVA Soluble Sachets are simplicity themselves, as you only need four steps to create a powerful cleaning solution!</p><p><strong>1)</strong> Add water to spray bottle / bucket.</p><p><strong>2)</strong> Add sachet to the spray bottle / bucket.</p><p><strong>3)</strong> Shake / stir the water to agitate the sachet.</p><p><strong>4)</strong> Top up spray bottle / bucket with water.</p>",
+            "content_image": "shopify://shop_images/Simple_to_Use.png",
+            "reverse_layout": true
+          }
+        },
+        "content_6": {
+          "type": "content_section",
+          "settings": {
+            "content_title": "Official Irish & EU Distribution Partner",
+            "content_text": "<p>Partnering with PVA Hygiene, Clenli Direct are the official manufacturer and distributor of PVA Soluble Sachets in Ireland and the EU! With an expert team in place and all the necessary equipment and logistic capabilities, we are capable of producing up to 20,000 sachets per day!</p>",
+            "content_image": "shopify://shop_images/Irish_EU_Distribution_Partner.png",
+            "reverse_layout": false
+          }
+        },
+        "products_1": {
+          "type": "product_range",
+          "settings": {
+            "range_title": "Washroom Range",
+            "range_subtitle": "Explore the most popular solutions for washrooms.",
+            "product_1_image": "shopify://shop_images/Bathroom_9_86ed575a-0522-4636-b166-4c51124b81a4.png",
+            "product_1_title": "Bathroom Cleaner",
+            "product_1_desc": "Designed for removal of soap scums, water scale, and other soils commonly found in bathroom and washroom facilities.",
+            "product_1_feature_1": "Identifiable Color",
+            "product_1_feature_2": "Phosphate Free",
+            "product_1_feature_3": "Biodegradable Acid and Surfactants",
+            "product_1_sachets": "20",
+            "product_1_per_sachet": "750 ML",
+            "product_1_per_pack": "15 L",
+            "product_2_image": "shopify://shop_images/Toilet_10_9b805a2a-cee9-43e5-bdf8-72d6de30bb55.png",
+            "product_2_title": "Toilet Cleaner",
+            "product_2_desc": "Designed for routine cleaning and descaling of toilet bowls. Not suitable for cleaning tile grouting.",
+            "product_2_feature_1": "Palm Free",
+            "product_2_feature_2": "Phosphate Free",
+            "product_2_feature_3": "Pleasant Pine Scent",
+            "product_2_sachets": "12",
+            "product_2_per_sachet": "1 L",
+            "product_2_per_pack": "12 L",
+            "product_3_image": "shopify://shop_images/Toilet_10_9b805a2a-cee9-43e5-bdf8-72d6de30bb55.png",
+            "product_3_title": "Toilet Descale Booster",
+            "product_3_desc": "For use in areas with very hard water, or heavily scaled toilets. Use in conjunction with Toilet Cleaner.",
+            "product_3_feature_1": "Palm Free",
+            "product_3_feature_2": "Phosphate Free",
+            "product_3_feature_3": "Color Indicator",
+            "product_3_sachets": "20",
+            "product_3_per_sachet": "1 L",
+            "product_3_per_pack": "20 L"
+          }
+        },
+        "products_2": {
+          "type": "product_range",
+          "settings": {
+            "range_title": "Surface Cleaning Range",
+            "range_subtitle": "Explore the most popular solutions for surface cleaning. Best used with a spray bottle and cloth.",
+            "product_1_image": "shopify://shop_images/Multi_Purpose_5.png",
+            "product_1_title": "Multi Purpose",
+            "product_1_desc": "Designed for cleaning hard surfaces comprised of all normal materials of construction. Safe for use on food contact surfaces.",
+            "product_1_feature_1": "Identifiable Color",
+            "product_1_feature_2": "Phosphate Free",
+            "product_1_feature_3": "Lightly Fragranced",
+            "product_1_sachets": "20",
+            "product_1_per_sachet": "750 ML",
+            "product_1_per_pack": "15 L",
+            "product_2_image": "shopify://shop_images/Degreaser_6.png",
+            "product_2_title": "Degreaser",
+            "product_2_desc": "Designed to remove greasy food based soiling from hard surfaces. It is safe for use on food contact surfaces.",
+            "product_2_feature_1": "Non-Fragranced",
+            "product_2_feature_2": "Phosphate Free",
+            "product_2_feature_3": "Identifiable Color",
+            "product_2_sachets": "20",
+            "product_2_per_sachet": "750 ML",
+            "product_2_per_pack": "15 L",
+            "product_3_image": "shopify://shop_images/Glass_7.png",
+            "product_3_title": "Glass & Stainless Steel",
+            "product_3_desc": "For removing marks and greases from windows, mirrors, car windscreens, decorative stainless steel and other shiny surfaces.",
+            "product_3_feature_1": "Identifiable Color",
+            "product_3_feature_2": "Phosphate Free",
+            "product_3_feature_3": "EDTA Free",
+            "product_3_sachets": "20",
+            "product_3_per_sachet": "750 ML",
+            "product_3_per_pack": "15 L"
+          }
+        },
+        "products_3": {
+          "type": "product_range",
+          "settings": {
+            "range_title": "Floor Care Range",
+            "range_subtitle": "Explore the most popular solutions for floor care. Best used with a mop and bucket.",
+            "product_1_image": "shopify://shop_images/aqua_multi_purpose_80pk_b3e93450-5eba-464e-9740-0759d1bbb058.png",
+            "product_1_title": "Aqua Multi Purpose",
+            "product_1_desc": "Multi purpose surface detergent suitable for floors, worktops, shelves etc.",
+            "product_1_feature_1": "Identifiable Color",
+            "product_1_feature_2": "Phosphate Free",
+            "product_1_feature_3": "EDTA Free",
+            "product_1_sachets": "80",
+            "product_1_per_sachet": "5 / 10 L",
+            "product_1_per_pack": "Up to 800 L",
+            "product_2_image": "shopify://shop_images/multi_purpose_20pk_e71fa706-8145-4c3c-944b-b88371d9427f.png",
+            "product_2_title": "Degreaser Detergent",
+            "product_2_desc": "Designed to remove greasy food based soiling from hard surfaces, and is safe for use on food contact surfaces.",
+            "product_2_feature_1": "Unperfumed",
+            "product_2_feature_2": "Phosphate Free",
+            "product_2_feature_3": "Identifiable Color",
+            "product_2_sachets": "80",
+            "product_2_per_sachet": "5 / 10 L",
+            "product_2_per_pack": "Up to 800 L",
+            "product_3_image": "shopify://shop_images/aqua_multi_purpose_80pk_b3e93450-5eba-464e-9740-0759d1bbb058.png",
+            "product_3_title": "FF40 Detergent",
+            "product_3_desc": "Highly perfumed detergent for cleaning and refreshing hard surfaces, floors, entrance ways, lobbies etc in municipal areas.",
+            "product_3_feature_1": "Highly Perfumed",
+            "product_3_feature_2": "Phosphate Free",
+            "product_3_feature_3": "EDTA Free",
+            "product_3_sachets": "80",
+            "product_3_per_sachet": "5 / 10 L",
+            "product_3_per_pack": "Up to 800 L"
+          }
+        }
+      },
+      "block_order": [
+        "content_1",
+        "content_2",
+        "content_3",
+        "benefits_1",
+        "benefits_2",
+        "benefits_3",
+        "benefits_4",
+        "content_4",
+        "content_5",
+        "content_6",
+        "products_1",
+        "products_2",
+        "products_3"
+      ],
+      "settings": {
+        "container_width": "1600",
+        "hero_image": "shopify://shop_images/pvvvvvvvaaaaaaa45_7a13a734-e957-451f-a1ba-51215a0a5d47.png",
+        "hero_subtitle": "GREEN CLEANING",
+        "hero_title": "PVA Soluble Sachets",
+        "hero_tagline": "Simply add to water and start cleaning.",
+        "hero_feature_1_title": "Sustainable",
+        "hero_feature_1": "PVA Soluble Sachets can eradicate single use plastic bottles from your cleaning, and reduce the number of deliveries needed, lowering your CO2 emissions.",
+        "hero_feature_2_title": "Safe",
+        "hero_feature_2": "No risk of spillages or manual handling injuries, as PVA comes in powder form safely sealed in water-soluble paper sachets.",
+        "hero_feature_3_title": "Simple",
+        "hero_feature_3": "Color coded with easy resealable packaging, PVA sachets are easy to use, mix and handle.",
+        "hero_feature_4_title": "Savings",
+        "hero_feature_4": "Reduce your delivery, storage, training, and most importantly, financial costs with PVA Soluble Sachets.",
+        "hero_btn_text": "Get a Quote Today",
+        "hero_btn_link": "#Get-Quote",
+        "form_heading": "Make the Change Today",
+        "form_subheading": "PVA is a complete cleaning solution that will lower your costs, while also making your cleaning safer, sustainable, and simpler. To learn more about PVA Soluble Sachets, contact us today!",
+        "call_btn_text": "CALL NOW",
+        "call_btn_link": "tel:018118920",
+        "form_title": "GO GREEN TODAY ENQUIRE NOW",
+        "submit_btn_text": "Submit",
+        "success_message": "Thank you for your enquiry! We will get back to you soon."
+      }
+    },
+    "featured_product_we_4V7WVP": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_DhfMzQ": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_8BCJbW": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_8BCJbW"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 13,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_product_we_4V7WVP",
+    "newsletter_DhfMzQ"
+  ]
+}

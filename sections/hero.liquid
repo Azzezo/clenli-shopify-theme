@@ -1,0 +1,157 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content" data-animate="fadeInUp">
+        {% if section.settings.badge_text != blank %}
+          <div class="hero-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            {{ section.settings.badge_text }}
+          </div>
+        {% endif %}
+
+        <h1 class="hero-title">{{ section.settings.title }}</h1>
+        <p class="hero-description">{{ section.settings.description }}</p>
+
+        <div class="hero-buttons">
+          {% if section.settings.button_text != blank %}
+            <a href="{{ section.settings.button_link }}" class="btn btn-primary btn-lg">
+              {{ section.settings.button_text }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          {% endif %}
+          {% if section.settings.button2_text != blank %}
+            <a href="{{ section.settings.button2_link }}" class="btn btn-outline-white btn-lg">
+              {{ section.settings.button2_text }}
+            </a>
+          {% endif %}
+        </div>
+
+        <div class="hero-stats">
+          {% for block in section.blocks %}
+            {% if block.type == 'stat' %}
+              <div class="hero-stat">
+                <div class="hero-stat-number">{{ block.settings.number }}</div>
+                <div class="hero-stat-label">{{ block.settings.label }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="hero-image" data-animate="fadeIn">
+        {% if section.settings.image != blank %}
+          {% comment %} <img src="{{ section.settings.image | image_url: width: 800 }}" alt="{{ section.settings.title | escape }}"> {% endcomment %}
+        {% else %}
+          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Ireland's #1 Cleaning Equipment Supplier"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title",
+      "default": "Professional <span>Cleaning Equipment</span> for Every Industry"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover our comprehensive range of commercial and industrial cleaning machines, from scrubber dryers to robotic solutions."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Primary Button Text",
+      "default": "Shop Machines"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button2_text",
+      "label": "Secondary Button Text",
+      "default": "Get a Quote"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Secondary Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "30+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Years Experience"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "number": "30+",
+            "label": "Years Experience"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "5000+",
+            "label": "Happy Customers"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "10000+",
+            "label": "Products"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

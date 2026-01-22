@@ -1,0 +1,289 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "blog-page",
+      "disabled": true,
+      "settings": {
+        "page_title": "Blog",
+        "posts_per_page": 10,
+        "show_share": true,
+        "show_categories": true,
+        "show_recent": true,
+        "show_archive": true,
+        "show_tags": true
+      }
+    },
+    "blog_11_VMVnam": {
+      "type": "blog-11",
+      "blocks": {
+        "category_MFzjpf": {
+          "type": "category",
+          "settings": {
+            "category_name": "Sweepers",
+            "category_handle": "sweepers",
+            "category_count": "3"
+          }
+        },
+        "category_gmbM6j": {
+          "type": "category",
+          "settings": {
+            "category_name": "Robotics",
+            "category_handle": "robotics",
+            "category_count": "2"
+          }
+        },
+        "category_jgePzP": {
+          "type": "category",
+          "settings": {
+            "category_name": "Vacuums",
+            "category_handle": "vacuums",
+            "category_count": "6"
+          }
+        },
+        "category_HDQwyp": {
+          "type": "category",
+          "settings": {
+            "category_name": "Carpet Cleaning",
+            "category_handle": "carpet-cleaning",
+            "category_count": "6"
+          }
+        },
+        "category_hUFHKW": {
+          "type": "category",
+          "settings": {
+            "category_name": "Window Cleaning",
+            "category_handle": "window-cleaning",
+            "category_count": "4"
+          }
+        },
+        "category_mTND6k": {
+          "type": "category",
+          "settings": {
+            "category_name": "Sustainability",
+            "category_handle": "sustainability",
+            "category_count": "4"
+          }
+        },
+        "category_ijCTXb": {
+          "type": "category",
+          "settings": {
+            "category_name": "Cleaning Tips",
+            "category_handle": "cleaning-tips",
+            "category_count": "12"
+          }
+        },
+        "category_pEEhEq": {
+          "type": "category",
+          "settings": {
+            "category_name": "Scrubber Dryers",
+            "category_handle": "scrubber-dryers",
+            "category_count": "14"
+          }
+        },
+        "category_EhkfVd": {
+          "type": "category",
+          "settings": {
+            "category_name": "Announcements",
+            "category_handle": "announcements",
+            "category_count": "11"
+          }
+        },
+        "archive_month_6yKQNr": {
+          "type": "archive_month",
+          "settings": {
+            "archive_month": "November 2025",
+            "archive_url": ""
+          }
+        },
+        "archive_month_qjeJLA": {
+          "type": "archive_month",
+          "settings": {
+            "archive_month": "April 2025",
+            "archive_url": ""
+          }
+        },
+        "archive_month_TGbGbL": {
+          "type": "archive_month",
+          "settings": {
+            "archive_month": "November 2022",
+            "archive_url": ""
+          }
+        },
+        "archive_month_y9yHhc": {
+          "type": "archive_month",
+          "settings": {
+            "archive_month": "July 2022",
+            "archive_url": ""
+          }
+        },
+        "archive_month_qVLr3B": {
+          "type": "archive_month",
+          "settings": {
+            "archive_month": "May 2022",
+            "archive_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_MFzjpf",
+        "category_gmbM6j",
+        "category_jgePzP",
+        "category_HDQwyp",
+        "category_hUFHKW",
+        "category_mTND6k",
+        "category_ijCTXb",
+        "category_pEEhEq",
+        "category_EhkfVd",
+        "archive_month_6yKQNr",
+        "archive_month_qjeJLA",
+        "archive_month_TGbGbL",
+        "archive_month_y9yHhc",
+        "archive_month_qVLr3B"
+      ],
+      "name": "Blog Page",
+      "settings": {
+        "primary_color": "#6fb31a",
+        "page_title": "Blog",
+        "posts_per_page": 10,
+        "show_featured_image": true,
+        "show_categories": true,
+        "show_recent_posts": true,
+        "recent_posts_count": 5,
+        "show_archive": true,
+        "show_tags": true,
+        "show_products": true,
+        "featured_collection": "",
+        "new_collection": "",
+        "bestseller_collection": "",
+        "show_newsletter": true,
+        "newsletter_title": "Sign up to Newsletter",
+        "newsletter_subtitle": "And receive latest updates.",
+        "newsletter_placeholder": "Enter your email address",
+        "newsletter_button": "Sign up"
+      }
+    },
+    "featured_product_we_WBJe6n": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "",
+        "new_title": "New Products",
+        "new_collection": "",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_JaXPCa": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_qV6BL4": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_qV6BL4"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "blog_11_VMVnam",
+    "featured_product_we_WBJe6n",
+    "newsletter_JaXPCa"
+  ]
+}

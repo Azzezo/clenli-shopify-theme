@@ -1,0 +1,1036 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "1761855221c525fadf": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "176185524138942b1f": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "176185524379a550ca": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "1761855258298b1338": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "service_2_PDzmrT": {
+      "type": "service-2",
+      "blocks": {
+        "content_block_CaFFD9": {
+          "type": "content_block",
+          "settings": {
+            "block_title": "ELECTRIC UTILITY VEHICLES",
+            "block_description": "",
+            "hero_btn_text": "Explore Addax Range",
+            "hero_btn_link": ""
+          }
+        },
+        "content_block_r7zpY6": {
+          "type": "content_block",
+          "settings": {
+            "block_title": "<h1>Addax Trailer Options</h1>",
+            "block_description": "Addax have a wide range of trailer configurations available for all sectors. Whether you work in a county or city council, logistic and deliveries, or facilities management, Addax EUVs has the solution.\n<br>\n<br>\n<strong>Tipper options:</strong> Choose between the tipper van, electric tipping container, and combo tipper for the best solution for your needs.\n<br>\n<br>\n<strong>Van types for deliveries:</strong> With both standard and refrigerated trailer options available, Addax can help make your last mile deliveries more efficient, sustainable, and cost you less.\n<br>\n<br>\n<strong>Flatbed for flexibility:</strong> For ultimate flexibility, choose a flatbed for superior performance and an unlimited number of uses.",
+            "hero_btn_text": "Explore Addax Range",
+            "hero_btn_link": ""
+          }
+        },
+        "feature_item_tdYzhN": {
+          "type": "feature_item",
+          "disabled": true,
+          "settings": {
+            "feature_title": "Emergency Call Outs",
+            "feature_link": ""
+          }
+        },
+        "feature_item_tnNQA9": {
+          "type": "feature_item",
+          "disabled": true,
+          "settings": {
+            "feature_title": "Instant Call Logging",
+            "feature_link": ""
+          }
+        },
+        "feature_item_QMxU4A": {
+          "type": "feature_item",
+          "disabled": true,
+          "settings": {
+            "feature_title": "Portable Appliance Testing",
+            "feature_link": ""
+          }
+        },
+        "feature_item_bLCNmi": {
+          "type": "feature_item",
+          "disabled": true,
+          "settings": {
+            "feature_title": "Service Reporting",
+            "feature_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_CaFFD9",
+        "content_block_r7zpY6",
+        "feature_item_tdYzhN",
+        "feature_item_tnNQA9",
+        "feature_item_QMxU4A",
+        "feature_item_bLCNmi"
+      ],
+      "disabled": true,
+      "name": "Nationwide Coverage",
+      "settings": {
+        "main_heading": "",
+        "main_heading_color": "#232323",
+        "main_heading_size": 32,
+        "underline_color": "#6fb31a",
+        "underline_width": 100,
+        "left_image": "shopify://shop_images/Addaxxxxxx4.png",
+        "left_image_alt": "Coverage Map",
+        "left_width": 45,
+        "block_title_color": "#232323",
+        "block_title_size": 18,
+        "block_desc_color": "#555555",
+        "block_desc_size": 15,
+        "block_spacing": 30,
+        "enable_bottom_features": true,
+        "feature_title_color": "#232323",
+        "feature_title_size": 16,
+        "feature_border_color": "#eeeeee",
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "content_gap": 50,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "page_addax_sectors_qVmKdU": {
+      "type": "page-addax-sectors",
+      "blocks": {
+        "sector_section_xdErzL": {
+          "type": "sector_section",
+          "disabled": true,
+          "settings": {
+            "title": "Cities & Towns",
+            "description": "Addax electric utility vehicles combine compact design with exceptional agility, making them the ideal solution for maintaining clean and orderly cities and towns. Boasting an impressive loading capacity of up to 6 m³, these vehicles are versatile enough to handle a wide range of tasks. Whether you require an open loading platform for collecting recyclable waste or a closed platform for transporting equipment to the local sports club, there’s an electric Addax vehicle to suit your needs. Enhance the quality of life for residents with cleaner air, all at an affordable cost.",
+            "card_1_image": "shopify://shop_images/Addax_Cities_Municipalities_2e6f1142-5720-4a93-b9c9-6661e879d90d.png",
+            "card_1_title": "City Management & Maintenance",
+            "card_1_text": "Efficient waste management is essential for maintaining a healthy and thriving city. Addax all-electric utility vehicles are designed to meet your city's unique needs. Their compact size allows them to navigate areas inaccessible to traditional waste trucks, making them ideal for small cities. Retrofitted with tipping containers, they simplify waste collection, while also offering versatile solutions for maintaining roads and parks—all in an eco-friendly way.",
+            "card_2_image": "shopify://shop_images/Addax_Last_Mile_Delivery_4f4f0e95-360a-42fe-b03b-5c6898c13677.png",
+            "card_2_title": "Parks & Playground Management",
+            "card_2_text": "Addax electric vehicles are perfect for managing parks and playgrounds. When customized as cargo vans, they’re ideal for transporting toys, tools, and equipment, ensuring a well-maintained recreational space. Plus, with their zero-emission operation, Addax vehicles create a cleaner, child-friendly environment, giving kids the joy of fresh air as they play.",
+            "card_3_image": "shopify://shop_images/City333_db3c1183-8108-4ed5-ad87-c7ae31098e17.png",
+            "card_3_title": "Road Construction & Maintenance",
+            "card_3_text": "For road construction and maintenance, Addax electric vehicles are a top choice. Their impressive loading capacity makes transporting materials efficient and hassle-free. Retrofitted options like tippers for raw materials or flatbeds for signage ensure they handle a range of tasks, all while supporting sustainable, local infrastructure projects."
+          }
+        },
+        "sector_section_bxXfWa": {
+          "type": "sector_section",
+          "disabled": true,
+          "settings": {
+            "title": "Industrial & Facilities Management",
+            "description": "Built with a focus on sustainability, innovation, and reliability, Addax electric utility vehicles offer unmatched performance and efficiency. Perfectly suited for both indoor and outdoor applications, these zero-emission vehicles help businesses stay ahead of the competition while significantly reducing operating costs. In addition to their cost-effectiveness compared to fuel-powered alternatives, Addax vehicles come with a comprehensive service package, ensuring peace of mind and seamless operation.",
+            "card_1_image": "shopify://shop_images/Addax_Industrial_Facilities_f1cc2c9a-1f13-49f8-91f3-c7c5da0818eb.png",
+            "card_1_title": "Environmentally Friendly",
+            "card_1_text": "Addax electric vehicles enhance efficiency while promoting sustainability. Powered by fully recyclable lithium-iron-phosphate batteries, they offer a safer, greener alternative. Choosing our 100% electric vehicles boosts your company’s eco-conscious image and commitment to corporate social responsibility.",
+            "card_2_image": "shopify://shop_images/Industrial222_4bd8bf2e-b1fb-465c-a910-2067445b8c69.png",
+            "card_2_title": "Designed for Intralogistics",
+            "card_2_text": "Addax lightweight vehicles are tailored to meet your logistics and transportation needs, seamlessly integrating into your workflow. With zero emissions, they’re ideal for indoor environments, and their industry-leading safety features—like a panoramic cabin view and dual independent brakes—ensure top-tier performance.",
+            "card_3_image": "shopify://shop_images/Industrial333_4c489163-0291-43cc-a506-e4cd80d5aa16.png",
+            "card_3_title": "Amusement & Holiday Parks",
+            "card_3_text": "Addax electric vehicles are perfect for amusement and holiday parks, blending functionality with eco-friendliness. Retrofitted options like combi-tippers or flatbeds handle maintenance and waste collection, while cooled cargo models serve as mobile food and drink stands, ensuring a cleaner, more enjoyable guest experience."
+          }
+        },
+        "sector_section_RLf7dD": {
+          "type": "sector_section",
+          "disabled": true,
+          "settings": {
+            "title": "Last Mile Delivery",
+            "description": "Streamline urban deliveries with the reliable and efficient electric utility vehicles from Addax Motors. Designed to meet the demands of last-mile logistics, these vehicles offer a range of up to 120 km per charge and can transport loads of up to 1,000 kg. By eliminating fuel dependency, Addax vehicles provide an economical and sustainable solution for daily deliveries in urban environments.",
+            "card_1_image": "shopify://shop_images/Addax_Postal_Services_e497293a-e6d2-44bb-b23d-6a175e03cc91.png",
+            "card_1_title": "Urban Delivery Vehicles",
+            "card_1_text": "With urban areas tightening restrictions on traditional vehicles, emission-free delivery solutions are more crucial than ever. Addax light utility vehicles meet these demands, offering eco-friendly efficiency without compromising capacity, helping your delivery company stay on schedule.",
+            "card_2_image": "shopify://shop_images/Cost_Effective_Addax_8e120dbe-91bf-4a21-9e8f-cc51e5def217.png",
+            "card_2_title": "Agile for Evolving Markets",
+            "card_2_text": "Ecommerce growth poses new challenges for urban logistics. Large vehicles struggle with maneuverability, especially in areas with traffic restrictions. Addax light utility vehicles are designed to navigate narrow streets and pedestrian pathways effortlessly, making urban deliveries simpler and more efficient.",
+            "card_3_image": "shopify://shop_images/Mile333_0640ed7c-fb58-46bd-83eb-b18ba8e65135.png",
+            "card_3_title": "Efficient & Reliable Delivery",
+            "card_3_text": "Proudly 100% Belgian, Addax creates adaptable light electric utility vehicles that combine functionality, agility, and customer satisfaction. Enhanced by 4G-powered after-sales support, our vehicles are the perfect choice for last-mile delivery. Contact us today to learn how Addax can transform your fleet."
+          }
+        },
+        "sector_section_Tdpt64": {
+          "type": "sector_section",
+          "disabled": true,
+          "settings": {
+            "title": "Postal Services",
+            "description": "For companies prioritizing efficient delivery, Addax electric utility vehicles deliver the ideal combination of performance and adaptability. Tailored to accommodate a wide variety of courier tasks, these vehicles ensure driver comfort, cargo safety, and operational flexibility. Whether navigating narrow village roads or bustling city streets, Addax vehicles consistently enable quick and efficient mail delivery, meeting customer expectations every time.",
+            "card_1_image": "shopify://shop_images/Post111_363a207f-7919-4225-a4cc-112bfcd572ea.png",
+            "card_1_title": "Post Delivery Reimagined",
+            "card_1_text": "Addax electric utility vehicles redefine efficiency for postal deliveries. Customizable interiors—featuring compartments, shelves, secure straps, and dedicated spaces for envelopes—keep everything organized, speeding up deliveries while making them more ergonomic. With a comfortable cabin design, delivering post becomes a smooth and enjoyable experience.",
+            "card_2_image": "shopify://shop_images/Post222_5d6c1ffd-9653-40bd-9e09-aff8edeac126.png",
+            "card_2_title": "Silent, Efficient Vehicles",
+            "card_2_text": "Unlike noisy diesel vans, Addax electric vehicles operate silently, allowing for early-morning or late-night deliveries without disturbing neighborhoods. Quiet operation ensures you can park near homes and make multiple stops discreetly and respectfully.",
+            "card_3_image": "shopify://shop_images/Post333_371e8710-a64f-41ae-860c-935aa9d68a5e.png",
+            "card_3_title": "Best-in-Class Manoeuvrability",
+            "card_3_text": "Addax light electric vehicles excel in agility. With a tight 4.5m turning radius, they navigate narrow streets and tight spaces effortlessly. Despite their compact design, they offer impressive loading capacity, making them the ultimate solution for urban postal deliveries."
+          }
+        },
+        "why_choose_xtr9Ya": {
+          "type": "why_choose",
+          "disabled": true,
+          "settings": {
+            "logo": "shopify://shop_images/Untitled_design_-_2024-02-08T162909.668_72ff558a-fe87-4244-976c-9adbb7d4a019.png",
+            "title": "Why Choose Clenli Direct",
+            "text": "With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader in the cleaning industry, offering award-winning cleaning solutions, comprehensive support, and our own expert in-house service team. Our deep expertise ensures that you receive the best products tailored to your needs, backed by exceptional customer service."
+          }
+        },
+        "product_range_wtX7bh": {
+          "type": "product_range",
+          "disabled": true,
+          "settings": {
+            "title": "The Addax Range",
+            "product_1_image": "shopify://shop_images/Addax_MTN_4beb7e35-62bb-422a-8ebf-3cbc5b685951.png",
+            "product_1_title": "Addax MTN",
+            "product_1_text": "The Addax MTN is a compact, fully electric utility vehicle built for urban logistics. With a 6m³ cargo volume, 1,000 kg payload, and a 4.5-meter turning radius, it offers exceptional versatility. Available in configurations like tipper, fridge, and flatbed, it’s the ideal solution for efficient, eco-friendly transport.",
+            "product_1_btn": "View the Addax MTN",
+            "product_1_link": "",
+            "product_2_image": "shopify://shop_images/Addax_MTX_bf0e245f-25a6-4402-b0e6-3c6ec4fcdd30.png",
+            "product_2_title": "Addax MTX",
+            "product_2_text": "The Addax MTX is a robust, fully electric utility vehicle with a 7 m³ cargo space, 1,000 kg payload, and compact 1.40 m width for easy urban navigation. Available in versatile configurations like tipper, fridge, and flatbed, it ensures efficient and eco-friendly transport.",
+            "product_2_btn": "View the Addax MTX",
+            "product_2_link": ""
+          }
+        },
+        "cta_form_NL4zat": {
+          "type": "cta_form",
+          "disabled": true,
+          "settings": {
+            "title": "Don't Get Left Behind",
+            "text": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.",
+            "btn_text": "Learn More",
+            "btn_link": "shopify://pages/addax-electric-utility-vehicles-ireland-1",
+            "footer_image": "shopify://shop_images/Addax_Footer_45129ff8-fc43-4281-9d07-b7b385ecde21.png",
+            "phone": "01 811 89 20",
+            "form_title": "GO GREEN TODAY ENQUIRE NOW"
+          }
+        }
+      },
+      "block_order": [
+        "sector_section_xdErzL",
+        "sector_section_bxXfWa",
+        "sector_section_RLf7dD",
+        "sector_section_Tdpt64",
+        "why_choose_xtr9Ya",
+        "product_range_wtX7bh",
+        "cta_form_NL4zat"
+      ],
+      "settings": {
+        "primary_color": "#6fb31a",
+        "text_color": "#777777",
+        "heading_color": "#333333",
+        "hero_image": "shopify://shop_images/Addaxxxxxx4.png",
+        "hero_subtitle": "ELECTRIC UTILITY VEHICLES",
+        "hero_title": "Addax Trailer Options",
+        "hero_text": "<p>Addax have a wide range of trailer configurations available for all sectors. Whether you work in a county or city council, logistic and deliveries, or facilities management, Addax EUVs has the solution.</p>",
+        "hero_feature_1_title": "Tipper options:",
+        "hero_feature_1": "Choose between the tipper van, electric tipping container, and combo tipper for the best solution for your needs.",
+        "hero_feature_2_title": "Van types for deliveries:",
+        "hero_feature_2": "With both standard and refrigerated trailer options available, Addax can help make your last mile deliveries more efficient, sustainable, and cost you less.",
+        "hero_feature_3_title": "Flatbed for flexibility:",
+        "hero_feature_3": "For ultimate flexibility, choose a flatbed for superior performance and an unlimited number of uses.",
+        "hero_btn_text": "Explore Addax Range",
+        "hero_btn_link": "/search?q=addax&options%5Bprefix%5D=last&type=product"
+      }
+    },
+    "addax_vichen_cDtGhg": {
+      "type": "addax-vichen",
+      "blocks": {
+        "product_QEaVpc": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Tipper111.png",
+            "title": "Convenience & Comfort",
+            "description": "Addax electric tippers combine convenience, flexibility, and comfort, making them perfect for exterior workers. Park and green space teams will appreciate their efficiency in collecting, transporting, and recycling waste. Built in Belgium, these zero-emission vehicles feature customizable options to meet your team’s specific needs, along with a comfortable cabin designed for long workdays."
+          }
+        },
+        "product_D96bmX": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Tipper222.png",
+            "title": "Complete Flexibility",
+            "description": "Addax electric utility vehicles adapt to any job with ease. Key features include a hydraulic system for effortless loading and unloading, an unrivaled payload capacity of up to 1,000kg, and superior driver comfort with spacious cabins, wide seats, double suspension, and excellent visibility. Whatever your field, there’s a configuration to meet your needs."
+          }
+        },
+        "product_tHf3CQ": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Tipper333.png",
+            "title": "Fully Electric",
+            "description": "Designed for urban and industrial use, Addax electric tippers feature recyclable batteries with a 120km range—perfect for a full day’s work. Backed by a 5-year warranty, these vehicles are a sustainable choice for reducing environmental impact."
+          }
+        }
+      },
+      "block_order": [
+        "product_QEaVpc",
+        "product_D96bmX",
+        "product_tHf3CQ"
+      ],
+      "name": "Choose Configuration",
+      "settings": {
+        "heading": "Electric Tipper Van",
+        "description": "Optimize the maintenance of parks, cities, and green spaces with our compact and user-friendly electric tipper vans. Designed for versatility, these vehicles provide daily comfort and efficiency across diverse work environments.",
+        "heading_size": 32,
+        "button_text": "",
+        "button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "card_border_color": "#6fb31a",
+        "card_border_width": 2,
+        "card_radius": 8,
+        "card_bg": "#ffffff",
+        "image_height": 250,
+        "image_radius": 8,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#2d5a27",
+        "button_hover_bg": "#1e3d1a",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "addax_vichen_8pcWgV": {
+      "type": "addax-vichen",
+      "blocks": {
+        "product_ztcpFG": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/TipCon111.png",
+            "title": "Electric Sustainable Garbage Truck",
+            "description": "As cities strive to lower CO2 emissions, Addax electric garbage trucks offer a cleaner solution for waste collection. Designed to reduce air pollution from traditional vehicles, these trucks are ideal for urban areas, amusement parks, residential neighborhoods, and recreational spaces. With cutting-edge technology, they deliver exceptional driving comfort, remote monitoring, and enhanced safety."
+          }
+        },
+        "product_EzdLmp": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/TipCon222.png",
+            "title": "Easy & Quiet",
+            "description": "Navigating narrow streets is effortless with Addax garbage trucks, thanks to their 4m turning radius and impressive 1,000kg or 5m³ capacity. Frequent stops and starts, common in waste collection, no longer contribute to pollution with these electric trucks, which offer a range of up to 120km. Their near-silent operation also ensures a peaceful environment for residents, even during early-morning rounds."
+          }
+        },
+        "product_Pf8YAJ": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/TipCon333.png",
+            "title": "Versatile Waste Collection",
+            "description": "Addax garbage trucks can handle all types of waste, from standard and industrial containers to vertical containers for liquids. Customizable to your specific needs, they provide a reliable, eco-friendly solution for daily, weekly, or monthly waste collection. Contact us today for a tailored offer that suits your business."
+          }
+        }
+      },
+      "block_order": [
+        "product_ztcpFG",
+        "product_EzdLmp",
+        "product_Pf8YAJ"
+      ],
+      "name": "Choose Configuration",
+      "settings": {
+        "heading": "Electric Tipping Container",
+        "description": "Reduce urban pollution with electric tippable container trucks. These vehicles eliminate the emissions associated with traditional fuel-powered trucks, offering an eco-friendly solution for city operations.",
+        "heading_size": 32,
+        "button_text": "",
+        "button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "card_border_color": "#6fb31a",
+        "card_border_width": 2,
+        "card_radius": 8,
+        "card_bg": "#ffffff",
+        "image_height": 250,
+        "image_radius": 8,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#2d5a27",
+        "button_hover_bg": "#1e3d1a",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "addax_vichen_KwzyQN": {
+      "type": "addax-vichen",
+      "blocks": {
+        "product_XnGejm": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Cargo111.png",
+            "title": "Efficient & Flexible",
+            "description": "Addax electric cargo vehicles combine maneuverability, efficiency, and versatility. Designed to navigate narrow city streets, they are fully electric, compact yet spacious, and proudly 100% Belgian-made."
+          }
+        },
+        "product_fQ9RPw": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Cargo222.png",
+            "title": "Optimal Performance",
+            "description": "At Addax Motors, quality drives everything we do. From utility tippers to refrigerated trucks, our vehicles meet the demands of urban deliveries with ease. Compact dimensions allow smooth navigation through tight spaces, while customizable loading capacities of up to 7m³ or 1,000kg ensure flexibility. With a 120km range and a 5-year battery warranty, Addax vehicles deliver quiet, zero-emission performance ideal for areas with strict environmental regulations."
+          }
+        },
+        "product_RQxeDe": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Cargo333.png",
+            "title": "Simplifying Deliveries",
+            "description": "Addax cargo vehicles are built for ease of use, featuring aluminum cladding, roller shutters, disc brakes, and aluminum runners for smooth loading and unloading. With 4G monitoring and a premium finish, they make every delivery simple and efficient."
+          }
+        }
+      },
+      "block_order": [
+        "product_XnGejm",
+        "product_fQ9RPw",
+        "product_RQxeDe"
+      ],
+      "name": "Choose Configuration",
+      "settings": {
+        "heading": "Electric Cargo Van",
+        "description": "Elevate your business operations with an electric cargo van tailored to your needs. Boasting impressive storage capacity in a compact design, it features a convenient shutter opening for seamless loading and unloading, ensuring maximum efficiency.",
+        "heading_size": 32,
+        "button_text": "",
+        "button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "card_border_color": "#6fb31a",
+        "card_border_width": 2,
+        "card_radius": 8,
+        "card_bg": "#ffffff",
+        "image_height": 250,
+        "image_radius": 8,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#2d5a27",
+        "button_hover_bg": "#1e3d1a",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "addax_vichen_HWNfRt": {
+      "type": "addax-vichen",
+      "blocks": {
+        "product_6BwwF9": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Fridge111.png",
+            "title": "Long Range Electric Refrigerated Trucks",
+            "description": "Addax electric refrigerated trucks ensure controlled-temperature deliveries with ease. Featuring ATP-certified refrigeration, they provide a 4,000-liter capacity and maintain optimal cold temperatures for up to 12 hours. Compact, 100% electric, and designed for urban transport, these trucks are ideal for city and town deliveries."
+          }
+        },
+        "product_jTYDbG": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Fridge222.png",
+            "title": "Environmentally Friendly",
+            "description": "Addax refrigerated vehicles are fully electric and emission-free, offering an eco-friendly solution for delivering fresh products. Drivers can easily adjust cargo temperatures from the cabin, ensuring goods remain at optimal conditions during transit."
+          }
+        },
+        "product_VCxbiH": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Fridge333.png",
+            "title": "Safe & Versatile Transport",
+            "description": "As home delivery grows, Addax trucks meet the rising demand for refrigerated transport of food, beverages, pharmaceuticals, floral products, and more. Fully customizable, they adapt to suit the specific needs of various industries, making them a reliable and secure option."
+          }
+        }
+      },
+      "block_order": [
+        "product_6BwwF9",
+        "product_jTYDbG",
+        "product_VCxbiH"
+      ],
+      "name": "Choose Configuration",
+      "settings": {
+        "heading": "Refrigerated Truck",
+        "description": "Deliver fresh produce and perishable goods with confidence using our ATP-certified electric refrigerated vans. Designed to maintain consistent temperatures, these vans are your reliable partner in ensuring quality during transport.",
+        "heading_size": 32,
+        "button_text": "",
+        "button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "card_border_color": "#6fb31a",
+        "card_border_width": 2,
+        "card_radius": 8,
+        "card_bg": "#ffffff",
+        "image_height": 250,
+        "image_radius": 8,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#2d5a27",
+        "button_hover_bg": "#1e3d1a",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "addax_vichen_eUKdgb": {
+      "type": "addax-vichen",
+      "blocks": {
+        "product_jggMzf": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/ComTip111.png",
+            "title": "The Best Electric Combo Tipper",
+            "description": "Addax electric combo tippers combine convenience, flexibility, and comfort, making them the ideal partner for outdoor tasks like maintenance, landscaping, and signage. Fully electric, 100% Belgian-made, silent, and emission-free, they can be tailored to your business needs while ensuring driver comfort."
+          }
+        },
+        "product_PMdVxN": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/ComTip222.png",
+            "title": "Unmatched Flexibility",
+            "description": "Addax combo tippers are designed to simplify any task with their impressive capacity, offering up to a 1,000kg payload and a 500-liter lockable storage cabinet for tools and equipment. Their compact design includes a 4.5m turning radius and a top speed of 70km/h, ensuring excellent maneuverability in tight spaces."
+          }
+        },
+        "product_c8APJK": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/ComTip333.png",
+            "title": "Fully Electric & Sustainable",
+            "description": "Built for urban and industrial use, Addax combo tippers offer a 120km range on a single charge, with batteries backed by a 5-year warranty. Completely recyclable, these batteries make Addax a smart, eco-friendly investment for your fleet."
+          }
+        }
+      },
+      "block_order": [
+        "product_jggMzf",
+        "product_PMdVxN",
+        "product_c8APJK"
+      ],
+      "name": "Choose Configuration",
+      "settings": {
+        "heading": "Combo Tipper",
+        "description": "Streamline park and city maintenance with a compact, versatile electric tipper. Enjoy the convenience of built-in storage, perfect for tools or personal items, while benefiting from effortless handling and daily comfort.",
+        "heading_size": 32,
+        "button_text": "",
+        "button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "card_border_color": "#6fb31a",
+        "card_border_width": 2,
+        "card_radius": 8,
+        "card_bg": "#ffffff",
+        "image_height": 250,
+        "image_radius": 8,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#2d5a27",
+        "button_hover_bg": "#1e3d1a",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "addax_vichen_QjTCHW": {
+      "type": "addax-vichen",
+      "blocks": {
+        "product_EeCnAg": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Flatbed111.png",
+            "title": "Best-in-Class Flatbed Utility Vehicle",
+            "description": "Addax electric flatbed utility vehicles set the standard for flexibility and performance, making them ideal for various professional applications. With exceptional storage capacity for their size, they easily adapt to loads of different sizes and weights while offering an efficient loading and unloading mechanism."
+          }
+        },
+        "product_iwRrww": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Flatbed222.png",
+            "title": "Built to Fit Your Needs",
+            "description": "Available in multiple lengths and sizes, Addax flatbed vehicles are designed to meet diverse business requirements across industries. Proudly 100% Belgian-made, they ensure top-tier quality and reliability. Their versatility makes them a valuable asset in both public and private sectors, particularly in industrial and logistics contexts."
+          }
+        },
+        "product_cJ6rBx": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Flatbed333.png",
+            "title": "Superior Performance",
+            "description": "For businesses that need more from their flatbed vehicles, Addax delivers with a 5m³ volume and a payload of up to 1,000kg. Height and width restrictions become a thing of the past, while tiltable aluminum sideboards add durability and ease of use, ensuring your vehicle is as functional as it is reliable."
+          }
+        }
+      },
+      "block_order": [
+        "product_EeCnAg",
+        "product_iwRrww",
+        "product_cJ6rBx"
+      ],
+      "name": "Choose Configuration",
+      "settings": {
+        "heading": "Flatbed Vehicle",
+        "description": "Experience unmatched flexibility and durability with our robust flatbed vehicles. Engineered with high-strength components, they provide a payload capacity of up to 1,000 kg, making them ideal for transporting heavy goods efficiently.",
+        "heading_size": 32,
+        "button_text": "",
+        "button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "card_border_color": "#6fb31a",
+        "card_border_width": 2,
+        "card_radius": 8,
+        "card_bg": "#ffffff",
+        "image_height": 250,
+        "image_radius": 8,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#2d5a27",
+        "button_hover_bg": "#1e3d1a",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "image_1_74RBBH": {
+      "type": "image-1",
+      "name": "Content With Image",
+      "settings": {
+        "heading": "Custom Build Option",
+        "heading_color": "#232323",
+        "heading_size": 28,
+        "description": "<p>Do you have a custom design in mind? Look no further—we’re here to bring your vision to life. Whether you’re an ice cream vendor searching for the perfect vehicle or a multinational corporation seeking an efficient delivery solution, Addax ensures every client enjoys an exceptional customer experience from start to finish!</p>",
+        "desc_color": "#555555",
+        "desc_size": 16,
+        "image": "shopify://shop_images/migrated_138_Custom_Build.png",
+        "image_alt": "Image",
+        "image_width": 50,
+        "image_border_color": "#6fb31a",
+        "image_border_width": 3,
+        "image_border_radius": 8,
+        "image_padding": 0,
+        "show_underline": true,
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "underline_margin_top": 50,
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "content_gap": 50,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "config_unliti_7aFcNU": {
+      "type": "config-unliti",
+      "blocks": {
+        "feature_4rW6EU": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Fully_Customisable.png",
+            "title": "Fully Customisable",
+            "description": "Every Addax vehicle is designed to adapt to your specific needs. If you envision a bespoke build tailored to your unique requirements, simply reach out to us. We'll collaborate with you to bring your custom vision to life."
+          }
+        },
+        "feature_tKLqN8": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Easy_on_the_Environment.png",
+            "title": "Easy on Environment",
+            "description": "Addax utility vehicles are 100% electric, producing zero emissions and operating silently—ideal for eco-conscious cities and businesses. Beyond sustainability, these vehicles are also budget-friendly, offering some of the lowest operational costs in the market."
+          }
+        },
+        "feature_mjDx9g": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/migrated_265_Remote_Diagnostics.png",
+            "title": "Remote Diagnostics",
+            "description": "Addax utility vehicles are 100% electric, producing zero emissions and operating silently—ideal for eco-conscious cities and businesses. Beyond sustainability, these vehicles are also budget-friendly, offering some of the lowest operational costs in the market."
+          }
+        },
+        "feature_bwiqGD": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/migrated_195_Large_Battery_Warranty.png",
+            "title": "Eight Year Warranty",
+            "description": "Enjoy the confidence of a robust eight-year battery warranty with every Addax vehicle. Featuring durable and rechargeable lithium-ion batteries, our vehicles ensure long-lasting performance. These batteries are ethically sourced, fully recyclable, and engineered for sustainability."
+          }
+        }
+      },
+      "block_order": [
+        "feature_4rW6EU",
+        "feature_tKLqN8",
+        "feature_mjDx9g",
+        "feature_bwiqGD"
+      ],
+      "name": "Features With Icons",
+      "settings": {
+        "bg_color": "#ffffff",
+        "container_width": 1570,
+        "item_gap": 30,
+        "icon_size": 100,
+        "icon_color": "#6fb31a",
+        "icon_margin_bottom": 20,
+        "title_size": 18,
+        "title_weight": "700",
+        "title_color": "#1a1a1a",
+        "title_margin_bottom": 12,
+        "desc_size": 14,
+        "desc_line_height": 1.7,
+        "desc_color": "#666666",
+        "show_underline": true,
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "underline_spacing": 80,
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "about_vichen_1_9PC8Rd": {
+      "type": "about-vichen-1",
+      "blocks": {
+        "card_MxMr8L": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Addax_Tipper.png",
+            "title": "Addax MT15",
+            "description": "The Addax MT15 is a compact, fully electric utility vehicle built for urban logistics. With a load cargo volume, 1,000 kg payload, and a 4.5-meter turning radius, it offers exceptional versatility. Available in configurations like tipper, fridge, and flatbed, it's the ideal solution for efficient, eco-friendly transport.",
+            "button_text": "View the Addax MT15",
+            "button_link": ""
+          }
+        },
+        "card_yVHjxL": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Addax_Tipping_Container.png",
+            "title": "Addax MT",
+            "description": "The Addax MT is a robust, fully electric utility vehicle with a 2 m³ cargo space. 700 kg payload and compact 3.9m width for easy urban navigation. Available in versatile configurations like tipper, dropside, box body and flatbed for efficient and eco-friendly transport.",
+            "button_text": "View the Addax MT",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_MxMr8L",
+        "card_yVHjxL"
+      ],
+      "disabled": true,
+      "name": "Choose Model",
+      "settings": {
+        "heading": "Choose Your Model",
+        "heading_size": 32,
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "image_radius": 12,
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "euv_product_range_rpcgU8": {
+      "type": "euv-product-range",
+      "blocks": {
+        "product_kKge44": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Addax_MTN_4beb7e35-62bb-422a-8ebf-3cbc5b685951.png",
+            "title": "Addax MTN",
+            "description": "The Addax MTN is a compact, fully electric utility vehicle built for urban logistics. With a 6m³ cargo volume, 1,000 kg payload, and a 4.5-meter turning radius, it offers exceptional versatility.",
+            "button_text": "View the Addax MTN",
+            "button_link": "shopify://products/addax-mtn-electric-utility-vehicle"
+          }
+        },
+        "product_Uiy3kT": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Addax_MTX_bf0e245f-25a6-4402-b0e6-3c6ec4fcdd30.png",
+            "title": "Addax MTX",
+            "description": "The Addax MTX is a robust, fully electric utility vehicle with a 7 m³ cargo space, 1,000 kg payload, and compact 1.40 m width for easy urban navigation.",
+            "button_text": "View the Addax MTX",
+            "button_link": "shopify://products/addax-mtx-electric-utility-vehicle"
+          }
+        }
+      },
+      "block_order": [
+        "product_kKge44",
+        "product_Uiy3kT"
+      ],
+      "name": "EUV Product Range",
+      "settings": {
+        "heading": "Choose Your Model",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "euv_why_choose_eYYXjQ": {
+      "type": "euv-why-choose",
+      "name": "EUV Why Choose Us",
+      "settings": {
+        "logo": "shopify://shop_images/Untitled_design_-_2024-02-08T162909.668_72ff558a-fe87-4244-976c-9adbb7d4a019.png",
+        "logo_width": 200,
+        "heading": "Why Choose Clenli Direct",
+        "description": "With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader in the cleaning industry, offering award-winning cleaning solutions, comprehensive support, and our own expert in-house service team.",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "underline_width": 900,
+        "underline_spacing": 20,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "euv_cta_form_DjzXNN": {
+      "type": "euv-cta-form",
+      "name": "EUV CTA Form 50-50",
+      "settings": {
+        "heading": "Don't Get Left Behind",
+        "description": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.",
+        "button_text": "Learn More",
+        "button_link": "",
+        "footer_image": "shopify://shop_images/Addax_Footer_45129ff8-fc43-4281-9d07-b7b385ecde21.png",
+        "call_now_text": "CALL NOW",
+        "phone_number": "01 811 89 20",
+        "form_title": "GO GREEN TODAY ENQUIRE NOW",
+        "submit_text": "Submit",
+        "success_message": "Thank you! We will contact you shortly.",
+        "bg_color": "#ffffff",
+        "accent_color": "#2d5a27",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "about_vichen_3_j7jRYz": {
+      "type": "about-vichen-3",
+      "disabled": true,
+      "name": "Image Heading Description",
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_-_2024-02-08T162909.668.png",
+        "image_width": 400,
+        "image_height": 300,
+        "image_fit": "cover",
+        "image_radius": 10,
+        "image_margin": 30,
+        "heading": "Our Mission",
+        "description": "<p>We are committed to providing top-quality cleaning solutions for businesses across the country. Our innovative products help maintain cleaner, healthier environments while reducing environmental impact.</p>",
+        "content_width": 900,
+        "text_align": "center",
+        "heading_size": 36,
+        "heading_margin": 20,
+        "text_size": 16,
+        "line_height": 1.8,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "about_vichen_4_Pgrejw": {
+      "type": "about-vichen-4",
+      "disabled": true,
+      "name": "CTA Contact Form",
+      "settings": {
+        "heading": "Don't Get Left Behind",
+        "description": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.",
+        "heading_size": 32,
+        "call_now_text": "CALL NOW",
+        "phone_number": "+1234567890",
+        "form_title": "GO GREEN TODAY ENQUIRE NOW",
+        "submit_text": "SUBMIT",
+        "success_message": "Thank you! We will contact you soon.",
+        "bg_color": "#f5f5f5",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "accent_color": "#2d5a27",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "product_block_vertical_BX9NPX": {
+      "type": "product-block-vertical",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_jRUQ6t": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_btWXB7": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_btWXB7"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1761855221c525fadf",
+    "176185524138942b1f",
+    "176185524379a550ca",
+    "1761855258298b1338",
+    "service_2_PDzmrT",
+    "page_addax_sectors_qVmKdU",
+    "addax_vichen_cDtGhg",
+    "addax_vichen_8pcWgV",
+    "addax_vichen_KwzyQN",
+    "addax_vichen_HWNfRt",
+    "addax_vichen_eUKdgb",
+    "addax_vichen_QjTCHW",
+    "image_1_74RBBH",
+    "config_unliti_7aFcNU",
+    "about_vichen_1_9PC8Rd",
+    "euv_product_range_rpcgU8",
+    "euv_why_choose_eYYXjQ",
+    "euv_cta_form_DjzXNN",
+    "about_vichen_3_j7jRYz",
+    "about_vichen_4_Pgrejw",
+    "product_block_vertical_BX9NPX",
+    "newsletter_jRUQ6t"
+  ]
+}

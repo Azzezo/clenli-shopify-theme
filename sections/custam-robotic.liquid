@@ -1,0 +1,125 @@
+<section class="product-page">
+  <div class="container">
+    <div class="product-wrapper">
+      <div class="product-gallery">
+        <div class="product-main-image">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}" id="main-product-image">
+          {% endif %}
+          {% if product.compare_at_price > product.price %}
+            <span class="sale-badge">Sale</span>
+          {% endif %}
+        </div>
+        {% if product.images.size > 1 %}
+          <div class="product-thumbnails">
+            {% for image in product.images %}
+              <div class="thumbnail {% if forloop.first %}active{% endif %}" data-image="{{ image | image_url: width: 600 }}">
+                <img src="{{ image | image_url: width: 100 }}" alt="{{ product.title }}">
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="product-details">
+        <h1>{{ product.title }}</h1>
+        <div class="product-rating-row">
+          <div class="stars">{% for i in (1..5) %}<i class="fa fa-star"></i>{% endfor %}</div>
+          <a href="#reviews">Write a review</a>
+        </div>
+        <div class="product-price-main">
+          {% if product.compare_at_price > product.price %}
+            <span class="old-price">{{ product.compare_at_price | money }}</span>
+          {% endif %}
+          <span class="price">{{ product.price | money }}</span>
+          {% if product.compare_at_price > product.price %}
+            {% assign savings = product.compare_at_price | minus: product.price %}
+            <span class="savings">You save {{ savings | money }}</span>
+          {% endif %}
+        </div>
+        <div class="product-availability">
+          {% if product.available %}
+            <span class="in-stock"><i class="fa fa-check"></i> In Stock</span>
+          {% else %}
+            <span class="out-stock"><i class="fa fa-times"></i> Out of Stock</span>
+          {% endif %}
+        </div>
+        <div class="product-short-desc">{{ product.description | truncate: 300 }}</div>
+
+        {% form 'product', product, data-add-to-cart: '' %}
+          {% if product.variants.size > 1 %}
+            <div class="variant-selector">
+              {% for option in product.options_with_values %}
+                <label>{{ option.name }}</label>
+                <select name="id">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                      {{ variant.title }} - {{ variant.price | money }}
+                    </option>
+                  {% endfor %}
+                </select>
+              {% endfor %}
+            </div>
+          {% else %}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          {% endif %}
+
+          <div class="quantity-row">
+            <label>Quantity</label>
+            <div class="quantity-selector">
+              <button type="button" class="qty-btn">-</button>
+              <input type="number" name="quantity" value="1" min="1" class="qty-input">
+              <button type="button" class="qty-btn">+</button>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <button type="submit" class="btn btn-primary btn-lg btn-add-cart" {% unless product.available %}disabled{% endunless %}>
+              {% if product.available %}<i class="fa fa-shopping-cart"></i> Add to Cart{% else %}Sold Out{% endif %}
+            </button>
+            <button type="button" class="btn-wishlist"><i class="fa fa-heart"></i></button>
+          </div>
+        {% endform %}
+
+        <div class="product-meta">
+          {% if product.vendor %}<p><strong>Brand:</strong> {{ product.vendor }}</p>{% endif %}
+          {% if product.sku %}<p><strong>SKU:</strong> {{ product.sku }}</p>{% endif %}
+          {% if product.collections.size > 0 %}
+            <p><strong>Categories:</strong> 
+              {% for collection in product.collections %}
+                <a href="{{ collection.url }}">{{ collection.title }}</a>{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </p>
+          {% endif %}
+        </div>
+
+        <div class="product-share">
+          <span>Share:</span>
+          <a href="https://facebook.com/sharer/sharer.php?u={{ shop.url }}{{ product.url }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/intent/tweet?url={{ shop.url }}{{ product.url }}" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/shareArticle?url={{ shop.url }}{{ product.url }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-tabs">
+      <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="description">Description</button>
+        <button class="tab-btn" data-tab="specs">Specifications</button>
+        <button class="tab-btn" data-tab="reviews">Reviews</button>
+      </div>
+      <div class="tabs-content">
+        <div class="tab-panel active" id="description">{{ product.description }}</div>
+        <div class="tab-panel" id="specs"><p>Specifications coming soon.</p></div>
+        <div class="tab-panel" id="reviews"><p>No reviews yet. Be the first!</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Template",
+  "settings": []
+}
+{% endschema %}

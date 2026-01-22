@@ -1,0 +1,780 @@
+<link rel="stylesheet" href="{{ 'component-about.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-about.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- liquid
+    assign padding_top = section.settings.mg_top_desktop | append: 'px'
+    assign padding_bottom = section.settings.mg_bottom_desktop | append: 'px'
+    assign padding_top_tablet = section.settings.mg_top_tablet | append: 'px'
+    assign padding_bottom_tablet = section.settings.mg_bottom_tablet | append: 'px'
+    assign padding_top_mobile = section.settings.mg_top_mobile | append: 'px'
+    assign padding_bottom_mobile = section.settings.mg_bottom_mobile | append: 'px'
+    assign container = section.settings.container
+    assign about_image = section.settings.about_bg_image
+    assign about_bg_image_height = section.settings.about_bg_image_height
+    assign parallax = section.settings.enable_parallax
+    assign padding_full_width = section.settings.padding_full_width
+    assign show_about_info = false
+    assign overlay_color = section.settings.overlay_color
+    assign overlay_opacity = section.settings.overlay_opacity
+    if section.blocks.size > 0
+        assign show_about_info = true
+    endif
+-%}
+
+<div data-section-id="{{ section.id }}" data-section-type="about" id="AboutSection-{{ section.id }}" data-section="{{ section.id }}">
+    
+    <!-- ============ MAIN WRAPPER ============ -->
+    <div class="main-about-wrapper-{{ section.id }}">
+        
+        <!-- Banner Section -->
+        <div class="banner-section-{{ section.id }}">
+            <div class="{% if container == '1170' %}container-1170{% elsif container == '1770' %}container-1770{% elsif container == 'fullwidth'%}container-full{% else %}container{% endif %} {% if about_image != blank %}has-bg-image{% endif %} about-2-container">
+
+                {% if about_image != blank %}
+                <div class="about-content-wrapper">
+                {% endif %}
+                
+                <div class="halo-page-content halo-about-content{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}">
+                    <div class="about about-1">
+                        {%- if show_about_info -%}
+                            {%- for block in section.blocks -%}
+                                {%- if block.type == 'content' -%}
+                                    <div class="about-item item-{{ block.id }}">
+                                        {%- liquid
+                                            assign title = block.settings.title
+                                            assign content_text_color = block.settings.content_text_color
+                                            assign content_max_width = block.settings.content_max_width
+                                            assign content = block.settings.content
+                                            assign align = block.settings.align
+                                        -%}
+                                        {%- if title != blank -%}
+                                            <h2 class="page-subheader about-title text-center{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="color: {{ content_text_color }};">
+                                                {{ title | escape }}
+                                            </h2>
+                                        {%- endif -%}
+                                        <div class="about-content halo-text-format text-{{ align }}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" style="color: {{ content_text_color }};">
+                                            {{ content }}
+                                        </div>
+                                    </div>
+                                    <style>
+                                        .item-{{ block.id }} .about-content.text-center {
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                        }
+                                        .item-{{ block.id }} .about-content.text-left {
+                                            margin-left: 0;
+                                            margin-right: auto;
+                                        }
+                                        .item-{{ block.id }} .about-content.text-right {
+                                            margin-left: auto;
+                                            margin-right: 0;
+                                        }
+                                        @media (min-width: 375px) {
+                                            .item-{{ block.id }} .about-content {
+                                                max-width: 80%;
+                                                width: 80%;
+                                                padding-left: 10px;
+                                                padding-right: 10px;
+                                            }
+                                        }
+                                        @media (min-width: 651px) {
+                                            .item-{{ block.id }} .about-content {
+                                                max-width: {{ content_max_width | append: 'px' }};
+                                            }
+                                        }
+                                        @media (min-width: 1024px) {
+                                            .item-{{ block.id }} .about-content {
+                                                padding-left: 30px;
+                                                padding-right: 30px;
+                                            }
+                                        }
+                                    </style>
+                                {%- endif -%}
+                            {%- endfor -%}
+                        {%- endif -%}
+                    </div>
+                </div>
+                {% if about_image != blank %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- ============ BOTTOM SECTION ============ -->
+        {%- if section.settings.enable_bottom_section -%}
+        <div class="bottom-content-section-{{ section.id }}">
+            <div class="{% if container == '1170' %}container-1170{% elsif container == '1770' %}container-1770{% elsif container == 'fullwidth'%}container-full{% else %}container{% endif %}">
+                <div class="bottom-content-wrapper">
+                    
+                    <!-- Left Side - Text List -->
+                    <div class="bottom-left-content">
+                        {%- for block in section.blocks -%}
+                            {%- if block.type == 'text_item' -%}
+                                <div class="text-list-item" {{ block.shopify_attributes }}>
+                                    {%- if block.settings.item_link != blank -%}
+                                        <a href="{{ block.settings.item_link }}" class="text-list-link">
+                                            {{ block.settings.item_text }}
+                                        </a>
+                                    {%- else -%}
+                                        <span class="text-list-text">{{ block.settings.item_text }}</span>
+                                    {%- endif -%}
+                                </div>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                    
+                    <!-- Right Side - Image (Smaller Size) -->
+                    <div class="bottom-right-image">
+                        {%- if section.settings.bottom_image != blank -%}
+                            <img src="{{ section.settings.bottom_image | image_url: width: 600 }}" 
+                                 alt="{{ section.settings.bottom_image_alt | default: 'Product Image' }}" 
+                                 loading="lazy">
+                        {%- else -%}
+                            <div class="placeholder-bottom-img">
+                                <span>Add Image</span>
+                            </div>
+                        {%- endif -%}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        {%- endif -%}
+        <!-- ============ END BOTTOM SECTION ============ -->
+        
+    </div>
+    <!-- ============ END MAIN WRAPPER ============ -->
+    
+</div>
+
+<style type="text/css" media="screen">
+    /* ============ MAIN WRAPPER ============ */
+    .main-about-wrapper-{{ section.id }} {
+        position: relative;
+    }
+    
+    #AboutSection-{{ section.id }} {
+        padding-top: {{ padding_top }};
+        padding-bottom: {{ padding_bottom }};
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        {% if about_image == blank %}
+            background-color: #8f8b8b;
+        {% endif %}
+    }
+    
+    .banner-section-{{ section.id }} {
+        position: relative;
+        z-index: 1;
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image {
+        position: relative;
+        overflow: visible !important;
+        height: {{ about_bg_image_height | append: 'px' }};
+        background-image: url({{ about_image | image_url: width: 1860, height: 970 }});
+        background-size: cover;
+        background-repeat: repeat-x;
+        background-position: center top;
+        margin-bottom: 0 !important;
+        {% if parallax %}
+            background-attachment: fixed;
+        {% endif %}
+    }
+    
+    /* ============ BLACK OVERLAY ON IMAGE ============ */
+    #AboutSection-{{ section.id }} .has-bg-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: {{ overlay_color }};
+        opacity: {{ overlay_opacity }};
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    #AboutSection-{{ section.id }} .has-bg-image .about-content-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image {
+        {% if container == '1170' %} 
+            max-width: 1170px;
+        {% elsif container == '1770'%}
+            max-width: 1770px;
+        {% elsif container == 'fullwidth' %}
+            max-width: calc(100% - {{ padding_full_width | times: 2 | append: 'px' }});
+        {% endif %}
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image .page-subheader {
+        padding-bottom: 15px;
+        font-size: 24px;
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image .about-content-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    #AboutSection-{{ section.id }} .has-bg-image .about-content {
+        margin-top: 5px;
+    }
+    
+    #AboutSection-{{ section.id }} .about-2-container {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    /* ============ BOTTOM SECTION ============ */
+    .bottom-content-section-{{ section.id }} {
+        background-color: {{ section.settings.bottom_bg_color }};
+        padding: {{ section.settings.bottom_padding_top }}px 0 {{ section.settings.bottom_padding_bottom }}px;
+        margin-top: 0 !important;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .bottom-content-section-{{ section.id }} .bottom-content-wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: {{ section.settings.bottom_gap }}px;
+    }
+    
+    /* Left Side - Text List */
+    .bottom-content-section-{{ section.id }} .bottom-left-content {
+        width: {{ section.settings.left_width }}%;
+        flex-shrink: 0;
+        padding-top: 20px;
+    }
+    
+    .bottom-content-section-{{ section.id }} .text-list-item {
+        padding: {{ section.settings.text_item_padding }}px 0;
+        border-bottom: 1px solid {{ section.settings.text_border_color }};
+    }
+    
+    .bottom-content-section-{{ section.id }} .text-list-item:last-child {
+        border-bottom: none;
+    }
+    
+    .bottom-content-section-{{ section.id }} .text-list-link,
+    .bottom-content-section-{{ section.id }} .text-list-text {
+        font-size: {{ section.settings.text_font_size }}px;
+        font-weight: {{ section.settings.text_font_weight }};
+        color: {{ section.settings.text_color }};
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+    }
+    
+    .bottom-content-section-{{ section.id }} .text-list-link:hover {
+        color: {{ section.settings.text_hover_color }};
+    }
+    
+    /* ============ RIGHT IMAGE - SMALLER SIZE ============ */
+    .bottom-content-section-{{ section.id }} .bottom-right-image {
+        flex: 1;
+        text-align: center;
+        margin-top: -{{ section.settings.image_overlap }}px;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .bottom-content-section-{{ section.id }} .bottom-right-image img {
+        max-width: {{ section.settings.image_max_width }}px;
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+    
+    .bottom-content-section-{{ section.id }} .placeholder-bottom-img {
+        max-width: {{ section.settings.image_max_width }}px;
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #00838f;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 1025px) {
+        {% if container == 'fullwidth' %}
+            #AboutSection-{{ section.id }} > .container-full {
+                padding-left: {{ padding_full_width | append: 'px' }};
+                padding-right: {{ padding_full_width | append: 'px' }};
+            }
+        {% endif %}
+    }
+
+    @media (max-width: 1024px) {
+        #AboutSection-{{ section.id }}{
+            padding-top: {{ padding_top_tablet }};
+            padding-bottom: {{ padding_bottom_tablet }};
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-content-wrapper {
+            gap: 30px;
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-left-content {
+            width: 35%;
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-right-image {
+            margin-top: -{{ section.settings.image_overlap | divided_by: 2 }}px;
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-right-image img {
+            max-width: {{ section.settings.image_max_width | minus: 100 }}px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #AboutSection-{{ section.id }}{
+            padding-top: {{ padding_top_mobile }};
+            padding-bottom: {{ padding_bottom_mobile }};
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-content-wrapper {
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-left-content {
+            width: 100%;
+            padding-top: 0;
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-right-image {
+            width: 100%;
+            margin-top: 0;
+        }
+        
+        .bottom-content-section-{{ section.id }} .bottom-right-image img {
+            max-width: 280px;
+        }
+        
+        .bottom-content-section-{{ section.id }} .text-list-link,
+        .bottom-content-section-{{ section.id }} .text-list-text {
+            font-size: {{ section.settings.text_font_size | minus: 2 }}px;
+        }
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Banner Copy",
+    "settings": [
+        {
+            "type": "select",
+            "id": "container",
+            "label": "Container",
+            "default": "container",
+            "options": [
+                {"value": "container", "label": "Default"},
+                {"value": "1170", "label": "1170px"},
+                {"value": "1770", "label": "1770px"},
+                {"value": "fullwidth", "label": "Full Width"}
+            ]
+        },
+        {
+            "type": "range",
+            "id": "padding_full_width",
+            "label": "Full Width Padding",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0,
+            "unit": "px"
+        },
+        {
+            "type": "header",
+            "content": "Background Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "about_bg_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "range",
+            "id": "about_bg_image_height",
+            "label": "Image Height",
+            "default": 270,
+            "min": 200,
+            "max": 700,
+            "step": 10,
+            "unit": "px"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_parallax",
+            "label": "Enable Parallax Effect",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Image Overlay"
+        },
+        {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "Overlay Color",
+            "default": "#000000"
+        },
+        {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Overlay Opacity",
+            "min": 0,
+            "max": 1,
+            "step": 0.1,
+            "default": 0.5
+        },
+        {
+            "type": "header",
+            "content": "Bottom Section - Text + Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_bottom_section",
+            "label": "Enable Bottom Section",
+            "default": true
+        },
+        {
+            "type": "image_picker",
+            "id": "bottom_image",
+            "label": "Bottom Right Image"
+        },
+        {
+            "type": "text",
+            "id": "bottom_image_alt",
+            "label": "Image Alt Text",
+            "default": "Product Image"
+        },
+        {
+            "type": "range",
+            "id": "image_max_width",
+            "label": "Image Max Width",
+            "min": 200,
+            "max": 800,
+            "step": 20,
+            "unit": "px",
+            "default": 400
+        },
+        {
+            "type": "range",
+            "id": "image_overlap",
+            "label": "Image Overlap (Touch Banner)",
+            "min": 0,
+            "max": 300,
+            "step": 10,
+            "unit": "px",
+            "default": 150
+        },
+        {
+            "type": "color",
+            "id": "bottom_bg_color",
+            "label": "Bottom Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "range",
+            "id": "left_width",
+            "label": "Left Content Width (%)",
+            "min": 20,
+            "max": 50,
+            "step": 5,
+            "unit": "%",
+            "default": 25
+        },
+        {
+            "type": "range",
+            "id": "bottom_gap",
+            "label": "Gap Between Content & Image",
+            "min": 20,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "bottom_padding_top",
+            "label": "Bottom Section Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "bottom_padding_bottom",
+            "label": "Bottom Section Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "header",
+            "content": "Text List Styling"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#232323"
+        },
+        {
+            "type": "color",
+            "id": "text_hover_color",
+            "label": "Text Hover Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "text_font_size",
+            "label": "Text Font Size",
+            "min": 12,
+            "max": 24,
+            "step": 1,
+            "unit": "px",
+            "default": 16
+        },
+        {
+            "type": "select",
+            "id": "text_font_weight",
+            "label": "Text Font Weight",
+            "default": "400",
+            "options": [
+                {"value": "400", "label": "Normal"},
+                {"value": "500", "label": "Medium"},
+                {"value": "600", "label": "Semi Bold"},
+                {"value": "700", "label": "Bold"}
+            ]
+        },
+        {
+            "type": "range",
+            "id": "text_item_padding",
+            "label": "Text Item Padding",
+            "min": 5,
+            "max": 25,
+            "step": 1,
+            "unit": "px",
+            "default": 12
+        },
+        {
+            "type": "color",
+            "id": "text_border_color",
+            "label": "Text Item Border Color",
+            "default": "#eeeeee"
+        },
+        {
+            "type": "header",
+            "content": "Padding Top"
+        },
+        {
+            "type": "range",
+            "id": "mg_top_desktop",
+            "label": "Desktop",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "mg_top_tablet",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "mg_top_mobile",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "Padding Bottom"
+        },
+        {
+            "type": "range",
+            "id": "mg_bottom_desktop",
+            "label": "Desktop",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "mg_bottom_tablet",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "mg_bottom_mobile",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 0
+        }
+    ],
+    "blocks": [
+        {
+            "type": "content",
+            "name": "Banner Content",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "About HALO"
+                },
+                {
+                    "type": "html",
+                    "id": "content",
+                    "label": "Content"
+                },
+                {
+                    "type": "range",
+                    "id": "content_max_width",
+                    "label": "Content Max Width",
+                    "min": 100,
+                    "max": 2000,
+                    "step": 50,
+                    "default": 700,
+                    "unit": "px"
+                },
+                {
+                    "type": "select",
+                    "id": "align",
+                    "label": "Content Alignment",
+                    "options": [
+                        {"value": "left", "label": "Left"},
+                        {"value": "center", "label": "Center"},
+                        {"value": "right", "label": "Right"}
+                    ],
+                    "default": "center"
+                },
+                {
+                    "type": "color",
+                    "id": "content_text_color",
+                    "label": "Text Color",
+                    "default": "#ffffff"
+                }
+            ]
+        },
+        {
+            "type": "text_item",
+            "name": "Text List Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "item_text",
+                    "label": "Text",
+                    "default": "Item Name"
+                },
+                {
+                    "type": "url",
+                    "id": "item_link",
+                    "label": "Link (Optional)"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Banner Copy",
+            "blocks": [
+                {
+                    "type": "content",
+                    "settings": {
+                        "title": "",
+                        "content": "<p>Our Service team protects and maintains cleaning machines and equipment to ensure longevity and optimal performance.</p>",
+                        "content_text_color": "#ffffff"
+                    }
+                },
+                {
+                    "type": "text_item",
+                    "settings": {
+                        "item_text": "Robotics"
+                    }
+                },
+                {
+                    "type": "text_item",
+                    "settings": {
+                        "item_text": "I-Mop"
+                    }
+                },
+                {
+                    "type": "text_item",
+                    "settings": {
+                        "item_text": "Tersano"
+                    }
+                },
+                {
+                    "type": "text_item",
+                    "settings": {
+                        "item_text": "Pacvac"
+                    }
+                },
+                {
+                    "type": "text_item",
+                    "settings": {
+                        "item_text": "Comac"
+                    }
+                },
+                {
+                    "type": "text_item",
+                    "settings": {
+                        "item_text": "Egholm"
+                    }
+                },
+                {
+                    "type": "text_item",
+                    "settings": {
+                        "item_text": "Numatic ERP180"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+└─────────────────────────────────────────────────────────────────┘

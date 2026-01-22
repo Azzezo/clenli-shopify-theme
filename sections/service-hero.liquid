@@ -1,0 +1,298 @@
+{% comment %}
+  Clenli Direct - Service Hero Section
+  Section: service-hero.liquid
+{% endcomment %}
+
+<section class="service-hero">
+  <div class="service-hero__container">
+    <div class="service-hero__content">
+      <span class="service-hero__tag">{{ section.settings.tag_text }}</span>
+      <h1 class="service-hero__title">{{ section.settings.title }}</h1>
+      <p class="service-hero__subtitle">{{ section.settings.subtitle }}</p>
+      
+      <div class="service-hero__highlights">
+        {% for block in section.blocks %}
+          <div class="service-hero__highlight">
+            <span class="service-hero__highlight-value">{{ block.settings.value }}</span>
+            <span class="service-hero__highlight-label">{{ block.settings.label }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      
+      {% if section.settings.button_text != blank %}
+        <a href="{{ section.settings.button_link }}" class="service-hero__btn">
+          {{ section.settings.button_text }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      {% endif %}
+    </div>
+    
+    {% if section.settings.hero_image != blank %}
+    <div class="service-hero__image-wrapper">
+      <img 
+        src="{{ section.settings.hero_image | image_url: width: 800 }}" 
+        alt="{{ section.settings.title }}"
+        class="service-hero__image"
+        loading="eager"
+      >
+      <div class="service-hero__badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <span>99% First Call<br>Fix Rate</span>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+.service-hero {
+  background: linear-gradient(135deg, #0a4d3c 0%, #16213e 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(26, 122, 92, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.service-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.service-hero__tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.service-hero__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.service-hero__subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.service-hero__highlights {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 35px;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.service-hero__highlight {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-hero__highlight-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: #40b884;
+  line-height: 1;
+}
+
+.service-hero__highlight-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.service-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #0a4d3c;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-hero__btn:hover {
+  background: #40b884;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.service-hero__image-wrapper {
+  position: relative;
+}
+
+.service-hero__image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero__badge {
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-hero__badge svg {
+  color: #0a4d3c;
+  flex-shrink: 0;
+}
+
+.service-hero__badge span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+  .service-hero__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .service-hero__highlights {
+    justify-content: center;
+  }
+  
+  .service-hero__btn {
+    justify-content: center;
+  }
+  
+  .service-hero__badge {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero__title {
+    font-size: 34px;
+  }
+  
+  .service-hero__highlights {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Service Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag_text",
+      "label": "Tag Text",
+      "default": "Service & Maintenance"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Expert Service You Can Rely On"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "As your reliable cleaning products and equipment supplier, Clenli Direct provides a hassle-free service with 24/7 emergency support and industry-leading response times."
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Request Service"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Highlight Stat",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "24/7"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Support"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Hero",
+      "blocks": [
+        { "type": "stat", "settings": { "value": "24/7", "label": "Support" } },
+        { "type": "stat", "settings": { "value": "99%", "label": "First Call Fix" } },
+        { "type": "stat", "settings": { "value": "20+", "label": "Years Experience" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

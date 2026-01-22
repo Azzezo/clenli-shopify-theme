@@ -1,0 +1,693 @@
+{%- liquid
+    assign section_id = section.id
+-%}
+
+<style>
+/* ============================================
+   SERVICE PAGE - COMPLETE STYLES
+   ============================================ */
+
+#service-page-{{ section_id }} {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+#service-page-{{ section_id }} * {
+    box-sizing: border-box;
+}
+
+#service-page-{{ section_id }} .sp-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#service-page-{{ section_id }} .sp-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+#service-page-{{ section_id }} .sp-col-6 {
+    width: 50%;
+    padding: 0 15px;
+}
+
+#service-page-{{ section_id }} .sp-col-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+#service-page-{{ section_id }} img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Page Title */
+#service-page-{{ section_id }} .sp-page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 30px 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #6fb31a;
+}
+
+/* ============================================
+   HERO SECTION (Image + Text)
+   ============================================ */
+#service-page-{{ section_id }} .sp-hero-section {
+    padding: 30px 0 40px 0;
+}
+
+#service-page-{{ section_id }} .sp-hero-section .sp-row {
+    align-items: flex-start;
+}
+
+#service-page-{{ section_id }} .sp-hero-image img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#service-page-{{ section_id }} .sp-hero-content {
+    padding: 0 15px;
+}
+
+#service-page-{{ section_id }} .sp-hero-content p {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 15px 0;
+    line-height: 1.7;
+}
+
+#service-page-{{ section_id }} .sp-hero-content a {
+    color: #6fb31a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#service-page-{{ section_id }} .sp-hero-content a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+#service-page-{{ section_id }} .sp-content-section {
+    padding: 20px 0;
+}
+
+#service-page-{{ section_id }} .sp-content-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px 0;
+}
+
+#service-page-{{ section_id }} .sp-content-section p {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 15px 0;
+    line-height: 1.7;
+}
+
+#service-page-{{ section_id }} .sp-content-section a {
+    color: #6fb31a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#service-page-{{ section_id }} .sp-content-section a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   STATS/HIGHLIGHTS BOXES
+   ============================================ */
+#service-page-{{ section_id }} .sp-stats-section {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+#service-page-{{ section_id }} .sp-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#service-page-{{ section_id }} .sp-stat-box {
+    text-align: center;
+    padding: 25px 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #6fb31a;
+}
+
+#service-page-{{ section_id }} .sp-stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #6fb31a;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#service-page-{{ section_id }} .sp-stat-label {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ============================================
+   FEATURE LIST
+   ============================================ */
+#service-page-{{ section_id }} .sp-features-section {
+    padding: 40px 0;
+}
+
+#service-page-{{ section_id }} .sp-features-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+#service-page-{{ section_id }} .sp-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#service-page-{{ section_id }} .sp-feature-card {
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    border-bottom: 4px solid #6fb31a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#service-page-{{ section_id }} .sp-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+#service-page-{{ section_id }} .sp-feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px auto;
+    background: #6fb31a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#service-page-{{ section_id }} .sp-feature-icon svg {
+    width: 35px;
+    height: 35px;
+    fill: #fff;
+}
+
+#service-page-{{ section_id }} .sp-feature-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 12px 0;
+}
+
+#service-page-{{ section_id }} .sp-feature-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+#service-page-{{ section_id }} .sp-cta-section {
+    padding: 50px 30px;
+    background: linear-gradient(135deg, #6fb31a 0%, #5a9216 100%);
+    border-radius: 10px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+#service-page-{{ section_id }} .sp-cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 15px 0;
+}
+
+#service-page-{{ section_id }} .sp-cta-text {
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+    margin: 0 0 25px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#service-page-{{ section_id }} .sp-cta-btn {
+    display: inline-block;
+    background: #fff;
+    color: #6fb31a;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#service-page-{{ section_id }} .sp-cta-btn:hover {
+    background: #333;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+#service-page-{{ section_id }} .sp-divider {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #6fb31a, transparent);
+    margin: 30px 0;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 991px) {
+    #service-page-{{ section_id }} .sp-col-6 {
+        width: 100%;
+    }
+    
+    #service-page-{{ section_id }} .sp-hero-image {
+        margin-bottom: 25px;
+    }
+    
+    #service-page-{{ section_id }} .sp-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #service-page-{{ section_id }} .sp-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    #service-page-{{ section_id }} .sp-page-title {
+        font-size: 26px;
+    }
+    
+    #service-page-{{ section_id }} .sp-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #service-page-{{ section_id }} .sp-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #service-page-{{ section_id }} .sp-stat-number {
+        font-size: 30px;
+    }
+    
+    #service-page-{{ section_id }} .sp-cta-title {
+        font-size: 22px;
+    }
+    
+    #service-page-{{ section_id }} .sp-cta-section {
+        padding: 35px 20px;
+    }
+}
+</style>
+
+<div id="service-page-{{ section_id }}">
+    <div class="sp-container">
+        
+        <!-- Page Title -->
+        <h1 class="sp-page-title">{{ section.settings.page_title }}</h1>
+        
+        <!-- ============================================
+             HERO SECTION (Image + Text)
+             ============================================ -->
+        <section class="sp-hero-section">
+            <div class="sp-row">
+                <div class="sp-col-6">
+                    <div class="sp-hero-image">
+                        {%- if section.settings.hero_image != blank -%}
+                            <img src="{{ section.settings.hero_image | image_url: width: 600 }}" alt="{{ section.settings.page_title }}">
+                        {%- else -%}
+                            {{ 'image' | placeholder_svg_tag }}
+                        {%- endif -%}
+                    </div>
+                </div>
+                <div class="sp-col-6">
+                    <div class="sp-hero-content">
+                        {{ section.settings.hero_content }}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             STATS SECTION
+             ============================================ -->
+        {%- if section.settings.show_stats -%}
+        <section class="sp-stats-section">
+            <div class="sp-stats-grid">
+                {%- if section.settings.stat_1_number != blank -%}
+                <div class="sp-stat-box">
+                    <span class="sp-stat-number">{{ section.settings.stat_1_number }}</span>
+                    <span class="sp-stat-label">{{ section.settings.stat_1_label }}</span>
+                </div>
+                {%- endif -%}
+                
+                {%- if section.settings.stat_2_number != blank -%}
+                <div class="sp-stat-box">
+                    <span class="sp-stat-number">{{ section.settings.stat_2_number }}</span>
+                    <span class="sp-stat-label">{{ section.settings.stat_2_label }}</span>
+                </div>
+                {%- endif -%}
+                
+                {%- if section.settings.stat_3_number != blank -%}
+                <div class="sp-stat-box">
+                    <span class="sp-stat-number">{{ section.settings.stat_3_number }}</span>
+                    <span class="sp-stat-label">{{ section.settings.stat_3_label }}</span>
+                </div>
+                {%- endif -%}
+                
+                {%- if section.settings.stat_4_number != blank -%}
+                <div class="sp-stat-box">
+                    <span class="sp-stat-number">{{ section.settings.stat_4_number }}</span>
+                    <span class="sp-stat-label">{{ section.settings.stat_4_label }}</span>
+                </div>
+                {%- endif -%}
+            </div>
+        </section>
+        {%- endif -%}
+        
+        <!-- ============================================
+             DYNAMIC CONTENT BLOCKS
+             ============================================ -->
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+            
+                {%- when 'content_block' -%}
+                    <section class="sp-content-section" {{ block.shopify_attributes }}>
+                        {%- if block.settings.block_title != blank -%}
+                            <h2>{{ block.settings.block_title }}</h2>
+                        {%- endif -%}
+                        {{ block.settings.block_content }}
+                    </section>
+                    {%- if block.settings.show_divider -%}
+                        <div class="sp-divider"></div>
+                    {%- endif -%}
+                
+                {%- when 'features_section' -%}
+                    <section class="sp-features-section" {{ block.shopify_attributes }}>
+                        {%- if block.settings.features_title != blank -%}
+                            <h2 class="sp-features-title">{{ block.settings.features_title }}</h2>
+                        {%- endif -%}
+                        
+                        <div class="sp-features-grid">
+                            <!-- Feature 1 -->
+                            {%- if block.settings.feature_1_title != blank -%}
+                            <div class="sp-feature-card">
+                                <div class="sp-feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                </div>
+                                <h3>{{ block.settings.feature_1_title }}</h3>
+                                <p>{{ block.settings.feature_1_text }}</p>
+                            </div>
+                            {%- endif -%}
+                            
+                            <!-- Feature 2 -->
+                            {%- if block.settings.feature_2_title != blank -%}
+                            <div class="sp-feature-card">
+                                <div class="sp-feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                                </div>
+                                <h3>{{ block.settings.feature_2_title }}</h3>
+                                <p>{{ block.settings.feature_2_text }}</p>
+                            </div>
+                            {%- endif -%}
+                            
+                            <!-- Feature 3 -->
+                            {%- if block.settings.feature_3_title != blank -%}
+                            <div class="sp-feature-card">
+                                <div class="sp-feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                                </div>
+                                <h3>{{ block.settings.feature_3_title }}</h3>
+                                <p>{{ block.settings.feature_3_text }}</p>
+                            </div>
+                            {%- endif -%}
+                        </div>
+                    </section>
+                
+                {%- when 'cta_section' -%}
+                    <section class="sp-cta-section" {{ block.shopify_attributes }}>
+                        <h2 class="sp-cta-title">{{ block.settings.cta_title }}</h2>
+                        <p class="sp-cta-text">{{ block.settings.cta_text }}</p>
+                        {%- if block.settings.cta_btn_text != blank -%}
+                            <a href="{{ block.settings.cta_btn_link }}" class="sp-cta-btn">{{ block.settings.cta_btn_text }}</a>
+                        {%- endif -%}
+                    </section>
+                    
+            {%- endcase -%}
+        {%- endfor -%}
+        
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Service Page",
+    "tag": "section",
+    "class": "service-page-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "page_title",
+            "label": "Page Title",
+            "default": "Service"
+        },
+        {
+            "type": "header",
+            "content": "Hero Section"
+        },
+        {
+            "type": "image_picker",
+            "id": "hero_image",
+            "label": "Hero Image"
+        },
+        {
+            "type": "richtext",
+            "id": "hero_content",
+            "label": "Hero Content",
+            "default": "<p>We have a fully qualified service and maintenance team with over 20 years industry experience. We provide our clients with a 24 hour emergency response service to ensure that you can contact someone in case of emergency any time, day or night.</p><p>We are acutely aware of the importance of after sales service and you will find us to be very client focused. Our commitment to our customers has served us well, as is evident from our very loyal customer base. We will be there when you need us, and if required we can even provide you with replacement machinery.</p>"
+        },
+        {
+            "type": "header",
+            "content": "Stats Section"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_stats",
+            "label": "Show Stats Section",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "stat_1_number",
+            "label": "Stat 1 Number",
+            "default": "20+"
+        },
+        {
+            "type": "text",
+            "id": "stat_1_label",
+            "label": "Stat 1 Label",
+            "default": "Years Industry Experience"
+        },
+        {
+            "type": "text",
+            "id": "stat_2_number",
+            "label": "Stat 2 Number",
+            "default": "€180K"
+        },
+        {
+            "type": "text",
+            "id": "stat_2_label",
+            "label": "Stat 2 Label",
+            "default": "Spare Parts in Stock"
+        },
+        {
+            "type": "text",
+            "id": "stat_3_number",
+            "label": "Stat 3 Number",
+            "default": "99%"
+        },
+        {
+            "type": "text",
+            "id": "stat_3_label",
+            "label": "Stat 3 Label",
+            "default": "First Visit Completion Rate"
+        },
+        {
+            "type": "text",
+            "id": "stat_4_number",
+            "label": "Stat 4 Number",
+            "default": "24/7"
+        },
+        {
+            "type": "text",
+            "id": "stat_4_label",
+            "label": "Stat 4 Label",
+            "default": "Emergency Response Service"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "content_block",
+            "name": "Content Block",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "block_title",
+                    "label": "Title",
+                    "default": "Service and Maintenance Application (CD SAM)"
+                },
+                {
+                    "type": "richtext",
+                    "id": "block_content",
+                    "label": "Content",
+                    "default": "<p>As your reliable cleaning products and equipment supplier we will provide you with a hassle free service.</p><p>Along with your personally appointed service manager we will form a support team to cater for your unique requirements and ensure consistency of contact with a personalised service.</p><p>This is backed up with our bespoke service application (SAM) that creates a complete machine log for every site and machine.</p>"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_divider",
+                    "label": "Show Divider After",
+                    "default": true
+                }
+            ]
+        },
+        {
+            "type": "features_section",
+            "name": "Features Section",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "features_title",
+                    "label": "Section Title",
+                    "default": "Why Choose Our Service"
+                },
+                {
+                    "type": "header",
+                    "content": "Feature 1"
+                },
+                {
+                    "type": "text",
+                    "id": "feature_1_title",
+                    "label": "Feature 1 Title",
+                    "default": "Expert Engineers"
+                },
+                {
+                    "type": "textarea",
+                    "id": "feature_1_text",
+                    "label": "Feature 1 Text",
+                    "default": "Our engineers have extensive experience and are fully trained to service all types of cleaning machinery."
+                },
+                {
+                    "type": "header",
+                    "content": "Feature 2"
+                },
+                {
+                    "type": "text",
+                    "id": "feature_2_title",
+                    "label": "Feature 2 Title",
+                    "default": "Complete Machine Logs"
+                },
+                {
+                    "type": "textarea",
+                    "id": "feature_2_text",
+                    "label": "Feature 2 Text",
+                    "default": "Our bespoke SAM application maintains detailed history for every machine, ensuring faster repairs."
+                },
+                {
+                    "type": "header",
+                    "content": "Feature 3"
+                },
+                {
+                    "type": "text",
+                    "id": "feature_3_title",
+                    "label": "Feature 3 Title",
+                    "default": "Fast Response Times"
+                },
+                {
+                    "type": "textarea",
+                    "id": "feature_3_text",
+                    "label": "Feature 3 Text",
+                    "default": "We complete 99% of service calls on the first visit with our fully stocked service vans."
+                }
+            ]
+        },
+        {
+            "type": "cta_section",
+            "name": "CTA Section",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "cta_title",
+                    "label": "CTA Title",
+                    "default": "Ready to Get Started?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "cta_text",
+                    "label": "CTA Text",
+                    "default": "Contact us today to discuss how we can help you deliver a better service."
+                },
+                {
+                    "type": "text",
+                    "id": "cta_btn_text",
+                    "label": "Button Text",
+                    "default": "Contact Us Today"
+                },
+                {
+                    "type": "url",
+                    "id": "cta_btn_link",
+                    "label": "Button Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Service Page",
+            "blocks": [
+                {
+                    "type": "content_block"
+                },
+                {
+                    "type": "features_section"
+                },
+                {
+                    "type": "cta_section"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

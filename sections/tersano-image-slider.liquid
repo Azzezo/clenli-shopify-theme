@@ -1,0 +1,667 @@
+<div class="content-slider-section section-{{ section.id }}">
+    <div class="content-slider-container">
+        <div class="content-slider-grid">
+            <!-- Left Content -->
+            <div class="content-side">
+                {%- if section.settings.label != blank -%}
+                    <span class="content-label">{{ section.settings.label }}</span>
+                {%- endif -%}
+                
+                {%- if section.settings.heading != blank -%}
+                    <h2 class="content-heading">{{ section.settings.heading }}</h2>
+                {%- endif -%}
+                
+                {%- if section.settings.description != blank -%}
+                    <div class="content-description">{{ section.settings.description }}</div>
+                {%- endif -%}
+                
+                <!-- Features List -->
+                <div class="content-features">
+                    {%- if section.settings.feature_1 != blank -%}
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">{{ section.settings.feature_1 }}</span>
+                        </div>
+                    {%- endif -%}
+                    {%- if section.settings.feature_2 != blank -%}
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">{{ section.settings.feature_2 }}</span>
+                        </div>
+                    {%- endif -%}
+                    {%- if section.settings.feature_3 != blank -%}
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">{{ section.settings.feature_3 }}</span>
+                        </div>
+                    {%- endif -%}
+                    {%- if section.settings.feature_4 != blank -%}
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">{{ section.settings.feature_4 }}</span>
+                        </div>
+                    {%- endif -%}
+                </div>
+                
+                {%- if section.settings.button_text != blank -%}
+                    <a href="{{ section.settings.button_link | default: '#' }}" class="content-button">
+                        {{ section.settings.button_text }}
+                    </a>
+                {%- endif -%}
+            </div>
+            
+            <!-- Right Image Slider -->
+            <div class="slider-side">
+                <div class="image-slider" id="image-slider-{{ section.id }}">
+                    <div class="slider-track">
+                        {%- for block in section.blocks -%}
+                            {%- if block.type == 'slide' -%}
+                                <div class="slide {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+                                    {%- if block.settings.image != blank -%}
+                                        <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.caption }}" loading="lazy">
+                                    {%- else -%}
+                                        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                                    {%- endif -%}
+                                    
+                                    {%- if block.settings.caption != blank -%}
+                                        <div class="slide-caption">{{ block.settings.caption }}</div>
+                                    {%- endif -%}
+                                </div>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                    
+                    <!-- Slider Arrows -->
+                    <button class="slider-arrow prev" aria-label="Previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="slider-arrow next" aria-label="Next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <!-- Slider Dots -->
+                    <div class="slider-dots">
+                        {%- for block in section.blocks -%}
+                            {%- if block.type == 'slide' -%}
+                                <button class="dot {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Slide {{ forloop.index }}"></button>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .content-slider-container {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-{{ section.id }} .content-slider-grid {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Left Content */
+.section-{{ section.id }} .content-side {
+    flex: 1;
+}
+
+.section-{{ section.id }} .content-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: {{ section.settings.accent_color }};
+    margin-bottom: 15px;
+}
+
+.section-{{ section.id }} .content-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 20px 0;
+    line-height: 1.25;
+}
+
+.section-{{ section.id }} .content-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin-bottom: 25px;
+}
+
+/* Features */
+.section-{{ section.id }} .content-features {
+    margin-bottom: 30px;
+}
+
+.section-{{ section.id }} .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.section-{{ section.id }} .feature-icon {
+    width: 22px;
+    height: 22px;
+    background: {{ section.settings.accent_color }};
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.section-{{ section.id }} .feature-text {
+    font-size: 15px;
+    color: {{ section.settings.text_color }};
+    line-height: 1.5;
+}
+
+.section-{{ section.id }} .content-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: {{ section.settings.button_radius }}px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .content-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Right Slider */
+.section-{{ section.id }} .slider-side {
+    flex: 1;
+}
+
+.section-{{ section.id }} .image-slider {
+    position: relative;
+    border-radius: {{ section.settings.slider_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+}
+
+.section-{{ section.id }} .slider-track {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+.section-{{ section.id }} .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.section-{{ section.id }} .slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.section-{{ section.id }} .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-{{ section.id }} .slide .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.section-{{ section.id }} .slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Slider Arrows */
+.section-{{ section.id }} .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+}
+
+.section-{{ section.id }} .slider-arrow:hover {
+    background: {{ section.settings.accent_color }};
+    color: #fff;
+}
+
+.section-{{ section.id }} .slider-arrow.prev {
+    left: 15px;
+}
+
+.section-{{ section.id }} .slider-arrow.next {
+    right: 15px;
+}
+
+/* Slider Dots */
+.section-{{ section.id }} .slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.section-{{ section.id }} .dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.5);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.section-{{ section.id }} .dot.active,
+.section-{{ section.id }} .dot:hover {
+    background: {{ section.settings.accent_color }};
+    border-color: {{ section.settings.accent_color }};
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .content-slider-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .section-{{ section.id }} .content-heading {
+        font-size: 28px;
+    }
+    
+    .section-{{ section.id }} .slider-side {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-{{ section.id }} .content-heading {
+        font-size: 24px;
+    }
+    
+    .section-{{ section.id }} .slider-arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .section-{{ section.id }} .slider-arrow.prev {
+        left: 10px;
+    }
+    
+    .section-{{ section.id }} .slider-arrow.next {
+        right: 10px;
+    }
+}
+{% endstyle %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('image-slider-{{ section.id }}');
+    if (!slider) return;
+    
+    const slides = slider.querySelectorAll('.slide');
+    const dots = slider.querySelectorAll('.dot');
+    const prevBtn = slider.querySelector('.slider-arrow.prev');
+    const nextBtn = slider.querySelector('.slider-arrow.next');
+    
+    let currentIndex = 0;
+    let autoplayInterval;
+    const autoplayDelay = {{ section.settings.autoplay_speed }}000;
+    
+    function showSlide(index) {
+        if (index >= slides.length) index = 0;
+        if (index < 0) index = slides.length - 1;
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        
+        currentIndex = index;
+    }
+    
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+    
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+    
+    function startAutoplay() {
+        if ({{ section.settings.autoplay | json }}) {
+            autoplayInterval = setInterval(nextSlide, autoplayDelay);
+        }
+    }
+    
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+    
+    // Event Listeners
+    prevBtn.addEventListener('click', function() {
+        stopAutoplay();
+        prevSlide();
+        startAutoplay();
+    });
+    
+    nextBtn.addEventListener('click', function() {
+        stopAutoplay();
+        nextSlide();
+        startAutoplay();
+    });
+    
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            stopAutoplay();
+            showSlide(parseInt(this.dataset.index));
+            startAutoplay();
+        });
+    });
+    
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+    
+    // Start autoplay
+    startAutoplay();
+});
+</script>
+
+{% schema %}
+{
+    "name": "Content Image Slider",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Content"
+        },
+        {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "OUR SERVICES"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Professional Cleaning Solutions"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use. Our solutions help businesses maintain cleaner, healthier environments.</p>"
+        },
+        {
+            "type": "header",
+            "content": "Features"
+        },
+        {
+            "type": "text",
+            "id": "feature_1",
+            "label": "Feature 1",
+            "default": "High-quality cleaning equipment"
+        },
+        {
+            "type": "text",
+            "id": "feature_2",
+            "label": "Feature 2",
+            "default": "Expert support & training"
+        },
+        {
+            "type": "text",
+            "id": "feature_3",
+            "label": "Feature 3",
+            "default": "Eco-friendly solutions"
+        },
+        {
+            "type": "text",
+            "id": "feature_4",
+            "label": "Feature 4",
+            "default": "Nationwide coverage"
+        },
+        {
+            "type": "header",
+            "content": "Button"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Learn More"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "range",
+            "id": "button_radius",
+            "label": "Button Radius",
+            "min": 0,
+            "max": 30,
+            "step": 2,
+            "unit": "px",
+            "default": 4
+        },
+        {
+            "type": "header",
+            "content": "Slider Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "autoplay",
+            "label": "Autoplay",
+            "default": true
+        },
+        {
+            "type": "range",
+            "id": "autoplay_speed",
+            "label": "Autoplay Speed",
+            "min": 2,
+            "max": 10,
+            "step": 1,
+            "unit": "sec",
+            "default": 5
+        },
+        {
+            "type": "range",
+            "id": "slider_radius",
+            "label": "Slider Border Radius",
+            "min": 0,
+            "max": 30,
+            "step": 2,
+            "unit": "px",
+            "default": 12
+        },
+        {
+            "type": "header",
+            "content": "Typography"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 36
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "accent_color",
+            "label": "Accent Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "slide",
+            "name": "Slide",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "caption",
+                    "label": "Caption (Optional)"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Content Image Slider",
+            "blocks": [
+                {
+                    "type": "slide",
+                    "settings": {
+                        "caption": "Professional Cleaning Equipment"
+                    }
+                },
+                {
+                    "type": "slide",
+                    "settings": {
+                        "caption": "Industrial Solutions"
+                    }
+                },
+                {
+                    "type": "slide",
+                    "settings": {
+                        "caption": "Expert Support"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

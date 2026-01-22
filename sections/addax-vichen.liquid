@@ -1,0 +1,462 @@
+<div class="choose-config-section section-{{ section.id }}">
+    <div class="cc-container">
+        
+        <!-- Header -->
+        <div class="cc-header">
+            {%- if section.settings.heading != blank -%}
+                <h2 class="cc-heading">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+                <p class="cc-description">{{ section.settings.description }}</p>
+            {%- endif -%}
+            {%- if section.settings.button_text != blank -%}
+                <a href="{{ section.settings.button_link | default: '#' }}" class="cc-button">{{ section.settings.button_text }}</a>
+            {%- endif -%}
+        </div>
+        
+        <!-- Products Grid -->
+        <div class="cc-grid">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'product' -%}
+                    <div class="cc-card" {{ block.shopify_attributes }}>
+                        <div class="card-image">
+                            {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 500 }}" alt="{{ block.settings.title }}" loading="lazy">
+                            {%- else -%}
+                                <div class="placeholder-img"></div>
+                            {%- endif -%}
+                        </div>
+                        <div class="card-content">
+                            {%- if block.settings.title != blank -%}
+                                <h3 class="card-title">{{ block.settings.title }}</h3>
+                            {%- endif -%}
+                            {%- if block.settings.description != blank -%}
+                                <p class="card-desc">{{ block.settings.description }}</p>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        
+        <!-- Underline - BOTTOM -->
+        <div class="cc-underline"></div>
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .cc-container {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.section-{{ section.id }} .cc-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-{{ section.id }} .cc-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 8px 0;
+}
+
+.section-{{ section.id }} .cc-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: {{ section.settings.text_color }};
+    max-width: 750px;
+    margin: 0 auto 20px;
+}
+
+.section-{{ section.id }} .cc-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .cc-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+}
+
+/* Grid - 3 Columns */
+.section-{{ section.id }} .cc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Card */
+.section-{{ section.id }} .cc-card {
+    border: {{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }};
+    border-radius: {{ section.settings.card_radius }}px;
+    background: {{ section.settings.card_bg }};
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .cc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Card Image */
+.section-{{ section.id }} .card-image {
+    padding: 15px 15px 0 15px;
+}
+
+.section-{{ section.id }} .card-image img {
+    width: 100%;
+    height: {{ section.settings.image_height }}px;
+    object-fit: contain;
+    border-radius: {{ section.settings.image_radius }}px;
+    transition: transform 0.4s ease;
+}
+
+.section-{{ section.id }} .cc-card:hover .card-image img {
+    transform: scale(1.03);
+}
+
+.section-{{ section.id }} .placeholder-img {
+    width: 100%;
+    height: {{ section.settings.image_height }}px;
+    background: #e0e0e0;
+    border-radius: {{ section.settings.image_radius }}px;
+}
+
+/* Card Content */
+.section-{{ section.id }} .card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-{{ section.id }} .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 10px 0;
+}
+
+.section-{{ section.id }} .card-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+}
+
+/* Underline - BOTTOM - FIXED */
+.section-{{ section.id }} .cc-underline {
+    display: block;
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background-color: {{ section.settings.underline_color }};
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .cc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-{{ section.id }} .cc-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .section-{{ section.id }} .cc-heading {
+        font-size: 22px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Choose Configuration",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Header"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Choose Your Configuration"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "With a fleet of pre-built trailer options available, choose an option that best suits your industries needs!"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 20,
+            "max": 40,
+            "step": 2,
+            "unit": "px",
+            "default": 26
+        },
+        {
+            "type": "header",
+            "content": "Button"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "View All Configurations"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "header",
+            "content": "Underline (Bottom)"
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Height",
+            "min": 2,
+            "max": 10,
+            "step": 1,
+            "unit": "px",
+            "default": 4
+        },
+        {
+            "type": "header",
+            "content": "Card Settings"
+        },
+        {
+            "type": "color",
+            "id": "card_border_color",
+            "label": "Card Border Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "card_border_width",
+            "label": "Card Border Width",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "unit": "px",
+            "default": 2
+        },
+        {
+            "type": "range",
+            "id": "card_radius",
+            "label": "Card Border Radius",
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "px",
+            "default": 8
+        },
+        {
+            "type": "color",
+            "id": "card_bg",
+            "label": "Card Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Image Settings"
+        },
+        {
+            "type": "range",
+            "id": "image_height",
+            "label": "Image Height",
+            "min": 150,
+            "max": 300,
+            "step": 10,
+            "unit": "px",
+            "default": 200
+        },
+        {
+            "type": "range",
+            "id": "image_radius",
+            "label": "Image Border Radius",
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "px",
+            "default": 8
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background",
+            "default": "#f5f5f5"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#2d5a27"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#1e3d1a"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "product",
+            "name": "Product",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Tipper"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Simplify the upkeep of parks, urban areas, and green spaces with our agile electric tipper vans."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Choose Configuration",
+            "blocks": [
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Tipper",
+                        "description": "Simplify the upkeep of parks, urban areas, and green spaces with our agile electric tipper vans."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Tipping Container",
+                        "description": "Tackle urban pollution head-on with our electric tipping container trucks."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Cargo",
+                        "description": "Take your business to the next level with an electric cargo van crafted to meet your demands."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Flatbed",
+                        "description": "Versatile and robust, our electric flatbed vehicles are perfect for transporting heavy equipment."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Dropside",
+                        "description": "Easy loading and unloading with our electric dropside vehicles."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Box Body",
+                        "description": "Secure and weather-protected transportation with our electric box body vehicles."
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+
+

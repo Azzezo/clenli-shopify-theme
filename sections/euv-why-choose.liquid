@@ -1,0 +1,234 @@
+<div class="why-choose section-{{ section.id }}">
+    <div class="wc-container">
+        
+        <!-- Top Underline -->
+        {% comment %} <div class="wc-underline wc-underline-top"></div> {% endcomment %}
+          {% comment %} <div class="euv-underline"></div> {% endcomment %}
+        <!-- Logo -->
+        {%- if section.settings.logo != blank -%}
+            <div class="wc-logo">
+                <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="{{ section.settings.heading }}">
+            </div>
+        {%- endif -%}
+        
+        <!-- Bottom Underline -->
+        <div class="wc-underline wc-underline-bottom"></div>
+        
+        <!-- Heading -->
+        {%- if section.settings.heading != blank -%}
+            <h2 class="wc-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        
+        <!-- Description -->
+        {%- if section.settings.description != blank -%}
+            <p class="wc-description">{{ section.settings.description }}</p>
+        {%- endif -%}
+         <div class="euv-underline"></div>
+    </div>
+    
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .wc-container {
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-{{ section.id }} .wc-underline {
+    width: 100%;
+    max-width: {{ section.settings.underline_width }}px;
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin: 0 auto;
+}
+
+.section-{{ section.id }} .wc-underline-top {
+    margin-bottom: {{ section.settings.underline_spacing }}px;
+}
+
+.section-{{ section.id }} .wc-underline-bottom {
+    margin-top: {{ section.settings.underline_spacing }}px;
+    margin-bottom: 30px;
+}
+
+.section-{{ section.id }} .wc-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-{{ section.id }} .wc-logo img {
+    width: {{ section.settings.logo_width }}px;
+    height: auto;
+}
+
+.section-{{ section.id }} .wc-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 20px 0;
+}
+
+.section-{{ section.id }} .wc-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin: 0 0 40px 0;
+}
+.section-{{ section.id }} .euv-underline {
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin: 0;
+    display: block;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .section-{{ section.id }} .wc-logo img {
+        width: 150px;
+    }
+    
+    .section-{{ section.id }} .wc-heading {
+        font-size: 18px;
+    }
+    
+    .section-{{ section.id }} .wc-description {
+        font-size: 15px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "EUV Why Choose Us",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        },
+        {
+            "type": "range",
+            "id": "logo_width",
+            "label": "Logo Width",
+            "min": 100,
+            "max": 300,
+            "step": 10,
+            "unit": "px",
+            "default": 200
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Why Choose Clenli Direct"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader in the cleaning industry, offering award-winning cleaning solutions, comprehensive support, and our own expert in-house service team."
+        },
+        {
+            "type": "header",
+            "content": "Underline Settings"
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Height",
+            "min": 2,
+            "max": 8,
+            "step": 1,
+            "unit": "px",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "underline_width",
+            "label": "Underline Width",
+            "min": 100,
+            "max": 900,
+            "step": 50,
+            "unit": "px",
+            "default": 900
+        },
+        {
+            "type": "range",
+            "id": "underline_spacing",
+            "label": "Underline Spacing",
+            "min": 10,
+            "max": 50,
+            "step": 5,
+            "unit": "px",
+            "default": 20
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 50
+        }
+    ],
+    "presets": [
+        {
+            "name": "EUV Why Choose Us"
+        }
+    ]
+}
+{% endschema %}

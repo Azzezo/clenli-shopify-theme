@@ -1,0 +1,334 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "pacvac_hero_main": {
+      "type": "pacvac-hero-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_point",
+          "settings": {
+            "title": "Clean four times faster",
+            "description": "Studies have shown that cordless backpack vacuum cleaners clean up to 4 times faster than a corded tub vacuum cleaner."
+          }
+        },
+        "feature_2": {
+          "type": "feature_point",
+          "settings": {
+            "title": "Freedom to move",
+            "description": "Backpack vacuums give you unparalleled freedom of movement, making any cleaning task—big or small—a breeze."
+          }
+        },
+        "feature_3": {
+          "type": "feature_point",
+          "settings": {
+            "title": "Lightweight and effortless",
+            "description": "Designed for ease of use, these ultra-light backpack vacuums provide maximum comfort while you clean."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Pacvacccc.png",
+        "subtitle": "HOOVERS & VACUUMS",
+        "heading": "Pacvac Backpack Vacuums",
+        "description": "<p>Backpack vacuums outperform traditional uprights and canisters with powerful suction and faster cleaning. Worn on the back, they reduce effort, boost mobility, and make tackling large spaces like offices, schools, and hotels effortless. Their lightweight design allows easy access to tight spots, stairs, and under furniture—delivering efficiency without compromise.</p>",
+        "button_text": "Explore Pacvac Range",
+        "button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "subtitle_color": "#333333",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "pacvac_content_main": {
+      "type": "pacvac-content-alternating",
+      "blocks": {
+        "content_1": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Pacvac_Bootstrap_69.png",
+            "image_position": "right",
+            "title": "Advantages of Backpack Vacuums",
+            "description": "While traditional tub vacuums are still widely used and effective, backpack vacuums offer enhanced efficiency, mobility, and user comfort, making them a popular choice for commercial and professional cleaning applications. Remarkably, users can anticipate cleaning speeds up to five times faster with a backpack vacuum in comparison to standard tub vacuums. Negotiating tight spaces, maneuvering around furniture, and ascending or descending stairs become effortless tasks, eliminating the burden of dragging a wheeled vacuum."
+          }
+        },
+        "content_2": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Bootstrap_Images_19.png",
+            "image_position": "left",
+            "title": "About Pacvac",
+            "description": "Pacvac is a world-leading manufacturer of professional backpack vacuum cleaners, specializing in commercial and industrial cleaning solutions. Their range of high-performance products, featuring innovative technologies such as four stage filtration, caters to diverse sectors. Committed to sustainability, Pacvac focuses on energy efficiency and durability."
+          }
+        }
+      },
+      "block_order": [
+        "content_1",
+        "content_2"
+      ],
+      "settings": {
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "pacvac_video_main": {
+      "type": "pacvac-video-section",
+      "settings": {
+        "heading": "Enjoy Complete Freedom with Pacvac",
+        "subtitle": "Learn how Pacvac can save you time and effort with their backpack vacuum range!",
+        "video_url": "https://www.youtube.com/embed/1emaPI4mUIk",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "pacvac_highlights_main": {
+      "type": "pacvac-highlights",
+      "blocks": {
+        "highlight_1": {
+          "type": "highlight",
+          "settings": {
+            "image": "shopify://shop_images/Pacvac_Four_Stage_Filtration.png",
+            "title": "Four Stage Filtration",
+            "description": "The Pacvac range leaves air cleaner than it finds it. Each model comes as standard with a four stage filtration system including a vacuum and exhaust filter. This protects against the likes of dust, bacteria, pollen and mould spores."
+          }
+        },
+        "highlight_2": {
+          "type": "highlight",
+          "settings": {
+            "image": "shopify://shop_images/Pacvac_Ambidextreous.png",
+            "title": "Ambidextrous Design",
+            "description": "The Pacvac Range comes with adjustable hoses that make them usable for both left and right handed use. It's clear dome is also see through, helping you to understand when you need to empty the vacuum."
+          }
+        },
+        "highlight_3": {
+          "type": "highlight",
+          "settings": {
+            "image": "shopify://shop_images/Pacvac_Complete_Comfort.png",
+            "title": "Complete Comfort",
+            "description": "The Ecoharness features three levels of height adjustability, comfortable thick padding, a breathable mesh backing for complete comfort in use. Pacvac's are also made from at least 50% recycled plastic for a more sustainable experience."
+          }
+        }
+      },
+      "block_order": [
+        "highlight_1",
+        "highlight_2",
+        "highlight_3"
+      ],
+      "settings": {
+        "heading": "Pacvac Highlights",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "pacvac_products_main": {
+      "type": "pacvac-product-range",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Pacvac_Velo_Corded_Backpack_Hoover_Vacuum_f90b4bd0-f9d5-4a25-991d-2698558a52e2.png",
+            "title": "Pacvac Velo (Corded)",
+            "description": "Say hello to the new PacVac Velo backpack hoover vacuum. Perfect for both commercial and home use, Velo combines strong suction from a 900W motor with a lightweight design at just 3.9kg. Featuring the comfortable Ecoharness made from recycled materials and an H13 HEPA filter for superior air quality, Velo is the ideal vacuuming solution.",
+            "button_text": "View Pacvac Velo",
+            "button_link": ""
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Pacvac_Velo_Go_Battery_HEPA_H13_Backpack_Hoover_Vacuum_b2e7a4e3-9d1f-4ec9-8b2c-be16667311fb.png",
+            "title": "Pacvac Velo Go (Battery)",
+            "description": "Introducing the new PacVac Velo Go backpack hoover vacuum. The ultimate performance cordless battery powered backpack vacuum, The PacVac Velo Go backpack hoover vacuum cleans up to four times faster with the powerful cordless freedom and superior ergonomic backpack comfort, giving you the best commercial vacuuming experience.",
+            "button_text": "View Pacvac Velo Go",
+            "button_link": ""
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Pacvac_Superpro_Battery.png",
+            "title": "Pacvac SuperPro Go (Battery)",
+            "description": "Pacvac's Superpro Go Advanced Backpack Hoover Vacuum is an advanced battery-powered design with strong suction, delivering a superior combination of manoeuvrability, efficiency and productivity. Designed with advanced battery-power and a brushless motor, this is the perfect choice for large scale commercial cleaning.",
+            "button_text": "View Pacvac SuperPro Go",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_1",
+        "product_2",
+        "product_3"
+      ],
+      "settings": {
+        "heading": "The PacVac Range",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "featured_product_we_jmUQXD": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_nJMfGi": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_VxGV4R": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_VxGV4R"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pacvac_hero_main",
+    "pacvac_content_main",
+    "pacvac_video_main",
+    "pacvac_highlights_main",
+    "pacvac_products_main",
+    "featured_product_we_jmUQXD",
+    "newsletter_nJMfGi"
+  ]
+}

@@ -1,0 +1,266 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "egholm-main": {
+      "type": "egholm-page",
+      "blocks": {
+        "attachment-1": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/egholm_city_ranger_3070_as_road_sweeper_20bae540-40aa-49dc-b3d2-916e7364354e.png",
+            "name": "Sweeper",
+            "description": "Complete suction sweeper system, giving you an efficient sweeper machine."
+          }
+        },
+        "attachment-2": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/102.png",
+            "name": "Rotary/Mulch Mower",
+            "description": "The rotary and mulch mower is made to maintain the good looks of narrow grass paths."
+          }
+        },
+        "attachment-3": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/104_73304ed6-d1e5-414d-bba4-89a77bbe7b27.png",
+            "name": "Hedge Cutter",
+            "description": "Avoid slow work in unhealthy working postures with the hedge cutter attachment."
+          }
+        },
+        "attachment-4": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/105.png",
+            "name": "Lawn Edger",
+            "description": "The hydraulic lawn edger effectively maintains lawn edges, whatever their shape."
+          }
+        },
+        "attachment-5": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/106_e15db9b0-eed8-4ae2-8e6c-7b5792c2acfa.png",
+            "name": "Tipping Shovel",
+            "description": "The tipping shovel makes light work of transporting gravel, sand or mould."
+          }
+        },
+        "attachment-6": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/107_1.png",
+            "name": "Weed Brush",
+            "description": "The weed brush is the perfect eco-friendly tool for keeping outdoor areas weed-free."
+          }
+        },
+        "attachment-7": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/108.png",
+            "name": "Tipper Trailer",
+            "description": "Designed to make light work of transporting bulk loads such as park and garden refuse."
+          }
+        },
+        "attachment-8": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/110.png",
+            "name": "Scrub Deck",
+            "description": "Scrubdeck for thorough cleaning of roads, sidewalks and other surfaces."
+          }
+        },
+        "attachment-9": {
+          "type": "attachment",
+          "settings": {
+            "image": "shopify://shop_images/109.png",
+            "name": "Salt & Sand Spreader",
+            "description": "The salt and sand spreader is perfect for winter weather and ice."
+          }
+        },
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/5_910.79_11_020.29_68_529.26_7.png",
+            "name": "Egholm Park Ranger 2150",
+            "power_type": "Diesel Powered",
+            "link": "/products/egholm-park-ranger-2150"
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/5_910.79_11_020.29_68_529.26_6.png",
+            "name": "Egholm City Ranger 2260",
+            "power_type": "Petrol Powered",
+            "link": "/products/egholm-city-ranger-2260"
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/5_910.79_11_020.29_68_529.26_5.png",
+            "name": "Egholm City Ranger 3070",
+            "power_type": "Diesel Powered",
+            "link": "/products/egholm-city-ranger-3070"
+          }
+        }
+      },
+      "block_order": [
+        "attachment-1",
+        "attachment-2",
+        "attachment-3",
+        "attachment-4",
+        "attachment-5",
+        "attachment-6",
+        "attachment-7",
+        "attachment-8",
+        "attachment-9",
+        "product-1",
+        "product-2",
+        "product-3"
+      ],
+      "settings": {
+        "hero_tag": "UTILITY MACHINES",
+        "hero_title": "Egholm Utility Machines",
+        "hero_desc": "Egholm have revolutionized outdoor cleaning. A quick attachment change can transform your Egholm machine from a sweeper to a grass cutter, hedge trimmer, edger, snow plough, and much more!",
+        "feature1_title": "Unmatched versatility:",
+        "feature1_text": "Egholm machines combine versatility with specialized performance to meet your daily needs. With a quick attachment change, your machine can seamlessly transform from a sweeper to a hedge trimmer, grass cutter, or salt spreader.",
+        "feature2_title": "Effortless operation:",
+        "feature2_text": "No matter which attachment you use, Egholm machines feature intuitive, user-friendly controls. This means less time learning and more time getting the job done efficiently.",
+        "feature3_title": "Superior craftmanship:",
+        "feature3_text": "Built with premium materials and expert craftsmanship, Egholm machines deliver outstanding durability and performance.",
+        "hero_btn_text": "Explore Egholm Range",
+        "hero_btn_link": "shopify://collections/machines-sweepers",
+        "about_title": "About Egholm",
+        "about_text": "About Egholm\nEgholm is the epitome of innovation in outdoor maintenance and landscaping solutions. Hailing from Denmark, Egholm specializes in crafting multifunctional utility machines that redefine efficiency and versatility. Elevate your outdoor experience with Egholm, where functionality meets a revolution in ease and performance.",
+        "apart_title": "What Sets Egholm Apart?",
+        "apart_text": "More than just sweepers, Egholm presents a comprehensive array of utility machines that redefine outdoor maintenance. Egholm's machines are true multitaskers, seamlessly transitioning from sweepers to lawn mowers, hedge cutters, and beyond.",
+        "attach_title": "Quick Attachment Change",
+        "attach_text": "Experience the convenience of effortlessly changing attachments on the Park Ranger 2150 in under four minutes, and on the City Ranger 2260 & 3070 in less than one minute! All without any tools!",
+        "attachments_title": "Most Popular Egholm Attachments",
+        "attachments_subtitle": "With a full range of attachments to choose from, hand pick the selection that works best for you.",
+        "range_title": "Egholm Range"
+      }
+    },
+    "featured_product_we_HRKNxR": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_NiPPeL": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_zGTJtj": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_zGTJtj"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "egholm-main",
+    "featured_product_we_HRKNxR",
+    "newsletter_NiPPeL"
+  ]
+}

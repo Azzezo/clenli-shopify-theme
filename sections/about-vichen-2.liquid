@@ -1,0 +1,376 @@
+<div class="choose-config-section section-{{ section.id }}">
+    <div class="cc-container">
+        
+        <!-- Header -->
+        <div class="cc-header">
+            {%- if section.settings.heading != blank -%}
+                <h2 class="cc-heading">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+                <p class="cc-description">{{ section.settings.description }}</p>
+            {%- endif -%}
+            {%- if section.settings.button_text != blank -%}
+                <a href="{{ section.settings.button_link | default: '#' }}" class="cc-button">{{ section.settings.button_text }}</a>
+            {%- endif -%}
+        </div>
+        
+        <!-- Products Grid - 6 Items -->
+        <div class="cc-grid">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'product' -%}
+                    <div class="cc-item" {{ block.shopify_attributes }}>
+                        <div class="item-image">
+                            {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 500 }}" alt="{{ block.settings.title }}" loading="lazy">
+                            {%- else -%}
+                                <div class="placeholder-img"></div>
+                            {%- endif -%}
+                        </div>
+                        {%- if block.settings.title != blank -%}
+                            <h3 class="item-title">{{ block.settings.title }}</h3>
+                        {%- endif -%}
+                        {%- if block.settings.description != blank -%}
+                            <p class="item-desc">{{ block.settings.description }}</p>
+                        {%- endif -%}
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .cc-container {
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.section-{{ section.id }} .cc-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-{{ section.id }} .cc-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 12px 0;
+}
+
+.section-{{ section.id }} .cc-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: {{ section.settings.text_color }};
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+.section-{{ section.id }} .cc-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .cc-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+}
+
+/* Grid - 3 Columns */
+.section-{{ section.id }} .cc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 40px;
+}
+
+/* Item */
+.section-{{ section.id }} .cc-item {
+    text-align: center;
+}
+
+/* Image */
+.section-{{ section.id }} .item-image {
+    margin-bottom: 20px;
+    height: {{ section.settings.image_height }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-{{ section.id }} .item-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.section-{{ section.id }} .cc-item:hover .item-image img {
+    transform: scale(1.05);
+}
+
+.section-{{ section.id }} .placeholder-img {
+    width: 200px;
+    height: 200px;
+    background: #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Title */
+.section-{{ section.id }} .item-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 12px 0;
+}
+
+/* Description */
+.section-{{ section.id }} .item-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .cc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+    
+    .section-{{ section.id }} .item-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-{{ section.id }} .cc-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .section-{{ section.id }} .cc-heading {
+        font-size: 24px;
+    }
+    
+    .section-{{ section.id }} .item-image {
+        height: 220px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Choose Configuration",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Header"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Choose Your Configuration"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "With a fleet of pre-built trailer options available, choose an option that best suits your industries needs!"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "Button"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "View All Configurations"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "header",
+            "content": "Image Settings"
+        },
+        {
+            "type": "range",
+            "id": "image_height",
+            "label": "Image Height",
+            "min": 150,
+            "max": 350,
+            "step": 10,
+            "unit": "px",
+            "default": 250
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background",
+            "default": "#f5f5f5"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#2d5a27"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#1e3d1a"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "product",
+            "name": "Product",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Tipper"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Simplify the upkeep of parks, urban areas, and green spaces with our agile and easy-to-operate electric tipper vans."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Choose Configuration",
+            "blocks": [
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Tipper",
+                        "description": "Simplify the upkeep of parks, urban areas, and green spaces with our agile and easy-to-operate electric tipper vans. Built for adaptability, these vehicles deliver comfort and reliability."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Tipping Container",
+                        "description": "Tackle urban pollution head-on with our electric tipping container trucks. These innovative vehicles replace traditional fuel-powered models, providing a sustainable solution."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Cargo",
+                        "description": "Take your business to the next level with an electric cargo van crafted to meet your demands. Its compact size offers substantial storage capacity for efficient loading."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Flatbed",
+                        "description": "Versatile and robust, our electric flatbed vehicles are perfect for transporting heavy equipment and materials across urban and industrial environments."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Dropside",
+                        "description": "Easy loading and unloading with our electric dropside vehicles. The drop-down sides provide quick access for efficient material handling and transport."
+                    }
+                },
+                {
+                    "type": "product",
+                    "settings": {
+                        "title": "Box Body",
+                        "description": "Secure and weather-protected transportation with our electric box body vehicles. Ideal for deliveries requiring enclosed cargo space and maximum protection."
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

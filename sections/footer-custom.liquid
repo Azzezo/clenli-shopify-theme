@@ -1,0 +1,808 @@
+<style>
+/* Newsletter Section */
+.block-newsletter {
+  background: #333;
+  padding: 40px 0;
+}
+
+.newsletter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.newsletter-content h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+
+.newsletter-content p {
+  color: #aaa;
+  margin: 0;
+  font-size: 14px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  max-width: 450px;
+  width: 100%;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #999;
+}
+
+.newsletter-form button {
+  background: #ffa800;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #e69500;
+}
+
+/* Main Footer */
+.main-footer {
+  background: #222;
+  padding: 60px 0 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Column */
+.footer-column {
+  color: #aaa;
+}
+
+.footer-column .footer-logo {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-column .footer-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ffa800;
+  display: inline-block;
+}
+
+/* Contact Info in Footer */
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-contact-item svg {
+  flex-shrink: 0;
+  color: #ffa800;
+  margin-top: 3px;
+}
+
+.footer-contact-item .label {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.footer-contact-item .value {
+  font-size: 15px;
+  color: #fff;
+}
+
+.footer-contact-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+  color: #ffa800;
+}
+
+.footer-phone .value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer-address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* Footer Social Links */
+.footer-social {
+  margin-top: 25px;
+}
+
+.footer-social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #333;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.footer-social-list li a:hover {
+  background: #ffa800;
+  transform: translateY(-3px);
+}
+
+.footer-social-list li a svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links li a:hover {
+  color: #ffa800;
+  padding-left: 5px;
+}
+
+/* Two Column Links */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background: #1a1a1a;
+  padding: 20px 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.copyright {
+  color: #888;
+  font-size: 13px;
+}
+
+.copyright a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.copyright a:hover {
+  color: #ffa800;
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.prl-number {
+  color: #888;
+  font-size: 13px;
+}
+
+.payment-icons img {
+  height: 30px;
+  width: auto;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: #ffa800;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(255, 168, 0, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: #e69500;
+  transform: translateY(-5px);
+}
+
+/* Mobile Accordion */
+@media (max-width: 768px) {
+  .newsletter-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+
+  .footer-title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+  }
+
+  .footer-title::after {
+    content: '+';
+    font-size: 20px;
+    color: #ffa800;
+    transition: transform 0.3s ease;
+  }
+
+  .footer-title.active::after {
+    content: '−';
+  }
+
+  .footer-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .footer-content.active {
+    max-height: 500px;
+    padding-top: 20px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<!-- Newsletter Section -->
+{% if section.settings.show_newsletter %}
+<div class="block-newsletter">
+  <div class="page-width">
+    <div class="newsletter-inner">
+      <div class="newsletter-content">
+        <h3>{{ section.settings.newsletter_heading | default: 'Sign up to Newsletter' }}</h3>
+        <p>{{ section.settings.newsletter_text | default: 'And receive latest updates.' }}</p>
+      </div>
+      {% form 'customer', class: 'newsletter-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input 
+          type="email" 
+          name="contact[email]" 
+          placeholder="{{ section.settings.newsletter_placeholder | default: 'Enter your email address' }}"
+          required
+          autocomplete="email"
+        >
+        <button type="submit">{{ section.settings.newsletter_button | default: 'Sign up' }}</button>
+      {% endform %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Main Footer -->
+<div class="main-footer">
+  <div class="page-width">
+    <div class="footer-grid">
+      
+      <!-- Column 1: Logo & Contact -->
+      <div class="footer-column">
+        {% if section.settings.footer_logo != blank %}
+          <div class="footer-logo">
+            <a href="{{ routes.root_url }}">
+              <img src="{{ section.settings.footer_logo | image_url: width: 300 }}" alt="{{ shop.name }}">
+            </a>
+          </div>
+        {% endif %}
+
+        {% if section.settings.phone != blank %}
+          <div class="footer-contact-item footer-phone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <div>
+              <span class="label">Got questions? Call us 9 to 5!</span>
+              <a href="tel:{{ section.settings.phone | remove: ' ' | remove: '(' | remove: ')' }}" class="value">{{ section.settings.phone }}</a>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if section.settings.address != blank %}
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <address class="footer-address">{{ section.settings.address }}</address>
+          </div>
+        {% endif %}
+
+        <!-- Social Links -->
+        {% if section.settings.show_social %}
+          <div class="footer-social">
+            <ul class="footer-social-list">
+              {% if section.settings.facebook_url != blank %}
+                <li>
+                  <a href="{{ section.settings.facebook_url }}" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                  </a>
+                </li>
+              {% endif %}
+              {% if section.settings.twitter_url != blank %}
+                <li>
+                  <a href="{{ section.settings.twitter_url }}" target="_blank" rel="noopener" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                  </a>
+                </li>
+              {% endif %}
+              {% if section.settings.linkedin_url != blank %}
+                <li>
+                  <a href="{{ section.settings.linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Column 2: Find it Fast -->
+      <div class="footer-column">
+        <h4 class="footer-title" data-toggle="footer">{{ section.settings.col2_title | default: 'Find it fast' }}</h4>
+        <div class="footer-content">
+          <div class="footer-links-grid">
+            <ul class="footer-links">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'link_col2_left' -%}
+                  <li><a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a></li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+            <ul class="footer-links">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'link_col2_right' -%}
+                  <li><a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a></li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 3: My Account -->
+      <div class="footer-column">
+        <h4 class="footer-title" data-toggle="footer">{{ section.settings.col3_title | default: 'My Account' }}</h4>
+        <div class="footer-content">
+          <ul class="footer-links">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'link_col3' -%}
+                <li><a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a></li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 4: Customer Care -->
+      <div class="footer-column">
+        <h4 class="footer-title" data-toggle="footer">{{ section.settings.col4_title | default: 'Customer Care' }}</h4>
+        <div class="footer-content">
+          <ul class="footer-links">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'link_col4' -%}
+                <li><a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a></li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer Bottom -->
+<div class="footer-bottom">
+  <div class="page-width">
+    <div class="footer-bottom-inner">
+      <div class="copyright">
+        <span>&copy; {{ section.settings.copyright_text | default: 'From 1995 - Till now By Clenli Direct. All Rights Reserved.' }}</span>
+        {% if section.settings.terms_url != blank %}
+          <a href="{{ section.settings.terms_url }}">Terms and Conditions</a>
+        {% endif %}
+      </div>
+      <div class="footer-bottom-right">
+        {% if section.settings.prl_number != blank %}
+          <span class="prl-number">{{ section.settings.prl_number }}</span>
+        {% endif %}
+        {% if section.settings.payment_image != blank %}
+          <div class="payment-icons">
+            <img src="{{ section.settings.payment_image | image_url: width: 300 }}" alt="Payment Methods">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Back to Top Button -->
+{% if section.settings.show_back_to_top %}
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<script>
+  // Back to Top functionality
+  (function() {
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile Accordion
+    const footerTitles = document.querySelectorAll('.footer-title[data-toggle="footer"]');
+    
+    footerTitles.forEach(function(title) {
+      title.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          this.classList.toggle('active');
+          this.nextElementSibling.classList.toggle('active');
+        }
+      });
+    });
+  })();
+</script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Footer Custom",
+  "tag": "footer",
+  "class": "section-footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show Newsletter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "Newsletter Heading",
+      "default": "Sign up to Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Newsletter Text",
+      "default": "And receive latest updates."
+    },
+    {
+      "type": "text",
+      "id": "newsletter_placeholder",
+      "label": "Email Placeholder",
+      "default": "Enter your email address"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_button",
+      "label": "Button Text",
+      "default": "Sign up"
+    },
+    {
+      "type": "header",
+      "content": "Logo & Contact Info"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "+353 (0)1 811 8920"
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "Address",
+      "default": "Unit 14A Stadium Business Park, Ballycoolin Road, Dublin 11, D11 KX4T, Ireland"
+    },
+    {
+      "type": "header",
+      "content": "Social Media"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "label": "Show Social Links",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "twitter_url",
+      "label": "Twitter URL"
+    },
+    {
+      "type": "url",
+      "id": "linkedin_url",
+      "label": "LinkedIn URL"
+    },
+    {
+      "type": "header",
+      "content": "Column Titles"
+    },
+    {
+      "type": "text",
+      "id": "col2_title",
+      "label": "Column 2 Title",
+      "default": "Find it fast"
+    },
+    {
+      "type": "text",
+      "id": "col3_title",
+      "label": "Column 3 Title",
+      "default": "My Account"
+    },
+    {
+      "type": "text",
+      "id": "col4_title",
+      "label": "Column 4 Title",
+      "default": "Customer Care"
+    },
+    {
+      "type": "header",
+      "content": "Footer Bottom"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "From 1995 - Till now By Clenli Direct. All Rights Reserved."
+    },
+    {
+      "type": "url",
+      "id": "terms_url",
+      "label": "Terms & Conditions URL"
+    },
+    {
+      "type": "text",
+      "id": "prl_number",
+      "label": "PRL Number",
+      "default": "Producer Register Limited (PRL) Number: 1628WB"
+    },
+    {
+      "type": "image_picker",
+      "id": "payment_image",
+      "label": "Payment Methods Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_back_to_top",
+      "label": "Show Back to Top Button",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_col2_left",
+      "name": "Find it fast (Left)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    },
+    {
+      "type": "link_col2_right",
+      "name": "Find it fast (Right)",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    },
+    {
+      "type": "link_col3",
+      "name": "My Account Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    },
+    {
+      "type": "link_col4",
+      "name": "Customer Care Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "link_col2_left", "settings": { "link_text": "Scrubber Driers", "link_url": "/collections/scrubber-dryers" } },
+      { "type": "link_col2_left", "settings": { "link_text": "Burnishers", "link_url": "/collections/burnishers" } },
+      { "type": "link_col2_left", "settings": { "link_text": "Concrete Polishers", "link_url": "/collections/concrete-polishers" } },
+      { "type": "link_col2_left", "settings": { "link_text": "Vacuums", "link_url": "/collections/vacuums" } },
+      { "type": "link_col2_left", "settings": { "link_text": "Gum Remover", "link_url": "/collections/gum-remover" } },
+      { "type": "link_col2_left", "settings": { "link_text": "Sweepers", "link_url": "/collections/sweepers" } },
+      { "type": "link_col2_right", "settings": { "link_text": "Maintainers & Cleaners", "link_url": "/collections/maintainers-cleaners" } },
+      { "type": "link_col2_right", "settings": { "link_text": "Floor Strippers", "link_url": "/collections/floor-strippers" } },
+      { "type": "link_col2_right", "settings": { "link_text": "Window Cleaning", "link_url": "/collections/window-cleaning" } },
+      { "type": "link_col2_right", "settings": { "link_text": "Colour Coding", "link_url": "/collections/colour-coding" } },
+      { "type": "link_col2_right", "settings": { "link_text": "Rhino Floor Pads", "link_url": "/collections/floor-pads" } },
+      { "type": "link_col2_right", "settings": { "link_text": "i-mop", "link_url": "/products/imop" } },
+      { "type": "link_col3", "settings": { "link_text": "About us", "link_url": "/pages/about-us" } },
+      { "type": "link_col3", "settings": { "link_text": "My account", "link_url": "/account" } },
+      { "type": "link_col3", "settings": { "link_text": "Contact Us", "link_url": "/pages/contact" } },
+      { "type": "link_col3", "settings": { "link_text": "Order history", "link_url": "/account" } },
+      { "type": "link_col3", "settings": { "link_text": "Search", "link_url": "/search" } },
+      { "type": "link_col4", "settings": { "link_text": "Service", "link_url": "/pages/service" } },
+      { "type": "link_col4", "settings": { "link_text": "Our Team", "link_url": "/pages/our-team" } },
+      { "type": "link_col4", "settings": { "link_text": "Blog", "link_url": "/blogs/news" } },
+      { "type": "link_col4", "settings": { "link_text": "Product Support", "link_url": "/pages/product-support" } },
+      { "type": "link_col4", "settings": { "link_text": "Contact us", "link_url": "/pages/contact" } }
+    ]
+  }
+}
+{% endschema %}

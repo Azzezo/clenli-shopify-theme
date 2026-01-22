@@ -1,0 +1,287 @@
+<div class="euv-features section-{{ section.id }}">
+    <div class="euv-container">
+        
+        {%- for block in section.blocks -%}
+            <div class="feature-row {% if block.settings.image_position == 'right' %}image-right{% else %}image-left{% endif %}" {{ block.shopify_attributes }}>
+                
+                <!-- Image -->
+                <div class="feature-image">
+                    {%- if block.settings.image != blank -%}
+                        <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title }}" loading="lazy">
+                    {%- else -%}
+                        <div class="placeholder-img">Feature Image</div>
+                    {%- endif -%}
+                </div>
+                
+                <!-- Content -->
+                <div class="feature-content">
+                    {%- if block.settings.title != blank -%}
+                        <h3 class="feature-title">{{ block.settings.title }}</h3>
+                    {%- endif -%}
+                    {%- if block.settings.description != blank -%}
+                        <p class="feature-desc">{{ block.settings.description }}</p>
+                    {%- endif -%}
+                </div>
+                
+            </div>
+            
+            <!-- Green Underline after each feature -->
+              <div class="euv-underline"></div>
+            {% comment %} <div class="feature-underline"></div> {% endcomment %}
+            
+        {%- endfor -%}
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .euv-container {
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Feature Row */
+.section-{{ section.id }} .feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.section-{{ section.id }} .feature-row.image-right {
+    direction: rtl;
+}
+
+.section-{{ section.id }} .feature-row.image-right > * {
+    direction: ltr;
+}
+
+/* Image */
+.section-{{ section.id }} .feature-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section-{{ section.id }} .placeholder-img {
+    width: 100%;
+    height: 300px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border-radius: 8px;
+}
+
+/* Content */
+.section-{{ section.id }} .feature-content {
+    padding: 20px 0;
+}
+
+.section-{{ section.id }} .feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+}
+
+.section-{{ section.id }} .feature-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+}
+
+/* Underline */
+/* .section-{{ section.id }} .feature-underline {
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin-bottom: 20px;
+} */
+.section-{{ section.id }} .euv-underline {
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin: 0;
+    display: block;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-{{ section.id }} .feature-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .section-{{ section.id }} .feature-row.image-right {
+        direction: ltr;
+    }
+    
+    .section-{{ section.id }} .feature-title {
+        font-size: 18px;
+    }
+    
+    .section-{{ section.id }} .feature-desc {
+        font-size: 15px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "EUV Features Alternating",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Underline"
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Height",
+            "min": 2,
+            "max": 8,
+            "step": 1,
+            "unit": "px",
+            "default": 4
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Title Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 20
+        }
+    ],
+    "blocks": [
+        {
+            "type": "feature",
+            "name": "Feature",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "select",
+                    "id": "image_position",
+                    "label": "Image Position",
+                    "options": [
+                        { "value": "left", "label": "Left" },
+                        { "value": "right", "label": "Right" }
+                    ],
+                    "default": "right"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Feature Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Feature description goes here. Explain the benefits and value proposition."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "EUV Features Alternating",
+            "blocks": [
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Environmentally Friendly",
+                        "description": "Looking to make a genuine impact on sustainability or secure a significant ESG achievement? Electric Utility Vehicles (EUVs) are the perfect solution. With zero emissions, they help reduce your carbon footprint while aligning seamlessly with your sustainability goals.",
+                        "image_position": "right"
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Cost-Effective Operation",
+                        "description": "Concerned about the rising costs of maintaining a fuel-powered fleet? EUVs provide a practical and economical alternative. With significantly lower fuel costs compared to petrol or diesel vehicles, they deliver daily savings and a tangible return on investment.",
+                        "image_position": "left"
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Versatility",
+                        "description": "Struggling with the challenges of operating in noise-sensitive or confined environments? Addax EUVs are specifically designed to meet these needs. Their whisper-quiet operation makes them ideal for use in hospitals, schools, and residential areas.",
+                        "image_position": "right"
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Future Proofing",
+                        "description": "As emissions regulations grow stricter and fuel costs continue to rise, the reliability of traditional fuel-powered vehicles becomes increasingly uncertain. Investing in EUVs positions your business for the future.",
+                        "image_position": "left"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

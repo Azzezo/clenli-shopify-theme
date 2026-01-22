@@ -1,0 +1,730 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-brands-page",
+      "blocks": {
+        "91811f90-c5c6-4e7a-9957-62c3b074a234": {
+          "type": "image_picker",
+          "settings": {
+            "brand_name": "Fermends",
+            "link_to_vendor": ""
+          }
+        },
+        "bd43bdf9-0b58-4d3c-9d4a-3027ba7d1bab": {
+          "type": "image_picker",
+          "settings": {
+            "brand_name": "",
+            "link_to_vendor": ""
+          }
+        },
+        "1043872f-3935-4372-b92f-7d7d06808c55": {
+          "type": "image_picker",
+          "settings": {
+            "brand_name": "",
+            "link_to_vendor": ""
+          }
+        },
+        "8514f888-f0b2-4b8f-b507-f2be6f4b94e6": {
+          "type": "image_picker",
+          "settings": {
+            "brand_name": "",
+            "link_to_vendor": ""
+          }
+        },
+        "5b70c252-5adb-4e29-8b65-f825376ae71b": {
+          "type": "image_picker",
+          "settings": {
+            "brand_name": "",
+            "link_to_vendor": ""
+          }
+        },
+        "45d60d37-b824-4269-a114-969aafa1f9d5": {
+          "type": "image_picker",
+          "settings": {
+            "brand_name": "",
+            "link_to_vendor": ""
+          }
+        }
+      },
+      "block_order": [
+        "91811f90-c5c6-4e7a-9957-62c3b074a234",
+        "bd43bdf9-0b58-4d3c-9d4a-3027ba7d1bab",
+        "1043872f-3935-4372-b92f-7d7d06808c55",
+        "8514f888-f0b2-4b8f-b507-f2be6f4b94e6",
+        "5b70c252-5adb-4e29-8b65-f825376ae71b",
+        "45d60d37-b824-4269-a114-969aafa1f9d5"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "display_brands_slider": true,
+        "type": "vendor",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "sachet_system_AQBAcm": {
+      "type": "sachet-system",
+      "blocks": {
+        "point_mxnLHN": {
+          "type": "point",
+          "settings": {
+            "title": "Sustainable",
+            "text": "PVA Soluble Sachets can eradicate single use plastic bottles from your cleaning, and reduce the number of deliveries needed, lowering your CO2 emissions."
+          }
+        },
+        "point_KA3wMK": {
+          "type": "point",
+          "settings": {
+            "title": "Safe",
+            "text": "No risk of spillages or manual handling injuries, as PVA comes in powder form safely sealed in water-soluble paper sachets."
+          }
+        },
+        "point_wFfgtT": {
+          "type": "point",
+          "settings": {
+            "title": "Simple",
+            "text": "Color coded with easy resealable packaging, PVA sachets are easy to use, mix and handle."
+          }
+        },
+        "point_pJpWfk": {
+          "type": "point",
+          "settings": {
+            "title": "Savings",
+            "text": "Reduce your delivery, storage, training, and most importantly, financial costs with PVA Soluble Sachets."
+          }
+        }
+      },
+      "block_order": [
+        "point_mxnLHN",
+        "point_KA3wMK",
+        "point_wFfgtT",
+        "point_pJpWfk"
+      ],
+      "disabled": true,
+      "name": "Product Feature",
+      "settings": {
+        "image": "shopify://shop_images/tersanooooo.png",
+        "label": "GREEN CLEANING",
+        "heading": "PVA Soluble Sachets",
+        "subtext": "Simply add to water and start cleaning.",
+        "button_text": "Get a Quote Today",
+        "button_link": "",
+        "bg_color": "#ffffff",
+        "accent_color": "#006666",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_1_eJpEfG": {
+      "type": "sachet-system-1",
+      "blocks": {
+        "row_4Dp68G": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Tersano_iClean_Mini_in_Cafe.png",
+            "label": "",
+            "heading": "What is the Tersano?",
+            "text": "<p>Tersano is an innovative solution that converts ordinary tap water into a powerful cleaning and sanitising solution. This Stabilised Aqueous Ozone (SAO) is completely chemical free, and is made using only oxygen and water.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "row_bkiqFw": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/How_Tersano_is_Produced.png",
+            "label": "",
+            "heading": "Expert Support & Training",
+            "text": "<p>Aqueous Ozone (AO) is a powerful, naturally occurring solution that develops in our environment. Tersano has created the first unit in history that extends the life-cycle of AO to produce Stabilised Aqueous Ozone (SAO).</p><p> </p><p><strong>Step 1: </strong>Oxygen from the air is safely turned to O3, then infused into ordinary tap water.</p><p><strong>Step 2: </strong>When sprayed on surfaces, SAO is attracted to germs, soils, and bacteria and quickly eliminates contaminants.</p><p><strong>Step 3: </strong>SAO cleans for days before it safely reverts back to water and O2.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "row_cUrz6z": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Tersano_Where_to_Use.png",
+            "label": "",
+            "heading": "Where to Use Tersano",
+            "text": "<p>Tersano replaces all of the most common everyday cleaning agents such as multi surface cleaners, glass and stainless steel cleaners, degreasers, and bathroom cleaners. And unlike many common cleaning agents, Tersano is a disinfectant!</p><p> </p><p>Tersano is safe and effective on almost all surfaces including stone, marble, glass, ceramic, glass, stainless steel, hardwood, vinyl, chrome, and much more!</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_4Dp68G",
+        "row_bkiqFw",
+        "row_cUrz6z"
+      ],
+      "disabled": true,
+      "name": "Alternating Content",
+      "settings": {
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "underline_color": "#6fb31a",
+        "underline_height": 3,
+        "underline_spacing": 50,
+        "hide_last_underline": true,
+        "bg_color": "#ffffff",
+        "accent_color": "#6fb31a",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_benehit_RaVXVW": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_VpaQxK": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/What_Are_PVA_Soluble_Sachets.png",
+            "title": "All in One Solution",
+            "text": "Tersano is an all-in-one solution that has the potential to replace the majority of your cleaning chemicals, including degreasers, glass and stainless steel cleaners, multi-surface cleaners, and bathroom cleaners."
+          }
+        },
+        "card_LKaLtK": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Single_Use_Plastic.png",
+            "title": "Food Safe",
+            "text": "Not only is Tersano food safe making it perfect for use in kitchens, using Tersano on fresh produce such as fruit and vegetables can actually extend their shelf life!"
+          }
+        },
+        "card_pgWF7d": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Recyclable_Packaging.png",
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_VpaQxK",
+        "card_LKaLtK",
+        "card_pgWF7d"
+      ],
+      "disabled": true,
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "subtext": "",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_benehit_8p4aCM": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_ebMWji": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Reduced_Manual_Handling_Risk.png",
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_hKNY3y": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Spillages.png",
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+          }
+        },
+        "card_N6i8dJ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Single_Use_Plastic.png",
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_ebMWji",
+        "card_hKNY3y",
+        "card_N6i8dJ"
+      ],
+      "disabled": true,
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "",
+        "subtext": "",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "tersano_image_slider_VwPjwT": {
+      "type": "tersano-image-slider",
+      "blocks": {
+        "slide_BVENiz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Reduced_Manual_Handling_Risk.png",
+            "caption": "Professional Cleaning Equipment"
+          }
+        },
+        "slide_7e4VBH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Reduced_Manual_Handling_Risk.png",
+            "caption": "Industrial Solutions"
+          }
+        },
+        "slide_7rB7Xj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/AdobeStock_246515233-1574x787.jpg",
+            "caption": "Expert Support"
+          }
+        }
+      },
+      "block_order": [
+        "slide_BVENiz",
+        "slide_7e4VBH",
+        "slide_7rB7Xj"
+      ],
+      "disabled": true,
+      "name": "Content Image Slider",
+      "settings": {
+        "label": "",
+        "heading": "Suitable for All Industries",
+        "description": "<p>As the ultimate cleaning solution, Tersano is tailor-made for every industry and facility, ensuring unparalleled cleanliness and safety standards. Trusted by a wide array of sectors, Tersano is currently deployed in:</p>",
+        "feature_1": "- Education",
+        "feature_2": "- Healthcare",
+        "feature_3": "- Transport",
+        "feature_4": "- Hospitality",
+        "button_text": "",
+        "button_link": "",
+        "button_radius": 4,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "slider_radius": 12,
+        "heading_size": 36,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "accent_color": "#ffffff",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "tersano_qnReHU": {
+      "type": "tersano",
+      "blocks": {
+        "benefit_zYJjKt": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/All_in_One_Solution.png",
+            "title": "All in One Solution",
+            "text": "Tersano is an all-in-one solution that has the potential to replace the majority of your cleaning chemicals."
+          }
+        },
+        "benefit_wJmhb8": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Foodsafe.png",
+            "title": "Food Safe",
+            "text": "Not only is Tersano food safe making it perfect for use in kitchens, using Tersano on fresh produce can actually extend their shelf life!"
+          }
+        },
+        "benefit_xJcCer": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Non-Corrosive_1.png",
+            "title": "Non-Corrosive",
+            "text": "Tersano is a powerful cleaner but also completely non-corrosive. Tersano will leave no damage to surfaces it touches."
+          }
+        },
+        "benefit_pcbg3C": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Non-Toxic_adfb9139-f71d-4260-8fe3-00138cc3285c.png",
+            "title": "Non-Toxic",
+            "text": "Despite its incredible power, Tersano is non-toxic. Tersano is a chemical-free cleaning agent that is free from carcinogens."
+          }
+        },
+        "benefit_KmtKkB": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Sustainable.png",
+            "title": "Sustainable",
+            "text": "Tersano has the potential to dramatically reduce the amount of chemicals released into the atmosphere."
+          }
+        },
+        "benefit_XbM6AL": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Powerful_Cleaner.png",
+            "title": "Powerful Cleaner",
+            "text": "Tersano has been independently tested and proven as an effective preventative and sanitiser."
+          }
+        },
+        "benefit_PetEe4": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/PCS_Certified.png",
+            "title": "PCS Certified in Ireland",
+            "text": "Tersano is PCS Authorised in Ireland as a Biocide product by the Department of Agriculture."
+          }
+        },
+        "benefit_hRYQWC": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Cost_Effective.png",
+            "title": "Cost Effective Solution",
+            "text": "Switching to sustainable cleaning with Tersano guarantees you a cost-saving benefit."
+          }
+        },
+        "industry_slide_ziwAnJ": {
+          "type": "industry_slide",
+          "settings": {
+            "image": "shopify://shop_images/commercial.png",
+            "title": "Commercial"
+          }
+        },
+        "industry_slide_aq3RdX": {
+          "type": "industry_slide",
+          "settings": {
+            "image": "shopify://shop_images/education.webp",
+            "title": "Education"
+          }
+        },
+        "industry_slide_CjAyPX": {
+          "type": "industry_slide",
+          "settings": {
+            "image": "shopify://shop_images/healthcare.png",
+            "title": "Healthcare"
+          }
+        },
+        "industry_slide_kgpDtr": {
+          "type": "industry_slide",
+          "settings": {
+            "image": "shopify://shop_images/hospitality.png",
+            "title": "Hospitality"
+          }
+        },
+        "industry_slide_YCfmAt": {
+          "type": "industry_slide",
+          "settings": {
+            "image": "shopify://shop_images/office.png",
+            "title": "Office"
+          }
+        },
+        "industry_slide_e6KGDy": {
+          "type": "industry_slide",
+          "settings": {
+            "image": "shopify://shop_images/retail.png",
+            "title": "Retail"
+          }
+        },
+        "industry_slide_RdfTCf": {
+          "type": "industry_slide",
+          "settings": {
+            "image": "shopify://shop_images/transport.png",
+            "title": "Transport"
+          }
+        },
+        "product_3yjn7B": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/terlqfc275.png",
+            "name": "Tersano Lotus Pro",
+            "link": "shopify://products/tersano-lotus-pro"
+          }
+        },
+        "product_BNyzh7": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/PRODUCT_IMAGES_35.png",
+            "name": "Tersano iClean Mini",
+            "link": "shopify://products/tersano-i-clean-mini"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_zYJjKt",
+        "benefit_wJmhb8",
+        "benefit_xJcCer",
+        "benefit_pcbg3C",
+        "benefit_KmtKkB",
+        "benefit_XbM6AL",
+        "benefit_PetEe4",
+        "benefit_hRYQWC",
+        "industry_slide_ziwAnJ",
+        "industry_slide_aq3RdX",
+        "industry_slide_CjAyPX",
+        "industry_slide_kgpDtr",
+        "industry_slide_YCfmAt",
+        "industry_slide_e6KGDy",
+        "industry_slide_RdfTCf",
+        "product_3yjn7B",
+        "product_BNyzh7"
+      ],
+      "name": "Tersano Page",
+      "settings": {
+        "hero_tag": "GREEN CLEANING",
+        "hero_title": "Tersano Chemical Free Cleaning",
+        "hero_desc": "Scientifically proven to be tough on germs, yet harmless to humans.",
+        "feature1_title": "Chemical free:",
+        "feature1_text": "Tersano provides users with a chemical free cleaning agent, disinfectant, deodoriser, and sanitiser that is food safe, and scientifically proven to be highly effective against germs.",
+        "feature2_title": "Replace most cleaning chemicals:",
+        "feature2_text": "Tersano is an all-in-one solution that can replace almost all cleaning chemicals, including multi surface agents, degreasers, glass and stainless steel cleaners, and bathroom cleaners.",
+        "feature3_title": "Sustainable:",
+        "feature3_text": "Tersano has the potential to almost completely eradicate cleaning chemicals from your facility, while also significantly reducing plastic and cardboard waste, CO2 emissions from deliveries, and save you money in the long term.",
+        "hero_btn_text": "Get Quote Today",
+        "hero_btn_link": "",
+        "what_title": "What is the Tersano?",
+        "what_text": "Tersano is an innovative solution that converts ordinary tap water into a powerful cleaning and sanitising solution. This Stabilised Aqueous Ozone (SAO) is completely chemical free, and is made using only oxygen and water.",
+        "how_image": "shopify://shop_images/How_Tersano_is_Produced.png",
+        "how_title": "How Tersano is Produced",
+        "how_text": "Aqueous Ozone (AO) is a powerful, naturally occurring solution that develops in our environment. Tersano has created the first unit in history that extends the life-cycle of AO to produce Stabilised Aqueous Ozone (SAO).",
+        "step1_text": "Oxygen from the air is safely turned to O3, then infused into ordinary tap water.",
+        "step2_text": "When sprayed on surfaces, SAO is attracted to germs, soils, and bacteria and quickly eliminates contaminants.",
+        "step3_text": "SAO cleans for days before it safely reverts back to water and O2.",
+        "where_title": "Where to Use Tersano",
+        "where_text": "Tersano replaces all of the most common everyday cleaning agents such as multi surface cleaners, glass and stainless steel cleaners, degreasers, and bathroom cleaners. And unlike many common cleaning agents, Tersano is a disinfectant!",
+        "where_text2": "Tersano is safe and effective on almost all surfaces including stone, marble, glass, ceramic, glass, stainless steel, hardwood, vinyl, chrome, and much more!",
+        "benefits_title": "Why Choose Tersano",
+        "industries_title": "Suitable for All Industries",
+        "industries_text": "As the ultimate cleaning solution, Tersano is tailor-made for every industry and facility, ensuring unparalleled cleanliness and safety standards.",
+        "industry1": "Education",
+        "industry2": "Healthcare",
+        "industry3": "Transport",
+        "industry4": "Hospitality",
+        "industry5": "Commercial",
+        "industry6": "Offices",
+        "cta_title": "Make the Change Today",
+        "cta_text": "Tersano is the ultimate all-in-one cleaning solution that will help keep your premises cleaner, and your stakeholders safer – all while saving you money! To learn more about this amazing innovation, contact us today!",
+        "phone_number": "01 811 89 20"
+      }
+    },
+    "tersano_conyent_yWXjgE": {
+      "type": "tersano-conyent",
+      "blocks": {
+        "product_3wDNGN": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/imop40-12-8.png",
+            "title": "Tersano Lotus Pro",
+            "link": ""
+          }
+        },
+        "product_nLJ4Dq": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/pacvac-battery-backpack-vacuum-home_1.webp",
+            "title": "Tersano iClean Mini",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_3wDNGN",
+        "product_nLJ4Dq"
+      ],
+      "disabled": true,
+      "name": "Contact Products",
+      "settings": {
+        "heading": "Make the Change Today",
+        "description": "Tersano is the ultimate all-in-one cleaning solution that will help keep your premises cleaner, and your stakeholders safer – all while saving you money! To learn more about this amazing innovation, contact us today!",
+        "heading_size": 32,
+        "call_now_text": "CALL NOW",
+        "phone_number": "+1234567890",
+        "form_title": "GO GREEN TODAY ENQUIRE NOW",
+        "submit_text": "SUBMIT",
+        "success_message": "Thank you for your message. We will contact you soon!",
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "accent_color": "#6fb31a",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#333333",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "product_block_vertical_KjTm4V": {
+      "type": "product-block-vertical",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "browse-by-environment-bathroom-toilet-cleaning",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_73KtAQ": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_MhMwad": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_MhMwad"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sachet_system_AQBAcm",
+    "sachet_system_1_eJpEfG",
+    "sachet_system_benehit_RaVXVW",
+    "sachet_system_benehit_8p4aCM",
+    "tersano_image_slider_VwPjwT",
+    "tersano_qnReHU",
+    "tersano_conyent_yWXjgE",
+    "product_block_vertical_KjTm4V",
+    "newsletter_73KtAQ"
+  ]
+}

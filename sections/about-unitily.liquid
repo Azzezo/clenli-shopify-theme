@@ -1,0 +1,380 @@
+{% comment %}
+  Shopify Section: Electric Utility Vehicles
+  Fixed Version with Visible Underlines
+{% endcomment %}
+
+<style>
+  .utility-vehicles-section-{{ section.id }} .utility-vehicles-wrapper {
+    max-width: 1570px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Section Divider - FIXED & VISIBLE */
+  .utility-vehicles-section-{{ section.id }} .section-divider {
+    display: block !important;
+    height: {{ section.settings.divider_height }}px;
+    background: {{ section.settings.divider_color }} !important;
+    margin: {{ section.settings.divider_margin }}px auto;
+    width: 100%;
+    opacity: 1 !important;
+    border: none;
+  }
+
+  /* Section 1: Why Consider Electric Utility Vehicles */
+  .utility-vehicles-section-{{ section.id }} .why-consider-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 0;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .why-consider-content {
+    flex: 1;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .why-consider-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .why-consider-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+  }
+
+  /* Button Container with Alignment Options */
+  .utility-vehicles-section-{{ section.id }} .button-container {
+    display: flex;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .button-container.align-left {
+    justify-content: flex-start;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .button-container.align-center {
+    justify-content: center;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .button-container.align-right {
+    justify-content: flex-end;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .btn-learn-more {
+    display: inline-block;
+    background: #6FB31A;
+    color: #fff;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .btn-learn-more:hover {
+    background: #5a9615;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 179, 26, 0.3);
+  }
+
+  .utility-vehicles-section-{{ section.id }} .why-consider-image {
+    flex: 1;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .why-consider-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Section 2: About Addax */
+  .utility-vehicles-section-{{ section.id }} .about-addax-section {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 60px 0;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .addax-logo {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .addax-logo img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .addax-content {
+    flex: 1;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .addax-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+  }
+
+  .utility-vehicles-section-{{ section.id }} .addax-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 991px) {
+    .utility-vehicles-section-{{ section.id }} .why-consider-section,
+    .utility-vehicles-section-{{ section.id }} .about-addax-section {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .utility-vehicles-section-{{ section.id }} .addax-logo {
+      flex: 0 0 auto;
+    }
+
+    .utility-vehicles-section-{{ section.id }} .why-consider-content h2,
+    .utility-vehicles-section-{{ section.id }} .addax-content h2 {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .utility-vehicles-section-{{ section.id }} .utility-vehicles-wrapper {
+      padding: 0 15px;
+    }
+
+    .utility-vehicles-section-{{ section.id }} .why-consider-section,
+    .utility-vehicles-section-{{ section.id }} .about-addax-section {
+      padding: 40px 0;
+    }
+
+    .utility-vehicles-section-{{ section.id }} .section-divider {
+      margin: {{ section.settings.divider_margin_mobile }}px auto;
+    }
+
+    .utility-vehicles-section-{{ section.id }} .btn-learn-more {
+      width: 100%;
+      text-align: center;
+    }
+
+    .utility-vehicles-section-{{ section.id }} .button-container {
+      width: 100%;
+    }
+
+    .utility-vehicles-section-{{ section.id }} .button-container.align-left,
+    .utility-vehicles-section-{{ section.id }} .button-container.align-center,
+    .utility-vehicles-section-{{ section.id }} .button-container.align-right {
+      justify-content: center;
+    }
+  }
+</style>
+
+<div class="utility-vehicles-section-{{ section.id }}">
+  <div class="utility-vehicles-wrapper">
+    
+    <!-- Section 1: Why Consider Electric Utility Vehicles -->
+    <div class="why-consider-section">
+      <div class="why-consider-content">
+        <h2>{{ section.settings.why_heading | default: "Why Consider Electric Utility Vehicles?" }}</h2>
+        <p>{{ section.settings.why_description | default: "Tired of high fuel costs associated with your fleet of vehicles? Looking to reduce your companies' emissions? Need a small vehicle solution for your facility, or a quiet operating solution for a noise-sensitive environment? Electric Utility Vehicles hold the key to all of the above common issues – and more!" }}</p>
+        {% if section.settings.why_button_text != blank %}
+          <div class="button-container align-{{ section.settings.button_alignment }}">
+            <a href="{{ section.settings.why_button_link }}" class="btn-learn-more">
+              {{ section.settings.why_button_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      
+      <div class="why-consider-image">
+        {% if section.settings.why_image != blank %}
+          <img src="{{ section.settings.why_image | img_url: '800x' }}" 
+               alt="{{ section.settings.why_image.alt | default: 'Electric Utility Vehicles' }}"
+               loading="lazy">
+        {% else %}
+          <img src="https://via.placeholder.com/600x400/6FB31A/FFFFFF?text=Electric+Utility+Vehicles" 
+               alt="Electric Utility Vehicles">
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Divider 1 - NOW VISIBLE! -->
+    {% if section.settings.show_dividers %}
+      <div class="section-divider"></div>
+    {% endif %}
+
+    <!-- Section 2: About Addax -->
+    <div class="about-addax-section">
+      <div class="addax-logo">
+        {% if section.settings.addax_logo != blank %}
+          <img src="{{ section.settings.addax_logo | img_url: '400x' }}" 
+               alt="{{ section.settings.addax_logo.alt | default: 'Addax Motors Logo' }}">
+        {% else %}
+          <img src="https://via.placeholder.com/350x350/CC0033/FFFFFF?text=ADDAX+LOGO" 
+               alt="Addax Motors Logo">
+        {% endif %}
+      </div>
+      
+      <div class="addax-content">
+        <h2>{{ section.settings.addax_heading | default: "About Addax" }}</h2>
+        <p>{{ section.settings.addax_description | default: "Addax Motors is a Belgian manufacturer specializing in 100% electric utility vehicles designed for urban and industrial applications. Their vehicles are fully customizable to meet specific client needs, offering up to 1,000 kg loading capacity and an 8-year battery warranty. Addax emphasizes functionality, flexibility, and social responsibility, providing eco-friendly solutions with low operational costs." }}</p>
+      </div>
+    </div>
+
+    <!-- Divider 2 - NOW VISIBLE! -->
+    {% if section.settings.show_dividers %}
+      <div class="section-divider"></div>
+    {% endif %}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Utility Vehicles Sections",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section 1: Why Consider Electric Utility Vehicles"
+    },
+    {
+      "type": "text",
+      "id": "why_heading",
+      "label": "Heading",
+      "default": "Why Consider Electric Utility Vehicles?"
+    },
+    {
+      "type": "textarea",
+      "id": "why_description",
+      "label": "Description",
+      "default": "Tired of high fuel costs associated with your fleet of vehicles? Looking to reduce your companies' emissions? Need a small vehicle solution for your facility, or a quiet operating solution for a noise-sensitive environment? Electric Utility Vehicles hold the key to all of the above common issues – and more!"
+    },
+    {
+      "type": "image_picker",
+      "id": "why_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "why_button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "why_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_alignment",
+      "label": "Button Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "info": "Choose button alignment (Mobile: always center)"
+    },
+    {
+      "type": "header",
+      "content": "Section 2: About Addax"
+    },
+    {
+      "type": "text",
+      "id": "addax_heading",
+      "label": "Heading",
+      "default": "About Addax"
+    },
+    {
+      "type": "textarea",
+      "id": "addax_description",
+      "label": "Description",
+      "default": "Addax Motors is a Belgian manufacturer specializing in 100% electric utility vehicles designed for urban and industrial applications. Their vehicles are fully customizable to meet specific client needs, offering up to 1,000 kg loading capacity and an 8-year battery warranty. Addax emphasizes functionality, flexibility, and social responsibility, providing eco-friendly solutions with low operational costs."
+    },
+    {
+      "type": "image_picker",
+      "id": "addax_logo",
+      "label": "Addax Logo"
+    },
+    {
+      "type": "header",
+      "content": "✨ Divider/Underline Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dividers",
+      "label": "Show Dividers",
+      "default": true,
+      "info": "Show green lines between sections"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider Color",
+      "default": "#6FB31A"
+    },
+    {
+      "type": "range",
+      "id": "divider_height",
+      "label": "Divider Thickness",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 4,
+      "info": "Recommended: 3-5px for visibility"
+    },
+    {
+      "type": "range",
+      "id": "divider_margin",
+      "label": "Divider Spacing (Desktop)",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "divider_margin_mobile",
+      "label": "Divider Spacing (Mobile)",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Utility Vehicles",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

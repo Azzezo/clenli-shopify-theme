@@ -1,0 +1,246 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "imop-main": {
+      "type": "imop-page",
+      "blocks": {
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/i-mop_xl_pro_parked_back_bb20c955-dce2-4dad-86c0-361afd90a484.png",
+            "name": "i-Mop Lite",
+            "width": "37 cm",
+            "battery": "45 mins",
+            "speed": "350 RPM",
+            "pressure": "13 kg",
+            "tank": "3 / 5 L",
+            "link": "/products/imop-lite"
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/i-mop_xl_pro_parked_back_bb20c955-dce2-4dad-86c0-361afd90a484.png",
+            "name": "i-Mop XL Plus",
+            "width": "46 cm",
+            "battery": "70 mins",
+            "speed": "350 RPM",
+            "pressure": "22.5 kg",
+            "tank": "4 / 6 L",
+            "link": "/products/imop-xl-plus"
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/i-mop_xl_pro_angled.png",
+            "name": "i-Mop XL Pro",
+            "width": "46 cm",
+            "battery": "70 mins",
+            "speed": "350 RPM",
+            "pressure": "22.5 kg",
+            "tank": "4 / 6 L",
+            "link": "/products/i-mop-xl-pro"
+          }
+        },
+        "product-4": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/i-mop_xl_pro_front_d4525ece-4f84-4ea4-b268-b31f81bd501e.png",
+            "name": "i-Mop XXL Pro",
+            "width": "62 cm",
+            "battery": "60 mins",
+            "speed": "350 RPM",
+            "pressure": "32 kg",
+            "tank": "5 / 8 L",
+            "link": "/products/imop-xxl-pro"
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2",
+        "product-3",
+        "product-4"
+      ],
+      "settings": {
+        "hero_tag": "SCRUBBER DRYER",
+        "hero_title": "Introducing the i-Mop",
+        "hero_desc": "Stop cleaning with regular mops and start i-mopping. Enjoy the flexibility of a mop combined with the power of a scrubber dryer.",
+        "feature1_title": "For faster cleaning:",
+        "feature1_text": "The i-mop cleans up to 70% faster than conventional wet mopping and up to 30% faster than conventional auto scrubbing.",
+        "feature2_title": "For cleaner floors:",
+        "feature2_text": "The i-mop's twin counter-rotating brushes deep scrub for 90% cleaner surfaces compared to conventional mopping.",
+        "feature3_title": "For a safer facility:",
+        "feature3_text": "The i-mop washes, cleans and dries floors in one movement, leaving floors safe to walk on instantly after use.",
+        "hero_btn_text": "Explore i-Mop Range",
+        "hero_btn_link": "/collections/i-mop",
+        "what_title": "What is the i-Mop?",
+        "what_text1": "The i-mop is a ground-breaking floor scrubber dryer, transforming the way we approach cleaning tasks.",
+        "what_text2": "Compared to traditional cleaning methods, the i-mop is designed to be faster, cleaner, safer and greener than any other scrubber dryer on the market! Its exceptional flexibility allows it to effortlessly reach edges and navigate under obstacles.",
+        "what_btn_text": "Learn More",
+        "what_btn_link": "/pages/i-mop-characteristics",
+        "gap_title": "Filling the Gap on the Market",
+        "gap_text": "Designed to incorporate the flexibility of a mop with a power of a scrubber dryer, the i-mop brings the best of both into one cleaning solution.",
+        "video_title": "Seeing is Believing",
+        "video_text": "Check out the i-Mop in action to get a better understanding of how it will help your facility!",
+        "video_id": "t_OzF5oGXek",
+        "save_title": "Save Time, Water & Effort",
+        "save_text1": "The i-Mop represents an opportunity for you to dramatically improve your cleaning and maintenance operations while also saving you time, water, and effort. The i-mop uses only a fraction of the water that other cleaning methods need, saving up to 94% of water!",
+        "save_text2": "Immerse yourself in the ease and agility of the i-mop—a lightweight and flexible solution that can save you an impressive 82% of time compared to conventional mopping practices!",
+        "save_btn_text": "Learn More",
+        "save_btn_link": "/pages/i-mop-benefits",
+        "safety_title": "Improved Safety",
+        "safety_text1": "Wet mopping with dirty water and slippery floors are a thing of the past – the i-mop heralds a new standard.",
+        "safety_text2": "Harnessing state-of-the-art suction technology, this innovation effortlessly extracts virtually every trace of cleaning solution and liquid on the floor, ensuring that surfaces are left dry and safe to walk on almost instantly.",
+        "safety_btn_text": "Learn More",
+        "safety_btn_link": "/pages/i-mop-safety",
+        "env_title": "Doing Your Part for the Environment",
+        "env_text1": "The i-Mop range is designed to not only be a powerful cleaner, but to also be as environmentally friendly as possible.",
+        "env_text2": "Combining robust mechanical action and cutting-edge solution recovery, the i-mop slashes environmental impact by an impressive 75%.",
+        "env_btn_text": "Learn More",
+        "env_btn_link": "/pages/i-mop-sustainability",
+        "invest_title": "Investing in a Better World",
+        "invest_text1": "The i-mop has helped countless businesses to keep their facilities cleaner and safer.",
+        "invest_text2": "But the i-mop is not just the ideal floor cleaning solution, it is also helping to develop water projects through their partnership with Made Blue.",
+        "invest_text3": "Made Blue has generated over 10 billion litres of clean water for developing countries.",
+        "invest_text4": "Thanks to the partnership, i-team donates one litre of clean drinking water for every litre used by their i-mops!",
+        "best_title": "The Best is Getting Better",
+        "best_text1": "Not resting on their laurels, the i-mop is constantly improving.",
+        "best_text2": "With new features providing everything from anti-corrosive coating to phone holders, no matter what your cleaning needs are, the i-mop has the solution!",
+        "best_btn_text": "See All Features",
+        "best_btn_link": "/pages/i-mop-features",
+        "solutions_title": "Solutions for All Cleaning Needs",
+        "solutions_text": "No matter if you need pads or brushes, or need to clean floors with timber, rubber, tiles, there is a solution available with the i-mop!",
+        "why_title": "Why Choose Clenli Direct",
+        "why_text": "When investing in cleaning solutions, there's only one place to look. With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader.",
+        "range_title": "The i-Mop Range",
+        "cta_title": "Don't Get Left Behind",
+        "cta_text": "Discover the future of cleaning and join the cleaning revolution! No matter your industry, reach out to us today.",
+        "phone": "01 811 89 20",
+        "form_title": "GO GREEN TODAY ENQUIRE NOW"
+      }
+    },
+    "featured_product_we_7xmPVE": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_UrkNtx": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_WC6zfQ": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_WC6zfQ"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "imop-main",
+    "featured_product_we_7xmPVE",
+    "newsletter_UrkNtx"
+  ]
+}

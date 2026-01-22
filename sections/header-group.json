@@ -1,0 +1,1581 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "header_top_bar_eb9y4a": {
+      "type": "header-top-bar",
+      "name": "Header Top Bar",
+      "settings": {
+        "container_width": "1600",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "font_size": 13,
+        "background_color": "#ffffff",
+        "border_color": "#e5e5e5",
+        "text_color": "#666666",
+        "link_color": "#333333",
+        "link_hover_color": "#0066cc",
+        "divider_color": "#cccccc",
+        "icon_color": "#4caf50",
+        "announcement_text": "<p>We are closed from <strong>23rd December</strong> and reopening on <strong>2nd January</strong></p>",
+        "announcement_color": "#e53935",
+        "announcement_font_size": 13,
+        "announcement_font_size_mobile": 12,
+        "show_vat_toggle": true,
+        "vat_exclude_text": "Excl. VAT",
+        "vat_include_text": "Incl. VAT",
+        "default_vat_included": false,
+        "toggle_bg_color": "#cccccc",
+        "toggle_active_color": "#acacac",
+        "my_account_text": "My Account",
+        "sign_out_text": "Sign Out",
+        "sign_in_text": "Sign In",
+        "register_text": "Register",
+        "help_text": "Need Help?",
+        "phone_number": "01 811 89 20",
+        "email": "sales@clenli.ie"
+      }
+    },
+    "b20ae388-36ab-4ac2-b170-b0d3bb832958": {
+      "type": "header-advanced",
+      "blocks": {
+        "sections--14682829619277__b20ae388-36ab-4ac2-b170-b0d3bb832958-16810329778eaf9e51-1": {
+          "type": "group_2",
+          "settings": {
+            "container": "full",
+            "padding_full_width": 100,
+            "background": "#ffffff",
+            "gradient": "",
+            "show_logo": true,
+            "logo_position": "left",
+            "logo": "shopify://shop_images/logo.png",
+            "logo_width": 185,
+            "logo_mg_left": 35,
+            "logo_text": "",
+            "logo_font_size": 30,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323",
+            "show_search": true,
+            "popular_searches": "Multi Cleaner,Comac,Prochem,Unger",
+            "show_box_shadow": false,
+            "search_color": "#767676",
+            "bg_search_color": "#f0f0f0",
+            "search_icon_color": "#ffffff",
+            "search_icon_bg": "#e7334f",
+            "search_icon_gradient": "linear-gradient(90deg, rgba(111, 179, 26, 1), rgba(90, 179, 34, 1) 76%, rgba(111, 179, 26, 1) 100%)",
+            "search_border_radius": 5,
+            "show_cart": true,
+            "cart_color": "#323232",
+            "cart_bg_item": "#6fb31a",
+            "cart_color_item": "#ffffff",
+            "cart_item_font_size": 14,
+            "show_wishlist": true,
+            "wishlist_color": "#323232",
+            "show_wishlist_number": false,
+            "wishlist_color_item": "#ffffff",
+            "wishlist_bg_item": "#232323",
+            "show_account": true,
+            "customer_color": "#323232",
+            "padding_top": 25,
+            "padding_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "sections--14682829619277__b20ae388-36ab-4ac2-b170-b0d3bb832958-16810329778eaf9e51-1"
+      ],
+      "settings": {
+        "layout": "style2",
+        "border_top": "#6fb31a",
+        "mobile_menu_bg": "#6fb31a",
+        "mobile_menu_color": "#ffffff"
+      }
+    },
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323",
+            "menu_tab_bg": "#000000"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "icon": "1",
+            "popup_action": false,
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_mobile": "shopify://shop_images/logo.png",
+            "logo_width_mobile": 65,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323",
+            "alignment": "center"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "2",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "3",
+            "show_cart_count_bubble": true,
+            "color": "#232323",
+            "color_bubble": "#ffffff",
+            "bg_bubble": "#232323"
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d"
+      ],
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "enable_transparent": false,
+        "transparent_color": "#ffffff",
+        "transparent_border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1760050361e90eb4fa": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "header_navigation_hamburger_KfnHhV": {
+      "type": "header-navigation-hamburger",
+      "blocks": {
+        "menu_item_WxDMxj": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Machines",
+            "link": "shopify://collections/machines-1",
+            "icon_image": "shopify://shop_images/93_1.png",
+            "submenu_style": "mega"
+          }
+        },
+        "menu_item_xTqxma": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Scrubber Dryers",
+            "link": "shopify://collections/machines-scrubber-dryers",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/209.png"
+          }
+        },
+        "menu_item_AjJd6E": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Walk Behind",
+            "link": "shopify://collections/machines-scrubber-dryers-walk-behind",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_NCQ6Qr": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Ride On",
+            "link": "shopify://collections/machines-scrubber-dryers-ride-on",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_UfzeHh": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Sweepers",
+            "link": "shopify://collections/machines-sweepers",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/18.png"
+          }
+        },
+        "menu_item_Ji6PgJ": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Walk Behind Sweepers",
+            "link": "shopify://collections/machines-sweepers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_Fmxtrw": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Road Sweepers",
+            "link": "shopify://collections/machines-sweepers-road-sweepers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_t3C4Wc": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Carpet Cleaning Machines",
+            "link": "shopify://collections/machines-carpet-cleaning-machines",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/94.png"
+          }
+        },
+        "menu_item_aei6gU": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Spot Carpet Cleaners",
+            "link": "shopify://collections/machines-carpet-cleaning-machines-spot-carpet-cleaners",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_74WepN": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Box Carpet Cleaners",
+            "link": "shopify://collections/machines-carpet-cleaning-machines-box-carpet-cleaners",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_Lfbkgj": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Walk Behind Carpet Cleaners",
+            "link": "shopify://collections/machines-carpet-cleaning-machines-walk-behind-carpet-cleaners",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_DmDB49": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Carpet Cleaning Accessories",
+            "link": "shopify://collections/machines-carpet-cleaning-machines-carpet-cleaning-accessories",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_wKGn9C": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Rotary Cleaning Machines",
+            "link": "shopify://collections/machines-rotary-cleaning-machines",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/38_93d6f7e5-0952-4653-b706-1a06a9e832ee.png"
+          }
+        },
+        "menu_item_MihNWX": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Concrete & Stone Polishing",
+            "link": "shopify://collections/machines-rotary-cleaning-machines-concrete-stone-polishing",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_wCdLJw": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Buffers & Burnishers",
+            "link": "shopify://collections/machines-rotary-cleaning-machines-buffers-burnishers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_z8tA4x": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Scrubbers & Cleaners",
+            "link": "shopify://collections/machines-rotary-cleaning-machines-scrubbers-cleaners",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_3PCXgc": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Hoovers and Vacuums",
+            "link": "shopify://collections/machines-hoovers-and-vacuums",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/44.png"
+          }
+        },
+        "menu_item_fYhKFK": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Backpack Hoovers & Vacuums",
+            "link": "shopify://collections/machines-hoovers-and-vacuums-backpack-hoovers-vacuums",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_LFaGqw": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Battery Hoovers & Vacuums",
+            "link": "shopify://collections/machines-hoovers-and-vacuums-battery-hoovers-vacuums",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_TqPNFF": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Dry Hoovers & Vacuums",
+            "link": "shopify://collections/machines-hoovers-and-vacuums-dry-hoovers-vacuums",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_qWeenx": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Wet/Dry Hoovers & Vacuums",
+            "link": "shopify://collections/machines-hoovers-and-vacuums-wet-dry-hoovers-vacuums",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_aMpYEB": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Steam Cleaners",
+            "link": "shopify://collections/machines-steam-cleaners",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/36.png"
+          }
+        },
+        "menu_item_MafHK8": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Steam Cleaning Equipment",
+            "link": "shopify://collections/machines-steam-cleaners-steam-cleaning-equipment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_GGdzz7": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Gum Remover",
+            "link": "shopify://collections/machines-steam-cleaners-gum-remover",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_RdBb7f": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Pressure Washing",
+            "link": "shopify://collections/machines-pressure-washing",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/37.png"
+          }
+        },
+        "menu_item_JtiFT7": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Escalator",
+            "link": "shopify://collections/machines-escalator",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/29.png"
+          }
+        },
+        "menu_item_HEtHdW": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Robotic Cleaning Solutions",
+            "link": "shopify://collections/machines-robotic-cleaning-solutions",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/253.png"
+          }
+        },
+        "menu_item_qKmLNb": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Robotic Vacuum Cleaning",
+            "link": "shopify://collections/machines-robotic-cleaning-solutions-robotic-vacuum-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_W4p7pk": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Robotic Scrubber Dryers",
+            "link": "shopify://collections/machines-robotic-cleaning-solutions-robotic-scrubber-dryers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_nMzMCw": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Spare Parts",
+            "link": "shopify://collections/machines-spare-parts",
+            "submenu_style": "simple",
+            "menu_image": "shopify://shop_images/20_0185cdff-1b35-42f9-a85a-bbccd196d32d.png"
+          }
+        },
+        "menu_item_YFHpME": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Universal Motors",
+            "link": "shopify://collections/machines-spare-parts-universal-motors",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_myycYJ": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Vacuum accessories",
+            "link": "shopify://collections/machines-spare-parts-vacuum-accessories",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_LdWcVf": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Squeegee Rubber",
+            "link": "shopify://collections/machines-spare-parts-squeegee-rubber",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_AQQ3je": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Cleaning Equipment",
+            "link": "shopify://collections/cleaning-equipment",
+            "icon_image": "shopify://shop_images/256.png",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_k9mLyB": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Window Cleaning Equipment",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_kHC6HU": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Window Cleaning Systems",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-window-cleaning-systems",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_eBLem4": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Traditional Window Cleaning",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_8FxL8J": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Squeegees & Rubbers",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-squeegees-rubbers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_J4pPBi": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Belt System & Pouches",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-belt-system-pouches",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_RgTNPK": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Window Cleaning Buckets",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_4btTgc": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Cloths",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-cloths",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_gatPxV": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Glass Cleaner",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-glass-cleaner",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_nhd8MJ": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "ErgoTec Ninja",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-ergotec-ninja",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_WRrm8N": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Gloves",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-gloves",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_GcL7gj": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Indoor Cleaning System",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-indoor-cleaning-system",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_qraFr6": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Scrapers",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-scrapers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_aBP9eT": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Telescopic Pole Systems",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-telescopic-pole-systems",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_eb7iV3": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Workwear",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-workwear",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_PNjcjV": {
+          "type": "menu_item",
+          "settings": {
+            "level": "4",
+            "title": "Washers",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-traditional-window-cleaning-washers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_CB89yJ": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Window Cleaning Kits",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment-window-cleaning-kits",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_JfWLG4": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Floor Care Equipment",
+            "link": "shopify://collections/cleaning-equipment-floor-care-equipment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_RkphqY": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Sweeping Brushes & Equipment",
+            "link": "shopify://collections/cleaning-equipment-floor-care-equipment-sweeping-brushes-equipment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_7r3CaE": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Mops & Mopping Equipment",
+            "link": "shopify://collections/cleaning-equipment-floor-care-equipment-mops-mopping-equipment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_7YXQxg": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Cleaning Trolleys",
+            "link": "shopify://collections/cleaning-equipment-cleaning-trolleys",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_mgcKkQ": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Mop Buckets",
+            "link": "shopify://collections/cleaning-equipment-mop-buckets",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_zNMTqC": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Dusting Equipment",
+            "link": "shopify://collections/cleaning-equipment-dusting-equipment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_3cAP9K": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Spray Bottles",
+            "link": "shopify://collections/cleaning-equipment-spray-bottles",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_FYzXKJ": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Signs & Safety",
+            "link": "shopify://collections/cleaning-equipment-signs-safety",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_HNVrKW": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Litter Pickers",
+            "link": "shopify://collections/cleaning-equipment-litter-pickers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_bExa3K": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Cleaning Agents",
+            "link": "shopify://collections/cleaning-agents",
+            "icon_image": "shopify://shop_images/265.png",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_khBG9Q": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Carpet Cleaning Agents",
+            "link": "shopify://collections/cleaning-agents-carpet-cleaning-agents",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_gTpbYY": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Floor Care",
+            "link": "shopify://collections/cleaning-agents-floor-care",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_kDTVkD": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Maintainers & Cleaners",
+            "link": "shopify://collections/cleaning-agents-floor-care-maintainers-cleaners",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_tKkY3H": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Degreasers",
+            "link": "shopify://collections/cleaning-agents-floor-care-degreasers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_XYHfjV": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Finishes & Coatings",
+            "link": "shopify://collections/cleaning-agents-floor-care-finishes-coatings",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_LNm8Mg": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Floor Strippers",
+            "link": "shopify://collections/cleaning-agents-floor-care-floor-strippers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_KdizTq": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Equipment",
+            "link": "shopify://collections/cleaning-agents-floor-care-equipment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_hPgbbA": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Glass & Stainless Steel Cleaners",
+            "link": "shopify://collections/cleaning-agents-glass-stainless-steel-cleaners",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_LYB3Ew": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Multi Surface Cleaners",
+            "link": "shopify://collections/cleaning-agents-multi-surface-cleaners",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_trUKnq": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Sanitisers & Disinfectants",
+            "link": "shopify://collections/cleaning-agents-sanitisers-disinfectants",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_RYeWMr": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Stone Cleaning",
+            "link": "shopify://collections/cleaning-agents-stone-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_gaU7YM": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Sustainable Cleaning Solutions",
+            "link": "shopify://collections/cleaning-agents-sustainable-cleaning-solutions",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_RHEDei": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Consumables",
+            "link": "shopify://collections/consumables",
+            "icon_image": "shopify://shop_images/273.png",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_pkMtFq": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Paper",
+            "link": "shopify://collections/consumables-paper",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_4wyFLn": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Bags/Sacks",
+            "link": "shopify://collections/consumables-bags-sacks",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_W3VzAc": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Cloths, Wipes & Sponges",
+            "link": "shopify://collections/consumables-cloths-wipes-sponges",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_cnURkc": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Mopheads & Accessories",
+            "link": "shopify://collections/consumables-mopheads-accessories",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_XBb8hF": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Floor Pads",
+            "link": "shopify://collections/cleaning-agents-floor-care-floor-pads",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_NGVCNB": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Vacuum Bags",
+            "link": "shopify://collections/consumables-vacuum-bags",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_Aj7mrU": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Soap & Hand Wash",
+            "link": "shopify://collections/consumables-soap-hand-wash",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_ze3CH3": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Gloves & Wearables",
+            "link": "shopify://collections/consumables-gloves-wearables",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_JATcFX": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "PPE/Sanitising",
+            "link": "shopify://collections/ppe-sanitising",
+            "icon_image": "shopify://shop_images/225.png",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_DngEa6": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Face Masks",
+            "link": "shopify://collections/ppe-sanitising-face-masks",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_cRVcgx": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Hand Sanitisers",
+            "link": "shopify://collections/ppe-sanitising-hand-sanitisers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_q7Q4gb": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Sprayers/Misters",
+            "link": "shopify://collections/ppe-sanitising-sprayers-misters",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_gLmi89": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Carpet Cleaning",
+            "link": "shopify://collections/carpet-cleaning-1",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_hLeekf": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Carpet Cleaning Machinery",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-machinery",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_VVRR9C": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Carpet Cleaning Solutions",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_W4a7BG": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Extraction Detergents",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-extraction-detergents",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_wnBGVM": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Carpet & Fabric Maintenance",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-carpet-fabric-maintenance",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_MgDbag": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Upholstery & Fine Fabric",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-upholstery-fine-fabric",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_PbbDdE": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Deoderisers & Sanitisers",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-deoderisers-sanitisers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_AWfemh": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Protective Treatments",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-protective-treatments",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_czgkWH": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Problem Solvers & Additives",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-problem-solvers-additives",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_idfMdz": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Prochem Natural Range",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-prochem-natural-range",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_zrNXAe": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Spot & Stain Removers",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-spot-stain-removers",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_eCgEhM": {
+          "type": "menu_item",
+          "settings": {
+            "level": "3",
+            "title": "Presprays & Traffic Lane",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-solutions-presprays-traffic-lane",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_gx7X9N": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Carpet Cleaning Tools",
+            "link": "shopify://collections/carpet-cleaning-carpet-cleaning-tools",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_DqVJ9i": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Browse by Environment",
+            "link": "shopify://collections/browse-by-environment",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_fqpJWb": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Kitchen Cleaning",
+            "link": "shopify://collections/browse-by-environment-kitchen-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_DzWU3C": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Bathroom & Toilet Cleaning",
+            "link": "shopify://collections/browse-by-environment-bathroom-toilet-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_7UKp6b": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Vehicle Cleaning",
+            "link": "shopify://collections/browse-by-environment-vehicle-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_E6iDX3": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Cleanroom & ATEX Cleaning",
+            "link": "shopify://collections/browse-by-environment-cleanroom-atex-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_7UtBQ8": {
+          "type": "menu_item",
+          "settings": {
+            "level": "2",
+            "title": "Color Coded Cleaning",
+            "link": "shopify://collections/browse-by-environment-color-coded-cleaning",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_UydDw6": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Contact Us",
+            "link": "shopify://pages/contact-us",
+            "submenu_style": "simple"
+          }
+        },
+        "nav_item_C433xz": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Home",
+            "link": "/",
+            "nav_image": "shopify://shop_images/R_-_Why_Invest_1.png"
+          }
+        },
+        "nav_item_Mii6hN": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Innovation",
+            "link": "",
+            "nav_image": "shopify://shop_images/i-mop_products_5b2f3832-4a6e-4a15-b533-f5bb6237f2eb.png"
+          }
+        },
+        "nav_dropdown_BADtQP": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Robotics",
+            "link": "shopify://pages/best-robotic-cleaning-solutions-ireland-1"
+          }
+        },
+        "nav_dropdown_TfFkw4": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "I-Mop",
+            "link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer"
+          }
+        },
+        "nav_dropdown_dLd8Bj": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Tersano",
+            "link": "shopify://pages/tersano2"
+          }
+        },
+        "nav_dropdown_M8xkGg": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Pacvac",
+            "link": "shopify://pages/pacvac-backpack-vacuum-hoover-range"
+          }
+        },
+        "nav_dropdown_bBGqhi": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Comac",
+            "link": "shopify://pages/comac-floor-scrubber-dryers"
+          }
+        },
+        "nav_dropdown_jkRKBg": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Egholm",
+            "link": "shopify://pages/egholm-utility-outdoor-maintenance-machines"
+          }
+        },
+        "nav_dropdown_nKUUbB": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Numatic ERP180",
+            "link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer-1"
+          }
+        },
+        "nav_item_YdF9ka": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Utility Vehicles",
+            "link": ""
+          }
+        },
+        "nav_dropdown_EpJjDP": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "About Utility Vehicles",
+            "link": "shopify://pages/addax-electric-utility-vehicles-ireland-1"
+          }
+        },
+        "nav_dropdown_yqw6nX": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Addax Configurations",
+            "link": "shopify://pages/addax-electric-utility-vehicles-ireland-configurations-1"
+          }
+        },
+        "nav_dropdown_yiihjw": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Serving All Sectors",
+            "link": "shopify://pages/addax-electric-utility-vehicles-sectors-1"
+          }
+        },
+        "nav_dropdown_jPdkLJ": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Why Invest in Utility Vehicles",
+            "link": "shopify://pages/why-invest-in-electric-utility-vehicles-ireland"
+          }
+        },
+        "nav_item_a9eBGg": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Company",
+            "link": ""
+          }
+        },
+        "nav_dropdown_eGNUF6": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Service",
+            "link": "shopify://pages/service-1"
+          }
+        },
+        "nav_dropdown_QbEeK7": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Our Team",
+            "link": "shopify://pages/our-team"
+          }
+        },
+        "nav_dropdown_7Qr3c7": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "About Us",
+            "link": "shopify://pages/about-us"
+          }
+        },
+        "nav_dropdown_qkXckw": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Contact us",
+            "link": "shopify://pages/contact-us"
+          }
+        },
+        "nav_item_a7DWq6": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Green Cleaning",
+            "link": "",
+            "nav_image": "shopify://shop_images/green-cleaning.jpg"
+          }
+        },
+        "nav_dropdown_kVQNfi": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Green Cleaning",
+            "link": "shopify://pages/green-cleaning-1"
+          }
+        },
+        "nav_dropdown_7MixyR": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Sachet System",
+            "link": "shopify://pages/sachet-system-2"
+          }
+        },
+        "nav_dropdown_mpHjH9": {
+          "type": "nav_dropdown",
+          "settings": {
+            "title": "Tersano",
+            "link": "shopify://pages/tersano2"
+          }
+        },
+        "nav_item_j7JQKc": {
+          "type": "nav_item",
+          "settings": {
+            "title": "About Us",
+            "link": "shopify://pages/about-us"
+          }
+        },
+        "nav_item_i4tiXq": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Service & Maintenance",
+            "link": "shopify://pages/service-maintenance"
+          }
+        },
+        "nav_item_3AAMVj": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Machine Hire",
+            "link": "shopify://pages/machine-hire"
+          }
+        },
+        "nav_item_GhWCEg": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Contact Us",
+            "link": "shopify://pages/contact-us"
+          }
+        }
+      },
+      "block_order": [
+        "menu_item_WxDMxj",
+        "menu_item_xTqxma",
+        "menu_item_AjJd6E",
+        "menu_item_NCQ6Qr",
+        "menu_item_UfzeHh",
+        "menu_item_Ji6PgJ",
+        "menu_item_Fmxtrw",
+        "menu_item_t3C4Wc",
+        "menu_item_aei6gU",
+        "menu_item_74WepN",
+        "menu_item_Lfbkgj",
+        "menu_item_DmDB49",
+        "menu_item_wKGn9C",
+        "menu_item_MihNWX",
+        "menu_item_wCdLJw",
+        "menu_item_z8tA4x",
+        "menu_item_3PCXgc",
+        "menu_item_fYhKFK",
+        "menu_item_LFaGqw",
+        "menu_item_TqPNFF",
+        "menu_item_qWeenx",
+        "menu_item_aMpYEB",
+        "menu_item_MafHK8",
+        "menu_item_GGdzz7",
+        "menu_item_RdBb7f",
+        "menu_item_JtiFT7",
+        "menu_item_HEtHdW",
+        "menu_item_qKmLNb",
+        "menu_item_W4p7pk",
+        "menu_item_nMzMCw",
+        "menu_item_YFHpME",
+        "menu_item_myycYJ",
+        "menu_item_LdWcVf",
+        "menu_item_AQQ3je",
+        "menu_item_k9mLyB",
+        "menu_item_kHC6HU",
+        "menu_item_eBLem4",
+        "menu_item_8FxL8J",
+        "menu_item_J4pPBi",
+        "menu_item_RgTNPK",
+        "menu_item_4btTgc",
+        "menu_item_gatPxV",
+        "menu_item_nhd8MJ",
+        "menu_item_WRrm8N",
+        "menu_item_GcL7gj",
+        "menu_item_qraFr6",
+        "menu_item_aBP9eT",
+        "menu_item_eb7iV3",
+        "menu_item_PNjcjV",
+        "menu_item_CB89yJ",
+        "menu_item_JfWLG4",
+        "menu_item_RkphqY",
+        "menu_item_7r3CaE",
+        "menu_item_7YXQxg",
+        "menu_item_mgcKkQ",
+        "menu_item_zNMTqC",
+        "menu_item_3cAP9K",
+        "menu_item_FYzXKJ",
+        "menu_item_HNVrKW",
+        "menu_item_bExa3K",
+        "menu_item_khBG9Q",
+        "menu_item_gTpbYY",
+        "menu_item_kDTVkD",
+        "menu_item_tKkY3H",
+        "menu_item_XYHfjV",
+        "menu_item_LNm8Mg",
+        "menu_item_KdizTq",
+        "menu_item_hPgbbA",
+        "menu_item_LYB3Ew",
+        "menu_item_trUKnq",
+        "menu_item_RYeWMr",
+        "menu_item_gaU7YM",
+        "menu_item_RHEDei",
+        "menu_item_pkMtFq",
+        "menu_item_4wyFLn",
+        "menu_item_W3VzAc",
+        "menu_item_cnURkc",
+        "menu_item_XBb8hF",
+        "menu_item_NGVCNB",
+        "menu_item_Aj7mrU",
+        "menu_item_ze3CH3",
+        "menu_item_JATcFX",
+        "menu_item_DngEa6",
+        "menu_item_cRVcgx",
+        "menu_item_q7Q4gb",
+        "menu_item_gLmi89",
+        "menu_item_hLeekf",
+        "menu_item_VVRR9C",
+        "menu_item_W4a7BG",
+        "menu_item_wnBGVM",
+        "menu_item_MgDbag",
+        "menu_item_PbbDdE",
+        "menu_item_AWfemh",
+        "menu_item_czgkWH",
+        "menu_item_idfMdz",
+        "menu_item_zrNXAe",
+        "menu_item_eCgEhM",
+        "menu_item_gx7X9N",
+        "menu_item_DqVJ9i",
+        "menu_item_fqpJWb",
+        "menu_item_DzWU3C",
+        "menu_item_7UKp6b",
+        "menu_item_E6iDX3",
+        "menu_item_7UtBQ8",
+        "menu_item_UydDw6",
+        "nav_item_C433xz",
+        "nav_item_Mii6hN",
+        "nav_dropdown_BADtQP",
+        "nav_dropdown_TfFkw4",
+        "nav_dropdown_dLd8Bj",
+        "nav_dropdown_M8xkGg",
+        "nav_dropdown_bBGqhi",
+        "nav_dropdown_jkRKBg",
+        "nav_dropdown_nKUUbB",
+        "nav_item_YdF9ka",
+        "nav_dropdown_EpJjDP",
+        "nav_dropdown_yqw6nX",
+        "nav_dropdown_yiihjw",
+        "nav_dropdown_jPdkLJ",
+        "nav_item_a9eBGg",
+        "nav_dropdown_eGNUF6",
+        "nav_dropdown_QbEeK7",
+        "nav_dropdown_7Qr3c7",
+        "nav_dropdown_qkXckw",
+        "nav_item_a7DWq6",
+        "nav_dropdown_kVQNfi",
+        "nav_dropdown_7MixyR",
+        "nav_dropdown_mpHjH9",
+        "nav_item_j7JQKc",
+        "nav_item_i4tiXq",
+        "nav_item_3AAMVj",
+        "nav_item_GhWCEg"
+      ],
+      "name": "Categories Mega Menu",
+      "settings": {
+        "container": "1570",
+        "button_text": "CATEGORIES",
+        "button_min_width": 220,
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "500",
+        "button_padding_x": 20,
+        "button_padding_y": 12,
+        "button_radius": 11,
+        "dropdown_width": 220,
+        "mega_panel_width": 900,
+        "menu_bg": "#ffffff",
+        "menu_text": "#333333",
+        "menu_hover_bg": "#f5f5f5",
+        "menu_hover_text": "#6fb31a",
+        "menu_icon_size": 24,
+        "menu_font_size": 14,
+        "menu_item_padding": 15,
+        "show_main_nav": true,
+        "nav_mobile_title": "Menu",
+        "nav_text_color": "#333333",
+        "nav_hover_color": "#6fb31a",
+        "nav_font_size": 14,
+        "nav_font_weight": "500",
+        "nav_gap": 25,
+        "nav_margin_left": 30,
+        "mobile_menu_bg": "#ffffff",
+        "mobile_close_bg": "#6fb31a"
+      }
+    },
+    "header_navigation_hamburger_bjH7H4": {
+      "type": "header-navigation-hamburger",
+      "blocks": {
+        "menu_item_7yqnK7": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Machines",
+            "link": "",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_zpFhbM": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Equipment",
+            "link": "",
+            "submenu_style": "simple"
+          }
+        },
+        "menu_item_ANrpKq": {
+          "type": "menu_item",
+          "settings": {
+            "level": "1",
+            "title": "Contact Us",
+            "link": "",
+            "submenu_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "menu_item_7yqnK7",
+        "menu_item_zpFhbM",
+        "menu_item_ANrpKq"
+      ],
+      "disabled": true,
+      "name": "Categories Mega Menu",
+      "settings": {
+        "container": "1570",
+        "button_text": "CATEGORIES",
+        "button_min_width": 220,
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_padding_x": 20,
+        "button_padding_y": 14,
+        "button_radius": 8,
+        "dropdown_width": 260,
+        "mega_panel_width": 900,
+        "menu_bg": "#ffffff",
+        "menu_text": "#333333",
+        "menu_hover_bg": "#f5f5f5",
+        "menu_hover_text": "#6fb31a",
+        "menu_icon_size": 24,
+        "menu_font_size": 14,
+        "menu_item_padding": 15,
+        "show_main_nav": true,
+        "nav_mobile_title": "Menu",
+        "nav_text_color": "#333333",
+        "nav_hover_color": "#6fb31a",
+        "nav_font_size": 14,
+        "nav_font_weight": "500",
+        "nav_gap": 25,
+        "nav_margin_left": 30,
+        "mobile_menu_bg": "#ffffff",
+        "mobile_close_bg": "#6fb31a"
+      }
+    }
+  },
+  "order": [
+    "header_top_bar_eb9y4a",
+    "b20ae388-36ab-4ac2-b170-b0d3bb832958",
+    "header-mobile",
+    "1760050361e90eb4fa",
+    "header_navigation_hamburger_KfnHhV",
+    "header_navigation_hamburger_bjH7H4"
+  ]
+}

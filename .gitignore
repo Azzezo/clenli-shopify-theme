@@ -1,0 +1,28 @@
+# Shopify CLI
+.shopify/
+*.log
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Build files (if using any build tools)
+dist/
+build/
+

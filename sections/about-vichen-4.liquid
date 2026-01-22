@@ -1,0 +1,483 @@
+<div class="cta-contact-section section-{{ section.id }}">
+    <div class="ctc-container">
+        <div class="ctc-grid">
+            
+            <!-- Left Side: Content + Images -->
+            <div class="ctc-content">
+                {%- if section.settings.heading != blank -%}
+                    <h2 class="ctc-heading">{{ section.settings.heading }}</h2>
+                {%- endif -%}
+                {%- if section.settings.description != blank -%}
+                    <p class="ctc-description">{{ section.settings.description }}</p>
+                {%- endif -%}
+                
+                <!-- 3 Images Row -->
+                <div class="ctc-images">
+                    <div class="ctc-img">
+                        {%- if section.settings.image_1 != blank -%}
+                            <img src="{{ section.settings.image_1 | image_url: width: 400 }}" alt="Image 1" loading="lazy">
+                        {%- else -%}
+                            <div class="placeholder-img"></div>
+                        {%- endif -%}
+                    </div>
+                    <div class="ctc-img center-logo">
+                        {%- if section.settings.image_2 != blank -%}
+                            <img src="{{ section.settings.image_2 | image_url: width: 300 }}" alt="Logo" loading="lazy">
+                        {%- else -%}
+                            <div class="placeholder-img"></div>
+                        {%- endif -%}
+                    </div>
+                    <div class="ctc-img">
+                        {%- if section.settings.image_3 != blank -%}
+                            <img src="{{ section.settings.image_3 | image_url: width: 400 }}" alt="Image 3" loading="lazy">
+                        {%- else -%}
+                            <div class="placeholder-img"></div>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side: Contact Form -->
+            <div class="ctc-form-side">
+                <!-- Call Now Bar -->
+                <div class="call-now-bar">
+                    <a href="tel:{{ section.settings.phone_number }}" class="call-now-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        <span>{{ section.settings.call_now_text }}</span>
+                    </a>
+                </div>
+                
+                <!-- Form Box -->
+                <div class="form-box">
+                    <h3 class="form-title">{{ section.settings.form_title }}</h3>
+                    
+                    {% form 'contact', class: 'contact-form' %}
+                        {% if form.posted_successfully? %}
+                            <div class="form-success">
+                                <p>{{ section.settings.success_message }}</p>
+                            </div>
+                        {% endif %}
+                        
+                        {% if form.errors %}
+                            <div class="form-errors">
+                                {{ form.errors | default_errors }}
+                            </div>
+                        {% endif %}
+                        
+                        <div class="form-group">
+                            <input type="text" name="contact[name]" placeholder="NAME" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="contact[email]" placeholder="MAIL" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" name="contact[phone]" placeholder="Phone Number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="contact[body]" placeholder="MESSAGE" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="submit-btn">{{ section.settings.submit_text }}</button>
+                        </div>
+                    {% endform %}
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .ctc-container {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Grid */
+.section-{{ section.id }} .ctc-grid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Content */
+.section-{{ section.id }} .ctc-content {
+    flex: 1.5;
+    text-align: center;
+}
+
+.section-{{ section.id }} .ctc-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+}
+
+.section-{{ section.id }} .ctc-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin: 0 0 40px 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 3 Images Row */
+.section-{{ section.id }} .ctc-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section-{{ section.id }} .ctc-img {
+    flex: 1;
+    max-width: 220px;
+}
+
+.section-{{ section.id }} .ctc-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.section-{{ section.id }} .ctc-img.center-logo {
+    max-width: 180px;
+}
+
+.section-{{ section.id }} .ctc-img .placeholder-img {
+    width: 100%;
+    height: 150px;
+    background: #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Right Form Side - SMALLER */
+.section-{{ section.id }} .ctc-form-side {
+    flex: 0 0 320px;
+}
+
+/* Call Now Bar - MORE SPACING */
+.section-{{ section.id }} .call-now-bar {
+    background: {{ section.settings.accent_color }};
+    padding: 10px 15px;
+    border-radius: 3px 3px 0 0;
+}
+
+.section-{{ section.id }} .call-now-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-{{ section.id }} .call-now-link:hover {
+    opacity: 0.9;
+}
+
+/* Form Box - SMALLER */
+.section-{{ section.id }} .form-box {
+    background: #fff;
+    border: 1px solid {{ section.settings.accent_color }};
+    border-top: none;
+    padding: 20px;
+}
+
+.section-{{ section.id }} .form-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: {{ section.settings.heading_color }};
+    text-align: center;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-{{ section.id }} .form-group {
+    margin-bottom: 10px;
+}
+
+/* Input Fields - THINNER BORDER */
+.section-{{ section.id }} .form-group input,
+.section-{{ section.id }} .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 13px;
+    color: #333;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.section-{{ section.id }} .form-group input::placeholder,
+.section-{{ section.id }} .form-group textarea::placeholder {
+    color: #888;
+    font-size: 12px;
+}
+
+.section-{{ section.id }} .form-group input:focus,
+.section-{{ section.id }} .form-group textarea:focus {
+    border-color: {{ section.settings.accent_color }};
+}
+
+.section-{{ section.id }} .form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.section-{{ section.id }} .form-submit {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.section-{{ section.id }} .submit-btn {
+    display: inline-block;
+    padding: 10px 35px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .submit-btn:hover {
+    background: {{ section.settings.button_hover_bg }};
+}
+
+.section-{{ section.id }} .form-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.section-{{ section.id }} .form-errors {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .ctc-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .section-{{ section.id }} .ctc-form-side {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-{{ section.id }} .ctc-images {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .section-{{ section.id }} .ctc-img {
+        max-width: 200px;
+    }
+    
+    .section-{{ section.id }} .ctc-heading {
+        font-size: 24px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "CTA Contact Form",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Left Content"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Don't Get Left Behind"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business."
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "Images (Left to Right)"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image 1 (Left Vehicle)"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image 2 (Center Logo)"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_3",
+            "label": "Image 3 (Right Vehicle)"
+        },
+        {
+            "type": "header",
+            "content": "Contact Form"
+        },
+        {
+            "type": "text",
+            "id": "call_now_text",
+            "label": "Call Now Text",
+            "default": "CALL NOW"
+        },
+        {
+            "type": "text",
+            "id": "phone_number",
+            "label": "Phone Number",
+            "default": "+1234567890"
+        },
+        {
+            "type": "text",
+            "id": "form_title",
+            "label": "Form Title",
+            "default": "GO GREEN TODAY ENQUIRE NOW"
+        },
+        {
+            "type": "text",
+            "id": "submit_text",
+            "label": "Submit Button Text",
+            "default": "SUBMIT"
+        },
+        {
+            "type": "text",
+            "id": "success_message",
+            "label": "Success Message",
+            "default": "Thank you! We will contact you soon."
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#f5f5f5"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "accent_color",
+            "label": "Accent Color (Green)",
+            "default": "#2d5a27"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "presets": [
+        {
+            "name": "CTA Contact Form"
+        }
+    ]
+}
+{% endschema %}

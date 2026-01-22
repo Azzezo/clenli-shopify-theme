@@ -1,0 +1,327 @@
+{{ 'section-product-feature.css' | asset_url | stylesheet_tag }}
+
+<div class="product-feature section-{{ section.id }}">
+    <div class="product-feature__container">
+        <div class="product-feature__grid">
+            <!-- Image -->
+            <div class="product-feature__image">
+                {%- if section.settings.image != blank -%}
+                    <img src="{{ section.settings.image | image_url: width: 800 }}" alt="{{ section.settings.heading }}" loading="lazy">
+                {%- else -%}
+                    {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+            </div>
+            
+            <!-- Content -->
+            <div class="product-feature__content">
+                {%- if section.settings.label != blank -%}
+                    <span class="product-feature__label">{{ section.settings.label }}</span>
+                {%- endif -%}
+                
+                {%- if section.settings.heading != blank -%}
+                    <h2 class="product-feature__heading">{{ section.settings.heading }}</h2>
+                {%- endif -%}
+                
+                {%- if section.settings.subtext != blank -%}
+                    <p class="product-feature__subtext">{{ section.settings.subtext }}</p>
+                {%- endif -%}
+                
+                <div class="product-feature__points">
+                    {%- for block in section.blocks -%}
+                        <div class="product-feature__point" {{ block.shopify_attributes }}>
+                            <strong>{{ block.settings.title }}:</strong> {{ block.settings.text }}
+                        </div>
+                    {%- endfor -%}
+                </div>
+                
+                {%- if section.settings.button_text != blank -%}
+                    <a href="{{ section.settings.button_link | default: '#' }}" class="product-feature__button">
+                        {{ section.settings.button_text }}
+                    </a>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .product-feature__container {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-{{ section.id }} .product-feature__grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+
+.section-{{ section.id }} .product-feature__image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-{{ section.id }} .product-feature__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section-{{ section.id }} .product-feature__image .placeholder-svg {
+    width: 100%;
+    height: 400px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.section-{{ section.id }} .product-feature__content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-{{ section.id }} .product-feature__label {
+    display: inline-block;
+    color: {{ section.settings.accent_color }};
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-{{ section.id }} .product-feature__heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.section-{{ section.id }} .product-feature__subtext {
+    font-size: 16px;
+    color: {{ section.settings.text_color }};
+    margin: 0 0 25px 0;
+    line-height: 1.6;
+}
+
+.section-{{ section.id }} .product-feature__points {
+    margin-bottom: 25px;
+}
+
+.section-{{ section.id }} .product-feature__point {
+    font-size: 15px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.section-{{ section.id }} .product-feature__point::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: {{ section.settings.accent_color }};
+    font-weight: bold;
+}
+
+.section-{{ section.id }} .product-feature__point strong {
+    color: {{ section.settings.heading_color }};
+}
+
+.section-{{ section.id }} .product-feature__button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .product-feature__button:hover {
+    background: {{ section.settings.button_hover_bg }};
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .section-{{ section.id }} .product-feature__grid {
+        flex-direction: column;
+    }
+    
+    .section-{{ section.id }} .product-feature__heading {
+        font-size: 28px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Prroduct Feature",
+    "tag": "section",
+    "class": "product-feature-section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "GREEN CLEANING"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "PVA Soluble Sachets"
+        },
+        {
+            "type": "textarea",
+            "id": "subtext",
+            "label": "Subtext",
+            "default": "Simply add to water and start cleaning."
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Get a Quote Today"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "accent_color",
+            "label": "Accent Color",
+            "default": "#006666"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "point",
+            "name": "Feature Point",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Sustainable"
+                },
+                {
+                    "type": "textarea",
+                    "id": "text",
+                    "label": "Description",
+                    "default": "PVA Soluble Sachets can eradicate single use plastic bottles from your cleaning."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Feature",
+            "blocks": [
+                {
+                    "type": "point",
+                    "settings": {
+                        "title": "Sustainable",
+                        "text": "PVA Soluble Sachets can eradicate single use plastic bottles from your cleaning, and reduce the number of deliveries needed, lowering your CO2 emissions."
+                    }
+                },
+                {
+                    "type": "point",
+                    "settings": {
+                        "title": "Safe",
+                        "text": "No risk of spillages or manual handling injuries, as PVA comes in powder form safely sealed in water-soluble paper sachets."
+                    }
+                },
+                {
+                    "type": "point",
+                    "settings": {
+                        "title": "Simple",
+                        "text": "Color coded with easy resealable packaging, PVA sachets are easy to use, mix and handle."
+                    }
+                },
+                {
+                    "type": "point",
+                    "settings": {
+                        "title": "Savings",
+                        "text": "Reduce your delivery, storage, training, and most importantly, financial costs with PVA Soluble Sachets."
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

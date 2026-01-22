@@ -1,0 +1,274 @@
+{% comment %}
+  Pacvac Content Alternating Section
+  - Alternating image/text layout
+  - Green underline after each block
+{% endcomment %}
+
+{% style %}
+    #pacvac-content-{{ section.id }} {
+      background-color: {{ section.settings.bg_color }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-container {
+      max-width: 1570px !important;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    hr.imop-divider {
+      width: 100% !important;
+      max-width: 1570px !important;
+      height: 4px !important;
+      margin: 40px auto !important;
+      background-color: #6fb31a !important;
+      border: 0 !important;
+      border: none !important;
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
+    #pacvac-content-{{ section.id }} .pacvac-content-block {
+      margin-bottom: 40px;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-grid.image-right {
+      direction: rtl;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-grid.image-right > * {
+      direction: ltr;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-image .placeholder-img {
+      background: #e0e0e0;
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: {{ section.settings.heading_color }};
+      margin: 0 0 15px 0;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-content-text {
+      font-size: 16px;
+      color: {{ section.settings.text_color }};
+      line-height: 1.7;
+    }
+
+    #pacvac-content-{{ section.id }} .pacvac-underline {
+      height: {{ section.settings.underline_height }}px;
+      background-color: {{ section.settings.underline_color }};
+    }
+
+    @media (max-width: 768px) {
+      #pacvac-content-{{ section.id }} .pacvac-content-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      #pacvac-content-{{ section.id }} .pacvac-content-grid.image-right {
+        direction: ltr;
+      }
+
+      #pacvac-content-{{ section.id }} .pacvac-content-title {
+        font-size: 18px;
+      }
+
+      #pacvac-content-{{ section.id }} .pacvac-content-text {
+        font-size: 15px;
+      }
+    }
+{% endstyle %}
+
+<section id="pacvac-content-{{ section.id }}">
+  <div class="pacvac-content-container">
+    {%- for block in section.blocks -%}
+      <div class="pacvac-content-block" {{ block.shopify_attributes }}>
+        <div class="pacvac-content-grid {% if block.settings.image_position == 'right' %}image-right{% endif %}">
+          <!-- Image -->
+          <div class="pacvac-content-image">
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title }}">
+            {%- else -%}
+              <div class="placeholder-img">Image</div>
+            {%- endif -%}
+          </div>
+
+          <!-- Content -->
+          <div class="pacvac-content-info">
+            {%- if block.settings.title != blank -%}
+              <h3 class="pacvac-content-title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+
+            {%- if block.settings.description != blank -%}
+              <p class="pacvac-content-text">{{ block.settings.description }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+        <hr class="imop-divider">
+        <!-- Underline -->
+        {% comment %} <div class="pacvac-underline"></div> {% endcomment %}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pacvac Alternating",
+  "tag": "section",
+  "class": "pacvac-content-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Underline Settings"
+    },
+    {
+      "type": "color",
+      "id": "underline_color",
+      "label": "Underline Color",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "range",
+      "id": "underline_height",
+      "label": "Underline Height",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 20,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image Position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "right"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Section Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Description text goes here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pacvac Content Alternating",
+      "blocks": [
+        {
+          "type": "content",
+          "settings": {
+            "image_position": "right",
+            "title": "Advantages of Backpack Vacuums",
+            "description": "While traditional tub vacuums are still widely used and effective, backpack vacuums offer enhanced efficiency, mobility, and user comfort, making them a popular choice for commercial and professional cleaning applications. Remarkably, users can anticipate cleaning speeds up to five times faster with a backpack vacuum in comparison to standard tub vacuums."
+          }
+        },
+        {
+          "type": "content",
+          "settings": {
+            "image_position": "left",
+            "title": "About Pacvac",
+            "description": "Pacvac is a world-leading manufacturer of professional backpack vacuum cleaners, specializing in commercial and industrial cleaning solutions. Their range of high-performance products, featuring innovative technologies such as four stage filtration, caters to diverse sectors. Committed to sustainability, Pacvac focuses on energy efficiency and durability."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

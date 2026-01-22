@@ -1,0 +1,259 @@
+{% comment %}
+  Newsletter Section - Shopify 2.0
+  Converted from Magento
+{% endcomment %}
+
+<style>
+/* Newsletter Section Styling */
+.cms-static-page-bottom {
+  background: #6fb31a;
+  padding: 15px 0;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.block-newletter {
+  width: 100%;
+}
+
+.block.newsletter.block-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 170px;
+}
+
+.block-title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.block-title h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Heading Underline */
+.block-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #fff;
+}
+
+.form.subscribe {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 130px;
+}
+
+/* Subtext in Middle */
+.form-subscribe-header p {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Input + Button on Right */
+.field.newsletter.input-box {
+  display: flex;
+  align-items: stretch;
+}
+
+.field.newsletter .label {
+  display: none;
+}
+
+.field.newsletter .control {
+  display: flex;
+}
+
+/* Input with Border Radius - White Background */
+.field.newsletter input.input-text {
+  padding: 14px 18px;
+  border: none;
+  font-size: 14px;
+  width: 300px;
+  outline: none;
+  border-radius: 25px 0 0 25px;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+}
+
+.field.newsletter input.input-text::placeholder {
+  color: #999;
+}
+
+/* Button Joined with Input */
+.actions {
+  display: flex;
+  margin: 0;
+}
+
+.actions button.action.subscribe {
+  background: #091922;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  border-radius: 0 25px 25px 0;
+  margin: 0;
+  height: 100%;
+}
+
+.actions button.action.subscribe:hover {
+  background: #5a9415;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .form.subscribe {
+    gap: 20px;
+  }
+  
+  .field.newsletter input.input-text {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .block.newsletter.block-subscribe {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .block-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .form.subscribe {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .field.newsletter.input-box {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .field.newsletter .control {
+    width: 100%;
+  }
+  
+  .field.newsletter input.input-text {
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  .actions {
+    width: 100%;
+  }
+  
+  .actions button.action.subscribe {
+    width: 100%;
+    border-radius: 25px;
+  }
+}
+</style>
+
+<div id="cms-static-page-bottom" class="cms-static-page-bottom page-bottom">
+  <div class="newsletter-container">
+    <div class="block-newletter">
+      <div class="block newsletter block-subscribe">
+        
+        <div class="block-title">
+          <h3>{{ section.settings.heading }}</h3>
+        </div>
+        
+        {% form 'customer', class: 'form subscribe' %}
+          
+          <div class="form-subscribe-header">
+            <p>{{ section.settings.subtext }}</p>
+          </div>
+          
+          <div class="field newsletter input-box">
+            <label class="label" for="newsletter">
+              <span>Sign Up for Our Newsletter:</span>
+            </label>
+            <div class="control">
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <input name="contact[email]" 
+                     type="email" 
+                     id="newsletter" 
+                     class="input-text" 
+                     placeholder="{{ section.settings.placeholder }}"
+                     required/>
+            </div>
+            <div class="actions">
+              <button class="action subscribe button" title="Subscribe" type="submit">
+                <span>{{ section.settings.button_text }}</span>
+              </button>
+            </div>
+          </div>
+          
+        {% endform %}
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter Section",
+  "tag": "section",
+  "class": "newsletter-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Sign up to Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "And receive latest updates."
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input Placeholder",
+      "default": "Enter your email address"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Sign up"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter Section"
+    }
+  ]
+}
+{% endschema %}

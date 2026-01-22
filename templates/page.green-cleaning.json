@@ -1,0 +1,209 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "green-cleaning": {
+      "type": "page-green-cleaning",
+      "settings": {
+        "show_banner": true,
+        "banner_image": "shopify://shop_images/green-cleaning-banner.webp",
+        "banner_alt": "Green Cleaning",
+        "banner_link": "",
+        "page_title": "Green Cleaning",
+        "page_subtitle": "Sustainable Solutions for Businesses",
+        "show_header_cta": true,
+        "header_cta_text": "Get a Quote Today",
+        "show_section1": true,
+        "section1_title": "Why Invest in Green Cleaning?",
+        "section1_content": "<p>As a leading supplier of cleaning solutions, we are always on the lookout for new and innovative products that give our clients the edge in an increasingly competitive market.</p><p>As we look to the marketplace, it is evident that the need for sustainable cleaning solutions has become essential. Today more than ever, we are aware of our potential carbon footprint and our ability to implement incremental changes that will have a really positive impact on the environment and on our future.</p><p>Below are some sustainable cleaning solutions, proven to deliver excellent cleaning results at a competitive price.</p>",
+        "section1_image": "shopify://shop_images/Why_Invest_in_Green_Cleaning.png",
+        "show_section2": true,
+        "section2_title": "Tersano",
+        "section2_content": "<p>Tersano is a chemical-free cleaning solution that is driving world-wide sustainability in the cleaning industry. Tersano is a remarkable system that converts ordinary tap water into a chemical-free sanitiser and powerful cleaner.</p><p>A single Tersano cartridge produces 12,000 litres of solution.</p><p>Tersano is the perfect solution for high traffic areas such as, schools and colleges, hospitals and residential homes, airports, bus and rail stations, retail outlets, hotels and restaurants, plus many more.</p>",
+        "section2_image": "shopify://shop_images/Tersano_Green_Cleaning_5598b8d4-313c-4607-888a-9e784bd58f70.png",
+        "section2_link": "/pages/tersano",
+        "section2_link_text": "Learn More",
+        "show_section3": true,
+        "section3_title": "PVA Soluble Sachets",
+        "section3_content": "<p>The PVA Sachet System is the first complete range of cleaning products, delivered in soluble capsules. The Sachet System is a sustainable alternative to traditional chemicals. The product range is 100% biodegradable and phosphate free.</p><p>This clever system allows you to calculate the cost of implementing a sustainable cleaning schedule at any location. The Sachet System is the perfect cleaning partner for companies seeking to implement a low-cost sustainable solution.</p>",
+        "section3_image": "shopify://shop_images/PVA_Sachet_System_Green_Cleaning.png",
+        "section3_link": "/pages/sachet-system",
+        "section3_link_text": "Learn More",
+        "show_quote_form": false,
+        "form_title": "Make the Change Today",
+        "form_subtitle": "Lower your environmental impact while saving on costs - all while keeping your facility cleaner than ever. To learn more about our Green Cleaning Solutions, contact us today!",
+        "phone_number": "01 811 89 20",
+        "form_heading": "GO GREEN TODAY ENQUIRE NOW"
+      }
+    },
+    "image_3_XjD6K3": {
+      "type": "image-3",
+      "name": "Green Contact Form",
+      "settings": {
+        "heading": "Make the Change Today",
+        "heading_color": "#232323",
+        "heading_size": 28,
+        "description": "Lower your environmental impact while saving on costs - all while keeping your facility cleaner than ever. To learn more about our Green Cleaning Solutions, contact us today!",
+        "desc_color": "#555555",
+        "desc_size": 15,
+        "call_button_text": "CALL NOW",
+        "call_button_link": "",
+        "call_button_bg": "#1a5d1a",
+        "call_button_hover": "#0d4a0d",
+        "call_button_text_color": "#ffffff",
+        "call_button_gap": 20,
+        "form_heading": "GO GREEN TODAY ENQUIRE NOW",
+        "form_border_color": "#6fb31a",
+        "form_border_width": 3,
+        "name_placeholder": "NAME",
+        "email_placeholder": "MAIL",
+        "phone_placeholder": "Phone Number",
+        "message_placeholder": "MESSAGE",
+        "submit_button_text": "SUBMIT",
+        "submit_button_bg": "#6fb31a",
+        "submit_button_hover": "#5a9216",
+        "submit_button_text_color": "#ffffff",
+        "success_message": "Thank you for your enquiry! We will get back to you soon.",
+        "bg_color": "#ffffff",
+        "container": "1570",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "product_block_vertical_9GJAhQ": {
+      "type": "product-block-vertical",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_VjrpP7": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_3kphgJ": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_3kphgJ"
+      ],
+      "disabled": true,
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "new_letter_1_JmtygW": {
+      "type": "new-letter-1",
+      "name": "Newsletter Section",
+      "settings": {
+        "heading": "Sign up to Newsletter",
+        "subtext": "And receive latest updates.",
+        "placeholder": "Enter your email address",
+        "button_text": "Sign up"
+      }
+    }
+  },
+  "order": [
+    "green-cleaning",
+    "image_3_XjD6K3",
+    "product_block_vertical_9GJAhQ",
+    "newsletter_VjrpP7",
+    "new_letter_1_JmtygW"
+  ]
+}

@@ -1,0 +1,316 @@
+{% comment %}
+  Robotic Cleaning Solutions Layout
+  Replicates the Clenli Direct style layout
+{% endcomment %}
+
+<div class="robotic-section-wrapper section-{{ section.id }}">
+  <div class="robotic-container">
+    
+    {% for block in section.blocks %}
+      {% case block.type %}
+        
+        {% comment %} === HERO SECTION (Top) === {% endcomment %}
+        {% when 'hero' %}
+        <div class="robotic-block hero-block" {{ block.shopify_attributes }}>
+          <div class="robotic-grid">
+            <div class="robotic-media hero-media">
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.heading }}" loading="lazy">
+              {% else %}
+                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+            <div class="robotic-content hero-content">
+              {% if block.settings.pre_heading != blank %}
+                <span class="pre-heading">{{ block.settings.pre_heading }}</span>
+              {% endif %}
+              <h1 class="main-heading">{{ block.settings.heading }}</h1>
+              <div class="rte-text">{{ block.settings.text }}</div>
+              
+              {% if block.settings.btn_text != blank %}
+                <a href="{{ block.settings.btn_link }}" class="robotic-btn">{{ block.settings.btn_text }}</a>
+              {% endif %}
+            </div>
+          </div>
+          {% if block.settings.show_divider %}<div class="robotic-divider"></div>{% endif %}
+        </div>
+
+        {% comment %} === ALTERNATING ROWS (Zig-Zag) === {% endcomment %}
+        {% when 'feature_row' %}
+        <div class="robotic-block feature-block" {{ block.shopify_attributes }}>
+          <div class="robotic-grid {% if block.settings.layout == 'right' %}reverse-grid{% endif %}">
+            
+            <div class="robotic-content feature-content">
+              <h3 class="feature-heading">{{ block.settings.heading }}</h3>
+              <div class="rte-text">{{ block.settings.text }}</div>
+              
+              {% if block.settings.btn_text != blank %}
+                <a href="{{ block.settings.btn_link }}" class="robotic-btn small-btn">{{ block.settings.btn_text }}</a>
+              {% endif %}
+            </div>
+
+            <div class="robotic-media feature-media">
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.heading }}" loading="lazy" class="rounded-img">
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+
+          </div>
+          {% if block.settings.show_divider %}<div class="robotic-divider"></div>{% endif %}
+        </div>
+
+        {% comment %} === CENTERED BOTTOM SECTION === {% endcomment %}
+        {% when 'cta_centered' %}
+        <div class="robotic-block cta-block" {{ block.shopify_attributes }}>
+          <div class="cta-inner">
+            {% if block.settings.icon != blank %}
+              <div class="cta-icon">
+                <img src="{{ block.settings.icon | image_url: width: 200 }}" alt="Icon" loading="lazy">
+              </div>
+            {% endif %}
+            
+            <h3 class="feature-heading">{{ block.settings.heading }}</h3>
+            <div class="rte-text cta-text">{{ block.settings.text }}</div>
+            
+            {% if block.settings.btn_text != blank %}
+              <a href="{{ block.settings.btn_link }}" class="robotic-btn">{{ block.settings.btn_text }}</a>
+            {% endif %}
+          </div>
+          {% if block.settings.show_divider %}<div class="robotic-divider"></div>{% endif %}
+        </div>
+
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  /* --- CSS Variables & Container --- */
+  .section-{{ section.id }} {
+    --primary-color: {{ section.settings.accent_color }}; /* Green #78be20 */
+    --text-color: {{ section.settings.text_color }};
+    --bg-color: {{ section.settings.bg_color }};
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 60px 0;
+  }
+
+  .robotic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .robotic-block {
+    margin-bottom: 50px;
+  }
+
+  /* --- Typography --- */
+  .pre-heading {
+    display: block;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  .main-heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+  }
+  .feature-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+  }
+  .rte-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  .rte-text p { margin-bottom: 15px; }
+
+  /* --- Buttons --- */
+  .robotic-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+  }
+  .robotic-btn:hover {
+    opacity: 0.9;
+  }
+  .small-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  /* --- Layout Grid --- */
+  .robotic-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  .robotic-grid > div {
+    flex: 1;
+    width: 50%;
+  }
+  
+  /* Reverse Grid for alternating layout */
+  .reverse-grid {
+    flex-direction: row-reverse;
+  }
+
+  /* --- Images --- */
+  .robotic-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  .rounded-img {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  /* --- Divider --- */
+  .robotic-divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 50px;
+    opacity: 0.8;
+  }
+
+  /* --- CTA Centered Footer --- */
+  .cta-block {
+    text-align: center;
+  }
+  .cta-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .cta-icon {
+    margin-bottom: 20px;
+  }
+  .cta-icon img {
+    max-width: 150px; /* Adjust size of logo */
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .robotic-grid, .reverse-grid {
+      flex-direction: column-reverse; /* Puts image on top on mobile usually */
+      gap: 30px;
+    }
+    .hero-block .robotic-grid {
+      flex-direction: column; /* Keep hero image top on mobile */
+    }
+    .robotic-grid > div {
+      width: 100%;
+    }
+    .main-heading { font-size: 26px; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Robotic Layout",
+  "settings": [
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Divider/Button Color",
+      "default": "#78be20"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "name": "Hero (Top Section)",
+      "limit": 1,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Hero Image" },
+        { "type": "text", "id": "pre_heading", "label": "Small Heading", "default": "ROBOTIC CLEANING SOLUTIONS" },
+        { "type": "text", "id": "heading", "label": "Main Heading", "default": "Why Invest in Robotic Cleaning Solutions" },
+        { "type": "richtext", "id": "text", "label": "Description" },
+        { "type": "text", "id": "btn_text", "label": "Button Label", "default": "Explore Range" },
+        { "type": "url", "id": "btn_link", "label": "Button Link" },
+        { "type": "checkbox", "id": "show_divider", "label": "Show Green Divider", "default": true }
+      ]
+    },
+    {
+      "type": "feature_row",
+      "name": "Content Row",
+      "settings": [
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Image Position",
+          "default": "right",
+          "options": [
+            { "value": "left", "label": "Image Left" },
+            { "value": "right", "label": "Image Right" }
+          ]
+        },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Productivity Boost" },
+        { "type": "richtext", "id": "text", "label": "Text Content" },
+        { "type": "text", "id": "btn_text", "label": "Button Label (Optional)" },
+        { "type": "url", "id": "btn_link", "label": "Button Link" },
+        { "type": "checkbox", "id": "show_divider", "label": "Show Green Divider", "default": true }
+      ]
+    },
+    {
+      "type": "cta_centered",
+      "name": "Footer (Centered)",
+      "limit": 1,
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Logo/Icon" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Why Choose Clenli Direct" },
+        { "type": "richtext", "id": "text", "label": "Text Content" },
+        { "type": "text", "id": "btn_text", "label": "Button Label", "default": "Learn More" },
+        { "type": "url", "id": "btn_link", "label": "Button Link" },
+        { "type": "checkbox", "id": "show_divider", "label": "Show Green Divider", "default": false }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Robotic Layout",
+      "blocks": [
+        { "type": "hero" },
+        { "type": "feature_row", "settings": { "layout": "right" } },
+        { "type": "feature_row", "settings": { "layout": "left" } },
+        { "type": "feature_row", "settings": { "layout": "right" } },
+        { "type": "cta_centered" }
+      ]
+    }
+  ]
+}
+{% endschema %}

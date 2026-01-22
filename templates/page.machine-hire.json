@@ -1,0 +1,319 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-machine-hire",
+      "blocks": {
+        "category_1": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Walk Behind Scrubber Dryers",
+            "category_image": "shopify://shop_images/5_910.79_11_020.29_68_529.26_4.png",
+            "category_link": "/collections/walk-behind-scrubber-dryers"
+          }
+        },
+        "category_2": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Ride On Scrubber Dryers",
+            "category_image": "shopify://shop_images/Comac_C85_ef969d37-c1db-402e-9754-122bd66810e9.png",
+            "category_link": "/collections/ride-on-scrubber-dryers"
+          }
+        },
+        "category_3": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Carpet Machines",
+            "category_image": "shopify://shop_images/1633693800370-vispab_600x530_e7dd924d-0a89-4e55-b0e6-64fa8aefb1b8.png",
+            "category_link": "/collections/carpet-machines"
+          }
+        },
+        "category_4": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Sweepers",
+            "category_image": "shopify://shop_images/comac_cs500bt_walk_behind_sweeper_side_view_f78f06b7-9672-47b8-a485-68b1d2cd3d4b.png",
+            "category_link": "/collections/sweepers"
+          }
+        },
+        "category_5": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Rotaries/Buffers",
+            "category_image": "shopify://shop_images/truvox_orbis_uhs_1500_burnisher_front_2.png",
+            "category_link": "/collections/rotaries-buffers"
+          }
+        },
+        "category_6": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Label/Gum Removers",
+            "category_image": "shopify://shop_images/rhino_push_sweeper_left_d2b19d5c-07dd-419b-99bf-9066a031ac02.png",
+            "category_link": "/collections/gum-removers"
+          }
+        },
+        "category_7": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Stone Polishers",
+            "category_image": "shopify://shop_images/stonesoap_01_28ff3d1a-9c33-4aaa-bd95-d0c646651244.jpg",
+            "category_link": "/collections/stone-polishers"
+          }
+        },
+        "category_8": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Pressure Washers",
+            "category_image": "shopify://shop_images/Comac_Innova_55_e2b613af-e5bb-47dc-9363-1bedbbe181db.png",
+            "category_link": "/collections/pressure-washers"
+          }
+        }
+      },
+      "block_order": [
+        "category_1",
+        "category_2",
+        "category_3",
+        "category_4",
+        "category_5",
+        "category_6",
+        "category_7",
+        "category_8"
+      ],
+      "disabled": true,
+      "settings": {
+        "hero_title": "Cleaning Machine Hire Ireland",
+        "hero_subtitle": "Hire a range of cleaning equipment from floor scrubbers to carpet cleaners",
+        "motto_label": "Don't want to buy?",
+        "motto_heading": "Why not Hire?",
+        "section1_title": "Hire What You Need, When you Need it",
+        "section1_text": "At Clenli Direct, we understand that buying isn't always an option. That is why we offer a hiring option! Only pay when you need to use!",
+        "section2_title": "Robotic Machine Hire",
+        "section2_text": "At Clenli Direct, we pride ourselves on our ability to find innovative solutions to any cleaning problem. We have a wide range of robotic machinery designed to automate cleaning, lower time, and lower costs. Available now for hire!",
+        "section3_title": "Collect, Or We Can Deliver",
+        "section3_text": "Choose what is convenient to you. Through our strategic location near Blanchardstown, our partnerships with UPS and DSV, and our own large fleet of in-house vehicles, we have a perfect system in place for collection or delivery.",
+        "categories_label": "our cleaning machine hire range",
+        "categories_title": "A Machine For Every Job",
+        "cta_title": "For More Info on Machine Hire, Contact Us Today!",
+        "phone_number": "018118920"
+      }
+    },
+    "page_machine_hire_dcKNnU": {
+      "type": "page-machine-hire",
+      "blocks": {
+        "machine_category_BpQ6Na": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Walk Behind Scrubber Dryers",
+            "category_image": "shopify://shop_images/comac_versa_65_bt_1.png",
+            "category_link": "shopify://collections/machines-scrubber-dryers-walk-behind"
+          }
+        },
+        "machine_category_dQnbNJ": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Ride On Scrubber Dryers",
+            "category_image": "shopify://shop_images/61e959536dd2edd5801c00f0_c130actual.jpg",
+            "category_link": "shopify://collections/machines-scrubber-dryers-ride-on"
+          }
+        },
+        "machine_category_rGFj86": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Carpet Machines",
+            "category_image": "shopify://shop_images/gallery_7_prochem_steempro_powerflo.png",
+            "category_link": "shopify://collections/carpet-cleaning-carpet-cleaning-machinery"
+          }
+        },
+        "machine_category_6niFwy": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Sweepers",
+            "category_image": "shopify://shop_images/61e955cee9c13353b2bba8fe_0002193_dulevo-850-mini-sweeper_2.jpg",
+            "category_link": "shopify://collections/machines-sweepers"
+          }
+        },
+        "machine_category_J3pKqV": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Rotaries/Buffers",
+            "category_image": "shopify://shop_images/contractor_400_standard_speed_c64705ce-eb8e-40f2-a8ad-a76aa5516700.jpg",
+            "category_link": "shopify://collections/machines-sweepers"
+          }
+        },
+        "machine_category_7wfcK6": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Label/Gum Removers",
+            "category_image": "shopify://shop_images/i-gum-image-2-196x480_3a758079-bea1-44c6-8b81-3b9e749671dd.jpg",
+            "category_link": "shopify://collections/machines-steam-cleaners-gum-remover"
+          }
+        },
+        "machine_category_3VgmTd": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Stone Polishers",
+            "category_image": "shopify://shop_images/61e957a75d19478516da872d_rocky_jpg.jpg",
+            "category_link": "shopify://collections/machines-rotary-cleaning-machines-concrete-stone-polishing"
+          }
+        },
+        "machine_category_EArjWU": {
+          "type": "machine_category",
+          "settings": {
+            "category_name": "Pressure Washers",
+            "category_image": "shopify://shop_images/61e959b2e5483222f548cc8b_HP-T12150PHR.jpg",
+            "category_link": "shopify://collections/machines-pressure-washing"
+          }
+        }
+      },
+      "block_order": [
+        "machine_category_BpQ6Na",
+        "machine_category_dQnbNJ",
+        "machine_category_rGFj86",
+        "machine_category_6niFwy",
+        "machine_category_J3pKqV",
+        "machine_category_7wfcK6",
+        "machine_category_3VgmTd",
+        "machine_category_EArjWU"
+      ],
+      "name": "Machine Hire Page",
+      "settings": {
+        "hero_title": "Cleaning Machine Hire Ireland",
+        "hero_subtitle": "Hire a range of cleaning equipment from floor scrubbers to carpet cleaners",
+        "motto_label": "Don't want to buy?",
+        "motto_heading": "Why not Hire?",
+        "section1_title": "Hire What You Need, When you Need it",
+        "section1_text": "At Clenli Direct, we understand that buying isn't always an option. That is why we offer a hiring option! Only pay when you need to use!",
+        "section2_title": "Robotic Machine Hire",
+        "section2_text": "At Clenli Direct, we pride ourselves on our ability to find innovative solutions to any cleaning problem. We have a wide range of robotic machinery designed to automate cleaning, lower time, and lower costs. Available now for hire!",
+        "section3_title": "Collect, Or We Can Deliver",
+        "section3_text": "Choose what is convenient to you. Through our strategic location near Blanchardstown, our partnerships with UPS and DSV, and our own large fleet of in-house vehicles, we have a perfect system in place for collection or delivery.",
+        "categories_label": "our cleaning machine hire range",
+        "categories_title": "A Machine For Every Job",
+        "cta_title": "For More Info on Machine Hire, Contact Us Today!",
+        "phone_number": "018118920"
+      }
+    },
+    "featured_product_we_Qytj8M": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_TkyiUY": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_mVwCwh": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_mVwCwh"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "page_machine_hire_dcKNnU",
+    "featured_product_we_Qytj8M",
+    "newsletter_TkyiUY"
+  ]
+}

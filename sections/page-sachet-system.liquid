@@ -1,0 +1,1258 @@
+{%- liquid
+    assign section_id = section.id
+-%}
+
+<style>
+/* ============================================
+   SACHET SYSTEM PAGE - COMPLETE STYLES
+   ============================================ */
+
+#sachet-page-{{ section_id }} {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+#sachet-page-{{ section_id }} * {
+    box-sizing: border-box;
+}
+
+#sachet-page-{{ section_id }} .sp-container {
+    {% if section.settings.container_width == '100' %}
+        max-width: 100%;
+    {% else %}
+        max-width: {{ section.settings.container_width }}px;
+    {% endif %}
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+#sachet-page-{{ section_id }} .sp-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+#sachet-page-{{ section_id }} .sp-col-6 {
+    width: 50%;
+    padding: 0 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-col-4 {
+    width: 33.333%;
+    padding: 0 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-col-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+#sachet-page-{{ section_id }} img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Green Divider Line */
+#sachet-page-{{ section_id }} hr.imop-divider {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 4px !important;
+    margin: 40px auto !important;
+    background-color: #6fb31a !important;
+    border: 0 !important;
+    border: none !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Section Spacing */
+#sachet-page-{{ section_id }} .sp-section {
+    padding: 40px 0;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+#sachet-page-{{ section_id }} .sp-hero {
+    padding: 40px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-hero-image {
+    text-align: center;
+}
+
+#sachet-page-{{ section_id }} .sp-hero-image img {
+  width: 95%;
+    max-width: 677px;
+}
+
+#sachet-page-{{ section_id }} .sp-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-hero-subtitle {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#sachet-page-{{ section_id }} .sp-hero-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-hero-desc {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-hero-desc strong {
+    color: #333;
+}
+
+#sachet-page-{{ section_id }} .sp-btn-green {
+    display: inline-block;
+    background-color: #6fb31a;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-btn-green:hover {
+    background-color: #5a9216;
+    color: #fff;
+}
+
+/* ============================================
+   CONTENT SECTIONS (Alternating Text + Image)
+   ============================================ */
+#sachet-page-{{ section_id }} .sp-content-section {
+    padding: 40px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-content-section .sp-row {
+    align-items: center;
+}
+
+#sachet-page-{{ section_id }} .sp-content-section.reverse .sp-row {
+    flex-direction: row-reverse;
+}
+
+#sachet-page-{{ section_id }} .sp-content-text {
+    padding: 20px 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-content-text h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+}
+
+#sachet-page-{{ section_id }} .sp-content-text p {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-content-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* ============================================
+   BENEFITS SECTIONS (3 Column Cards)
+   ============================================ */
+#sachet-page-{{ section_id }} .sp-benefits-section {
+    padding: 40px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-benefits-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-benefits-subtitle {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+#sachet-page-{{ section_id }} .sp-benefit-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#sachet-page-{{ section_id }} .sp-benefit-card img {
+    width: 100%;
+    {% comment %} max-width: 350px; {% endcomment %}
+    margin-bottom: 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-benefit-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-benefit-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* ============================================
+   PRODUCT RANGE SECTIONS
+   ============================================ */
+#sachet-page-{{ section_id }} .sp-products-section {
+    padding: 40px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-products-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-products-subtitle {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-product-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#sachet-page-{{ section_id }} .sp-product-card img {
+    width: 100%;
+  
+#sachet-page-template--27098001244535__main .sp-product-card img 
+    margin-bottom: 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-product-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-product-card > p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 15px 0;
+    min-height: 60px;
+}
+
+#sachet-page-{{ section_id }} .sp-product-features {
+    border-top: 4px solid #6fb31a;
+    border-bottom: 4px solid #6fb31a;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+}
+
+#sachet-page-{{ section_id }} .sp-product-features p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #6fb31a;
+    margin: 5px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-product-specs {
+    display: flex;
+    justify-content: center;
+}
+
+#sachet-page-{{ section_id }} .sp-product-spec {
+    flex: 1;
+    text-align: center;
+    border-right: 2px solid #6fb31a;
+    padding: 0 10px;
+}
+
+#sachet-page-{{ section_id }} .sp-product-spec:last-child {
+    border-right: none;
+}
+
+#sachet-page-{{ section_id }} .sp-product-spec .spec-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+#sachet-page-{{ section_id }} .sp-product-spec .spec-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #6fb31a;
+    margin: 5px 0 0 0;
+}
+
+/* ============================================
+   QUOTE FORM SECTION
+   ============================================ */
+#sachet-page-{{ section_id }} .sp-quote-section {
+    padding: 40px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-quote-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#sachet-page-{{ section_id }} .sp-quote-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-quote-header p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+#sachet-page-{{ section_id }} .sp-quote-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#sachet-page-{{ section_id }} .sp-callnow-btn {
+    display: block;
+    width: 100%;
+    background-color: #6fb31a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+#sachet-page-{{ section_id }} .sp-callnow-btn:hover {
+    background-color: rgb(7, 11, 16);
+    color: #fff;
+}
+
+#sachet-page-{{ section_id }} .sp-form-box {
+    border: 3px solid #6fb31a;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#sachet-page-{{ section_id }} .sp-form-title {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 0px 0;
+}
+
+#sachet-page-{{ section_id }} .sp-form-field {
+    margin-bottom: 10px;
+}
+
+#sachet-page-{{ section_id }} .sp-form-field input,
+#sachet-page-{{ section_id }} .sp-form-field textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#sachet-page-{{ section_id }} .sp-form-field input::placeholder,
+#sachet-page-{{ section_id }} .sp-form-field textarea::placeholder {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#sachet-page-{{ section_id }} .sp-form-field input:focus,
+#sachet-page-{{ section_id }} .sp-form-field textarea:focus {
+    border-color: #6fb31a;
+}
+
+#sachet-page-{{ section_id }} .sp-form-field textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#sachet-page-{{ section_id }} .sp-form-submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#sachet-page-{{ section_id }} .sp-form-submit button {
+    display: inline-block;
+    background-color: #6fb31a;
+    color: #fff;
+    padding: 14px 50px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sachet-page-{{ section_id }} .sp-form-submit button:hover {
+    background-color: rgb(18, 27, 39);
+}
+
+#sachet-page-{{ section_id }} .sp-message {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#sachet-page-{{ section_id }} .sp-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#sachet-page-{{ section_id }} .sp-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 991px) {
+    #sachet-page-{{ section_id }} .sp-col-6 {
+        width: 100%;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-col-4 {
+        width: 50%;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-hero-title {
+        font-size: 32px;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-content-section.reverse .sp-row {
+        flex-direction: column;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-content-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    #sachet-page-{{ section_id }} .sp-col-4 {
+        width: 100%;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-hero-title {
+        font-size: 28px;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-products-title {
+        font-size: 24px;
+    }
+    
+    #sachet-page-{{ section_id }} .sp-form-box {
+        padding: 20px 15px;
+    }
+}
+</style>
+
+<div id="sachet-page-{{ section_id }}">
+    <div class="sp-container">
+        
+        <!-- ============================================
+             HERO SECTION
+             ============================================ -->
+        <section class="sp-hero">
+            <div class="sp-row">
+                <div class="sp-col-6">
+                    <div class="sp-hero-image">
+                        {%- if section.settings.hero_image != blank -%}
+                            <img src="{{ section.settings.hero_image | image_url: width: 600 }}" alt="{{ section.settings.hero_title }}">
+                        {%- else -%}
+                            {{ 'product-1' | placeholder_svg_tag }}
+                        {%- endif -%}
+                    </div>
+                </div>
+                <div class="sp-col-6">
+                    <div class="sp-hero-content">
+                        <p class="sp-hero-subtitle">{{ section.settings.hero_subtitle }}</p>
+                        <h1 class="sp-hero-title">{{ section.settings.hero_title }}</h1>
+                        <p class="sp-hero-desc">{{ section.settings.hero_tagline }}</p>
+                        
+                        {%- if section.settings.hero_feature_1 != blank -%}
+                            <p class="sp-hero-desc"><strong>{{ section.settings.hero_feature_1_title }}:</strong> {{ section.settings.hero_feature_1 }}</p>
+                        {%- endif -%}
+                        
+                        {%- if section.settings.hero_feature_2 != blank -%}
+                            <p class="sp-hero-desc"><strong>{{ section.settings.hero_feature_2_title }}:</strong> {{ section.settings.hero_feature_2 }}</p>
+                        {%- endif -%}
+                        
+                        {%- if section.settings.hero_feature_3 != blank -%}
+                            <p class="sp-hero-desc"><strong>{{ section.settings.hero_feature_3_title }}:</strong> {{ section.settings.hero_feature_3 }}</p>
+                        {%- endif -%}
+                        
+                        {%- if section.settings.hero_feature_4 != blank -%}
+                            <p class="sp-hero-desc"><strong>{{ section.settings.hero_feature_4_title }}:</strong> {{ section.settings.hero_feature_4 }}</p>
+                        {%- endif -%}
+                        
+                        {%- if section.settings.hero_btn_text != blank -%}
+                            <a href="{{ section.settings.hero_btn_link }}" class="sp-btn-green">{{ section.settings.hero_btn_text }}</a>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="imop-divider">
+        
+        <!-- ============================================
+             CONTENT BLOCKS (Dynamic via Blocks)
+             ============================================ -->
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+            
+                {%- when 'content_section' -%}
+                    <section class="sp-content-section {% if block.settings.reverse_layout %}reverse{% endif %}" {{ block.shopify_attributes }}>
+                        <div class="sp-row">
+                            <div class="sp-col-6">
+                                <div class="sp-content-text">
+                                    {%- if block.settings.content_title != blank -%}
+                                        <h3>{{ block.settings.content_title }}</h3>
+                                    {%- endif -%}
+                                    {%- if block.settings.content_text != blank -%}
+                                        {{ block.settings.content_text }}
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                            <div class="sp-col-6">
+                                <div class="sp-content-image">
+                                    {%- if block.settings.content_image != blank -%}
+                                        <img src="{{ block.settings.content_image | image_url: width: 806 }}" alt="{{ block.settings.content_title }}">
+                                    {%- else -%}
+                                        {{ 'image' | placeholder_svg_tag }}
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="imop-divider">
+
+                {%- when 'benefits_section' -%}
+                    <section class="sp-benefits-section" {{ block.shopify_attributes }}>
+                        {%- if block.settings.benefits_title != blank -%}
+                            <h2 class="sp-benefits-title">{{ block.settings.benefits_title }}</h2>
+                        {%- endif -%}
+                        {%- if block.settings.benefits_subtitle != blank -%}
+                            <p class="sp-benefits-subtitle">{{ block.settings.benefits_subtitle }}</p>
+                        {%- endif -%}
+                        
+                        <div class="sp-row">
+                            <!-- Card 1 -->
+                            <div class="sp-col-4">
+                                <div class="sp-benefit-card">
+                                    {%- if block.settings.benefit_1_image != blank -%}
+                                        <img src="{{ block.settings.benefit_1_image | image_url: width: 400 }}" alt="{{ block.settings.benefit_1_title }}">
+                                    {%- endif -%}
+                                    <h3>{{ block.settings.benefit_1_title }}</h3>
+                                    <p>{{ block.settings.benefit_1_text }}</p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="sp-col-4">
+                                <div class="sp-benefit-card">
+                                    {%- if block.settings.benefit_2_image != blank -%}
+                                        <img src="{{ block.settings.benefit_2_image | image_url: width: 400 }}" alt="{{ block.settings.benefit_2_title }}">
+                                    {%- endif -%}
+                                    <h3>{{ block.settings.benefit_2_title }}</h3>
+                                    <p>{{ block.settings.benefit_2_text }}</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="sp-col-4">
+                                <div class="sp-benefit-card">
+                                    {%- if block.settings.benefit_3_image != blank -%}
+                                        <img src="{{ block.settings.benefit_3_image | image_url: width: 400 }}" alt="{{ block.settings.benefit_3_title }}">
+                                    {%- endif -%}
+                                    <h3>{{ block.settings.benefit_3_title }}</h3>
+                                    <p>{{ block.settings.benefit_3_text }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="imop-divider">
+
+                {%- when 'product_range' -%}
+                    <section class="sp-products-section" {{ block.shopify_attributes }}>
+                        {%- if block.settings.range_title != blank -%}
+                            <h2 class="sp-products-title">{{ block.settings.range_title }}</h2>
+                        {%- endif -%}
+                        {%- if block.settings.range_subtitle != blank -%}
+                            <p class="sp-products-subtitle">{{ block.settings.range_subtitle }}</p>
+                        {%- endif -%}
+                        
+                        <div class="sp-row">
+                            <!-- Product 1 -->
+                            <div class="sp-col-4">
+                                <div class="sp-product-card">
+                                    {%- if block.settings.product_1_image != blank -%}
+                                        <img src="{{ block.settings.product_1_image | image_url: width: 400 }}" alt="{{ block.settings.product_1_title }}">
+                                    {%- endif -%}
+                                    <h3>{{ block.settings.product_1_title }}</h3>
+                                    <p>{{ block.settings.product_1_desc }}</p>
+                                    <div class="sp-product-features">
+                                        <p>{{ block.settings.product_1_feature_1 }}</p>
+                                        <p>{{ block.settings.product_1_feature_2 }}</p>
+                                        <p>{{ block.settings.product_1_feature_3 }}</p>
+                                    </div>
+                                    <div class="sp-product-specs">
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Sachets</p>
+                                            <p class="spec-value">{{ block.settings.product_1_sachets }}</p>
+                                        </div>
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Per Sachet</p>
+                                            <p class="spec-value">{{ block.settings.product_1_per_sachet }}</p>
+                                        </div>
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Per Pack</p>
+                                            <p class="spec-value">{{ block.settings.product_1_per_pack }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="sp-col-4">
+                                <div class="sp-product-card">
+                                    {%- if block.settings.product_2_image != blank -%}
+                                        <img src="{{ block.settings.product_2_image | image_url: width: 400 }}" alt="{{ block.settings.product_2_title }}">
+                                    {%- endif -%}
+                                    <h3>{{ block.settings.product_2_title }}</h3>
+                                    <p>{{ block.settings.product_2_desc }}</p>
+                                    <div class="sp-product-features">
+                                        <p>{{ block.settings.product_2_feature_1 }}</p>
+                                        <p>{{ block.settings.product_2_feature_2 }}</p>
+                                        <p>{{ block.settings.product_2_feature_3 }}</p>
+                                    </div>
+                                    <div class="sp-product-specs">
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Sachets</p>
+                                            <p class="spec-value">{{ block.settings.product_2_sachets }}</p>
+                                        </div>
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Per Sachet</p>
+                                            <p class="spec-value">{{ block.settings.product_2_per_sachet }}</p>
+                                        </div>
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Per Pack</p>
+                                            <p class="spec-value">{{ block.settings.product_2_per_pack }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="sp-col-4">
+                                <div class="sp-product-card">
+                                    {%- if block.settings.product_3_image != blank -%}
+                                        <img src="{{ block.settings.product_3_image | image_url: width: 400 }}" alt="{{ block.settings.product_3_title }}">
+                                    {%- endif -%}
+                                    <h3>{{ block.settings.product_3_title }}</h3>
+                                    <p>{{ block.settings.product_3_desc }}</p>
+                                    <div class="sp-product-features">
+                                        <p>{{ block.settings.product_3_feature_1 }}</p>
+                                        <p>{{ block.settings.product_3_feature_2 }}</p>
+                                        <p>{{ block.settings.product_3_feature_3 }}</p>
+                                    </div>
+                                    <div class="sp-product-specs">
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Sachets</p>
+                                            <p class="spec-value">{{ block.settings.product_3_sachets }}</p>
+                                        </div>
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Per Sachet</p>
+                                            <p class="spec-value">{{ block.settings.product_3_per_sachet }}</p>
+                                        </div>
+                                        <div class="sp-product-spec">
+                                            <p class="spec-label">Per Pack</p>
+                                            <p class="spec-value">{{ block.settings.product_3_per_pack }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="imop-divider">
+            {%- endcase -%}
+        {%- endfor -%}
+        
+        <!-- ============================================
+             QUOTE FORM SECTION
+             ============================================ -->
+        <section class="sp-quote-section" id="Get-Quote">
+            <div class="sp-quote-header">
+                <h3>{{ section.settings.form_heading }}</h3>
+                <p>{{ section.settings.form_subheading }}</p>
+            </div>
+            
+            <div class="sp-quote-wrapper">
+                {%- if section.settings.call_btn_text != blank -%}
+                    <a href="{{ section.settings.call_btn_link }}" class="sp-callnow-btn">{{ section.settings.call_btn_text }}</a>
+                {%- endif -%}
+                
+                <div class="sp-form-box">
+                    <h5 class="sp-form-title">{{ section.settings.form_title }}</h5>
+                    
+                    {%- form 'contact', class: 'sp-quote-form' -%}
+                        {%- if form.posted_successfully? -%}
+                            <div class="sp-message success">
+                                {{ section.settings.success_message }}
+                            </div>
+                        {%- endif -%}
+                        
+                        {%- if form.errors -%}
+                            <div class="sp-message error">
+                                {{ form.errors | default_errors }}
+                            </div>
+                        {%- endif -%}
+                        
+                        <input type="hidden" name="contact[page]" value="Sachet System">
+                        
+                        <div class="sp-form-field">
+                            <input type="text" name="contact[name]" placeholder="NAME" required>
+                        </div>
+                        
+                        <div class="sp-form-field">
+                            <input type="email" name="contact[email]" placeholder="MAIL" required>
+                        </div>
+                        
+                        <div class="sp-form-field">
+                            <input type="tel" name="contact[phone]" placeholder="Phone Number" required>
+                        </div>
+                        
+                        <div class="sp-form-field">
+                            <textarea name="contact[body]" placeholder="MESSAGE" required></textarea>
+                        </div>
+                        
+                        <div class="sp-form-submit">
+                            <button type="submit">{{ section.settings.submit_btn_text }}</button>
+                        </div>
+                    {%- endform -%}
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Sachet System Page",
+    "tag": "section",
+    "class": "sachet-system-page",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Layout Settings"
+        },
+        {
+            "type": "select",
+            "id": "container_width",
+            "label": "Container Width",
+            "default": "1600",
+            "options": [
+                { "value": "1200", "label": "1200px" },
+                { "value": "1400", "label": "1400px" },
+                { "value": "1500", "label": "1500px" },
+                { "value": "1570", "label": "1570px" },
+                { "value": "1600", "label": "1600px" },
+                { "value": "1700", "label": "1700px" },
+                { "value": "1800", "label": "1800px" },
+                { "value": "1920", "label": "1920px" },
+                { "value": "100", "label": "Full Width" }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Hero Section"
+        },
+        {
+            "type": "image_picker",
+            "id": "hero_image",
+            "label": "Hero Image"
+        },
+        {
+            "type": "text",
+            "id": "hero_subtitle",
+            "label": "Subtitle",
+            "default": "GREEN CLEANING"
+        },
+        {
+            "type": "text",
+            "id": "hero_title",
+            "label": "Title",
+            "default": "PVA Soluble Sachets"
+        },
+        {
+            "type": "text",
+            "id": "hero_tagline",
+            "label": "Tagline",
+            "default": "Simply add to water and start cleaning."
+        },
+        {
+            "type": "text",
+            "id": "hero_feature_1_title",
+            "label": "Feature 1 Title",
+            "default": "Sustainable"
+        },
+        {
+            "type": "textarea",
+            "id": "hero_feature_1",
+            "label": "Feature 1 Text",
+            "default": "PVA Soluble Sachets can eradicate single use plastic bottles from your cleaning, and reduce the number of deliveries needed, lowering your CO2 emissions."
+        },
+        {
+            "type": "text",
+            "id": "hero_feature_2_title",
+            "label": "Feature 2 Title",
+            "default": "Safe"
+        },
+        {
+            "type": "textarea",
+            "id": "hero_feature_2",
+            "label": "Feature 2 Text",
+            "default": "No risk of spillages or manual handling injuries, as PVA comes in powder form safely sealed in water-soluble paper sachets."
+        },
+        {
+            "type": "text",
+            "id": "hero_feature_3_title",
+            "label": "Feature 3 Title",
+            "default": "Simple"
+        },
+        {
+            "type": "textarea",
+            "id": "hero_feature_3",
+            "label": "Feature 3 Text",
+            "default": "Color coded with easy resealable packaging, PVA sachets are easy to use, mix and handle."
+        },
+        {
+            "type": "text",
+            "id": "hero_feature_4_title",
+            "label": "Feature 4 Title",
+            "default": "Savings"
+        },
+        {
+            "type": "textarea",
+            "id": "hero_feature_4",
+            "label": "Feature 4 Text",
+            "default": "Reduce your delivery, storage, training, and most importantly, financial costs with PVA Soluble Sachets."
+        },
+        {
+            "type": "text",
+            "id": "hero_btn_text",
+            "label": "Button Text",
+            "default": "Get a Quote Today"
+        },
+        {
+            "type": "url",
+            "id": "hero_btn_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "header",
+            "content": "Quote Form Section"
+        },
+        {
+            "type": "text",
+            "id": "form_heading",
+            "label": "Form Section Heading",
+            "default": "Make the Change Today"
+        },
+        {
+            "type": "textarea",
+            "id": "form_subheading",
+            "label": "Form Section Subheading",
+            "default": "PVA is a complete cleaning solution that will lower your costs, while also making your cleaning safer, sustainable, and simpler. To learn more about PVA Soluble Sachets, contact us today!"
+        },
+        {
+            "type": "text",
+            "id": "call_btn_text",
+            "label": "Call Button Text",
+            "default": "CALL NOW"
+        },
+        {
+            "type": "url",
+            "id": "call_btn_link",
+            "label": "Call Button Link"
+        },
+        {
+            "type": "text",
+            "id": "form_title",
+            "label": "Form Title",
+            "default": "GO GREEN TODAY ENQUIRE NOW"
+        },
+        {
+            "type": "text",
+            "id": "submit_btn_text",
+            "label": "Submit Button Text",
+            "default": "Submit"
+        },
+        {
+            "type": "text",
+            "id": "success_message",
+            "label": "Success Message",
+            "default": "Thank you for your enquiry! We will get back to you soon."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "content_section",
+            "name": "Content Section",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "content_title",
+                    "label": "Title",
+                    "default": "What are PVA Soluble Sachets?"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content_text",
+                    "label": "Content",
+                    "default": "<p>PVA Soluble Sachets are a revolutionary solution that will lower make your cleaning routine safer, simpler, more sustainable, and will lower your costs.</p><p>By simply adding these sachets to water, you can produce powerful cleaning agents that will keep your premises clean!</p>"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "content_image",
+                    "label": "Image"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "reverse_layout",
+                    "label": "Reverse Layout (Image on Left)",
+                    "default": false
+                }
+            ]
+        },
+        {
+            "type": "benefits_section",
+            "name": "Benefits Section",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "benefits_title",
+                    "label": "Section Title",
+                    "default": "PVA Sustainable Benefits"
+                },
+                {
+                    "type": "textarea",
+                    "id": "benefits_subtitle",
+                    "label": "Section Subtitle",
+                    "default": "Every business has a responsibility to the environment and future generations."
+                },
+                {
+                    "type": "header",
+                    "content": "Benefit Card 1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "benefit_1_image",
+                    "label": "Image 1"
+                },
+                {
+                    "type": "text",
+                    "id": "benefit_1_title",
+                    "label": "Title 1",
+                    "default": "Recyclable Packaging"
+                },
+                {
+                    "type": "textarea",
+                    "id": "benefit_1_text",
+                    "label": "Text 1",
+                    "default": "All packaging is recyclable, and the pouches are also compostable."
+                },
+                {
+                    "type": "header",
+                    "content": "Benefit Card 2"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "benefit_2_image",
+                    "label": "Image 2"
+                },
+                {
+                    "type": "text",
+                    "id": "benefit_2_title",
+                    "label": "Title 2",
+                    "default": "No Single Use Plastic"
+                },
+                {
+                    "type": "textarea",
+                    "id": "benefit_2_text",
+                    "label": "Text 2",
+                    "default": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+                },
+                {
+                    "type": "header",
+                    "content": "Benefit Card 3"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "benefit_3_image",
+                    "label": "Image 3"
+                },
+                {
+                    "type": "text",
+                    "id": "benefit_3_title",
+                    "label": "Title 3",
+                    "default": "Less Deliveries Needed"
+                },
+                {
+                    "type": "textarea",
+                    "id": "benefit_3_text",
+                    "label": "Text 3",
+                    "default": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%"
+                }
+            ]
+        },
+        {
+            "type": "product_range",
+            "name": "Product Range",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "range_title",
+                    "label": "Range Title",
+                    "default": "Washroom Range"
+                },
+                {
+                    "type": "text",
+                    "id": "range_subtitle",
+                    "label": "Range Subtitle",
+                    "default": "Explore the most popular solutions for washrooms."
+                },
+                {
+                    "type": "header",
+                    "content": "Product 1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "product_1_image",
+                    "label": "Product 1 Image"
+                },
+                {
+                    "type": "text",
+                    "id": "product_1_title",
+                    "label": "Product 1 Title",
+                    "default": "Bathroom Cleaner"
+                },
+                {
+                    "type": "textarea",
+                    "id": "product_1_desc",
+                    "label": "Product 1 Description",
+                    "default": "Designed for removal of soap scums, water scale, and other soils commonly found in bathroom and washroom facilities."
+                },
+                {
+                    "type": "text",
+                    "id": "product_1_feature_1",
+                    "label": "Product 1 Feature 1",
+                    "default": "Identifiable Color"
+                },
+                {
+                    "type": "text",
+                    "id": "product_1_feature_2",
+                    "label": "Product 1 Feature 2",
+                    "default": "Phosphate Free"
+                },
+                {
+                    "type": "text",
+                    "id": "product_1_feature_3",
+                    "label": "Product 1 Feature 3",
+                    "default": "Biodegradable Acid and Surfactants"
+                },
+                {
+                    "type": "text",
+                    "id": "product_1_sachets",
+                    "label": "Product 1 Sachets",
+                    "default": "20"
+                },
+                {
+                    "type": "text",
+                    "id": "product_1_per_sachet",
+                    "label": "Product 1 Per Sachet",
+                    "default": "750 ML"
+                },
+                {
+                    "type": "text",
+                    "id": "product_1_per_pack",
+                    "label": "Product 1 Per Pack",
+                    "default": "15 L"
+                },
+                {
+                    "type": "header",
+                    "content": "Product 2"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "product_2_image",
+                    "label": "Product 2 Image"
+                },
+                {
+                    "type": "text",
+                    "id": "product_2_title",
+                    "label": "Product 2 Title",
+                    "default": "Toilet Cleaner"
+                },
+                {
+                    "type": "textarea",
+                    "id": "product_2_desc",
+                    "label": "Product 2 Description",
+                    "default": "Designed for routine cleaning and descaling of toilet bowls. Not suitable for cleaning tile grouting."
+                },
+                {
+                    "type": "text",
+                    "id": "product_2_feature_1",
+                    "label": "Product 2 Feature 1",
+                    "default": "Palm Free"
+                },
+                {
+                    "type": "text",
+                    "id": "product_2_feature_2",
+                    "label": "Product 2 Feature 2",
+                    "default": "Phosphate Free"
+                },
+                {
+                    "type": "text",
+                    "id": "product_2_feature_3",
+                    "label": "Product 2 Feature 3",
+                    "default": "Pleasant Pine Scent"
+                },
+                {
+                    "type": "text",
+                    "id": "product_2_sachets",
+                    "label": "Product 2 Sachets",
+                    "default": "12"
+                },
+                {
+                    "type": "text",
+                    "id": "product_2_per_sachet",
+                    "label": "Product 2 Per Sachet",
+                    "default": "1 L"
+                },
+                {
+                    "type": "text",
+                    "id": "product_2_per_pack",
+                    "label": "Product 2 Per Pack",
+                    "default": "12 L"
+                },
+                {
+                    "type": "header",
+                    "content": "Product 3"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "product_3_image",
+                    "label": "Product 3 Image"
+                },
+                {
+                    "type": "text",
+                    "id": "product_3_title",
+                    "label": "Product 3 Title",
+                    "default": "Toilet Descale Booster"
+                },
+                {
+                    "type": "textarea",
+                    "id": "product_3_desc",
+                    "label": "Product 3 Description",
+                    "default": "For use in areas with very hard water, or heavily scaled toilets. Use in conjunction with Toilet Cleaner."
+                },
+                {
+                    "type": "text",
+                    "id": "product_3_feature_1",
+                    "label": "Product 3 Feature 1",
+                    "default": "Palm Free"
+                },
+                {
+                    "type": "text",
+                    "id": "product_3_feature_2",
+                    "label": "Product 3 Feature 2",
+                    "default": "Phosphate Free"
+                },
+                {
+                    "type": "text",
+                    "id": "product_3_feature_3",
+                    "label": "Product 3 Feature 3",
+                    "default": "Color Indicator"
+                },
+                {
+                    "type": "text",
+                    "id": "product_3_sachets",
+                    "label": "Product 3 Sachets",
+                    "default": "20"
+                },
+                {
+                    "type": "text",
+                    "id": "product_3_per_sachet",
+                    "label": "Product 3 Per Sachet",
+                    "default": "1 L"
+                },
+                {
+                    "type": "text",
+                    "id": "product_3_per_pack",
+                    "label": "Product 3 Per Pack",
+                    "default": "20 L"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Sachet System Page"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,295 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "euv_hero_banner_main": {
+      "type": "euv-hero-banner",
+      "settings": {
+        "image": "shopify://shop_images/Addaxxxxxx2.png",
+        "subtitle": "ELECTRIC UTILITY VEHICLES",
+        "heading": "EUVs: Why Consider Investing",
+        "description": "<p><strong>A question we are commonly asked is \"why should I invest in an Electric Utility Vehicle\"?</strong></p><p><strong>While the answer differs for everybody based on their needs, if you are interested in reducing fuel costs, lowering your environmental impact, creating a return on investment from your vehicles, or future proofing for tightening emissions regulations, Electric Utility Vehicles can hold the key!</strong></p><p><strong>Below are some of the most common reasons why you should consider investing in Electric Utility Vehicles.</strong></p>",
+        "button_text": "Explore Addax Range",
+        "button_link": "/search?q=Addax&options%5Bprefix%5D=last&type=product",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#333333",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "euv_features_alternating_main": {
+      "type": "euv-features-alternating",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Sustainable_Addax.png",
+            "image_position": "right",
+            "title": "Environmentally Friendly",
+            "description": "Looking to make a genuine impact on sustainability or secure a significant ESG achievement? Electric Utility Vehicles (EUVs) are the perfect solution. With zero emissions, they help reduce your carbon footprint while aligning seamlessly with your sustainability goals. Choosing EUVs signals your commitment to eco-friendly practices, enhancing your reputation among environmentally conscious stakeholders and customers."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Cost_Effective_Addax_8e120dbe-91bf-4a21-9e8f-cc51e5def217.png",
+            "image_position": "left",
+            "title": "Cost-Effective Operation",
+            "description": "Concerned about the rising costs of maintaining a fuel-powered fleet? EUVs provide a practical and economical alternative. With significantly lower fuel costs compared to petrol or diesel vehicles, they deliver daily savings and a tangible return on investment. Additionally, their simplified design, with fewer moving parts, results in reduced maintenance expenses, further enhancing cost efficiency."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Versatile_Addax.png",
+            "image_position": "right",
+            "title": "Versatility",
+            "description": "Struggling with the challenges of operating in noise-sensitive or confined environments? Addax EUVs are specifically designed to meet these needs. Their whisper-quiet operation makes them ideal for use in hospitals, schools, and residential areas. Compact and highly maneuverable, EUVs excel at navigating tight spaces, making them the perfect choice for warehouses, industrial sites, and urban settings."
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Future_Proof_Addax.png",
+            "image_position": "left",
+            "title": "Future Proofing",
+            "description": "As emissions regulations grow stricter and fuel costs continue to rise, the reliability of traditional fuel-powered vehicles becomes increasingly uncertain. Investing in EUVs positions your business for the future, ensuring compliance with evolving standards while embracing innovative, sustainable technology."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4"
+      ],
+      "settings": {
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "euv_why_choose_main": {
+      "type": "euv-why-choose",
+      "settings": {
+        "logo": "shopify://shop_images/Untitled_design_-_2024-02-08T162909.668_72ff558a-fe87-4244-976c-9adbb7d4a019.png",
+        "logo_width": 240,
+        "heading": "Why Choose Clenli Direct",
+        "description": "With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader in the cleaning industry, offering award-winning cleaning solutions, comprehensive support, and our own expert in-house service team. Our deep expertise ensures that you receive the best products tailored to your needs, backed by exceptional customer service.",
+        "underline_color": "#FFFFFF",
+        "underline_height": 2,
+        "underline_width": 900,
+        "underline_spacing": 20,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "euv_product_range_main": {
+      "type": "euv-product-range",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Addax_MTN_4beb7e35-62bb-422a-8ebf-3cbc5b685951.png",
+            "title": "Addax MTN",
+            "description": "The Addax MTN is a compact, fully electric utility vehicle built for urban logistics. With a 6m³ cargo volume, 1,000 kg payload, and a 4.5-meter turning radius, it offers exceptional versatility. Available in configurations like tipper, fridge, and flatbed, it's the ideal solution for efficient, eco-friendly transport.",
+            "button_text": "View the Addax MTN",
+            "button_link": "shopify://products/addax-mtn-electric-utility-vehicle"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Addax_MTX_bf0e245f-25a6-4402-b0e6-3c6ec4fcdd30.png",
+            "title": "Addax MTX",
+            "description": "The Addax MTX is a robust, fully electric utility vehicle with a 7 m³ cargo space, 1,000 kg payload, and compact 1.40 m width for easy urban navigation. Available in versatile configurations like tipper, fridge, and flatbed, it ensures efficient and eco-friendly transport.",
+            "button_text": "View the Addax MTX",
+            "button_link": "shopify://products/addax-mtx-electric-utility-vehicle"
+          }
+        }
+      },
+      "block_order": [
+        "product_1",
+        "product_2"
+      ],
+      "settings": {
+        "heading": "The Addax Range",
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "euv_cta_form_main": {
+      "type": "euv-cta-form",
+      "settings": {
+        "heading": "Don't Get Left Behind",
+        "description": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.",
+        "button_text": "Learn More",
+        "button_link": "shopify://pages/addax-electric-utility-vehicles-ireland-1",
+        "footer_image": "shopify://shop_images/Addax_Footer_45129ff8-fc43-4281-9d07-b7b385ecde21.png",
+        "call_now_text": "CALL NOW",
+        "phone_number": "01 811 89 20",
+        "form_title": "GO GREEN TODAY ENQUIRE NOW",
+        "submit_text": "Submit",
+        "success_message": "Thank you! We will contact you shortly.",
+        "bg_color": "#ffffff",
+        "accent_color": "#2d5a27",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "featured_product_we_xexHeF": {
+      "type": "featured-product-we",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_zzxQnA": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_qnCPtB": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_qnCPtB"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "euv_hero_banner_main",
+    "euv_features_alternating_main",
+    "euv_why_choose_main",
+    "euv_product_range_main",
+    "euv_cta_form_main",
+    "featured_product_we_xexHeF",
+    "newsletter_zzxQnA"
+  ]
+}

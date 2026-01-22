@@ -1,0 +1,1072 @@
+{% comment %}
+  Clenli Direct - Comac Floor Scrubber Dryers Page
+  Complete single section for Comac landing page
+{% endcomment %}
+
+<div class="comac-page">
+  <!-- Hero Section -->
+  <section class="comac-hero">
+    <div class="comac-container">
+      <div class="comac-hero__grid">
+        <div class="comac-hero__image">
+          {% if section.settings.hero_image != blank %}
+            <img
+              src="{{ section.settings.hero_image | image_url: width: 800 }}"
+              alt="{{ section.settings.hero_title }}"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Comaacccc.png"
+              alt="Comac Floor Scrubber Dryers"
+            >
+          {% endif %}
+        </div>
+        <div class="comac-hero__content">
+          <span class="comac-tag">{{ section.settings.hero_tag }}</span>
+          <h1 class="comac-hero__title">{{ section.settings.hero_title }}</h1>
+          <p class="comac-text">{{ section.settings.hero_desc }}</p>
+
+          <div class="comac-features">
+            <div class="comac-feature">
+              <strong>{{ section.settings.feature1_title }}</strong>
+              <p>{{ section.settings.feature1_text }}</p>
+            </div>
+            <div class="comac-feature">
+              <strong>{{ section.settings.feature2_title }}</strong>
+              <p>{{ section.settings.feature2_text }}</p>
+            </div>
+            <div class="comac-feature">
+              <strong>{{ section.settings.feature3_title }}</strong>
+              <p>{{ section.settings.feature3_text }}</p>
+            </div>
+          </div>
+
+          <a href="{{ section.settings.hero_btn_link }}" class="comac-btn">{{ section.settings.hero_btn_text }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+
+  <!-- About Comac Section -->
+  <section class="comac-info">
+    <div class="comac-container">
+      <div class="comac-info__grid">
+        <div class="comac-info__content comac-info__content--center">
+          <h2 class="comac-subtitle">{{ section.settings.about_title }}</h2>
+          <p class="comac-text">{{ section.settings.about_text }}</p>
+        </div>
+        <div class="comac-info__image">
+          {% if section.settings.about_image != blank %}
+            <img
+              src="{{ section.settings.about_image | image_url: width: 800 }}"
+              alt="{{ section.settings.about_title }}"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Bootstrap_Images_178910_.png"
+              alt="About Comac"
+            >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+
+  <!-- Carbon Passports Section -->
+  <section class="comac-info">
+    <div class="comac-container">
+      <div class="comac-info__grid comac-info__grid--reverse">
+        <div class="comac-info__content comac-info__content--center">
+          <h2 class="comac-subtitle">{{ section.settings.carbon_title }}</h2>
+          <p class="comac-text">{{ section.settings.carbon_text }}</p>
+        </div>
+        <div class="comac-info__image">
+          {% if section.settings.carbon_image != blank %}
+            <img
+              src="{{ section.settings.carbon_image | image_url: width: 800 }}"
+              alt="{{ section.settings.carbon_title }}"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Bootstrap_Images_20_.png"
+              alt="Carbon Passports"
+            >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+
+  <!-- Sustainable Technologies Section -->
+  <section class="comac-tech">
+    <div class="comac-container">
+      <h2 class="comac-section-title">{{ section.settings.tech_title }}</h2>
+      <p class="comac-section-subtitle">{{ section.settings.tech_text }}</p>
+
+      <!-- Row 1: 4 items -->
+      <div class="comac-tech__grid comac-tech__grid--4">
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech1_image != blank %}
+              <img
+                src="{{ section.settings.tech1_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech1_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/A.png" alt="Eco Mode">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech1_title }}</h3>
+          <p>{{ section.settings.tech1_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech2_image != blank %}
+              <img
+                src="{{ section.settings.tech2_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech2_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/B.png" alt="Stop & Go System">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech2_title }}</h3>
+          <p>{{ section.settings.tech2_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech3_image != blank %}
+              <img
+                src="{{ section.settings.tech3_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech3_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/C.png" alt="LED Lights">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech3_title }}</h3>
+          <p>{{ section.settings.tech3_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech4_image != blank %}
+              <img
+                src="{{ section.settings.tech4_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech4_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/D.png" alt="Emergency Button">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech4_title }}</h3>
+          <p>{{ section.settings.tech4_text }}</p>
+        </div>
+      </div>
+
+      <!-- Row 2: 3 items -->
+      <div class="comac-tech__grid comac-tech__grid--3">
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech5_image != blank %}
+              <img
+                src="{{ section.settings.tech5_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech5_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/E.png" alt="Comac Dosing System">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech5_title }}</h3>
+          <p>{{ section.settings.tech5_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech6_image != blank %}
+              <img
+                src="{{ section.settings.tech6_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech6_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/F.png" alt="Anti Bacterial Tanks">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech6_title }}</h3>
+          <p>{{ section.settings.tech6_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech7_image != blank %}
+              <img
+                src="{{ section.settings.tech7_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech7_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/G.png" alt="Comac Corrosion Protection">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech7_title }}</h3>
+          <p>{{ section.settings.tech7_text }}</p>
+        </div>
+      </div>
+
+      <!-- Row 3: 4 items -->
+      <div class="comac-tech__grid comac-tech__grid--4">
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech8_image != blank %}
+              <img
+                src="{{ section.settings.tech8_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech8_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/H.png" alt="Constant Solution Flow">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech8_title }}</h3>
+          <p>{{ section.settings.tech8_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech9_image != blank %}
+              <img
+                src="{{ section.settings.tech9_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech9_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/I.png" alt="Pressure Monitoring">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech9_title }}</h3>
+          <p>{{ section.settings.tech9_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech10_image != blank %}
+              <img
+                src="{{ section.settings.tech10_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech10_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/J.png" alt="Smart Solution Control">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech10_title }}</h3>
+          <p>{{ section.settings.tech10_text }}</p>
+        </div>
+        <div class="comac-tech-card">
+          <div class="comac-tech-card__img">
+            {% if section.settings.tech11_image != blank %}
+              <img
+                src="{{ section.settings.tech11_image | image_url: width: 400 }}"
+                alt="{{ section.settings.tech11_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/K.png" alt="Program Selector">
+            {% endif %}
+          </div>
+          <h3>{{ section.settings.tech11_title }}</h3>
+          <p>{{ section.settings.tech11_text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+
+  <!-- Most Popular Models Section -->
+  <section class="comac-models">
+    <div class="comac-container">
+      <h2 class="comac-section-title">{{ section.settings.models_title }}</h2>
+      <p class="comac-section-subtitle">{{ section.settings.models_text }}</p>
+      <div class="comac-models__cta">
+        <a href="{{ section.settings.models_btn_link }}" class="comac-btn">{{ section.settings.models_btn_text }}</a>
+      </div>
+
+      <div class="comac-models__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'product' %}
+            <div class="comac-product-card" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.link }}" class="comac-product-card__link">
+                <div class="comac-product-card__img">
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.name }}">
+                  {% else %}
+                    <div class="comac-product-placeholder">
+                      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#6fb31a" stroke-width="1">
+                        <rect x="2" y="2" width="20" height="20" rx="3"/>
+                      </svg>
+                    </div>
+                  {% endif %}
+                </div>
+                <h3 class="comac-product-card__name">{{ block.settings.name }}</h3>
+                <p class="comac-product-card__type">{{ block.settings.type }}</p>
+              </a>
+              <a href="{{ block.settings.link }}" class="comac-btn comac-btn--small">View Product</a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+</div>
+
+<style>
+  .comac-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    color: #333;
+    width: 100%;
+  }
+
+  .comac-container {
+    width: 100%;
+    max-width: 1570px !important;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  hr.imop-divider {
+    width: 100% !important;
+    max-width: 1570px !important;
+    height: 4px !important;
+    margin: 40px auto !important;
+    background-color: #6fb31a !important;
+    border: 0 !important;
+    border: none !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .comac-tag {
+    display: inline-block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .comac-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+  }
+
+  .comac-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+
+  .comac-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .comac-section-subtitle {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .comac-btn {
+    display: inline-block;
+    background: #6fb31a;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .comac-btn:hover {
+    background: #5a9615;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+  .comac-btn--small {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .comac-hero {
+    padding: 60px 0;
+    background: #fff;
+    width: 100%;
+  }
+
+  .comac-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .comac-hero__image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .comac-hero__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .comac-features {
+    margin: 25px 0;
+  }
+
+  .comac-feature {
+    margin-bottom: 20px;
+  }
+
+  .comac-feature strong {
+    display: block;
+    color: #1a1a2e;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .comac-feature p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .comac-info {
+    padding: 60px 0;
+    background: #fff;
+    width: 100%;
+  }
+
+  .comac-info__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .comac-info__grid--reverse {
+    direction: rtl;
+  }
+
+  .comac-info__grid--reverse > * {
+    direction: ltr;
+  }
+
+  .comac-info__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    {% comment %} box-shadow: 0 10px 30px rgba(0,0,0,0.1); {% endcomment %}
+  }
+
+  .comac-info__content--center {
+    text-align: center;
+  }
+
+  .comac-tech {
+    padding: 60px 0;
+    background: #fff;
+    width: 100%;
+  }
+
+  .comac-tech__grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .comac-tech__grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .comac-tech__grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .comac-tech-card {
+        text-align: center;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 4px;
+    line-height: 1.428571429;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    text
+    
+    {% comment %} text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease; {% endcomment %}
+  }
+
+  .comac-tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .comac-tech-card__img {
+    margin-bottom: 15px;
+  }
+
+  .comac-tech-card__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .comac-tech-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+  }
+
+  .comac-tech-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .comac-models {
+    padding: 60px 0;
+    background: #fff;
+    width: 100%;
+  }
+
+  .comac-models__cta {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .comac-models__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .comac-product-card {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .comac-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+
+  .comac-product-card__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .comac-product-card__img {
+    margin-bottom: 20px;
+  }
+
+  .comac-product-card__img img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .comac-product-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f5e0 0%, #d4edc4 100%);
+    border-radius: 10px;
+  }
+
+  .comac-product-card__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+  }
+
+  .comac-product-card__type {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 1024px) {
+    .comac-container {
+      padding: 0 30px;
+    }
+
+    .comac-tech__grid--4,
+    .comac-tech__grid--3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .comac-models__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .comac-container {
+      padding: 0 20px;
+    }
+
+    .comac-hero__grid,
+    .comac-info__grid,
+    .comac-info__grid--reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      text-align: center;
+    }
+
+    .comac-hero__title {
+      font-size: 32px;
+    }
+
+    .comac-tech__grid--4,
+    .comac-tech__grid--3,
+    .comac-models__grid {
+      gap:2px;
+      grid-template-columns: 1fr;
+    }
+
+    .comac-hero__image,
+    .comac-info__image {
+      order: -1;
+    }
+
+    .comac-info__content {
+      text-align: center;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Comac Page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_tag",
+      "label": "Tag Text",
+      "default": "SCRUBBER DRYERS"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Comac Scrubber Dryers"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_desc",
+      "label": "Description",
+      "default": "Robust and reliable, Comac are a longstanding brand in the world of cleaning."
+    },
+    {
+      "type": "text",
+      "id": "feature1_title",
+      "label": "Feature 1 Title",
+      "default": "Effective deep cleaning:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature1_text",
+      "label": "Feature 1 Text",
+      "default": "Comac scrubber dryers effortlessly remove stubborn dirt and stains."
+    },
+    {
+      "type": "text",
+      "id": "feature2_title",
+      "label": "Feature 2 Title",
+      "default": "Cleaner floors, safer spaces:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature2_text",
+      "label": "Feature 2 Text",
+      "default": "Designed to leave floors dry and free from residue."
+    },
+    {
+      "type": "text",
+      "id": "feature3_title",
+      "label": "Feature 3 Title",
+      "default": "Tailored cleaning solutions:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature3_text",
+      "label": "Feature 3 Text",
+      "default": "From expansive warehouses to small offices."
+    },
+    {
+      "type": "text",
+      "id": "hero_btn_text",
+      "label": "Button Text",
+      "default": "Explore Comac Range"
+    },
+    {
+      "type": "url",
+      "id": "hero_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "About Comac"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "about_title",
+      "label": "Title",
+      "default": "About Comac"
+    },
+    {
+      "type": "textarea",
+      "id": "about_text",
+      "label": "Text",
+      "default": "Synonymous with quality, Comac are a leading provider of scrubber dryers worldwide."
+    },
+    {
+      "type": "header",
+      "content": "Carbon Passports"
+    },
+    {
+      "type": "image_picker",
+      "id": "carbon_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "carbon_title",
+      "label": "Title",
+      "default": "Carbon Passports"
+    },
+    {
+      "type": "textarea",
+      "id": "carbon_text",
+      "label": "Text",
+      "default": "As part of their drive for a more sustainable future, Comac have embraced the international standard ISO 14067."
+    },
+    {
+      "type": "header",
+      "content": "Sustainable Technologies"
+    },
+    {
+      "type": "text",
+      "id": "tech_title",
+      "label": "Section Title",
+      "default": "Comac Sustainable Technologies"
+    },
+    {
+      "type": "textarea",
+      "id": "tech_text",
+      "label": "Section Text",
+      "default": "Comac have created technologies tailored to minimize the environmental impact of their scrubber dryers."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech1_image",
+      "label": "Tech 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech1_title",
+      "label": "Tech 1 Title",
+      "default": "Eco Mode"
+    },
+    {
+      "type": "textarea",
+      "id": "tech1_text",
+      "label": "Tech 1 Text",
+      "default": "Pressing a single button reduces machine energy consumption and noise level."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech2_image",
+      "label": "Tech 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech2_title",
+      "label": "Tech 2 Title",
+      "default": "Stop & Go System"
+    },
+    {
+      "type": "textarea",
+      "id": "tech2_text",
+      "label": "Tech 2 Text",
+      "default": "When the machine is temporarily idle, the solution flow stops and the brushes are halted."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech3_image",
+      "label": "Tech 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech3_title",
+      "label": "Tech 3 Title",
+      "default": "LED Lights"
+    },
+    {
+      "type": "textarea",
+      "id": "tech3_text",
+      "label": "Tech 3 Text",
+      "default": "The energy savings obtained thanks to the use of LED technology can reach up to 80%."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech4_image",
+      "label": "Tech 4 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech4_title",
+      "label": "Tech 4 Title",
+      "default": "Emergency Button"
+    },
+    {
+      "type": "textarea",
+      "id": "tech4_text",
+      "label": "Tech 4 Text",
+      "default": "Emergency stop is a control designed to be easily identifiable and rapidly accessible."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech5_image",
+      "label": "Tech 5 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech5_title",
+      "label": "Tech 5 Title",
+      "default": "Comac Dosing System"
+    },
+    {
+      "type": "textarea",
+      "id": "tech5_text",
+      "label": "Tech 5 Text",
+      "default": "The amount of solution can be immediately adapted to the specific dirt to be cleaned."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech6_image",
+      "label": "Tech 6 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech6_title",
+      "label": "Tech 6 Title",
+      "default": "Anti Bacterial Tanks"
+    },
+    {
+      "type": "textarea",
+      "id": "tech6_text",
+      "label": "Tech 6 Text",
+      "default": "An additive is included when moulding the tanks that allows the bacterial load to be kept at lower levels."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech7_image",
+      "label": "Tech 7 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech7_title",
+      "label": "Tech 7 Title",
+      "default": "Comac Corrosion Protection"
+    },
+    {
+      "type": "textarea",
+      "id": "tech7_text",
+      "label": "Tech 7 Text",
+      "default": "Treatment created by Comac to coat and protect metallic parts exposed to corrosion."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech8_image",
+      "label": "Tech 8 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech8_title",
+      "label": "Tech 8 Title",
+      "default": "Constant Solution Flow"
+    },
+    {
+      "type": "textarea",
+      "id": "tech8_text",
+      "label": "Tech 8 Text",
+      "default": "Comac has designed differentiated flow that ensures proper solution delivery on both brushes."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech9_image",
+      "label": "Tech 9 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech9_title",
+      "label": "Tech 9 Title",
+      "default": "Pressure Monitoring"
+    },
+    {
+      "type": "textarea",
+      "id": "tech9_text",
+      "label": "Tech 9 Text",
+      "default": "Constantly monitors the power dispensed by the brush motors to guarantee maximum effectiveness."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech10_image",
+      "label": "Tech 10 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech10_title",
+      "label": "Tech 10 Title",
+      "default": "Smart Solution Control"
+    },
+    {
+      "type": "textarea",
+      "id": "tech10_text",
+      "label": "Tech 10 Text",
+      "default": "If the floor scrubber works at reduced speed, the solution flow automatically decreases."
+    },
+    {
+      "type": "image_picker",
+      "id": "tech11_image",
+      "label": "Tech 11 Image"
+    },
+    {
+      "type": "text",
+      "id": "tech11_title",
+      "label": "Tech 11 Title",
+      "default": "Program Selector"
+    },
+    {
+      "type": "textarea",
+      "id": "tech11_text",
+      "label": "Tech 11 Text",
+      "default": "The working program selector enables the user to select the type of activity to be carried out."
+    },
+    {
+      "type": "header",
+      "content": "Most Popular Models"
+    },
+    {
+      "type": "text",
+      "id": "models_title",
+      "label": "Title",
+      "default": "Most Popular Comac Models"
+    },
+    {
+      "type": "textarea",
+      "id": "models_text",
+      "label": "Text",
+      "default": "See our most popular options below or browse our full range to find the perfect scrubber dryer for you!"
+    },
+    {
+      "type": "text",
+      "id": "models_btn_text",
+      "label": "Button Text",
+      "default": "Explore Comac Range"
+    },
+    {
+      "type": "url",
+      "id": "models_btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Comac Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Comac Antea"
+        },
+        {
+          "type": "text",
+          "id": "type",
+          "label": "Type",
+          "default": "Walk Behind Scrubber Dryer"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Product Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comac Page",
+      "blocks": [
+        { "type": "product", "settings": { "name": "Comac Antea", "type": "Walk Behind Scrubber Dryer" } },
+        { "type": "product", "settings": { "name": "Comac Versa", "type": "Walk Behind Scrubber Dryer" } },
+        { "type": "product", "settings": { "name": "Comac Innova 55", "type": "Ride On Scrubber Dryer" } },
+        { "type": "product", "settings": { "name": "Comac C85", "type": "Ride On Scrubber Dryer" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

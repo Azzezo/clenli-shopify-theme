@@ -1,0 +1,861 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Pre Sale Questions",
+            "question_1": "Q: “Will your template be fully compatible with Shopify?”",
+            "answer_1": "<p>Yes it will be</p>",
+            "question_2": "Q: “What is included in the theme package?”",
+            "answer_2": "<p>Please make sure that you follow below steps:\n<br><br>\n1/ Download the package from themeforest.net (The file is in zip format)\n<br><br>\n2/ Extract the file you've just downloaded (Don't forget this step).\n<br><br>\n3/ Find this file: ella-x.x.x-sections-ready.zip in the folder Ella Sections Ready x.x.x, then you just need to upload ella-x.x.x-sections-ready.zip file to your Shopify store.\n<br><br>\n- If you would like to use Ella RTL version. Please find this file: ella-x.x.x-sections-ready-rtl.zip in the folder Ella Sections Ready x.x.x RTL, then you just need to upload ella-x.x.x-sections-ready-rtl.zip file to your Shopify store\n<br><br>\n- If you want to install child theme, please go to the corresponding theme folder</p>",
+            "question_3": "Q: “Do you guys offer a refund or exchange?”",
+            "answer_3": "<p>To save your time and reach our support quickly, please follow below steps:\n\t<br>\n\t</p>\n\t<ul style=\"list-style-type: none; padding: 0; margin: 0; margin-top: 8px;\">\n\t<li class=\"list-item\">\n\t<div class=\"list-circle-container\">\n\t\t<span class=\"list-circle\"></span>\n\t</div>\n\t<span class=\"list-item-content\">Create a staff account for us (with Themes permission and Settings permission) <a style=\"color: #0688E2;\" href=\"http://docs.shopify.com/manual/settings/account/staff-members\">http://docs.shopify.com/manual/settings/account/staff-members</a></span>\n\t</li>\n\t<li class=\"list-item\">\n\t<div class=\"list-circle-container\">\n\t\t<span class=\"list-circle\"></span>\n\t</div>\n\t<span class=\"list-item-content\">\n\tCapture screenshot or video for the issue you get.\n\t</span>\n\t</li>\n\t<li class=\"list-item\">\n\t<div class=\"list-circle-container\">\n\t\t<span class=\"list-circle\"></span>\n\t</div>\n\t<span class=\"list-item-content\">\n\tSpecify which template and version you are using.\n\t</span>\n\t</li>\n\t<li class=\"list-item\">\n\t<div class=\"list-circle-container\">\n\t\t<span class=\"list-circle\"></span>\n\t</div>\n\t<span class=\"list-item-content\">\n\tDescribe clearly how to reproduce the issue.\n\t</span>\n\t</li>\n\t<li class=\"list-item\">\n\t<div class=\"list-circle-container\">\n\t\t<span class=\"list-circle\"></span>\n\t</div>\n\t<span class=\"list-item-content\">\n\tSend all information (staff account, screenshot, video, template name and version, description of the issues, link) to \n\t<a href=\"mailto:email@domain.com\">email@domain.com</a>\n\t</span>\n\t</li>\n\t</ul>\n\t<p></p>\n\t<style>\n\t\t.list-item {\n\t\t\tmargin-top: 13px;\n\t\t\theight: max-content;\n\t\t\tdisplay: flex;\n\t\t\tgap: 11px;\n\t}\n\n\t.list-circle-container {\n\t\theight: 100%;\n\t\twidth: 7px;\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t}\n\t\n\t.list-item:first-child {\n\t\tmargin-top: 18px;\n\t}\n\t\n\t.list-circle {\n\t\twidth: 7px;\n\t\theight: 7px;\n\t\tborder-radius: 50%;\n\t\tbackground-color: var(--color-text);\n\t}\n\t\n\t.list-circle:empty {\n\t\tdisplay: inline-block;\n\t}\n\n\t.list-item a {\n\ttext-decoration: underline;\n\t}\n\n\t</style>",
+            "question_4": "Q: “Would assistance be available to upload the template if needed?”",
+            "answer_4": "<p>Yes, we will assist you to install the template if needed</p>",
+            "question_5": "Q: “Do you guys offer customisation services for your themes?”",
+            "answer_5": "<p> Yes, we do. Please send your customisation requests to email@domain.com, we will give you our quote. Thank you.\n</p>",
+            "question_6": "Q: “Do you guys provide customer support during weekends/holidays?”",
+            "answer_6": "<p>Normally we don't provide support during weekends, except for urgent cases. In these cases, you only need to mark “Urgent” in your email, we will get back to you ASAP.\n</p>",
+            "question_7": "Q: “What I have to do when I need your support?”",
+            "answer_7": "<p>1/ Create a staff account for us (with Themes permission and Settings permission) <a href=\"http://docs.shopify.com/manual/settings/account/staff-members\" title=\"http://docs.shopify.com/manual/settings/account/staff-members\">http://docs.shopify.com/manual/settings/account/staff-members</a></p>\n<p>2/ Capture screenshot or video for the issue you get.</p>\n<p>3/ Specify which template and version you are using.</p>\n<p>4/ Describe clearly how to reproduce the issue.</p>\n<p>5/ Submit a support ticket at here: <a href=\"https://halosoft.ticksy.com/\" title=\"https://halosoft.ticksy.com/\">https://halosoft.ticksy.com/</a>. Our support team will get back to you soonest, please help us to wait.</p>",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Technical + Theme Questions",
+            "question_1": "Q: “I cannot upload the theme to my Shopify store/Shopify alerts that the file is too big to upload, what is the problem?”",
+            "answer_1": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_2": "Q: “Can I turn on/off Lazy Loading Image/Item Animation/Fade Up on the page?”",
+            "answer_2": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_3": "Q: “I want to have the dropdown cart displayed automatically every time clients hover over it (instead of clicking on it). Is it possible?”",
+            "answer_3": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_4": "Q: “Can I turn on/off some blocks on the page?”",
+            "answer_4": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_5": "Q: “I notice that the images used in the theme are all portrait. Will that be a problem if I use square images for our products? How will they be displayed in the theme?”",
+            "answer_5": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_6": "Q: “Does the theme support image resizing and cropping?”",
+            "answer_6": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_7": "Q: “Can I add borders around our product images?”",
+            "answer_7": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_8": "Q: “Can I have multi level menu?”",
+            "answer_8": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_9": "Q: “Does the theme support variant image?”",
+            "answer_9": "<p>Use overlay text to give your customers insight into your brand. Select image and text that relates to your style and story.</p>",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "15d9d2f4-1bdd-49c8-9a99-58246020f05c",
+        "f4d12560-a07c-4bd4-a934-2a8eddeaccc9"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "breadcrumb_bg": "",
+        "breadcrumb_gradient": "",
+        "breadcrumb_bg_mb": "#f6f6f6",
+        "breadcrumb_gradient_mb": "",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "show_faqs_filter": true,
+        "faqs_text": "<p>If you have an issue or question that requires immediate assistance, you can click the button below to chat live with a Customer Service representative. If we aren’t available, drop us an email and we will get back to you within 20-36 hours!</p>",
+        "faqs_message_heading": "Need Help?",
+        "faqs_message_text": "<p>If you have an issue or question that requires immediate assistance, you can click the button below to chat live with a Customer Service representative. If we aren’t available, drop us an email and we will get back to you within 20-36 hours!</p>",
+        "message_method_link_1": "https://facebook.com",
+        "message_method_text_1": "Message Us",
+        "message_method_link_2": "https://gmail.com",
+        "message_method_text_2": "Contact Us",
+        "contact_content_text": "Unable to find satisfactory answers ?",
+        "contact_text": "Contact Support",
+        "contact_link": "shopify://pages/contact-us-2",
+        "contact_color": "#ffffff",
+        "contact_color_border": "#ef6454",
+        "contact_color_bg": "#ef6454",
+        "contact_color_bg_gradient": "",
+        "contact_color_hover": "#ffffff",
+        "contact_color_border_hover": "#e93d29",
+        "contact_color_bg_hover": "#e93d29",
+        "contact_color_bg_gradient_hover": "",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "sachet_system_GxEeRF": {
+      "type": "sachet-system",
+      "blocks": {
+        "point_HPFXCt": {
+          "type": "point",
+          "settings": {
+            "title": "Sustainable",
+            "text": "PVA Soluble Sachets can eradicate single use plastic bottles from your cleaning, and reduce the number of deliveries needed, lowering your CO2 emissions."
+          }
+        },
+        "point_HpwyP8": {
+          "type": "point",
+          "settings": {
+            "title": "Safe",
+            "text": "No risk of spillages or manual handling injuries, as PVA comes in powder form safely sealed in water-soluble paper sachets."
+          }
+        },
+        "point_apKaHq": {
+          "type": "point",
+          "settings": {
+            "title": "Simple",
+            "text": "Color coded with easy resealable packaging, PVA sachets are easy to use, mix and handle."
+          }
+        },
+        "point_GjYJYD": {
+          "type": "point",
+          "settings": {
+            "title": "Savings",
+            "text": "Reduce your delivery, storage, training, and most importantly, financial costs with PVA Soluble Sachets."
+          }
+        }
+      },
+      "block_order": [
+        "point_HPFXCt",
+        "point_HpwyP8",
+        "point_apKaHq",
+        "point_GjYJYD"
+      ],
+      "name": "Product Feature",
+      "settings": {
+        "image": "shopify://shop_images/pvvvvvvvaaaaaaa45.png",
+        "label": "GREEN CLEANING",
+        "heading": "PVA Soluble Sachets",
+        "subtext": "Simply add to water and start cleaning.",
+        "button_text": "Get a Quote Today",
+        "button_link": "",
+        "bg_color": "#ffffff",
+        "accent_color": "#006666",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_1_RqXYrH": {
+      "type": "sachet-system-1",
+      "blocks": {
+        "row_KC6bK4": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/What_Are_PVA_Soluble_Sachets.png",
+            "label": "",
+            "heading": "What are PVA Soluble Sachets?",
+            "text": "<h3></h3><p>PVA Soluble Sachets are a revolutionary solution that will lower make your cleaning routine safer, simpler, more sustainable, and will lower your costs.</p><p></p><p>By simply adding these sachets to water, you can produce pow</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "row_dihfgd": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/How_PVA_Sachets_Work.png",
+            "label": "",
+            "heading": "Expert Support & Training",
+            "text": "<p>Our dedicated team provides comprehensive training and ongoing support.</p>",
+            "button_text": "Contact Us",
+            "button_link": ""
+          }
+        },
+        "row_MLXWVB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/What_Can_PVA_Sachets_Replace.png",
+            "label": "",
+            "heading": "Eco-Friendly Solutions",
+            "text": "<p>We're committed to sustainability with our range of environmentally friendly products.</p>",
+            "button_text": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_KC6bK4",
+        "row_dihfgd",
+        "row_MLXWVB"
+      ],
+      "name": "Alternating Content",
+      "settings": {
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "divider_color": "#6fb31a",
+        "divider_spacing": 60,
+        "bg_color": "#ffffff",
+        "accent_color": "#6fb31a",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_benehit_JKUF84": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_393czf": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Recyclable_Packaging.png",
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_nXGcLw": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Single_Use_Plastic.png",
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+          }
+        },
+        "card_UWnG6r": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Less_Deliveries_Needed.png",
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_393czf",
+        "card_nXGcLw",
+        "card_UWnG6r"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_benehit_aH3CjE": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_AiQnk8": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Exposure_to_Products.png",
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_AtGpYR": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Reduced_Manual_Handling_Risk.png",
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+          }
+        },
+        "card_KDyhx6": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Spillages.png",
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_AiQnk8",
+        "card_AtGpYR",
+        "card_KDyhx6"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_benehit_d8HQtc": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_MenwAa": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Less_Deliveries_Needed.png",
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_rUT4JQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Reduced_Manual_Handling_Risk.png",
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+          }
+        },
+        "card_kbi8Lb": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Recyclable_Packaging.png",
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_MenwAa",
+        "card_rUT4JQ",
+        "card_kbi8Lb"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_benehit_dX3XCy": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_cm3yFN": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Single_Use_Plastic.png",
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_kWwU9L": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Less_Deliveries_Needed.png",
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+          }
+        },
+        "card_YmY9QD": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/No_Spillages.png",
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_cm3yFN",
+        "card_kWwU9L",
+        "card_YmY9QD"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_1_TEdYqk": {
+      "type": "sachet-system-1",
+      "blocks": {
+        "row_q9MjBi": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/PVA_Sachet_System_Green_Cleaning.png",
+            "label": "OUR SERVICES",
+            "heading": "Professional Cleaning Equipment",
+            "text": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use.</p>",
+            "button_text": "View Products",
+            "button_link": ""
+          }
+        },
+        "row_QkA9dq": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/How_PVA_Sachets_Work.png",
+            "label": "WHY CHOOSE US",
+            "heading": "Expert Support & Training",
+            "text": "<p>Our dedicated team provides comprehensive training and ongoing support.</p>",
+            "button_text": "Contact Us",
+            "button_link": ""
+          }
+        },
+        "row_3mpWTV": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Why_Invest_in_Green_Cleaning.png",
+            "label": "SUSTAINABILITY",
+            "heading": "Eco-Friendly Solutions",
+            "text": "<p>We're committed to sustainability with our range of environmentally friendly products.</p>",
+            "button_text": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_q9MjBi",
+        "row_QkA9dq",
+        "row_3mpWTV"
+      ],
+      "name": "Alternating Content",
+      "settings": {
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "divider_color": "#6fb31a",
+        "divider_spacing": 60,
+        "bg_color": "#ffffff",
+        "accent_color": "#6fb31a",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_space_LyGG7A": {
+      "type": "sachet-system-space",
+      "blocks": {
+        "product_card_xMrX7c": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Bathroom_9.png",
+            "title": "Bathroom Cleaner",
+            "description": "Designed for removal of soap scums, water scale, and other soils commonly found in bathrooms and washroom facilities.",
+            "feature_1": "Identifiable Color",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Biodegradable Acid and Surfactants",
+            "sachets": "20",
+            "per_sachet": "750 ML",
+            "per_pack": "15 L"
+          }
+        },
+        "product_card_c6Adgw": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Toilet_10.png",
+            "title": "Toilet Cleaner",
+            "description": "Designed for routine cleaning and descaling of toilet bowls. Also suitable for cleaning tile grouting.",
+            "feature_1": "Palm Free",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Pleasant Pine Scent",
+            "sachets": "12",
+            "per_sachet": "1 L",
+            "per_pack": "12 L"
+          }
+        },
+        "product_card_zUmE93": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Toilet_DB_11.png",
+            "title": "Toilet Descale Booster",
+            "description": "For use in areas with very hard water, or heavily soiled toilets. Use in conjunction with Toilet Cleaner.",
+            "feature_1": "Palm Free",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Color Indicator",
+            "sachets": "20",
+            "per_sachet": "1 L",
+            "per_pack": "20 L"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_xMrX7c",
+        "product_card_c6Adgw",
+        "product_card_zUmE93"
+      ],
+      "name": "Product Cards Specs",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "description": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions.",
+        "bottom_heading": "",
+        "columns": 3,
+        "heading_size": 32,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#666666",
+        "accent_color": "#6fb31a",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_space_4ixVzw": {
+      "type": "sachet-system-space",
+      "blocks": {
+        "product_card_cC6wYQ": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Toilet_10.png",
+            "title": "Bathroom Cleaner",
+            "description": "Designed for removal of soap scums, water scale, and other soils commonly found in bathrooms and washroom facilities.",
+            "feature_1": "Identifiable Color",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Biodegradable Acid and Surfactants",
+            "sachets": "20",
+            "per_sachet": "750 ML",
+            "per_pack": "15 L"
+          }
+        },
+        "product_card_ARGRjY": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Bathroom_9.png",
+            "title": "Toilet Cleaner",
+            "description": "Designed for routine cleaning and descaling of toilet bowls. Also suitable for cleaning tile grouting.",
+            "feature_1": "Palm Free",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Pleasant Pine Scent",
+            "sachets": "12",
+            "per_sachet": "1 L",
+            "per_pack": "12 L"
+          }
+        },
+        "product_card_9dmfNU": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Toilet_DB_11.png",
+            "title": "Toilet Descale Booster",
+            "description": "For use in areas with very hard water, or heavily soiled toilets. Use in conjunction with Toilet Cleaner.",
+            "feature_1": "Palm Free",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Color Indicator",
+            "sachets": "20",
+            "per_sachet": "1 L",
+            "per_pack": "20 L"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_cC6wYQ",
+        "product_card_ARGRjY",
+        "product_card_9dmfNU"
+      ],
+      "name": "Product Cards Specs",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "description": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions.",
+        "bottom_heading": "",
+        "columns": 3,
+        "heading_size": 32,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#666666",
+        "accent_color": "#6fb31a",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_space_VACirA": {
+      "type": "sachet-system-space",
+      "blocks": {
+        "product_card_gCKRUm": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Toilet_10.png",
+            "title": "Bathroom Cleaner",
+            "description": "Designed for removal of soap scums, water scale, and other soils commonly found in bathrooms and washroom facilities.",
+            "feature_1": "Identifiable Color",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Biodegradable Acid and Surfactants",
+            "sachets": "20",
+            "per_sachet": "750 ML",
+            "per_pack": "15 L"
+          }
+        },
+        "product_card_ecXfzE": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Toilet_DB_11.png",
+            "title": "Toilet Cleaner",
+            "description": "Designed for routine cleaning and descaling of toilet bowls. Also suitable for cleaning tile grouting.",
+            "feature_1": "Palm Free",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Pleasant Pine Scent",
+            "sachets": "12",
+            "per_sachet": "1 L",
+            "per_pack": "12 L"
+          }
+        },
+        "product_card_bgFCL7": {
+          "type": "product_card",
+          "settings": {
+            "image": "shopify://shop_images/Bathroom_9.png",
+            "title": "Toilet Descale Booster",
+            "description": "For use in areas with very hard water, or heavily soiled toilets. Use in conjunction with Toilet Cleaner.",
+            "feature_1": "Palm Free",
+            "feature_2": "Phosphate Free",
+            "feature_3": "Color Indicator",
+            "sachets": "20",
+            "per_sachet": "1 L",
+            "per_pack": "20 L"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_gCKRUm",
+        "product_card_ecXfzE",
+        "product_card_bgFCL7"
+      ],
+      "name": "Product Cards Specs",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "description": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions.",
+        "bottom_heading": "",
+        "columns": 3,
+        "heading_size": 32,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#666666",
+        "accent_color": "#6fb31a",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "image_3_KDfAAK": {
+      "type": "image-3",
+      "name": "Green Contact Form",
+      "settings": {
+        "heading": "Make the Change Today",
+        "heading_color": "#232323",
+        "heading_size": 28,
+        "description": "Lower your environmental impact while saving on costs - all while keeping your facility cleaner than ever. To learn more about our Green Cleaning Solutions, contact us today!",
+        "desc_color": "#555555",
+        "desc_size": 15,
+        "call_button_text": "CALL NOW",
+        "call_button_link": "",
+        "call_button_bg": "#1a5d1a",
+        "call_button_hover": "#0d4a0d",
+        "call_button_text_color": "#ffffff",
+        "call_button_gap": 20,
+        "form_heading": "GO GREEN TODAY ENQUIRE NOW",
+        "form_border_color": "#6fb31a",
+        "form_border_width": 3,
+        "name_placeholder": "NAME",
+        "email_placeholder": "MAIL",
+        "phone_placeholder": "Phone Number",
+        "message_placeholder": "MESSAGE",
+        "submit_button_text": "SUBMIT",
+        "submit_button_bg": "#6fb31a",
+        "submit_button_hover": "#5a9216",
+        "submit_button_text_color": "#ffffff",
+        "success_message": "Thank you for your enquiry! We will get back to you soon.",
+        "bg_color": "#f5f5f5",
+        "container": "1170",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "featured_product_we_PDfNdA": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "",
+        "new_title": "New Products",
+        "new_collection": "",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_96FJpE": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_9ExMjq": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_9ExMjq"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sachet_system_GxEeRF",
+    "sachet_system_1_RqXYrH",
+    "sachet_system_benehit_JKUF84",
+    "sachet_system_benehit_aH3CjE",
+    "sachet_system_benehit_d8HQtc",
+    "sachet_system_benehit_dX3XCy",
+    "sachet_system_1_TEdYqk",
+    "sachet_system_space_LyGG7A",
+    "sachet_system_space_4ixVzw",
+    "sachet_system_space_VACirA",
+    "image_3_KDfAAK",
+    "featured_product_we_PDfNdA",
+    "newsletter_96FJpE"
+  ]
+}

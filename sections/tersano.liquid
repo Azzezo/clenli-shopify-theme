@@ -1,0 +1,1046 @@
+{% comment %}
+  Clenli Direct - Tersano Chemical Free Cleaning Page
+  Shopify Section for Tersano landing page
+{% endcomment %}
+
+<div class="tersano-page">
+  
+  <!-- Hero Section -->
+  <section class="tersano-hero">
+    <div class="tersano-container">
+      <div class="tersano-hero__grid">
+        <div class="tersano-hero__image">
+          {% if section.settings.hero_image != blank %}
+            <img src="{{ section.settings.hero_image | image_url: width: 800 }}" alt="{{ section.settings.hero_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/tersanooooo.png" alt="Tersano Driving Sustainability in Cleaning">
+          {% endif %}
+        </div>
+        <div class="tersano-hero__content">
+          <span class="tersano-tag">{{ section.settings.hero_tag }}</span>
+          <h1 class="tersano-hero__title">{{ section.settings.hero_title }}</h1>
+          <p class="tersano-text">{{ section.settings.hero_desc }}</p>
+          
+          <div class="tersano-features">
+            <div class="tersano-feature">
+              <strong>{{ section.settings.feature1_title }}</strong>
+              <p>{{ section.settings.feature1_text }}</p>
+            </div>
+            <div class="tersano-feature">
+              <strong>{{ section.settings.feature2_title }}</strong>
+              <p>{{ section.settings.feature2_text }}</p>
+            </div>
+            <div class="tersano-feature">
+              <strong>{{ section.settings.feature3_title }}</strong>
+              <p>{{ section.settings.feature3_text }}</p>
+            </div>
+          </div>
+          
+          <a href="{{ section.settings.hero_btn_link }}" class="tersano-btn">{{ section.settings.hero_btn_text }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="tersano-divider">
+
+  <!-- What is Tersano Section -->
+  <section class="tersano-info">
+    <div class="tersano-container">
+      <div class="tersano-info__grid">
+        <div class="tersano-info__content">
+          <h2 class="tersano-subtitle">{{ section.settings.what_title }}</h2>
+          <p class="tersano-text">{{ section.settings.what_text }}</p>
+        </div>
+        <div class="tersano-info__image">
+          {% if section.settings.what_image != blank %}
+            <img src="{{ section.settings.what_image | image_url: width: 800 }}" alt="{{ section.settings.what_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Tersano_iClean_Mini_in_Cafe.png" alt="Tersano iClean Mini in Cafe">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="tersano-divider">
+
+  <!-- How Tersano is Produced Section -->
+  <section class="tersano-info">
+    <div class="tersano-container">
+      <div class="tersano-info__grid tersano-info__grid--reverse">
+        <div class="tersano-info__content">
+          <h2 class="tersano-subtitle">{{ section.settings.how_title }}</h2>
+          <p class="tersano-text">{{ section.settings.how_text }}</p>
+          <div class="tersano-steps">
+            <p><strong>Step 1:</strong> {{ section.settings.step1_text }}</p>
+            <p><strong>Step 2:</strong> {{ section.settings.step2_text }}</p>
+            <p><strong>Step 3:</strong> {{ section.settings.step3_text }}</p>
+          </div>
+        </div>
+        <div class="tersano-info__image">
+          {% if section.settings.how_image != blank %}
+            <img src="{{ section.settings.how_image | image_url: width: 800 }}" alt="{{ section.settings.how_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/How_Tersano_is_Produced.png" alt="How Tersano is Produced">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="tersano-divider">
+
+  <!-- Where to Use Tersano Section -->
+  <section class="tersano-info">
+    <div class="tersano-container">
+      <div class="tersano-info__grid">
+        <div class="tersano-info__content">
+          <h2 class="tersano-subtitle">{{ section.settings.where_title }}</h2>
+          <p class="tersano-text">{{ section.settings.where_text }}</p>
+          <p class="tersano-text">{{ section.settings.where_text2 }}</p>
+        </div>
+        <div class="tersano-info__image">
+          {% if section.settings.where_image != blank %}
+            <img src="{{ section.settings.where_image | image_url: width: 800 }}" alt="{{ section.settings.where_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Tersano_Where_to_Use.png" alt="Where to Use Tersano">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="tersano-divider">
+
+  <!-- Why Choose Tersano Section -->
+  <section class="tersano-benefits">
+    <div class="tersano-container">
+      <h2 class="tersano-section-title">{{ section.settings.benefits_title }}</h2>
+      
+      <div class="tersano-benefits__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'benefit' %}
+            <div class="tersano-benefit-card" {{ block.shopify_attributes }}>
+              <div class="tersano-benefit-card__img">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.title }}">
+                {% else %}
+                  <div class="tersano-benefit-placeholder"></div>
+                {% endif %}
+              </div>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <hr class="tersano-divider">
+
+  <!-- Suitable for All Industries Section -->
+  <section class="tersano-industries">
+    <div class="tersano-container">
+      <div class="tersano-industries__grid">
+        <div class="tersano-industries__content">
+          <h2 class="tersano-subtitle">{{ section.settings.industries_title }}</h2>
+          <p class="tersano-text">{{ section.settings.industries_text }}</p>
+          <ul class="tersano-industries__list">
+            <li>{{ section.settings.industry1 }}</li>
+            <li>{{ section.settings.industry2 }}</li>
+            <li>{{ section.settings.industry3 }}</li>
+            <li>{{ section.settings.industry4 }}</li>
+            <li>{{ section.settings.industry5 }}</li>
+            <li>{{ section.settings.industry6 }}</li>
+          </ul>
+        </div>
+        <div class="tersano-industries__slider">
+          <div class="tersano-slider" id="tersano-slider">
+            {% for block in section.blocks %}
+              {% if block.type == 'industry_slide' %}
+                <div class="tersano-slide" {{ block.shopify_attributes }}>
+                  {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}">
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="tersano-slider__dots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="tersano-divider">
+
+  <!-- CTA Section -->
+  <section class="tersano-cta">
+    <div class="tersano-container">
+      <h2 class="tersano-section-title">{{ section.settings.cta_title }}</h2>
+      <p class="tersano-section-subtitle">{{ section.settings.cta_text }}</p>
+      
+      <div class="tersano-cta__grid">
+        <div class="tersano-cta__form">
+          <a href="tel:{{ section.settings.phone_number }}" class="tersano-btn tersano-btn--call">CALL NOW</a>
+          
+          <div class="tersano-enquiry-form">
+            <h3>GO GREEN TODAY ENQUIRE NOW</h3>
+            {% form 'contact', class: 'tersano-form' %}
+              <div class="tersano-form__group">
+                <input type="text" name="contact[name]" placeholder="NAME" required>
+              </div>
+              <div class="tersano-form__group">
+                <input type="email" name="contact[email]" placeholder="EMAIL" required>
+              </div>
+              <div class="tersano-form__group">
+                <input type="tel" name="contact[phone]" placeholder="Phone Number" required>
+              </div>
+              <div class="tersano-form__group">
+                <textarea name="contact[body]" placeholder="MESSAGE" rows="3" required></textarea>
+              </div>
+              <input type="hidden" name="contact[subject]" value="Tersano Enquiry">
+              <button type="submit" class="tersano-btn">Submit</button>
+            {% endform %}
+          </div>
+        </div>
+        
+        <div class="tersano-cta__products">
+          <div class="tersano-products-grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'product' %}
+                <div class="tersano-product-card" {{ block.shopify_attributes }}>
+                  <a href="{{ block.settings.link }}">
+                    {% if block.settings.image != blank %}
+                      <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.name }}">
+                    {% endif %}
+                    <h3>{{ block.settings.name }}</h3>
+                  </a>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% comment %} <hr class="tersano-divider"> {% endcomment %}
+
+</div>
+
+<style>
+.tersano-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #333;
+  width: 100%;
+}
+
+.tersano-container {
+  width: 100%;
+  max-width: 1570px !important;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+hr.tersano-divider {
+  width: 100%;
+  max-width: 1570px !important;
+  height: 4px;
+  margin: 40px auto;
+  background-color: #6fb31a;
+  border: none;
+  display: block;
+}
+
+.tersano-tag {
+  display: inline-block;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.tersano-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.tersano-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.tersano-section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tersano-section-subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tersano-btn {
+  display: inline-block;
+  background: #6fb31a;
+  color: #fff;
+  padding: 14px 35px;
+  {% comment %} border-radius: 5px; {% endcomment %}
+  text-decoration: none;
+  {% comment %} font-weight: 600; {% endcomment %}
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.tersano-btn:hover {
+  background: #5a9615;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.tersano-btn--call {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #6fb31a;
+}
+
+.tersano-btn--call:hover {
+  background: #2d2d4a;
+}
+
+/* Hero Section */
+.tersano-hero {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.tersano-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.tersano-hero__image img {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.tersano-hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.tersano-features {
+  margin: 25px 0;
+}
+
+.tersano-feature {
+  margin-bottom: 20px;
+}
+
+.tersano-feature strong {
+  display: block;
+  color: #1a1a2e;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.tersano-feature p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Info Sections */
+.tersano-info {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.tersano-info__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.tersano-info__grid--reverse {
+  direction: rtl;
+}
+
+.tersano-info__grid--reverse > * {
+  direction: ltr;
+}
+
+.tersano-info__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.tersano-info__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tersano-steps {
+  margin-top: 20px;
+}
+
+.tersano-steps p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Benefits Section */
+.tersano-benefits {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.tersano-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.tersano-benefit-card {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.tersano-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.tersano-benefit-card__img {
+  margin-bottom: 15px;
+}
+
+.tersano-benefit-card__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.tersano-benefit-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.tersano-benefit-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Industries Section */
+.tersano-industries {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.tersano-industries__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.tersano-industries__list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.tersano-industries__list li {
+  font-size: 16px;
+  color: #555;
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.tersano-industries__list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #6fb31a;
+}
+
+.tersano-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tersano-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tersano-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tersano-slider__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tersano-slider__dot.active {
+  background: #6fb31a;
+}
+
+/* CTA Section */
+.tersano-cta {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.tersano-cta__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.tersano-enquiry-form {
+  background: #ffffff;
+  padding: 10px;
+  {% comment %} border-radius: 10px; {% endcomment %}
+   border:2px solid  #6fb31a
+}
+
+.tersano-enquiry-form h3 {
+  color: black;
+  font-size: 10px;
+  {% comment %} margin-bottom: 20px; {% endcomment %}
+  text-align: center;
+}
+
+.tersano-form__group {
+  margin-bottom: 15px;
+}
+
+.tersano-form__group input,
+.tersano-form__group textarea {
+  width: 100%;
+  padding: 9px 15px;
+  {% comment %} border: none; {% endcomment %}
+  {% comment %} border-radius: 5px; {% endcomment %}
+  font-size: 10px;
+}
+
+.tersano-form__group textarea {
+  resize: vertical;
+}
+
+.tersano-enquiry-form .tersano-btn {
+  width: 100%;
+  background: #6fb31a;
+}
+
+.tersano-enquiry-form .tersano-btn:hover {
+  background: #2d2d4a;
+}
+
+.tersano-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.tersano-product-card {
+  text-align: center;
+}
+
+.tersano-product-card img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.tersano-product-card h3 {
+  font-size: 18px;
+  {% comment %} font-weight: 700; {% endcomment %}
+  color: #1a1a2e;
+  {% comment %} margin-top: 15px; {% endcomment %}
+}
+
+.tersano-product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tersano-product-card a:hover h3 {
+  color: #6fb31a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tersano-benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tersano-hero__grid,
+  .tersano-info__grid,
+  .tersano-info__grid--reverse,
+  .tersano-industries__grid,
+  .tersano-cta__grid {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  
+  .tersano-hero__title {
+    font-size: 32px;
+  }
+  
+  .tersano-section-title {
+    font-size: 24px;
+  }
+  
+  .tersano-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tersano-hero__image,
+  .tersano-info__image {
+    order: -1;
+  }
+  
+  .tersano-info__content,
+  .tersano-industries__content {
+    text-align: center;
+  }
+  
+  .tersano-industries__list {
+    text-align: left;
+    max-width: 200px;
+    margin: 20px auto 0;
+  }
+  
+  .tersano-products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Simple Slider
+  const slider = document.getElementById('tersano-slider');
+  if (slider) {
+    const slides = slider.querySelectorAll('.tersano-slide');
+    const dotsContainer = document.querySelector('.tersano-slider__dots');
+    let currentSlide = 0;
+    
+    // Create dots
+    slides.forEach((_, index) => {
+      const dot = document.createElement('span');
+      dot.classList.add('tersano-slider__dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+    
+    const dots = dotsContainer.querySelectorAll('.tersano-slider__dot');
+    
+    function goToSlide(index) {
+      slides[currentSlide].style.display = 'none';
+      dots[currentSlide].classList.remove('active');
+      currentSlide = index;
+      slides[currentSlide].style.display = 'block';
+      dots[currentSlide].classList.add('active');
+    }
+    
+    // Initialize
+    slides.forEach((slide, index) => {
+      slide.style.display = index === 0 ? 'block' : 'none';
+    });
+    
+    // Auto slide
+    setInterval(() => {
+      goToSlide((currentSlide + 1) % slides.length);
+    }, 5000);
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Tersano Page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_tag",
+      "label": "Tag Text",
+      "default": "GREEN CLEANING"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Tersano Chemical Free Cleaning"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_desc",
+      "label": "Description",
+      "default": "Scientifically proven to be tough on germs, yet harmless to humans."
+    },
+    {
+      "type": "text",
+      "id": "feature1_title",
+      "label": "Feature 1 Title",
+      "default": "Chemical free:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature1_text",
+      "label": "Feature 1 Text",
+      "default": "Tersano provides users with a chemical free cleaning agent, disinfectant, deodoriser, and sanitiser that is food safe, and scientifically proven to be highly effective against germs."
+    },
+    {
+      "type": "text",
+      "id": "feature2_title",
+      "label": "Feature 2 Title",
+      "default": "Replace most cleaning chemicals:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature2_text",
+      "label": "Feature 2 Text",
+      "default": "Tersano is an all-in-one solution that can replace almost all cleaning chemicals, including multi surface agents, degreasers, glass and stainless steel cleaners, and bathroom cleaners."
+    },
+    {
+      "type": "text",
+      "id": "feature3_title",
+      "label": "Feature 3 Title",
+      "default": "Sustainable:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature3_text",
+      "label": "Feature 3 Text",
+      "default": "Tersano has the potential to almost completely eradicate cleaning chemicals from your facility, while also significantly reducing plastic and cardboard waste, CO2 emissions from deliveries, and save you money in the long term."
+    },
+    {
+      "type": "text",
+      "id": "hero_btn_text",
+      "label": "Button Text",
+      "default": "Get Quote Today"
+    },
+    {
+      "type": "url",
+      "id": "hero_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "What is Tersano Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "what_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "what_title",
+      "label": "Title",
+      "default": "What is the Tersano?"
+    },
+    {
+      "type": "textarea",
+      "id": "what_text",
+      "label": "Text",
+      "default": "Tersano is an innovative solution that converts ordinary tap water into a powerful cleaning and sanitising solution. This Stabilised Aqueous Ozone (SAO) is completely chemical free, and is made using only oxygen and water."
+    },
+    {
+      "type": "header",
+      "content": "How Tersano is Produced"
+    },
+    {
+      "type": "image_picker",
+      "id": "how_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "how_title",
+      "label": "Title",
+      "default": "How Tersano is Produced"
+    },
+    {
+      "type": "textarea",
+      "id": "how_text",
+      "label": "Text",
+      "default": "Aqueous Ozone (AO) is a powerful, naturally occurring solution that develops in our environment. Tersano has created the first unit in history that extends the life-cycle of AO to produce Stabilised Aqueous Ozone (SAO)."
+    },
+    {
+      "type": "text",
+      "id": "step1_text",
+      "label": "Step 1 Text",
+      "default": "Oxygen from the air is safely turned to O3, then infused into ordinary tap water."
+    },
+    {
+      "type": "text",
+      "id": "step2_text",
+      "label": "Step 2 Text",
+      "default": "When sprayed on surfaces, SAO is attracted to germs, soils, and bacteria and quickly eliminates contaminants."
+    },
+    {
+      "type": "text",
+      "id": "step3_text",
+      "label": "Step 3 Text",
+      "default": "SAO cleans for days before it safely reverts back to water and O2."
+    },
+    {
+      "type": "header",
+      "content": "Where to Use Tersano"
+    },
+    {
+      "type": "image_picker",
+      "id": "where_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "where_title",
+      "label": "Title",
+      "default": "Where to Use Tersano"
+    },
+    {
+      "type": "textarea",
+      "id": "where_text",
+      "label": "Text",
+      "default": "Tersano replaces all of the most common everyday cleaning agents such as multi surface cleaners, glass and stainless steel cleaners, degreasers, and bathroom cleaners. And unlike many common cleaning agents, Tersano is a disinfectant!"
+    },
+    {
+      "type": "textarea",
+      "id": "where_text2",
+      "label": "Text 2",
+      "default": "Tersano is safe and effective on almost all surfaces including stone, marble, glass, ceramic, glass, stainless steel, hardwood, vinyl, chrome, and much more!"
+    },
+    {
+      "type": "header",
+      "content": "Why Choose Tersano"
+    },
+    {
+      "type": "text",
+      "id": "benefits_title",
+      "label": "Section Title",
+      "default": "Why Choose Tersano"
+    },
+    {
+      "type": "header",
+      "content": "Industries Section"
+    },
+    {
+      "type": "text",
+      "id": "industries_title",
+      "label": "Title",
+      "default": "Suitable for All Industries"
+    },
+    {
+      "type": "textarea",
+      "id": "industries_text",
+      "label": "Text",
+      "default": "As the ultimate cleaning solution, Tersano is tailor-made for every industry and facility, ensuring unparalleled cleanliness and safety standards."
+    },
+    {
+      "type": "text",
+      "id": "industry1",
+      "label": "Industry 1",
+      "default": "Education"
+    },
+    {
+      "type": "text",
+      "id": "industry2",
+      "label": "Industry 2",
+      "default": "Healthcare"
+    },
+    {
+      "type": "text",
+      "id": "industry3",
+      "label": "Industry 3",
+      "default": "Transport"
+    },
+    {
+      "type": "text",
+      "id": "industry4",
+      "label": "Industry 4",
+      "default": "Hospitality"
+    },
+    {
+      "type": "text",
+      "id": "industry5",
+      "label": "Industry 5",
+      "default": "Commercial"
+    },
+    {
+      "type": "text",
+      "id": "industry6",
+      "label": "Industry 6",
+      "default": "Offices"
+    },
+    {
+      "type": "header",
+      "content": "CTA Section"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Title",
+      "default": "Make the Change Today"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "Text",
+      "default": "Tersano is the ultimate all-in-one cleaning solution that will help keep your premises cleaner, and your stakeholders safer – all while saving you money! To learn more about this amazing innovation, contact us today!"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "01 811 89 20"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Benefit Title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Benefit description text goes here."
+        }
+      ]
+    },
+    {
+      "type": "industry_slide",
+      "name": "Industry Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Industry Name"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Product Name",
+          "default": "Tersano Lotus Pro"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Product Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tersano Page",
+      "blocks": [
+        { "type": "benefit", "settings": { "title": "All in One Solution", "text": "Tersano is an all-in-one solution that has the potential to replace the majority of your cleaning chemicals." } },
+        { "type": "benefit", "settings": { "title": "Food Safe", "text": "Not only is Tersano food safe making it perfect for use in kitchens, using Tersano on fresh produce can actually extend their shelf life!" } },
+        { "type": "benefit", "settings": { "title": "Non-Corrosive", "text": "Tersano is a powerful cleaner but also completely non-corrosive. Tersano will leave no damage to surfaces it touches." } },
+        { "type": "benefit", "settings": { "title": "Non-Toxic", "text": "Despite its incredible power, Tersano is non-toxic. Tersano is a chemical-free cleaning agent that is free from carcinogens." } },
+        { "type": "benefit", "settings": { "title": "Sustainable", "text": "Tersano has the potential to dramatically reduce the amount of chemicals released into the atmosphere." } },
+        { "type": "benefit", "settings": { "title": "Powerful Cleaner", "text": "Tersano has been independently tested and proven as an effective preventative and sanitiser." } },
+        { "type": "benefit", "settings": { "title": "PCS Certified in Ireland", "text": "Tersano is PCS Authorised in Ireland as a Biocide product by the Department of Agriculture." } },
+        { "type": "benefit", "settings": { "title": "Cost Effective Solution", "text": "Switching to sustainable cleaning with Tersano guarantees you a cost-saving benefit." } },
+        { "type": "industry_slide", "settings": { "title": "Commercial" } },
+        { "type": "industry_slide", "settings": { "title": "Education" } },
+        { "type": "industry_slide", "settings": { "title": "Healthcare" } },
+        { "type": "industry_slide", "settings": { "title": "Hospitality" } },
+        { "type": "product", "settings": { "name": "Tersano Lotus Pro" } },
+        { "type": "product", "settings": { "name": "Tersano iClean Mini" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,179 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "about-us",
+      "settings": {
+        "hero_bg": "shopify://shop_images/clenli-buildings_2_d96bfa93-7610-449b-8e03-ae41c055c27c.webp",
+        "hero_title": "About Clenli Direct",
+        "hero_subtitle": "At Clenli Direct, we're at the forefront of innovation when it comes to Cleaning Machines & Janitorial",
+        "overview_bg": "shopify://shop_images/Clenli_Direct_-_Large_Screen_45876141-b5bd-4ea1-9f8b-83690306477e.jpg",
+        "overview_1": "Founded In 1993",
+        "overview_2": "100% Irish Owned",
+        "overview_3": "40,000 ft² Warehouse",
+        "overview_4": "ISO 9001:2015",
+        "overview_5": "ISO 14001:2015",
+        "overview_6": "ISO 45001:2018",
+        "about_text": "<p>Founded in 1993, Clenli Direct is the leading provider of innovative cleaning solutions in Ireland. Based in Dublin 11, we are positioned in close proximity with all major roads in Ireland, including the M50, N7, M4, and M1. We offer innovative solutions for janitorial cleaning, cleaning machinery, cleaning robotics, window cleaning, carpet cleaning, and much more. With our extensive experience in the cleaning industry, we offer the best cleaning solutions to any requirements you may have, no matter how big or small.</p>",
+        "value1_title": "Reliability",
+        "value1_text": "We value reliability. Through our strategic location, our logistic network, and our own large fleet of in-house delivery trucks, Clenli Direct has an exceptional record for delivering on time.",
+        "value2_title": "Innovation",
+        "value2_text": "We strive to always do better. We are always on the lookout for new innovative solutions for our client's cleaning requirements.",
+        "value3_title": "Quality",
+        "value3_text": "We understand the importance of quality. That is why every piece of equipment we provide has been sampled, tested, and handpicked by our team.",
+        "value4_title": "Expertise",
+        "value4_text": "Our expertise is unmatched. Every member of our service team receives extensive training on new equipment so that they can answer your questions and offer solutions.",
+        "service1_bg": "shopify://shop_images/1637249208712-comac-antea-lavasciuga-pavimenti-carrozzeria_5ec78ec2-738e-4cca-8921-1cb99f10b3da.webp",
+        "service1_title": "Cleaning Machinery & Equipment",
+        "service1_items": "Scrubber Dryers & Sweepers, Innovative Solutions, Equipment For All Sectors, Training & Certification",
+        "service2_bg": "shopify://shop_images/csm_public_restroom_-_washing_hands_woman_3_0900dde1b9.jpg",
+        "service2_title": "Janitorial & Consumables",
+        "service2_items": "Paper Dispensers & Soap, Eco Solutions, Powerful Cleaning Agents, Order Management Software",
+        "service3_bg": "shopify://shop_images/AdobeStock_246515233-1574x787_279b89a2-1943-4af1-8d3b-004c54f9c1b9.jpg",
+        "service3_title": "Sourcing & Distribution",
+        "service3_items": "Direct To Site Delivery, Global Logistic Network, Import & Export, Container Shipments",
+        "service4_bg": "shopify://shop_images/servicing-outdoor-sweeper_66219433-5174-4c1e-ba51-7ad98c715856.jpg",
+        "service4_title": "Service & Maintenance",
+        "service4_items": "Scrubber Dryers & Sweepers, Fleet Management Software, Nationwide Engineer Coverage, Spare Parts",
+        "service5_bg": "shopify://shop_images/floor-pad-manufacturing-min.png",
+        "service5_title": "Manufacturing",
+        "service5_items": "Floor Pads, Cleaning Agents, White Labeling, Container Shipments",
+        "service6_bg": "shopify://shop_images/LionsBot_Range.webp",
+        "service6_title": "Robotics & Innovation",
+        "service6_items": "Robotic Cleaning Machines, Innovative Cost Savings, Chemical Free Cleaning, Water Saving Equipment",
+        "client_title": "The Clenli Client Centre",
+        "feature1_title": "Training",
+        "feature1_text": "The Client Centre has built in state of the art training facilities for staff and operators. Machine Operator Training, Best Cleaning Practices & Safety Training",
+        "feature2_title": "Demonstrations",
+        "feature2_text": "See our products in action and try them for yourself. Gather all the information you need to make informed decisions",
+        "feature3_title": "Customer/Client Visits",
+        "feature3_text": "Clients are free to invite customers to the client centre for demonstrations and training.",
+        "client_img1": "shopify://shop_images/client-thumbnail_6b6a6fb3-45ab-458a-8c8a-55e34b30e66f.jpg",
+        "client_img2": "shopify://shop_images/Clenli_Direct_-_Counter_Top-min_7a2b9d91-bf9c-4aa3-81c4-f73a503e865d.jpg",
+        "client_img3": "shopify://shop_images/Clenli_Direct_-_Large_Screen_1.jpg",
+        "client_img4": "shopify://shop_images/Clenli_Direct_-_Client_Centre-min_a222210d-d67f-498a-a64b-406d8d22ef56.jpg"
+      }
+    },
+    "product_block_vertical_XQDcWb": {
+      "type": "product-block-vertical",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_Byk4Xn": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_QXPbhb": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_QXPbhb"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_block_vertical_XQDcWb",
+    "newsletter_Byk4Xn"
+  ]
+}

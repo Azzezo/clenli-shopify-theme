@@ -1,0 +1,454 @@
+<div class="features-with-icons-section section-{{ section.id }}">
+    <div class="fwi-container">
+        
+        <!-- 4 Features in Row -->
+        <div class="fwi-row">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'feature' -%}
+                    <div class="fwi-item" {{ block.shopify_attributes }}>
+                        
+                        <!-- Icon -->
+                        <div class="fwi-icon">
+                            {%- if block.settings.icon != blank -%}
+                                <img src="{{ block.settings.icon | image_url: width: 200 }}" alt="{{ block.settings.title }}" loading="lazy">
+                            {%- else -%}
+                                <div class="placeholder-icon">
+                                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                        <circle cx="50" cy="50" r="40" stroke="{{ section.settings.icon_color }}" stroke-width="3"/>
+                                        <path d="M50 30 L50 70 M30 50 L70 50" stroke="{{ section.settings.icon_color }}" stroke-width="3"/>
+                                    </svg>
+                                </div>
+                            {%- endif -%}
+                        </div>
+                        
+                        <!-- Title -->
+                        {%- if block.settings.title != blank -%}
+                            <h3 class="fwi-title">{{ block.settings.title }}</h3>
+                        {%- endif -%}
+                        
+                        <!-- Description -->
+                        {%- if block.settings.description != blank -%}
+                            <p class="fwi-description">{{ block.settings.description }}</p>
+                        {%- endif -%}
+                        
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        
+        <!-- Green Underline -->
+        {% comment %} {%- if section.settings.show_underline -%}
+            <div class="fwi-underline"></div>
+        {%- endif -%} {% endcomment %}
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .fwi-container {
+    max-width: {{ section.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Features Row */
+.section-{{ section.id }} .fwi-row {
+    display: flex;
+    justify-content: space-between;
+    gap: {{ section.settings.item_gap }}px;
+    margin-bottom: {{ section.settings.underline_spacing }}px;
+}
+
+/* Each Feature Item */
+.section-{{ section.id }} .fwi-item {
+    flex: 1;
+    text-align: center;
+}
+
+/* Icon */
+.section-{{ section.id }} .fwi-icon {
+    width: 300px;
+    height: 60%;
+    margin: 0 auto {{ section.settings.icon_margin_bottom }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-{{ section.id }} .fwi-icon img {
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section-{{ section.id }} .placeholder-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Title */
+.section-{{ section.id }} .fwi-title {
+    font-size: {{ section.settings.title_size }}px;
+    font-weight: {{ section.settings.title_weight }};
+    color: {{ section.settings.title_color }};
+    margin: 0 0 {{ section.settings.title_margin_bottom }}px 0;
+    line-height: 1.3;
+}
+
+/* Description */
+.section-{{ section.id }} .fwi-description {
+    font-size: {{ section.settings.desc_size }}px;
+    line-height: {{ section.settings.desc_line_height }};
+    color: {{ section.settings.desc_color }};
+    margin: 0;
+}
+
+/* Underline - FIXED & VISIBLE */
+.section-{{ section.id }} .fwi-underline {
+    display: block !important;
+    width: 100%;
+    height: {{ section.settings.underline_height }}px;
+    background-color: {{ section.settings.underline_color }};
+    border: none;
+    margin: 0;
+    padding: 0;
+    opacity: 1 !important;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .fwi-row {
+        flex-wrap: wrap;
+        gap: 40px 20px;
+    }
+    
+    .section-{{ section.id }} .fwi-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+    
+    .section-{{ section.id }} .fwi-title {
+        font-size: {{ section.settings.title_size | minus: 2 }}px;
+    }
+    
+    .section-{{ section.id }} .fwi-description {
+        font-size: {{ section.settings.desc_size | minus: 1 }}px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .section-{{ section.id }} {
+        padding: {{ section.settings.padding_top_mobile }}px 0 {{ section.settings.padding_bottom_mobile }}px;
+    }
+    
+    .section-{{ section.id }} .fwi-row {
+        gap: 30px;
+    }
+    
+    .section-{{ section.id }} .fwi-item {
+        flex: 0 0 100%;
+    }
+    
+    .section-{{ section.id }} .fwi-icon {
+        width: {{ section.settings.icon_size | times: 0.8 }}px;
+        height: {{ section.settings.icon_size | times: 0.8 }}px;
+    }
+    
+    .section-{{ section.id }} .fwi-title {
+        font-size: {{ section.settings.title_size | minus: 4 }}px;
+    }
+    
+    .section-{{ section.id }} .fwi-description {
+        font-size: {{ section.settings.desc_size | minus: 2 }}px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Features With Icons",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Layout Settings"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "range",
+            "id": "container_width",
+            "label": "Container Width",
+            "min": 1170,
+            "max": 1920,
+            "step": 10,
+            "unit": "px",
+            "default": 1570
+        },
+        {
+            "type": "range",
+            "id": "item_gap",
+            "label": "Gap Between Items",
+            "min": 20,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 30
+        },
+        {
+            "type": "header",
+            "content": "Icon Settings"
+        },
+        {
+            "type": "range",
+            "id": "icon_size",
+            "label": "Icon Size",
+            "min": 60,
+            "max": 150,
+            "step": 5,
+            "unit": "px",
+            "default": 100
+        },
+        {
+            "type": "color",
+            "id": "icon_color",
+            "label": "Default Icon Color",
+            "default": "#6fb31a",
+            "info": "For placeholder icons only"
+        },
+        {
+            "type": "range",
+            "id": "icon_margin_bottom",
+            "label": "Space Below Icon",
+            "min": 10,
+            "max": 40,
+            "step": 2,
+            "unit": "px",
+            "default": 20
+        },
+        {
+            "type": "header",
+            "content": "Title Settings"
+        },
+        {
+            "type": "range",
+            "id": "title_size",
+            "label": "Title Font Size",
+            "min": 14,
+            "max": 28,
+            "step": 1,
+            "unit": "px",
+            "default": 18
+        },
+        {
+            "type": "select",
+            "id": "title_weight",
+            "label": "Title Font Weight",
+            "options": [
+                {"value": "400", "label": "Normal"},
+                {"value": "600", "label": "Semi Bold"},
+                {"value": "700", "label": "Bold"}
+            ],
+            "default": "700"
+        },
+        {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "range",
+            "id": "title_margin_bottom",
+            "label": "Space Below Title",
+            "min": 8,
+            "max": 30,
+            "step": 2,
+            "unit": "px",
+            "default": 12
+        },
+        {
+            "type": "header",
+            "content": "Description Settings"
+        },
+        {
+            "type": "range",
+            "id": "desc_size",
+            "label": "Description Font Size",
+            "min": 12,
+            "max": 20,
+            "step": 1,
+            "unit": "px",
+            "default": 14
+        },
+        {
+            "type": "range",
+            "id": "desc_line_height",
+            "label": "Description Line Height",
+            "min": 1.3,
+            "max": 2.0,
+            "step": 0.1,
+            "default": 1.7
+        },
+        {
+            "type": "color",
+            "id": "desc_color",
+            "label": "Description Color",
+            "default": "#666666"
+        },
+        {
+            "type": "header",
+            "content": "✨ Underline Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_underline",
+            "label": "Show Underline",
+            "default": true
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Thickness",
+            "min": 2,
+            "max": 10,
+            "step": 1,
+            "unit": "px",
+            "default": 4,
+            "info": "Recommended: 3-5px"
+        },
+        {
+            "type": "range",
+            "id": "underline_spacing",
+            "label": "Space Above Underline",
+            "min": 30,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 50
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top (Desktop)",
+            "min": 0,
+            "max": 120,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom (Desktop)",
+            "min": 0,
+            "max": 120,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "Padding Top (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "Padding Bottom (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        }
+    ],
+    "blocks": [
+        {
+            "type": "feature",
+            "name": "Feature",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Icon Image (SVG/PNG recommended)"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Feature Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Feature description goes here. Explain the benefit clearly and concisely."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Features With Icons",
+            "blocks": [
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Fully Customisable",
+                        "description": "Every Addax vehicle is designed to adapt to your specific needs. If you envision a bespoke build tailored to your unique requirements, simply reach out to us. We'll collaborate with you to bring your custom vision to life."
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Easy on Environment",
+                        "description": "Addax utility vehicles are 100% electric, producing zero emissions and operating silently—ideal for eco-conscious cities and businesses. Beyond sustainability, these vehicles are also budget-friendly, offering some of the lowest operational costs in the market."
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Remote Diagnostics",
+                        "description": "Addax utility vehicles are 100% electric, producing zero emissions and operating silently—ideal for eco-conscious cities and businesses. Beyond sustainability, these vehicles are also budget-friendly, offering some of the lowest operational costs in the market."
+                    }
+                },
+                {
+                    "type": "feature",
+                    "settings": {
+                        "title": "Eight Year Warranty",
+                        "description": "Enjoy the confidence of a robust eight-year battery warranty with every Addax vehicle. Featuring durable and rechargeable lithium-ion batteries, our vehicles ensure long-lasting performance. These batteries are ethically sourced, fully recyclable, and engineered for sustainability."
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,1010 @@
+<div class="categories-mega-menu-wrapper section-{{ section.id }}">
+  <!-- Mobile Hamburger Button -->
+  <button class="mobile-menu-toggle" id="mobile-toggle-{{ section.id }}" aria-label="Open menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-overlay-{{ section.id }}"></div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer-{{ section.id }}">
+    <button class="mobile-drawer-close" id="mobile-close-{{ section.id }}" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="mobile-drawer-content">
+      <div class="mobile-section">
+        <h3 class="mobile-section-title">{{ section.settings.button_text | default: 'Categories' }}</h3>
+        <ul class="mobile-menu-list" id="mobile-menu-{{ section.id }}"></ul>
+      </div>
+
+      {%- if section.settings.show_main_nav -%}
+        <div class="mobile-section">
+          <h3 class="mobile-section-title">{{ section.settings.nav_mobile_title | default: 'Menu' }}</h3>
+          <ul class="mobile-menu-list" id="mobile-nav-{{ section.id }}"></ul>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="container container-{{ section.settings.container }}">
+    <div class="categories-mega-menu {% if request.page_type == 'index' %}is-open{% endif %}" id="mega-menu-{{ section.id }}">
+      <div class="categories-button" id="categories-btn-{{ section.id }}">
+        <span class="categories-text">{{ section.settings.button_text }}</span>
+        <span class="categories-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </span>
+      </div>
+
+      <div class="categories-dropdown">
+        <div class="categories-menu-left" id="desktop-menu-{{ section.id }}"></div>
+      </div>
+    </div>
+
+    {%- if section.settings.show_main_nav -%}
+      <nav class="main-nav-horizontal" id="main-nav-{{ section.id }}"></nav>
+    {%- endif -%}
+  </div>
+</div>
+
+<script type="application/json" id="menu-data-{{ section.id }}">
+{
+  "categories": [
+    {%- assign first_cat = true -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'menu_item' -%}
+        {%- unless first_cat -%},{%- endunless -%}
+        {
+          "level": {{ block.settings.level | default: 1 }},
+          "title": {{ block.settings.title | json }},
+          "link": "{{ block.settings.link | default: '#' }}",
+          "icon": "{% if block.settings.icon_image != blank %}{{ block.settings.icon_image | image_url: width: 48 }}{% endif %}",
+          "image": "{% if block.settings.menu_image != blank %}{{ block.settings.menu_image | image_url: width: 200 }}{% endif %}",
+          "style": "{{ block.settings.submenu_style | default: 'simple' }}"
+        }
+        {%- assign first_cat = false -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ],
+  "nav": [
+    {%- assign first_nav = true -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'nav_item' or block.type == 'nav_dropdown' -%}
+        {%- unless first_nav -%},{%- endunless -%}
+        {
+          "type": "{{ block.type }}",
+          "title": {{ block.settings.title | json }},
+          "link": "{{ block.settings.link | default: '#' }}",
+          "image": "{% if block.settings.nav_image != blank %}{{ block.settings.nav_image | image_url: width: 300 }}{% endif %}"
+        }
+        {%- assign first_nav = false -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+<style>
+.section-{{ section.id }} {
+  --button-bg: {{ section.settings.button_bg }};
+  --button-color: {{ section.settings.button_color }};
+  --menu-bg: {{ section.settings.menu_bg }};
+  --menu-text: {{ section.settings.menu_text }};
+  --menu-hover-bg: {{ section.settings.menu_hover_bg }};
+  --menu-hover-text: {{ section.settings.menu_hover_text }};
+  --dropdown-width: {{ section.settings.dropdown_width }}px;
+  --icon-size: {{ section.settings.menu_icon_size }}px;
+  --mega-width: {{ section.settings.mega_panel_width }}px;
+  --mobile-menu-bg: {{ section.settings.mobile_menu_bg | default: '#ffffff' }};
+  --mobile-close-bg: {{ section.settings.mobile_close_bg | default: '#6fb31a' }};
+  --nav-text: {{ section.settings.nav_text_color }};
+  --nav-hover: {{ section.settings.nav_hover_color }};
+}
+
+.section-{{ section.id }} .mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.section-{{ section.id }} .mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 99998;
+}
+.section-{{ section.id }} .mobile-menu-overlay.is-active {
+  display: block;
+}
+
+.section-{{ section.id }} .mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 320px;
+  max-width: 85vw;
+  height: 100%;
+  background: var(--mobile-menu-bg);
+  z-index: 99999;
+  transition: left 0.3s ease;
+  box-shadow: 5px 0 25px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+.section-{{ section.id }} .mobile-drawer.is-open {
+  left: 0;
+}
+.section-{{ section.id }} .mobile-drawer-close {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  width: 40px;
+  height: 40px;
+  background: var(--mobile-close-bg);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-{{ section.id }} .mobile-drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 0;
+}
+.section-{{ section.id }} .mobile-section {
+  margin-bottom: 15px;
+}
+.section-{{ section.id }} .mobile-section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  padding: 15px 20px 10px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+.section-{{ section.id }} .mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.section-{{ section.id }} .mobile-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+.section-{{ section.id }} .mobile-item-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-{{ section.id }} .mobile-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+}
+.section-{{ section.id }} .mobile-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.section-{{ section.id }} .mobile-toggle {
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 20px;
+  font-weight: 300;
+}
+.section-{{ section.id }} .mobile-children {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.section-{{ section.id }} .mobile-item.open > .mobile-children {
+  display: block;
+}
+.section-{{ section.id }} .mobile-item.open > .mobile-item-wrap .mobile-toggle {
+  transform: rotate(45deg);
+}
+.section-{{ section.id }} .mobile-children .mobile-link {
+  padding-left: 40px;
+  font-size: 14px;
+  color: #555;
+  background: #f9f9f9;
+}
+.section-{{ section.id }} .mobile-children .mobile-children .mobile-link {
+  padding-left: 55px;
+  font-size: 13px;
+  color: #666;
+  background: #f3f3f3;
+}
+.section-{{ section.id }} .mobile-children .mobile-children .mobile-children .mobile-link {
+  padding-left: 70px;
+  font-size: 12px;
+  color: #777;
+  background: #ededed;
+}
+.section-{{ section.id }} .mobile-link:hover {
+  color: var(--menu-hover-text);
+}
+
+/* Desktop */
+.section-{{ section.id }} .categories-mega-menu-wrapper {
+  position: relative;
+  z-index: 9999;
+}
+.section-{{ section.id }} .container {
+  display: flex;
+  align-items: center;
+}
+.section-{{ section.id }} .categories-mega-menu {
+  position: relative;
+  display: inline-block;
+}
+.section-{{ section.id }} .categories-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-width: {{ section.settings.button_min_width }}px;
+  padding: {{ section.settings.button_padding_y }}px {{ section.settings.button_padding_x }}px;
+  background: var(--button-bg);
+  color: var(--button-color);
+  border-radius: {{ section.settings.button_radius }}px {{ section.settings.button_radius }}px 0 0;
+  cursor: pointer;
+  font-size: {{ section.settings.button_font_size }}px;
+  font-weight: {{ section.settings.button_font_weight }};
+  transition: all 0.3s ease;
+}
+.section-{{ section.id }} .categories-button:hover {
+  background: {{ section.settings.button_hover_bg }};
+}
+.section-{{ section.id }} .categories-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.section-{{ section.id }} .categories-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+.section-{{ section.id }} .categories-mega-menu.is-open .categories-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section-{{ section.id }} .categories-menu-left {
+  width: var(--dropdown-width);
+  background: var(--menu-bg);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  max-height: 70vh;
+  {% comment %} overflow-y: auto; {% endcomment %}
+}
+
+/* Desktop Menu Items */
+.section-{{ section.id }} .desk-item {
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+}
+.section-{{ section.id }} .desk-item:last-child {
+  border-bottom: none;
+}
+.section-{{ section.id }} .desk-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: {{ section.settings.menu_item_padding }}px 20px;
+  color: var(--menu-text);
+  text-decoration: none;
+  font-size: {{ section.settings.menu_font_size }}px;
+  transition: all 0.2s ease;
+}
+.section-{{ section.id }} .desk-item:hover > .desk-link {
+  background: var(--menu-hover-bg);
+  color: var(--menu-hover-text);
+}
+.section-{{ section.id }} .desk-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-{{ section.id }} .desk-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.section-{{ section.id }} .desk-text {
+  flex: 1;
+}
+.section-{{ section.id }} .desk-arrow {
+  opacity: 0.4;
+  transition: all 0.2s ease;
+}
+.section-{{ section.id }} .desk-item:hover > .desk-link .desk-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* Simple Flyout Submenu */
+.section-{{ section.id }} .desk-flyout {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.12);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 10000;
+  {% comment %} max-height: 70vh;
+  overflow-y: auto; {% endcomment %}
+}
+.section-{{ section.id }} .desk-flyout::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 20px;
+  height: 100%;
+}
+.section-{{ section.id }} .desk-item.has-kids:hover > .desk-flyout {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.section-{{ section.id }} .desk-flyout .desk-item {
+  border-bottom: none;
+}
+.section-{{ section.id }} .desk-flyout .desk-link {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+.section-{{ section.id }} .desk-flyout .desk-flyout {
+  z-index: 10001;
+}
+.section-{{ section.id }} .desk-flyout .desk-flyout .desk-flyout {
+  z-index: 10002;
+}
+
+/* Mega Panel Submenu */
+.section-{{ section.id }} .desk-mega {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 1080px;
+  background: #fff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.12);
+  padding: 25px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 10000;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.section-{{ section.id }} .desk-mega::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 20px;
+  height: 100%;
+}
+.section-{{ section.id }} .desk-item.has-mega:hover > .desk-mega {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.section-{{ section.id }} .mega-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 25px;
+}
+.section-{{ section.id }} .mega-col {
+  min-width: 0;
+}
+.section-{{ section.id }} .mega-col-img {
+  width: 100%;
+  height: 100px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-{{ section.id }} .mega-col-img img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+.section-{{ section.id }} .mega-col-img a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.section-{{ section.id }} .mega-col-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin: -20px 0 -13px 0;
+}
+.section-{{ section.id }} .mega-col-title a {
+  color: #1a1a2e;
+  text-decoration: none;
+}
+.section-{{ section.id }} .mega-col-title a:hover {
+  color: var(--menu-hover-text);
+}
+.section-{{ section.id }} .mega-col-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.section-{{ section.id }} .mega-col-links li {
+  margin: 0;
+}
+.section-{{ section.id }} .mega-col-links a {
+  display: block;
+  padding: 4px 0;
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+}
+.section-{{ section.id }} .mega-col-links a:hover {
+  color: var(--menu-hover-text);
+}
+
+/* Horizontal Navigation */
+.section-{{ section.id }} .main-nav-horizontal {
+  display: flex;
+  align-items: center;
+  gap: {{ section.settings.nav_gap }}px;
+  margin-left: {{ section.settings.nav_margin_left }}px;
+  flex-wrap: wrap;
+}
+.section-{{ section.id }} .nav-item-wrap {
+  position: relative;
+}
+.section-{{ section.id }} .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-size: {{ section.settings.nav_font_size }}px;
+  font-weight: {{ section.settings.nav_font_weight }};
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.section-{{ section.id }} .nav-link:hover {
+  color: var(--nav-hover);
+}
+.section-{{ section.id }} .nav-arrow {
+  transition: transform 0.2s ease;
+}
+.section-{{ section.id }} .nav-item-wrap:hover .nav-arrow {
+  transform: rotate(180deg);
+}
+.section-{{ section.id }} .nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  z-index: 10001;
+  overflow: hidden;
+}
+.section-{{ section.id }} .nav-dropdown.has-image {
+  display: flex;
+  min-width: 420px;
+}
+.section-{{ section.id }} .nav-dropdown-links {
+  flex: 1;
+  padding: 15px 0;
+  min-width: 200px;
+  list-style: none;
+  margin: 0;
+}
+.section-{{ section.id }} .nav-dropdown-links li {
+  margin: 0;
+}
+.section-{{ section.id }} .nav-dropdown-links a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.section-{{ section.id }} .nav-dropdown-links a:hover {
+  background: #f5f5f5;
+  color: var(--nav-hover);
+}
+.section-{{ section.id }} .nav-dropdown-image {
+  height: 326px;
+    width: 245px;
+  flex-shrink: 0;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+.section-{{ section.id }} .nav-dropdown-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.section-{{ section.id }} .nav-item-wrap.has-dropdown:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .section-{{ section.id }} .mobile-menu-toggle { display: flex; }
+  .section-{{ section.id }} .categories-mega-menu,
+  .section-{{ section.id }} .main-nav-horizontal { display: none !important; }
+}
+@media (min-width: 1025px) {
+  .section-{{ section.id }} .mobile-menu-toggle,
+  .section-{{ section.id }} .mobile-menu-overlay,
+  .section-{{ section.id }} .mobile-drawer { display: none !important; }
+}
+</style>
+
+<script>
+(function() {
+  const sectionId = '{{ section.id }}';
+  const dataEl = document.getElementById('menu-data-' + sectionId);
+  if (!dataEl) return;
+  
+  let data;
+  try {
+    data = JSON.parse(dataEl.textContent);
+  } catch(e) {
+    console.error('Menu parse error:', e);
+    return;
+  }
+  
+  const categories = data.categories || [];
+  const navItems = data.nav || [];
+  
+  // Build tree from flat ordered list
+  function buildTree(items) {
+    const root = { children: [] };
+    const stack = [{ node: root, level: 0 }];
+    
+    items.forEach(item => {
+      const level = parseInt(item.level) || 1;
+      const node = { ...item, level: level, children: [] };
+      
+      while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+        stack.pop();
+      }
+      
+      stack[stack.length - 1].node.children.push(node);
+      stack.push({ node, level });
+    });
+    
+    return root.children;
+  }
+  
+  // Build nav tree (nav_item with following nav_dropdown as children)
+  function buildNavTree(items) {
+    const result = [];
+    let currentParent = null;
+    
+    items.forEach(item => {
+      if (item.type === 'nav_item') {
+        currentParent = { ...item, children: [] };
+        result.push(currentParent);
+      } else if (item.type === 'nav_dropdown' && currentParent) {
+        currentParent.children.push(item);
+      }
+    });
+    
+    return result;
+  }
+  
+  const categoryTree = buildTree(categories);
+  const navTree = buildNavTree(navItems);
+  
+  // Desktop Categories HTML
+  function renderFlyout(nodes, isRoot) {
+    let html = '';
+    nodes.forEach(node => {
+      const hasKids = node.children && node.children.length > 0;
+      const isMega = node.style === 'mega' && hasKids;
+      
+      let classes = 'desk-item';
+      if (hasKids && !isMega) classes += ' has-kids';
+      if (isMega) classes += ' has-mega';
+      
+      html += '<div class="' + classes + '">';
+      html += '<a href="' + node.link + '" class="desk-link">';
+      if (node.icon && isRoot) {
+        html += '<span class="desk-icon"><img src="' + node.icon + '" alt=""></span>';
+      }
+      html += '<span class="desk-text">' + node.title + '</span>';
+      if (hasKids) {
+        html += '<span class="desk-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></span>';
+      }
+      html += '</a>';
+      
+      if (hasKids) {
+        if (isMega) {
+          html += '<div class="desk-mega"><div class="mega-grid">';
+          node.children.forEach(child => {
+            html += '<div class="mega-col">';
+            if (child.image) {
+              html += '<div class="mega-col-img"><a href="' + child.link + '"><img src="' + child.image + '" alt="' + child.title + '"></a></div>';
+            }
+            html += '<h4 class="mega-col-title"><a href="' + child.link + '">' + child.title + '</a></h4>';
+            if (child.children && child.children.length > 0) {
+              html += '<ul class="mega-col-links">';
+              child.children.forEach(subchild => {
+                html += '<li><a href="' + subchild.link + '">' + subchild.title + '</a></li>';
+              });
+              html += '</ul>';
+            }
+            html += '</div>';
+          });
+          html += '</div></div>';
+        } else {
+          html += '<div class="desk-flyout">' + renderFlyout(node.children, false) + '</div>';
+        }
+      }
+      html += '</div>';
+    });
+    return html;
+  }
+  
+  // Desktop Navigation HTML
+  function renderNav(nodes) {
+    let html = '';
+    nodes.forEach(node => {
+      const hasKids = node.children && node.children.length > 0;
+      const hasImage = node.image && node.image.length > 0;
+      html += '<div class="nav-item-wrap' + (hasKids ? ' has-dropdown' : '') + '">';
+      html += '<a href="' + node.link + '" class="nav-link">' + node.title;
+      if (hasKids) {
+        html += '<svg class="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+      }
+      html += '</a>';
+      if (hasKids) {
+        html += '<div class="nav-dropdown' + (hasImage ? ' has-image' : '') + '">';
+        html += '<ul class="nav-dropdown-links">';
+        node.children.forEach(child => {
+          html += '<li><a href="' + child.link + '">' + child.title + '</a></li>';
+        });
+        html += '</ul>';
+        if (hasImage) {
+          html += '<div class="nav-dropdown-image"><img src="' + node.image + '" alt="' + node.title + '"></div>';
+        }
+        html += '</div>';
+      }
+      html += '</div>';
+    });
+    return html;
+  }
+  
+  // Mobile Categories HTML
+  function renderMobile(nodes) {
+    let html = '';
+    nodes.forEach(node => {
+      const hasKids = node.children && node.children.length > 0;
+      html += '<li class="mobile-item' + (hasKids ? ' has-kids' : '') + '">';
+      html += '<div class="mobile-item-wrap">';
+      html += '<a href="' + node.link + '" class="mobile-link">';
+      if (node.icon) {
+        html += '<img src="' + node.icon + '" alt="">';
+      }
+      html += node.title + '</a>';
+      if (hasKids) {
+        html += '<button class="mobile-toggle" type="button">+</button>';
+      }
+      html += '</div>';
+      if (hasKids) {
+        html += '<ul class="mobile-children">' + renderMobile(node.children) + '</ul>';
+      }
+      html += '</li>';
+    });
+    return html;
+  }
+  
+  // Mobile Navigation HTML
+  function renderMobileNav(nodes) {
+    let html = '';
+    nodes.forEach(node => {
+      const hasKids = node.children && node.children.length > 0;
+      html += '<li class="mobile-item' + (hasKids ? ' has-kids' : '') + '">';
+      html += '<div class="mobile-item-wrap">';
+      html += '<a href="' + node.link + '" class="mobile-link">' + node.title + '</a>';
+      if (hasKids) {
+        html += '<button class="mobile-toggle" type="button">+</button>';
+      }
+      html += '</div>';
+      if (hasKids) {
+        html += '<ul class="mobile-children">';
+        node.children.forEach(child => {
+          html += '<li class="mobile-item"><div class="mobile-item-wrap"><a href="' + child.link + '" class="mobile-link">' + child.title + '</a></div></li>';
+        });
+        html += '</ul>';
+      }
+      html += '</li>';
+    });
+    return html;
+  }
+  
+  // Render desktop categories
+  const deskEl = document.getElementById('desktop-menu-' + sectionId);
+  if (deskEl) {
+    deskEl.innerHTML = renderFlyout(categoryTree, true);
+  }
+  
+  // Render desktop nav
+  const navEl = document.getElementById('main-nav-' + sectionId);
+  if (navEl) {
+    navEl.innerHTML = renderNav(navTree);
+  }
+  
+  // Render mobile categories
+  const mobEl = document.getElementById('mobile-menu-' + sectionId);
+  if (mobEl) {
+    mobEl.innerHTML = renderMobile(categoryTree);
+  }
+  
+  // Render mobile nav
+  const mobNavEl = document.getElementById('mobile-nav-' + sectionId);
+  if (mobNavEl) {
+    mobNavEl.innerHTML = renderMobileNav(navTree);
+  }
+  
+  // Mobile toggle handlers
+  document.querySelectorAll('.section-' + sectionId + ' .mobile-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const li = btn.closest('.mobile-item');
+      li.classList.toggle('open');
+      btn.textContent = li.classList.contains('open') ? '−' : '+';
+    });
+  });
+  
+  // Desktop menu open/close
+  const megaMenu = document.getElementById('mega-menu-' + sectionId);
+  const btn = document.getElementById('categories-btn-' + sectionId);
+  if (megaMenu && btn) {
+    const isHome = {% if request.page_type == 'index' %}true{% else %}false{% endif %};
+    if (!isHome) {
+      megaMenu.classList.remove('is-open');
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        megaMenu.classList.toggle('is-open');
+      });
+      document.addEventListener('click', function(e) {
+        if (!megaMenu.contains(e.target)) {
+          megaMenu.classList.remove('is-open');
+        }
+      });
+    }
+  }
+  
+  // Mobile drawer
+  const mobToggle = document.getElementById('mobile-toggle-' + sectionId);
+  const mobClose = document.getElementById('mobile-close-' + sectionId);
+  const mobDrawer = document.getElementById('mobile-drawer-' + sectionId);
+  const mobOverlay = document.getElementById('mobile-overlay-' + sectionId);
+  
+  function openMob() {
+    mobDrawer.classList.add('is-open');
+    mobOverlay.classList.add('is-active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMob() {
+    mobDrawer.classList.remove('is-open');
+    mobOverlay.classList.remove('is-active');
+    document.body.style.overflow = '';
+  }
+  
+  if (mobToggle) mobToggle.addEventListener('click', openMob);
+  if (mobClose) mobClose.addEventListener('click', closeMob);
+  if (mobOverlay) mobOverlay.addEventListener('click', closeMob);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Mega Menu 4-Level",
+  "settings": [
+    { "type": "header", "content": "Container" },
+    { "type": "select", "id": "container", "label": "Container Width", "default": "1370", "options": [{ "value": "1170", "label": "1170px" }, { "value": "1370", "label": "1370px" }, { "value": "1570", "label": "1570px" }, { "value": "full", "label": "Full Width" }] },
+    { "type": "header", "content": "Categories Button" },
+    { "type": "text", "id": "button_text", "label": "Button Text", "default": "CATEGORIES" },
+    { "type": "range", "id": "button_min_width", "label": "Button Width", "min": 150, "max": 350, "step": 10, "unit": "px", "default": 220 },
+    { "type": "color", "id": "button_bg", "label": "Background", "default": "#6fb31a" },
+    { "type": "color", "id": "button_hover_bg", "label": "Hover Background", "default": "#5a9216" },
+    { "type": "color", "id": "button_color", "label": "Text Color", "default": "#ffffff" },
+    { "type": "range", "id": "button_font_size", "label": "Font Size", "min": 12, "max": 20, "step": 1, "unit": "px", "default": 14 },
+    { "type": "select", "id": "button_font_weight", "label": "Font Weight", "default": "600", "options": [{ "value": "400", "label": "Normal" }, { "value": "500", "label": "Medium" }, { "value": "600", "label": "Semi Bold" }, { "value": "700", "label": "Bold" }] },
+    { "type": "range", "id": "button_padding_x", "label": "Padding X", "min": 10, "max": 40, "step": 2, "unit": "px", "default": 20 },
+    { "type": "range", "id": "button_padding_y", "label": "Padding Y", "min": 8, "max": 25, "step": 1, "unit": "px", "default": 14 },
+    { "type": "range", "id": "button_radius", "label": "Top Radius", "min": 0, "max": 20, "step": 1, "unit": "px", "default": 8 },
+    { "type": "header", "content": "Dropdown Menu" },
+    { "type": "range", "id": "dropdown_width", "label": "Menu Width", "min": 200, "max": 350, "step": 10, "unit": "px", "default": 260 },
+    { "type": "range", "id": "mega_panel_width", "label": "Mega Panel Width", "min": 600, "max": 1200, "step": 50, "unit": "px", "default": 900 },
+    { "type": "color", "id": "menu_bg", "label": "Background", "default": "#ffffff" },
+    { "type": "color", "id": "menu_text", "label": "Text Color", "default": "#333333" },
+    { "type": "color", "id": "menu_hover_bg", "label": "Hover Background", "default": "#f5f5f5" },
+    { "type": "color", "id": "menu_hover_text", "label": "Hover Text", "default": "#6fb31a" },
+    { "type": "range", "id": "menu_icon_size", "label": "Menu Icon Size", "min": 18, "max": 50, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "menu_font_size", "label": "Font Size", "min": 12, "max": 18, "step": 1, "unit": "px", "default": 14 },
+    { "type": "range", "id": "menu_item_padding", "label": "Item Padding", "min": 10, "max": 25, "step": 1, "unit": "px", "default": 12 },
+    { "type": "header", "content": "Horizontal Navigation" },
+    { "type": "checkbox", "id": "show_main_nav", "label": "Show Navigation", "default": true },
+    { "type": "text", "id": "nav_mobile_title", "label": "Mobile Section Title", "default": "Menu" },
+    { "type": "color", "id": "nav_text_color", "label": "Text Color", "default": "#333333" },
+    { "type": "color", "id": "nav_hover_color", "label": "Hover Color", "default": "#6fb31a" },
+    { "type": "range", "id": "nav_font_size", "label": "Font Size", "min": 12, "max": 20, "step": 1, "unit": "px", "default": 14 },
+    { "type": "select", "id": "nav_font_weight", "label": "Font Weight", "default": "500", "options": [{ "value": "400", "label": "Normal" }, { "value": "500", "label": "Medium" }, { "value": "600", "label": "Semi Bold" }, { "value": "700", "label": "Bold" }] },
+    { "type": "range", "id": "nav_gap", "label": "Items Gap", "min": 10, "max": 50, "step": 5, "unit": "px", "default": 25 },
+    { "type": "range", "id": "nav_margin_left", "label": "Left Margin", "min": 10, "max": 60, "step": 5, "unit": "px", "default": 30 },
+    { "type": "header", "content": "Mobile Menu" },
+    { "type": "color", "id": "mobile_menu_bg", "label": "Background", "default": "#ffffff" },
+    { "type": "color", "id": "mobile_close_bg", "label": "Close Button Color", "default": "#6fb31a" }
+  ],
+  "blocks": [
+    {
+      "type": "menu_item",
+      "name": "Category Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "level",
+          "label": "Level",
+          "default": "1",
+          "options": [
+            { "value": "1", "label": "Level 1 (Main Category)" },
+            { "value": "2", "label": "Level 2 (Submenu)" },
+            { "value": "3", "label": "Level 3 (Sub-submenu)" },
+            { "value": "4", "label": "Level 4 (Deep Item)" }
+          ],
+          "info": "Items become children of the nearest higher level above them"
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "Category" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "image_picker", "id": "icon_image", "label": "Icon (Level 1 only)" },
+        {
+          "type": "select",
+          "id": "submenu_style",
+          "label": "Submenu Style",
+          "default": "simple",
+          "options": [
+            { "value": "simple", "label": "Simple Flyout" },
+            { "value": "mega", "label": "Mega Panel (Grid)" }
+          ],
+          "info": "Mega Panel shows children in a grid with images"
+        },
+        { "type": "image_picker", "id": "menu_image", "label": "Image (for Mega Panel)", "info": "Shows when parent uses Mega Panel style" }
+      ]
+    },
+    {
+      "type": "nav_item",
+      "name": "Nav Link",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Home" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "image_picker", "id": "nav_image", "label": "Dropdown Image", "info": "If added, image shows on right side of dropdown" }
+      ]
+    },
+    {
+      "type": "nav_dropdown",
+      "name": "Nav Dropdown Item",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Dropdown Item" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mega Menu 4-Level",
+      "blocks": [
+        { "type": "menu_item", "settings": { "level": "1", "title": "Machines" } },
+        { "type": "menu_item", "settings": { "level": "1", "title": "Cleaning Equipment", "submenu_style": "simple" } },
+        { "type": "menu_item", "settings": { "level": "2", "title": "Window Cleaning Equipment" } },
+        { "type": "menu_item", "settings": { "level": "3", "title": "Window Cleaning Systems" } },
+        { "type": "menu_item", "settings": { "level": "4", "title": "Squeegees & Rubbers" } },
+        { "type": "menu_item", "settings": { "level": "4", "title": "Belt System & Pouches" } },
+        { "type": "menu_item", "settings": { "level": "3", "title": "Traditional Window Cleaning" } },
+        { "type": "menu_item", "settings": { "level": "2", "title": "Floor Care Equipment" } },
+        { "type": "menu_item", "settings": { "level": "3", "title": "Sweeping Brushes" } },
+        { "type": "menu_item", "settings": { "level": "3", "title": "Mops & Mopping" } },
+        { "type": "menu_item", "settings": { "level": "1", "title": "Cleaning Agents", "submenu_style": "mega" } },
+        { "type": "menu_item", "settings": { "level": "2", "title": "Floor Care" } },
+        { "type": "menu_item", "settings": { "level": "3", "title": "Maintainers & Cleaners" } },
+        { "type": "menu_item", "settings": { "level": "3", "title": "Degreasers" } },
+        { "type": "menu_item", "settings": { "level": "2", "title": "Glass Cleaners" } },
+        { "type": "menu_item", "settings": { "level": "2", "title": "Sanitisers" } },
+        { "type": "menu_item", "settings": { "level": "1", "title": "Consumables" } },
+        { "type": "menu_item", "settings": { "level": "1", "title": "PPE/Sanitising" } },
+        { "type": "nav_item", "settings": { "title": "Home", "link": "/" } },
+        { "type": "nav_item", "settings": { "title": "About Us", "link": "/pages/about" } },
+        { "type": "nav_item", "settings": { "title": "Services" } },
+        { "type": "nav_dropdown", "settings": { "title": "Commercial Cleaning", "link": "/pages/commercial" } },
+        { "type": "nav_dropdown", "settings": { "title": "Residential Cleaning", "link": "/pages/residential" } },
+        { "type": "nav_dropdown", "settings": { "title": "Industrial Cleaning", "link": "/pages/industrial" } },
+        { "type": "nav_item", "settings": { "title": "Blog", "link": "/blogs/news" } },
+        { "type": "nav_item", "settings": { "title": "Contact Us", "link": "/pages/contact" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

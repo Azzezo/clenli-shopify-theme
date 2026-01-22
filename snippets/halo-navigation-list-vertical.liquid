@@ -1,0 +1,401 @@
+{%- comment -%}
+  Vertical Navigation List with Icons and Submenu Support
+{%- endcomment -%}
+
+{%- assign vertical_menu = block.settings.vertical_menu -%}
+
+<ul class="{{ listClass }}">
+  {%- for link in linklists[vertical_menu].links -%}
+    {%- assign link_index = forloop.index -%}
+    {%- assign has_submenu = false -%}
+    {%- if link.links.size > 0 -%}
+      {%- assign has_submenu = true -%}
+    {%- endif -%}
+    
+    <li class="menu-lv-item menu-lv-1 p-relative{% if has_submenu %} has-megamenu dropdown{% else %} no-megamenu{% endif %}">
+      <a href="{{ link.url }}" class="menu-lv-1__action d-flex flex-align-center link-effect">
+        
+        {%- comment -%} Icon based on menu item title {%- endcomment -%}
+        <span class="icon-img menu-icon">
+          {%- assign link_title_lower = link.title | downcase -%}
+          
+          {%- if link_title_lower contains 'machine' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4m-2-2v4"/><circle cx="16" cy="12" r="2"/></svg>
+          
+          {%- elsif link_title_lower contains 'equipment' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          
+          {%- elsif link_title_lower contains 'agent' or link_title_lower contains 'chemical' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2v6.5a.5.5 0 01-.5.5H6a4 4 0 000 8h12a4 4 0 000-8h-3.5a.5.5 0 01-.5-.5V2"/><path d="M8.5 2h7"/></svg>
+          
+          {%- elsif link_title_lower contains 'consumable' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+          
+          {%- elsif link_title_lower contains 'ppe' or link_title_lower contains 'sanitising' or link_title_lower contains 'safety' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          
+          {%- elsif link_title_lower contains 'carpet' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20M6 16v-2m4 2v-2m4 2v-2m4 2v-2"/></svg>
+          
+          {%- elsif link_title_lower contains 'environment' or link_title_lower contains 'browse' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          
+          {%- elsif link_title_lower contains 'contact' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          
+          {%- elsif link_title_lower contains 'home' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+          
+          {%- elsif link_title_lower contains 'product' or link_title_lower contains 'all' or link_title_lower contains 'shop' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          
+          {%- elsif link_title_lower contains 'sale' or link_title_lower contains 'offer' or link_title_lower contains 'deal' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          
+          {%- elsif link_title_lower contains 'brand' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          
+          {%- elsif link_title_lower contains 'floor' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          
+          {%- elsif link_title_lower contains 'wash' or link_title_lower contains 'pressure' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+          
+          {%- elsif link_title_lower contains 'vacuum' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          
+          {%- elsif link_title_lower contains 'waste' or link_title_lower contains 'bin' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="3,6 5,6 21,6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+          
+          {%- elsif link_title_lower contains 'paper' or link_title_lower contains 'tissue' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          
+          {%- elsif link_title_lower contains 'glove' or link_title_lower contains 'hand' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2 2 2 0 00-2 2M14 10V4a2 2 0 00-2-2 2 2 0 00-2 2v6M10 10.5V6a2 2 0 00-2-2 2 2 0 00-2 2v8"/><path d="M18 8a2 2 0 114 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+          
+          {%- elsif link_title_lower contains 'mop' or link_title_lower contains 'cloth' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          
+          {%- elsif link_title_lower contains 'hire' or link_title_lower contains 'rent' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          
+          {%- elsif link_title_lower contains 'service' or link_title_lower contains 'support' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          
+          {%- elsif link_title_lower contains 'new' or link_title_lower contains 'arrival' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg>
+          
+          {%- elsif link_title_lower contains 'tool' or link_title_lower contains 'part' -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          
+          {%- else -%}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          {%- endif -%}
+        </span>
+        
+        <span class="text">{{ link.title }}</span>
+        
+        {%- if has_submenu -%}
+          <span class="icon icon-dropdown p-absolute">
+            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+          </span>
+        {%- endif -%}
+      </a>
+      
+      {%- comment -%} ========== SUBMENU DROPDOWN ========== {%- endcomment -%}
+      {%- if has_submenu -%}
+        <div class="list-menu--disclosure menu-dropdown site-nav-list-dropdown p-absolute">
+          <div class="bg_white submenu-container">
+            
+            {%- comment -%} Check if any child has images/grandchildren for mega menu style {%- endcomment -%}
+            {%- assign show_images = false -%}
+            {%- for childlink in link.links -%}
+              {%- assign childlink_handle = childlink.url | split: '/' | last -%}
+              {%- assign childlink_collection = collections[childlink_handle] -%}
+              {%- if childlink_collection.image != blank or childlink_collection.products.first != blank -%}
+                {%- assign show_images = true -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            
+            {%- if show_images -%}
+              {%- comment -%} ===== MEGA MENU WITH IMAGES ===== {%- endcomment -%}
+              <div class="submenu-mega-grid">
+                {%- for childlink in link.links -%}
+                  <div class="submenu-mega-item">
+                    <a href="{{ childlink.url }}" class="submenu-mega-link">
+                      
+                      {%- assign childlink_handle = childlink.url | split: '/' | last -%}
+                      {%- assign childlink_collection = collections[childlink_handle] -%}
+                      {%- assign childlink_product = all_products[childlink_handle] -%}
+                      
+                      <div class="submenu-mega-image">
+                        {%- if childlink_collection.image != blank -%}
+                          <img src="{{ childlink_collection.image | img_url: '300x300', crop: 'center' }}" alt="{{ childlink.title }}" loading="lazy">
+                        {%- elsif childlink_collection.products.first.featured_image != blank -%}
+                          <img src="{{ childlink_collection.products.first.featured_image | img_url: '300x300', crop: 'center' }}" alt="{{ childlink.title }}" loading="lazy">
+                        {%- elsif childlink_product.featured_image != blank -%}
+                          <img src="{{ childlink_product.featured_image | img_url: '300x300', crop: 'center' }}" alt="{{ childlink.title }}" loading="lazy">
+                        {%- else -%}
+                          <div class="submenu-placeholder-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                          </div>
+                        {%- endif -%}
+                      </div>
+                      
+                      <span class="submenu-mega-title">{{ childlink.title }}</span>
+                    </a>
+                    
+                    {%- comment -%} Level 3 Sub-links {%- endcomment -%}
+                    {%- if childlink.links.size > 0 -%}
+                      <ul class="submenu-level-3">
+                        {%- for grandchildlink in childlink.links limit: 5 -%}
+                          <li>
+                            <a href="{{ grandchildlink.url }}" class="submenu-level-3-link">{{ grandchildlink.title }}</a>
+                          </li>
+                        {%- endfor -%}
+                        {%- if childlink.links.size > 5 -%}
+                          <li>
+                            <a href="{{ childlink.url }}" class="submenu-view-all">View All →</a>
+                          </li>
+                        {%- endif -%}
+                      </ul>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+              
+            {%- else -%}
+              {%- comment -%} ===== SIMPLE LIST SUBMENU ===== {%- endcomment -%}
+              <ul class="submenu-simple-list">
+                {%- for childlink in link.links -%}
+                  <li class="submenu-simple-item{% if childlink.links.size > 0 %} has-children{% endif %}">
+                    <a href="{{ childlink.url }}" class="submenu-simple-link">
+                      {{ childlink.title }}
+                      {%- if childlink.links.size > 0 -%}
+                        <svg class="submenu-arrow" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+                      {%- endif -%}
+                    </a>
+                    
+                    {%- comment -%} Level 3 dropdown {%- endcomment -%}
+                    {%- if childlink.links.size > 0 -%}
+                      <ul class="submenu-level-3-dropdown">
+                        {%- for grandchildlink in childlink.links -%}
+                          <li>
+                            <a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+            
+          </div>
+        </div>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>
+
+<style>
+/* ========== ICON STYLES ========== */
+.header__menu-vertical .menu-icon {
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+.header__menu-vertical .menu-icon svg {
+  color: #666;
+  transition: color 0.2s ease;
+}
+.header__menu-vertical .menu-lv-1:hover .menu-icon svg {
+  color: var(--vertical_menu_lv1_color_hover, #6fb31a);
+}
+
+/* ========== DROPDOWN CONTAINER ========== */
+.header__menu-vertical .list-menu--disclosure {
+  left: 100% !important;
+  top: 0 !important;
+  padding: 0 !important;
+}
+.header__menu-vertical .submenu-container {
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ========== MEGA MENU WITH IMAGES ========== */
+.submenu-mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 25px;
+  min-width: 650px;
+}
+@media screen and (min-width: 1440px) {
+  .submenu-mega-grid {
+    grid-template-columns: repeat(4, 1fr);
+    min-width: 800px;
+  }
+}
+
+.submenu-mega-item {
+  text-align: center;
+}
+.submenu-mega-link {
+  display: block;
+  text-decoration: none;
+}
+.submenu-mega-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submenu-mega-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.submenu-mega-item:hover .submenu-mega-image img {
+  transform: scale(1.1);
+}
+.submenu-placeholder-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submenu-mega-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  transition: color 0.2s ease;
+}
+.submenu-mega-item:hover .submenu-mega-title {
+  color: var(--vertical_menu_lv1_color_hover, #6fb31a);
+}
+
+/* Level 3 links under images */
+.submenu-level-3 {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  text-align: left;
+}
+.submenu-level-3 li {
+  margin: 0;
+}
+.submenu-level-3-link {
+  font-size: 13px;
+  color: #666;
+  display: block;
+  padding: 4px 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.submenu-level-3-link:hover {
+  color: var(--vertical_menu_lv1_color_hover, #6fb31a);
+  padding-left: 8px;
+}
+.submenu-view-all {
+  font-size: 13px;
+  color: var(--vertical_menu_lv1_color_hover, #6fb31a);
+  display: block;
+  padding: 4px 0;
+  font-weight: 500;
+  text-decoration: none;
+  transition: padding 0.2s ease;
+}
+.submenu-view-all:hover {
+  padding-left: 8px;
+}
+
+/* ========== SIMPLE LIST SUBMENU ========== */
+.submenu-simple-list {
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+  min-width: 250px;
+}
+.submenu-simple-item {
+  position: relative;
+  margin: 0;
+}
+.submenu-simple-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.submenu-simple-link:hover {
+  background: #f5f5f5;
+  color: var(--vertical_menu_lv1_color_hover, #6fb31a);
+}
+.submenu-arrow {
+  transition: transform 0.2s ease;
+}
+.submenu-simple-item:hover .submenu-arrow {
+  transform: translateX(3px);
+}
+
+/* Level 3 dropdown (flyout) */
+.submenu-level-3-dropdown {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+  min-width: 220px;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.2s ease;
+}
+.submenu-simple-item:hover .submenu-level-3-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.submenu-level-3-dropdown li {
+  margin: 0;
+}
+.submenu-level-3-dropdown a {
+  display: block;
+  padding: 8px 20px;
+  font-size: 13px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.submenu-level-3-dropdown a:hover {
+  background: #f5f5f5;
+  color: var(--vertical_menu_lv1_color_hover, #6fb31a);
+  padding-left: 25px;
+}
+
+/* ========== MENU ITEM PADDING ========== */
+.header__menu-vertical .menu-lv-1__action {
+  padding: 12px 25px !important;
+}
+.header__menu-vertical .menu-lv-1__action .icon-dropdown {
+  right: 20px !important;
+}
+</style>

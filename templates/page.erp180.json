@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "erp180-main": {
+      "type": "erp180-page",
+      "blocks": {
+        "feature-1": {
+          "type": "feature_card",
+          "settings": {
+            "title": "Simple to Use",
+            "description": "Boasting a lightweight construction, a convenient carry handle, and an extended, high-visibility cable, this design ensures effortless usage and enhanced safety within the workplace."
+          }
+        },
+        "feature-2": {
+          "type": "feature_card",
+          "settings": {
+            "title": "Built to Last",
+            "description": "Prepared for action with its robust, heavy-duty build, high-efficiency, long-lasting motor, and user-friendly plugged cable replacement system."
+          }
+        },
+        "feature-3": {
+          "type": "feature_card",
+          "settings": {
+            "title": "Compact & Convenient Size",
+            "description": "Effortless access to your essentials on the go, coupled with straightforward storage when not in active use, thanks to the practical on-board tool storage and distinctive caddy design. The AS0 kit is included as a standard feature."
+          }
+        },
+        "feature-4": {
+          "type": "feature_card",
+          "settings": {
+            "title": "Bright Power Cable",
+            "description": "The brightly colored power cable prevent tripping by enhancing visibility in busy surroundings, ensuring a safer cleaning experience."
+          }
+        }
+      },
+      "block_order": [
+        "feature-1",
+        "feature-2",
+        "feature-3",
+        "feature-4"
+      ],
+      "settings": {
+        "hero_tag": "ECO VACUUM",
+        "hero_title": "Numatic ERP180",
+        "hero_desc": "For a more sustainable way of vacuuming that will save you money.",
+        "feature1_title": "Low energy:",
+        "feature1_text": "Using a 420W high-efficiency motor, the ERP180 delivers professional cleaning while reducing energy usage and cost.",
+        "feature2_title": "Sustainably made:",
+        "feature2_text": "Constructed from the highest quality, recycled plastic which is diverted from landfill or incineration.",
+        "feature3_title": "Powerful performance:",
+        "feature3_text": "The ERP180 delivers a reduction in energy consumption while still providing the same professional, high-performance cleaning results.",
+        "hero_btn_text": "Explore Numatic ERP180",
+        "hero_btn_link": "/products/numatic-erp180-eco-vacuum",
+        "about_title": "About the Numatic ERP180",
+        "about_text": "The Numatic ERP180 is a compact dry-vacuum for use in smaller spaces for most surfaces. With the highest efficiency motor yet, the Numatic ERP180 delivers a 30% reduction in energy consumption; providing the same professional, high-performance cleaning results you expect from a Numatic machine while saving you money too.",
+        "energy_title": "Reduced Energy Consumption",
+        "energy_text": "The Numatic ERP180 presents a significant advancement in energy efficiency compared to all other vacuums on the market. With the incorporation of a new 420W high-efficiency motor, the ERP180 not only ensures professional cleaning standards but also leads to substantial energy savings. When contrasted with the VNP180, users can anticipate a remarkable reduction of over 61% in energy consumption. This enhancement not only contributes to environmental sustainability but also translates into cost savings for businesses and individuals alike.",
+        "savings_title": "Save on Energy Costs",
+        "savings_text": "Beyond its commitment to sustainability, the ERP180 proves to be a cost-effective solution by significantly reducing energy expenses through its energy-efficient motor. In direct comparison to the Numatic VNP180, the potential for savings is substantial, with the Numatic ERP180 offering a remarkable 62% reduction in energy costs.",
+        "smart_title": "Built Smarter & Sustainably",
+        "smart_text": "Crafted with the utmost precision from top-tier plastic and featuring the most efficient motor, the ERP180 embody the longstanding commitment to delivering high-performance, quality, and durability that Numatic is renowned for. These vacuums are meticulously designed, engineered, and constructed to promote sustainable productivity. Notably, the Numatic ERP180 stands out for its eco-conscious construction, incorporating an impressive 75% of high-quality recycled parts.",
+        "features_title": "Features",
+        "features_subtitle": "Providing the same tough, heavy-duty Numatic construction as always, the ERP180 is both sustainably engineered and built to last.",
+        "specs_title": "Technical Specifications",
+        "spec_capacity": "8 L",
+        "spec_range": "26.4 m",
+        "spec_cable": "10 m",
+        "spec_power": "420 W",
+        "spec_voltage": "230 V",
+        "spec_weight": "6 kg",
+        "spec_dimensions": "340 x 365 x 360",
+        "cta_title": "Powerful Performer",
+        "cta_text": "Less energy consumption doesn't mean less powerful. With the highest efficiency motor yet, The ERP180 still provides the same professional, high-performance cleaning results you expect from a Numatic machine, while saving you money too. Are you ready to embrace the future of high efficiency vacuuming?",
+        "cta_btn_text": "Shop Numatic ERP180",
+        "cta_btn_link": "/products/numatic-erp180-eco-vacuum"
+      }
+    },
+    "featured_product_we_HxczGA": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_FbHf74": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_AiFHrP": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#fff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#fff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "transparent",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "transparent",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "transparent"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_AiFHrP"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#fff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "erp180-main",
+    "featured_product_we_HxczGA",
+    "newsletter_FbHf74"
+  ]
+}

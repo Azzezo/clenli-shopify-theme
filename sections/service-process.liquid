@@ -1,0 +1,222 @@
+{% comment %}
+  Clenli Direct - Service Process Section
+  Section: service-process.liquid
+{% endcomment %}
+
+<section class="service-process">
+  <div class="service-process__container">
+    <div class="service-process__header">
+      <span class="service-process__label">{{ section.settings.label }}</span>
+      <h2 class="service-process__title">{{ section.settings.title }}</h2>
+    </div>
+    
+    <div class="service-process__timeline">
+      {% for block in section.blocks %}
+        <div class="service-process__step">
+          <div class="service-process__step-number">{{ forloop.index }}</div>
+          <div class="service-process__step-content">
+            <h3 class="service-process__step-title">{{ block.settings.title }}</h3>
+            <p class="service-process__step-text">{{ block.settings.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.service-process {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 100px 0;
+  position: relative;
+}
+
+.service-process__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-process__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service-process__label {
+  display: inline-block;
+  color: #40b884;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.service-process__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.service-process__timeline {
+  position: relative;
+}
+
+.service-process__timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(64, 184, 132, 0.3);
+}
+
+.service-process__step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.service-process__step:last-child {
+  margin-bottom: 0;
+}
+
+.service-process__step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #0a4d3c 0%, #1a7a5c 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(10, 77, 60, 0.4);
+}
+
+.service-process__step-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 35px;
+  border-radius: 15px;
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-process__step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.service-process__step-text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .service-process__timeline::before {
+    left: 20px;
+  }
+  
+  .service-process__step {
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 50px;
+  }
+  
+  .service-process__step-number {
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .service-process__title {
+    font-size: 32px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Service Process",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Section Label",
+      "default": "How It Works"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Our Service Process"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Process Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Contact Us"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Step Description",
+          "default": "Reach out via phone, email, or our contact form. Our team is available 24/7 for emergencies."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Process",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Contact Us",
+            "text": "Call our service hotline or submit a request online. For emergencies, we're available 24/7 to take your call."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Assessment & Scheduling",
+            "text": "Our service team assesses your needs and schedules a visit at a time that works for you. We dispatch the nearest available engineer."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "On-Site Service",
+            "text": "Our fully-equipped service vans arrive with €15,000+ worth of parts. 99% of issues are resolved on the first visit."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Follow-Up Support",
+            "text": "After service completion, your dedicated service manager ensures everything is working perfectly and schedules any follow-up maintenance."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

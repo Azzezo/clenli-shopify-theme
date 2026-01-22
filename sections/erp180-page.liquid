@@ -1,0 +1,860 @@
+{% comment %}
+  Clenli Direct - Numatic ERP180 Page - FULLY FIXED
+{% endcomment %}
+
+<div class="erp180-page">
+  
+  <!-- Hero Section -->
+  <section class="erp180-hero">
+    <div class="erp180-container">
+      <div class="erp180-hero__grid">
+        <div class="erp180-hero__image">
+          {% if section.settings.hero_image != blank %}
+            <img src="{{ section.settings.hero_image | image_url: width: 800 }}" alt="{{ section.settings.hero_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/ERP18000000.png" alt="Numatic ERP180">
+          {% endif %}
+        </div>
+        <div class="erp180-hero__content">
+          <span class="erp180-tag">{{ section.settings.hero_tag }}</span>
+          <h1 class="erp180-hero__title">{{ section.settings.hero_title }}</h1>
+          <p class="erp180-text">{{ section.settings.hero_desc }}</p>
+          
+          <div class="erp180-features">
+            <div class="erp180-feature">
+              <strong>{{ section.settings.feature1_title }}</strong>
+              <p>{{ section.settings.feature1_text }}</p>
+            </div>
+            <div class="erp180-feature">
+              <strong>{{ section.settings.feature2_title }}</strong>
+              <p>{{ section.settings.feature2_text }}</p>
+            </div>
+            <div class="erp180-feature">
+              <strong>{{ section.settings.feature3_title }}</strong>
+              <p>{{ section.settings.feature3_text }}</p>
+            </div>
+          </div>
+          
+          <a href="{{ section.settings.hero_btn_link }}" class="erp180-btn">{{ section.settings.hero_btn_text }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ✅ SUPER VISIBLE DIVIDER -->
+  <div class="erp180-divider"></div>
+
+  <!-- About Section -->
+  <section class="erp180-info">
+    <div class="erp180-container">
+      <div class="erp180-info__grid">
+        <div class="erp180-info__content erp180-info__content--center">
+          <h2 class="erp180-subtitle">{{ section.settings.about_title }}</h2>
+          <p class="erp180-text">{{ section.settings.about_text }}</p>
+        </div>
+        <div class="erp180-info__image">
+          {% if section.settings.about_image != blank %}
+            <img src="{{ section.settings.about_image | image_url: width: 800 }}" alt="{{ section.settings.about_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/About_ERP180.png" alt="About ERP180">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="erp180-divider"></div>
+
+  <!-- ✅ FIXED: Reduced Energy Section - Image on LEFT -->
+  <section class="erp180-info">
+    <div class="erp180-container">
+      <div class="erp180-info__grid">
+        <!-- Image FIRST (Left side) -->
+        <div class="erp180-info__image">
+          {% if section.settings.energy_image != blank %}
+            <img src="{{ section.settings.energy_image | image_url: width: 800 }}" alt="{{ section.settings.energy_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Reduced_Energy_ERP180.png" alt="Reduced Energy">
+          {% endif %}
+        </div>
+        <!-- Content SECOND (Right side) -->
+        <div class="erp180-info__content erp180-info__content--center">
+          <h2 class="erp180-subtitle">{{ section.settings.energy_title }}</h2>
+          <p class="erp180-text">{{ section.settings.energy_text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="erp180-divider"></div>
+
+  <!-- Cost Savings Section -->
+  <section class="erp180-info">
+    <div class="erp180-container">
+      <div class="erp180-info__grid">
+        <div class="erp180-info__content erp180-info__content--center">
+          <h2 class="erp180-subtitle">{{ section.settings.savings_title }}</h2>
+          <p class="erp180-text">{{ section.settings.savings_text }}</p>
+        </div>
+        <div class="erp180-info__image">
+          {% if section.settings.savings_image != blank %}
+            <img src="{{ section.settings.savings_image | image_url: width: 800 }}" alt="{{ section.settings.savings_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Cost_Savings_ERP180.png" alt="Cost Savings">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="erp180-divider"></div>
+
+  <!-- ✅ FIXED: Built Smarter Section - Image on LEFT -->
+  <section class="erp180-info">
+    <div class="erp180-container">
+      <div class="erp180-info__grid">
+        <!-- Image FIRST (Left side) -->
+        <div class="erp180-info__image">
+          {% if section.settings.smart_image != blank %}
+            <img src="{{ section.settings.smart_image | image_url: width: 800 }}" alt="{{ section.settings.smart_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Built_Smarter_ERP180.png" alt="Built Smarter">
+          {% endif %}
+        </div>
+        <!-- Content SECOND (Right side) -->
+        <div class="erp180-info__content erp180-info__content--center">
+          <h2 class="erp180-subtitle">{{ section.settings.smart_title }}</h2>
+          <p class="erp180-text">{{ section.settings.smart_text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="erp180-divider"></div>
+
+  <!-- Features Grid Section -->
+  <section class="erp180-features-section">
+    <div class="erp180-container">
+      <h2 class="erp180-section-title">{{ section.settings.features_title }}</h2>
+      <p class="erp180-section-subtitle">{{ section.settings.features_subtitle }}</p>
+      
+      <div class="erp180-features__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'feature_card' %}
+            <div class="erp180-feature-card" {{ block.shopify_attributes }}>
+              <div class="erp180-feature-card__img">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.title }}">
+                {% else %}
+                  <div class="erp180-feature-placeholder"></div>
+                {% endif %}
+              </div>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.description }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+  <div class="erp180-divider"></div>
+
+  <!-- Technical Specifications -->
+  <section class="erp180-specs">
+    <div class="erp180-container">
+      <h2 class="erp180-section-title">{{ section.settings.specs_title }}</h2>
+      
+      <div class="erp180-specs__table">
+        <table>
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th>Measurement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Capacity</strong></td>
+              <td>{{ section.settings.spec_capacity }}</td>
+            </tr>
+            <tr>
+              <td><strong>Cleaning Range</strong></td>
+              <td>{{ section.settings.spec_range }}</td>
+            </tr>
+            <tr>
+              <td><strong>Cable Length</strong></td>
+              <td>{{ section.settings.spec_cable }}</td>
+            </tr>
+            <tr>
+              <td><strong>Motor Power</strong></td>
+              <td>{{ section.settings.spec_power }}</td>
+            </tr>
+            <tr>
+              <td><strong>Voltage</strong></td>
+              <td>{{ section.settings.spec_voltage }}</td>
+            </tr>
+            <tr>
+              <td><strong>Weight</strong></td>
+              <td>{{ section.settings.spec_weight }}</td>
+            </tr>
+            <tr>
+              <td><strong>Dimensions (mm)</strong></td>
+              <td>{{ section.settings.spec_dimensions }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  <div class="erp180-divider"></div>
+
+  <!-- CTA Section -->
+  <section class="erp180-cta">
+    <div class="erp180-container">
+      <div class="erp180-cta__grid">
+        <div class="erp180-cta__content">
+          <h2 class="erp180-subtitle">{{ section.settings.cta_title }}</h2>
+          <p class="erp180-text">{{ section.settings.cta_text }}</p>
+          <a href="{{ section.settings.cta_btn_link }}" class="erp180-btn">{{ section.settings.cta_btn_text }}</a>
+        </div>
+        <div class="erp180-cta__image">
+          {% if section.settings.cta_image != blank %}
+            <img src="{{ section.settings.cta_image | image_url: width: 800 }}" alt="{{ section.settings.cta_title }}">
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Powerful_ERP180.png" alt="Powerful Performer">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="erp180-divider"></div>
+
+</div>
+
+<style>
+.erp180-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+}
+.erp180-container {
+  max-width: 1570px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ✅ SUPER VISIBLE DIVIDER - MAXIMUM VISIBILITY */
+.erp180-divider {
+  height: 8px;
+  background: #6fb31a;
+  max-width: 100%;
+  width: 100%;
+  margin: 50px 0;
+  box-shadow: 0 3px 8px rgba(111, 179, 26, 0.5);
+  position: relative;
+}
+
+/* Add a subtle glow effect */
+.erp180-divider::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: linear-gradient(to bottom, rgba(111, 179, 26, 0.2), transparent);
+}
+
+.erp180-tag {
+  display: inline-block;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.erp180-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+.erp180-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+.erp180-section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.erp180-section-subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+.erp180-btn {
+  display: inline-block;
+  background: #6fb31a;
+  color: #fff;
+  padding: 14px 35px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.erp180-btn:hover {
+  background: #5a9615;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(111, 179, 26, 0.4);
+  color: #fff;
+}
+.erp180-hero {
+  padding: 60px 0;
+  background: #fff;
+}
+.erp180-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.erp180-hero__image img {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.erp180-hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.erp180-features {
+  margin: 25px 0;
+}
+.erp180-feature {
+  margin-bottom: 20px;
+}
+.erp180-feature strong {
+  display: block;
+  color: #1a1a2e;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.erp180-feature p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+.erp180-info {
+  padding: 60px 0;
+  background: #fff;
+}
+.erp180-info__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.erp180-info__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  {% comment %} box-shadow: 0 10px 30px rgba(0,0,0,0.1); {% endcomment %}
+}
+.erp180-info__content--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.erp180-features-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.erp180-features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.erp180-feature-card {
+  text-align: center;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+.erp180-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  border-color: #6fb31a;
+}
+.erp180-feature-card__img {
+  margin-bottom: 20px;
+}
+.erp180-feature-card__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.erp180-feature-placeholder {
+  height: 200px;
+  background: linear-gradient(135deg, #e8f5e0 0%, #d4edc4 100%);
+  border-radius: 10px;
+}
+.erp180-feature-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+.erp180-feature-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+.erp180-specs {
+  padding: 60px 0;
+  background: #fff;
+}
+.erp180-specs__table {
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+.erp180-specs__table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.erp180-specs__table thead tr {
+  background: #6fb31a;
+  color: #fff;
+}
+.erp180-specs__table th {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+}
+.erp180-specs__table th:last-child {
+  text-align: center;
+}
+.erp180-specs__table td {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.erp180-specs__table td:last-child {
+  text-align: center;
+  font-weight: 600;
+  color: #6fb31a;
+}
+.erp180-specs__table tbody tr:hover {
+  background: #f8f9fa;
+}
+.erp180-specs__table tbody tr:last-child td {
+  border-bottom: none;
+}
+.erp180-cta {
+  padding: 60px 0;
+  background: #fff;
+}
+.erp180-cta__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.erp180-cta__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.erp180-cta__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  {% comment %} box-shadow: 0 10px 30px rgba(0,0,0,0.1); {% endcomment %}
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .erp180-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .erp180-divider {
+    margin: 40px 0;
+    height: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .erp180-hero__grid,
+  .erp180-info__grid,
+  .erp180-cta__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .erp180-hero__title {
+    font-size: 32px;
+  }
+  .erp180-features__grid {
+    grid-template-columns: 1fr;
+  }
+  .erp180-hero__image,
+  .erp180-info__image {
+    order: -1;
+  }
+  .erp180-info__content {
+    text-align: center;
+  }
+  .erp180-section-title {
+    font-size: 24px;
+  }
+  .erp180-specs__table th,
+  .erp180-specs__table td {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  .erp180-cta__content {
+    text-align: center;
+    align-items: center;
+  }
+  .erp180-divider {
+    height: 5px;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .erp180-divider {
+    height: 4px;
+    margin: 25px 0;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "ERP180 Page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_tag",
+      "label": "Tag Text",
+      "default": "ECO VACUUM"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Numatic ERP180"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_desc",
+      "label": "Description",
+      "default": "For a more sustainable way of vacuuming that will save you money."
+    },
+    {
+      "type": "text",
+      "id": "feature1_title",
+      "label": "Feature 1 Title",
+      "default": "Low energy:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature1_text",
+      "label": "Feature 1 Text",
+      "default": "Using a 420W high-efficiency motor, the ERP180 delivers professional cleaning while reducing energy usage and cost."
+    },
+    {
+      "type": "text",
+      "id": "feature2_title",
+      "label": "Feature 2 Title",
+      "default": "Sustainably made:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature2_text",
+      "label": "Feature 2 Text",
+      "default": "Constructed from the highest quality, recycled plastic which is diverted from landfill or incineration."
+    },
+    {
+      "type": "text",
+      "id": "feature3_title",
+      "label": "Feature 3 Title",
+      "default": "Powerful performance:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature3_text",
+      "label": "Feature 3 Text",
+      "default": "The ERP180 delivers a reduction in energy consumption while still providing the same professional, high-performance cleaning results."
+    },
+    {
+      "type": "text",
+      "id": "hero_btn_text",
+      "label": "Button Text",
+      "default": "Explore Numatic ERP180"
+    },
+    {
+      "type": "url",
+      "id": "hero_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "About Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "about_title",
+      "label": "Title",
+      "default": "About the Numatic ERP180"
+    },
+    {
+      "type": "textarea",
+      "id": "about_text",
+      "label": "Text",
+      "default": "The Numatic ERP180 is a compact dry-vacuum for use in smaller spaces for most surfaces. With the highest efficiency motor yet, the Numatic ERP180 delivers a 30% reduction in energy consumption; providing the same professional, high-performance cleaning results you expect from a Numatic machine while saving you money too."
+    },
+    {
+      "type": "header",
+      "content": "Reduced Energy Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "energy_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "energy_title",
+      "label": "Title",
+      "default": "Reduced Energy Consumption"
+    },
+    {
+      "type": "textarea",
+      "id": "energy_text",
+      "label": "Text",
+      "default": "The Numatic ERP180 presents a significant advancement in energy efficiency compared to all other vacuums on the market. With the incorporation of a new 420W high-efficiency motor, the ERP180 not only ensures professional cleaning standards but also leads to substantial energy savings. When contrasted with the VNP180, users can anticipate a remarkable reduction of over 61% in energy consumption."
+    },
+    {
+      "type": "header",
+      "content": "Cost Savings Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "savings_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "savings_title",
+      "label": "Title",
+      "default": "Save on Energy Costs"
+    },
+    {
+      "type": "textarea",
+      "id": "savings_text",
+      "label": "Text",
+      "default": "Beyond its commitment to sustainability, the ERP180 proves to be a cost-effective solution by significantly reducing energy expenses through its energy-efficient motor. In direct comparison to the Numatic VNP180, the potential for savings is substantial, with the Numatic ERP180 offering a remarkable 62% reduction in energy costs."
+    },
+    {
+      "type": "header",
+      "content": "Built Smarter Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "smart_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "smart_title",
+      "label": "Title",
+      "default": "Built Smarter & Sustainably"
+    },
+    {
+      "type": "textarea",
+      "id": "smart_text",
+      "label": "Text",
+      "default": "Crafted with the utmost precision from top-tier plastic and featuring the most efficient motor, the ERP180 embody the longstanding commitment to delivering high-performance, quality, and durability that Numatic is renowned for. These vacuums are meticulously designed, engineered, and constructed to promote sustainable productivity. Notably, the Numatic ERP180 stands out for its eco-conscious construction, incorporating an impressive 75% of high-quality recycled parts."
+    },
+    {
+      "type": "header",
+      "content": "Features Section"
+    },
+    {
+      "type": "text",
+      "id": "features_title",
+      "label": "Section Title",
+      "default": "Features"
+    },
+    {
+      "type": "textarea",
+      "id": "features_subtitle",
+      "label": "Section Subtitle",
+      "default": "Providing the same tough, heavy-duty Numatic construction as always, the ERP180 is both sustainably engineered and built to last."
+    },
+    {
+      "type": "header",
+      "content": "Technical Specifications"
+    },
+    {
+      "type": "text",
+      "id": "specs_title",
+      "label": "Section Title",
+      "default": "Technical Specifications"
+    },
+    {
+      "type": "text",
+      "id": "spec_capacity",
+      "label": "Capacity",
+      "default": "8 L"
+    },
+    {
+      "type": "text",
+      "id": "spec_range",
+      "label": "Cleaning Range",
+      "default": "26.4 m"
+    },
+    {
+      "type": "text",
+      "id": "spec_cable",
+      "label": "Cable Length",
+      "default": "10 m"
+    },
+    {
+      "type": "text",
+      "id": "spec_power",
+      "label": "Motor Power",
+      "default": "420 W"
+    },
+    {
+      "type": "text",
+      "id": "spec_voltage",
+      "label": "Voltage",
+      "default": "230 V"
+    },
+    {
+      "type": "text",
+      "id": "spec_weight",
+      "label": "Weight",
+      "default": "6 kg"
+    },
+    {
+      "type": "text",
+      "id": "spec_dimensions",
+      "label": "Dimensions",
+      "default": "340 x 365 x 360"
+    },
+    {
+      "type": "header",
+      "content": "CTA Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Title",
+      "default": "Powerful Performer"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "Text",
+      "default": "Less energy consumption doesn't mean less powerful. With the highest efficiency motor yet, The ERP180 still provides the same professional, high-performance cleaning results you expect from a Numatic machine, while saving you money too. Are you ready to embrace the future of high efficiency vacuuming?"
+    },
+    {
+      "type": "text",
+      "id": "cta_btn_text",
+      "label": "Button Text",
+      "default": "Shop Numatic ERP180"
+    },
+    {
+      "type": "url",
+      "id": "cta_btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_card",
+      "name": "Feature Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Feature description goes here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ERP180 Page",
+      "blocks": [
+        { "type": "feature_card", "settings": { "title": "Simple to Use", "description": "Boasting a lightweight construction, a convenient carry handle, and an extended, high-visibility cable, this design ensures effortless usage and enhanced safety within the workplace." } },
+        { "type": "feature_card", "settings": { "title": "Built to Last", "description": "Prepared for action with its robust, heavy-duty build, high-efficiency, long-lasting motor, and user-friendly plugged cable replacement system." } },
+        { "type": "feature_card", "settings": { "title": "Compact & Convenient Size", "description": "Effortless access to your essentials on the go, coupled with straightforward storage when not in active use, thanks to the practical on-board tool storage and distinctive caddy design." } },
+        { "type": "feature_card", "settings": { "title": "Bright Power Cable", "description": "The brightly colored power cable prevent tripping by enhancing visibility in busy surroundings, ensuring a safer cleaning experience." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

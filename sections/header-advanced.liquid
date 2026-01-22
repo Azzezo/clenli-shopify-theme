@@ -1,0 +1,666 @@
+{{ 'component-header-advanced.css' | asset_url | stylesheet_tag }}
+{%- if settings.enable_layout_rtl -%}
+    {% style %}
+        @media (min-width: 1025px) {
+            .layout_rtl .header-top--wrapper .header-advanced__customText {margin-left: 25px;margin-right: 0;text-align: right}
+            .layout_rtl .header-top--wrapper .header-top--right .header__icon+.header__icon {margin-left: 0;margin-right: 35px}
+            .layout_rtl .header-bottom--wrapper .header-bottom-right .help-item {margin-right: 0;padding-right: 0;margin-left: 14px;padding-left: 20px}
+            .layout_rtl .header-bottom--wrapper .header-bottom-right .help-item:before {right: auto;left: 0}
+            .layout_rtl .top-language-currency.enable-currency .halo-top-language .disclosure__button .text {margin-right: 10px;margin-left: 0}
+            .layout_rtl .top-language-currency .halo-top-language+.halo-top-currency:before {left: auto;right: 0}
+            .layout_rtl .top-language-currency .halo-top-language .disclosure__button {padding-left: 0}
+            .layout_rtl .top-language-currency .halo-top-language+.halo-top-currency {margin-left: 0;margin-right: 2px;padding-left: 0;padding-right: 8px}
+            .layout_rtl .header__group .header__icon--cart svg {margin-left: 0}
+            .layout_rtl .header-top--wrapper .quickSearchResultsWrap {left: auto;right: 0}
+            .layout_rtl .header-language_currency .top-language-currency.enable-currency .dropdown-language {left: 42px;right: auto}
+            .layout_rtl .header-language_currency .top-language-currency .dropdown-currency,
+            .layout_rtl .header-language_currency .top-language-currency.show .dropdown-currency{right: auto;left: 0}
+        }
+        @media (min-width: 1441px) {
+            .layout_rtl .header-top--wrapper .header-advanced__customText {margin-left: 50px}
+        }
+    {% endstyle %}
+{%- endif -%}
+
+<style>
+  
+.header__icon--wishlist svg path {
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.header__icon--wishlist:hover svg path {
+    fill: #f42b23;
+    stroke: #f42b23;
+}
+
+/* Product wishlist button styles */
+[data-wishlist-button] {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+[data-wishlist-button] svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+[data-wishlist-button] svg path {
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+[data-wishlist-button]:hover svg path {
+    fill: rgba(244, 43, 35, 0.2);
+    stroke: #f42b23;
+}
+
+[data-wishlist-button].active svg path {
+    fill: #f42b23;
+    stroke: #f42b23;
+}
+
+[data-wishlist-button].active {
+    color: #f42b23;
+}
+.header-mobile-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: {{ section.settings.mobile_menu_bg | default: '#6fb31a' }};
+    color: {{ section.settings.mobile_menu_color | default: '#ffffff' }};
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.header-mobile-menu-toggle svg { width: 24px; height: 24px; }
+@media (max-width: 1024px) {
+    .header-mobile-menu-toggle { display: flex; }
+    .header-advanced__content { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    .header-advanced__logo-position--left .header-advanced__content,
+    .header-advanced__logo-position--center .header-advanced__content,
+    .header-advanced__logo-position--right .header-advanced__content { flex-wrap: nowrap; }
+    .header-advanced__logo-position--center .header__logo { order: 0; flex: 1; display: flex; justify-content: center; }
+    .header-advanced__logo-position--center .header-mobile-menu-toggle { order: -1; }
+    .header-advanced__logo-position--center .header-advanced-icons { order: 1; }
+    .header-advanced .header__search { display: none; }
+}
+</style>
+
+<header class="header header-advanced header-advanced--{{ section.settings.layout }}" style="--bor-top-color: {% if section.settings.border_top != blank and section.settings.border_top != 'rgba(0,0,0,0)' %}5px solid {{ section.settings.border_top }}{% else %}none{% endif %}">
+    {%- for block in section.blocks -%}
+        {%- if block.type == 'group_1' or block.type == 'group_2' -%}
+        <div class="header-advanced__item{% if block.type == 'group_2' %} header-advanced__logo-position--{{ block.settings.logo_position }}{% endif %}{% if block.settings.show_on_mb %} show-mb{% endif %}" style="--bg-color: {% if block.settings.gradient != blank %}{{ block.settings.gradient }}{% else %}{{ block.settings.background }}{% endif %}; --spacing-l-r: {{ block.settings.padding_full_width }}px; --padding-top: {{ block.settings.padding_top }}px; --padding-bottom: {{ block.settings.padding_bottom }}px;{% if block.type == 'group_2' %} --logo-width: {{ block.settings.logo_width }}px;{% endif %}--logo_mg_left: {{ block.settings.logo_mg_left }}px;">
+            <div class="container container-{{ block.settings.container }}">
+                <div class="header-advanced__content">
+                    {%- case block.type -%}
+                        {%- when 'group_1' -%}
+                            {%- if block.settings.custom_text_1 != blank or block.settings.custom_text_2 != blank -%}
+                                <div class="header-advanced__col">
+                                    {%- if block.settings.custom_text_1 != blank -%}
+                                        <div class="header-advanced__customText" style="--text-size: {{ block.settings.text_size_1 }}px; --text-color: {{ block.settings.color_1 }}">
+                                            {%- case block.settings.icon_1 -%}
+                                                {%- when '1' -%}{% render 'icon-phone-2' %}
+                                                {%- when '2' -%}{% render 'icon-mobile-phone' %}
+                                                {%- when '3' -%}{% render 'icon-phone' %}
+                                            {%- endcase -%}
+                                            {% if block.settings.use_typewriter %}
+                                            <type-writer class="typing-comma" data-period="2000" data-type='["{{ block.settings.custom_text_1 | replace: "<p>" | replace: "</p>" }}"]'></type-writer>
+                                            {% else %}
+                                            {{ block.settings.custom_text_1 }}
+                                            {% endif %}
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if block.settings.custom_text_2 != blank -%}
+                                        <div class="header-advanced__customText" style="--text-size: {{ block.settings.text_size_2 }}px; --text-color: {{ block.settings.color_2 }}">
+                                            {%- case block.settings.icon_2 -%}
+                                                {%- when '1' -%}{% render 'icon-mail-3' %}
+                                                {%- when '2' -%}{% render 'icon-mail-2' %}
+                                                {%- when '3' -%}{% render 'icon-mail' %}
+                                            {%- endcase -%}
+                                            {{ block.settings.custom_text_2 }}
+                                        </div>
+                                    {%- endif -%}
+                                </div>
+                            {%- endif -%}
+                            {%- if block.settings.custom_text_3 != blank -%}
+                                <div class="header-advanced__col">
+                                    <div class="header-advanced__customText" style="--text-size: {{ block.settings.text_size_3 }}px; --text-color: {{ block.settings.color_3 }}">
+                                        {{ block.settings.custom_text_3 }}
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                            {%- if block.settings.custom_text_4 != blank or block.settings.show_language_currency -%}
+                                <div class="header-advanced__col">
+                                    {%- if block.settings.custom_text_4 != blank -%}
+                                        <div class="header-advanced__customText" style="--text-size: {{ block.settings.text_size_4 }}px; --text-color: {{ block.settings.color_4 }}">
+                                            {%- if block.settings.icon_4 != blank -%}{{ block.settings.icon_4 }}{%- endif -%}
+                                            {{ block.settings.custom_text_4 }}
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if block.settings.show_language_currency -%}
+                                        <div class="header-advanced__lanCur style-{{ block.settings.language_currency_style }}{% if block.settings.hide_flag %} hide-flag-icon{% endif %}" style="--lan-cur-color: {{ block.settings.language_currency_color }};{% if block.settings.language_currency_style == '2' %}--font-body-size:14px;{% endif %}">
+                                            <div class="header-language_currency">
+                                                <div class="top-language-currency{% if settings.enable_currencies %} enable-currency{% endif %}">
+                                                    {%- if block.settings.language_currency_style == '2' -%}
+                                                    {% assign show-symbol = true %}
+                                                    {%- endif -%} 
+                                                    {%- if settings.enable_multilang_shopify -%}
+                                                        {% render 'halo-top-language' %}
+                                                    {%- endif -%}
+                                                    {%- if settings.enable_currencies -%}
+                                                        {% render 'halo-top-currency', show-symbol: show-symbol %}
+                                                    {%- endif -%}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% elsif settings.enable_currencies %}
+                                    {{ "jquery.currencies.min.js" | asset_url | script_tag }}
+                                    {%- endif -%}
+                                </div>
+                            {%- endif -%}
+                        {%- when 'group_2' -%}
+                            <button class="header-mobile-menu-toggle" id="header-mobile-toggle" aria-label="Open menu">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                                </svg>
+                            </button>
+                            {%- if block.settings.show_logo -%}
+                                <div class="header__logo text-left clearfix{% if block.settings.logo != blank %} has-logo{% endif %}" style="--logo-font-size: {{ block.settings.logo_font_size }}px; --logo-font-weight: {{ block.settings.logo_font_weight }}; --logo-color: {{ block.settings.logo_color }}">
+                                    <{% if request.page_type == 'index' %}h1{% else %}div{% endif %} class="header__heading">
+                                        <a href="{{ routes.root_url }}" class="header__heading-link focus-inset">
+                                            {%- if block.settings.logo != blank -%}
+                                                {%- liquid 
+                                                    assign logo = block.settings.logo
+                                                    assign logo_width = block.settings.logo_width
+                                                    assign logo_height = logo_width | divided_by: logo.aspect_ratio | round
+                                                    assign logo_alt = logo.alt | default: shop.name | escape
+                                                -%}
+                                                {{ logo | image_url: width: 300 | image_tag: class: 'header__heading-logo motion-reduce', widths: '50, 100, 150, 200, 250, 300, 400, 500', height: logo_height, width: logo_width, alt: logo_alt }}
+                                            {%- else -%}
+                                                <span class="h2 {{ block.settings.logo_text_transform }}">{% if block.settings.logo_text != blank %}{{ block.settings.logo_text }}{% else %}{{ shop.name }}{% endif %}</span>
+                                            {%- endif -%}
+                                        </a>
+                                    </{% if request.page_type == 'index' %}h1{% else %}div{% endif %}>
+                                </div>
+                            {%- endif -%}
+                            {%- if block.settings.show_search -%}
+                                <div class="header__search clearfix{% if block.settings.show_box_shadow %} show-box-shadow{% endif %}" style="--bg-search-color: {{ block.settings.bg_search_color }}; --search-color: {{ block.settings.search_color }}; --search-icon-color: {{ block.settings.search_icon_color }}; --search-icon-bg: {% if block.settings.search_icon_gradient != blank %}{{ block.settings.search_icon_gradient }}{% else %}{{ block.settings.search_icon_bg }}{% endif %}; --search-border-radius: {{ block.settings.search_border_radius }}px">
+                                    <div class="header__iconItem header__search search-with-dropdown">
+                                        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                                            <div class="field">
+                                                <input class="search__input field__input form-input-placeholder" id="Search-In-Modal-Advanced" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Enter Keyword or Item" autocomplete="off">
+                                                <input type="hidden" name="options[prefix]" value="last">
+                                                <input type="hidden" name="type" value="product">
+                                                <label class="field__label hiddenLabels" for="Search-In-Modal-Advanced">{{ 'general.search.search_the_store' | t }}</label>
+                                                <button class="button search__button field__button focus-inset" aria-label="{{ 'general.search.search' | t }}">{% render 'icon-search-02' %}</button>
+                                            </div>
+                                            <div class="search-suggestions-dropdown" id="search-suggestions-dropdown">
+                                                <div class="search-suggestions-section">
+                                                    <h4 class="search-suggestions-title">Popular Searches</h4>
+                                                    <ul class="popular-searches-list">
+                                                        {% assign popular_terms = block.settings.popular_searches | default: "Multi Cleaner,Comac,Prochem,Unger" %}
+                                                        {% assign terms_array = popular_terms | split: "," %}
+                                                        {% for term in terms_array %}
+                                                            {% assign clean_term = term | strip %}
+                                                            {% if clean_term != blank %}
+                                                                <li><a href="{{ routes.search_url }}?q={{ clean_term | url_encode }}&type=product" class="popular-search-link" data-search-term="{{ clean_term }}">{{ clean_term }}</a></li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                                <div class="search-suggestions-section recent-searches-section" id="recent-searches-section" style="display: none;">
+                                                    <h4 class="search-suggestions-title">Recent Searches</h4>
+                                                    <div class="recent-searches-tags" id="recent-searches-tags"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                            {%- if block.settings.show_cart or block.settings.show_wishlist or block.settings.show_account -%}
+                                <div class="header-advanced-icons">
+                                    {%- if block.settings.show_cart -%}
+                                        <div class="header__iconItem header__group header-advanced-cart" style="--color: {{ block.settings.cart_color }}; --cart-bg-item: {{ block.settings.cart_bg_item }}; --cart-color-item: {{ block.settings.cart_color_item }}; --cart-item-font-size: {{ block.settings.cart_item_font_size }}px">
+                                            <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset cart-icon-bubble"{% if settings.show_quick_cart %} data-cart-sidebar{% endif %}>
+                                                {% render 'icon-cart-03' %}
+                                                <div class="header-advanced-textRight">
+                                                    <div class="cart-count-bubble">
+                                                        <span class="text" aria-hidden="true" data-cart-count>{%- if cart.item_count < 100 -%}{{ cart.item_count }}{%- else -%}{{ 'sections.cart.item_99' | t }}{%- endif -%}</span>
+                                                        <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                                                    </div>
+                                                    <span class="cart-text">{{ 'general.cart.cart' | t }}</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if settings.show_wishlist and block.settings.show_wishlist -%}
+                                        <div class="header__iconItem header__group header-advanced-wishlist" style="--color: {{ block.settings.wishlist_color }};--wishlist-bg-item: {{ block.settings.wishlist_bg_item }}; --wishlist-color-item: {{ block.settings.wishlist_color_item }};--cart-item-font-size: {{ block.settings.cart_item_font_size }}px">
+                                            <a href="{% if settings.link_wishlist != blank %}{{ settings.link_wishlist }}{% else %}{{ pages['wish-list'].url }}{% endif %}" class="header__icon header__icon--wishlist link link--text focus-inset">
+                                                {% render 'icon-heart-2' %} 
+                                                <span class="wishlist-text{% if block.settings.show_wishlist_number %} show_wishlist_number{% endif %}">{{ 'wishlist.general.wishlist' | t }}</span>
+                                                {%- if block.settings.show_wishlist_number -%}
+                                                    <div class="wishlist-count-bubble"><span class="text" aria-hidden="true" data-wishlist-count></span><span class="visually-hidden">{{ 'wishlist.general.wishlist' | t }}</span></div>
+                                                {%- endif -%}
+                                            </a>
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if block.settings.show_account -%}
+                                        <div class="header__iconItem header__group header-advanced-account" style="--color: {{ block.settings.customer_color }}">
+                                            {%- if shop.customer_accounts_enabled -%}
+                                                {% if routes.account_login_url contains '/account/login' %}
+                                                    {% assign is_contained = true %}
+                                                {% else %}
+                                                    {% assign is_contained = false %}
+                                                {% endif %}
+                                                {%- if section.settings.layout == 'style2' -%}
+                                                    <a href="{{ routes.account_login_url }}" class="header__icon header__icon--account link link--text"{% if is_contained %} data-open-auth-sidebar{% endif %}>
+                                                        {% render 'icon-account-2' %}
+                                                        <div class="header-advanced-textRight">
+                                                            <span class="hello">{{ 'customer.hello' | t }}</span>
+                                                            <span class="header-advanced-text">
+                                                                {%- if customer and customer.has_avatar? -%}
+                                                                    <account-icon>{{ customer | avatar }}</account-icon>
+                                                                {%- else -%}
+                                                                    {%- liquid
+                                                                        if customer
+                                                                            echo 'customer.account_fallback' | t
+                                                                        else
+                                                                            echo 'customer.sign_in' | t
+                                                                        endif
+                                                                    -%}
+                                                                {%- endif -%}
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                {%- else -%}
+                                                    <div class="header__icon header__icon--account link link--text">
+                                                        <a href="{{ routes.account_login_url }}"{% if is_contained %} data-open-auth-sidebar{% endif %}>
+                                                            {%- if customer and customer.has_avatar? -%}
+                                                                <account-icon>{{ customer | avatar }}</account-icon>
+                                                            {%- else -%}
+                                                                {% render 'icon-account-2' %}
+                                                            {%- endif -%}
+                                                        </a>
+                                                        <div class="header-advanced-textRight">
+                                                            {% if customer %}
+                                                                <a class="header__link--account" id="customer_logout_link" href="{{ routes.account_logout_url }}">{{ 'customer.log_out' | t }}</a>
+                                                                <span> / </span>
+                                                                <a class="header__link--account" href="{{ routes.account_url }}">
+                                                                    {%- if customer and customer.has_avatar? -%}
+                                                                        <account-icon>{{ customer | avatar }}</account-icon>
+                                                                    {%- else -%}
+                                                                        {{ 'customer.account.my_account' | t }}
+                                                                    {%- endif -%}
+                                                                </a>
+                                                            {% else %}  
+                                                                <div class="header-advanced__link--account">
+                                                                    <a class="header__link--account" id="customer_login_link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"{% if is_contained %} data-open-auth-sidebar{% endif %}>{{ 'customer.login_page.title' | t }}</a>
+                                                                    <span class="or-text">{{ 'customer.or' | t }}</span>
+                                                                    <a class="header__link--account" id="customer_register_link" href="{{ routes.account_register_url }}">{{ 'customer.login_page.register' | t }}</a>
+                                                                </div>
+                                                                <div class="header-advanced-text">{{ 'customer.my_account' | t }}</div>
+                                                            {% endif %}
+                                                        </div>  
+                                                    </div>
+                                                {%- endif -%}                   
+                                            {%- endif -%}
+                                        </div>
+                                    {%- endif -%}
+                                </div>
+                            {%- endif -%}
+                    {%- endcase -%}
+                </div>
+            </div>
+        </div>
+        {%- endif -%}
+    {%- endfor -%}
+</header>
+
+<!-- Search Dropdown Styles -->
+<style>
+.search-with-dropdown { position: relative; }
+.search-with-dropdown .search-modal__form { position: relative; }
+.search-suggestions-dropdown { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid #e0e0e0; border-top: none; border-radius: 0 0 5px 5px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 1000; display: none; max-height: 400px; overflow-y: auto; }
+.search-suggestions-dropdown.active { display: block; }
+.search-suggestions-section { padding: 15px 20px; }
+.search-suggestions-section + .search-suggestions-section { border-top: 1px solid #f0f0f0; }
+.search-suggestions-title { font-size: 15px; font-weight: 600; color: #333; margin: 0 0 12px 0; }
+.popular-searches-list { list-style: none; padding: 0; margin: 0; }
+.popular-searches-list li { margin: 0; }
+.popular-search-link { display: block; padding: 8px 0; color: #555; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.popular-search-link:hover { color: #6fb31a; }
+.recent-searches-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.recent-search-tag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 20px; font-size: 13px; color: #555; text-decoration: none; transition: all 0.2s; }
+.recent-search-tag:hover { background: #6fb31a; border-color: #6fb31a; color: #fff; }
+.recent-search-remove { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: transparent; border: none; cursor: pointer; color: inherit; padding: 0; font-size: 14px; line-height: 1; opacity: 0.6; }
+.recent-search-remove:hover { opacity: 1; }
+.clear-recent-btn { display: inline-block; margin-top: 10px; padding: 0; background: none; border: none; color: #999; font-size: 12px; cursor: pointer; text-decoration: underline; }
+.clear-recent-btn:hover { color: #333; }
+</style>
+
+<!-- Search Dropdown JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('Search-In-Modal-Advanced');
+    const searchDropdown = document.getElementById('search-suggestions-dropdown');
+    const recentSection = document.getElementById('recent-searches-section');
+    const recentTags = document.getElementById('recent-searches-tags');
+    const searchForm = document.querySelector('.search-with-dropdown .search-modal__form');
+    if (!searchInput || !searchDropdown) return;
+    const STORAGE_KEY = 'shopify_recent_searches';
+    const MAX_RECENT = 10;
+    function getRecentSearches() { try { const data = localStorage.getItem(STORAGE_KEY); return data ? JSON.parse(data) : []; } catch (e) { return []; } }
+    function saveRecentSearches(searches) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(searches)); } catch (e) {} }
+    function addRecentSearch(term) { if (!term || term.trim() === '') return; let searches = getRecentSearches(); const cleanTerm = term.trim(); searches = searches.filter(s => s.toLowerCase() !== cleanTerm.toLowerCase()); searches.unshift(cleanTerm); if (searches.length > MAX_RECENT) searches = searches.slice(0, MAX_RECENT); saveRecentSearches(searches); }
+    function removeRecentSearch(term) { let searches = getRecentSearches(); searches = searches.filter(s => s.toLowerCase() !== term.toLowerCase()); saveRecentSearches(searches); renderRecentSearches(); }
+    function clearAllRecent() { saveRecentSearches([]); renderRecentSearches(); }
+    function renderRecentSearches() {
+        const searches = getRecentSearches();
+        if (searches.length === 0) { recentSection.style.display = 'none'; return; }
+        recentSection.style.display = 'block';
+        let html = '';
+        searches.forEach(term => { html += '<a href="/search?q=' + encodeURIComponent(term) + '&type=product" class="recent-search-tag" data-search-term="' + term + '"><span>' + term + '</span><button type="button" class="recent-search-remove" data-remove-term="' + term + '" aria-label="Remove">×</button></a>'; });
+        html += '<button type="button" class="clear-recent-btn" id="clear-all-recent">Clear All</button>';
+        recentTags.innerHTML = html;
+        recentTags.querySelectorAll('.recent-search-remove').forEach(btn => { btn.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); removeRecentSearch(this.dataset.removeTerm); }); });
+        const clearBtn = document.getElementById('clear-all-recent');
+        if (clearBtn) clearBtn.addEventListener('click', function(e) { e.preventDefault(); clearAllRecent(); });
+    }
+    function showDropdown() { renderRecentSearches(); searchDropdown.classList.add('active'); }
+    function hideDropdown() { searchDropdown.classList.remove('active'); }
+    searchInput.addEventListener('focus', showDropdown);
+    document.addEventListener('click', function(e) { if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) hideDropdown(); });
+    if (searchForm) searchForm.addEventListener('submit', function() { const term = searchInput.value.trim(); if (term) addRecentSearch(term); });
+    document.querySelectorAll('.popular-search-link').forEach(link => { link.addEventListener('click', function() { addRecentSearch(this.dataset.searchTerm); }); });
+    recentTags.addEventListener('click', function(e) { const tag = e.target.closest('.recent-search-tag'); if (tag && !e.target.classList.contains('recent-search-remove')) addRecentSearch(tag.dataset.searchTerm); });
+    renderRecentSearches();
+    const headerMobileToggle = document.getElementById('header-mobile-toggle');
+    if (headerMobileToggle) {
+        headerMobileToggle.addEventListener('click', function() {
+            const mobileDrawer = document.querySelector('.mobile-drawer');
+            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+            if (mobileDrawer && mobileOverlay) { mobileDrawer.classList.add('is-open'); mobileOverlay.classList.add('is-active'); document.body.style.overflow = 'hidden'; }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const WISHLIST_KEY = 'shopify_wishlist_items';
+    
+    // Get wishlist from localStorage
+    function getWishlist() {
+        try {
+            const data = localStorage.getItem(WISHLIST_KEY);
+            return data ? JSON.parse(data) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+    
+    // Save wishlist to localStorage
+    function saveWishlist(items) {
+        try {
+            localStorage.setItem(WISHLIST_KEY, JSON.stringify(items));
+            updateWishlistCount();
+        } catch (e) {
+            console.error('Error saving wishlist:', e);
+        }
+    }
+    
+    // Update wishlist count in header
+    function updateWishlistCount() {
+        const wishlist = getWishlist();
+        const countElements = document.querySelectorAll('[data-wishlist-count]');
+        countElements.forEach(el => {
+            el.textContent = wishlist.length;
+        });
+    }
+    
+    // Add item to wishlist
+    function addToWishlist(productId, productData) {
+        let wishlist = getWishlist();
+        
+        // Check if already in wishlist
+        const exists = wishlist.find(item => item.id === productId);
+        if (!exists) {
+            wishlist.push({
+                id: productId,
+                ...productData,
+                addedAt: new Date().toISOString()
+            });
+            saveWishlist(wishlist);
+            return true;
+        }
+        return false;
+    }
+    
+    // Remove item from wishlist
+    function removeFromWishlist(productId) {
+        let wishlist = getWishlist();
+        wishlist = wishlist.filter(item => item.id !== productId);
+        saveWishlist(wishlist);
+    }
+    
+    // Check if item is in wishlist
+    function isInWishlist(productId) {
+        const wishlist = getWishlist();
+        return wishlist.some(item => item.id === productId);
+    }
+    
+    // Handle wishlist button clicks on product pages/cards
+    document.addEventListener('click', function(e) {
+        const wishlistBtn = e.target.closest('[data-wishlist-button]');
+        if (!wishlistBtn) return;
+        
+        e.preventDefault();
+        
+        const productId = wishlistBtn.dataset.productId;
+        const productTitle = wishlistBtn.dataset.productTitle || '';
+        const productImage = wishlistBtn.dataset.productImage || '';
+        const productUrl = wishlistBtn.dataset.productUrl || '';
+        const productPrice = wishlistBtn.dataset.productPrice || '';
+        
+        if (isInWishlist(productId)) {
+            removeFromWishlist(productId);
+            wishlistBtn.classList.remove('active');
+            wishlistBtn.setAttribute('aria-label', 'Add to wishlist');
+        } else {
+            addToWishlist(productId, {
+                title: productTitle,
+                image: productImage,
+                url: productUrl,
+                price: productPrice
+            });
+            wishlistBtn.classList.add('active');
+            wishlistBtn.setAttribute('aria-label', 'Remove from wishlist');
+        }
+    });
+    
+    // Initialize wishlist count on page load
+    updateWishlistCount();
+    
+    // Mark wishlist buttons as active if product is in wishlist
+    document.querySelectorAll('[data-wishlist-button]').forEach(btn => {
+        const productId = btn.dataset.productId;
+        if (isInWishlist(productId)) {
+            btn.classList.add('active');
+        }
+    });
+});
+</script>
+
+{% schema %}
+{
+    "name": "Header - Advanced",
+    "limit": 1,
+    "class": "section-header-advanced",
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "*You should only activate/use \"Header\" you want, don't use the redundant headers which may not optimize for performance."
+        },
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Header Style",
+            "default": "style1",
+            "options": [
+                { "value": "style1", "label": "Style 1" },
+                { "value": "style2", "label": "Style 2" }
+            ]
+        },
+        {
+            "type": "color",
+            "id": "border_top",
+            "label": "Border Top Color"
+        },
+        {
+            "type": "header",
+            "content": "Mobile Menu Button"
+        },
+        {
+            "type": "color",
+            "id": "mobile_menu_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "mobile_menu_color",
+            "label": "Button Icon Color",
+            "default": "#ffffff"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "group_1",
+            "name": "Text, Language & Currency",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "select",
+                    "id": "container",
+                    "label": "Container Width",
+                    "default": "full",
+                    "options": [
+                        { "value": "1170", "label": "1170px" },
+                        { "value": "1370", "label": "1370px" },
+                        { "value": "1470", "label": "1470px" },
+                        { "value": "1570", "label": "1570px" },
+                        { "value": "1770", "label": "1770px" },
+                        { "value": "full", "label": "Full Width" }
+                    ]
+                },
+                { "type": "range", "id": "padding_full_width", "label": "Padding L/R", "min": 0, "max": 100, "step": 5, "unit": "px", "default": 0 },
+                { "type": "color", "id": "background", "label": "Background Color", "default": "#f7f8fa" },
+                { "type": "color_background", "id": "gradient", "label": "Background Gradient" },
+                { "type": "header", "content": "First Content" },
+                { "type": "select", "id": "icon_1", "label": "Icon", "default": "1", "options": [{ "value": "0", "label": "None" }, { "value": "1", "label": "Phone - Light" }, { "value": "2", "label": "Phone - Bold" }, { "value": "3", "label": "Headphones" }] },
+                { "type": "richtext", "id": "custom_text_1", "label": "Text", "default": "<p>Toll-free: <a href=\"tel:091234567\">(091) 123-4567</a></p>" },
+                { "type": "checkbox", "id": "use_typewriter", "label": "Use Typewriter Effect" },
+                { "type": "range", "id": "text_size_1", "label": "Font Size", "min": 10, "max": 30, "step": 1, "unit": "px", "default": 12 },
+                { "type": "color", "id": "color_1", "label": "Text Color", "default": "#06142e" },
+                { "type": "checkbox", "id": "show_on_mb", "label": "Show on Mobile" },
+                { "type": "header", "content": "Second Content" },
+                { "type": "select", "id": "icon_2", "label": "Icon", "default": "1", "options": [{ "value": "0", "label": "None" }, { "value": "1", "label": "Mail - Classic" }, { "value": "2", "label": "Mail Plus - Light" }, { "value": "3", "label": "Mail Plus - Bold" }] },
+                { "type": "richtext", "id": "custom_text_2", "label": "Text", "default": "<p><a href=\"mailto:email@domain.com\">email@domain.com</a></p>" },
+                { "type": "range", "id": "text_size_2", "label": "Font Size", "min": 10, "max": 30, "step": 1, "unit": "px", "default": 12 },
+                { "type": "color", "id": "color_2", "label": "Text Color", "default": "#06142e" },
+                { "type": "header", "content": "Third Content" },
+                { "type": "richtext", "id": "custom_text_3", "label": "Text", "default": "<p><strong>Free Shipping Over $99*</strong></p>" },
+                { "type": "range", "id": "text_size_3", "label": "Font Size", "min": 10, "max": 30, "step": 1, "unit": "px", "default": 12 },
+                { "type": "color", "id": "color_3", "label": "Text Color", "default": "#06142e" },
+                { "type": "header", "content": "Fourth Content" },
+                { "type": "liquid", "id": "icon_4", "label": "Icon (SVG/Liquid)" },
+                { "type": "richtext", "id": "custom_text_4", "label": "Text", "default": "<ul><li><a href=\"/pages/faqs\">Theme FAQs</a></li><li><a href=\"/pages/contact-us\">Need Help?</a></li></ul>" },
+                { "type": "range", "id": "text_size_4", "label": "Font Size", "min": 10, "max": 30, "step": 1, "unit": "px", "default": 12 },
+                { "type": "color", "id": "color_4", "label": "Text Color", "default": "#06142e" },
+                { "type": "header", "content": "Language & Currency" },
+                { "type": "checkbox", "id": "show_language_currency", "label": "Show Language/Currency", "default": true },
+                { "type": "select", "id": "language_currency_style", "label": "Style", "default": "1", "options": [{ "value": "1", "label": "Style 1" }, { "value": "2", "label": "Style 2" }] },
+                { "type": "checkbox", "id": "hide_flag", "label": "Hide Flag Icon" },
+                { "type": "color", "id": "language_currency_color", "label": "Color", "default": "#06142e" },
+                { "type": "header", "content": "Spacing" },
+                { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Padding Top", "default": 5 },
+                { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Padding Bottom", "default": 5 }
+            ]
+        },
+        {
+            "type": "group_2",
+            "name": "Logo, Search & Icons",
+            "limit": 1,
+            "settings": [
+                { "type": "select", "id": "container", "label": "Container Width", "default": "full", "options": [{ "value": "1170", "label": "1170px" }, { "value": "1370", "label": "1370px" }, { "value": "1470", "label": "1470px" }, { "value": "1570", "label": "1570px" }, { "value": "1770", "label": "1770px" }, { "value": "full", "label": "Full Width" }] },
+                { "type": "range", "id": "padding_full_width", "label": "Padding L/R", "min": 0, "max": 100, "step": 5, "unit": "px", "default": 0 },
+                { "type": "color", "id": "background", "label": "Background Color", "default": "#ffffff" },
+                { "type": "color_background", "id": "gradient", "label": "Background Gradient" },
+                { "type": "header", "content": "Logo" },
+                { "type": "checkbox", "id": "show_logo", "label": "Show Logo", "default": true },
+                { "type": "select", "id": "logo_position", "label": "Logo Position", "default": "left", "options": [{ "value": "left", "label": "Left" }, { "value": "center", "label": "Center" }, { "value": "right", "label": "Right" }] },
+                { "type": "image_picker", "id": "logo", "label": "Logo Image" },
+                { "type": "range", "id": "logo_width", "min": 50, "max": 300, "step": 5, "unit": "px", "label": "Logo Width", "default": 145 },
+                { "type": "range", "id": "logo_mg_left", "min": 0, "max": 50, "step": 1, "unit": "px", "label": "Logo Margin Left", "default": 35 },
+                { "type": "liquid", "id": "logo_text", "label": "Logo Text/SVG" },
+                { "type": "range", "id": "logo_font_size", "label": "Logo Font Size", "min": 15, "max": 60, "step": 1, "unit": "px", "default": 30 },
+                { "type": "select", "id": "logo_font_weight", "label": "Logo Font Weight", "default": "900", "options": [{ "value": "400", "label": "Normal" }, { "value": "500", "label": "Medium" }, { "value": "600", "label": "Semi Bold" }, { "value": "700", "label": "Bold" }, { "value": "800", "label": "Extra Bold" }, { "value": "900", "label": "Black" }] },
+                { "type": "select", "id": "logo_text_transform", "label": "Text Transform", "default": "uppercase", "options": [{ "value": "none", "label": "None" }, { "value": "capitalize", "label": "Capitalize" }, { "value": "uppercase", "label": "Uppercase" }, { "value": "lowercase", "label": "Lowercase" }] },
+                { "type": "color", "id": "logo_color", "label": "Logo Color", "default": "#06142e" },
+                { "type": "header", "content": "Search" },
+                { "type": "checkbox", "id": "show_search", "label": "Show Search", "default": true },
+                { "type": "textarea", "id": "popular_searches", "label": "Popular Searches", "info": "Comma separated", "default": "Multi Cleaner,Comac,Prochem,Unger" },
+                { "type": "checkbox", "id": "show_box_shadow", "label": "Show Box Shadow", "default": true },
+                { "type": "color", "id": "search_color", "label": "Text Color", "default": "#767676" },
+                { "type": "color", "id": "bg_search_color", "label": "Background Color", "default": "#F7F8FA" },
+                { "type": "color", "id": "search_icon_color", "label": "Icon Color", "default": "#06142e" },
+                { "type": "color", "id": "search_icon_bg", "label": "Icon Background", "default": "#f7c34a" },
+                { "type": "color_background", "id": "search_icon_gradient", "label": "Icon Background Gradient" },
+                { "type": "range", "id": "search_border_radius", "min": 0, "max": 50, "step": 1, "unit": "px", "label": "Border Radius", "default": 5 },
+                { "type": "header", "content": "Cart" },
+                { "type": "checkbox", "id": "show_cart", "label": "Show Cart", "default": true },
+                { "type": "color", "id": "cart_color", "label": "Cart Color", "default": "#06142e" },
+                { "type": "color", "id": "cart_bg_item", "label": "Count Background", "default": "#f42b23" },
+                { "type": "color", "id": "cart_color_item", "label": "Count Color", "default": "#ffffff" },
+                { "type": "range", "id": "cart_item_font_size", "label": "Count Font Size", "min": 10, "max": 25, "step": 1, "unit": "px", "default": 12 },
+                { "type": "header", "content": "Wishlist" },
+                { "type": "checkbox", "id": "show_wishlist", "label": "Show Wishlist", "default": true },
+                { "type": "color", "id": "wishlist_color", "label": "Wishlist Color", "default": "#06142e" },
+                { "type": "checkbox", "id": "show_wishlist_number", "label": "Show Wishlist Count", "default": false },
+                { "type": "color", "id": "wishlist_color_item", "label": "Count Color", "default": "#ffffff" },
+                { "type": "color", "id": "wishlist_bg_item", "label": "Count Background", "default": "#232323" },
+                { "type": "header", "content": "Account" },
+                { "type": "checkbox", "id": "show_account", "label": "Show Account", "default": true },
+                { "type": "color", "id": "customer_color", "label": "Account Color", "default": "#06142e" },
+                { "type": "header", "content": "Spacing" },
+                { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Padding Top", "default": 19 },
+                { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Padding Bottom", "default": 19 }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Header - Advanced",
+            "blocks": [
+                { "type": "group_1" },
+                { "type": "group_2" }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "groups": ["header"]
+    }
+}
+
+
+{% endschema %}

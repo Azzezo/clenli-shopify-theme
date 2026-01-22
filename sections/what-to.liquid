@@ -1,0 +1,702 @@
+{%- liquid
+    assign section_id = section.id
+    assign heading = section.settings.heading
+    assign heading_color = section.settings.heading_color
+    assign heading_size = section.settings.heading_size
+    assign bg_color = section.settings.bg_color
+    assign container = section.settings.container
+    assign columns_desktop = section.settings.columns_desktop
+    assign columns_tablet = section.settings.columns_tablet
+    assign columns_mobile = section.settings.columns_mobile
+    assign item_gap = section.settings.item_gap
+    assign padding_top = section.settings.padding_top
+    assign padding_bottom = section.settings.padding_bottom
+    assign padding_top_mobile = section.settings.padding_top_mobile
+    assign padding_bottom_mobile = section.settings.padding_bottom_mobile
+    assign overlay_color = section.settings.overlay_color
+    assign overlay_opacity = section.settings.overlay_opacity
+    assign box_min_height = section.settings.box_min_height
+    assign title_color = section.settings.title_color
+    assign title_size = section.settings.title_size
+    assign link_color = section.settings.link_color
+    assign link_size = section.settings.link_size
+    assign link_hover_color = section.settings.link_hover_color
+-%}
+
+<style>
+    #what-we-do-{{ section_id }} {
+        background-color: {{ bg_color }};
+        padding-top: {{ padding_top }}px;
+        padding-bottom: {{ padding_bottom }}px;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-container {
+        max-width: {% if container == '1170' %}1170px{% elsif container == '1370' %}1370px{% elsif container == '1570' %}1570px{% else %}1170px{% endif %};
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-heading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-heading h2 {
+        font-size: {{ heading_size }}px;
+        font-weight: 600;
+        color: {{ heading_color }};
+        margin: 0;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-grid {
+        display: grid;
+        grid-template-columns: repeat({{ columns_desktop }}, 1fr);
+        gap: {{ item_gap }}px;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box {
+        position: relative;
+        min-height: {{ box_min_height }}px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 25px 30px;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: {{ overlay_color }};
+        opacity: {{ overlay_opacity }};
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-title {
+        font-size: {{ title_size }}px;
+        font-weight: 700;
+        color: {{ title_color }};
+        margin: 0 0 20px 0;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-links li {
+        margin-bottom: 12px;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-links li:last-child {
+        margin-bottom: 0;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-links a {
+        font-size: {{ link_size }}px;
+        color: {{ link_color }};
+        text-decoration: none;
+        transition: color 0.3s ease, padding-left 0.3s ease;
+        display: inline-block;
+    }
+    
+    #what-we-do-{{ section_id }} .wwd-box .box-links a:hover {
+        color: {{ link_hover_color }};
+        padding-left: 5px;
+    }
+    
+    /* Tablet */
+    @media (max-width: 1024px) {
+        #what-we-do-{{ section_id }} .wwd-grid {
+            grid-template-columns: repeat({{ columns_tablet }}, 1fr);
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-heading h2 {
+            font-size: {{ heading_size | minus: 4 }}px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-box {
+            min-height: {{ box_min_height | minus: 30 }}px;
+            padding: 20px 25px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-box .box-title {
+            font-size: {{ title_size | minus: 2 }}px;
+        }
+    }
+    
+    /* Mobile */
+    @media (max-width: 767px) {
+        #what-we-do-{{ section_id }} {
+            padding-top: {{ padding_top_mobile }}px;
+            padding-bottom: {{ padding_bottom_mobile }}px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-grid {
+            grid-template-columns: repeat({{ columns_mobile }}, 1fr);
+            gap: 15px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-heading {
+            margin-bottom: 30px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-heading h2 {
+            font-size: {{ heading_size | minus: 8 }}px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-box {
+            min-height: {{ box_min_height | minus: 50 }}px;
+            padding: 20px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-box .box-title {
+            font-size: {{ title_size | minus: 3 }}px;
+            margin-bottom: 15px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-box .box-links a {
+            font-size: {{ link_size | minus: 1 }}px;
+        }
+        
+        #what-we-do-{{ section_id }} .wwd-box .box-links li {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+<section id="what-we-do-{{ section_id }}" class="what-we-do-section">
+    <div class="wwd-container">
+        {%- if heading != blank -%}
+            <div class="wwd-heading">
+                <h2>{{ heading }}</h2>
+            </div>
+        {%- endif -%}
+        
+        <div class="wwd-grid">
+            {%- if section.blocks.size > 0 -%}
+                {%- for block in section.blocks -%}
+                    <div class="wwd-box" {{ block.shopify_attributes }}>
+                        <div class="box-bg">
+                            {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title | escape }}" loading="lazy">
+                            {%- else -%}
+                                <div style="background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%); width: 100%; height: 100%;"></div>
+                            {%- endif -%}
+                        </div>
+                        <div class="box-content">
+                            {%- if block.settings.title != blank -%}
+                                <h3 class="box-title">{{ block.settings.title }}</h3>
+                            {%- endif -%}
+                            
+                            <ul class="box-links">
+                                {%- if block.settings.link_1_text != blank -%}
+                                    <li><a href="{{ block.settings.link_1_url }}">{{ block.settings.link_1_text }}</a></li>
+                                {%- endif -%}
+                                {%- if block.settings.link_2_text != blank -%}
+                                    <li><a href="{{ block.settings.link_2_url }}">{{ block.settings.link_2_text }}</a></li>
+                                {%- endif -%}
+                                {%- if block.settings.link_3_text != blank -%}
+                                    <li><a href="{{ block.settings.link_3_url }}">{{ block.settings.link_3_text }}</a></li>
+                                {%- endif -%}
+                                {%- if block.settings.link_4_text != blank -%}
+                                    <li><a href="{{ block.settings.link_4_url }}">{{ block.settings.link_4_text }}</a></li>
+                                {%- endif -%}
+                                {%- if block.settings.link_5_text != blank -%}
+                                    <li><a href="{{ block.settings.link_5_url }}">{{ block.settings.link_5_text }}</a></li>
+                                {%- endif -%}
+                            </ul>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            {%- else -%}
+                <!-- Default boxes when no blocks added -->
+                <div class="wwd-box">
+                    <div class="box-bg">
+                        <div style="background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%); width: 100%; height: 100%;"></div>
+                    </div>
+                    <div class="box-content">
+                        <h3 class="box-title">Cleaning Machinery & Equipment</h3>
+                        <ul class="box-links">
+                            <li><a href="#">Scrubber Dryers & Sweepers</a></li>
+                            <li><a href="#">Innovative Solutions</a></li>
+                            <li><a href="#">Equipment For All Sectors</a></li>
+                            <li><a href="#">Training & Certification</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wwd-box">
+                    <div class="box-bg">
+                        <div style="background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%); width: 100%; height: 100%;"></div>
+                    </div>
+                    <div class="box-content">
+                        <h3 class="box-title">Janitorial & Consumables</h3>
+                        <ul class="box-links">
+                            <li><a href="#">Paper, Dispensers & Soap</a></li>
+                            <li><a href="#">Eco Solutions</a></li>
+                            <li><a href="#">Powerful Cleaning Agents</a></li>
+                            <li><a href="#">Order Management Software</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wwd-box">
+                    <div class="box-bg">
+                        <div style="background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%); width: 100%; height: 100%;"></div>
+                    </div>
+                    <div class="box-content">
+                        <h3 class="box-title">Sourcing & Distribution</h3>
+                        <ul class="box-links">
+                            <li><a href="#">Direct To Site Delivery</a></li>
+                            <li><a href="#">Global Logistic Network</a></li>
+                            <li><a href="#">Import & Export</a></li>
+                            <li><a href="#">Container Shipments</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wwd-box">
+                    <div class="box-bg">
+                        <div style="background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%); width: 100%; height: 100%;"></div>
+                    </div>
+                    <div class="box-content">
+                        <h3 class="box-title">Service & Maintenance</h3>
+                        <ul class="box-links">
+                            <li><a href="#">Scrubber Dryers & Sweepers</a></li>
+                            <li><a href="#">Fleet Management Software</a></li>
+                            <li><a href="#">Nationwide Engineer Coverage</a></li>
+                            <li><a href="#">Spare Parts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wwd-box">
+                    <div class="box-bg">
+                        <div style="background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%); width: 100%; height: 100%;"></div>
+                    </div>
+                    <div class="box-content">
+                        <h3 class="box-title">Manufacturing</h3>
+                        <ul class="box-links">
+                            <li><a href="#">Floor Pads</a></li>
+                            <li><a href="#">Cleaning Agents</a></li>
+                            <li><a href="#">White Labeling</a></li>
+                            <li><a href="#">Container Shipments</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wwd-box">
+                    <div class="box-bg">
+                        <div style="background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%); width: 100%; height: 100%;"></div>
+                    </div>
+                    <div class="box-content">
+                        <h3 class="box-title">Robotics & Innovation</h3>
+                        <ul class="box-links">
+                            <li><a href="#">Robotic Cleaning Machines</a></li>
+                            <li><a href="#">Innovative Cost Savings</a></li>
+                            <li><a href="#">Chemical Free Cleaning</a></li>
+                            <li><a href="#">Water Saving Equipment</a></li>
+                        </ul>
+                    </div>
+                </div>
+            {%- endif -%}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "What We Do",
+    "tag": "section",
+    "class": "what-we-do-block",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Settings"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Section Heading",
+            "default": "What We Do"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#232323"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Font Size",
+            "min": 20,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "select",
+            "id": "container",
+            "label": "Container Width",
+            "default": "1170",
+            "options": [
+                {"value": "1170", "label": "1170px"},
+                {"value": "1370", "label": "1370px"},
+                {"value": "1570", "label": "1570px"}
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Layout Settings"
+        },
+        {
+            "type": "range",
+            "id": "columns_desktop",
+            "label": "Columns (Desktop)",
+            "min": 2,
+            "max": 4,
+            "step": 1,
+            "default": 3
+        },
+        {
+            "type": "select",
+            "id": "columns_tablet",
+            "label": "Columns (Tablet)",
+            "default": "2",
+            "options": [
+                {"value": "1", "label": "1"},
+                {"value": "2", "label": "2"},
+                {"value": "3", "label": "3"}
+            ]
+        },
+        {
+            "type": "select",
+            "id": "columns_mobile",
+            "label": "Columns (Mobile)",
+            "default": "1",
+            "options": [
+                {"value": "1", "label": "1"},
+                {"value": "2", "label": "2"}
+            ]
+        },
+        {
+            "type": "range",
+            "id": "item_gap",
+            "label": "Gap Between Items",
+            "min": 10,
+            "max": 40,
+            "step": 5,
+            "unit": "px",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "box_min_height",
+            "label": "Box Minimum Height",
+            "min": 200,
+            "max": 400,
+            "step": 10,
+            "unit": "px",
+            "default": 280
+        },
+        {
+            "type": "header",
+            "content": "Box Overlay"
+        },
+        {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "Overlay Color",
+            "default": "#1a365d"
+        },
+        {
+            "type": "range",
+            "id": "overlay_opacity",
+            "label": "Overlay Opacity",
+            "min": 0,
+            "max": 1,
+            "step": 0.1,
+            "default": 0.7
+        },
+        {
+            "type": "header",
+            "content": "Box Title Settings"
+        },
+        {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "range",
+            "id": "title_size",
+            "label": "Title Font Size",
+            "min": 16,
+            "max": 30,
+            "step": 1,
+            "unit": "px",
+            "default": 20
+        },
+        {
+            "type": "header",
+            "content": "Link Settings"
+        },
+        {
+            "type": "color",
+            "id": "link_color",
+            "label": "Link Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "link_hover_color",
+            "label": "Link Hover Color",
+            "default": "#90cdf4"
+        },
+        {
+            "type": "range",
+            "id": "link_size",
+            "label": "Link Font Size",
+            "min": 12,
+            "max": 20,
+            "step": 1,
+            "unit": "px",
+            "default": 15
+        },
+        {
+            "type": "header",
+            "content": "Padding Settings"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top (Desktop)",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom (Desktop)",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "Padding Top (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "Padding Bottom (Mobile)",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "px",
+            "default": 40
+        }
+    ],
+    "blocks": [
+        {
+            "type": "service_box",
+            "name": "Service Box",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Background Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Box Title",
+                    "default": "Service Title"
+                },
+                {
+                    "type": "header",
+                    "content": "Link 1"
+                },
+                {
+                    "type": "text",
+                    "id": "link_1_text",
+                    "label": "Link Text",
+                    "default": "Service Item 1"
+                },
+                {
+                    "type": "url",
+                    "id": "link_1_url",
+                    "label": "Link URL"
+                },
+                {
+                    "type": "header",
+                    "content": "Link 2"
+                },
+                {
+                    "type": "text",
+                    "id": "link_2_text",
+                    "label": "Link Text",
+                    "default": "Service Item 2"
+                },
+                {
+                    "type": "url",
+                    "id": "link_2_url",
+                    "label": "Link URL"
+                },
+                {
+                    "type": "header",
+                    "content": "Link 3"
+                },
+                {
+                    "type": "text",
+                    "id": "link_3_text",
+                    "label": "Link Text",
+                    "default": "Service Item 3"
+                },
+                {
+                    "type": "url",
+                    "id": "link_3_url",
+                    "label": "Link URL"
+                },
+                {
+                    "type": "header",
+                    "content": "Link 4"
+                },
+                {
+                    "type": "text",
+                    "id": "link_4_text",
+                    "label": "Link Text",
+                    "default": "Service Item 4"
+                },
+                {
+                    "type": "url",
+                    "id": "link_4_url",
+                    "label": "Link URL"
+                },
+                {
+                    "type": "header",
+                    "content": "Link 5"
+                },
+                {
+                    "type": "text",
+                    "id": "link_5_text",
+                    "label": "Link Text"
+                },
+                {
+                    "type": "url",
+                    "id": "link_5_url",
+                    "label": "Link URL"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "What We Do",
+            "blocks": [
+                {
+                    "type": "service_box",
+                    "settings": {
+                        "title": "Cleaning Machinery & Equipment",
+                        "link_1_text": "Scrubber Dryers & Sweepers",
+                        "link_2_text": "Innovative Solutions",
+                        "link_3_text": "Equipment For All Sectors",
+                        "link_4_text": "Training & Certification"
+                    }
+                },
+                {
+                    "type": "service_box",
+                    "settings": {
+                        "title": "Janitorial & Consumables",
+                        "link_1_text": "Paper, Dispensers & Soap",
+                        "link_2_text": "Eco Solutions",
+                        "link_3_text": "Powerful Cleaning Agents",
+                        "link_4_text": "Order Management Software"
+                    }
+                },
+                {
+                    "type": "service_box",
+                    "settings": {
+                        "title": "Sourcing & Distribution",
+                        "link_1_text": "Direct To Site Delivery",
+                        "link_2_text": "Global Logistic Network",
+                        "link_3_text": "Import & Export",
+                        "link_4_text": "Container Shipments"
+                    }
+                },
+                {
+                    "type": "service_box",
+                    "settings": {
+                        "title": "Service & Maintenance",
+                        "link_1_text": "Scrubber Dryers & Sweepers",
+                        "link_2_text": "Fleet Management Software",
+                        "link_3_text": "Nationwide Engineer Coverage",
+                        "link_4_text": "Spare Parts"
+                    }
+                },
+                {
+                    "type": "service_box",
+                    "settings": {
+                        "title": "Manufacturing",
+                        "link_1_text": "Floor Pads",
+                        "link_2_text": "Cleaning Agents",
+                        "link_3_text": "White Labeling",
+                        "link_4_text": "Container Shipments"
+                    }
+                },
+                {
+                    "type": "service_box",
+                    "settings": {
+                        "title": "Robotics & Innovation",
+                        "link_1_text": "Robotic Cleaning Machines",
+                        "link_2_text": "Innovative Cost Savings",
+                        "link_3_text": "Chemical Free Cleaning",
+                        "link_4_text": "Water Saving Equipment"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

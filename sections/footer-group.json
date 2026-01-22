@@ -1,0 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer-1": {
+      "type": "footer-01",
+      "blocks": {
+        "menu_two_column_i3q3LA": {
+          "type": "menu_two_column",
+          "settings": {
+            "title": "Find It Fast",
+            "menu": "find-it-fast"
+          }
+        },
+        "menu_fyEkg9": {
+          "type": "menu",
+          "settings": {
+            "title": "My Account",
+            "menu": "my-account"
+          }
+        },
+        "menu_4LNdgK": {
+          "type": "menu",
+          "settings": {
+            "title": "Customer Care",
+            "menu": "customer-care"
+          }
+        },
+        "menu_NN8qQ4": {
+          "type": "menu",
+          "settings": {
+            "title": "Customer Care",
+            "menu": "customer-care-2nd"
+          }
+        }
+      },
+      "block_order": [
+        "menu_two_column_i3q3LA",
+        "menu_fyEkg9",
+        "menu_4LNdgK",
+        "menu_NN8qQ4"
+      ],
+      "settings": {
+        "container_width": 1570,
+        "top_padding": 25,
+        "bottom_padding": 30,
+        "bg_color": "#ffffff",
+        "text_color": "#b0b0b0",
+        "link_color": "#7ab51d",
+        "link_hover_color": "#232323",
+        "accent_color": "#7ab51d",
+        "border_color": "#ffffff",
+        "logo": "shopify://shop_images/logo_59bd16de-826b-4b8d-a2d6-206de89384b2.png",
+        "tagline": "",
+        "hotline_label": "Got questions? Call us 9 to 5!",
+        "hotline_number": "+353 (0)1 811 8920",
+        "contact_heading": "Contact Info",
+        "address": "Unit 14A Stadium Business Park, Ballycoolin Road, Dublin 11, D11 KX4T, Ireland",
+        "show_social": true,
+        "social_facebook": "shopify://collections/brands-prochem",
+        "social_twitter": "shopify://collections/brands-prochem",
+        "social_instagram": "",
+        "social_linkedin": "shopify://collections/brands-i-team",
+        "social_youtube": "",
+        "copyright_text": "All Rights Reserved.",
+        "show_payment": true,
+        "payment_visa": true,
+        "payment_mastercard": false,
+        "payment_paypal": true,
+        "payment_amex": false,
+        "payment_applepay": false,
+        "payment_googlepay": false
+      }
+    }
+  },
+  "order": [
+    "footer-1"
+  ]
+}

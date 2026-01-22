@@ -1,0 +1,492 @@
+{% comment %} About Us Page Section {% endcomment %}
+
+<style>
+  .about-page{--green:#6fb31a;--dark:#333;--gray:#777;--white:#fff;--light:#f5f5f5;font-family:'Open Sans',sans-serif;color:var(--gray);line-height:1.7}
+  .about-page *{box-sizing:border-box;margin:0;padding:0}
+  .about-container{max-width:1570px;margin:0 auto;padding:0 20px}
+  .about-page h1,.about-page h2,.about-page h3{font-weight:700;color:var(--dark)}
+  .about-page .divider{width:60px;height:2px;background:var(--green);margin:15px 0 25px}
+  .about-page .divider-center{width:80px;height:2px;background:var(--green);margin:0 auto 40px}
+  .about-page .section-title{text-align:center;font-size:1.75rem;margin-bottom:10px}
+  .about-hero{background-size:cover;background-position:center;padding:120px 0;text-align:center}
+  .about-hero h1{color:var(--white);font-size:4rem;margin-bottom:20px;text-shadow:0 2px 4px rgba(0,0,0,0.3)}
+  .about-hero p{color:var(--white);font-size:2rem;max-width:700px;margin:0 auto;opacity:0.95}
+  .about-overview{padding:60px 0}
+  .overview-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:40px}
+  .overview-box{background-size:cover;background-position:center;padding:40px;color:var(--white);border:2px solid var(--dark)}
+  .overview-box h2{color:var(--white);font-size:3.5rem}
+  .overview-box .divider{background:rgba(255,255,255,0.5)}
+  .overview-list{list-style:none}
+  .overview-list li{display:flex;align-items:center;gap:12px;padding:12px 0;font-size:1.1rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+  .overview-list li:last-child{border-bottom:none}
+  .overview-list li::before{color:var(--green);font-weight:bold;font-size:2rem}
+  .about-content{padding:40px;background:var(--white)}
+  .about-content h2{font-size:1.75rem}
+  .about-text {
+    line-height: normal;
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+  .values-section{padding:60px 0;}
+  .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+  .value-card{background:var(--white);padding:30px 25px;text-align:center;border:1px solid #eee;border-bottom:3px solid var(--green);transition:all 0.3s;}
+  .value-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.12);transform:translateY(-5px)}
+  .value-icon{width:60px;height:60px;margin:0 auto 20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .value-icon svg{width:28px;height:28px;color:var(--white)}
+  .value-card h3{font-size:2rem;margin-bottom:15px}
+  .value-card p{font-size:0.95rem;line-height:1.7}
+  .services-section{padding:60px 0}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+  .service-card{background-size:cover;background-position:center;padding:35px;color:var(--white);min-height:280px;border:3px solid var(--dark);transition:all 0.3s}
+  .service-card:hover{transform:scale(1.02);z-index:10;box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+  .service-card h3{color:var(--white);font-size:1.3rem;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,0.2)}
+  .service-card ul{list-style:none}
+  .service-card li{padding:8px 0 8px 20px;position:relative;}
+  .service-card li::before{;color:var(--green);font-weight:bold;position:absolute;left:0}
+  .client-section{padding:60px 0;}
+  .client-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+  .client-content h2{text-align:left;font-size:1.75rem}
+  {% comment %} .client-feature{margin-bottom:25px} {% endcomment %}
+  {% comment %} .client-feature h3{font-size:1.15rem;margin-bottom:8px} {% endcomment %}
+  {% comment %} .client-feature p{font-size:0.95rem;line-height:1.7} {% endcomment %}
+  .image-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  .client-img{overflow:hidden;border-radius:4px;box-shadow:0 2px 15px rgba(0,0,0,0.08)}
+  .client-img img{width:100%;height:180px;object-fit:cover;transition:all 0.3s}
+  .client-img:hover img{transform:scale(1.08)}
+  .contact-section{padding:60px 0}
+  .contact-form-wrapper{max-width:800px;margin:0 auto}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .form-group{display:flex;flex-direction:column}
+  .form-group.full-width{grid-column:1/-1}
+  .form-group label{font-size:0.9rem;font-weight:600;color:var(--dark);margin-bottom:8px}
+  .form-group input,.form-group textarea{padding:14px 16px;border:1px solid #eee;border-radius:4px;font-size:1rem;font-family:inherit;transition:all 0.3s}
+  .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(111,179,26,0.15)}
+  .form-group textarea{resize:vertical;min-height:120px}
+  .submit-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:var(--white);border:none;padding:16px 40px;font-size:1rem;font-weight:600;border-radius:4px;cursor:pointer;transition:all 0.3s;width:100%}
+  .submit-btn:hover{background:#5a9615;transform:translateY(-2px);box-shadow:0 4px 15px rgba(111,179,26,0.4)}
+  .submit-btn svg{width:20px;height:20px}
+  .form-success{background:#e8f5e9;border:1px solid var(--green);border-radius:4px;padding:20px;margin-bottom:25px;display:flex;align-items:center;gap:15px}
+  .form-success svg{width:30px;height:30px;color:var(--green)}
+  .form-success p{color:#2e7d32;font-weight:500}
+  @media(max-width:1024px){.values-grid{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:768px){.about-hero{padding:80px 0}.about-hero h1{font-size:2rem}.overview-grid,.values-grid,.services-grid,.client-grid{grid-template-columns:1fr}.value-card{min-height:auto}.form-grid{grid-template-columns:1fr}}
+  @media(max-width:480px){.about-hero{padding:60px 0}.about-hero h1{font-size:1.6rem}.image-grid{grid-template-columns:1fr}}
+</style>
+
+<div class="about-page">
+  <section
+    class="about-hero"
+    style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('{{ section.settings.hero_bg | img_url: '1920x' | default: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920' }}')"
+  >
+    <div class="about-container">
+      <h1>{{ section.settings.hero_title }}</h1>
+      <p>{{ section.settings.hero_subtitle }}</p>
+    </div>
+  </section>
+
+  <section class="about-overview">
+    <div class="about-container">
+      <div class="overview-grid">
+        <div
+          class="overview-box"
+          style="background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('{{ section.settings.overview_bg | img_url: '800x' | default: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800' }}')"
+        >
+          <h2>Overview</h2>
+          <div class="divider"></div>
+          <ul class="overview-list">
+            <li>{{ section.settings.overview_1 }}</li>
+            <li>{{ section.settings.overview_2 }}</li>
+            <li>{{ section.settings.overview_3 }}</li>
+            <li>{{ section.settings.overview_4 }}</li>
+            <li>{{ section.settings.overview_5 }}</li>
+            <li>{{ section.settings.overview_6 }}</li>
+          </ul>
+        </div>
+        <div class="about-content">
+          <h2>About Us</h2>
+          <div class="divider"></div>
+          <div class="about-text">{{ section.settings.about_text }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="about-container">
+      <h2 class="section-title">Our Values</h2>
+      <div class="divider-center"></div>
+      <div class="values-grid">
+        <div class="value-card">
+          {% comment %} <div class="value-icon">
+            {% comment %} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> {% endcomment %}
+              {% comment %} <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg> {% endcomment %}
+          </div> {% endcomment %}
+          <h3>{{ section.settings.value1_title }}</h3>
+          <p>{{ section.settings.value1_text }}</p>
+        </div>
+        <div class="value-card">
+          {% comment %} <div class="value-icon">
+            {% comment %} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> {% endcomment %}
+              {% comment %} <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg> {% endcomment %}
+          </div> {% endcomment %}
+          <h3>{{ section.settings.value2_title }}</h3>
+          <p>{{ section.settings.value2_text }}</p>
+        </div>
+        <div class="value-card">
+          {% comment %} <div class="value-icon">
+            {% comment %} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> {% endcomment %}
+              {% comment %} <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg> {% endcomment %}
+          </div> {% endcomment %}
+          <h3>{{ section.settings.value3_title }}</h3>
+          <p>{{ section.settings.value3_text }}</p>
+        </div>
+        <div class="value-card">
+          {% comment %} <div class="value-icon"> {% endcomment %}
+            {% comment %} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> {% endcomment %}
+              {% comment %} <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+            </svg> {% endcomment %}
+          {% comment %} </div> {% endcomment %}
+          <h3>{{ section.settings.value4_title }}</h3>
+          <p>{{ section.settings.value4_text }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="about-container">
+      <h2 class="section-title">What We Do</h2>
+      <div class="divider-center"></div>
+      <div class="services-grid">
+        <div
+          class="service-card"
+          style="background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('{{ section.settings.service1_bg | img_url: '600x' | default: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600' }}')"
+        >
+          <h3>{{ section.settings.service1_title }}</h3>
+          <ul>
+            {% assign items = section.settings.service1_items | split: ',' -%}
+            {%- for item in items %}
+              <li>{{ item | strip }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div
+          class="service-card"
+          style="background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('{{ section.settings.service2_bg | img_url: '600x' | default: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600' }}')"
+        >
+          <h3>{{ section.settings.service2_title }}</h3>
+          <ul>
+            {% assign items = section.settings.service2_items | split: ',' -%}
+            {%- for item in items %}
+              <li>{{ item | strip }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div
+          class="service-card"
+          style="background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('{{ section.settings.service3_bg | img_url: '600x' | default: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600' }}')"
+        >
+          <h3>{{ section.settings.service3_title }}</h3>
+          <ul>
+            {% assign items = section.settings.service3_items | split: ',' -%}
+            {%- for item in items %}
+              <li>{{ item | strip }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div
+          class="service-card"
+          style="background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('{{ section.settings.service4_bg | img_url: '600x' | default: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600' }}')"
+        >
+          <h3>{{ section.settings.service4_title }}</h3>
+          <ul>
+            {% assign items = section.settings.service4_items | split: ',' -%}
+            {%- for item in items %}
+              <li>{{ item | strip }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div
+          class="service-card"
+          style="background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('{{ section.settings.service5_bg | img_url: '600x' | default: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600' }}')"
+        >
+          <h3>{{ section.settings.service5_title }}</h3>
+          <ul>
+            {% assign items = section.settings.service5_items | split: ',' -%}
+            {%- for item in items %}
+              <li>{{ item | strip }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div
+          class="service-card"
+          style="background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url('{{ section.settings.service6_bg | img_url: '600x' | default: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600' }}')"
+        >
+          <h3>{{ section.settings.service6_title }}</h3>
+          <ul>
+            {% assign items = section.settings.service6_items | split: ',' -%}
+            {%- for item in items %}
+              <li>{{ item | strip }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="client-section">
+    <div class="about-container">
+      <div class="client-grid">
+        <!-- TEXT LEFT SIDE -->
+        <div class="client-content">
+          <h2>{{ section.settings.client_title }}</h2>
+          <div class="divider"></div>
+          <div class="client-feature">
+            <h3>{{ section.settings.feature1_title }}</h3>
+            <p>{{ section.settings.feature1_text }}</p>
+          </div>
+          <div class="client-feature">
+            <h3>{{ section.settings.feature2_title }}</h3>
+            <p>{{ section.settings.feature2_text }}</p>
+          </div>
+          <div class="client-feature">
+            <h3>{{ section.settings.feature3_title }}</h3>
+            <p>{{ section.settings.feature3_text }}</p>
+          </div>
+        </div>
+        
+        <!-- IMAGES RIGHT SIDE (2x2 Grid) -->
+        <div class="client-images">
+          <div class="image-grid">
+            <div class="client-img">
+              <img
+                src="{{ section.settings.client_img1 | img_url: '400x300' | default: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop' }}"
+                alt="Client Centre"
+                loading="lazy"
+              >
+            </div>
+            <div class="client-img">
+              <img
+                src="{{ section.settings.client_img2 | img_url: '400x300' | default: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop' }}"
+                alt="Office"
+                loading="lazy"
+              >
+            </div>
+            <div class="client-img">
+              <img
+                src="{{ section.settings.client_img3 | img_url: '400x300' | default: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop' }}"
+                alt="Training"
+                loading="lazy"
+              >
+            </div>
+            <div class="client-img">
+              <img
+                src="{{ section.settings.client_img4 | img_url: '400x300' | default: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=300&fit=crop' }}"
+                alt="Meeting"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="about-container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="divider-center"></div>
+      <div class="contact-form-wrapper">
+        {% form 'contact', class: 'contact-form' %}
+          {% if form.posted_successfully? %}
+            <div class="form-success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              <p>Thank you! We'll get back to you soon.</p>
+            </div>
+          {% endif %}
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="contact[name]" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="contact[company]" placeholder="Your Company">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="contact[phone]" placeholder="Your Phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="contact[email]" placeholder="Your Email" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="message">Message *</label>
+              <textarea id="message" name="contact[body]" rows="5" placeholder="How can we help?" required></textarea>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="submit-btn">
+                <span>Submit</span>
+                {% comment %} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> {% endcomment %}
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "About Us Page",
+  "settings": [
+    { "type": "header", "content": "Hero Section" },
+    { "type": "image_picker", "id": "hero_bg", "label": "Hero Background" },
+    { "type": "text", "id": "hero_title", "label": "Title", "default": "About Clenli Direct" },
+    {
+      "type": "textarea",
+      "id": "hero_subtitle",
+      "label": "Subtitle",
+      "default": "At Clenli Direct, we're at the forefront of innovation when it comes to Cleaning Machines & Janitorial"
+    },
+    { "type": "header", "content": "Overview Section" },
+    { "type": "image_picker", "id": "overview_bg", "label": "Overview Background" },
+    { "type": "text", "id": "overview_1", "label": "Item 1", "default": "Founded In 1993" },
+    { "type": "text", "id": "overview_2", "label": "Item 2", "default": "100% Irish Owned" },
+    { "type": "text", "id": "overview_3", "label": "Item 3", "default": "40,000 ft² Warehouse" },
+    { "type": "text", "id": "overview_4", "label": "Item 4", "default": "ISO 9001:2015" },
+    { "type": "text", "id": "overview_5", "label": "Item 5", "default": "ISO 14001:2015" },
+    { "type": "text", "id": "overview_6", "label": "Item 6", "default": "ISO 45001:2018" },
+    { "type": "header", "content": "About Text" },
+    {
+      "type": "richtext",
+      "id": "about_text",
+      "label": "About Text",
+      "default": "<p>Founded in 1993, Clenli Direct is the leading provider of innovative cleaning solutions in Ireland.</p>"
+    },
+    { "type": "header", "content": "Value 1" },
+    { "type": "text", "id": "value1_title", "label": "Title", "default": "Reliability" },
+    {
+      "type": "textarea",
+      "id": "value1_text",
+      "label": "Text",
+      "default": "We value reliability. Through our strategic location and logistic network, we have an exceptional record for delivering on time."
+    },
+    { "type": "header", "content": "Value 2" },
+    { "type": "text", "id": "value2_title", "label": "Title", "default": "Innovation" },
+    {
+      "type": "textarea",
+      "id": "value2_text",
+      "label": "Text",
+      "default": "We strive to always do better. We are always on the lookout for new innovative solutions."
+    },
+    { "type": "header", "content": "Value 3" },
+    { "type": "text", "id": "value3_title", "label": "Title", "default": "Quality" },
+    {
+      "type": "textarea",
+      "id": "value3_text",
+      "label": "Text",
+      "default": "We understand the importance of quality. Every equipment is sampled, tested, and handpicked."
+    },
+    { "type": "header", "content": "Value 4" },
+    { "type": "text", "id": "value4_title", "label": "Title", "default": "Expertise" },
+    {
+      "type": "textarea",
+      "id": "value4_text",
+      "label": "Text",
+      "default": "Our expertise is unmatched. Every team member receives extensive training."
+    },
+    { "type": "header", "content": "Service 1" },
+    { "type": "image_picker", "id": "service1_bg", "label": "Background" },
+    { "type": "text", "id": "service1_title", "label": "Title", "default": "Cleaning Machinery & Equipment" },
+    {
+      "type": "textarea",
+      "id": "service1_items",
+      "label": "Items (comma separated)",
+      "default": "Scrubber Dryers & Sweepers, Innovative Solutions, Equipment For All Sectors, Training & Certification"
+    },
+    { "type": "header", "content": "Service 2" },
+    { "type": "image_picker", "id": "service2_bg", "label": "Background" },
+    { "type": "text", "id": "service2_title", "label": "Title", "default": "Janitorial & Consumables" },
+    {
+      "type": "textarea",
+      "id": "service2_items",
+      "label": "Items",
+      "default": "Paper Dispensers & Soap, Eco Solutions, Powerful Cleaning Agents, Order Management Software"
+    },
+    { "type": "header", "content": "Service 3" },
+    { "type": "image_picker", "id": "service3_bg", "label": "Background" },
+    { "type": "text", "id": "service3_title", "label": "Title", "default": "Sourcing & Distribution" },
+    {
+      "type": "textarea",
+      "id": "service3_items",
+      "label": "Items",
+      "default": "Direct To Site Delivery, Global Logistic Network, Import & Export, Container Shipments"
+    },
+    { "type": "header", "content": "Service 4" },
+    { "type": "image_picker", "id": "service4_bg", "label": "Background" },
+    { "type": "text", "id": "service4_title", "label": "Title", "default": "Service & Maintenance" },
+    {
+      "type": "textarea",
+      "id": "service4_items",
+      "label": "Items",
+      "default": "Scrubber Dryers & Sweepers, Fleet Management Software, Nationwide Coverage, Spare Parts"
+    },
+    { "type": "header", "content": "Service 5" },
+    { "type": "image_picker", "id": "service5_bg", "label": "Background" },
+    { "type": "text", "id": "service5_title", "label": "Title", "default": "Manufacturing" },
+    {
+      "type": "textarea",
+      "id": "service5_items",
+      "label": "Items",
+      "default": "Floor Pads, Cleaning Agents, White Labeling, Container Shipments"
+    },
+    { "type": "header", "content": "Service 6" },
+    { "type": "image_picker", "id": "service6_bg", "label": "Background" },
+    { "type": "text", "id": "service6_title", "label": "Title", "default": "Robotics & Innovation" },
+    {
+      "type": "textarea",
+      "id": "service6_items",
+      "label": "Items",
+      "default": "Robotic Cleaning Machines, Cost Savings, Chemical Free Cleaning, Water Saving Equipment"
+    },
+    { "type": "header", "content": "Client Centre" },
+    { "type": "text", "id": "client_title", "label": "Title", "default": "The Clenli Client Centre" },
+    { "type": "text", "id": "feature1_title", "label": "Feature 1 Title", "default": "Training" },
+    {
+      "type": "textarea",
+      "id": "feature1_text",
+      "label": "Feature 1 Text",
+      "default": "State of the art training facilities for staff and operators."
+    },
+    { "type": "text", "id": "feature2_title", "label": "Feature 2 Title", "default": "Demonstrations" },
+    {
+      "type": "textarea",
+      "id": "feature2_text",
+      "label": "Feature 2 Text",
+      "default": "See our products in action and try them for yourself."
+    },
+    { "type": "text", "id": "feature3_title", "label": "Feature 3 Title", "default": "Customer/Client Visits" },
+    {
+      "type": "textarea",
+      "id": "feature3_text",
+      "label": "Feature 3 Text",
+      "default": "Clients are free to invite customers to the client centre."
+    },
+    { "type": "image_picker", "id": "client_img1", "label": "Image 1" },
+    { "type": "image_picker", "id": "client_img2", "label": "Image 2" },
+    { "type": "image_picker", "id": "client_img3", "label": "Image 3" },
+    { "type": "image_picker", "id": "client_img4", "label": "Image 4" }
+  ],
+  "presets": [{ "name": "About Us Page" }]
+}
+{% endschema %}

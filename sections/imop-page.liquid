@@ -1,0 +1,1365 @@
+{% comment %}
+  Clenli Direct - i-Mop Floor Scrubber Dryer Page
+  Complete single section for i-Mop landing page
+{% endcomment %}
+
+<div class="imop-page">
+  <!-- Hero Section -->
+  <section class="imop-hero">
+    <div class="imop-container">
+      <div class="imop-hero__grid">
+        <div class="imop-hero__image">
+          {% if section.settings.hero_image != blank %}
+            <img
+              src="{{ section.settings.hero_image | image_url: width: 800 }}"
+              alt="{{ section.settings.hero_title }}"
+            >
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/iii-Mop.png" alt="i-Mop Floor Scrubber Dryer">
+          {% endif %}
+        </div>
+        <div class="imop-hero__content">
+          <span class="imop-tag">{{ section.settings.hero_tag }}</span>
+          <h1 class="imop-hero__title">{{ section.settings.hero_title }}</h1>
+          <p class="imop-text">{{ section.settings.hero_desc }}</p>
+
+          <div class="imop-features">
+            <div class="imop-feature">
+              <strong>{{ section.settings.feature1_title }}</strong>
+              <p>{{ section.settings.feature1_text }}</p>
+            </div>
+            <div class="imop-feature">
+              <strong>{{ section.settings.feature2_title }}</strong>
+              <p>{{ section.settings.feature2_text }}</p>
+            </div>
+            <div class="imop-feature">
+              <strong>{{ section.settings.feature3_title }}</strong>
+              <p>{{ section.settings.feature3_text }}</p>
+            </div>
+          </div>
+
+          <a href="{{ section.settings.hero_btn_link }}" class="imop-btn">{{ section.settings.hero_btn_text }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- What is the i-Mop -->
+  <section class="imop-info">
+    <div class="imop-container">
+      <div class="imop-info__grid imop-info__grid--reverse">
+        <div class="imop-info__image">
+          {% if section.settings.what_image != blank %}
+            <img
+              src="{{ section.settings.what_image | image_url: width: 800 }}"
+              alt="{{ section.settings.what_title }}"
+            >
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/What_is_the_i-Mop.png" alt="What is the i-Mop">
+          {% endif %}
+        </div>
+        <div class="imop-info__content imop-info__content--center">
+          <h2 class="imop-subtitle">{{ section.settings.what_title }}</h2>
+          <p class="imop-text">{{ section.settings.what_text1 }}</p>
+          <p class="imop-text">{{ section.settings.what_text2 }}</p>
+          <a href="{{ section.settings.what_btn_link }}" class="imop-btn">{{ section.settings.what_btn_text }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Filling the Gap -->
+  <section class="imop-gap">
+    <div class="imop-container">
+      <h2 class="imop-section-title">{{ section.settings.gap_title }}</h2>
+      <p class="imop-section-subtitle">{{ section.settings.gap_text }}</p>
+      <div class="imop-gap__image">
+        {% if section.settings.gap_image != blank %}
+          <img src="{{ section.settings.gap_image | image_url: width: 1200 }}" alt="{{ section.settings.gap_title }}">
+        {% else %}
+          <img
+            src="https://clenlidirect.com/media/.renditions/wysiwyg/Filling_the_Gap_in_the_Market2.jpg"
+            alt="How the i-Mop was Created"
+          >
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Video Section -->
+  <section class="imop-video">
+    <div class="imop-container">
+      <h2 class="imop-section-title">{{ section.settings.video_title }}</h2>
+      <p class="imop-section-subtitle">{{ section.settings.video_text }}</p>
+      <div class="imop-video__wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/{{ section.settings.video_id }}"
+          title="{{ section.settings.video_title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Save Time Section -->
+  <section class="imop-info">
+    <div class="imop-container">
+      <div class="imop-info__grid imop-info__grid--reverse">
+        <div class="imop-info__content imop-info__content--center">
+          <h2 class="imop-subtitle">{{ section.settings.save_title }}</h2>
+          <p class="imop-text">{{ section.settings.save_text1 }}</p>
+          <p class="imop-text">{{ section.settings.save_text2 }}</p>
+          <a href="{{ section.settings.save_btn_link }}" class="imop-btn">{{ section.settings.save_btn_text }}</a>
+        </div>
+        <div class="imop-info__image">
+          {% if section.settings.save_image != blank %}
+            <img
+              src="{{ section.settings.save_image | image_url: width: 800 }}"
+              alt="{{ section.settings.save_title }}"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Save_Time_Water_Effort.png"
+              alt="Save Time Water Effort"
+            >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Improved Safety -->
+  <section class="imop-info">
+    <div class="imop-container">
+      <div class="imop-info__grid">
+        <div class="imop-info__content imop-info__content--center">
+          <h2 class="imop-subtitle">{{ section.settings.safety_title }}</h2>
+          <p class="imop-text">{{ section.settings.safety_text1 }}</p>
+          <p class="imop-text">{{ section.settings.safety_text2 }}</p>
+          <a href="{{ section.settings.safety_btn_link }}" class="imop-btn">{{ section.settings.safety_btn_text }}</a>
+        </div>
+        <div class="imop-info__image">
+          {% if section.settings.safety_image != blank %}
+            <img
+              src="{{ section.settings.safety_image | image_url: width: 800 }}"
+              alt="{{ section.settings.safety_title }}"
+            >
+          {% else %}
+            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Improved_Safety.png" alt="Improved Safety">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Environment Section -->
+  <section class="imop-info">
+    <div class="imop-container">
+      <div class="imop-info__grid imop-info__grid--reverse">
+        <div class="imop-info__content imop-info__content--center">
+          <h2 class="imop-subtitle">{{ section.settings.env_title }}</h2>
+          <p class="imop-text">{{ section.settings.env_text1 }}</p>
+          <p class="imop-text">{{ section.settings.env_text2 }}</p>
+          <a href="{{ section.settings.env_btn_link }}" class="imop-btn">{{ section.settings.env_btn_text }}</a>
+        </div>
+         <div class="imop-info__image">
+          {% if section.settings.env_image != blank %}
+            <img src="{{ section.settings.env_image | image_url: width: 800 }}" alt="{{ section.settings.env_title }}">
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Doing_Your_Part_for_the_Environment.png"
+              alt="Environment"
+            >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Investing in Better World -->
+  <section class="imop-info">
+    <div class="imop-container">
+      <div class="imop-info__grid">
+        <div class="imop-info__content">
+          <h2 class="imop-subtitle">{{ section.settings.invest_title }}</h2>
+          <p class="imop-text">{{ section.settings.invest_text1 }}</p>
+          <p class="imop-text">{{ section.settings.invest_text2 }}</p>
+          <p class="imop-text">{{ section.settings.invest_text3 }}</p>
+          <p class="imop-text">{{ section.settings.invest_text4 }}</p>
+        </div>
+        <div class="imop-info__image">
+          {% if section.settings.invest_image != blank %}
+            <img
+              src="{{ section.settings.invest_image | image_url: width: 800 }}"
+              alt="{{ section.settings.invest_title }}"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Investing_in_a_Better_World.png"
+              alt="Investing in a Better World"
+            >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Best Getting Better -->
+  <section class="imop-info">
+    <div class="imop-container">
+      <div class="imop-info__grid imop-info__grid--reverse">
+        <div class="imop-info__content">
+          <h2 class="imop-subtitle">{{ section.settings.best_title }}</h2>
+          <p class="imop-text">{{ section.settings.best_text1 }}</p>
+          <p class="imop-text">{{ section.settings.best_text2 }}</p>
+          <a href="{{ section.settings.best_btn_link }}" class="imop-btn">{{ section.settings.best_btn_text }}</a>
+        </div>
+        <div class="imop-info__image">
+          {% if section.settings.best_image != blank %}
+            <img
+              src="{{ section.settings.best_image | image_url: width: 800 }}"
+              alt="{{ section.settings.best_title }}"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/The_Best_is_Getting_Better.png"
+              alt="The Best is Getting Better"
+            >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Solutions Section -->
+  <section class="imop-info">
+    <div class="imop-container">
+      <div class="imop-info__grid">
+        <div class="imop-info__content">
+          <h2 class="imop-subtitle">{{ section.settings.solutions_title }}</h2>
+          <p class="imop-text">{{ section.settings.solutions_text }}</p>
+        </div>
+        <div class="imop-info__image">
+          {% if section.settings.solutions_image != blank %}
+            <img
+              src="{{ section.settings.solutions_image | image_url: width: 800 }}"
+              alt="{{ section.settings.solutions_title }}"
+            >
+          {% else %}
+            <img
+              src="https://clenlidirect.com/media/.renditions/wysiwyg/Solutions_for_All_Floor_Types.png"
+              alt="Solutions for All Floor Types"
+            >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- Why Choose Section -->
+  <section class="imop-why">
+    <div class="imop-container">
+      <div class="imop-why__logo">
+        {% if section.settings.why_logo != blank %}
+          <img src="{{ section.settings.why_logo | image_url: width: 300 }}" alt="Clenli Direct">
+        {% else %}
+          <img
+            src="https://clenlidirect.com/media/.renditions/wysiwyg/Untitled_design_-_2024-02-08T162909.668.png"
+            alt="Clenli Logo"
+          >
+        {% endif %}
+      </div>
+      <h2 class="imop-section-title">{{ section.settings.why_title }}</h2>
+      <p class="imop-section-subtitle">{{ section.settings.why_text }}</p>
+    </div>
+  </section>
+
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+  <hr class="imop-divider">
+  <!-- Product Range -->
+  <section class="imop-range">
+    <div class="imop-container">
+      <h2 class="imop-section-title">{{ section.settings.range_title }}</h2>
+
+      <div class="imop-range__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'product' %}
+            <div class="imop-product-card" {{ block.shopify_attributes }}>
+              <div class="imop-product-card__img">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.name }}">
+                {% else %}
+                  <div class="imop-product-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#6fb31a" stroke-width="1">
+                      <rect x="2" y="2" width="20" height="20" rx="3"/>
+                    </svg>
+                  </div>
+                {% endif %}
+              </div>
+              <h3 class="imop-product-card__name">{{ block.settings.name }}</h3>
+              <div class="imop-product-card__specs">
+                <p><span>Operating Width :</span> {{ block.settings.width }}</p>
+                <p><span>Battery Life :</span> {{ block.settings.battery }}</p>
+                <p><span>Brush Speed :</span> {{ block.settings.speed }}</p>
+                <p><span>Brush Pressure :</span> {{ block.settings.pressure }}</p>
+                <p><span>Tank Capacity :</span> {{ block.settings.tank }}</p>
+              </div>
+              <a href="{{ block.settings.link }}" class="imop-btn imop-btn--small"
+                >View the {{ block.settings.name -}}
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <hr class="imop-divider">
+  {% comment %} <div class="imop-divider"></div> {% endcomment %}
+
+  <!-- CTA Section -->
+  <section class="imop-cta">
+    <div class="imop-container">
+      <div class="imop-cta__grid">
+        <div class="imop-cta__content">
+          <h2 class="imop-section-title">{{ section.settings.cta_title }}</h2>
+          <p class="imop-section-subtitle">{{ section.settings.cta_text }}</p>
+          <div class="imop-cta__image">
+            {% if section.settings.cta_image != blank %}
+              <img
+                src="{{ section.settings.cta_image | image_url: width: 1000 }}"
+                alt="{{ section.settings.cta_title }}"
+              >
+            {% else %}
+              <img src="https://clenlidirect.com/media/.renditions/wysiwyg/i-Mop_Footer73.png" alt="Explore the i-Mop">
+            {% endif %}
+          </div>
+        </div>
+        <div class="imop-cta__form">
+          <a href="tel:{{ section.settings.phone }}" class="imop-call-btn">CALL NOW</a>
+          <div class="imop-enquiry-form">
+            <h3>{{ section.settings.form_title }}</h3>
+            {% form 'contact' %}
+              <div class="imop-form-group">
+                <input type="text" name="contact[name]" placeholder="NAME" required>
+              </div>
+              <div class="imop-form-group">
+                <input type="email" name="contact[email]" placeholder="EMAIL" required>
+              </div>
+              <div class="imop-form-group">
+                <input type="tel" name="contact[phone]" placeholder="PHONE NUMBER" required>
+              </div>
+              <div class="imop-form-group">
+                <textarea name="contact[body]" placeholder="MESSAGE" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="imop-btn imop-btn--full">Submit</button>
+            {% endform %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .imop-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    color: #333;
+  }
+
+  .imop-container {
+    max-width: 1570px !important;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  hr.imop-divider {
+    width: 100% !important;
+    max-width: 1570px !important;
+    height: 4px !important;
+    margin: 40px auto !important;
+    background-color: #6fb31a !important;
+    border: 0 !important;
+    border: none !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  {% comment %} .imop-divider {
+    width: 100%;
+    max-width: 1200px;
+    height: 4px;
+    margin: 40px auto;
+    background-color: #6fb31a;
+    border: none;
+    display: block;
+  } {% endcomment %}
+
+
+  .imop-tag {
+    display: inline-block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .imop-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+  }
+
+  .imop-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+
+  .imop-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .imop-section-subtitle {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imop-btn {
+    display: inline-block;
+    background: #6fb31a;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .imop-btn:hover {
+    background: #5a9615;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+  .imop-btn--small {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .imop-btn--full {
+    width: 100%;
+  }
+
+  .imop-hero {
+    padding: 60px 0;
+    background: #fff;
+  }
+
+  .imop-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .imop-hero__image img {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .imop-hero__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .imop-features {
+    margin: 25px 0;
+  }
+
+  .imop-feature {
+    margin-bottom: 20px;
+  }
+
+  .imop-feature strong {
+    display: block;
+    color: #1a1a2e;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .imop-feature p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .imop-info {
+    padding: 60px 0;
+    background: #fff;
+  }
+
+  .imop-info__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .imop-info__grid--reverse {
+    direction: rtl;
+  }
+
+  .imop-info__grid--reverse > * {
+    direction: ltr;
+  }
+
+  .imop-info__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    {% comment %} box-shadow: 0 10px 30px rgba(0,0,0,0.1); {% endcomment %}
+  }
+
+  .imop-info__content--center {
+    text-align: center;
+  }
+
+  .imop-gap {
+    padding: 60px 0;
+    background: #fff;
+  }
+
+  .imop-gap__image {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imop-gap__image img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .imop-video {
+    padding: 60px 0;
+    background: #fff;
+  }
+
+  .imop-video__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 85%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  }
+
+  .imop-video__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .imop-why {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+  }
+
+  .imop-why__logo {
+    margin-bottom: 20px;
+  }
+
+  .imop-why__logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .imop-range {
+    padding: 80px 0;
+    background: #fff;
+  }
+
+  .imop-range__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .imop-product-card {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .imop-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+
+  .imop-product-card__img {
+    margin-bottom: 20px;
+  }
+
+  .imop-product-card__img img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .imop-product-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e8f5e0 0%, #d4edc4 100%);
+    border-radius: 10px;
+  }
+
+  .imop-product-card__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+  }
+
+  .imop-product-card__specs {
+    margin-bottom: 20px;
+  }
+
+  .imop-product-card__specs p {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+  }
+
+  .imop-product-card__specs span {
+    color: #333;
+  }
+
+  .imop-cta {
+    padding: 60px 0;
+    background: #fff;
+  }
+
+  .imop-cta__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+
+  .imop-cta__content {
+    text-align: center;
+  }
+
+  .imop-cta__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .imop-call-btn {
+    display: block;
+    background: #6fb31a;
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+  }
+
+  .imop-call-btn:hover {
+    background: #5a9615;
+    color: #fff;
+  }
+
+  .imop-enquiry-form {
+    background: #ffffff;
+    padding: 10px;
+    border:2px solid #6fb31a;
+  }
+
+  .imop-enquiry-form h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .imop-form-group {
+    margin-bottom: 15px;
+  }
+
+  .imop-form-group input,
+  .imop-form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .imop-form-group input:focus,
+  .imop-form-group textarea:focus {
+    outline: none;
+    border-color: #6fb31a;
+  }
+
+  @media (max-width: 1024px) {
+    .imop-range__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .imop-hero__grid,
+    .imop-info__grid,
+    .imop-info__grid--reverse,
+    .imop-cta__grid {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      text-align: center;
+    }
+
+    .imop-hero__title {
+      font-size: 32px;
+    }
+
+    .imop-range__grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .imop-hero__image,
+    .imop-info__image {
+      order: -1;
+    }
+
+    .imop-info__content {
+      text-align: center;
+    }
+
+    .imop-video__wrapper {
+      max-width: 100%;
+    }
+
+    .imop-gap__image img {
+      max-width: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "i-Mop Page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_tag",
+      "label": "Tag Text",
+      "default": "SCRUBBER DRYER"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Introducing the i-Mop"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_desc",
+      "label": "Description",
+      "default": "Stop cleaning with regular mops and start i-mopping. Enjoy the flexibility of a mop combined with the power of a scrubber dryer."
+    },
+    {
+      "type": "text",
+      "id": "feature1_title",
+      "label": "Feature 1 Title",
+      "default": "For faster cleaning:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature1_text",
+      "label": "Feature 1 Text",
+      "default": "The i-mop cleans up to 70% faster than conventional wet mopping."
+    },
+    {
+      "type": "text",
+      "id": "feature2_title",
+      "label": "Feature 2 Title",
+      "default": "For cleaner floors:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature2_text",
+      "label": "Feature 2 Text",
+      "default": "The i-mop's twin counter-rotating brushes deep scrub for 90% cleaner surfaces."
+    },
+    {
+      "type": "text",
+      "id": "feature3_title",
+      "label": "Feature 3 Title",
+      "default": "For a safer facility:"
+    },
+    {
+      "type": "textarea",
+      "id": "feature3_text",
+      "label": "Feature 3 Text",
+      "default": "The i-mop washes, cleans and dries floors in one movement."
+    },
+    {
+      "type": "text",
+      "id": "hero_btn_text",
+      "label": "Button Text",
+      "default": "Explore i-Mop Range"
+    },
+    {
+      "type": "url",
+      "id": "hero_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "What is the i-Mop"
+    },
+    {
+      "type": "image_picker",
+      "id": "what_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "what_title",
+      "label": "Title",
+      "default": "What is the i-Mop?"
+    },
+    {
+      "type": "textarea",
+      "id": "what_text1",
+      "label": "Text 1",
+      "default": "The i-mop is a ground-breaking floor scrubber dryer."
+    },
+    {
+      "type": "textarea",
+      "id": "what_text2",
+      "label": "Text 2",
+      "default": "Compared to traditional cleaning methods, the i-mop is designed to be faster, cleaner, safer and greener."
+    },
+    {
+      "type": "text",
+      "id": "what_btn_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "what_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Filling the Gap"
+    },
+    {
+      "type": "text",
+      "id": "gap_title",
+      "label": "Title",
+      "default": "Filling the Gap on the Market"
+    },
+    {
+      "type": "textarea",
+      "id": "gap_text",
+      "label": "Text",
+      "default": "Designed to incorporate the flexibility of a mop with a power of a scrubber dryer."
+    },
+    {
+      "type": "image_picker",
+      "id": "gap_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Video Section"
+    },
+    {
+      "type": "text",
+      "id": "video_title",
+      "label": "Title",
+      "default": "Seeing is Believing"
+    },
+    {
+      "type": "textarea",
+      "id": "video_text",
+      "label": "Text",
+      "default": "Check out the i-Mop in action!"
+    },
+    {
+      "type": "text",
+      "id": "video_id",
+      "label": "YouTube Video ID",
+      "default": "t_OzF5oGXek"
+    },
+    {
+      "type": "header",
+      "content": "Save Time Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "save_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "save_title",
+      "label": "Title",
+      "default": "Save Time, Water & Effort"
+    },
+    {
+      "type": "textarea",
+      "id": "save_text1",
+      "label": "Text 1",
+      "default": "The i-Mop saves you time, water, and effort."
+    },
+    {
+      "type": "textarea",
+      "id": "save_text2",
+      "label": "Text 2",
+      "default": "A lightweight and flexible solution."
+    },
+    {
+      "type": "text",
+      "id": "save_btn_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "save_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Improved Safety"
+    },
+    {
+      "type": "image_picker",
+      "id": "safety_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "safety_title",
+      "label": "Title",
+      "default": "Improved Safety"
+    },
+    {
+      "type": "textarea",
+      "id": "safety_text1",
+      "label": "Text 1",
+      "default": "Wet mopping with dirty water and slippery floors are a thing of the past."
+    },
+    {
+      "type": "textarea",
+      "id": "safety_text2",
+      "label": "Text 2",
+      "default": "Harnessing state-of-the-art suction technology."
+    },
+    {
+      "type": "text",
+      "id": "safety_btn_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "safety_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Environment Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "env_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "env_title",
+      "label": "Title",
+      "default": "Doing Your Part for the Environment"
+    },
+    {
+      "type": "textarea",
+      "id": "env_text1",
+      "label": "Text 1",
+      "default": "The i-Mop is environmentally friendly."
+    },
+    {
+      "type": "textarea",
+      "id": "env_text2",
+      "label": "Text 2",
+      "default": "Slashes environmental impact by 75%."
+    },
+    {
+      "type": "text",
+      "id": "env_btn_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "env_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Investing in Better World"
+    },
+    {
+      "type": "image_picker",
+      "id": "invest_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "invest_title",
+      "label": "Title",
+      "default": "Investing in a Better World"
+    },
+    {
+      "type": "textarea",
+      "id": "invest_text1",
+      "label": "Text 1",
+      "default": "The i-mop has helped countless businesses."
+    },
+    {
+      "type": "textarea",
+      "id": "invest_text2",
+      "label": "Text 2",
+      "default": "Helping water projects through Made Blue partnership."
+    },
+    {
+      "type": "textarea",
+      "id": "invest_text3",
+      "label": "Text 3",
+      "default": "Over 10 billion litres of clean water generated."
+    },
+    {
+      "type": "textarea",
+      "id": "invest_text4",
+      "label": "Text 4",
+      "default": "One litre donated for every litre used!"
+    },
+    {
+      "type": "header",
+      "content": "Best Getting Better"
+    },
+    {
+      "type": "image_picker",
+      "id": "best_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "best_title",
+      "label": "Title",
+      "default": "The Best is Getting Better"
+    },
+    {
+      "type": "textarea",
+      "id": "best_text1",
+      "label": "Text 1",
+      "default": "The i-mop is constantly improving."
+    },
+    {
+      "type": "textarea",
+      "id": "best_text2",
+      "label": "Text 2",
+      "default": "New features from anti-corrosive coating to phone holders."
+    },
+    {
+      "type": "text",
+      "id": "best_btn_text",
+      "label": "Button Text",
+      "default": "See All Features"
+    },
+    {
+      "type": "url",
+      "id": "best_btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Solutions Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "solutions_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "solutions_title",
+      "label": "Title",
+      "default": "Solutions for All Cleaning Needs"
+    },
+    {
+      "type": "textarea",
+      "id": "solutions_text",
+      "label": "Text",
+      "default": "No matter if you need pads or brushes, there is a solution!"
+    },
+    {
+      "type": "header",
+      "content": "Why Choose Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "why_logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "why_title",
+      "label": "Title",
+      "default": "Why Choose Clenli Direct"
+    },
+    {
+      "type": "textarea",
+      "id": "why_text",
+      "label": "Text",
+      "default": "Over 30 years of experience in the industry."
+    },
+    {
+      "type": "header",
+      "content": "Product Range"
+    },
+    {
+      "type": "text",
+      "id": "range_title",
+      "label": "Title",
+      "default": "The i-Mop Range"
+    },
+    {
+      "type": "header",
+      "content": "CTA Section"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Title",
+      "default": "Don't Get Left Behind"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "Text",
+      "default": "Discover the future of cleaning!"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_image",
+      "label": "CTA Image"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "01 811 89 20"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form Title",
+      "default": "GO GREEN TODAY ENQUIRE NOW"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "i-Mop Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "i-Mop Lite"
+        },
+        {
+          "type": "text",
+          "id": "width",
+          "label": "Operating Width",
+          "default": "37 cm"
+        },
+        {
+          "type": "text",
+          "id": "battery",
+          "label": "Battery Life",
+          "default": "45 mins"
+        },
+        {
+          "type": "text",
+          "id": "speed",
+          "label": "Brush Speed",
+          "default": "350 RPM"
+        },
+        {
+          "type": "text",
+          "id": "pressure",
+          "label": "Brush Pressure",
+          "default": "13 kg"
+        },
+        {
+          "type": "text",
+          "id": "tank",
+          "label": "Tank Capacity",
+          "default": "3 / 5 L"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Product Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "i-Mop Page",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "name": "i-Mop Lite",
+            "width": "37 cm",
+            "battery": "45 mins",
+            "speed": "350 RPM",
+            "pressure": "13 kg",
+            "tank": "3 / 5 L"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "name": "i-Mop XL Plus",
+            "width": "46 cm",
+            "battery": "70 mins",
+            "speed": "350 RPM",
+            "pressure": "22.5 kg",
+            "tank": "4 / 6 L"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "name": "i-Mop XL Pro",
+            "width": "46 cm",
+            "battery": "70 mins",
+            "speed": "350 RPM",
+            "pressure": "22.5 kg",
+            "tank": "4 / 6 L"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "name": "i-Mop XXL Pro",
+            "width": "62 cm",
+            "battery": "60 mins",
+            "speed": "350 RPM",
+            "pressure": "32 kg",
+            "tank": "5 / 8 L"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

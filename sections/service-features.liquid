@@ -1,0 +1,278 @@
+{% comment %}
+  Clenli Direct - Service Features Section
+  Section: service-features.liquid
+{% endcomment %}
+
+<section class="service-features">
+  <div class="service-features__container">
+    <div class="service-features__header">
+      <span class="service-features__label">{{ section.settings.label }}</span>
+      <h2 class="service-features__title">{{ section.settings.title }}</h2>
+      <p class="service-features__subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+    
+    <div class="service-features__grid">
+      {% for block in section.blocks %}
+        <div class="service-feature-card">
+          <div class="service-feature-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              {% case block.settings.icon %}
+                {% when 'emergency' %}
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                {% when 'parts' %}
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                {% when 'maintenance' %}
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/>
+                {% when 'testing' %}
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                {% when 'hire' %}
+                  <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                {% when 'warranty' %}
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                {% else %}
+                  <circle cx="12" cy="12" r="10"/>
+              {% endcase %}
+            </svg>
+          </div>
+          <h3 class="service-feature-card__title">{{ block.settings.title }}</h3>
+          <p class="service-feature-card__text">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.service-features {
+  background: #fff;
+  padding: 100px 0;
+}
+
+.service-features__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-features__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service-features__label {
+  display: inline-block;
+  color: #0a4d3c;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.service-features__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.service-features__subtitle {
+  font-size: 18px;
+  color: #6a6a7a;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.service-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-feature-card {
+  background: #f8fafb;
+  padding: 40px 35px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-feature-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0a4d3c, #1a7a5c);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.service-feature-card:hover::after {
+  transform: scaleX(1);
+}
+
+.service-feature-card__icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0a4d3c 0%, #1a7a5c 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: #fff;
+}
+
+.service-feature-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.service-feature-card__text {
+  font-size: 15px;
+  color: #6a6a7a;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .service-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-features__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-features__title {
+    font-size: 32px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Service Features",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Section Label",
+      "default": "Our Services"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Comprehensive Service Solutions"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Section Subtitle",
+      "default": "From emergency repairs to scheduled maintenance, we've got you covered"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Service Feature",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "emergency", "label": "Emergency/Clock" },
+            { "value": "parts", "label": "Parts/Tools" },
+            { "value": "maintenance", "label": "Maintenance" },
+            { "value": "testing", "label": "Testing/Checkmark" },
+            { "value": "hire", "label": "Machine Hire" },
+            { "value": "warranty", "label": "Warranty/Shield" }
+          ],
+          "default": "emergency"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title",
+          "default": "Emergency Callouts"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Feature Text",
+          "default": "24/7 emergency service available. Our team coordinates callouts reliably and timely to minimise your downtime."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Features",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "emergency",
+            "title": "24/7 Emergency Callouts",
+            "text": "Our internal systems coordinate emergency callouts reliably and efficiently. We're available around the clock when you need us most."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "parts",
+            "title": "€15K Parts Stock",
+            "text": "Our service vans stock up to €15,000 worth of equipment, enabling us to complete 99% of service calls on the first visit."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "maintenance",
+            "title": "Scheduled Maintenance",
+            "text": "Regular maintenance programs keep your equipment running at peak performance and extend machine lifespan."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "testing",
+            "title": "PAT Testing",
+            "text": "Professional Portable Appliance Testing to ensure all your electrical equipment meets safety standards."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "hire",
+            "title": "Machine Hire",
+            "text": "Short and long-term equipment hire solutions when you need temporary cleaning machinery for special projects."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "warranty",
+            "title": "Warranty Support",
+            "text": "Full warranty coverage on all products with dedicated support to handle any issues quickly and professionally."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

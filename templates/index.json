@@ -1,0 +1,1099 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_with_products_G9p9Gx": {
+      "type": "slideshow-with-products",
+      "blocks": {
+        "slider_revolution_slider_general_DrqcgT": {
+          "type": "shopify://apps/slider-revolution/blocks/slider_general/d2c2325b-ecb9-42b8-a0b0-ca2ffb6e3203",
+          "settings": {
+            "slider_id": "slider-71",
+            "hide_on_desktop": false,
+            "hide_on_tablet": false,
+            "hide_on_mobile": false,
+            "rev_section_heading": "",
+            "rev_section_sub_heading": "",
+            "rev_section_heading_size": 30,
+            "rev_section_sub_heading_size": 15,
+            "rev_section_heading_align": "center",
+            "rev_section_heading_color": "",
+            "rev_section_sub_heading_color": "",
+            "rev_section_bg_color": "",
+            "rev_slider_sec_pad_top": 0,
+            "rev_slider_sec_pad_bot": 0,
+            "rev_slider_sec_mar_top": 0,
+            "rev_slider_sec_mar_bot": 0
+          }
+        },
+        "slide_XBHBqM": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "slide_bg_image": "shopify://shop_images/tersano-unit-background-with-gradient.jpg",
+            "slide_bg_color": "rgba(0,0,0,0)",
+            "slide_bg_gradient": "",
+            "content_alignment": "center",
+            "text_alignment": "center",
+            "sub_heading": "",
+            "heading": "",
+            "tagline": "",
+            "button_text": "",
+            "button_link": "",
+            "grid_columns": 4,
+            "grid_rows": 3,
+            "product_collection": "",
+            "product_link_1": "",
+            "product_link_2": "",
+            "product_link_3": "",
+            "product_link_4": "",
+            "product_link_5": "",
+            "product_link_6": "",
+            "product_link_7": "",
+            "product_link_8": "",
+            "product_link_9": "",
+            "product_link_10": "",
+            "product_link_11": "",
+            "product_link_12": ""
+          }
+        },
+        "slide_DywUtF": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "slide_bg_image": "shopify://shop_images/scrubber-dryer-clean-floor_1.jpg",
+            "slide_bg_color": "rgba(0,0,0,0)",
+            "slide_bg_gradient": "",
+            "logo_image": "shopify://shop_images/logo1_31677911-3573-4090-975a-c56a1a3be985.png",
+            "content_alignment": "center",
+            "text_alignment": "center",
+            "sub_heading": "",
+            "heading": "Scrubber Dryers Of All <strong>Sizes</strong> For <strong>All Sectors</strong>",
+            "tagline": "It's What We Do!",
+            "button_text": "Read More",
+            "button_link": "",
+            "grid_columns": 3,
+            "grid_rows": 3,
+            "product_collection": "",
+            "product_image_1": "shopify://shop_images/innova_85_front_1.png",
+            "product_link_1": "",
+            "product_image_2": "shopify://shop_images/comac_innova_back_3.png",
+            "product_link_2": "",
+            "product_image_3": "shopify://shop_images/comac_innova_85_comfort_1_1.png",
+            "product_link_3": "",
+            "product_image_4": "shopify://shop_images/comac_innova_85.png",
+            "product_link_4": "",
+            "product_image_5": "shopify://shop_images/comac_innova_55_charger.png",
+            "product_link_5": "",
+            "product_image_6": "shopify://shop_images/comac_innova_55_batteries.png",
+            "product_link_6": "",
+            "product_image_7": "shopify://shop_images/comac_innova_55_side.png",
+            "product_link_7": "",
+            "product_image_8": "shopify://shop_images/comac_innova_55_1.png",
+            "product_link_8": "",
+            "product_image_9": "shopify://shop_images/innova55_a_e5cefa7c-323b-4aba-81ad-a274cb107aff.jpg",
+            "product_link_9": "",
+            "product_link_10": "",
+            "product_link_11": "",
+            "product_link_12": ""
+          }
+        },
+        "ad_banner_iWYaqT": {
+          "type": "ad_banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/pacvac-battery-backpack-vacuum-home_1.webp",
+            "banner_link": "shopify://pages/pacvac-backpack-vacuum-hoover-range"
+          }
+        },
+        "ad_banner_pbrw9t": {
+          "type": "ad_banner",
+          "settings": {
+            "banner_image": "shopify://shop_images/i-mop_1.webp",
+            "banner_link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer"
+          }
+        }
+      },
+      "block_order": [
+        "slider_revolution_slider_general_DrqcgT",
+        "slide_XBHBqM",
+        "slide_DywUtF",
+        "ad_banner_iWYaqT",
+        "ad_banner_pbrw9t"
+      ],
+      "name": "Slideshow + Products Grid",
+      "settings": {
+        "container": "1570",
+        "layout_gap": 20,
+        "left_width": 250,
+        "right_banners_width": 250,
+        "autoplay": true,
+        "slideshow_speed": "5000",
+        "slideshow_transition": "true",
+        "dots": "shape",
+        "arrow_active": true,
+        "slide_min_height": 400,
+        "border_radius": 0,
+        "content_area_width": 45,
+        "content_padding": 40,
+        "logo_max_width": 180,
+        "sub_heading_size": 14,
+        "sub_heading_color": "#888888",
+        "heading_size": 32,
+        "heading_color": "#333333",
+        "heading_bold_color": "#fe2111",
+        "tagline_size": 20,
+        "tagline_color": "#333333",
+        "button_font_size": 14,
+        "button_padding_x": 30,
+        "button_padding_y": 12,
+        "button_border_radius": 4,
+        "button_bg_color": "#fe2111",
+        "button_text_color": "#ffffff",
+        "button_border_color": "#fe2111",
+        "button_bg_hover": "#fe2111",
+        "button_text_hover": "#ffffff",
+        "button_border_hover": "#fe2111",
+        "product_grid_gap": 15,
+        "product_grid_padding": 15,
+        "product_grid_bg": "#f9f9f9",
+        "product_max_height": 100,
+        "dots_color": "#ffffff80",
+        "dots_border_color": "#ffffff80",
+        "dots_active_color": "#fe2111",
+        "dots_active_border": "#ffffff",
+        "arrow_size": 40,
+        "arrow_icon": "#333333",
+        "arrow_bg": "#fe2111",
+        "arrow_border": "#dddddd",
+        "arrow_icon_hover": "#ffffff",
+        "arrow_bg_hover": "#333333",
+        "arrow_border_hover": "#333333",
+        "banners_gap": 5,
+        "banner_border_radius": 8,
+        "banner_shadow": "0 2px 10px rgba(0,0,0,0.1)",
+        "section_bg_color": "#ffffff",
+        "section_bg_gradient": "",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "trust-bar": {
+      "type": "policies-block",
+      "blocks": {
+        "policy-1": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d=\"M64 160C64 124.7 92.7 96 128 96L416 96C451.3 96 480 124.7 480 160L480 192L530.7 192C547.7 192 564 198.7 576 210.7L621.3 256C633.3 268 640 284.3 640 301.3L640 448C640 483.3 611.3 512 576 512L572.7 512C562.3 548.9 528.3 576 488 576C447.7 576 413.8 548.9 403.3 512L300.7 512C290.3 548.9 256.3 576 216 576C175.7 576 141.8 548.9 131.3 512L128 512C92.7 512 64 483.3 64 448L64 400L24 400C10.7 400 0 389.3 0 376C0 362.7 10.7 352 24 352L136 352C149.3 352 160 341.3 160 328C160 314.7 149.3 304 136 304L24 304C10.7 304 0 293.3 0 280C0 266.7 10.7 256 24 256L200 256C213.3 256 224 245.3 224 232C224 218.7 213.3 208 200 208L24 208C10.7 208 0 197.3 0 184C0 170.7 10.7 160 24 160L64 160zM576 352L576 301.3L530.7 256L480 256L480 352L576 352zM256 488C256 465.9 238.1 448 216 448C193.9 448 176 465.9 176 488C176 510.1 193.9 528 216 528C238.1 528 256 510.1 256 488zM488 528C510.1 528 528 510.1 528 488C528 465.9 510.1 448 488 448C465.9 448 448 465.9 448 488C448 510.1 465.9 528 488 528z\"/></svg>",
+            "icon_width": 60,
+            "icon_height": 30,
+            "icon_mg_right": 21,
+            "text": "FREE DELIVERY OVER €100",
+            "type_text_font": "font_1",
+            "font_size_text": 12,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 2,
+            "font_weight_text": "600",
+            "font_style_text": "italic",
+            "description": "in Ireland",
+            "font_size_des": 12,
+            "font_size_des_mb": 14,
+            "margin_bottom_description": 0,
+            "button": "",
+            "button_font_size": 76,
+            "button_font_size_mb": 12,
+            "link": ""
+          }
+        },
+        "policy-2": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d=\"M171.5 38.8C192.3 4 236.5-10 274 7.6l7.2 3.8C316 32.3 330 76.5 312.4 114l0 0-14.1 30 109.7 0 7.4 .4c36.3 3.7 64.6 34.4 64.6 71.6 0 13.2-3.6 25.4-9.8 36 6.1 10.6 9.7 22.8 9.8 36 0 18.3-6.9 34.8-18 47.5 1.3 5.3 2 10.8 2 16.5 0 25.1-12.9 47-32.2 59.9-1.9 35.5-29.4 64.2-64.4 67.7l-7.4 .4-104.1 0c-18 0-35.9-3.4-52.6-9.9l-7.1-3-.7-.3-6.6-3.2-.7-.3-12.2-6.5c-12.3-6.5-23.3-14.7-32.9-24.1-4.1 26.9-27.3 47.4-55.3 47.4l-32 0c-30.9 0-56-25.1-56-56L0 200c0-30.9 25.1-56 56-56l32 0c10.8 0 20.9 3.1 29.5 8.5l50.1-106.5 .6-1.2 2.7-5 .6-.9zM56 192c-4.4 0-8 3.6-8 8l0 224c0 4.4 3.6 8 8 8l32 0c4.4 0 8-3.6 8-8l0-224c0-4.4-3.6-8-8-8l-32 0zM253.6 51c-14.8-6.9-32.3-1.6-40.7 12l-2.2 4-56.8 120.9c-3.5 7.5-5.5 15.5-6 23.7l-.1 4.2 0 112.9 .2 7.9c2.4 32.7 21.4 62.1 50.7 77.7l11.5 6.1 6.3 3.1c12.4 5.6 25.8 8.5 39.4 8.5l104.1 0 2.4-.1c12.1-1.2 21.6-11.5 21.6-23.9l-.2-2.6c-.1-.9-.2-1.7-.4-2.6-2.7-12.1 4.3-24.2 16-28 9.7-3.1 16.6-12.2 16.6-22.8 0-4.3-1.1-8.2-3.1-11.8-6.3-11.1-2.8-25.2 8-32 6.8-4.3 11.2-11.8 11.2-20.2 0-7.1-3.1-13.5-8.2-18-5.2-4.6-8.2-11.1-8.2-18s3-13.4 8.2-18c5.1-4.5 8.2-10.9 8.2-18l-.1-2.4c-1.1-11.3-10.1-20.3-21.4-21.4l-2.4-.1-147.5 0c-8.2 0-15.8-4.2-20.2-11.1-4.4-6.9-5-15.7-1.5-23.1L269 93.6c7-15 1.4-32.7-12.5-41L253.6 51z\"/></svg>",
+            "icon_width": 30,
+            "icon_height": 30,
+            "icon_mg_right": 20,
+            "text": "99% Positive",
+            "type_text_font": "font_1",
+            "font_size_text": 15,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "600",
+            "font_style_text": "normal",
+            "description": "Customer Feedback",
+            "font_size_des": 12,
+            "font_size_des_mb": 14,
+            "margin_bottom_description": 0,
+            "button": "",
+            "button_font_size": 14,
+            "button_font_size_mb": 12,
+            "link": ""
+          }
+        },
+        "policy-3": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d=\"M65.9 228.5c13.3-93 93.4-164.5 190.1-164.5 53 0 101 21.5 135.8 56.2 .2 .2 .4 .4 .6 .6l7.6 7.2-47.9 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 53.4-11.3-10.7C390.5 28.6 326.5 0 256 0 127 0 20.3 95.4 2.6 219.5 .1 237 12.2 253.2 29.7 255.7s33.7-9.7 36.2-27.1zm443.5 64c2.5-17.5-9.7-33.7-27.1-36.2s-33.7 9.7-36.2 27.1c-13.3 93-93.4 164.5-190.1 164.5-53 0-101-21.5-135.8-56.2-.2-.2-.4-.4-.6-.6l-7.6-7.2 47.9 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 320c-8.5 0-16.7 3.4-22.7 9.5S-.1 343.7 0 352.3l1 127c.1 17.7 14.6 31.9 32.3 31.7S65.2 496.4 65 478.7l-.4-51.5 10.7 10.1c46.3 46.1 110.2 74.7 180.7 74.7 129 0 235.7-95.4 253.4-219.5z\"/></svg>",
+            "icon_width": 30,
+            "icon_height": 30,
+            "icon_mg_right": 20,
+            "text": "365 days",
+            "type_text_font": "font_1",
+            "font_size_text": 14,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "600",
+            "font_style_text": "normal",
+            "description": "24/7 Shopping",
+            "font_size_des": 12,
+            "font_size_des_mb": 14,
+            "margin_bottom_description": 0,
+            "button": "",
+            "button_font_size": 14,
+            "button_font_size_mb": 12,
+            "link": ""
+          }
+        },
+        "policy-4": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 576 512\"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d=\"M288-16c-13.3 0-24 10.7-24 24l0 12-1.8 0c-36.6 0-66.2 29.7-66.2 66.2 0 33.4 24.9 61.6 58 65.7l61 7.6c5.1 .6 9 5 9 10.2 0 5.7-4.6 10.2-10.2 10.2L240 180c-15.5 0-28 12.5-28 28s12.5 28 28 28l24 0 0 12c0 13.3 10.7 24 24 24s24-10.7 24-24l0-12 1.8 0c36.6 0 66.2-29.7 66.2-66.2 0-33.4-24.9-61.6-58-65.7l-61-7.6c-5.1-.6-9-5-9-10.2 0-5.7 4.6-10.2 10.2-10.2L328 76c15.5 0 28-12.5 28-28s-12.5-28-28-28l-16 0 0-12c0-13.3-10.7-24-24-24zM109.3 341.5L66.7 384 32 384c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l320.5 0c29 0 57.3-9.3 80.7-26.5l126.6-93.3c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416 280 416c-13.3 0-24-10.7-24-24s10.7-24 24-24l72 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-152.2 0c-33.9 0-66.5 13.5-90.5 37.5z\"/></svg>",
+            "icon_width": 30,
+            "icon_height": 30,
+            "icon_mg_right": 20,
+            "text": "Safe Payment",
+            "type_text_font": "font_1",
+            "font_size_text": 14,
+            "font_size_text_mb": 16,
+            "mg_bottom_text": 0,
+            "font_weight_text": "600",
+            "font_style_text": "normal",
+            "description": "Secure System",
+            "font_size_des": 12,
+            "font_size_des_mb": 14,
+            "margin_bottom_description": 0,
+            "button": "",
+            "button_font_size": 14,
+            "button_font_size_mb": 12,
+            "link": ""
+          }
+        },
+        "text_TFbxgw": {
+          "type": "Text",
+          "settings": {
+            "icon_type": "text",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d=\"M96.5 160L96.5 309.5C96.5 326.5 103.2 342.8 115.2 354.8L307.2 546.8C332.2 571.8 372.7 571.8 397.7 546.8L547.2 397.3C572.2 372.3 572.2 331.8 547.2 306.8L355.2 114.8C343.2 102.7 327 96 310 96L160.5 96C125.2 96 96.5 124.7 96.5 160zM208.5 176C226.2 176 240.5 190.3 240.5 208C240.5 225.7 226.2 240 208.5 240C190.8 240 176.5 225.7 176.5 208C176.5 190.3 190.8 176 208.5 176z\"/></svg>",
+            "icon_width": 36,
+            "icon_height": 36,
+            "icon_mg_right": 15,
+            "text": "Only leading",
+            "type_text_font": "font_1",
+            "font_size_text": 14,
+            "font_size_text_mb": 13,
+            "mg_bottom_text": 2,
+            "font_weight_text": "600",
+            "font_style_text": "normal",
+            "description": "Brands",
+            "font_size_des": 13,
+            "font_size_des_mb": 12,
+            "margin_bottom_description": 0,
+            "button": "",
+            "button_font_size": 14,
+            "button_font_size_mb": 12,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "policy-1",
+        "policy-2",
+        "policy-3",
+        "policy-4",
+        "text_TFbxgw"
+      ],
+      "settings": {
+        "container": "1570",
+        "padding_full_width": 30,
+        "policies_block_swipe_on_mobile": "slider",
+        "policies_bg": "#ffffff",
+        "policies_bg_gradient": "",
+        "border": "top_bottom",
+        "border_color": "#000000",
+        "item_border_width": 2,
+        "item_border_color": "#acacac",
+        "item_border_hover_color": "#acacac",
+        "align_items": "top",
+        "text_align_items": "center",
+        "content_text_align": "center",
+        "enable_item_distance": true,
+        "item_padding_top": 16,
+        "item_padding_bottom": 13,
+        "item_padding_left_right": 20,
+        "item_radius": 4,
+        "bg_color_block": "#ffffff",
+        "color_block": "#232323",
+        "des_color": "#666666",
+        "color_icon": "#6fb31a",
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 25,
+        "mg_top_mobile": 20,
+        "mg_bottom_desktop": 30,
+        "mg_bottom_tablet": 25,
+        "mg_bottom_mobile": 20
+      }
+    },
+    "featured-banners": {
+      "type": "spotlight-block",
+      "blocks": {
+        "banner-1": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/robotic-cleaning-banner_1.webp",
+            "title_align": "left",
+            "enable_absolute": true,
+            "enable_absolute_mobile": false,
+            "bg_color_content": "rgba(0,0,0,0)",
+            "bg_color_content_mb": "",
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "align_items_spacing_top": 35,
+            "align_items_spacing_bottom": 35,
+            "align_items_spacing_lr": 20,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Robotic Cleaning Machines<br> For All Sectors",
+            "color_title": "#232323",
+            "fontsize_title": 28,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "700",
+            "enable_style_italic": false,
+            "border_title": "none",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#232323",
+            "fontsize_des": 28,
+            "mg_top_des": 10,
+            "enable_des_hover": false,
+            "button_style": "button_1",
+            "button": "Read More",
+            "link": "shopify://pages/best-robotic-cleaning-solutions-ireland-1",
+            "fontsize_btn": 14,
+            "button_width": 160,
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "enable_button_hover": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30,
+            "color_button": "#ffffff",
+            "border_color_button": "#4dac8b",
+            "bg_color_button": "#42da35",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#3d9b7a",
+            "bg_color_button_hover": "#3d9b7a",
+            "bg_color_button_gradient_hover": ""
+          }
+        },
+        "banner-2": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/tersano-banner-2.webp",
+            "title_align": "left",
+            "enable_absolute": true,
+            "enable_absolute_mobile": false,
+            "bg_color_content": "",
+            "bg_color_content_mb": "",
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "align_items_spacing_top": 35,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "Turn Water Into A<br>Powerful Sanitiser &<br>Cleaner with Tersano",
+            "color_title": "#191717",
+            "fontsize_title": 28,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "700",
+            "enable_style_italic": false,
+            "border_title": "none",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#191717",
+            "fontsize_des": 14,
+            "mg_top_des": 0,
+            "enable_des_hover": false,
+            "button_style": "button_1",
+            "button": "Read More",
+            "link": "shopify://pages/tersone",
+            "fontsize_btn": 14,
+            "button_width": 135,
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "enable_button_hover": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30,
+            "color_button": "#ffffff",
+            "border_color_button": "#4dac8b",
+            "bg_color_button": "#3cd21e",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#3d9b7a",
+            "bg_color_button_hover": "#3d9b7a",
+            "bg_color_button_gradient_hover": ""
+          }
+        },
+        "banner-3": {
+          "type": "image",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/i-mop-banner-2.webp",
+            "title_align": "left",
+            "enable_absolute": true,
+            "enable_absolute_mobile": false,
+            "bg_color_content": "",
+            "bg_color_content_mb": "",
+            "align_items": "center",
+            "align_items_spacing_top_bottom_position": 0,
+            "align_items_spacing_top_bottom_position_mb": 0,
+            "align_items_spacing_top": 35,
+            "align_items_spacing_bottom": 10,
+            "align_items_spacing_lr": 10,
+            "sub_title": "",
+            "border_sub_title": false,
+            "color_sub_title": "#232323",
+            "fontsize_sub_title": 20,
+            "font_weight_sub_title": "500",
+            "mg_bottom_sub_title": 10,
+            "title": "i-Mop - The World's<br>Most Flexible Scrubber Dryer",
+            "color_title": "#191717",
+            "fontsize_title": 28,
+            "fontsize_title_mb": 20,
+            "font_weight_title": "700",
+            "enable_style_italic": false,
+            "border_title": "none",
+            "border_color_title": "",
+            "des": "",
+            "color_des": "#191717",
+            "fontsize_des": 14,
+            "mg_top_des": 10,
+            "enable_des_hover": false,
+            "button_style": "button_1",
+            "button": "Read More",
+            "link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer",
+            "fontsize_btn": 14,
+            "button_width": 160,
+            "bg_opacity_button": 1,
+            "enable_button_custom_border": false,
+            "enable_button_hover": false,
+            "btn_text_transform": "uppercase",
+            "btn_icon": "",
+            "mg_top_btn": 30,
+            "color_button": "#ffffff",
+            "border_color_button": "#4dac8b",
+            "bg_color_button": "#36bf2b",
+            "bg_color_button_gradient": "",
+            "color_button_hover": "#ffffff",
+            "border_color_button_hover": "#3d9b7a",
+            "bg_color_button_hover": "#3d9b7a",
+            "bg_color_button_gradient_hover": ""
+          }
+        }
+      },
+      "block_order": [
+        "banner-1",
+        "banner-2",
+        "banner-3"
+      ],
+      "settings": {
+        "container": "1570",
+        "padding_full_width": 0,
+        "disable_padding_content": false,
+        "mg_minus_desktop": 0,
+        "mg_minus_mobile": 0,
+        "block_layout": "grid",
+        "spotlight_block_swipe_on_mobile": "slider",
+        "column": "3",
+        "column_mb": "1",
+        "center_mode": false,
+        "item_distance": 20,
+        "item_radius": 8,
+        "enable_arrows": true,
+        "enable_arrows_mb": false,
+        "position_horizontal_slick_arrow": "0",
+        "enable_dots": true,
+        "enable_dots_mb": true,
+        "display_border_bottom": false,
+        "border_color": "#e3e3e3",
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "enable_custom_position_title": false,
+        "spotlight_block_title": "",
+        "enable_border_title": true,
+        "use_special_header_layout": false,
+        "sl_icon_position": "left",
+        "sl_icon": "",
+        "sl_icon_color": "#232323",
+        "bg_color": "#e11106",
+        "color_title": "#232323",
+        "color_title_mb": "",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 45,
+        "spotlight_block_des": "",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 30,
+        "fontsize_des": 16,
+        "title_align": "center",
+        "view_all_style": "style_1",
+        "view_all": "",
+        "view_all_fs": 12,
+        "view_all_align": "center",
+        "font_weight_view_all": "400",
+        "mg_bottom_view": 30,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "display_spotlight_button": false,
+        "button_position": "bottom",
+        "spotlight_button_text": "",
+        "spotlight_button_link": "",
+        "color_button": "#3c3c3c",
+        "border_color_button": "#232323",
+        "bg_color_button": "#232323",
+        "bg_color_gradient_button": "",
+        "color_button_hover": "#232323",
+        "border_color_button_hover": "#ffffff",
+        "bg_color_button_hover": "#ffffff",
+        "bg_color_gradient_button_hover": "",
+        "maxwidth_button": 230,
+        "mg_top_button": 30,
+        "mg_bottom_button": 30,
+        "enable_plus_icon": false,
+        "color_plus_icon": "#ffffff",
+        "enable_content_border": false,
+        "content_border_color": "#e2e2e2",
+        "enable_shadow": false,
+        "shadow_horizontal_length": 0,
+        "shadow_vertical_length": 0,
+        "shadow_blur_radius": 0,
+        "shadow_spread": 0,
+        "shadow_color": "transparent",
+        "shadow_inset": "no",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 40,
+        "mg_bottom_mobile": 30
+      }
+    },
+    "tabbed_products_slider_HXi3MY": {
+      "type": "tabbed-products-slider",
+      "blocks": {
+        "tab_MMMzPG": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Sweepers",
+            "collection": "machines-sweepers",
+            "show_badge": false
+          }
+        },
+        "tab_V9YrCd": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Rotary Cleaning Machines",
+            "collection": "machines-rotary-cleaning-machines",
+            "show_badge": false
+          }
+        },
+        "tab_DWD7eL": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Hoovers and Vacuums",
+            "collection": "machines-hoovers-and-vacuums",
+            "show_badge": false
+          }
+        },
+        "tab_rAcVTj": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Carpet Cleaning Machines",
+            "collection": "carpet-cleaning-carpet-cleaning-machinery",
+            "show_badge": false
+          }
+        },
+        "tab_4PMpbe": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Scrubber Dryers",
+            "collection": "machines-scrubber-dryers",
+            "show_badge": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_MMMzPG",
+        "tab_V9YrCd",
+        "tab_DWD7eL",
+        "tab_rAcVTj",
+        "tab_4PMpbe"
+      ],
+      "name": "Tabbed Products Slider",
+      "settings": {
+        "section_width": "custom",
+        "custom_max_width": 1600,
+        "heading": "Cleaning Machines",
+        "view_all_text": "View All",
+        "view_all_link": "shopify://collections/machines-1",
+        "products_per_view": 6,
+        "show_stars": true,
+        "show_description": true,
+        "button_text": "More Details",
+        "bg_color": "#ffffff",
+        "title_color": "#333333",
+        "active_tab_color": "#6fb31a",
+        "button_bg": "#6fb31a",
+        "button_text_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "product_rich_tab_jtEz8Q": {
+      "type": "product-rich-tab",
+      "blocks": {
+        "product_tabs_iaaVGK": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Collection",
+            "collection": ""
+          }
+        },
+        "product_tabs_JGPtFG": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Scrubber Dryers",
+            "collection": "scrubber-dryers"
+          }
+        },
+        "product_tabs_h4mjJp": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Sweepers",
+            "collection": "sweepers"
+          }
+        },
+        "product_tabs_7baXdx": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Rotary Cleaning Machines",
+            "collection": "rotary-machines"
+          }
+        },
+        "product_tabs_C6ArBt": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Hoovers and Vacuums",
+            "collection": "vacuums"
+          }
+        }
+      },
+      "block_order": [
+        "product_tabs_iaaVGK",
+        "product_tabs_JGPtFG",
+        "product_tabs_h4mjJp",
+        "product_tabs_7baXdx",
+        "product_tabs_C6ArBt"
+      ],
+      "disabled": true,
+      "name": "Product Tabs Custom",
+      "settings": {
+        "container": "container",
+        "product_bg": "#f9f9f9",
+        "product_bg_gradient": "",
+        "product_block_limit": 56,
+        "product_block_title": "Cleaning Machines ",
+        "fontsize_title": 28,
+        "fontsize_title_mb": 22,
+        "color_title": "#222222",
+        "title_align": "left",
+        "view_all": "view",
+        "link_view_all": "shopify://collections",
+        "mg_bottom_title_tab": 25,
+        "separation": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 12,
+        "font_weight_tab": "600",
+        "font_weight_active_tab": "700",
+        "color_tab": "#555555",
+        "bg_color_tab": "#ffffff",
+        "color_tab_active": "#28a745",
+        "bg_color_tab_active": "#e8f5e9",
+        "mg_top_desktop": 60,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 40,
+        "mg_bottom_desktop": 60,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 40
+      }
+    },
+    "tow_banner_image_pGJKm8": {
+      "type": "tow-banner-image",
+      "name": "Two Images",
+      "settings": {
+        "image_1": "shopify://shop_images/service-banner-new_1.jpg",
+        "link_1": "shopify://pages/service-maintenance",
+        "image_2": "shopify://shop_images/training-banner-new.jpg",
+        "link_2": "shopify://pages/about-us",
+        "image_height": 200,
+        "image_height_mobile": 150,
+        "border_radius": 16,
+        "gap": 10,
+        "margin_top": 20,
+        "margin_bottom": 20,
+        "padding_x": 15,
+        "padding_y": 20,
+        "section_bg": "#ffffff"
+      }
+    },
+    "machines-section": {
+      "type": "product-tab-block",
+      "blocks": {
+        "tab-all": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Floor Care",
+            "collection": "cleaning-agents-floor-care"
+          }
+        },
+        "tab-scrubbers": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Maintainers & Cleaners",
+            "collection": "cleaning-agents-floor-care-maintainers-cleaners"
+          }
+        },
+        "tab-sweepers": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Degreasers",
+            "collection": "cleaning-agents-floor-care-degreasers"
+          }
+        },
+        "tab-vacuums": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Finishes & Coatings",
+            "collection": "cleaning-agents-floor-care-finishes-coatings"
+          }
+        },
+        "tab-polishers": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Carpet Cleaning Agents",
+            "collection": "cleaning-agents-carpet-cleaning-agents"
+          }
+        }
+      },
+      "block_order": [
+        "tab-all",
+        "tab-scrubbers",
+        "tab-sweepers",
+        "tab-vacuums",
+        "tab-polishers"
+      ],
+      "settings": {
+        "container": "container",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "product_block_limit": 8,
+        "product_block_title": "Cleaning Agents",
+        "fontsize_title": 29,
+        "fontsize_title_mb": 24,
+        "color_title": "#232323",
+        "title_align": "left",
+        "view_all": "View All",
+        "link_view_all": "shopify://collections/cleaning-agents",
+        "mg_bottom_title_tab": 24,
+        "separation": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "500",
+        "font_weight_active_tab": "700",
+        "color_tab": "#232323",
+        "bg_color_tab": "#ffffff",
+        "color_tab_active": "#4dac8b",
+        "bg_color_tab_active": "#ffffff",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 40,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 40,
+        "mg_bottom_mobile": 30
+      }
+    },
+    "tow_banner_image_fzCEDk": {
+      "type": "tow-banner-image",
+      "name": "Two Images",
+      "settings": {
+        "image_1": "shopify://shop_images/tersano-bottom-banner_1.jpg",
+        "link_1": "shopify://collections/cleaning-products-tersano",
+        "image_2": "shopify://shop_images/prochem-bottom-banner.jpg",
+        "link_2": "shopify://collections/prochem",
+        "image_height": 200,
+        "image_height_mobile": 150,
+        "border_radius": 16,
+        "gap": 10,
+        "margin_top": 20,
+        "margin_bottom": 20,
+        "padding_x": 15,
+        "padding_y": 20,
+        "section_bg": "#ffffff"
+      }
+    },
+    "cleaning-products": {
+      "type": "product-tab-block",
+      "blocks": {
+        "cp-all": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "All Products",
+            "collection": "consumables"
+          }
+        },
+        "cp-floor": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Floor Care",
+            "collection": "consumables-floor-pads"
+          }
+        },
+        "cp-washroom": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Washroom",
+            "collection": "consumables-soap-hand-wash"
+          }
+        },
+        "cp-kitchen": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Kitchen",
+            "collection": "browse-by-environment-kitchen-cleaning"
+          }
+        },
+        "cp-disinfectants": {
+          "type": "ProductTabs",
+          "settings": {
+            "title": "Disinfectants",
+            "collection": "cleaning-agents-sanitisers-disinfectants"
+          }
+        }
+      },
+      "block_order": [
+        "cp-all",
+        "cp-floor",
+        "cp-washroom",
+        "cp-kitchen",
+        "cp-disinfectants"
+      ],
+      "settings": {
+        "container": "container",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "product_block_limit": 6,
+        "product_block_title": "Consumables ",
+        "fontsize_title": 32,
+        "fontsize_title_mb": 24,
+        "color_title": "#232323",
+        "title_align": "left",
+        "view_all": "View all",
+        "link_view_all": "shopify://collections/consumables",
+        "mg_bottom_title_tab": 24,
+        "separation": true,
+        "fontsize_tab": 14,
+        "fontsize_tab_mb": 14,
+        "font_weight_tab": "500",
+        "font_weight_active_tab": "700",
+        "color_tab": "#232323",
+        "bg_color_tab": "#ffffff",
+        "color_tab_active": "#4dac8b",
+        "bg_color_tab_active": "#f8f8f8",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 40,
+        "mg_bottom_mobile": 30
+      }
+    },
+    "tow_banner_image_3BxHz4": {
+      "type": "tow-banner-image",
+      "name": "Two Images",
+      "settings": {
+        "image_1": "shopify://shop_images/wepa-banner.jpg",
+        "link_1": "shopify://collections/consumables-paper",
+        "image_2": "shopify://shop_images/rhino-floorpads-banner.jpg",
+        "link_2": "shopify://collections/consumables-floor-pads",
+        "image_height": 200,
+        "image_height_mobile": 150,
+        "border_radius": 16,
+        "gap": 10,
+        "margin_top": 20,
+        "margin_bottom": 20,
+        "padding_x": 15,
+        "padding_y": 20,
+        "section_bg": "#ffffff"
+      }
+    },
+    "product_block_vertical_fxFxYn": {
+      "type": "product-block-vertical",
+      "name": "t:sections.product_block_vetical.name",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "cleaning-equipment-1",
+        "new_title": "New Products",
+        "new_collection": "browse-by-industry-hotel-cleaning",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "carpet-cleaning-carpet-cleaning-solutions",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_apDUBm": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_RALVw3": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_RALVw3"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "1570",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "slideshow_with_products_G9p9Gx",
+    "trust-bar",
+    "featured-banners",
+    "tabbed_products_slider_HXi3MY",
+    "product_rich_tab_jtEz8Q",
+    "tow_banner_image_pGJKm8",
+    "machines-section",
+    "tow_banner_image_fzCEDk",
+    "cleaning-products",
+    "tow_banner_image_3BxHz4",
+    "product_block_vertical_fxFxYn",
+    "newsletter_apDUBm"
+  ]
+}

@@ -1,0 +1,361 @@
+<div class="content-layout-section section-{{ section.id }}">
+    <div class="cl-container">
+        <!-- Top Heading (Left) -->
+        {%- if section.settings.top_heading != blank -%}
+            <h2 class="top-heading">{{ section.settings.top_heading }}</h2>
+        {%- endif -%}
+        
+        <!-- Image Left + Content Right -->
+        <div class="image-content-row">
+            <div class="row-image">
+                {%- if section.settings.image != blank -%}
+                    <img src="{{ section.settings.image | image_url: width: 800 }}" alt="{{ section.settings.top_heading }}" loading="lazy">
+                {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+            </div>
+            <div class="row-content">
+                {%- if section.settings.content_heading != blank -%}
+                    <h3 class="content-heading">{{ section.settings.content_heading }}</h3>
+                {%- endif -%}
+                {%- if section.settings.content_text != blank -%}
+                    <div class="content-text">{{ section.settings.content_text }}</div>
+                {%- endif -%}
+                {%- if section.settings.button_text != blank -%}
+                    <a href="{{ section.settings.button_link | default: '#' }}" class="content-button">
+                        {{ section.settings.button_text }}
+                    </a>
+                {%- endif -%}
+            </div>
+        </div>
+        
+        <!-- Bottom Section: Heading + Full Width Text -->
+        <div class="bottom-section">
+            {%- if section.settings.bottom_heading != blank -%}
+                <h3 class="bottom-heading">{{ section.settings.bottom_heading }}</h3>
+            {%- endif -%}
+            {%- if section.settings.bottom_text != blank -%}
+                <div class="bottom-text">{{ section.settings.bottom_text }}</div>
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .cl-container {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Heading */
+.section-{{ section.id }} .top-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 30px 0;
+    line-height: 1.3;
+    text-align: left;
+}
+
+/* Image + Content Row */
+.section-{{ section.id }} .image-content-row {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.section-{{ section.id }} .row-image {
+    flex: 0 0 {{ section.settings.image_width }}%;
+}
+
+.section-{{ section.id }} .row-image img {
+    width: 100%;
+    height: auto;
+    border-radius: {{ section.settings.image_radius }}px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.section-{{ section.id }} .row-image .placeholder-svg {
+    width: 100%;
+    height: 350px;
+    background: #f5f5f5;
+    border-radius: {{ section.settings.image_radius }}px;
+}
+
+.section-{{ section.id }} .row-content {
+    flex: 1;
+}
+
+.section-{{ section.id }} .content-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 20px 0;
+}
+
+.section-{{ section.id }} .content-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: {{ section.settings.text_color }};
+    margin-bottom: 25px;
+}
+
+.section-{{ section.id }} .content-text p {
+    margin: 0 0 15px 0;
+}
+
+.section-{{ section.id }} .content-text p:last-child {
+    margin-bottom: 0;
+}
+
+.section-{{ section.id }} .content-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .content-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+    transform: translateY(-2px);
+}
+
+/* Bottom Section */
+.section-{{ section.id }} .bottom-section {
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+}
+
+.section-{{ section.id }} .bottom-heading {
+    font-size: 22px;
+    font-weight: 600;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.section-{{ section.id }} .bottom-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: {{ section.settings.text_color }};
+    text-align: left;
+}
+
+.section-{{ section.id }} .bottom-text p {
+    margin: 0 0 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .image-content-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .section-{{ section.id }} .row-image {
+        flex: none;
+        width: 100%;
+    }
+    
+    .section-{{ section.id }} .top-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-{{ section.id }} .top-heading {
+        font-size: 24px;
+    }
+    
+    .section-{{ section.id }} .content-heading,
+    .section-{{ section.id }} .bottom-heading {
+        font-size: 20px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Content Layout",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Top Section"
+        },
+        {
+            "type": "text",
+            "id": "top_heading",
+            "label": "Top Heading",
+            "default": "Our Services"
+        },
+        {
+            "type": "header",
+            "content": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "range",
+            "id": "image_width",
+            "label": "Image Width",
+            "min": 30,
+            "max": 60,
+            "step": 5,
+            "unit": "%",
+            "default": 45
+        },
+        {
+            "type": "range",
+            "id": "image_radius",
+            "label": "Image Radius",
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "px",
+            "default": 8
+        },
+        {
+            "type": "header",
+            "content": "Right Content"
+        },
+        {
+            "type": "text",
+            "id": "content_heading",
+            "label": "Content Heading",
+            "default": "Professional Solutions"
+        },
+        {
+            "type": "richtext",
+            "id": "content_text",
+            "label": "Content Text",
+            "default": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use. Our solutions help businesses maintain cleaner, healthier environments.</p><p>With years of experience, we offer reliable products and excellent customer support.</p>"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Learn More"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "header",
+            "content": "Bottom Section"
+        },
+        {
+            "type": "text",
+            "id": "bottom_heading",
+            "label": "Bottom Heading",
+            "default": "Why Choose Us"
+        },
+        {
+            "type": "richtext",
+            "id": "bottom_text",
+            "label": "Bottom Text",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>"
+        },
+        {
+            "type": "header",
+            "content": "Typography"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Top Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 36
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "presets": [
+        {
+            "name": "Content Layout"
+        }
+    ]
+}
+{% endschema %}

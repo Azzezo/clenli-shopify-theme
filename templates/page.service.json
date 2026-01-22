@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-service",
+      "blocks": {
+        "content_sam": {
+          "type": "content_block",
+          "settings": {
+            "block_title": "Service and Maintenance Application (CD SAM)",
+            "block_content": "<p>As your reliable cleaning products and equipment supplier Clenli Direct will provide you with a hassle free service.</p><p>Along with your personally appointed service manager we will form a support team to cater for your unique requirements and ensure consistency of contact with a personalised service.</p><p>This is backed up with our bespoke service application (SAM) that creates a complete machine log for every site and machine.</p><p>As a result of our clever system, it does not matter which engineer last visited your site because our service team have complete access to your machines history at their fingertips.</p><p>This enables us to reach you even faster and gives you the peace of mind knowing that your equipment will be repaired or replaced immediately in the event of a breakdown.</p><p>Importantly, our internal systems are responsible for coordinating emergency call outs in a highly reliable and timely manner. This service is available 24 hours a day if required.</p><p>At present our service system (SAM) shows we are completing 99% of our jobs on site during the first call out.</p>",
+            "show_divider": true
+          }
+        },
+        "features": {
+          "type": "features_section",
+          "disabled": true,
+          "settings": {
+            "features_title": "Why Choose Our Service",
+            "feature_1_title": "Expert Engineers",
+            "feature_1_text": "Our engineers have extensive experience and are fully trained to service all types of cleaning machinery across Ireland.",
+            "feature_2_title": "Complete Machine Logs",
+            "feature_2_text": "Our bespoke SAM application maintains detailed history for every machine at your fingertips, ensuring faster repairs.",
+            "feature_3_title": "Fast Response Times",
+            "feature_3_text": "We complete 99% of service calls on the first visit with our fully stocked service vans carrying €15,000 worth of equipment."
+          }
+        },
+        "cta": {
+          "type": "cta_section",
+          "disabled": true,
+          "settings": {
+            "cta_title": "Ready to Get Started?",
+            "cta_text": "Contact us today to discuss how we can help you deliver a better service.",
+            "cta_btn_text": "Contact Us Today",
+            "cta_btn_link": "/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "content_sam",
+        "features",
+        "cta"
+      ],
+      "settings": {
+        "page_title": "Service",
+        "hero_image": "shopify://shop_images/clenli-Service.webp",
+        "hero_content": "<p>Clenli Direct has a fully qualified service and maintenance team with over 20 years industry experience. We provide our clients with a 24 hour emergency response service to ensure that you can contact someone in case of emergency any time, day or night.</p><p>At <a href=\"/\">Clenli Direct</a> we are acutely aware of the importance of after sales service and you will find us to be very client focused. Our commitment to our customers has served us well, as is evident from our very loyal customer base. We will be there when you need us, and if required we can even provide you with replacement machinery.</p><p>ClenliDirect stocks over €180,000 worth of spare parts for client's machinery at our Dublin and Limerick bases: we also have purpose built workshop in both locations.</p><p>Moreover our service vans stock up to €15,000 worth of equipment at all times.</p><p>By managing our supply chain network and storing optimum stock levels through different collaboration systems Clenli Direct are not exposed to our manufacturers lead times; this enables us to complete 99% of service calls on the first visit.</p><p></p>",
+        "show_stats": false,
+        "stat_1_number": "20+",
+        "stat_1_label": "Years Industry Experience",
+        "stat_2_number": "€180K",
+        "stat_2_label": "Spare Parts in Stock",
+        "stat_3_number": "99%",
+        "stat_3_label": "First Visit Completion Rate",
+        "stat_4_number": "24/7",
+        "stat_4_label": "Emergency Response Service"
+      }
+    },
+    "product_block_vertical_QXhcgC": {
+      "type": "product-block-vertical",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_NNiDaA": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_dPCQEW": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_dPCQEW"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_block_vertical_QXhcgC",
+    "newsletter_NNiDaA"
+  ]
+}

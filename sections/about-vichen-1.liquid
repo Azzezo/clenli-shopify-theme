@@ -1,0 +1,361 @@
+<div class="choose-model-section section-{{ section.id }}">
+    <div class="cm-container">
+        
+        <!-- Gray Underline Top -->
+        <div class="cm-underline-top"></div>
+        
+        <!-- Header -->
+        {%- if section.settings.heading != blank -%}
+            <h2 class="cm-heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        
+        <!-- Cards Grid -->
+        <div class="cm-grid">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'card' -%}
+                    <div class="cm-card" {{ block.shopify_attributes }}>
+                        <div class="card-image">
+                            {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title }}" loading="lazy">
+                            {%- else -%}
+                                <div class="placeholder-img"></div>
+                            {%- endif -%}
+                        </div>
+                        <div class="card-content">
+                            {%- if block.settings.title != blank -%}
+                                <h3 class="card-title">{{ block.settings.title }}</h3>
+                            {%- endif -%}
+                            {%- if block.settings.description != blank -%}
+                                <p class="card-desc">{{ block.settings.description }}</p>
+                            {%- endif -%}
+                            {%- if block.settings.button_text != blank -%}
+                                <a href="{{ block.settings.button_link | default: '#' }}" class="card-button">{{ block.settings.button_text }}</a>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .cm-container {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Underline - Gray */
+.section-{{ section.id }} .cm-underline-top {
+    height: {{ section.settings.underline_height }}px;
+    background: {{ section.settings.underline_color }};
+    margin-bottom: 40px;
+}
+
+/* Header */
+.section-{{ section.id }} .cm-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    font-style: italic;
+    color: {{ section.settings.heading_color }};
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+/* Cards Grid */
+.section-{{ section.id }} .cm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+/* Card */
+.section-{{ section.id }} .cm-card {
+    text-align: center;
+}
+
+/* Card Image */
+.section-{{ section.id }} .card-image {
+    border-radius: {{ section.settings.image_radius }}px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.section-{{ section.id }} .card-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.section-{{ section.id }} .cm-card:hover .card-image img {
+    transform: scale(1.03);
+}
+
+.section-{{ section.id }} .placeholder-img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: #d0d0d0;
+}
+
+/* Card Content */
+.section-{{ section.id }} .card-content {
+    padding: 0 20px;
+}
+
+.section-{{ section.id }} .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+}
+
+.section-{{ section.id }} .card-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    font-style: italic;
+    color: {{ section.settings.text_color }};
+    margin: 0 0 25px 0;
+}
+
+/* Card Button */
+.section-{{ section.id }} .card-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_color }};
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-{{ section.id }} .card-button:hover {
+    background: {{ section.settings.button_hover_bg }};
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .cm-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-{{ section.id }} .cm-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .section-{{ section.id }} .cm-heading {
+        font-size: 26px;
+    }
+    
+    .section-{{ section.id }} .card-title {
+        font-size: 20px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Choose Model",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Header"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Choose Your Model"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "Top Underline"
+        },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "default": "#cccccc"
+        },
+        {
+            "type": "range",
+            "id": "underline_height",
+            "label": "Underline Height",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "unit": "px",
+            "default": 2
+        },
+        {
+            "type": "header",
+            "content": "Image Settings"
+        },
+        {
+            "type": "range",
+            "id": "image_radius",
+            "label": "Image Radius",
+            "min": 0,
+            "max": 30,
+            "step": 2,
+            "unit": "px",
+            "default": 12
+        },
+        {
+            "type": "header",
+            "content": "Button"
+        },
+        {
+            "type": "color",
+            "id": "button_bg",
+            "label": "Button Background",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg",
+            "label": "Button Hover",
+            "default": "#5a9216"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Text",
+            "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Section Background",
+            "default": "#f0f0f0"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#555555"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "card",
+            "name": "Model Card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Addax MT15"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "The Addax MT15 is a compact, fully electric utility vehicle built for urban logistics. With a load cargo volume, 1,000 kg payload, and a 4.5-meter turning radius, it offers exceptional versatility."
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text",
+                    "default": "View the Addax MT15"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Choose Model",
+            "blocks": [
+                {
+                    "type": "card",
+                    "settings": {
+                        "title": "Addax MT15",
+                        "description": "The Addax MT15 is a compact, fully electric utility vehicle built for urban logistics. With a load cargo volume, 1,000 kg payload, and a 4.5-meter turning radius, it offers exceptional versatility. Available in configurations like tipper, fridge, and flatbed, it's the ideal solution for efficient, eco-friendly transport.",
+                        "button_text": "View the Addax MT15"
+                    }
+                },
+                {
+                    "type": "card",
+                    "settings": {
+                        "title": "Addax MT",
+                        "description": "The Addax MT is a robust, fully electric utility vehicle with a 2 m³ cargo space. 700 kg payload and compact 3.9m width for easy urban navigation. Available in versatile configurations like tipper, dropside, box body and flatbed for efficient and eco-friendly transport.",
+                        "button_text": "View the Addax MT"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

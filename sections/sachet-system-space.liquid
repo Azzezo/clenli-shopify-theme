@@ -1,0 +1,511 @@
+<div class="product-specs-section section-{{ section.id }}">
+    <div class="specs-container">
+        <!-- Top Heading & Description -->
+        {%- if section.settings.heading != blank -%}
+            <div class="section-header">
+                <h2 class="section-heading">{{ section.settings.heading }}</h2>
+                {%- if section.settings.description != blank -%}
+                    <p class="section-description">{{ section.settings.description }}</p>
+                {%- endif -%}
+            </div>
+        {%- endif -%}
+        
+        <!-- Product Cards -->
+        <div class="product-cards-grid">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'product_card' -%}
+                    <div class="product-card" {{ block.shopify_attributes }}>
+                        <!-- Image -->
+                        <div class="card-image">
+                            {%- if block.settings.image != blank -%}
+                                <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.title }}" loading="lazy">
+                            {%- else -%}
+                                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {%- endif -%}
+                        </div>
+                        
+                        <!-- Title & Description -->
+                        <div class="card-info">
+                            <h3 class="card-title">{{ block.settings.title }}</h3>
+                            <p class="card-desc">{{ block.settings.description }}</p>
+                        </div>
+                        
+                        <!-- Divider Line -->
+                        <div class="card-line"></div>
+                        
+                        <!-- Features (Green Text) -->
+                        <div class="card-features">
+                            {%- if block.settings.feature_1 != blank -%}
+                                <span class="feature-item">{{ block.settings.feature_1 }}</span>
+                            {%- endif -%}
+                            {%- if block.settings.feature_2 != blank -%}
+                                <span class="feature-item">{{ block.settings.feature_2 }}</span>
+                            {%- endif -%}
+                            {%- if block.settings.feature_3 != blank -%}
+                                <span class="feature-item">{{ block.settings.feature_3 }}</span>
+                            {%- endif -%}
+                        </div>
+                        
+                        <!-- Divider Line -->
+                        <div class="card-line"></div>
+                        
+                        <!-- Specs Table -->
+                        <div class="card-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Sachets</span>
+                                <span class="spec-value">{{ block.settings.sachets }}</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Per Sachet</span>
+                                <span class="spec-value">{{ block.settings.per_sachet }}</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Per Pack</span>
+                                <span class="spec-value">{{ block.settings.per_pack }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
+        
+        <!-- Green Divider -->
+        <div class="section-divider"></div>
+        
+        <!-- Bottom Heading -->
+        {%- if section.settings.bottom_heading != blank -%}
+            <div class="section-bottom">
+                <h2 class="bottom-heading">{{ section.settings.bottom_heading }}</h2>
+            </div>
+        {%- endif -%}
+    </div>
+</div>
+
+{% style %}
+.section-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+}
+
+.section-{{ section.id }} .specs-container {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Header */
+.section-{{ section.id }} .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-{{ section.id }} .section-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+.section-{{ section.id }} .section-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: {{ section.settings.text_color }};
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Cards Grid */
+.section-{{ section.id }} .product-cards-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns }}, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Card */
+.section-{{ section.id }} .product-card {
+    background: {{ section.settings.card_bg }};
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Image */
+.section-{{ section.id }} .card-image {
+    margin-bottom: 25px;
+}
+
+.section-{{ section.id }} .card-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+}
+
+.section-{{ section.id }} .card-image .placeholder-svg {
+    width: 100%;
+    height: 200px;
+    background: #f5f5f5;
+}
+
+/* Title & Desc */
+.section-{{ section.id }} .card-info {
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+.section-{{ section.id }} .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 10px 0;
+}
+
+.section-{{ section.id }} .card-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+}
+
+/* Card Line / Underline */
+.section-{{ section.id }} .card-line {
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Features */
+.section-{{ section.id }} .card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 85px;
+    padding: 5px 0;
+}
+
+.section-{{ section.id }} .feature-item {
+    font-size: 14px;
+    font-weight: 500;
+    color: {{ section.settings.accent_color }};
+    font-style: italic;
+}
+
+/* Specs Table */
+.section-{{ section.id }} .card-specs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+.section-{{ section.id }} .spec-item {
+    flex: 1;
+    text-align: center;
+}
+
+.section-{{ section.id }} .spec-label {
+    display: block;
+    font-size: 13px;
+    color: {{ section.settings.text_color }};
+    margin-bottom: 5px;
+}
+
+.section-{{ section.id }} .spec-value {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: {{ section.settings.accent_color }};
+}
+
+/* Section Divider - Green Line */
+.section-{{ section.id }} .section-divider {
+    width: 100%;
+    height: 4px;
+    background-color: {{ section.settings.divider_color }};
+    border-radius: 2px;
+    margin: 0 0 40px 0;
+}
+
+/* Bottom Heading */
+.section-{{ section.id }} .section-bottom {
+    text-align: center;
+}
+
+.section-{{ section.id }} .bottom-heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .section-{{ section.id }} .product-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-{{ section.id }} .section-heading,
+    .section-{{ section.id }} .bottom-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-{{ section.id }} .product-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-{{ section.id }} .section-heading,
+    .section-{{ section.id }} .bottom-heading {
+        font-size: 24px;
+    }
+    
+    .section-{{ section.id }} .card-info {
+        min-height: auto;
+    }
+    
+    .section-{{ section.id }} .card-features {
+        min-height: auto;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Product Cards Specs",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Top Header"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "PVA Sustainable Benefits"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions."
+        },
+        {
+            "type": "header",
+            "content": "Bottom Section"
+        },
+        {
+            "type": "text",
+            "id": "bottom_heading",
+            "label": "Bottom Heading",
+            "default": "Surface Cleaning Range"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "range",
+            "id": "columns",
+            "label": "Columns",
+            "min": 2,
+            "max": 4,
+            "step": 1,
+            "default": 3
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "min": 24,
+            "max": 48,
+            "step": 2,
+            "unit": "px",
+            "default": 32
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "card_bg",
+            "label": "Card Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#1a1a1a"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#666666"
+        },
+        {
+            "type": "color",
+            "id": "accent_color",
+            "label": "Accent Color (Green)",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "color",
+            "id": "divider_color",
+            "label": "Divider Color",
+            "default": "#6fb31a"
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "px",
+            "default": 60
+        }
+    ],
+    "blocks": [
+        {
+            "type": "product_card",
+            "name": "Product Card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Product Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Bathroom Cleaner"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Designed for removal of soap scums, water scale, and other soils commonly found in bathrooms and washroom facilities."
+                },
+                {
+                    "type": "header",
+                    "content": "Features (Green Text)"
+                },
+                {
+                    "type": "text",
+                    "id": "feature_1",
+                    "label": "Feature 1",
+                    "default": "Identifiable Color"
+                },
+                {
+                    "type": "text",
+                    "id": "feature_2",
+                    "label": "Feature 2",
+                    "default": "Phosphate Free"
+                },
+                {
+                    "type": "text",
+                    "id": "feature_3",
+                    "label": "Feature 3",
+                    "default": "Biodegradable Acid and Surfactants"
+                },
+                {
+                    "type": "header",
+                    "content": "Specifications"
+                },
+                {
+                    "type": "text",
+                    "id": "sachets",
+                    "label": "Sachets",
+                    "default": "20"
+                },
+                {
+                    "type": "text",
+                    "id": "per_sachet",
+                    "label": "Per Sachet",
+                    "default": "750 ML"
+                },
+                {
+                    "type": "text",
+                    "id": "per_pack",
+                    "label": "Per Pack",
+                    "default": "15 L"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Cards Specs",
+            "blocks": [
+                {
+                    "type": "product_card",
+                    "settings": {
+                        "title": "Bathroom Cleaner",
+                        "description": "Designed for removal of soap scums, water scale, and other soils commonly found in bathrooms and washroom facilities.",
+                        "feature_1": "Identifiable Color",
+                        "feature_2": "Phosphate Free",
+                        "feature_3": "Biodegradable Acid and Surfactants",
+                        "sachets": "20",
+                        "per_sachet": "750 ML",
+                        "per_pack": "15 L"
+                    }
+                },
+                {
+                    "type": "product_card",
+                    "settings": {
+                        "title": "Toilet Cleaner",
+                        "description": "Designed for routine cleaning and descaling of toilet bowls. Also suitable for cleaning tile grouting.",
+                        "feature_1": "Palm Free",
+                        "feature_2": "Phosphate Free",
+                        "feature_3": "Pleasant Pine Scent",
+                        "sachets": "12",
+                        "per_sachet": "1 L",
+                        "per_pack": "12 L"
+                    }
+                },
+                {
+                    "type": "product_card",
+                    "settings": {
+                        "title": "Toilet Descale Booster",
+                        "description": "For use in areas with very hard water, or heavily soiled toilets. Use in conjunction with Toilet Cleaner.",
+                        "feature_1": "Palm Free",
+                        "feature_2": "Phosphate Free",
+                        "feature_3": "Color Indicator",
+                        "sachets": "20",
+                        "per_sachet": "1 L",
+                        "per_pack": "20 L"
+                    }
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

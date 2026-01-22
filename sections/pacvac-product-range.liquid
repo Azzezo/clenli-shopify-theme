@@ -1,0 +1,336 @@
+{% comment %}
+  Pacvac Product Range Section
+  - 3 product cards with image, title, description, button
+  - Green underline
+{% endcomment %}
+
+{% style %}
+    #pacvac-products-{{ section.id }} {
+      background-color: {{ section.settings.bg_color }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-products-container {
+      max-width: 1570px !important;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    hr.imop-divider {
+      width: 100% !important;
+      max-width: 1570px !important;
+      height: 4px !important;
+      margin: 40px auto !important;
+      background-color: #6fb31a !important;
+      border: 0 !important;
+      border: none !important;
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-products-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: {{ section.settings.heading_color }};
+      text-align: center;
+      margin: 0 0 40px 0;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-card {
+      text-align: center;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-image {
+      margin-bottom: 20px;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-image img {
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-image .placeholder-img {
+      background: #e0e0e0;
+      width: 50%;
+      height: 250px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: {{ section.settings.heading_color }};
+      margin: 0 0 12px 0;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-desc {
+      font-size: 15px;
+      color: {{ section.settings.text_color }};
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: {{ section.settings.button_bg }};
+      color: {{ section.settings.button_color }};
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-product-btn:hover {
+      background-color: {{ section.settings.button_hover_bg }};
+    }
+
+    #pacvac-products-{{ section.id }} .pacvac-underline {
+      height: {{ section.settings.underline_height }}px;
+      background-color: {{ section.settings.underline_color }};
+      margin-top: 50px;
+    }
+
+    @media (max-width: 991px) {
+      #pacvac-products-{{ section.id }} .pacvac-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #pacvac-products-{{ section.id }} .pacvac-products-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      #pacvac-products-{{ section.id }} .pacvac-product-image img,
+      #pacvac-products-{{ section.id }} .pacvac-product-image .placeholder-img {
+        width: 60%;
+      }
+
+      #pacvac-products-{{ section.id }} .pacvac-products-title {
+        font-size: 18px;
+      }
+    }
+{% endstyle %}
+
+<section id="pacvac-products-{{ section.id }}">
+  <div class="pacvac-products-container">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="pacvac-products-title">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="pacvac-products-grid">
+      {%- for block in section.blocks -%}
+        <div class="pacvac-product-card" {{ block.shopify_attributes }}>
+          <div class="pacvac-product-image">
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.title }}">
+            {%- else -%}
+              <div class="placeholder-img">Product Image</div>
+            {%- endif -%}
+          </div>
+
+          {%- if block.settings.title != blank -%}
+            <h3 class="pacvac-product-name">{{ block.settings.title }}</h3>
+          {%- endif -%}
+
+          {%- if block.settings.description != blank -%}
+            <p class="pacvac-product-desc">{{ block.settings.description }}</p>
+          {%- endif -%}
+
+          {%- if block.settings.button_text != blank -%}
+            <a href="{{ block.settings.button_link }}" class="pacvac-product-btn">{{ block.settings.button_text }}</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <!-- Underline -->
+    <hr class="imop-divider">
+    {% comment %} <div class="pacvac-underline"></div> {% endcomment %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pacvac Product Range",
+  "tag": "section",
+  "class": "pacvac-products-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The PacVac Range"
+    },
+    {
+      "type": "header",
+      "content": "Underline Settings"
+    },
+    {
+      "type": "color",
+      "id": "underline_color",
+      "label": "Underline Color",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "range",
+      "id": "underline_height",
+      "label": "Underline Height",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg",
+      "label": "Button Hover Background",
+      "default": "#5a9216"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title",
+          "default": "Product Name"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Product description goes here."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "View Product"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pacvac Product Range",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "title": "Pacvac Velo (Corded)",
+            "description": "Say hello to the new PacVac Velo backpack hoover vacuum. Perfect for both commercial and home use, Velo combines strong suction from a 900W motor with a lightweight design at just 3.9kg. Featuring the comfortable Ecoharness made from recycled materials and an H13 HEPA filter for superior air quality.",
+            "button_text": "View Pacvac Velo"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "title": "Pacvac Velo Go (Battery)",
+            "description": "Introducing the new PacVac Velo Go backpack hoover vacuum. The ultimate performance cordless battery powered backpack vacuum. Cleans up to four times faster with the powerful cordless freedom and superior ergonomic backpack comfort, giving you the best commercial vacuuming experience.",
+            "button_text": "View Pacvac Velo Go"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "title": "Pacvac SuperPro Go (Battery)",
+            "description": "Pacvac's Superpro Go Advanced Backpack Hoover Vacuum is an advanced battery-powered design with strong suction, delivering a superior combination of manoeuvrability, efficiency and productivity. Designed with advanced battery-power and a brushless motor, this is the perfect choice for large scale commercial cleaning.",
+            "button_text": "View Pacvac SuperPro Go"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

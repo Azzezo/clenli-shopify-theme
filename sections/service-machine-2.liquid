@@ -1,0 +1,1298 @@
+{% comment %}
+  =====================================================
+  SERVICE & MAINTENANCE PAGE - SHOPIFY SECTION
+  Clenli Direct Clone - Single File (CSS Included)
+  =====================================================
+  
+  INSTALLATION:
+  1. Shopify Admin → Online Store → Themes → Edit Code
+  2. Sections folder → Add new section → Name: service-maintenance
+  3. Delete default code → Paste this entire file → Save
+  4. Templates folder → Add new template → page.service-maintenance.json
+  5. Create page & assign template
+  
+{% endcomment %}
+
+{%- style -%}
+/* =====================================================
+   SERVICE & MAINTENANCE - COMPLETE CSS
+   ===================================================== */
+
+/* Variables */
+.service-page {
+  --clenli-green: {{ section.settings.primary_color }};
+  --clenli-green-dark: {{ section.settings.primary_color | color_darken: 15 }};
+  --clenli-dark: #333;
+  --clenli-gray: #666;
+  --clenli-light-gray: #777;
+  --clenli-border: #eee;
+  --clenli-bg-light: #f8f9fa;
+  --clenli-white: #fff;
+  --clenli-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  --clenli-transition: all 0.3s ease;
+}
+
+.service-page * {
+  box-sizing: border-box;
+}
+
+.service-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.6;
+  color: var(--clenli-dark);
+}
+
+/* Container */
+.service-container {
+  max-width: 1570px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+.service-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.service-hero__title {
+  color: var(--clenli-white);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.service-hero__description {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* =====================================================
+   BREADCRUMB
+   ===================================================== */
+.service-breadcrumb {
+  background: var(--clenli-bg-light);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.service-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.service-breadcrumb__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-breadcrumb__list li:not(:last-child)::after {
+  content: '/';
+  color: var(--clenli-light-gray);
+}
+
+.service-breadcrumb__list a {
+  color: var(--clenli-gray);
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.service-breadcrumb__list a:hover {
+  color: var(--clenli-green);
+}
+
+.service-breadcrumb__list span {
+  color: var(--clenli-dark);
+  font-weight: 500;
+}
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+.service-section {
+  padding: 80px 0;
+}
+
+/* .service-section--gray {
+  background: var(--clenli-bg-light);
+} */
+
+.service-section__title {
+  text-align: center;
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  color: var(--clenli-dark);
+  margin: 0 0 15px;
+}
+
+/* Divider */
+.service-divider {
+  width: 80px;
+  height: 3px;
+  background: var(--clenli-green);
+  border: none;
+  margin: 0 0 30px;
+}
+
+.service-divider--center {
+  margin: 0 auto 40px;
+}
+
+.service-divider--left {
+  margin: 0 0 20px;
+}
+
+/* =====================================================
+   GRID LAYOUTS
+   ===================================================== */
+.service-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.service-grid--overview {
+  grid-template-columns: 1fr 1.4fr;
+}
+
+.service-grid--coverage {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.service-grid--sam {
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .service-grid--overview,
+  .service-grid--coverage,
+  .service-grid--sam {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-coverage__map {
+    order: -1;
+  }
+}
+
+/* =====================================================
+   INFO BOX (Service Overview)
+   ===================================================== */
+.service-info-box {
+  background-size: cover;
+  background-position: center;
+  color: var(--clenli-white);
+  padding: 40px;
+  border-radius: 8px;
+  border: 3px solid var(--clenli-green);
+}
+
+.service-info-box__title {
+  color: var(--clenli-white);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.service-info-box__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-info-box__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.service-info-box__item:last-child {
+  border-bottom: none;
+}
+
+.service-icon-check {
+  width: 22px;
+  height: 22px;
+  fill: var(--clenli-green);
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   ABOUT SERVICE
+   ===================================================== */
+.service-about {
+  padding: 20px 0;
+}
+
+.service-about__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--clenli-dark);
+  margin: 0 0 10px;
+}
+
+.service-about__content {
+  color: var(--clenli-gray);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.service-about__content p {
+  margin: 0 0 20px;
+}
+
+.service-about__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================================
+   COVERAGE SECTION
+   ===================================================== */
+.service-coverage__map {
+  text-align: center;
+}
+
+.service-coverage__map-img {
+  max-height: 450px;
+  width: auto;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+}
+
+.service-coverage__map-img.placeholder {
+  max-width: 100%;
+  height: 400px;
+  background: var(--clenli-bg-light);
+}
+
+.service-coverage__feature {
+  margin-bottom: 35px;
+}
+
+.service-coverage__feature:last-child {
+  margin-bottom: 0;
+}
+
+.service-coverage__feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-coverage__feature-title svg {
+  fill: var(--clenli-green);
+}
+
+.service-coverage__feature-text {
+  color: var(--clenli-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =====================================================
+   FEATURE BOXES
+   ===================================================== */
+.service-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 1024px) {
+  .service-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-feature-box {
+  background: var(--clenli-white);
+  border: 1px solid var(--clenli-border);
+  border-bottom: 3px solid var(--clenli-green);
+  border-radius: 8px;
+  padding: 30px 25px;
+  text-align: center;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--clenli-transition);
+}
+
+.service-feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--clenli-shadow);
+}
+
+.service-feature-box__icon {
+  width: 60px;
+  height: 60px;
+ 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.service-feature-box__icon svg {
+  fill: var(--clenli-white);
+}
+
+.service-feature-box__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin: 0 0 15px;
+}
+
+.service-feature-box__text {
+  color: var(--clenli-gray);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* =====================================================
+   SAM SOFTWARE SECTION
+   ===================================================== */
+.service-sam__image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-sam__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.service-sam__img.placeholder {
+  height: 350px;
+  background: var(--clenli-bg-light);
+}
+
+.service-sam__logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 25px;
+}
+
+.service-sam__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin: 0 0 10px;
+}
+
+.service-sam__description {
+  color: var(--clenli-gray);
+  line-height: 1.8;
+  margin: 0 0 25px;
+  font-size: 16px;
+}
+
+.service-sam__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .service-sam__features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-sam__features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-sam__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  color: var(--clenli-dark);
+  font-size: 15px;
+}
+
+.service-icon-check-green {
+  fill: var(--clenli-green);
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   CONTACT FORM
+   ===================================================== */
+.service-contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--clenli-white);
+  padding: 40px;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 15px rgba(0,0,0,0.08); */
+}
+
+.service-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .service-form__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-contact-form {
+    padding: 25px;
+  }
+}
+
+.service-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-form__field--full {
+  margin-bottom: 25px;
+}
+
+.service-form__field label {
+  font-weight: 500;
+  color: var(--clenli-dark);
+  font-size: 14px;
+}
+
+.service-form__field .required {
+  color: #e74c3c;
+}
+
+.service-form__field input,
+.service-form__field textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: var(--clenli-transition);
+  font-family: inherit;
+  width: 100%;
+}
+
+.service-form__field input:focus,
+.service-form__field textarea:focus {
+  outline: none;
+  border-color: var(--clenli-green);
+  box-shadow: 0 0 0 3px rgba(111, 179, 26, 0.15);
+}
+
+.service-form__field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.service-form__submit {
+  text-align: center;
+}
+
+.service-btn {
+  background: var(--clenli-green);
+  color: var(--clenli-white);
+  border: none;
+  padding: 15px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--clenli-transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-btn:hover {
+  background: var(--clenli-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(111, 179, 26, 0.3);
+}
+
+.service-form__success {
+  background: #d4edda;
+  color: #155724;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-form__errors {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* =====================================================
+   PRODUCTS SECTION
+   ===================================================== */
+.service-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .service-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .service-products {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-product-card {
+  background: var(--clenli-white);
+  border: 1px solid var(--clenli-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--clenli-transition);
+}
+
+.service-product-card:hover {
+  box-shadow: var(--clenli-shadow);
+  transform: translateY(-3px);
+}
+
+.service-product-card__image {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--clenli-bg-light);
+}
+
+.service-product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--clenli-transition);
+}
+
+.service-product-card:hover .service-product-card__image img {
+  transform: scale(1.05);
+}
+
+.service-product-card__info {
+  padding: 20px;
+  text-align: center;
+}
+
+.service-product-card__title {
+  font-size: 15px;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.service-product-card__title a {
+  color: var(--clenli-dark);
+  text-decoration: none;
+  transition: var(--clenli-transition);
+}
+
+.service-product-card__title a:hover {
+  color: var(--clenli-green);
+}
+
+.service-product-card__price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--clenli-green);
+  margin: 0;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+  .service-hero {
+    padding: 70px 20px;
+  }
+  
+  .service-section {
+    padding: 50px 0;
+  }
+  
+  .service-info-box {
+    padding: 30px;
+  }
+  
+  .service-feature-box {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero {
+    padding: 50px 15px;
+  }
+  
+  .service-hero__title {
+    letter-spacing: 1px;
+  }
+  
+  .service-section {
+    padding: 40px 0;
+  }
+  
+  .service-container {
+    padding: 0 15px;
+  }
+}
+{%- endstyle -%}
+
+<!-- =====================================================
+     HTML STRUCTURE START
+     ===================================================== -->
+<div class="service-page">
+
+  <!-- HERO SECTION -->
+  <section class="service-hero" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('{{ section.settings.hero_image | image_url: width: 1920 }}');">
+    <div class="service-container">
+      <h1 class="service-hero__title">{{ section.settings.hero_title }}</h1>
+      <p class="service-hero__description">{{ section.settings.hero_description }}</p>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <nav class="service-breadcrumb">
+    <div class="service-container">
+      <ul class="service-breadcrumb__list">
+        <li><a href="{{ routes.root_url }}">Home</a></li>
+        <li><span>{{ section.settings.hero_title }}</span></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SERVICE OVERVIEW + ABOUT -->
+  <section class="service-section">
+    <div class="service-container">
+      <div class="service-grid service-grid--overview">
+        
+        <!-- Left: Info Box -->
+        <div class="service-info-box" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('{{ section.settings.info_box_image | image_url: width: 800 }}');">
+          <h2 class="service-info-box__title">{{ section.settings.info_box_title }}</h2>
+          <div class="service-divider"></div>
+          <ul class="service-info-box__list">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'service_item' -%}
+                <li class="service-info-box__item" {{ block.shopify_attributes }}>
+                  {% comment %} <svg class="service-icon-check" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg> {% endcomment %}
+                  <span>{{ block.settings.item_text }}</span>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+        
+        <!-- Right: About Service -->
+        <div class="service-about">
+          <h2 class="service-about__title">{{ section.settings.about_title }}</h2>
+          <div class="service-divider service-divider--left"></div>
+          <div class="service-about__content">
+            {{ section.settings.about_content }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- NATIONWIDE COVERAGE -->
+  <section class="service-section">
+    <div class="service-container">
+      <h2 class="service-section__title">{{ section.settings.coverage_title }}</h2>
+      <div class="service-divider service-divider--center"></div>
+      
+      <div class="service-grid service-grid--coverage">
+        <!-- Map Image -->
+        <div class="service-coverage__map">
+          {%- if section.settings.coverage_map != blank -%}
+            <img 
+              src="{{ section.settings.coverage_map | image_url: width: 600 }}" 
+              alt="{{ section.settings.coverage_title }}"
+              loading="lazy"
+              class="service-coverage__map-img"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'service-coverage__map-img placeholder' }}
+          {%- endif -%}
+        </div>
+        
+        <!-- Coverage Features -->
+        <div class="service-coverage__features">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'coverage_feature' -%}
+              <div class="service-coverage__feature" {{ block.shopify_attributes }}>
+                <h3 class="service-coverage__feature-title">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    {%- case block.settings.feature_icon -%}
+                      {%- when 'truck' -%}
+                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                      {%- when 'calendar' -%}
+                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
+                      {%- when 'tools' -%}
+                        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                      {%- else -%}
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    {%- endcase -%}
+                  </svg>
+                  {{ block.settings.feature_title }}
+                </h3>
+                <p class="service-coverage__feature-text">{{ block.settings.feature_description }}</p>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE BOXES -->
+  <section class="service-section service-section--gray">
+    <div class="service-container">
+      <div class="service-features">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'feature_box' -%}
+            <div class="service-feature-box" {{ block.shopify_attributes }}>
+              {% comment %} <div class="service-feature-box__icon"> {% endcomment %}
+                {% comment %} <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                  {%- case block.settings.box_icon -%}
+                    {%- when 'phone' -%}
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    {%- when 'clipboard' -%}
+                      <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    {%- when 'bolt' -%}
+                      <path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/>
+                    {%- when 'chart' -%}
+                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                    {%- else -%}
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  {%- endcase -%}
+                </svg> {% endcomment %}
+              {% comment %} </div> {% endcomment %}
+              <h3 class="service-feature-box__title">{{ block.settings.box_title }}</h3>
+              <p class="service-feature-box__text">{{ block.settings.box_description }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- SAM SOFTWARE SECTION -->
+  {%- if section.settings.show_sam_section -%}
+  <section class="service-section">
+    <div class="service-container">
+      <h2 class="service-section__title">{{ section.settings.sam_section_title }}</h2>
+      <div class="service-divider service-divider--center"></div>
+      
+      <div class="service-grid service-grid--sam">
+        <!-- SAM Image -->
+        <div class="service-sam__image">
+          {%- if section.settings.sam_image != blank -%}
+            <img 
+              src="{{ section.settings.sam_image | image_url: width: 800 }}" 
+              alt="{{ section.settings.sam_title }}"
+              loading="lazy"
+              class="service-sam__img"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'service-sam__img placeholder' }}
+          {%- endif -%}
+        </div>
+        
+        <!-- SAM Content -->
+        <div class="service-sam__content">
+          {%- if section.settings.sam_logo != blank -%}
+            <img 
+              src="{{ section.settings.sam_logo | image_url: width: 200 }}" 
+              alt="{{ section.settings.sam_title }}"
+              class="service-sam__logo"
+            >
+          {%- endif -%}
+          
+          <h3 class="service-sam__title">{{ section.settings.sam_title }}</h3>
+          <div class="service-divider service-divider--left"></div>
+          <p class="service-sam__description">{{ section.settings.sam_description }}</p>
+          
+          <div class="service-sam__features">
+            <div class="service-sam__features-col">
+              <ul>
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'sam_feature' and block.settings.feature_column == 'left' -%}
+                    <li {{ block.shopify_attributes }}>
+                      <svg class="service-icon-check-green" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                      </svg>
+                      {{ block.settings.sam_feature_text }}
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+            <div class="service-sam__features-col">
+              <ul>
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'sam_feature' and block.settings.feature_column == 'right' -%}
+                    <li {{ block.shopify_attributes }}>
+                      <svg class="service-icon-check-green" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                      </svg>
+                      {{ block.settings.sam_feature_text }}
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  <!-- CONTACT FORM -->
+  {%- if section.settings.show_contact_form -%}
+  <section class="service-section service-section--gray">
+    <div class="service-container">
+      <h2 class="service-section__title">{{ section.settings.contact_title }}</h2>
+      <div class="service-divider service-divider--center"></div>
+      
+      <div class="service-contact-form">
+        {%- form 'contact', class: 'service-form' -%}
+          {%- if form.posted_successfully? -%}
+            <div class="service-form__success">
+              <p>{{ section.settings.form_success_message }}</p>
+            </div>
+          {%- endif -%}
+          
+          {%- if form.errors -%}
+            <div class="service-form__errors">
+              {{ form.errors | default_errors }}
+            </div>
+          {%- endif -%}
+          
+          <div class="service-form__grid">
+            <div class="service-form__field">
+              <label for="contact-name">Name <span class="required">*</span></label>
+              <input type="text" id="contact-name" name="contact[name]" required placeholder="Your Name">
+            </div>
+            
+            <div class="service-form__field">
+              <label for="contact-company">Company</label>
+              <input type="text" id="contact-company" name="contact[company]" placeholder="Company Name">
+            </div>
+            
+            <div class="service-form__field">
+              <label for="contact-phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="contact-phone" name="contact[phone]" required placeholder="Phone Number">
+            </div>
+            
+            <div class="service-form__field">
+              <label for="contact-email">Email <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="contact[email]" required placeholder="Email Address">
+            </div>
+          </div>
+          
+          <div class="service-form__field service-form__field--full">
+            <label for="contact-message">Message <span class="required">*</span></label>
+            <textarea id="contact-message" name="contact[body]" rows="5" required placeholder="Your Message"></textarea>
+          </div>
+          
+          <div class="service-form__submit">
+            <button type="submit" class="service-btn">{{ section.settings.form_button_text }}</button>
+          </div>
+        {%- endform -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  <!-- FEATURED PRODUCTS -->
+  {%- if section.settings.show_products and section.settings.product_collection != blank -%}
+  <section class="service-section">
+    <div class="service-container">
+      <div class="service-products">
+        {%- assign collection = collections[section.settings.product_collection] -%}
+        {%- for product in collection.products limit: section.settings.products_limit -%}
+          <div class="service-product-card">
+            <a href="{{ product.url }}" class="service-product-card__image">
+              {%- if product.featured_image != blank -%}
+                <img 
+                  src="{{ product.featured_image | image_url: width: 300 }}" 
+                  alt="{{ product.title }}"
+                  loading="lazy"
+                >
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag }}
+              {%- endif -%}
+            </a>
+            <div class="service-product-card__info">
+              <h3 class="service-product-card__title">
+                <a href="{{ product.url }}">{{ product.title }}</a>
+              </h3>
+              <p class="service-product-card__price">{{ product.price | money }}</p>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+</div>
+
+{% schema %}
+{
+  "name": "Service & Maintenance",
+  "tag": "section",
+  "class": "service-maintenance-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "🎨 Colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Color (Green)",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "header",
+      "content": "🖼️ Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Background Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Service & Maintenance"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_description",
+      "label": "Hero Description",
+      "default": "Our Service team protects and maintains cleaning machines and equipment to ensure longevity and optimal performance."
+    },
+    {
+      "type": "header",
+      "content": "📦 Service Overview Box"
+    },
+    {
+      "type": "image_picker",
+      "id": "info_box_image",
+      "label": "Info Box Background Image"
+    },
+    {
+      "type": "text",
+      "id": "info_box_title",
+      "label": "Info Box Title",
+      "default": "Service Overview"
+    },
+    {
+      "type": "header",
+      "content": "📝 About Service"
+    },
+    {
+      "type": "text",
+      "id": "about_title",
+      "label": "About Title",
+      "default": "About Service"
+    },
+    {
+      "type": "richtext",
+      "id": "about_content",
+      "label": "About Content",
+      "default": "<p>Clenli Direct has a fully qualified service and maintenance team with over 20 years of industry experience. We provide our clients with a 24-hour emergency response service to ensure that you can contact someone in case of emergency any time, day or night.</p><p>At Clenli Direct we are acutely aware of the importance of after-sales service and you will find us to be very client-focused. Our commitment to our customers has served us well, as is evident from our very loyal customer base. We will be there when you need us, and if required we can even provide you with replacement machinery.</p>"
+    },
+    {
+      "type": "header",
+      "content": "🗺️ Coverage Section"
+    },
+    {
+      "type": "text",
+      "id": "coverage_title",
+      "label": "Coverage Section Title",
+      "default": "Nationwide Engineer Coverage"
+    },
+    {
+      "type": "image_picker",
+      "id": "coverage_map",
+      "label": "Coverage Map Image"
+    },
+    {
+      "type": "header",
+      "content": "💻 SAM Software Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sam_section",
+      "label": "Show SAM Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "sam_section_title",
+      "label": "SAM Section Title",
+      "default": "Service & Maintenance Software"
+    },
+    {
+      "type": "image_picker",
+      "id": "sam_image",
+      "label": "SAM Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "sam_logo",
+      "label": "SAM Logo"
+    },
+    {
+      "type": "text",
+      "id": "sam_title",
+      "label": "SAM Title",
+      "default": "About SAM"
+    },
+    {
+      "type": "textarea",
+      "id": "sam_description",
+      "label": "SAM Description",
+      "default": "SAM is Clenli Direct's in-house custom-built service management software. SAM manages our service fleet, optimises job scheduling & provides detailed analytics to our customers."
+    },
+    {
+      "type": "header",
+      "content": "📧 Contact Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact_form",
+      "label": "Show Contact Form",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Section Title",
+      "default": "Get In Touch With Our Service Team"
+    },
+    {
+      "type": "text",
+      "id": "form_button_text",
+      "label": "Form Button Text",
+      "default": "Submit"
+    },
+    {
+      "type": "text",
+      "id": "form_success_message",
+      "label": "Success Message",
+      "default": "Thank you for your message. We will get back to you soon!"
+    },
+    {
+      "type": "header",
+      "content": "🛒 Featured Products"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_products",
+      "label": "Show Products Section",
+      "default": false
+    },
+    {
+      "type": "collection",
+      "id": "product_collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_limit",
+      "label": "Number of Products",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service_item",
+      "name": "Service Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_text",
+          "label": "Item Text",
+          "default": "Service Item"
+        }
+      ]
+    },
+    {
+      "type": "coverage_feature",
+      "name": "Coverage Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_title",
+          "label": "Feature Title",
+          "default": "Service Fleet"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_description",
+          "label": "Feature Description",
+          "default": "Our Engineers can have access to all of Ireland no matter how remote."
+        },
+        {
+          "type": "select",
+          "id": "feature_icon",
+          "label": "Icon",
+          "options": [
+            { "value": "truck", "label": "Truck" },
+            { "value": "calendar", "label": "Calendar" },
+            { "value": "tools", "label": "Tools" },
+            { "value": "check", "label": "Checkmark" }
+          ],
+          "default": "truck"
+        }
+      ]
+    },
+    {
+      "type": "feature_box",
+      "name": "Feature Box",
+      "settings": [
+        {
+          "type": "text",
+          "id": "box_title",
+          "label": "Title",
+          "default": "Emergency Call Outs"
+        },
+        {
+          "type": "textarea",
+          "id": "box_description",
+          "label": "Description",
+          "default": "At Clenli Direct we understand how important cleaning machines are and how smooth operation is essential."
+        },
+        {
+          "type": "select",
+          "id": "box_icon",
+          "label": "Icon",
+          "options": [
+            { "value": "phone", "label": "Phone" },
+            { "value": "clipboard", "label": "Clipboard" },
+            { "value": "bolt", "label": "Bolt/Lightning" },
+            { "value": "chart", "label": "Chart" }
+          ],
+          "default": "phone"
+        }
+      ]
+    },
+    {
+      "type": "sam_feature",
+      "name": "SAM Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "sam_feature_text",
+          "label": "Feature Text",
+          "default": "Asset Management System"
+        },
+        {
+          "type": "select",
+          "id": "feature_column",
+          "label": "Column",
+          "options": [
+            { "value": "left", "label": "Left Column" },
+            { "value": "right", "label": "Right Column" }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service & Maintenance",
+      "blocks": [
+        { "type": "service_item", "settings": { "item_text": "Nationwide Engineer Coverage" } },
+        { "type": "service_item", "settings": { "item_text": "26,752 Cleaning Equipment Under Care" } },
+        { "type": "service_item", "settings": { "item_text": "€500,000 Worth of Spare Parts in Stock" } },
+        { "type": "service_item", "settings": { "item_text": "Asset Management Software" } },
+        { "type": "service_item", "settings": { "item_text": "Job Scheduling Optimisation" } },
+        { "type": "service_item", "settings": { "item_text": "PAT Testing" } },
+        { "type": "coverage_feature", "settings": { "feature_title": "Service Fleet", "feature_description": "Our Engineers can have access to all of Ireland no matter how remote. Thanks to our engineer and distribution network we can offer our exceptional service nationwide.", "feature_icon": "truck" } },
+        { "type": "coverage_feature", "settings": { "feature_title": "Job Scheduling Optimisation", "feature_description": "Our service jobs are scheduled for maximum efficiency to prevent delays. Jobs can be tracked through our software SAM.", "feature_icon": "calendar" } },
+        { "type": "coverage_feature", "settings": { "feature_title": "Fully Stocked Vans", "feature_description": "Our service engineer's vans are fully stocked to fix problems on first-time call-outs. This allows them to fix problems on the spot without long lead times.", "feature_icon": "tools" } },
+        { "type": "feature_box", "settings": { "box_title": "Emergency Call Outs", "box_description": "At Clenli Direct we understand how important cleaning machines are and how smooth operation is essential. That is why we have a reactive service team for emergency call outs to fix issues fast.", "box_icon": "phone" } },
+        { "type": "feature_box", "settings": { "box_title": "Instant Call Logging", "box_description": "Using SAM, service jobs can be logged and assigned to an engineer. Within minutes, you'll have a service call logged and an engineer assigned with a date of arrival.", "box_icon": "clipboard" } },
+        { "type": "feature_box", "settings": { "box_title": "Portable Appliance Testing", "box_description": "Our Service Team can PAT test any machine on sites with a pass/fail. If the appliance happens to fail, our engineers can fix the appliance on-site until it passes.", "box_icon": "bolt" } },
+        { "type": "feature_box", "settings": { "box_title": "Service Reporting", "box_description": "Transparency and analytics are extremely important in managing a fleet of machinery. That's why we have detailed & custom reports for our clients and their cleaning machine fleet.", "box_icon": "chart" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "Asset Management System", "feature_column": "left" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "Prevents Cash leakage", "feature_column": "left" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "View Service History", "feature_column": "left" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "Detailed Reports", "feature_column": "left" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "Track Equipment by Location", "feature_column": "right" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "Easily Log Service Calls", "feature_column": "right" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "PAT Testing Management", "feature_column": "right" } },
+        { "type": "sam_feature", "settings": { "sam_feature_text": "Traffic Light System", "feature_column": "right" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

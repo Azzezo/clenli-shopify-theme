@@ -1,0 +1,699 @@
+{%- liquid
+    assign container = section.settings.container
+    assign limit = section.settings.product_block_limit
+    assign block_title = section.settings.product_block_title
+    assign block_title_align = section.settings.title_align
+    assign block_tabs = section.blocks | where: 'type', 'ProductTabs'
+    assign product_bg = section.settings.product_bg
+    assign product_bg_gradient = section.settings.product_bg_gradient
+    assign color_title = section.settings.color_title
+    assign fontsize_title = section.settings.fontsize_title
+    assign fontsize_title_mb = section.settings.fontsize_title_mb
+    assign mg_top_desktop = section.settings.mg_top_desktop
+    assign mg_top_tablet = section.settings.mg_top_tablet
+    assign mg_top_mobile = section.settings.mg_top_mobile
+    assign mg_bottom_desktop = section.settings.mg_bottom_desktop
+    assign mg_bottom_tablet = section.settings.mg_bottom_tablet
+    assign mg_bottom_mobile = section.settings.mg_bottom_mobile
+    assign mg_bottom_title_tab = section.settings.mg_bottom_title_tab
+    assign fontsize_tab = section.settings.fontsize_tab
+    assign fontsize_tab_mb = section.settings.fontsize_tab_mb
+    assign font_weight_tab = section.settings.font_weight_tab
+    assign font_weight_active_tab = section.settings.font_weight_active_tab
+    assign color_tab = section.settings.color_tab
+    assign bg_color_tab = section.settings.bg_color_tab
+    assign color_tab_active = section.settings.color_tab_active
+    assign bg_color_tab_active = section.settings.bg_color_tab_active
+-%}
+
+<style>
+    /* Full Width Container */
+    .section-block-{{section.id}} .custom-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    /* Section Background */
+    .section-block-{{section.id}} {
+        background: {% if product_bg_gradient != blank %}{{ product_bg_gradient }}{% else %}{{ product_bg }}{% endif %};
+        padding-top: {{ mg_top_desktop }}px;
+        padding-bottom: {{ mg_bottom_desktop }}px;
+        border: none;
+        border-top: none;
+    }
+    
+    /* Section Header + Tabs in Same Line */
+    .section-block-{{section.id}} .halo-block-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: {{ mg_bottom_title_tab }}px;
+        border: none;
+    }
+    .section-block-{{section.id}} .halo-block-header {
+        display: inline-block;
+        border: none;
+    }
+    .section-block-{{section.id}} .halo-block-header .title {
+        color: {{ color_title }};
+        font-size: {{ fontsize_title }}px;
+        margin: 0;
+        display: inline-block;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 8px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+    .section-block-{{section.id}} .halo-block-header .title::before {
+        display: none !important;
+        content: none !important;
+    }
+    .section-block-{{section.id}} .halo-block-header .title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #6fb31a;
+    }
+    .section-block-{{section.id}} .halo-block-header .view_all {
+        display: inline-block;
+        margin-left: 20px;
+        color: #6fb31a;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .section-block-{{section.id}} .halo-block-header .view_all:hover {
+        text-decoration: underline;
+    }
+
+    /* Tab List - No Border */
+    .section-block-{{section.id}} .list-product-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+    .section-block-{{section.id}} .list-product-tabs li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .section-block-{{section.id}} .list-product-tabs li.separation {
+        color: #ccc;
+        font-size: 14px;
+    }
+    .section-block-{{section.id}} .list-product-tabs .tab-links {
+        background: {{ bg_color_tab }};
+        color: {{ color_tab }};
+        font-size: {{ fontsize_tab }}px;
+        font-weight: {{ font_weight_tab }};
+        padding: 8px 16px;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+    .section-block-{{section.id}} .list-product-tabs .tab-links:hover,
+    .section-block-{{section.id}} .list-product-tabs .tab-links.active {
+        background: {{ bg_color_tab_active }};
+        color: #6fb31a;
+        font-weight: {{ font_weight_active_tab }};
+    }
+
+    /* Tab Content */
+    .section-block-{{section.id}} .tab-content {
+        display: none;
+    }
+    .section-block-{{section.id}} .tab-content.active {
+        display: block;
+    }
+
+    /* Products Scroll - No Scrollbar */
+    .section-block-{{section.id}} .products-scroll-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .section-block-{{section.id}} .products-scroll-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Grid - No Gap */
+    .section-block-{{section.id}} .products-grid {
+        display: flex;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .section-block-{{section.id}} .products-grid .product {
+        flex: 0 0 calc(100% / 6);
+        min-width: calc(100% / 6);
+        max-width: calc(100% / 6);
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Custom Product Card - No Border, No Gap */
+    .section-block-{{section.id}} .custom-product-card {
+        background: #fff;
+        border-radius: 0;
+        overflow: hidden;
+        box-shadow: none;
+        transition: box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Hover - Only Box Shadow, No Lift */
+    .section-block-{{section.id}} .custom-product-card:hover {
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        z-index: 1;
+        position: relative;
+    }
+    
+    /* Card Media */
+    .section-block-{{section.id}} .custom-card-media {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 100%;
+        background: #f5f5f5;
+    }
+    .section-block-{{section.id}} .custom-card-media a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .section-block-{{section.id}} .custom-card-media img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+    .section-block-{{section.id}} .custom-product-card:hover .custom-card-media img {
+        transform: scale(1.05);
+    }
+    
+    /* Placeholder */
+    .section-block-{{section.id}} .custom-card-media .placeholder-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 14px;
+    }
+    
+    /* Card Content */
+    .section-block-{{section.id}} .custom-card-content {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .section-block-{{section.id}} .custom-card-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+        margin: 0 0 8px 0;
+        line-height: 1.4;
+        min-height: 42px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .section-block-{{section.id}} .custom-card-title a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .section-block-{{section.id}} .custom-card-title a:hover {
+        color: #6fb31a;
+    }
+    
+    /* Rating - Stars Only */
+    .section-block-{{section.id}} .custom-card-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .section-block-{{section.id}} .custom-card-rating .stars {
+        color: #ffc107;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    
+    /* Description */
+    .section-block-{{section.id}} .custom-card-description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+        margin: 0 0 12px 0;
+        min-height: 42px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex: 1;
+    }
+    
+    /* Price + Button Row */
+    .section-block-{{section.id}} .custom-card-footer {
+        margin-top: auto;
+    }
+    .section-block-{{section.id}} .custom-card-price-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
+    /* Price Section */
+    .section-block-{{section.id}} .custom-card-price {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-block-{{section.id}} .custom-card-price .price-current {
+        font-size: 17px;
+        font-weight: 700;
+        color: #343f49;
+        line-height: 1.2;
+    }
+    .section-block-{{section.id}} .custom-card-price .price-vat {
+        font-size: 11px;
+        color: #888;
+        margin-top: 2px;
+    }
+
+    /* VAT Toggle Price Display - Default show Incl */
+    .section-block-{{section.id}} .price-excl-vat,
+    .section-block-{{section.id}} .vat-label-excl {
+        display: none !important;
+    }
+    .section-block-{{section.id}} .price-incl-vat,
+    .section-block-{{section.id}} .vat-label-incl {
+        display: inline !important;
+    }
+
+    /* When body has vat-excluded class */
+    body.vat-excluded .section-block-{{section.id}} .price-incl-vat,
+    body.vat-excluded .section-block-{{section.id}} .vat-label-incl {
+        display: none !important;
+    }
+    body.vat-excluded .section-block-{{section.id}} .price-excl-vat,
+    body.vat-excluded .section-block-{{section.id}} .vat-label-excl {
+        display: inline !important;
+    }
+
+    /* When body has vat-included class */
+    body.vat-included .section-block-{{section.id}} .price-incl-vat,
+    body.vat-included .section-block-{{section.id}} .vat-label-incl {
+        display: inline !important;
+    }
+    body.vat-included .section-block-{{section.id}} .price-excl-vat,
+    body.vat-included .section-block-{{section.id}} .vat-label-excl {
+        display: none !important;
+    }
+    
+    /* Add to Cart Button */
+    .section-block-{{section.id}} .custom-card-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 8px 12px;
+        background-color: #6fb31a;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-size: 11px;
+        font-weight: 600;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+    .section-block-{{section.id}} .custom-card-button:hover {
+        background-color: #000000;
+    }
+    .section-block-{{section.id}} .custom-card-button svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+    }
+
+    /* Responsive - Tablet (4 products) */
+    @media (max-width: 1024px) {
+        .section-block-{{section.id}} {
+            padding-top: {{ mg_top_tablet }}px;
+            padding-bottom: {{ mg_bottom_tablet }}px;
+        }
+        .section-block-{{section.id}} .halo-block-top {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section-block-{{section.id}} .products-grid .product {
+            flex: 0 0 calc(100% / 4);
+            min-width: calc(100% / 4);
+            max-width: calc(100% / 4);
+        }
+    }
+    
+    /* Responsive - Mobile (2 products) */
+    @media (max-width: 767px) {
+        .section-block-{{section.id}} {
+            padding-top: {{ mg_top_mobile }}px;
+            padding-bottom: {{ mg_bottom_mobile }}px;
+        }
+        .section-block-{{section.id}} .custom-container {
+            padding: 0 10px;
+        }
+        .section-block-{{section.id}} .halo-block-header .title {
+            font-size: {{ fontsize_title_mb }}px;
+        }
+        .section-block-{{section.id}} .halo-block-header .view_all {
+            margin-left: 15px;
+            font-size: 12px;
+        }
+        .section-block-{{section.id}} .list-product-tabs {
+            gap: 6px;
+            margin-top: 10px;
+        }
+        .section-block-{{section.id}} .list-product-tabs .tab-links {
+            font-size: {{ fontsize_tab_mb }}px;
+            padding: 6px 12px;
+        }
+        .section-block-{{section.id}} .products-grid .product {
+            flex: 0 0 calc(100% / 2);
+            min-width: calc(100% / 2);
+            max-width: calc(100% / 2);
+        }
+        .section-block-{{section.id}} .custom-card-content {
+            padding: 12px;
+        }
+        .section-block-{{section.id}} .custom-card-title {
+            font-size: 14px;
+            min-height: 38px;
+        }
+        .section-block-{{section.id}} .custom-card-rating .stars {
+            font-size: 13px;
+        }
+        .section-block-{{section.id}} .custom-card-description {
+            font-size: 13px;
+            min-height: 38px;
+        }
+        .section-block-{{section.id}} .custom-card-price .price-current {
+            font-size: 15px;
+        }
+        .section-block-{{section.id}} .custom-card-button {
+            padding: 6px 10px;
+            font-size: 10px;
+        }
+        .section-block-{{section.id}} .custom-card-button svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+</style>
+
+<section class="product-tab-block section-block-{{section.id}}">
+    <div class="custom-container">
+        
+        <div class="halo-block-top">
+            {%- if block_title != blank -%}
+                <div class="halo-block-header">
+                    <h3 class="title">{{ block_title | escape }}</h3>
+                    {%- if section.settings.view_all != blank -%}
+                        <a class="view_all" href="{{ section.settings.link_view_all }}">{{ section.settings.view_all }}</a>
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+
+            {%- if block_tabs.size > 1 -%}
+                <ul class="list-product-tabs">
+                    {%- for block in block_tabs -%}
+                        <li>
+                            <button type="button" 
+                                data-tab-target="product-tab-{{ section.id }}-{{ block.id }}" 
+                                class="tab-links{% if forloop.first %} active{% endif %}">
+                                {{ block.settings.title }}
+                            </button>
+                        </li>
+                        {%- if section.settings.separation -%}
+                            {%- unless forloop.last -%}
+                                <li class="separation">/</li>
+                            {%- endunless -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+                </ul>
+            {%- endif -%}
+        </div>
+
+        <div class="halo-block-content">
+            <div class="product-tabs-content">
+                {%- for block in block_tabs -%}
+                    <div class="tab-content{% if forloop.first %} active{% endif %}" data-tab-content="product-tab-{{ section.id }}-{{ block.id }}">
+                        <div class="products-scroll-wrapper">
+                            <div class="products-grid">
+                                {%- assign collection = block.settings.collection -%}
+                                {%- if collection != blank and collection.products.size > 0 -%}
+                                    {%- for product in collection.products limit: limit -%}
+                                        <div class="product">
+                                            <div class="custom-product-card">
+                                                <div class="custom-card-media">
+                                                    <a href="{{ product.url }}">
+                                                        {%- if product.featured_image != blank -%}
+                                                            <img src="{{ product.featured_image | image_url: width: 400 }}" 
+                                                                 alt="{{ product.title | escape }}" 
+                                                                 loading="lazy">
+                                                        {%- else -%}
+                                                            <div class="placeholder-img">No Image</div>
+                                                        {%- endif -%}
+                                                    </a>
+                                                </div>
+                                                <div class="custom-card-content">
+                                                    <h3 class="custom-card-title">
+                                                        <a href="{{ product.url }}">{{ product.title }}</a>
+                                                    </h3>
+                                                    <div class="custom-card-rating">
+                                                        <div class="stars">★★★★★</div>
+                                                    </div>
+                                                    <p class="custom-card-description">
+                                                        {%- if product.description != blank -%}
+                                                            {{ product.description | strip_html | truncate: 70 }}
+                                                        {%- else -%}
+                                                            High quality product with premium materials.
+                                                        {%- endif -%}
+                                                    </p>
+                                                    <div class="custom-card-footer">
+                                                        <div class="custom-card-price-row">
+                                                            <div class="custom-card-price">
+                                                                <!-- Price with VAT (Incl.) -->
+                                                                <span class="price-current price-incl-vat">{{ product.price | money }}</span>
+                                                                <!-- Price without VAT (Excl.) - 23% VAT for Ireland -->
+                                                                {%- assign price_excl_vat = product.price | divided_by: 1.23 -%}
+                                                                <span class="price-current price-excl-vat">{{ price_excl_vat | money }}</span>
+                                                                <!-- VAT Labels -->
+                                                                <span class="price-vat vat-label-incl">Incl. VAT</span>
+                                                                <span class="price-vat vat-label-excl">Excl. VAT</span>
+                                                            </div>
+                                                            <a href="{{ product.url }}" class="custom-card-button">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                                                                Add to Cart
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {%- endfor -%}
+                                {%- else -%}
+                                    {%- for i in (1..limit) -%}
+                                        <div class="product">
+                                            <div class="custom-product-card">
+                                                <div class="custom-card-media">
+                                                    <a href="#">
+                                                        <div class="placeholder-img">No Image</div>
+                                                    </a>
+                                                </div>
+                                                <div class="custom-card-content">
+                                                    <h3 class="custom-card-title"><a href="#">Sample Product {{ i }}</a></h3>
+                                                    <div class="custom-card-rating">
+                                                        <div class="stars">★★★★★</div>
+                                                    </div>
+                                                    <p class="custom-card-description">High quality product with premium materials and excellent craftsmanship.</p>
+                                                    <div class="custom-card-footer">
+                                                        <div class="custom-card-price-row">
+                                                            <div class="custom-card-price">
+                                                                <span class="price-current price-incl-vat">€99.00</span>
+                                                                <span class="price-current price-excl-vat">€80.49</span>
+                                                                <span class="price-vat vat-label-incl">Incl. VAT</span>
+                                                                <span class="price-vat vat-label-excl">Excl. VAT</span>
+                                                            </div>
+                                                            <a href="#" class="custom-card-button">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                                                                Add to Cart
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {%- endfor -%}
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function() {
+    const section = document.querySelector('.section-block-{{section.id}}');
+    if (!section) return;
+    
+    // Tab functionality
+    const tabs = section.querySelectorAll('.tab-links');
+    const contents = section.querySelectorAll('.tab-content');
+    
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            const target = this.getAttribute('data-tab-target');
+            
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            contents.forEach(function(c) { c.classList.remove('active'); });
+            
+            this.classList.add('active');
+            section.querySelector('[data-tab-content="' + target + '"]').classList.add('active');
+        });
+    });
+})();
+
+// Global VAT initialization - runs once for whole page
+(function() {
+    if (window.vatInitialized) return;
+    window.vatInitialized = true;
+
+    function initVatDisplay() {
+        const savedPref = localStorage.getItem('vatPreference');
+        console.log('VAT Init - Saved preference:', savedPref); // Debug
+        
+        if (savedPref === 'exclude') {
+            document.body.classList.add('vat-excluded');
+            document.body.classList.remove('vat-included');
+        } else {
+            document.body.classList.add('vat-included');
+            document.body.classList.remove('vat-excluded');
+        }
+    }
+
+    // Initialize immediately
+    initVatDisplay();
+
+    // Also run on DOMContentLoaded in case body wasn't ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initVatDisplay);
+    }
+
+    // Listen for VAT toggle changes
+    document.addEventListener('vatToggleChanged', function(e) {
+        console.log('VAT Toggle Event received:', e.detail); // Debug
+        if (e.detail.includeVat) {
+            document.body.classList.add('vat-included');
+            document.body.classList.remove('vat-excluded');
+        } else {
+            document.body.classList.add('vat-excluded');
+            document.body.classList.remove('vat-included');
+        }
+    });
+})();
+</script>
+
+{% schema %}
+{
+    "name": "Product Machines Custom",
+    "class": "sections-product-tab",
+    "blocks": [
+        {
+            "type": "ProductTabs",
+            "name": "Product Tab",
+            "settings": [
+                {"type": "text", "id": "title", "label": "Tab Title", "default": "Collection"},
+                {"type": "collection", "id": "collection", "label": "Collection"}
+            ]
+        }
+    ],
+    "settings": [
+        {"type": "header", "content": "General"},
+        {"type": "select", "id": "container", "label": "Container", "default": "fullwidth", "options": [{"value": "container", "label": "Default"}, {"value": "fullwidth", "label": "Full Width"}]},
+        {"type": "color", "id": "product_bg", "label": "Background Color", "default": "#f9f9f9"},
+        {"type": "color_background", "id": "product_bg_gradient", "label": "Background Gradient"},
+        {"type": "range", "id": "product_block_limit", "label": "Product Limit", "min": 6, "max": 100, "step": 1, "default": 56},
+        {"type": "header", "content": "Section Header"},
+        {"type": "text", "id": "product_block_title", "label": "Title", "default": "Trending Now"},
+        {"type": "range", "id": "fontsize_title", "label": "Title Font Size", "min": 10, "max": 100, "step": 1, "unit": "px", "default": 28},
+        {"type": "range", "id": "fontsize_title_mb", "label": "Title Font Size Mobile", "min": 10, "max": 100, "step": 1, "unit": "px", "default": 22},
+        {"type": "color", "id": "color_title", "label": "Title Color", "default": "#222"},
+        {"type": "select", "id": "title_align", "label": "Title Alignment", "options": [{"value": "left", "label": "Left"}, {"value": "center", "label": "Center"}, {"value": "right", "label": "Right"}], "default": "left"},
+        {"type": "text", "id": "view_all", "label": "View All Text"},
+        {"type": "url", "id": "link_view_all", "label": "View All Link"},
+        {"type": "header", "content": "Tab Settings"},
+        {"type": "range", "id": "mg_bottom_title_tab", "label": "Header Margin Bottom", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 25},
+        {"type": "checkbox", "id": "separation", "label": "Show Separator", "default": true},
+        {"type": "range", "id": "fontsize_tab", "label": "Tab Font Size", "min": 10, "max": 50, "step": 1, "unit": "px", "default": 14},
+        {"type": "range", "id": "fontsize_tab_mb", "label": "Tab Font Size Mobile", "min": 10, "max": 50, "step": 1, "unit": "px", "default": 12},
+        {"type": "select", "id": "font_weight_tab", "label": "Tab Font Weight", "default": "600", "options": [{"value": "400", "label": "Normal"}, {"value": "600", "label": "Semi Bold"}, {"value": "700", "label": "Bold"}]},
+        {"type": "select", "id": "font_weight_active_tab", "label": "Active Tab Font Weight", "default": "700", "options": [{"value": "400", "label": "Normal"}, {"value": "600", "label": "Semi Bold"}, {"value": "700", "label": "Bold"}]},
+        {"type": "color", "id": "color_tab", "label": "Tab Text Color", "default": "#555"},
+        {"type": "color", "id": "bg_color_tab", "label": "Tab Background", "default": "#fff"},
+        {"type": "color", "id": "color_tab_active", "label": "Active Tab Text Color", "default": "#6fb31a"},
+        {"type": "color", "id": "bg_color_tab_active", "label": "Active Tab Background", "default": "#e8f5e9"},
+        {"type": "header", "content": "Spacing"},
+        {"type": "range", "id": "mg_top_desktop", "label": "Margin Top Desktop", "min": 0, "max": 150, "step": 5, "unit": "px", "default": 60},
+        {"type": "range", "id": "mg_top_tablet", "label": "Margin Top Tablet", "min": 0, "max": 150, "step": 5, "unit": "px", "default": 50},
+        {"type": "range", "id": "mg_top_mobile", "label": "Margin Top Mobile", "min": 0, "max": 150, "step": 5, "unit": "px", "default": 40},
+        {"type": "range", "id": "mg_bottom_desktop", "label": "Margin Bottom Desktop", "min": 0, "max": 150, "step": 5, "unit": "px", "default": 60},
+        {"type": "range", "id": "mg_bottom_tablet", "label": "Margin Bottom Tablet", "min": 0, "max": 150, "step": 5, "unit": "px", "default": 50},
+        {"type": "range", "id": "mg_bottom_mobile", "label": "Margin Bottom Mobile", "min": 0, "max": 150, "step": 5, "unit": "px", "default": 40}
+    ],
+    "presets": [{"name": "Product Tabs Custom", "blocks": [{"type": "ProductTabs"}, {"type": "ProductTabs"}, {"type": "ProductTabs"}]}]
+}
+{% endschema %}

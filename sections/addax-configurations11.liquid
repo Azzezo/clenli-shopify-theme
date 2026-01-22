@@ -1,0 +1,864 @@
+<!-- 
+SHOPIFY SECTION FILE
+Save as: sections/addax-configurations.liquid
+Upload to: Shopify Admin > Themes > Edit Code > Sections
+-->
+
+{% schema %}
+{
+  "name": "Addax Configurations",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Subtitle",
+      "default": "ELECTRIC UTILITY VEHICLES"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Main Title",
+      "default": "Addax Trailer Options"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_description",
+      "label": "Description",
+      "default": "Addax have a wide range of trailer configurations available for all sectors."
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Button Text",
+      "default": "Explore Addax Range"
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Color",
+      "default": "#529901"
+    },
+    {
+      "type": "color",
+      "id": "secondary_color",
+      "label": "Secondary Color",
+      "default": "#6fb31a"
+    },
+    {
+      "type": "header",
+      "content": "Contact Form Settings"
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "Contact Form Title",
+      "default": "Go Green Today - Enquire Now"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Phone Number",
+      "default": "01 811 89 20"
+    },
+    {
+      "type": "text",
+      "id": "email_address",
+      "label": "Email Address",
+      "default": "info@clenlidirect.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "configuration",
+      "name": "Configuration Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "section_title",
+          "label": "Section Title",
+          "default": "Electric Tipper Van"
+        },
+        {
+          "type": "textarea",
+          "id": "section_description",
+          "label": "Section Description"
+        },
+        {
+          "type": "text",
+          "id": "feature_1_title",
+          "label": "Feature 1 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_1_image",
+          "label": "Feature 1 Image"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_1_text",
+          "label": "Feature 1 Description"
+        },
+        {
+          "type": "text",
+          "id": "feature_2_title",
+          "label": "Feature 2 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_2_image",
+          "label": "Feature 2 Image"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_2_text",
+          "label": "Feature 2 Description"
+        },
+        {
+          "type": "text",
+          "id": "feature_3_title",
+          "label": "Feature 3 Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_3_image",
+          "label": "Feature 3 Image"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_3_text",
+          "label": "Feature 3 Description"
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "name": "Highlight Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "highlight_image",
+          "label": "Icon/Image"
+        },
+        {
+          "type": "text",
+          "id": "highlight_title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "highlight_text",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "model",
+      "name": "Vehicle Model",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "model_image",
+          "label": "Model Image"
+        },
+        {
+          "type": "text",
+          "id": "model_name",
+          "label": "Model Name"
+        },
+        {
+          "type": "textarea",
+          "id": "model_description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "model_link",
+          "label": "Link to Model Page"
+        },
+        {
+          "type": "text",
+          "id": "model_button_text",
+          "label": "Button Text",
+          "default": "View Details"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Addax Configurations",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+:root {
+  --primary-color: {{ section.settings.primary_color }};
+  --secondary-color: {{ section.settings.secondary_color }};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.addax-page {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hero-content h3 {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(82, 153, 1, 0.3);
+}
+
+/* Divider */
+.divider {
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+/* Configuration Sections */
+.config-section {
+    padding: 60px 0;
+}
+
+.config-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.config-header h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.config-header p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    text-align: center;
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.feature-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Highlights Section */
+.highlights-section {
+    background: #f5f5f5;
+    padding: 60px 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight-card {
+    text-align: center;
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.highlight-card img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 20px;
+}
+
+.highlight-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.highlight-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Models Section */
+.models-section {
+    padding: 60px 0;
+}
+
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.model-card {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.model-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.model-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.model-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #fff;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.btn-secondary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Contact Form */
+.contact-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.success-message,
+.error-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-grid,
+    .contact-grid,
+    .models-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-grid,
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h3 {
+        font-size: 18px;
+    }
+
+    .config-header h2 {
+        font-size: 26px;
+    }
+
+    .cta-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+</style>
+
+<div class="addax-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                {% if section.settings.hero_image %}
+                <div class="hero-image">
+                    <img src="{{ section.settings.hero_image | img_url: '800x' }}" 
+                         alt="{{ section.settings.hero_title }}">
+                </div>
+                {% endif %}
+                <div class="hero-content">
+                    {% if section.settings.hero_subtitle != blank %}
+                    <h3>{{ section.settings.hero_subtitle }}</h3>
+                    {% endif %}
+                    
+                    {% if section.settings.hero_title != blank %}
+                    <h1>{{ section.settings.hero_title }}</h1>
+                    {% endif %}
+                    
+                    {% if section.settings.hero_description != blank %}
+                    <div class="hero-description">
+                        {{ section.settings.hero_description }}
+                    </div>
+                    {% endif %}
+                    
+                    {% if section.settings.hero_button_link != blank %}
+                    <a href="{{ section.settings.hero_button_link }}" class="btn-primary">
+                        {{ section.settings.hero_button_text }}
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Configuration Blocks -->
+    {% for block in section.blocks %}
+        {% if block.type == 'configuration' %}
+        <section class="config-section" {{ block.shopify_attributes }}>
+            <div class="container">
+                <div class="config-header">
+                    <h2>{{ block.settings.section_title }}</h2>
+                    {% if block.settings.section_description != blank %}
+                    <p>{{ block.settings.section_description }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="feature-grid">
+                    {% if block.settings.feature_1_title != blank %}
+                    <div class="feature-card">
+                        {% if block.settings.feature_1_image %}
+                        <img src="{{ block.settings.feature_1_image | img_url: '400x' }}" 
+                             alt="{{ block.settings.feature_1_title }}">
+                        {% endif %}
+                        <h3>{{ block.settings.feature_1_title }}</h3>
+                        <p>{{ block.settings.feature_1_text }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.feature_2_title != blank %}
+                    <div class="feature-card">
+                        {% if block.settings.feature_2_image %}
+                        <img src="{{ block.settings.feature_2_image | img_url: '400x' }}" 
+                             alt="{{ block.settings.feature_2_title }}">
+                        {% endif %}
+                        <h3>{{ block.settings.feature_2_title }}</h3>
+                        <p>{{ block.settings.feature_2_text }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.feature_3_title != blank %}
+                    <div class="feature-card">
+                        {% if block.settings.feature_3_image %}
+                        <img src="{{ block.settings.feature_3_image | img_url: '400x' }}" 
+                             alt="{{ block.settings.feature_3_title }}">
+                        {% endif %}
+                        <h3>{{ block.settings.feature_3_title }}</h3>
+                        <p>{{ block.settings.feature_3_text }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Highlights Section -->
+    {% assign highlight_blocks = section.blocks | where: "type", "highlight" %}
+    {% if highlight_blocks.size > 0 %}
+    <section class="highlights-section">
+        <div class="container">
+            <div class="config-header">
+                <h2>Addax Utility Vehicle Highlights</h2>
+            </div>
+
+            <div class="highlights-grid">
+                {% for block in highlight_blocks %}
+                <div class="highlight-card" {{ block.shopify_attributes }}>
+                    {% if block.settings.highlight_image %}
+                    <img src="{{ block.settings.highlight_image | img_url: '300x' }}" 
+                         alt="{{ block.settings.highlight_title }}">
+                    {% endif %}
+                    <h3>{{ block.settings.highlight_title }}</h3>
+                    <p>{{ block.settings.highlight_text }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Models Section -->
+    {% assign model_blocks = section.blocks | where: "type", "model" %}
+    {% if model_blocks.size > 0 %}
+    <section class="models-section">
+        <div class="container">
+            <div class="config-header">
+                <h2>Choose Your Addax Model</h2>
+            </div>
+
+            <div class="models-grid">
+                {% for block in model_blocks %}
+                <div class="model-card" {{ block.shopify_attributes }}>
+                    {% if block.settings.model_image %}
+                    <img src="{{ block.settings.model_image | img_url: '600x' }}" 
+                         alt="{{ block.settings.model_name }}">
+                    {% endif %}
+                    <h3>{{ block.settings.model_name }}</h3>
+                    <p>{{ block.settings.model_description }}</p>
+                    {% if block.settings.model_link != blank %}
+                    <a href="{{ block.settings.model_link }}" class="btn-primary">
+                        {{ block.settings.model_button_text }}
+                    </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Don't Get Left Behind</h2>
+            <p>Embrace the future and be a part of the new green cleaning revolution! Contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.</p>
+            <a href="#contact-form" class="btn-secondary">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact-form">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>{{ section.settings.contact_title }}</h3>
+                    <p>Contact us to learn more about how Addax Electric Utility Vehicles can transform your business operations.</p>
+                    <p><strong>Phone:</strong> <a href="tel:{{ section.settings.phone_number | remove: ' ' }}">{{ section.settings.phone_number }}</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:{{ section.settings.email_address }}">{{ section.settings.email_address }}</a></p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Request a Quote</h3>
+                    {% form 'contact' %}
+                        {% if form.posted_successfully? %}
+                            <div class="success-message">
+                                <p>✓ Thank you! We'll contact you soon.</p>
+                            </div>
+                        {% endif %}
+
+                        {% if form.errors %}
+                            <div class="error-message">
+                                <p>⚠ Please fill in all required fields correctly.</p>
+                            </div>
+                        {% endif %}
+
+                        <div class="form-group">
+                            <input type="text" 
+                                   name="contact[name]" 
+                                   placeholder="Your Name *" 
+                                   value="{% if form.name %}{{ form.name }}{% endif %}"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" 
+                                   name="contact[email]" 
+                                   placeholder="Your Email *" 
+                                   value="{% if form.email %}{{ form.email }}{% endif %}"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" 
+                                   name="contact[phone]" 
+                                   placeholder="Phone Number *" 
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="contact[body]" 
+                                      placeholder="Your Message *" 
+                                      required>{% if form.body %}{{ form.body }}{% endif %}</textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Submit Enquiry</button>
+                    {% endform %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+</script>
