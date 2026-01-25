@@ -14,7 +14,7 @@
     <div class="container">
         <div class="header-mobile__wrapper header-mobile--wrapper">
             {%- for block in section.blocks -%}
-                <div class="header-mobile__item header-mobile__item--{{ block.type }}"{% if block.type == 'logo' %} style="--alignment: {{ block.settings.alignment }};"{% endif %}>
+                <div class="header-mobile__item header-mobile__item--{{ block.type }}{% if block.type == 'menu' %} header-mobile__item--menu-default{% endif %}"{% if block.type == 'logo' %} style="--alignment: {{ block.settings.alignment }};"{% endif %}>
                     {%- case block.type -%}
                         {%-  when 'menu' -%}
                             <div class="header-mobile--icon item__mobile--hamburger" style="--i-color: {{ block.settings.color }};">
@@ -207,6 +207,7 @@
         </div>
     </div>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header-mobile{% else %}div{% endif %}>
+
 
 {% javascript %}
     class StickyHeaderMobile extends HTMLElement {

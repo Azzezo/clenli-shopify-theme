@@ -45,10 +45,13 @@ class ProductTabs extends HTMLElement {
         setTimeout(() => {
             if (window.innerWidth > 550) {
                 const $thisContent = document.getElementById('tab-description-mobile');
-                const tabHeight = $thisContent.offsetHeight;
-                const maxHeight = parseInt($thisContent.querySelector('.tab-showMore')?.dataset.desMax);
-                if (tabHeight < maxHeight) {
-                    $thisContent.querySelector('.tab-showMore').remove();
+                if ($thisContent) {
+                    const tabHeight = $thisContent.offsetHeight;
+                    const showMoreEl = $thisContent.querySelector('.tab-showMore');
+                    const maxHeight = parseInt(showMoreEl?.dataset?.desMax || 0);
+                    if (showMoreEl && tabHeight < maxHeight) {
+                        showMoreEl.remove();
+                    }
                 }
             }
         })

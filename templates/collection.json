@@ -36,6 +36,7 @@
     "collection_clenli_ajax_bxjdJP": {
       "type": "collection-clenli-ajax",
       "name": "Collection AJAX Filters",
+      "disabled": true,
       "settings": {
         "collection_banner_link": "",
         "show_collection_image": false,
@@ -87,7 +88,6 @@
         "subcategory_efRXhW",
         "subcategory_cxwL7V"
       ],
-      "disabled": true,
       "settings": {
         "collection_banner_link": "",
         "show_collection_image": false,
@@ -269,8 +269,8 @@
   },
   "order": [
     "banner",
-    "collection_clenli_ajax_bxjdJP",
     "product-grid",
+    "collection_clenli_ajax_bxjdJP",
     "product-recently-viewed",
     "featured_product_we_8dTArc",
     "newsletter_Dh69N3"

@@ -441,7 +441,7 @@
     const savedPref = localStorage.getItem('vatPreference');
     if (savedPref === 'include') {
       updateVatDisplay(true);
-    } else if (savedPref === 'exclude') {
+    } else {
       updateVatDisplay(false);
     }
   });

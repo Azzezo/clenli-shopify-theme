@@ -620,6 +620,13 @@
             object-fit: contain;
         }
 
+        /* Hide specific ad banners on mobile (Pacvac + i-team) */
+        @media (max-width: 767px) {
+            .section-block-{{ section.id }} .slideshow-right-banners {
+                display: none !important;
+            }
+        }
+
         .section-block-{{ section.id }} .ad-banner-placeholder {
             width: 100%;
             height: 100%;

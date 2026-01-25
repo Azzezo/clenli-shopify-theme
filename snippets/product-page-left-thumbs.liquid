@@ -808,6 +808,8 @@
                                                 check_show_share: check_show_share,
                                                 share_layout: check_show_share
                                             %}
+                                            {%- comment -%} Product Rating Stars - Added under title like Magento 2 site {%- endcomment -%}
+                                            {% render 'product-rating-stars', product: product, show_add_review: true %}
                                         </div>
                                     {%- when 'meta' -%}
                                         {%- liquid 

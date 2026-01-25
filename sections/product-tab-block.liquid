@@ -318,6 +318,16 @@
     
     /* Add to Cart Button */
     .section-block-{{section.id}} .custom-card-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-block-{{section.id}} .custom-card-button form {
+        margin: 0;
+    }
+    .section-block-{{section.id}} .custom-card-button .button,
+    .section-block-{{section.id}} .custom-card-button .button-ATC,
+    .section-block-{{section.id}} .custom-card-button .product-form__submit {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -337,7 +347,9 @@
         box-sizing: border-box;
         white-space: nowrap;
     }
-    .section-block-{{section.id}} .custom-card-button:hover {
+    .section-block-{{section.id}} .custom-card-button .button:hover,
+    .section-block-{{section.id}} .custom-card-button .button-ATC:hover,
+    .section-block-{{section.id}} .custom-card-button .product-form__submit:hover {
         background-color: #000000;
     }
     .section-block-{{section.id}} .custom-card-button svg {
@@ -409,7 +421,9 @@
         .section-block-{{section.id}} .custom-card-price .price-current {
             font-size: 15px;
         }
-        .section-block-{{section.id}} .custom-card-button {
+        .section-block-{{section.id}} .custom-card-button .button,
+        .section-block-{{section.id}} .custom-card-button .button-ATC,
+        .section-block-{{section.id}} .custom-card-button .product-form__submit {
             padding: 6px 10px;
             font-size: 10px;
         }
@@ -492,13 +506,20 @@
                                                     <div class="custom-card-footer">
                                                         <div class="custom-card-price-row">
                                                             <div class="custom-card-price">
-                                                                <span class="price-current">{{ product.price | money }}</span>
-                                                                <span class="price-vat">Incl. VAT</span>
+                                                                {%- assign price_excl_vat = product.price | divided_by: 1.23 -%}
+                                                                <span class="price-current price-item--vat price-item--vat-incl">{{ product.price | money }}</span>
+                                                                <span class="price-current price-item--vat price-item--vat-excl">{{ price_excl_vat | money }}</span>
+                                                                <span class="price-vat vat-label-incl">Incl. VAT</span>
+                                                                <span class="price-vat vat-label-excl">Excl. VAT</span>
                                                             </div>
-                                                            <a href="{{ product.url }}" class="custom-card-button">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                                                Add to Cart
-                                                            </a>
+                                                            <div class="custom-card-button">
+                                                                {% render 'add-to-cart-form',
+                                                                    product: product,
+                                                                    id: 'form',
+                                                                    position: 0,
+                                                                    sectionId: section.id
+                                                                %}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -523,13 +544,19 @@
                                                     <div class="custom-card-footer">
                                                         <div class="custom-card-price-row">
                                                             <div class="custom-card-price">
-                                                                <span class="price-current">$99.00</span>
-                                                                <span class="price-vat">Incl. VAT</span>
+                                                                <span class="price-current price-item--vat price-item--vat-incl">€99.00</span>
+                                                                <span class="price-current price-item--vat price-item--vat-excl">€80.49</span>
+                                                                <span class="price-vat vat-label-incl">Incl. VAT</span>
+                                                                <span class="price-vat vat-label-excl">Excl. VAT</span>
                                                             </div>
-                                                            <a href="#" class="custom-card-button">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                                                Add to Cart
-                                                            </a>
+                                                            <div class="custom-card-button">
+                                                                {% render 'add-to-cart-form',
+                                                                    product: product,
+                                                                    id: 'form',
+                                                                    position: 0,
+                                                                    sectionId: section.id
+                                                                %}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -1,0 +1,54 @@
+{%- comment -%}
+  Clenli Inline Info Links
+  Groups custom_information blocks (Delivery, Payment, Returns) into inline row
+{%- endcomment -%}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all product-customInformation elements
+  const infoLinks = document.querySelectorAll('.product-customInformation');
+  
+  if (infoLinks.length > 0) {
+    // Get all parent moreItem wrappers
+    const wrappers = [];
+    infoLinks.forEach(function(link) {
+      const wrapper = link.closest('.productView-moreItem');
+      if (wrapper && !wrappers.includes(wrapper)) {
+        wrappers.push(wrapper);
+      }
+    });
+    
+    // If we have multiple info link wrappers, group them
+    if (wrappers.length > 1) {
+      // Create container
+      const container = document.createElement('div');
+      container.className = 'clenli-info-links-row';
+      
+      // Insert container before first wrapper
+      wrappers[0].parentNode.insertBefore(container, wrappers[0]);
+      
+      // Move all wrappers into container
+      wrappers.forEach(function(wrapper, index) {
+        wrapper.classList.add('clenli-inline-info-item');
+        container.appendChild(wrapper);
+        
+        // Remove border from last item
+        if (index === wrappers.length - 1) {
+          const infoLink = wrapper.querySelector('.product-customInformation');
+          if (infoLink) {
+            infoLink.classList.add('no-border');
+          }
+        }
+      });
+    } else if (wrappers.length === 1) {
+      // Single info link - just add inline class
+      wrappers[0].classList.add('clenli-inline-info-item');
+      const infoLink = wrappers[0].querySelector('.product-customInformation');
+      if (infoLink) {
+        infoLink.classList.add('no-border');
+      }
+    }
+  }
+});
+</script>
+

@@ -155,3 +155,9 @@
         --section-min-height: 100svh;
     }
 </style>
+
+{%- comment -%}Clenli Product Page Style Overrides{%- endcomment -%}
+{%- if request.page_type == 'product' -%}
+    {{ 'clenli-product-overrides.css' | asset_url | stylesheet_tag }}
+    {% render 'clenli-inline-info-links' %}
+{%- endif -%}

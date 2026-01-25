@@ -2,11 +2,28 @@
     assign fontsize_text = block.settings.fontsize_text
     assign color_title = block.settings.color_title
     assign text_transform = block.settings.text_transform
+
+    assign vendor_img_png = product.vendor | downcase | replace: ' ', '-' | append: '.png' | prepend: 'vendor-'
+    assign vendor_img_jpg = product.vendor | downcase | replace: ' ', '-' | append: '.jpg' | prepend: 'vendor-'
+    assign vendor_img_webp = product.vendor | downcase | replace: ' ', '-' | append: '.webp' | prepend: 'vendor-'
+    if images[vendor_img_webp] != blank
+        assign vendor_img = vendor_img_webp
+    elsif images[vendor_img_png] != blank
+        assign vendor_img = vendor_img_png
+    elsif images[vendor_img_jpg] != blank
+        assign vendor_img = vendor_img_jpg
+    endif
 -%}
 <div class="product__vendor" 
     style="--fontsize-text:{{ fontsize_text | append: 'px' }};
     --color-title: {{ color_title }};
     --text-transform: {{ text_transform }}" 
 >
-    {{ product.vendor | link_to_vendor }}
+    {%- if vendor_img != blank -%}
+        <a class="vendor-image vendor-image--product" href="/collections/vendors?q={{ product.vendor | url_encode }}" title="{{ product.vendor }}">
+            <img src="{{ vendor_img | file_url }}" alt="{{ product.vendor }}">
+        </a>
+    {%- else -%}
+        {{ product.vendor | link_to_vendor }}
+    {%- endif -%}
 </div>

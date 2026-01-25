@@ -1,11 +1,7 @@
 <div class="categories-mega-menu-wrapper section-{{ section.id }}">
   <!-- Mobile Hamburger Button -->
   <button class="mobile-menu-toggle" id="mobile-toggle-{{ section.id }}" aria-label="Open menu">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
+    <span class="mobileMenu-toggle__Icon"></span>
   </button>
 
   <!-- Mobile Menu Overlay -->
@@ -113,6 +109,66 @@
   --nav-hover: {{ section.settings.nav_hover_color }};
 }
 
+.section-{{ section.id }} .header-mobile__item--menu {
+  --i-color: var(--color-text, #222222);
+  color: var(--i-color);
+}
+
+.section-{{ section.id }} .header-mobile__item--menu .mobileMenu-toggle__Icon,
+.section-{{ section.id }} .header-mobile__item--menu .mobileMenu-toggle__Icon::before,
+.section-{{ section.id }} .header-mobile__item--menu .mobileMenu-toggle__Icon::after {
+  background-color: currentColor;
+}
+
+.header-mobile .mobile-menu-toggle.mobile-menu-toggle--header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-mobile .header-mobile__item--menu,
+.header-mobile .header-mobile__item--menu .header-mobile--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.header-mobile .header-mobile__item--menu .mobile-menu-toggle--header {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.header-mobile .header-mobile__item--menu .mobile-menu-toggle--header .mobileMenu-toggle__Icon,
+.header-mobile .header-mobile__item--menu .mobile-menu-toggle--header .mobileMenu-toggle__Icon::before,
+.header-mobile .header-mobile__item--menu .mobile-menu-toggle--header .mobileMenu-toggle__Icon::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: currentColor;
+}
+
+.header-mobile .header-mobile__item--menu .mobile-menu-toggle--header .mobileMenu-toggle__Icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-mobile .header-mobile__item--menu .mobile-menu-toggle--header .mobileMenu-toggle__Icon::before {
+  top: -8px;
+}
+
+.header-mobile .header-mobile__item--menu .mobile-menu-toggle--header .mobileMenu-toggle__Icon::after {
+  bottom: -8px;
+}
+
 .section-{{ section.id }} .mobile-menu-toggle {
   display: none;
   align-items: center;
@@ -124,6 +180,24 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+.section-{{ section.id }} .mobile-menu-toggle.mobile-menu-toggle--header {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+}
+.section-{{ section.id }} .mobile-menu-toggle.mobile-menu-toggle--header svg {
+  width: 20px;
+  height: 20px;
+}
+.header-mobile .mobile-menu-toggle {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
 }
 
 .section-{{ section.id }} .mobile-menu-overlay {
@@ -609,7 +683,12 @@
 }
 
 @media (max-width: 1024px) {
+  .header-mobile__item--menu-default {
+    display: none !important;
+  }
+
   .section-{{ section.id }} .mobile-menu-toggle { display: flex; }
+  .section-{{ section.id }} .mobile-menu-toggle:not(.mobile-menu-toggle--header) { display: none !important; }
   .section-{{ section.id }} .categories-mega-menu,
   .section-{{ section.id }} .main-nav-horizontal { display: none !important; }
 }
@@ -623,260 +702,303 @@
 <script>
 (function() {
   const sectionId = '{{ section.id }}';
-  const dataEl = document.getElementById('menu-data-' + sectionId);
-  if (!dataEl) return;
-  
-  let data;
-  try {
-    data = JSON.parse(dataEl.textContent);
-  } catch(e) {
-    console.error('Menu parse error:', e);
-    return;
-  }
-  
-  const categories = data.categories || [];
-  const navItems = data.nav || [];
-  
-  // Build tree from flat ordered list
-  function buildTree(items) {
-    const root = { children: [] };
-    const stack = [{ node: root, level: 0 }];
-    
-    items.forEach(item => {
-      const level = parseInt(item.level) || 1;
-      const node = { ...item, level: level, children: [] };
-      
-      while (stack.length > 1 && stack[stack.length - 1].level >= level) {
-        stack.pop();
-      }
-      
-      stack[stack.length - 1].node.children.push(node);
-      stack.push({ node, level });
-    });
-    
-    return root.children;
-  }
-  
-  // Build nav tree (nav_item with following nav_dropdown as children)
-  function buildNavTree(items) {
-    const result = [];
-    let currentParent = null;
-    
-    items.forEach(item => {
-      if (item.type === 'nav_item') {
-        currentParent = { ...item, children: [] };
-        result.push(currentParent);
-      } else if (item.type === 'nav_dropdown' && currentParent) {
-        currentParent.children.push(item);
-      }
-    });
-    
-    return result;
-  }
-  
-  const categoryTree = buildTree(categories);
-  const navTree = buildNavTree(navItems);
-  
-  // Desktop Categories HTML
-  function renderFlyout(nodes, isRoot) {
-    let html = '';
-    nodes.forEach(node => {
-      const hasKids = node.children && node.children.length > 0;
-      const isMega = node.style === 'mega' && hasKids;
-      
-      let classes = 'desk-item';
-      if (hasKids && !isMega) classes += ' has-kids';
-      if (isMega) classes += ' has-mega';
-      
-      html += '<div class="' + classes + '">';
-      html += '<a href="' + node.link + '" class="desk-link">';
-      if (node.icon && isRoot) {
-        html += '<span class="desk-icon"><img src="' + node.icon + '" alt=""></span>';
-      }
-      html += '<span class="desk-text">' + node.title + '</span>';
-      if (hasKids) {
-        html += '<span class="desk-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></span>';
-      }
-      html += '</a>';
-      
-      if (hasKids) {
-        if (isMega) {
-          html += '<div class="desk-mega"><div class="mega-grid">';
-          node.children.forEach(child => {
-            html += '<div class="mega-col">';
-            if (child.image) {
-              html += '<div class="mega-col-img"><a href="' + child.link + '"><img src="' + child.image + '" alt="' + child.title + '"></a></div>';
-            }
-            html += '<h4 class="mega-col-title"><a href="' + child.link + '">' + child.title + '</a></h4>';
-            if (child.children && child.children.length > 0) {
-              html += '<ul class="mega-col-links">';
-              child.children.forEach(subchild => {
-                html += '<li><a href="' + subchild.link + '">' + subchild.title + '</a></li>';
-              });
-              html += '</ul>';
-            }
-            html += '</div>';
-          });
-          html += '</div></div>';
-        } else {
-          html += '<div class="desk-flyout">' + renderFlyout(node.children, false) + '</div>';
+  function initMenu() {
+    const sectionRoot = document.querySelector('.section-' + sectionId);
+    if (!sectionRoot) return;
+    if (sectionRoot.dataset.menuInit === 'true') return;
+    sectionRoot.dataset.menuInit = 'true';
+
+    const dataEl = document.getElementById('menu-data-' + sectionId);
+    if (!dataEl) return;
+
+    let data;
+    try {
+      data = JSON.parse(dataEl.textContent);
+    } catch(e) {
+      console.error('Menu parse error:', e);
+      return;
+    }
+
+    const categories = data.categories || [];
+    const navItems = data.nav || [];
+
+    // Build tree from flat ordered list
+    function buildTree(items) {
+      const root = { children: [] };
+      const stack = [{ node: root, level: 0 }];
+
+      items.forEach(item => {
+        const level = parseInt(item.level) || 1;
+        const node = { ...item, level: level, children: [] };
+
+        while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+          stack.pop();
         }
-      }
-      html += '</div>';
-    });
-    return html;
-  }
-  
-  // Desktop Navigation HTML
-  function renderNav(nodes) {
-    let html = '';
-    nodes.forEach(node => {
-      const hasKids = node.children && node.children.length > 0;
-      const hasImage = node.image && node.image.length > 0;
-      html += '<div class="nav-item-wrap' + (hasKids ? ' has-dropdown' : '') + '">';
-      html += '<a href="' + node.link + '" class="nav-link">' + node.title;
-      if (hasKids) {
-        html += '<svg class="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>';
-      }
-      html += '</a>';
-      if (hasKids) {
-        html += '<div class="nav-dropdown' + (hasImage ? ' has-image' : '') + '">';
-        html += '<ul class="nav-dropdown-links">';
-        node.children.forEach(child => {
-          html += '<li><a href="' + child.link + '">' + child.title + '</a></li>';
-        });
-        html += '</ul>';
-        if (hasImage) {
-          html += '<div class="nav-dropdown-image"><img src="' + node.image + '" alt="' + node.title + '"></div>';
+
+        stack[stack.length - 1].node.children.push(node);
+        stack.push({ node, level });
+      });
+
+      return root.children;
+    }
+
+    // Build nav tree (nav_item with following nav_dropdown as children)
+    function buildNavTree(items) {
+      const result = [];
+      let currentParent = null;
+
+      items.forEach(item => {
+        if (item.type === 'nav_item') {
+          currentParent = { ...item, children: [] };
+          result.push(currentParent);
+        } else if (item.type === 'nav_dropdown' && currentParent) {
+          currentParent.children.push(item);
+        }
+      });
+
+      return result;
+    }
+
+    const categoryTree = buildTree(categories);
+    const navTree = buildNavTree(navItems);
+
+    // Desktop Categories HTML
+    function renderFlyout(nodes, isRoot) {
+      let html = '';
+      nodes.forEach(node => {
+        const hasKids = node.children && node.children.length > 0;
+        const isMega = node.style === 'mega' && hasKids;
+
+        let classes = 'desk-item';
+        if (hasKids && !isMega) classes += ' has-kids';
+        if (isMega) classes += ' has-mega';
+
+        html += '<div class="' + classes + '">';
+        html += '<a href="' + node.link + '" class="desk-link">';
+        if (node.icon && isRoot) {
+          html += '<span class="desk-icon"><img src="' + node.icon + '" alt=""></span>';
+        }
+        html += '<span class="desk-text">' + node.title + '</span>';
+        if (hasKids) {
+          html += '<span class="desk-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></span>';
+        }
+        html += '</a>';
+
+        if (hasKids) {
+          if (isMega) {
+            html += '<div class="desk-mega"><div class="mega-grid">';
+            node.children.forEach(child => {
+              html += '<div class="mega-col">';
+              if (child.image) {
+                html += '<div class="mega-col-img"><a href="' + child.link + '"><img src="' + child.image + '" alt="' + child.title + '"></a></div>';
+              }
+              html += '<h4 class="mega-col-title"><a href="' + child.link + '">' + child.title + '</a></h4>';
+              if (child.children && child.children.length > 0) {
+                html += '<ul class="mega-col-links">';
+                child.children.forEach(subchild => {
+                  html += '<li><a href="' + subchild.link + '">' + subchild.title + '</a></li>';
+                });
+                html += '</ul>';
+              }
+              html += '</div>';
+            });
+            html += '</div></div>';
+          } else {
+            html += '<div class="desk-flyout">' + renderFlyout(node.children, false) + '</div>';
+          }
         }
         html += '</div>';
-      }
-      html += '</div>';
-    });
-    return html;
-  }
-  
-  // Mobile Categories HTML
-  function renderMobile(nodes) {
-    let html = '';
-    nodes.forEach(node => {
-      const hasKids = node.children && node.children.length > 0;
-      html += '<li class="mobile-item' + (hasKids ? ' has-kids' : '') + '">';
-      html += '<div class="mobile-item-wrap">';
-      html += '<a href="' + node.link + '" class="mobile-link">';
-      if (node.icon) {
-        html += '<img src="' + node.icon + '" alt="">';
-      }
-      html += node.title + '</a>';
-      if (hasKids) {
-        html += '<button class="mobile-toggle" type="button">+</button>';
-      }
-      html += '</div>';
-      if (hasKids) {
-        html += '<ul class="mobile-children">' + renderMobile(node.children) + '</ul>';
-      }
-      html += '</li>';
-    });
-    return html;
-  }
-  
-  // Mobile Navigation HTML
-  function renderMobileNav(nodes) {
-    let html = '';
-    nodes.forEach(node => {
-      const hasKids = node.children && node.children.length > 0;
-      html += '<li class="mobile-item' + (hasKids ? ' has-kids' : '') + '">';
-      html += '<div class="mobile-item-wrap">';
-      html += '<a href="' + node.link + '" class="mobile-link">' + node.title + '</a>';
-      if (hasKids) {
-        html += '<button class="mobile-toggle" type="button">+</button>';
-      }
-      html += '</div>';
-      if (hasKids) {
-        html += '<ul class="mobile-children">';
-        node.children.forEach(child => {
-          html += '<li class="mobile-item"><div class="mobile-item-wrap"><a href="' + child.link + '" class="mobile-link">' + child.title + '</a></div></li>';
-        });
-        html += '</ul>';
-      }
-      html += '</li>';
-    });
-    return html;
-  }
-  
-  // Render desktop categories
-  const deskEl = document.getElementById('desktop-menu-' + sectionId);
-  if (deskEl) {
-    deskEl.innerHTML = renderFlyout(categoryTree, true);
-  }
-  
-  // Render desktop nav
-  const navEl = document.getElementById('main-nav-' + sectionId);
-  if (navEl) {
-    navEl.innerHTML = renderNav(navTree);
-  }
-  
-  // Render mobile categories
-  const mobEl = document.getElementById('mobile-menu-' + sectionId);
-  if (mobEl) {
-    mobEl.innerHTML = renderMobile(categoryTree);
-  }
-  
-  // Render mobile nav
-  const mobNavEl = document.getElementById('mobile-nav-' + sectionId);
-  if (mobNavEl) {
-    mobNavEl.innerHTML = renderMobileNav(navTree);
-  }
-  
-  // Mobile toggle handlers
-  document.querySelectorAll('.section-' + sectionId + ' .mobile-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const li = btn.closest('.mobile-item');
-      li.classList.toggle('open');
-      btn.textContent = li.classList.contains('open') ? '−' : '+';
-    });
-  });
-  
-  // Desktop menu open/close
-  const megaMenu = document.getElementById('mega-menu-' + sectionId);
-  const btn = document.getElementById('categories-btn-' + sectionId);
-  if (megaMenu && btn) {
-    const isHome = {% if request.page_type == 'index' %}true{% else %}false{% endif %};
-    if (!isHome) {
-      megaMenu.classList.remove('is-open');
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        megaMenu.classList.toggle('is-open');
       });
-      document.addEventListener('click', function(e) {
-        if (!megaMenu.contains(e.target)) {
-          megaMenu.classList.remove('is-open');
-        }
-      });
+      return html;
     }
+
+    // Desktop Navigation HTML
+    function renderNav(nodes) {
+      let html = '';
+      nodes.forEach(node => {
+        const hasKids = node.children && node.children.length > 0;
+        const hasImage = node.image && node.image.length > 0;
+        html += '<div class="nav-item-wrap' + (hasKids ? ' has-dropdown' : '') + '">';
+        html += '<a href="' + node.link + '" class="nav-link">' + node.title;
+        if (hasKids) {
+          html += '<svg class="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+        }
+        html += '</a>';
+        if (hasKids) {
+          html += '<div class="nav-dropdown' + (hasImage ? ' has-image' : '') + '">';
+          html += '<ul class="nav-dropdown-links">';
+          node.children.forEach(child => {
+            html += '<li><a href="' + child.link + '">' + child.title + '</a></li>';
+          });
+          html += '</ul>';
+          if (hasImage) {
+            html += '<div class="nav-dropdown-image"><img src="' + node.image + '" alt="' + node.title + '"></div>';
+          }
+          html += '</div>';
+        }
+        html += '</div>';
+      });
+      return html;
+    }
+
+    // Mobile Categories HTML
+    function renderMobile(nodes) {
+      let html = '';
+      nodes.forEach(node => {
+        const hasKids = node.children && node.children.length > 0;
+        html += '<li class="mobile-item' + (hasKids ? ' has-kids' : '') + '">';
+        html += '<div class="mobile-item-wrap">';
+        html += '<a href="' + node.link + '" class="mobile-link">';
+        if (node.icon) {
+          html += '<img src="' + node.icon + '" alt="">';
+        }
+        html += node.title + '</a>';
+        if (hasKids) {
+          html += '<button class="mobile-toggle" type="button">+</button>';
+        }
+        html += '</div>';
+        if (hasKids) {
+          html += '<ul class="mobile-children">' + renderMobile(node.children) + '</ul>';
+        }
+        html += '</li>';
+      });
+      return html;
+    }
+
+    // Mobile Navigation HTML
+    function renderMobileNav(nodes) {
+      let html = '';
+      nodes.forEach(node => {
+        const hasKids = node.children && node.children.length > 0;
+        html += '<li class="mobile-item' + (hasKids ? ' has-kids' : '') + '">';
+        html += '<div class="mobile-item-wrap">';
+        html += '<a href="' + node.link + '" class="mobile-link">' + node.title + '</a>';
+        if (hasKids) {
+          html += '<button class="mobile-toggle" type="button">+</button>';
+        }
+        html += '</div>';
+        if (hasKids) {
+          html += '<ul class="mobile-children">';
+          node.children.forEach(child => {
+            html += '<li class="mobile-item"><div class="mobile-item-wrap"><a href="' + child.link + '" class="mobile-link">' + child.title + '</a></div></li>';
+          });
+          html += '</ul>';
+        }
+        html += '</li>';
+      });
+      return html;
+    }
+
+    // Render desktop categories
+    const deskEl = document.getElementById('desktop-menu-' + sectionId);
+    if (deskEl) {
+      deskEl.innerHTML = renderFlyout(categoryTree, true);
+    }
+
+    // Render desktop nav
+    const navEl = document.getElementById('main-nav-' + sectionId);
+    if (navEl) {
+      navEl.innerHTML = renderNav(navTree);
+    }
+
+    // Render mobile categories
+    const mobEl = document.getElementById('mobile-menu-' + sectionId);
+    if (mobEl) {
+      mobEl.innerHTML = renderMobile(categoryTree);
+    }
+
+    // Render mobile nav
+    const mobNavEl = document.getElementById('mobile-nav-' + sectionId);
+    if (mobNavEl) {
+      mobNavEl.innerHTML = renderMobileNav(navTree);
+    }
+
+    // Move the hamburger into the mobile header beside the search icon
+    const headerWrapper = document.querySelector('.header-mobile .header-mobile__wrapper');
+    const searchItem = headerWrapper ? headerWrapper.querySelector('.header-mobile__item--search') : null;
+    let mobToggle = document.getElementById('mobile-toggle-' + sectionId);
+    if (headerWrapper && searchItem && mobToggle && !mobToggle.closest('.header-mobile__wrapper')) {
+      const item = document.createElement('div');
+      item.className = 'header-mobile__item header-mobile__item--menu';
+
+      const iconWrap = document.createElement('div');
+      iconWrap.className = 'header-mobile--icon item__mobile--hamburger';
+
+      mobToggle.classList.add('mobile-menu-toggle--header');
+      iconWrap.appendChild(mobToggle);
+      item.appendChild(iconWrap);
+
+      headerWrapper.insertBefore(item, searchItem);
+    }
+
+    // Remove any theme-bound click handlers from the moved toggle
+    if (mobToggle) {
+      const freshToggle = mobToggle.cloneNode(true);
+      mobToggle.replaceWith(freshToggle);
+      mobToggle = freshToggle;
+    }
+
+    // Mobile toggle handlers
+    document.querySelectorAll('.section-' + sectionId + ' .mobile-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const li = btn.closest('.mobile-item');
+        li.classList.toggle('open');
+        btn.textContent = li.classList.contains('open') ? '−' : '+';
+      });
+    });
+
+    // Desktop menu open/close
+    const megaMenu = document.getElementById('mega-menu-' + sectionId);
+    const btn = document.getElementById('categories-btn-' + sectionId);
+    if (megaMenu && btn) {
+      const isHome = {% if request.page_type == 'index' %}true{% else %}false{% endif %};
+      if (!isHome) {
+        megaMenu.classList.remove('is-open');
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          megaMenu.classList.toggle('is-open');
+        });
+        document.addEventListener('click', function(e) {
+          if (!megaMenu.contains(e.target)) {
+            megaMenu.classList.remove('is-open');
+          }
+        });
+      }
+    }
+
+    // Mobile drawer
+    const mobClose = document.getElementById('mobile-close-' + sectionId);
+    const mobDrawer = document.getElementById('mobile-drawer-' + sectionId);
+    const mobOverlay = document.getElementById('mobile-overlay-' + sectionId);
+
+    function openMob() {
+      mobDrawer.classList.add('is-open');
+      mobOverlay.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMob() {
+      mobDrawer.classList.remove('is-open');
+      mobOverlay.classList.remove('is-active');
+      document.body.style.overflow = '';
+    }
+
+    if (mobToggle) mobToggle.addEventListener('click', openMob);
+    if (mobClose) mobClose.addEventListener('click', closeMob);
+    if (mobOverlay) mobOverlay.addEventListener('click', closeMob);
   }
-  
-  // Mobile drawer
-  const mobToggle = document.getElementById('mobile-toggle-' + sectionId);
-  const mobClose = document.getElementById('mobile-close-' + sectionId);
-  const mobDrawer = document.getElementById('mobile-drawer-' + sectionId);
-  const mobOverlay = document.getElementById('mobile-overlay-' + sectionId);
-  
-  function openMob() {
-    mobDrawer.classList.add('is-open');
-    mobOverlay.classList.add('is-active');
-    document.body.style.overflow = 'hidden';
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenu);
+  } else {
+    initMenu();
   }
-  function closeMob() {
-    mobDrawer.classList.remove('is-open');
-    mobOverlay.classList.remove('is-active');
-    document.body.style.overflow = '';
-  }
-  
-  if (mobToggle) mobToggle.addEventListener('click', openMob);
-  if (mobClose) mobClose.addEventListener('click', closeMob);
-  if (mobOverlay) mobOverlay.addEventListener('click', closeMob);
+
+  document.addEventListener('shopify:section:load', function(event) {
+    if (event.detail && event.detail.sectionId === sectionId) {
+      initMenu();
+    }
+  });
 })();
 </script>
 

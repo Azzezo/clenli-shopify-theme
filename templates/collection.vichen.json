@@ -34,7 +34,7 @@
       }
     },
     "product-grid": {
-      "type": "main-collection-product-grid",
+      "type": "main-collection-right-sidebar",
       "blocks": {
         "8472dad8-3289-4746-8b7f-e6ebe3175dd5": {
           "type": "lookbook",

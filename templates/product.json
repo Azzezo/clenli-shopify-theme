@@ -10,37 +10,359 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "main-product-left-thumbs",
       "blocks": {
-        "request_a_quote_rfq_button_cgQUeJ": {
-          "type": "shopify://apps/request-a-quote/blocks/rfq-button/019b76a7-9e70-7f6e-8ecb-b96292d760bc",
+        "breadcrumb": {
+          "type": "breadcrumb",
           "settings": {
-            "button_text": "Request a Quote",
-            "button_style": "primary",
-            "button_color": "#6fb31a",
-            "button_text_color": "",
-            "modal_title": "Request a Quote",
-            "phone_number": "+353 (0)1 8118920",
-            "success_message": "We have received your quote request and will get back to you shortly."
+            "breadcrumb_layout": "full",
+            "breadcrumb_alignment": "left",
+            "breadcrumb_bg": "",
+            "breadcrumb_gradient": "",
+            "breadcrumb_bg_mb": "",
+            "breadcrumb_gradient_mb": "",
+            "breadcrumb_mg_top_desktop": 15,
+            "breadcrumb_mg_top_mobile": 10,
+            "breadcrumb_mg_bottom_desktop": 20,
+            "breadcrumb_mg_bottom_mobile": 15
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "fontsize_text": 24,
+            "fontsize_text_mb": 20,
+            "color_title": "#333333",
+            "spacing_top": 0,
+            "spacing_bottom": 8
+          }
+        },
+        "meta": {
+          "type": "meta",
+          "settings": {
+            "show_sold_in": false,
+            "sold_in_number": "",
+            "sold_in_hours": "",
+            "color_text_sold_in": "#e95144",
+            "spacing_top": 0,
+            "spacing_bottom": 10
+          }
+        },
+        "short_description": {
+          "type": "short_description",
+          "settings": {
+            "show_short_description": true,
+            "word_number": "100",
+            "fontsize_text": 14,
+            "color_text": "#666666",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "info": {
+          "type": "info",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_availability": true,
+            "show_product_type": false,
+            "stock_level_display": "none",
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "fontsize_text": 24,
+            "spacing_top": 0,
+            "spacing_bottom": 20
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "show_variant_image_group": false,
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "qty_style": "1",
+            "qty_layout": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "atc_animation": "horizontal-shaking",
+            "atc_color": "#ffffff",
+            "atc_border_color": "#6fb31a",
+            "atc_bg_color": "#6fb31a",
+            "atc_bg_color_gradient": "",
+            "atc_color_hover": "#ffffff",
+            "atc_border_color_hover": "#5a9315",
+            "atc_bg_color_hover": "#5a9315",
+            "atc_bg_color_gradient_hover": "",
+            "bin_color": "#333333",
+            "bin_border_color": "#cccccc",
+            "bin_bg_color": "#ffffff",
+            "bin_bg_color_gradient": "",
+            "bin_color_hover": "#ffffff",
+            "bin_border_color_hover": "#6fb31a",
+            "bin_bg_color_hover": "#6fb31a",
+            "bin_bg_color_hover_gradient": "",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "request_quote": {
+          "type": "shopify://apps/request-a-quote/blocks/rfq-button/019b76a7-9e70-7f6e-8ecb-b96292d760bc",
+          "settings": {}
+        },
+        "perks": {
+          "type": "perks",
+          "settings": {
+            "show_size_chart": false,
+            "size_chart_type": "custom_image",
+            "size_chart_page": "",
+            "size_chart_image_type": "jpg",
+            "show_compare_color": true,
+            "show_compare_color_drop_drap": false,
+            "compare_layout": "1",
+            "spacing_top": 10,
+            "spacing_bottom": 15
+          }
+        },
+        "delivery_info": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"1\" y=\"3\" width=\"15\" height=\"13\"></rect><polygon points=\"16 8 20 8 23 11 23 16 16 16 16 8\"></polygon><circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"></circle><circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"></circle></svg>",
+            "color_icon": "#6fb31a",
+            "text": "Delivery Information",
+            "color_title": "#6fb31a",
+            "text_description": "",
+            "color_des": "#999999",
+            "fontsize_text": 13,
+            "content_popup": "<h3>Delivery Costs</h3><h4>Ireland:</h4><p>All orders above €100 are delivered free in Ireland. For orders below €100, a delivery fee of €15 gets added.</p><h4>UK:</h4><p>Customers need to pay a delivery fee €30 across UK for all orders.</p><h4>Globe:</h4><p>For orders shipped across the globe, customers need to pay a delivery fee of €60.</p>",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "payment_info": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\"></rect><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"></line></svg>",
+            "color_icon": "#6fb31a",
+            "text": "Payment Methods",
+            "color_title": "#6fb31a",
+            "text_description": "",
+            "color_des": "#999999",
+            "fontsize_text": 13,
+            "content_popup": "<h3>Payment Methods</h3><h4>Credit/Debit Cards</h4><p>We accept Visa, MasterCard, American Express, and Discover.</p><h4>PayPal</h4><p>PayPal is a popular online payment service.</p>",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "returns_info": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polyline points=\"1 4 1 10 7 10\"></polyline><path d=\"M3.51 15a9 9 0 1 0 2.13-9.36L1 10\"></path></svg>",
+            "color_icon": "#6fb31a",
+            "text": "Return & Refunds",
+            "color_title": "#6fb31a",
+            "text_description": "",
+            "color_des": "#999999",
+            "fontsize_text": 13,
+            "content_popup": "<h3>Return & Refund Policy</h3><h5>Problem with any of our products?</h5><ul><li>Within 30 Days of Purchase</li><li>With proof of purchase</li></ul><p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "trust_image": {
+          "type": "trust_image",
+          "settings": {
+            "show_trust_image": true,
+            "spacing_top": 10,
+            "spacing_bottom": 20
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "open_tab_mobile": true,
+            "title": "Details",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 500
+          }
+        },
+        "reviews_tab": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Reviews",
+            "type": "all",
+            "content": "<div id=\"product-reviews\">Product reviews will appear here.</div>",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "shipping_tab": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Shipping",
+            "type": "all",
+            "content": "<h4>Ireland:</h4><p>All orders above €100 are delivered free in Ireland. For orders below €100, a delivery fee of €15 gets added.</p><h4>UK:</h4><p>Customers need to pay a delivery fee €30 across UK for all orders.</p><h4>Globe:</h4><p>For orders shipped across the globe, customers need to pay a delivery fee of €60.</p>",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "show_share": false,
+            "share_layout": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 0
           }
         }
       },
       "block_order": [
-        "request_a_quote_rfq_button_cgQUeJ"
+        "breadcrumb",
+        "title",
+        "meta",
+        "short_description",
+        "info",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "request_quote",
+        "perks",
+        "delivery_info",
+        "payment_info",
+        "returns_info",
+        "trust_image",
+        "description",
+        "reviews_tab",
+        "shipping_tab",
+        "share"
       ],
       "settings": {
-        "accent_color": "#6fb31a",
-        "star_color": "#ffa800",
-        "show_related_products": true,
-        "payment_icons": "shopify://shop_images/payments.webp",
-        "delivery_info": "<h4>Ireland:</h4><p>All orders above €100 are delivered free in Ireland. For orders below €100, a delivery fee of €15 gets added.</p><h4>UK:</h4><p>Customers need to pay a delivery fee €30 across UK for all orders.</p>",
-        "payment_info": "<h4>Credit/Debit Cards</h4><p>We accept Visa, MasterCard, American Express, and Discover.</p><h4>PayPal</h4><p>PayPal is a popular online payment service.</p>",
-        "returns_info": "<h5>Problem with any of our products?</h5><ul><li>Within 30 Days of Purchase</li><li>With proof of purchase</li></ul>"
+        "container": "container",
+        "padding_full_width": 0,
+        "show_sticky_info": true,
+        "media_fit": "contain",
+        "product_image_ratio": "adapt",
+        "portrait_aspect_ratio": 125,
+        "video_layout": "thumbnail",
+        "zoomed_image": true,
+        "product_image_popup": "fancybox",
+        "main_image_show_custom_cursor": false,
+        "icon_color": "#333333",
+        "main_image_position": "left",
+        "main_image_layout": "1",
+        "main_image_arrows_desktop": true,
+        "main_image_arrows_mobile": true,
+        "main_image_counter_mobile": true,
+        "main_image_enable_parallax_mb": false,
+        "main_image_show_zoom_icon_mb": true,
+        "show_thumbnail_mobile": true,
+        "thumnail_layout": "1",
+        "thumbnail_to_show": 5,
+        "enable_sticky": false,
+        "show_badge": true,
+        "show_subtotal": false,
+        "subtotal_style": "1",
+        "show_sticky_add_to_cart": true,
+        "sticky_atc_layout": "1",
+        "enable_sticky_add_to_cart_always_mobile": false,
+        "show_sticky_vendor": false,
+        "show_quick_order_list": false,
+        "show_image": false,
+        "show_sku": true,
+        "show_tab": true,
+        "tab_layout": "horizontal",
+        "tab_layout_mobile": "accordion",
+        "icon_style_layout": "style_1",
+        "title_font_size": 14,
+        "title_font_size_mb": 13,
+        "font_weight_title": "600",
+        "title_text_transform": "uppercase",
+        "title_padding_top_bottom": 12,
+        "tab_border_color": "#6fb31a",
+        "tab_border_color_rgb": "",
+        "show_product_bundle": false,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
       }
     },
-    "featured_product_we_636Raq": {
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "display_product_block": true,
+        "product_block_container": "1770",
+        "padding_full_width": 15,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 40,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 25,
+        "mg_bottom_desktop": 40,
+        "mg_bottom_tablet": 30,
+        "mg_bottom_mobile": 25,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "style_block_header": "style1",
+        "product_block_title": "Related Products",
+        "enable_border_title": false,
+        "mg_top_title": 25,
+        "mg_bottom_title": 20,
+        "fontsize_title": 18,
+        "fontsize_title_mb": 16,
+        "color_title": "#333333",
+        "border_color_title": "#6fb31a",
+        "product_block_title_align": "left",
+        "product_block_limit": 6,
+        "grid_gap": 20,
+        "product_block_per_row": "5",
+        "product_block_swipe_on_mobile": true,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "5",
+        "product_block_per_view": "5",
+        "show_half": true
+      }
+    },
+    "featured_products": {
       "type": "featured-product-we",
-      "name": "Product Columns",
       "settings": {
         "featured_title": "Featured Products",
         "featured_collection": "",
@@ -54,102 +376,17 @@
         "padding_x": 15
       }
     },
-    "newsletter_dpXEwK": {
-      "type": "newsletter",
-      "blocks": {
-        "newsletter_PHaBar": {
-          "type": "newsletter",
-          "settings": {
-            "newsletter_content_direction": "row",
-            "newsletter_form_justify_content": "center",
-            "spacing_tb": 75,
-            "custom_width": false,
-            "width": "",
-            "section_title": "Sign up for our newsletter",
-            "special_text": "",
-            "section_title_font_size": 32,
-            "section_title_font_size_mb": 18,
-            "section_title_font_weight": "600",
-            "section_title_text_transform": "none",
-            "section_title_font_style": "normal",
-            "section_title_color": "#191919",
-            "mg_bottom_title": 12,
-            "mg_bottom_title_mb": 12,
-            "section_subtitle": "",
-            "section_subtitle_font_size": 16,
-            "section_subtitle_font_size_mb": 24,
-            "section_subtitle_font_weight": "400",
-            "section_subtitle_text_transform": "none",
-            "section_subtitle_font_style": "normal",
-            "section_subtitle_color": "#191919",
-            "mg_bottom_subtitle": 0,
-            "mg_bottom_subtitle_mb": 0,
-            "show_between_input_button": false,
-            "section_description": "",
-            "section_description_font_size": 16,
-            "section_description_font_size_mb": 14,
-            "section_description_font_weight": "500",
-            "section_description_color": "#191919",
-            "margin_bottom_des": 45,
-            "button_style": "text",
-            "button_text": "Subscribe",
-            "button_font_size": 16,
-            "button_width": 150,
-            "button_border_radius": 0,
-            "button_text_color": "#ffffff",
-            "button_border_color": "#232323",
-            "button_background_color": "#232323",
-            "button_gradient_color": "",
-            "button_text_color_hover": "#ffffff",
-            "button_border_color_hover": "#232323",
-            "button_background_color_hover": "#232323",
-            "button_gradient_color_hover": "",
-            "button_text_transform": "capitalize",
-            "button_font_weight": "600",
-            "show_box_shadow_button": false,
-            "shadow_color_button": "rgba(0,0,0,0)",
-            "show_input_field": true,
-            "input_style": "style_1",
-            "input_placeholder": "Your email address",
-            "input_text_font_size": 13,
-            "input_width": 450,
-            "input_border_radius": 0,
-            "input_placeholder_color": "#191919",
-            "input_background_color": "rgba(0,0,0,0)",
-            "input_border_color": "#333333",
-            "form_gap": 15,
-            "input_width_behavior": "restricted",
-            "show_box_shadow_input": false,
-            "shadow_color_input": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "newsletter_PHaBar"
-      ],
-      "name": "t:sections.newsletter.name",
+    "apps": {
+      "type": "apps",
       "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "background": "#ffffff",
-        "background_gradient": "",
-        "enable_parallax": true,
-        "section_text_align": "left",
-        "justify_section_content": "center",
-        "section_item_distance": 20,
-        "enable_social_media_below": false,
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
-    "featured_product_we_636Raq",
-    "newsletter_dpXEwK"
+    "product-recommendations",
+    "featured_products",
+    "apps"
   ]
 }

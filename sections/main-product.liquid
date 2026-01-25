@@ -15,26 +15,48 @@
     <div class="product-wrapper">
       <!-- Product Media -->
       <div class="product-media">
+        {%- assign image_media = product.media | where: 'media_type', 'image' -%}
+        {% if image_media.size > 0 %}
+          <div class="thumbnail-slider thumbnail-left">
+            {% for media in image_media %}
+              {%- assign is_featured = false -%}
+              {%- if media.id == product.featured_media.id -%}
+                {%- assign is_featured = true -%}
+              {%- endif -%}
+              <div class="thumbnail {% if is_featured or forloop.first %}active{% endif %}" 
+                   data-image="{{ media | image_url: width: 1200 }}"
+                   data-media-id="{{ media.id }}">
+                <img src="{{ media | image_url: width: 120 }}" 
+                     alt="{{ media.alt | escape | default: product.title }}"
+                     loading="lazy">
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        
         <div class="main-image-wrapper">
-          {% if product.featured_image %}
+          {% if product.featured_media %}
             <img id="main-product-image" 
-                 src="{{ product.featured_image | image_url: width: 720 }}" 
-                 alt="{{ product.featured_image.alt | escape }}"
+                 src="{{ product.featured_media | image_url: width: 1200 }}" 
+                 srcset="{{ product.featured_media | image_url: width: 600 }} 600w,
+                         {{ product.featured_media | image_url: width: 900 }} 900w,
+                         {{ product.featured_media | image_url: width: 1200 }} 1200w"
+                 sizes="(max-width: 768px) 100vw, 50vw"
+                 alt="{{ product.featured_media.alt | escape | default: product.title }}"
+                 class="main-image">
+          {% elsif product.featured_image %}
+            <img id="main-product-image" 
+                 src="{{ product.featured_image | image_url: width: 1200 }}" 
+                 srcset="{{ product.featured_image | image_url: width: 600 }} 600w,
+                         {{ product.featured_image | image_url: width: 900 }} 900w,
+                         {{ product.featured_image | image_url: width: 1200 }} 1200w"
+                 sizes="(max-width: 768px) 100vw, 50vw"
+                 alt="{{ product.featured_image.alt | escape | default: product.title }}"
                  class="main-image">
           {% else %}
             {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
           {% endif %}
         </div>
-        
-        {% if product.images.size > 1 %}
-          <div class="thumbnail-slider">
-            {% for image in product.images %}
-              <div class="thumbnail {% if forloop.first %}active{% endif %}" data-image="{{ image | image_url: width: 720 }}">
-                <img src="{{ image | image_url: width: 94 }}" alt="{{ image.alt | escape }}">
-              </div>
-            {% endfor %}
-          </div>
-        {% endif %}
       </div>
 
       <!-- Product Info -->
@@ -398,27 +420,48 @@
 /* Product Media */
 .product-media {
   position: relative;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
 }
 .main-image-wrapper {
   position: relative;
-  margin-bottom: 15px;
+  flex: 1;
 }
 .main-image {
   width: 100%;
   height: auto;
   display: block;
+  transition: opacity 0.3s ease;
+}
+.main-image-wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
 }
 .thumbnail-slider {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.thumbnail-slider.thumbnail-left {
+  order: -1;
 }
 .thumbnail {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border: 2px solid #eee;
   cursor: pointer;
   overflow: hidden;
+  transition: border-color 0.3s, transform 0.2s;
+  background: #fff;
+}
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+.thumbnail:hover {
+  border-color: {{ section.settings.accent_color }};
 }
 .thumbnail.active {
   border-color: {{ section.settings.accent_color }};
@@ -1029,11 +1072,40 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
+  .product-media {
+    flex-direction: column;
+  }
+  .thumbnail-slider.thumbnail-left {
+    order: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .thumbnail {
+    width: 70px;
+    height: 70px;
+  }
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
+  .product-media {
+    flex-direction: column;
+  }
+  .thumbnail-slider.thumbnail-left {
+    order: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
   .tabs-nav {
     flex-wrap: wrap;
   }
@@ -1096,13 +1168,63 @@ document.addEventListener('DOMContentLoaded', function() {
   const thumbnails = document.querySelectorAll('.thumbnail');
   const mainImage = document.getElementById('main-product-image');
   
-  thumbnails.forEach(thumb => {
-    thumb.addEventListener('click', function() {
-      thumbnails.forEach(t => t.classList.remove('active'));
-      this.classList.add('active');
-      if (mainImage) mainImage.src = this.dataset.image;
+  if (thumbnails.length > 0 && mainImage) {
+    // Thumbnail click handler
+    thumbnails.forEach((thumb) => {
+      thumb.style.cursor = 'pointer';
+      
+      thumb.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const imageUrl = this.getAttribute('data-image');
+        
+        if (imageUrl && mainImage) {
+          // Remove active class from all thumbnails
+          thumbnails.forEach(t => {
+            t.classList.remove('active');
+            t.style.borderColor = '#eee';
+          });
+          
+          // Add active class to clicked thumbnail
+          this.classList.add('active');
+          this.style.borderColor = '{{ section.settings.accent_color }}';
+          
+          // Update main image with smooth transition
+          if (mainImage.src !== imageUrl) {
+            mainImage.style.opacity = '0.7';
+            mainImage.style.transition = 'opacity 0.3s ease';
+            
+            setTimeout(() => {
+              if (mainImage) {
+                mainImage.src = imageUrl;
+                mainImage.style.opacity = '1';
+              }
+            }, 150);
+          }
+        }
+      });
+      
+      // Thumbnail hover effect
+      thumb.addEventListener('mouseenter', function() {
+        if (!this.classList.contains('active')) {
+          this.style.borderColor = '{{ section.settings.accent_color }}';
+        }
+      });
+      thumb.addEventListener('mouseleave', function() {
+        if (!this.classList.contains('active')) {
+          this.style.borderColor = '#eee';
+        }
+      });
     });
-  });
+    
+    // Ensure first thumbnail is active if none are
+    const activeThumb = document.querySelector('.thumbnail.active');
+    if (!activeThumb && thumbnails.length > 0) {
+      thumbnails[0].classList.add('active');
+      thumbnails[0].style.borderColor = '{{ section.settings.accent_color }}';
+    }
+  }
 
   // ==========================================
   // Quantity Buttons

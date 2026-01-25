@@ -1,3 +1,28 @@
+/* VAT toggle price switching */
+.price-item--vat-excl,
+.vat-label-excl {
+  display: none;
+}
+
+body.vat-excluded .price-item--vat-incl,
+body.vat-excluded .vat-label-incl {
+  display: none;
+}
+
+body.vat-excluded .price-item--vat-excl,
+body.vat-excluded .vat-label-excl {
+  display: inline;
+}
+
+body.vat-included .price-item--vat-incl,
+body.vat-included .vat-label-incl {
+  display: inline;
+}
+
+body.vat-included .price-item--vat-excl,
+body.vat-included .vat-label-excl {
+  display: none;
+}
 /* Base */
 *,
 *::before,

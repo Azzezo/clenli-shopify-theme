@@ -1,0 +1,1082 @@
+/**
+ * Clenli Direct - Product Page Style Overrides
+ * Matches the live site: https://clenli.myshopify.com/products/
+ * Applied to Ella theme's main-product-left-thumbs section
+ */
+
+/* ============================================
+   CLENLI BRAND COLORS
+   ============================================ */
+:root {
+  --clenli-primary: #6fb31a;
+  --clenli-primary-hover: #5a9315;
+  --clenli-dark: #333333;
+  --clenli-text: #666666;
+  --clenli-text-light: #999999;
+  --clenli-border: #e6e6e6;
+  --clenli-bg-light: #f6f6f6;
+  --clenli-link: #6fb31a;
+}
+
+/* ============================================
+   PRODUCT PAGE LAYOUT
+   ============================================ */
+.product-details.product-left-thumbs {
+  padding: 0 0 40px;
+}
+
+/* Wider container setting */
+.product-details .container-1770,
+.halo-productView .container-1770 {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Breadcrumb alignment - full width above product */
+.moreItem-breadcrumb {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Image gallery container alignment */
+.halo-productView-left .productView-images,
+.halo-productView-left .productView-images-wrapper {
+  display: flex;
+  align-items: flex-start !important; /* Critical: align main image to top, not center */
+  gap: 15px;
+}
+
+/* Thumbnail column - bigger thumbnails on the left */
+/* Note: .productView-nav is the MAIN image slider, NOT thumbnails! */
+/* Thumbnails are in .productView-thumbnail-wrapper / .productView-for */
+.halo-productView-left .productView-thumbnail-wrapper {
+  flex: 0 0 110px;
+  width: 110px;
+  order: -1;
+  max-height: 620px; /* Keep thumbs within main image height */
+  overflow: hidden; /* Hide extra thumbs, rely on arrows */
+}
+
+.halo-productView-left .productView-thumbnail-wrapper .productView-for {
+  max-height: 100%;
+}
+
+.halo-productView-left .productView-thumbnail-wrapper .slick-list {
+  max-height: 100%;
+}
+
+.halo-productView-left .productView-thumbnail-wrapper .productView-for {
+  overflow: visible;
+}
+
+.halo-productView-left .productView-thumbnail-wrapper .slick-list {
+  overflow: visible;
+}
+
+/* Thumbnail images - make them bigger and show full image */
+.halo-productView-left .productView-thumbnail {
+  width: 100px !important;
+  height: auto !important;
+  min-height: 80px;
+  max-height: 120px;
+  margin-bottom: 10px;
+  overflow: visible;
+}
+
+.halo-productView-left .productView-thumbnail .productView-thumbnail-link,
+.halo-productView-left .productView-thumbnail .productView-img-container {
+  height: auto !important;
+  padding-bottom: 0 !important;
+}
+
+.halo-productView-left .productView-thumbnail img {
+  width: 100%;
+  height: auto !important;
+  max-height: 100px;
+  object-fit: contain !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+}
+
+/* Main image - takes remaining space */
+.halo-productView-left .productView-for-wrapper,
+.halo-productView-left .productView-image-wrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============================================
+   MOBILE/TABLET: Let Ella handle most layout
+   Only add essential fixes
+   ============================================ */
+@media (max-width: 991px) {
+  /* CRITICAL: Remove sticky positioning on mobile - causes overlap issues */
+  .halo-productView .halo-productView-left,
+  .product-details .halo-productView-left {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+/* ============================================
+   DESKTOP COLUMN WIDTHS - Balanced layout
+   ============================================ */
+@media (min-width: 1200px) {
+  /* Override Ella's default 62.4% / 37.6% split */
+  .halo-productView .halo-productView-left,
+  .product-details .halo-productView-left {
+    width: 55% !important;
+    padding-right: 40px;
+  }
+  
+  .halo-productView .halo-productView-right,
+  .product-details .halo-productView-right {
+    width: 45% !important;
+  }
+}
+
+/* ============================================
+   SLIDER ARROWS - Fix overlap issues
+   ============================================ */
+/* Position thumbnail slider arrows inside the thumbnail area */
+.halo-productView-left .productView-thumbnail-wrapper .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--clenli-border);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.halo-productView-left .productView-thumbnail-wrapper .slick-prev {
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+}
+
+.halo-productView-left .productView-thumbnail-wrapper .slick-next {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  top: auto;
+}
+
+/* Main image slider arrows - keep inside image area */
+.halo-productView-left .productView-nav .slick-arrow {
+  z-index: 10;
+}
+
+.halo-productView-left .productView-nav .slick-prev {
+  left: 10px !important;
+}
+
+.halo-productView-left .productView-nav .slick-next {
+  right: 10px !important;
+}
+
+/* ============================================
+   BREADCRUMBS - Clenli Style - Full width above product
+   ============================================ */
+/* Breadcrumb spans full width */
+.halo-productView .moreItem-breadcrumb,
+.product-details .moreItem-breadcrumb,
+#ProductSection-template--18036413194487__main .moreItem-breadcrumb {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.product-details .breadcrumb-wrapper {
+  padding: 15px 0;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.product-details .breadcrumb a {
+  color: var(--clenli-text);
+  text-decoration: none;
+}
+
+.product-details .breadcrumb a:hover {
+  color: var(--clenli-primary);
+}
+
+.product-details .breadcrumb .separator {
+  margin: 0 8px;
+  color: var(--clenli-text-light);
+}
+
+/* ============================================
+   PRODUCT TITLE & REVIEWS
+   ============================================ */
+.product-details .productView-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--clenli-dark);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+/* Star Rating - Gold */
+.product-details .productView-rating {
+  margin-bottom: 10px;
+}
+
+.product-details .productView-rating .spr-starrating {
+  color: #ffa800;
+}
+
+.product-details .productView-rating .spr-icon {
+  color: #ffa800;
+}
+
+.product-details .productView-rating a {
+  color: var(--clenli-link);
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.product-details .productView-rating a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   SHORT DESCRIPTION
+   ============================================ */
+.product-details .productView-description-short {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--clenli-text);
+  margin-bottom: 15px;
+}
+
+.product-details .productView-description-short p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================
+   PRODUCT INFO (Availability, SKU)
+   ============================================ */
+.product-details .productView-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.product-details .productView-info .productView-info-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-details .productView-info .label,
+.product-details .productView-info-label {
+  color: var(--clenli-dark);
+  font-weight: 600;
+}
+
+.product-details .productView-info .in-stock,
+.product-details .productView-info-availability .in-stock {
+  color: var(--clenli-primary);
+  font-weight: 600;
+}
+
+.product-details .productView-info .out-of-stock {
+  color: #e95144;
+  font-weight: 600;
+}
+
+/* ============================================
+   PRICE STYLING
+   ============================================ */
+.product-details .productView-price {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.product-details .productView-price .price,
+.product-details .productView-price .price-item {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--clenli-dark);
+}
+
+.product-details .productView-price .price-item--sale {
+  color: #e95144;
+}
+
+.product-details .productView-price .price-item--regular.price-compare {
+  font-size: 16px;
+  color: var(--clenli-text-light);
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* Excl. VAT note */
+.product-details .productView-price .price-tax-note,
+.product-details .productView-price::after {
+  content: "Excl. VAT";
+  font-size: 14px;
+  color: var(--clenli-text);
+  font-weight: 400;
+}
+
+/* ============================================
+   QUANTITY SELECTOR - Clenli Style
+   ============================================ */
+.product-details .productView-qty {
+  margin-bottom: 15px;
+}
+
+.product-details .productView-qty .qty-label,
+.product-details .productView-qty label {
+  display: block;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.product-details .productView-qty .input-qty,
+.product-details .productView-qty .quantity-wrapper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--clenli-border);
+  border-radius: 0;
+}
+
+.product-details .productView-qty .input-qty button,
+.product-details .productView-qty .qty-btn {
+  width: 36px;
+  height: 40px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--clenli-dark);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-details .productView-qty .input-qty button:hover,
+.product-details .productView-qty .qty-btn:hover {
+  background: var(--clenli-bg-light);
+  color: var(--clenli-primary);
+}
+
+.product-details .productView-qty .input-qty input,
+.product-details .productView-qty .qty-input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid var(--clenli-border);
+  border-right: 1px solid var(--clenli-border);
+  font-size: 16px;
+  font-weight: 600;
+  -moz-appearance: textfield;
+}
+
+.product-details .productView-qty input::-webkit-outer-spin-button,
+.product-details .productView-qty input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ============================================
+   ADD TO CART BUTTON - Clenli Green
+   ============================================ */
+.product-details .productView-add-to-cart {
+  margin-bottom: 15px;
+}
+
+.product-details .productView-add-to-cart .btn-addtocart,
+.product-details .productView-add-to-cart .productView-cart,
+.product-details .btn-add-to-cart {
+  background-color: var(--clenli-primary) !important;
+  border: 2px solid var(--clenli-primary) !important;
+  color: #ffffff !important;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 0;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.product-details .productView-add-to-cart .btn-addtocart:hover,
+.product-details .productView-add-to-cart .productView-cart:hover,
+.product-details .btn-add-to-cart:hover {
+  background-color: var(--clenli-primary-hover) !important;
+  border-color: var(--clenli-primary-hover) !important;
+}
+
+/* Hide PayPal / Dynamic Checkout */
+.product-details .shopify-payment-button,
+.product-details .dynamic-checkout-buttons,
+.product-details .paypal-checkout-btn {
+  display: none !important;
+}
+
+/* ============================================
+   COMPARE & WISHLIST LINKS
+   ============================================ */
+.product-details .productView-perks,
+.product-details .productView-actions {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.product-details .productView-perks a,
+.product-details .productView-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--clenli-text);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.product-details .productView-perks a:hover,
+.product-details .productView-actions a:hover {
+  color: var(--clenli-primary);
+}
+
+.product-details .productView-perks svg,
+.product-details .productView-actions svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ============================================
+   INFO LINKS ROW (Delivery, Payment, Returns)
+   Using Ella's custom_information blocks - INLINE
+   ============================================ */
+
+/* Wrapper for inline info links - added via JS */
+.clenli-info-links-row {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin: 10px 0 15px;
+}
+
+/* Make the wrapper moreItem containers inline */
+.clenli-info-links-row .productView-moreItem,
+.clenli-inline-info-item {
+  display: inline-flex !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: middle;
+}
+
+/* The actual info link container */
+.product-customInformation {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  padding-right: 12px;
+  margin-right: 10px;
+  border-right: 2px solid var(--clenli-primary);
+}
+
+/* Last item - no border */
+.clenli-info-links-row .productView-moreItem:last-child .product-customInformation,
+.clenli-inline-info-item:last-child .product-customInformation,
+.product-customInformation.no-border {
+  border-right: none !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Hover effect */
+.product-customInformation:hover {
+  opacity: 0.8;
+}
+
+/* Icon styling */
+.product-customInformation__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.product-customInformation__icon svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Content wrapper */
+.product-customInformation__content {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Text/Link styling */
+.product-customInformation .product__text.title {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.product-customInformation .product__text.title h2.title {
+  color: var(--clenli-link) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  line-height: 1.4;
+}
+
+.product-customInformation:hover .product__text.title h2.title {
+  text-decoration: underline;
+}
+
+/* Hide info icon next to text */
+.product-customInformation .product__text.title .icon-info-note {
+  display: none;
+}
+
+/* Hide description text for inline display */
+.product-customInformation .product__text.des {
+  display: none;
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 576px) {
+  .clenli-info-links-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .clenli-info-links-row .productView-moreItem,
+  .clenli-inline-info-item {
+    display: block !important;
+    width: 100%;
+  }
+  
+  .clenli-info-links-row .product-customInformation,
+  .clenli-inline-info-item .product-customInformation {
+    display: flex !important;
+    width: 100%;
+    padding: 10px 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--clenli-border);
+  }
+  
+  .clenli-info-links-row .productView-moreItem:last-child .product-customInformation,
+  .clenli-inline-info-item:last-child .product-customInformation {
+    border-bottom: none;
+  }
+}
+
+/* ============================================
+   STICKY CART - REQUEST A QUOTE BUTTON
+   Consistent styling with main RFQ button
+   ============================================ */
+
+/* Expand sticky cart to fit both buttons */
+.productView-stickyCart .sticky-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Account for floating buttons on right side */
+.productView-stickyCart.style-1 .sticky-actions {
+  padding-right: 60px !important; /* Space for back-to-top and other floating buttons */
+}
+
+.productView-stickyCart.style-1 .sticky-actions .button {
+  width: auto !important;
+  min-width: 130px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* Sticky RFQ button - matches Add to Cart button styling (green primary style) */
+.productView-stickyCart .sticky-rfq-button {
+  background-color: rgb(111, 179, 26) !important;
+  border: 1px solid rgb(111, 179, 26) !important;
+  color: #ffffff !important;
+  padding: 10px 18px !important;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: var(--button-border-radius, 3px);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  line-height: 1.4;
+  min-width: 120px;
+  letter-spacing: 0.5px;
+}
+
+.productView-stickyCart .sticky-rfq-button:hover {
+  background-color: rgb(90, 150, 20) !important;
+  border-color: rgb(90, 150, 20) !important;
+}
+
+/* Adjust sticky actions layout for RFQ button */
+.productView-stickyCart .sticky-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+/* Make Add to Cart and RFQ buttons same height */
+.productView-stickyCart .product-form__submit,
+.productView-stickyCart .sticky-rfq-button {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile adjustments for sticky RFQ button */
+@media (max-width: 768px) {
+  .productView-stickyCart .sticky-rfq-button {
+    padding: 8px 15px;
+    font-size: 13px;
+    margin-left: 8px;
+    height: 40px;
+  }
+  
+  .productView-stickyCart .product-form__submit {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productView-stickyCart .sticky-actions-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  
+  .productView-stickyCart .sticky-rfq-button {
+    width: 100%;
+    margin-left: 0;
+    height: 44px;
+  }
+  
+  .productView-stickyCart .product-form__submit {
+    width: 100%;
+  }
+}
+
+/* Popup Modal Styling */
+.product-details .modal-popup,
+.product-details .productView-information-popup {
+  background: #fff;
+  border-radius: 0;
+  max-width: 500px;
+  padding: 25px;
+}
+
+.product-details .modal-popup h3,
+.product-details .productView-information-popup h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.product-details .modal-popup h4,
+.product-details .productView-information-popup h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin: 15px 0 8px;
+}
+
+.product-details .modal-popup p,
+.product-details .productView-information-popup p {
+  font-size: 14px;
+  color: var(--clenli-text);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.product-details .modal-popup ul,
+.product-details .productView-information-popup ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.product-details .modal-popup li,
+.product-details .productView-information-popup li {
+  font-size: 14px;
+  color: var(--clenli-text);
+  margin-bottom: 5px;
+}
+
+/* ============================================
+   TRUST BADGES / PAYMENT ICONS
+   ============================================ */
+.product-details .productView-trust {
+  margin: 15px 0 20px;
+}
+
+.product-details .productView-trust .trust-label {
+  font-size: 13px;
+  color: var(--clenli-text);
+  margin-bottom: 8px;
+}
+
+.product-details .productView-trust img {
+  max-height: 30px;
+}
+
+/* ============================================
+   PRODUCT TABS - Clenli Style - Full width
+   ============================================ */
+.product-details .productView-tab,
+.halo-productView .productView-tab {
+  margin-top: 30px;
+  border: 1px solid var(--clenli-border);
+  clear: both;
+}
+
+/* Tabs container - spans full width of the product area */
+.halo-productView .halo-productView-bottom,
+.product-details .halo-productView-bottom {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.product-details .productView-tab .tab-title,
+.product-details .productView-tab .tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--clenli-bg-light);
+  border-bottom: 1px solid var(--clenli-border);
+}
+
+.product-details .productView-tab .tab-title li,
+.product-details .productView-tab .tabs-nav li {
+  margin: 0;
+}
+
+.product-details .productView-tab .tab-title li a,
+.product-details .productView-tab .tab-btn {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--clenli-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.product-details .productView-tab .tab-title li a:hover,
+.product-details .productView-tab .tab-btn:hover,
+.product-details .productView-tab .tab-title li.is-active a,
+.product-details .productView-tab .tab-btn.active {
+  color: var(--clenli-dark);
+  background: #fff;
+  border-bottom-color: var(--clenli-primary);
+}
+
+.product-details .productView-tab .tab-content,
+.product-details .productView-tab .tabs-content {
+  padding: 25px;
+  background: #fff;
+}
+
+.product-details .productView-tab .tab-content h3,
+.product-details .productView-tab .tab-content h4 {
+  color: var(--clenli-dark);
+  margin: 15px 0 10px;
+  font-size: 16px;
+}
+
+.product-details .productView-tab .tab-content h3:first-child,
+.product-details .productView-tab .tab-content h4:first-child {
+  margin-top: 0;
+}
+
+.product-details .productView-tab .tab-content p {
+  color: var(--clenli-text);
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.product-details .productView-tab .tab-content ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.product-details .productView-tab .tab-content li {
+  margin-bottom: 8px;
+  color: var(--clenli-text);
+}
+
+/* Tab content table styling */
+.product-details .productView-tab .tab-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.product-details .productView-tab .tab-content table td {
+  padding: 10px;
+  border: 1px solid var(--clenli-border);
+  vertical-align: top;
+}
+
+/* ============================================
+   IMAGE GALLERY - Let Ella handle gallery, just add accent styling
+   ============================================ */
+
+/* Thumbnail hover styling - Clenli green accent */
+.product-details .productView-thumbnail:hover,
+.product-details .productView-thumbnail.is-active,
+.product-details .productView-thumbnail.slick-current,
+.halo-productView .productView-thumbnail:hover,
+.halo-productView .productView-thumbnail.is-active {
+  border-color: var(--clenli-primary) !important;
+}
+
+/* ============================================
+   STICKY ADD TO CART
+   ============================================ */
+.sticky-add-to-cart {
+  background: #fff;
+  border-top: 1px solid var(--clenli-border);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-add-to-cart .btn-addtocart {
+  background-color: var(--clenli-primary) !important;
+  border-color: var(--clenli-primary) !important;
+}
+
+/* ============================================
+   RELATED PRODUCTS SECTION
+   ============================================ */
+.section-product-recommendations {
+  padding: 40px 0;
+}
+
+.section-product-recommendations .section-header {
+  margin-bottom: 25px;
+}
+
+.section-product-recommendations .section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  text-transform: none;
+}
+
+/* ============================================
+   FEATURED PRODUCTS COLUMNS
+   ============================================ */
+.section-featured-product-we {
+  background: var(--clenli-bg-light);
+  padding: 40px 0;
+}
+
+.section-featured-product-we h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--clenli-dark);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--clenli-primary);
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 1199px) {
+  /* Adjust column widths for medium screens */
+  .halo-productView .halo-productView-left,
+  .product-details .halo-productView-left {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .halo-productView .halo-productView-right,
+  .product-details .halo-productView-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 20px;
+  }
+  
+  /* Slightly smaller thumbnails on medium screens */
+  .halo-productView-left .productView-thumbnail-wrapper {
+    flex: 0 0 100px;
+    width: 100px;
+  }
+  
+  .halo-productView-left .productView-thumbnail {
+    width: 95px !important;
+  }
+  
+  .halo-productView-left .productView-thumbnail img {
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Stack columns on tablet */
+  .halo-productView .halo-productView-left,
+  .product-details .halo-productView-left,
+  .halo-productView .halo-productView-right,
+  .product-details .halo-productView-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .halo-productView .halo-productView-right,
+  .product-details .halo-productView-right {
+    margin-top: 30px;
+  }
+  
+  .product-details .productView-images-wrapper,
+  .halo-productView-left .productView-images {
+    flex-direction: column;
+  }
+  
+  .product-details .productView-thumbnail-wrapper,
+  .halo-productView-left .productView-thumbnail-wrapper {
+    width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    order: 1;
+    margin-top: 15px;
+  }
+
+  .product-details .productView-nav,
+  .halo-productView-left .productView-nav {
+    width: 100%;
+    flex: 0 0 100%;
+    order: 0;
+    display: block;
+  }
+  
+  .product-details .productView-thumbnail,
+  .product-details .productView-for .productView-thumbnail,
+  .halo-productView-left .productView-thumbnail {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details .productView-title {
+    font-size: 20px;
+  }
+  
+  .product-details .productView-price .price,
+  .product-details .productView-price .price-item {
+    font-size: 22px;
+  }
+  
+  .product-details .productView-tab .tab-title li a,
+  .product-details .productView-tab .tab-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  
+  .product-details .productView-tab .tab-content {
+    padding: 15px;
+  }
+  
+  .product-details .productView-add-to-cart .btn-addtocart {
+    width: 100%;
+  }
+  
+  .product-details .productView-thumbnail,
+  .product-details .productView-for .productView-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .product-details .productView-perks,
+  .product-details .productView-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-details .productView-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .product-details .productView-info-links {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .product-details .productView-info-links a {
+    border-right: none;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--clenli-border);
+  }
+  
+  .product-details .productView-info-links a:last-child {
+    border-bottom: none;
+  }
+}

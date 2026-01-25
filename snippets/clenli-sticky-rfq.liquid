@@ -1,0 +1,55 @@
+{%- comment -%}
+  Clenli Sticky RFQ Button Script
+  Opens a quote request email with product details
+{%- endcomment -%}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find sticky RFQ buttons
+  const stickyRfqButtons = document.querySelectorAll('[data-sticky-rfq-trigger]');
+  
+  // Handle sticky RFQ button clicks
+  stickyRfqButtons.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Get product details from data attributes
+      const productTitle = btn.getAttribute('data-product-title') || 'Product';
+      const productId = btn.getAttribute('data-product-id') || '';
+      const variantId = btn.getAttribute('data-variant-id') || '';
+      const productUrl = window.location.href;
+      
+      // First try to find and click a main RFQ button if it exists
+      const mainRfqButton = document.querySelector(
+        '[data-rfq-button], ' +
+        '.rfq-button, ' +
+        '[class*="rfq-button"], ' +
+        '.shopify-app-block button[class*="quote"], ' +
+        '.shopify-app-block a[class*="quote"], ' +
+        '.product-details button[class*="quote"], ' +
+        '.productView-details button[class*="quote"], ' +
+        '.halo-productView-right button[class*="quote"]'
+      );
+      
+      if (mainRfqButton) {
+        mainRfqButton.click();
+        return;
+      }
+      
+      // Fallback: Open email with product details
+      const subject = encodeURIComponent('Quote Request: ' + productTitle);
+      const body = encodeURIComponent(
+        'Hello,\n\n' +
+        'I would like to request a quote for the following product:\n\n' +
+        'Product: ' + productTitle + '\n' +
+        'Product URL: ' + productUrl + '\n\n' +
+        'Please provide pricing and availability information.\n\n' +
+        'Thank you.'
+      );
+      
+      window.location.href = 'mailto:sales@clenli.ie?subject=' + subject + '&body=' + body;
+    });
+  });
+});
+</script>
