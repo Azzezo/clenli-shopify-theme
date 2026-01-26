@@ -268,6 +268,19 @@
             "maximum_des_to_show": 300
           }
         },
+        "custom_X7jVHX": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Specifications",
+            "type": "metafield",
+            "content": "",
+            "product_custom_source": "key_text",
+            "product_tab_key_metafield": "custom.specifications",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -298,6 +311,7 @@
         "reviews_tab",
         "shipping_tab",
         "custom_8gEkyC",
+        "custom_X7jVHX",
         "share"
       ],
       "settings": {
