@@ -132,7 +132,26 @@
         },
         "request_quote": {
           "type": "shopify://apps/request-a-quote/blocks/rfq-button/019b76a7-9e70-7f6e-8ecb-b96292d760bc",
-          "settings": {}
+          "settings": {
+            "button_text": "Request a Quote",
+            "response_time_text": "Response within an hour",
+            "button_style": "primary",
+            "button_color": "#6fb31a",
+            "button_text_color": "#ffffff",
+            "modal_title": "Request a Quote",
+            "phone_number": "+353 (0)1 8118920",
+            "show_phone_field": true,
+            "phone_required": false,
+            "show_company_field": false,
+            "company_required": false,
+            "show_quantity_field": false,
+            "quantity_required": false,
+            "show_details_field": true,
+            "details_label": "Request Details",
+            "details_placeholder": "Please describe what you're looking for...",
+            "submit_button_text": "Submit Request",
+            "success_message": "We have received your quote request and will get back to you shortly."
+          }
         },
         "perks": {
           "type": "perks",
@@ -236,6 +255,19 @@
             "maximum_des_to_show": 300
           }
         },
+        "custom_8gEkyC": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Features & Benefits",
+            "type": "metafield",
+            "content": "",
+            "product_custom_source": "key_text",
+            "product_tab_key_metafield": "custom.benefits",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -265,6 +297,7 @@
         "description",
         "reviews_tab",
         "shipping_tab",
+        "custom_8gEkyC",
         "share"
       ],
       "settings": {
@@ -290,6 +323,14 @@
         "thumnail_layout": "1",
         "thumbnail_to_show": 5,
         "enable_sticky": false,
+        "sidebar_layout": "layout_1",
+        "sidebar_collapse": "collapse",
+        "sidebar_collapse_default": "expand",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
         "show_badge": true,
         "show_subtotal": false,
         "subtotal_style": "1",
@@ -312,6 +353,30 @@
         "tab_border_color": "#6fb31a",
         "tab_border_color_rgb": "",
         "show_product_bundle": false,
+        "background_color": "#f8f8f8",
+        "block_title": "Frequently Bought Together",
+        "block_title_align": "center",
+        "product_style": "2",
+        "block_image_ratio": "adapt",
+        "bundle_discount": true,
+        "bundle_discount_text": "Get a [discount]% discount buying these products together",
+        "bundle_discount_text_color": "#232323",
+        "total_btn_color": "#ffffff",
+        "total_btn_border": "#000000",
+        "total_btn_bg": "#000000",
+        "total_btn_bg_gradient": "",
+        "total_btn_color_hover": "#ffffff",
+        "total_btn_border_hover": "#d12442",
+        "total_btn_bg_hover": "#d12442",
+        "total_btn_bg_gradient_hover": "",
+        "block_dots": false,
+        "block_arrows": true,
+        "padding_top": 30,
+        "padding_top_tablet": 30,
+        "padding_top_mobile": 30,
+        "padding_bottom": 70,
+        "padding_bottom_tablet": 40,
+        "padding_bottom_mobile": 30,
         "mg_top_desktop": 0,
         "mg_top_tablet": 0,
         "mg_top_mobile": 0,
@@ -358,7 +423,18 @@
         "product_block_arrows_mb": false,
         "product_block_show": "5",
         "product_block_per_view": "5",
-        "show_half": true
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
       }
     },
     "featured_products": {
