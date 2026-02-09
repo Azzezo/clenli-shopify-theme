@@ -490,7 +490,7 @@
           "settings": {
             "level": "1",
             "title": "Cleaning Equipment",
-            "link": "shopify://collections/cleaning-equipment",
+            "link": "shopify://collections/cleaning-equipment-3",
             "icon_image": "shopify://shop_images/256.png",
             "submenu_style": "simple"
           }
