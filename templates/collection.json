@@ -133,8 +133,8 @@
         "category_block": {
           "type": "category",
           "settings": {
-            "menu": "category-menu-shop-page",
-            "show_count": true
+            "link_list": "category-menu-shop-page",
+            "type": "3_level"
           }
         }
       },
