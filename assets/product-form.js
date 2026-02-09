@@ -3,8 +3,16 @@ class ProductForm extends HTMLElement {
         super();   
 
         this.form = this.querySelector('form');
-        this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
         this.cartNotification = document.querySelector('cart-notification');
+
+        // Only register the Dawn-style submit handler if cart-notification exists.
+        // Ella's theme uses its own AJAX add-to-cart system in theme.js
+        // (halo.initAddToCart) which listens for click events on [data-btn-addtocart].
+        // If we register a submit handler without cart-notification, it will crash
+        // and cause a full page reload instead of AJAX add-to-cart.
+        if (this.cartNotification) {
+            this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
+        }
     }
 
     onSubmitHandler(evt) {

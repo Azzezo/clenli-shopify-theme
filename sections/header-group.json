@@ -26,7 +26,7 @@
         "link_hover_color": "#0066cc",
         "divider_color": "#cccccc",
         "icon_color": "#4caf50",
-        "announcement_text": "<p>We are closed from <strong>23rd December</strong> and reopening on <strong>2nd January</strong></p>",
+        "announcement_text": "",
         "announcement_color": "#e53935",
         "announcement_font_size": 13,
         "announcement_font_size_mobile": 12,
