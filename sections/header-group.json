@@ -1171,7 +1171,7 @@
           "type": "nav_dropdown",
           "settings": {
             "title": "Tersano",
-            "link": "shopify://pages/tersano2"
+            "link": "shopify://pages/tersano"
           }
         },
         "nav_dropdown_M8xkGg": {
@@ -1298,7 +1298,7 @@
           "type": "nav_dropdown",
           "settings": {
             "title": "Tersano",
-            "link": "shopify://pages/tersano2"
+            "link": "shopify://pages/tersano"
           }
         },
         "nav_item_j7JQKc": {
