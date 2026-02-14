@@ -792,7 +792,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background: var(--clenli-bg-light);
+  background: transparent;
   border-bottom: 1px solid var(--clenli-border);
 }
 
