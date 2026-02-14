@@ -5,9 +5,13 @@
     assign word_number = block.settings.word_number
     assign show_short_description = block.settings.show_short_description
 -%}
-{% if product.metafields.c_f.short_description %}
+{% if product.metafields.c_f.short_description != blank %}
     {%- liquid
         assign desc = product.metafields.c_f.short_description
+    -%}
+{% elsif product.metafields.custom.short_description != blank %}
+    {%- liquid
+        assign desc = product.metafields.custom.short_description
     -%}
 {% endif %}
 {%- if desc != blank -%}

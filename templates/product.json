@@ -52,7 +52,7 @@
           "type": "short_description",
           "settings": {
             "show_short_description": true,
-            "word_number": "100",
+            "word_number": "35",
             "fontsize_text": 14,
             "color_text": "#666666",
             "spacing_top": 0,
