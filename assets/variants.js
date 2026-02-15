@@ -262,6 +262,35 @@ class VariantSelects extends HTMLElement {
 
             optionSticky.val(this.currentVariant.id);
         }
+
+        this.updateVariantTitleAndDescription();
+    }
+
+    updateVariantTitleAndDescription() {
+        var metaArrayName = `variant_meta_${this.dataset.product}`,
+            metaData = window[metaArrayName];
+
+        if (!metaData) return;
+
+        var variantData = metaData.variants[this.currentVariant.id],
+            titleEl = document.querySelector(`[data-product-title="${this.dataset.product}"] span`),
+            descEl = document.querySelector(`[data-product-short-desc="${this.dataset.product}"]`);
+
+        if (titleEl) {
+            if (variantData && variantData.title && variantData.title.trim() !== '') {
+                titleEl.textContent = variantData.title;
+            } else {
+                titleEl.textContent = metaData.defaultTitle;
+            }
+        }
+
+        if (descEl) {
+            if (variantData && variantData.description && variantData.description.trim() !== '') {
+                descEl.innerHTML = variantData.description;
+            } else {
+                descEl.innerHTML = metaData.defaultDescription;
+            }
+        }
     }
 
     updateProductInfo() {

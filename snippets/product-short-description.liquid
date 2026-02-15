@@ -15,14 +15,10 @@
     -%}
 {% endif %}
 {%- if desc != blank -%}
-    <div class="productView-desc halo-text-format" 
+    <div class="productView-desc halo-text-format" data-product-short-desc="{{ product.id }}"
         style="--color-text: {{ color_text }};
         --fontsize-text: {{ fontsize_text | append: 'px' }}"
     >   
-        {% if show_short_description %}
-            {{ desc | strip_html | truncatewords: word_number }}
-        {%- else -%}
-            {{ desc }}
-        {%- endif -%}
+        {{ desc }}
     </div>
 {%- endif -%}

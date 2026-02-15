@@ -369,6 +369,19 @@
             '{{ variant.id }}': '{{ variant.inventory_policy }}',
         {%endfor%}
     };
+
+    window.variant_meta_{{ product.id }} = {
+        defaultTitle: {{ product.title | json }},
+        defaultDescription: {{ product.description | json }},
+        variants: {
+            {% for variant in product.variants %}
+                '{{ variant.id }}': {
+                    title: {{ variant.metafields.custom.variant_title | default: '' | json }},
+                    description: {{ variant.metafields.custom.variant_description | default: '' | json }}
+                },
+            {% endfor %}
+        }
+    };
   
     window.subtotal = {
         show: {{ show_subtotal_text }},
