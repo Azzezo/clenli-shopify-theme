@@ -372,7 +372,7 @@
 
     window.variant_meta_{{ product.id }} = {
         defaultTitle: {{ product.title | json }},
-        defaultDescription: {{ product.description | json }},
+        defaultDescription: {% if product.metafields.c_f.short_description != blank %}{{ product.metafields.c_f.short_description | json }}{% elsif product.metafields.custom.short_description != blank %}{{ product.metafields.custom.short_description | json }}{% else %}""{% endif %},
         variants: {
             {% for variant in product.variants %}
                 '{{ variant.id }}': {

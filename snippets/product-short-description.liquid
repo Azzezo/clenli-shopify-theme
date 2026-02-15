@@ -1,9 +1,7 @@
 {%- liquid
-    assign desc = product.description
+    assign desc = blank
     assign fontsize_text = block.settings.fontsize_text
     assign color_text = block.settings.color_text
-    assign word_number = block.settings.word_number
-    assign show_short_description = block.settings.show_short_description
 -%}
 {% if product.metafields.c_f.short_description != blank %}
     {%- liquid
@@ -14,11 +12,11 @@
         assign desc = product.metafields.custom.short_description
     -%}
 {% endif %}
-{%- if desc != blank -%}
-    <div class="productView-desc halo-text-format" data-product-short-desc="{{ product.id }}"
-        style="--color-text: {{ color_text }};
-        --fontsize-text: {{ fontsize_text | append: 'px' }}"
-    >   
+<div class="productView-desc halo-text-format" data-product-short-desc="{{ product.id }}"
+    style="--color-text: {{ color_text }};
+    --fontsize-text: {{ fontsize_text | append: 'px' }}"
+>   
+    {%- if desc != blank -%}
         {{ desc }}
-    </div>
-{%- endif -%}
+    {%- endif -%}
+</div>
