@@ -13,7 +13,7 @@
           {% if section.settings.hero_image != blank %}
             <img src="{{ section.settings.hero_image | image_url: width: 800 }}" alt="{{ section.settings.hero_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/tersanooooo.png" alt="Tersano Driving Sustainability in Cleaning">
+            <img src="{{ 'migrated-tersanooooo.png' | asset_url }}" alt="Tersano Driving Sustainability in Cleaning">
           {% endif %}
         </div>
         <div class="tersano-hero__content">
@@ -55,7 +55,7 @@
           {% if section.settings.what_image != blank %}
             <img src="{{ section.settings.what_image | image_url: width: 800 }}" alt="{{ section.settings.what_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Tersano_iClean_Mini_in_Cafe.png" alt="Tersano iClean Mini in Cafe">
+            <img src="{{ 'migrated-Tersano_iClean_Mini_in_Cafe.png' | asset_url }}" alt="Tersano iClean Mini in Cafe">
           {% endif %}
         </div>
       </div>
@@ -80,7 +80,7 @@
           {% if section.settings.how_image != blank %}
             <img src="{{ section.settings.how_image | image_url: width: 800 }}" alt="{{ section.settings.how_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/How_Tersano_is_Produced.png" alt="How Tersano is Produced">
+            <img src="{{ 'migrated-How_Tersano_is_Produced.png' | asset_url }}" alt="How Tersano is Produced">
           {% endif %}
         </div>
       </div>
@@ -101,7 +101,7 @@
           {% if section.settings.where_image != blank %}
             <img src="{{ section.settings.where_image | image_url: width: 800 }}" alt="{{ section.settings.where_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Tersano_Where_to_Use.png" alt="Where to Use Tersano">
+            <img src="{{ 'migrated-Tersano_Where_to_Use.png' | asset_url }}" alt="Where to Use Tersano">
           {% endif %}
         </div>
       </div>

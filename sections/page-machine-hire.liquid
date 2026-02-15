@@ -470,7 +470,7 @@
           {% if section.settings.section2_image != blank %}
             {{ section.settings.section2_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: section.settings.section2_title }}
           {% else %}
-            <img src="https://clenlidirect.com/media/amasty/webp/wysiwyg/robotic-cleaning-hire.webp" alt="Robotic Machine Hire Ireland" loading="lazy">
+            <img src="{{ 'migrated-robotic-cleaning-hire.webp' | asset_url }}" alt="Robotic Machine Hire Ireland" loading="lazy">
           {% endif %}
         </div>
       </div>
@@ -487,7 +487,7 @@
           {% if section.settings.section3_image != blank %}
             {{ section.settings.section3_image | image_url: width: 1115 | image_tag: loading: 'lazy', alt: section.settings.section3_title }}
           {% else %}
-            <img src="https://clenlidirect.com/media/amasty/webp/wysiwyg/C130_Trailer_1_.webp" alt="Commercial Cleaning Machine Hire" loading="lazy">
+            <img src="{{ 'migrated-C130_Trailer_1_.webp' | asset_url }}" alt="Commercial Cleaning Machine Hire" loading="lazy">
           {% endif %}
         </div>
       </div>

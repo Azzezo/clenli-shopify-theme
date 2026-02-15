@@ -12,7 +12,7 @@
           {% if section.settings.hero_image != blank %}
             <img src="{{ section.settings.hero_image | image_url: width: 800 }}" alt="{{ section.settings.hero_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/ERP18000000.png" alt="Numatic ERP180">
+            <img src="{{ 'migrated-ERP18000000.png' | asset_url }}" alt="Numatic ERP180">
           {% endif %}
         </div>
         <div class="erp180-hero__content">
@@ -56,7 +56,7 @@
           {% if section.settings.about_image != blank %}
             <img src="{{ section.settings.about_image | image_url: width: 800 }}" alt="{{ section.settings.about_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/About_ERP180.png" alt="About ERP180">
+            <img src="{{ 'migrated-About_ERP180.png' | asset_url }}" alt="About ERP180">
           {% endif %}
         </div>
       </div>
@@ -74,7 +74,7 @@
           {% if section.settings.energy_image != blank %}
             <img src="{{ section.settings.energy_image | image_url: width: 800 }}" alt="{{ section.settings.energy_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Reduced_Energy_ERP180.png" alt="Reduced Energy">
+            <img src="{{ 'migrated-Reduced_Energy_ERP180.png' | asset_url }}" alt="Reduced Energy">
           {% endif %}
         </div>
         <!-- Content SECOND (Right side) -->
@@ -100,7 +100,7 @@
           {% if section.settings.savings_image != blank %}
             <img src="{{ section.settings.savings_image | image_url: width: 800 }}" alt="{{ section.settings.savings_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Cost_Savings_ERP180.png" alt="Cost Savings">
+            <img src="{{ 'migrated-Cost_Savings_ERP180.png' | asset_url }}" alt="Cost Savings">
           {% endif %}
         </div>
       </div>
@@ -118,7 +118,7 @@
           {% if section.settings.smart_image != blank %}
             <img src="{{ section.settings.smart_image | image_url: width: 800 }}" alt="{{ section.settings.smart_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Built_Smarter_ERP180.png" alt="Built Smarter">
+            <img src="{{ 'migrated-Built_Smarter_ERP180.png' | asset_url }}" alt="Built Smarter">
           {% endif %}
         </div>
         <!-- Content SECOND (Right side) -->
@@ -223,7 +223,7 @@
           {% if section.settings.cta_image != blank %}
             <img src="{{ section.settings.cta_image | image_url: width: 800 }}" alt="{{ section.settings.cta_title }}">
           {% else %}
-            <img src="https://clenlidirect.com/media/.renditions/wysiwyg/Powerful_ERP180.png" alt="Powerful Performer">
+            <img src="{{ 'migrated-Powerful_ERP180.png' | asset_url }}" alt="Powerful Performer">
           {% endif %}
         </div>
       </div>
