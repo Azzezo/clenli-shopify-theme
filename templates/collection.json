@@ -60,7 +60,7 @@
       "settings": {
         "container": "default",
         "padding_full_width": 0,
-        "layout": "1",
+        "layout": "3",
         "show_breadcrumb": true,
         "breadcrumb_alignment": "left",
         "breadcrumb_color": "#999999",
