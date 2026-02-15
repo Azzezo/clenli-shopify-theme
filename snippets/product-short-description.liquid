@@ -3,13 +3,13 @@
     assign fontsize_text = block.settings.fontsize_text
     assign color_text = block.settings.color_text
 -%}
-{% if product.metafields.c_f.short_description != blank %}
+{% if product.metafields.c_f.short_description.value != blank %}
     {%- liquid
-        assign desc = product.metafields.c_f.short_description
+        assign desc = product.metafields.c_f.short_description.value
     -%}
-{% elsif product.metafields.custom.short_description != blank %}
+{% elsif product.metafields.custom.short_description.value != blank %}
     {%- liquid
-        assign desc = product.metafields.custom.short_description
+        assign desc = product.metafields.custom.short_description.value
     -%}
 {% endif %}
 <div class="productView-desc halo-text-format" data-product-short-desc="{{ product.id }}"

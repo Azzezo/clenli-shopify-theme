@@ -372,12 +372,12 @@
 
     window.variant_meta_{{ product.id }} = {
         defaultTitle: {{ product.title | json }},
-        defaultDescription: {% if product.metafields.c_f.short_description != blank %}{{ product.metafields.c_f.short_description | json }}{% elsif product.metafields.custom.short_description != blank %}{{ product.metafields.custom.short_description | json }}{% else %}""{% endif %},
+        defaultDescription: {% if product.metafields.c_f.short_description.value != blank %}{{ product.metafields.c_f.short_description.value | json }}{% elsif product.metafields.custom.short_description.value != blank %}{{ product.metafields.custom.short_description.value | json }}{% else %}""{% endif %},
         variants: {
             {% for variant in product.variants %}
                 '{{ variant.id }}': {
-                    title: {{ variant.metafields.custom.variant_title | default: '' | json }},
-                    description: {{ variant.metafields.custom.variant_description | default: '' | json }}
+                    title: {{ variant.metafields.custom.variant_title.value | default: '' | json }},
+                    description: {{ variant.metafields.custom.variant_description.value | default: '' | json }}
                 },
             {% endfor %}
         }
