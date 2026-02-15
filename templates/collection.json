@@ -138,7 +138,7 @@
         "show_view_as": true,
         "products_per_page": "50",
         "layout": "4",
-        "show_infinite_scrolling": "infinite",
+        "show_infinite_scrolling": "show_more",
         "show_banner": false,
         "show_banner_1": true,
         "banner_position_1": "4",
