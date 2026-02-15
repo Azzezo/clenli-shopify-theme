@@ -866,6 +866,70 @@
     display: none !important;
 }
 
+/* Judge.me badge on collection cards */
+.card-judgeme-badge {
+    margin: 6px 0 4px;
+    line-height: 1;
+}
+
+.card-judgeme-badge .jdgm-prev-badge {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.card-judgeme-badge .jdgm-prev-badge .jdgm-star {
+    color: #f7a41f !important;
+    font-size: 15px;
+}
+
+.card-judgeme-badge .jdgm-prev-badge .jdgm-prev-badge__text {
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+    visibility: visible !important;
+}
+
+/* Short description on collection cards */
+.card-short-description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+    margin: 6px 0 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* SKU on collection cards */
+.card-sku {
+    font-size: 12px;
+    color: #999;
+    margin: 0 0 6px;
+}
+
+@media (max-width: 767px) {
+    .card-short-description {
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+        margin: 4px 0 6px;
+    }
+
+    .card-judgeme-badge .jdgm-prev-badge .jdgm-star {
+        font-size: 13px;
+    }
+
+    .card-judgeme-badge .jdgm-prev-badge .jdgm-prev-badge__text {
+        font-size: 12px;
+    }
+
+    .card-sku {
+        font-size: 11px;
+    }
+}
+
 .swatch .group-swatch {
     display: inline;
     vertical-align: top;

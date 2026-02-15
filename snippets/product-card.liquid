@@ -167,6 +167,30 @@
                 {%- endif -%}
                 <h3 class="card__heading"><a class="card-title link-underline{% if settings.product_title_line_text != 'full' %} card-title-ellipsis{% endif %}{% if variant_selected != blank %} card-title-change{% endif %}" href="{{ product_card_product.url }}" data-product-title="{{ product_card_product.title | escape }}" data-product-url="{{ product_card_product.url }}">{{ product_card_product.title | escape }}{% if variant_selected != blank %} <span data-change-title> {% unless settings.quick_shop_type == '2' %}{% if settings.style_text_color_varriant == '01' %}-{% endif %} {{ variant_selected }}{% endunless %}</span>{% endif %}</a></h3>
 
+                <div class="card-judgeme-badge" data-bv-show="inline_rating" data-bv-product-id="{{ product_card_product.id }}" data-bv-seo="false">
+                  <span class="jdgm-prev-badge" data-id="{{ product_card_product.id }}">
+                    {{ product_card_product.metafields.judgeme.badge }}
+                  </span>
+                </div>
+
+                {%- liquid
+                  assign card_short_desc = blank
+                  if product_card_product.metafields.c_f.short_description.value != blank
+                    assign card_short_desc = product_card_product.metafields.c_f.short_description.value | strip_html
+                  elsif product_card_product.metafields.custom.short_description.value != blank
+                    assign card_short_desc = product_card_product.metafields.custom.short_description.value | strip_html
+                  elsif product_card_product.description != blank
+                    assign card_short_desc = product_card_product.description | strip_html
+                  endif
+                -%}
+                {%- if card_short_desc != blank -%}
+                  <div class="card-short-description">{{ card_short_desc | truncatewords: 20 }}</div>
+                {%- endif -%}
+
+                {%- if product_card_product.selected_or_first_available_variant.sku != blank -%}
+                  <div class="card-sku">SKU: {{ product_card_product.selected_or_first_available_variant.sku }}</div>
+                {%- endif -%}
+
                 {% render 'product-card-summary', product: product_card_product, class: 'card-list__hidden' %}
 
                 {%- if settings.enable_custom_position_swatch_layout_card_1 -%}
