@@ -284,6 +284,30 @@
                     </span>
                 </a>
 
+                <div class="card-judgeme-badge" data-bv-show="inline_rating" data-bv-product-id="{{ product_card_product.id }}" data-bv-seo="false">
+                  <span class="jdgm-prev-badge" data-id="{{ product_card_product.id }}">
+                    {{ product_card_product.metafields.judgeme.badge }}
+                  </span>
+                </div>
+
+                {%- liquid
+                  assign card_short_desc = blank
+                  if product_card_product.metafields.c_f.short_description.value != blank
+                    assign card_short_desc = product_card_product.metafields.c_f.short_description.value | strip_html
+                  elsif product_card_product.metafields.custom.short_description.value != blank
+                    assign card_short_desc = product_card_product.metafields.custom.short_description.value | strip_html
+                  elsif product_card_product.description != blank
+                    assign card_short_desc = product_card_product.description | strip_html
+                  endif
+                -%}
+                {%- if card_short_desc != blank -%}
+                  <div class="card-short-description">{{ card_short_desc | truncatewords: 20 }}</div>
+                {%- endif -%}
+
+                {%- if product_card_product.selected_or_first_available_variant.sku != blank -%}
+                  <div class="card-sku">SKU: {{ product_card_product.selected_or_first_available_variant.sku }}</div>
+                {%- endif -%}
+
                 {% if settings.disable_product_card_border and settings.enable_custom_layout_card %}
                     </div>
                 {% endif %}
