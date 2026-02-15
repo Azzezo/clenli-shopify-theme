@@ -182,7 +182,7 @@
           "settings": {
             "level": "1",
             "title": "Machines",
-            "link": "shopify://collections/machines-1",
+            "link": "shopify://collections/machines",
             "icon_image": "shopify://shop_images/93_1.png",
             "submenu_style": "mega"
           }

@@ -672,7 +672,7 @@
         "custom_max_width": 1600,
         "heading": "Cleaning Machines",
         "view_all_text": "View All",
-        "view_all_link": "shopify://collections/machines-1",
+        "view_all_link": "shopify://collections/machines",
         "products_per_view": 6,
         "show_stars": true,
         "show_description": true,
