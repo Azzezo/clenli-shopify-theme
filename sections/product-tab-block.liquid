@@ -358,6 +358,31 @@
         fill: currentColor;
     }
 
+    /* Variants popup - hide by default, show as overlay on interaction */
+    .section-block-{{section.id}} .variants-popup {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: rgba(255,255,255,0.95);
+        pointer-events: none;
+        opacity: 0;
+    }
+    .section-block-{{section.id}} .quickshop-popup-show .variants-popup {
+        display: block;
+        pointer-events: auto;
+        opacity: 1;
+    }
+    .section-block-{{section.id}} .custom-card-button {
+        position: relative;
+        overflow: hidden;
+    }
+    .section-block-{{section.id}} .product {
+        overflow: hidden;
+    }
+
     /* Responsive - Tablet (4 products) */
     @media (max-width: 1024px) {
         .section-block-{{section.id}} {
