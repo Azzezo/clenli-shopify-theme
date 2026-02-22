@@ -40,6 +40,8 @@
         "sign_out_text": "Sign Out",
         "sign_in_text": "Sign In",
         "register_text": "Register",
+        "tobi_url": "https://tobi.clenlidirect.com",
+        "sam_url": "",
         "help_text": "Need Help?",
         "phone_number": "01 811 89 20",
         "email": "sales@clenli.ie"
