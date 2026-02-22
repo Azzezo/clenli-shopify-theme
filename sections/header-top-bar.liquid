@@ -292,6 +292,14 @@
                 <a href="{{ routes.account_url }}" class="header-top-bar__link">{{ section.settings.my_account_text }}</a>
                 <span class="header-top-bar__divider">|</span>
                 <a href="{{ routes.account_logout_url }}" class="header-top-bar__link">{{ section.settings.sign_out_text }}</a>
+                {%- if section.settings.tobi_url != blank -%}
+                  <span class="header-top-bar__divider">|</span>
+                  <a href="{{ section.settings.tobi_url }}" class="header-top-bar__link header-top-bar__app-link" target="_blank" rel="noopener">TOBi</a>
+                {%- endif -%}
+                {%- if section.settings.sam_url != blank -%}
+                  <span class="header-top-bar__divider">|</span>
+                  <a href="{{ section.settings.sam_url }}" class="header-top-bar__link header-top-bar__app-link" target="_blank" rel="noopener">SAM</a>
+                {%- endif -%}
               {%- else -%}
                 <a href="{{ routes.account_register_url }}" class="header-top-bar__link">{{ section.settings.register_text }}</a>
                 <span class="header-top-bar__divider">or</span>
@@ -483,6 +491,9 @@
     { "type": "text", "id": "sign_out_text", "label": "Sign Out text", "default": "Sign Out" },
     { "type": "text", "id": "sign_in_text", "label": "Sign In text", "default": "Sign In" },
     { "type": "text", "id": "register_text", "label": "Register text", "default": "Register An Account" },
+    { "type": "header", "content": "App Links" },
+    { "type": "url", "id": "tobi_url", "label": "TOBi App URL" },
+    { "type": "url", "id": "sam_url", "label": "SAM App URL", "default": "https://sam.clenlidirect.com/" },
     { "type": "header", "content": "Contact Information" },
     { "type": "text", "id": "help_text", "label": "Help text", "default": "Need Help?" },
     { "type": "text", "id": "phone_number", "label": "Phone number", "default": "01 811 89 20" },
