@@ -637,6 +637,36 @@
           "accept_necessary_text": "Accept necessary",
           "save_text": "Save settings"
         }
+      },
+      "password-page-1": {
+        "type": "password-page-1",
+        "settings": {
+          "background_color": "",
+          "brand_type": "text",
+          "brand_text": "",
+          "brand_logo_font_size": 30,
+          "logo_color": "#232323",
+          "brand_logo_width": 65,
+          "banner": "shopify://shop_images/5fc114128020_a6da5489-5315-42e3-b642-1534563d24de.png",
+          "banner_color": "#ffffff",
+          "show_newsletter": true,
+          "title": "We'll Be Right Back!",
+          "title_font_size": 24,
+          "title_font_size_mb": 18,
+          "title_color": "#232323",
+          "subtitle": "Clenlidirect.com is getting some upgrades. We’re working behind the scenes to enhance our platform, improve performance, and introduce new features that will make ordering and managing your cleaning supplies even easier.\n\nThe site will be back online shortly. We appreciate your patience while we complete these upgrades.\n\nSubscribe below for updates.",
+          "subtitle_font_size": 12,
+          "subtitle_color": "#232323",
+          "input_color": "#323232",
+          "terms_text_color": "#848484",
+          "terms_link_color": "#3c3c3c",
+          "btn": "1",
+          "show_social_media": true,
+          "social_media_color": "#ffffff",
+          "show_copyright": true,
+          "copyright_content": "",
+          "copyright_color": "#7e7e7e"
+        }
       }
     },
     "content_for_index": [],
