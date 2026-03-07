@@ -10,6 +10,19 @@
     Usage:
     {% render 'price', product: product %}
 {%- endcomment -%}
+
+{%- if product.tags contains 'call-for-price' -%}
+  <div class="price {{ price_class }}">
+    <div class="price__container">
+      <div class="price__regular">
+        <span class="price-item price-item--regular call-for-price-label">Contact us for pricing</span>
+      </div>
+    </div>
+  </div>
+  {%- if show_badges -%}
+    <span class="badge price__badge-sold-out" style="display:none"></span>
+  {%- endif -%}
+{%- else -%}
 {%- liquid
      if use_variant
         assign target = product.selected_or_first_available_variant
@@ -116,3 +129,5 @@
         </small>
     </dl>
 </div>
+
+{%- endif -%}
