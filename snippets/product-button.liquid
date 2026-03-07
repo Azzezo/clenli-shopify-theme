@@ -1,12 +1,3 @@
-{%- if product.tags contains 'call-for-price' -%}
-  <div class="productView-callForPrice">
-    <a href="mailto:sales@clenli.ie?subject=Quote%20Request%3A%20{{ product.title | url_encode }}&body=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%3A%20{{ product.title | url_encode }}%20({{ shop.url }}{{ product.url }})"
-       class="btn productView-callForPrice-btn"
-       style="display:inline-block;padding:12px 24px;background:#6fb31a;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;font-size:16px;text-align:center;width:100%;box-sizing:border-box;">
-      Request a Quote
-    </a>
-  </div>
-{%- else -%}
 {%- liquid
     assign show_dynamic_checkout = block.settings.show_dynamic_checkout
     assign atc_animation = block.settings.atc_animation
@@ -303,4 +294,3 @@
         </div>
     {%- endif -%}
 </div>
-{%- endif -%}
