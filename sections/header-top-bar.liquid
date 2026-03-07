@@ -320,7 +320,7 @@
               {%- else -%}
                 <a href="{{ routes.account_register_url }}" class="header-top-bar__link">{{ section.settings.register_text }}</a>
                 <span class="header-top-bar__divider">or</span>
-                <a href="{{ routes.account_login_url }}" class="header-top-bar__link">{{ section.settings.sign_in_text }}</a>
+                <a href="/customer_authentication/login?return_to={{ '/' | url_encode }}" class="header-top-bar__link">{{ section.settings.sign_in_text }}</a>
               {%- endif -%}
             </div>
           {%- endif -%}

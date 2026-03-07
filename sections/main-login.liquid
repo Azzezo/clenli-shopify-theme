@@ -113,7 +113,7 @@
                       {% comment %}
                           This form must use 'customer_login'
                       {% endcomment %}
-                      {%- form 'customer_login', class: 'customer-login-form' -%}
+                      {%- form 'customer_login', return_to: routes.root_url, class: 'customer-login-form' -%}
                           {%- if form.errors -%}
                               {%- assign message = form.errors.messages['form'] -%}
                               <div class="form-message">
