@@ -33,7 +33,7 @@
         "show_vat_toggle": true,
         "vat_exclude_text": "Excl. VAT",
         "vat_include_text": "Incl. VAT",
-        "default_vat_included": false,
+        "default_vat_included": true,
         "toggle_bg_color": "#cccccc",
         "toggle_active_color": "#acacac",
         "my_account_text": "My Account",

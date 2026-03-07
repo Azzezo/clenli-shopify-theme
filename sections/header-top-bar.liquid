@@ -479,10 +479,10 @@
     });
 
     const savedPref = localStorage.getItem('vatPreference');
-    if (savedPref === 'include') {
-      updateVatDisplay(true);
-    } else {
+    if (savedPref === 'exclude') {
       updateVatDisplay(false);
+    } else {
+      updateVatDisplay(true);
     }
   });
 </script>
@@ -515,7 +515,7 @@
     { "type": "checkbox", "id": "show_vat_toggle", "label": "Show VAT toggle", "default": true },
     { "type": "text", "id": "vat_exclude_text", "label": "Exclude VAT text", "default": "Excl. VAT" },
     { "type": "text", "id": "vat_include_text", "label": "Include VAT text", "default": "Incl. VAT" },
-    { "type": "checkbox", "id": "default_vat_included", "label": "Default to VAT included", "default": false },
+    { "type": "checkbox", "id": "default_vat_included", "label": "Default to VAT included", "default": true },
     { "type": "color", "id": "toggle_bg_color", "label": "Toggle background (off)", "default": "#cccccc" },
     { "type": "color", "id": "toggle_active_color", "label": "Toggle background (on)", "default": "#4CAF50" },
     { "type": "header", "content": "Account Links" },

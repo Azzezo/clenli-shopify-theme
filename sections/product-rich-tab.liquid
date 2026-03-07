@@ -614,7 +614,6 @@
 
     function initVatDisplay() {
         const savedPref = localStorage.getItem('vatPreference');
-        console.log('VAT Init - Saved preference:', savedPref); // Debug
         
         if (savedPref === 'exclude') {
             document.body.classList.add('vat-excluded');
@@ -635,7 +634,6 @@
 
     // Listen for VAT toggle changes
     document.addEventListener('vatToggleChanged', function(e) {
-        console.log('VAT Toggle Event received:', e.detail); // Debug
         if (e.detail.includeVat) {
             document.body.classList.add('vat-included');
             document.body.classList.remove('vat-excluded');
