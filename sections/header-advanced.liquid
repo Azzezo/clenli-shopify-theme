@@ -265,7 +265,7 @@
                                                     {% assign is_contained = false %}
                                                 {% endif %}
                                                 {%- if section.settings.layout == 'style2' -%}
-                                                    <a href="{{ routes.account_login_url }}" class="header__icon header__icon--account link link--text"{% if is_contained %} data-open-auth-sidebar{% endif %}>
+                                                    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.storefront_login_url }}{%- endif -%}" class="header__icon header__icon--account link link--text"{% if is_contained %} data-open-auth-sidebar{% endif %}>
                                                         {% render 'icon-account-2' %}
                                                         <div class="header-advanced-textRight">
                                                             <span class="hello">{{ 'customer.hello' | t }}</span>
