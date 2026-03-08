@@ -290,7 +290,61 @@
       font-size: 11px;
     }
   }
+
+  .b2b-banner {
+    background-color: {{ section.settings.b2b_banner_bg | default: '#1a5c2a' }};
+    color: {{ section.settings.b2b_banner_text_color | default: '#ffffff' }};
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .b2b-banner a {
+    color: {{ section.settings.b2b_banner_text_color | default: '#ffffff' }};
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .b2b-banner a:hover {
+    opacity: 0.85;
+  }
+
+  .b2b-banner__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .b2b-banner__inner svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+
+  @media (max-width: 749px) {
+    .b2b-banner {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  }
 </style>
+
+{%- if customer and customer.company and section.settings.show_b2b_banner -%}
+  <div class="b2b-banner">
+    <div class="container container-{{ section.settings.container_width }}">
+      <div class="b2b-banner__inner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <span>{{ section.settings.b2b_banner_text }} <a href="{{ section.settings.b2b_banner_url | default: 'https://tobi.clenlidirect.com' }}" target="_blank" rel="noopener">{{ section.settings.b2b_banner_link_text }}</a></span>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
 
 <div class="header-top-bar">
   <div class="container container-{{ section.settings.container_width }}">
@@ -526,6 +580,13 @@
     { "type": "header", "content": "App Links" },
     { "type": "url", "id": "tobi_url", "label": "TOBi App URL" },
     { "type": "url", "id": "sam_url", "label": "SAM App URL" },
+    { "type": "header", "content": "B2B Banner" },
+    { "type": "checkbox", "id": "show_b2b_banner", "label": "Show B2B banner (company customers only)", "default": true },
+    { "type": "text", "id": "b2b_banner_text", "label": "Banner text", "default": "Our new ordering system has moved —" },
+    { "type": "text", "id": "b2b_banner_link_text", "label": "Link text", "default": "Place orders at tobi.clenlidirect.com" },
+    { "type": "url", "id": "b2b_banner_url", "label": "Link URL" },
+    { "type": "color", "id": "b2b_banner_bg", "label": "Banner background", "default": "#1a5c2a" },
+    { "type": "color", "id": "b2b_banner_text_color", "label": "Banner text color", "default": "#ffffff" },
     { "type": "header", "content": "Contact Information" },
     { "type": "text", "id": "help_text", "label": "Help text", "default": "Need Help?" },
     { "type": "text", "id": "phone_number", "label": "Phone number", "default": "01 811 89 20" },
