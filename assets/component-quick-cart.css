@@ -2,6 +2,39 @@
     padding: 12px 20px 0px 20px;
 }
 
+.halo-cart-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.halo-cart-sidebar .halo-sidebar-wrapper {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.halo-cart-sidebar .halo-sidebar-wrapper cart-coupon-discount {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.halo-cart-sidebar .previewCart-wrapper {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.halo-cart-sidebar .previewCart-wrapper .previewCart {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .previewCartItem{
     position: relative;
     display: flex;
@@ -538,7 +571,6 @@ body.cart-sidebar-show .halo-cart-sidebar{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    height: 100%;
 }
 
 .product-option {
@@ -915,10 +947,10 @@ body:not(.quick_shop_option_3) .previewCartCollection .product-card__button2 {
     }
     
     .previewCart{
-        /*height: calc(100vh - 450px);*/
+        flex: 1;
+        min-height: 0;
         overflow-y: auto;
         overflow-x: hidden;
-        flex-grow: 1;
     }
 
     #popup-tool-gift,
@@ -966,7 +998,8 @@ body:not(.quick_shop_option_3) .previewCartCollection .product-card__button2 {
 
 @media (max-width: 551px){
     .previewCart{
-        /*height: calc(100vh - 550px);*/
+        flex: 1;
+        min-height: 0;
     }
     .halo-cart-sidebar .previewCartItem{
         padding-top: 0;
