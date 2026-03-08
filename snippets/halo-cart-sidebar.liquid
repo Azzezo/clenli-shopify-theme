@@ -1,5 +1,55 @@
 <link rel="stylesheet" href="{{ 'component-quick-cart.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-quick-cart.css' | asset_url | stylesheet_tag }}</noscript>
+<style>
+  #halo-cart-sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #halo-cart-sidebar > .halo-sidebar-wrapper {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    padding-bottom: 0 !important;
+  }
+  #halo-cart-sidebar > .halo-sidebar-wrapper > cart-coupon-discount {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #halo-cart-sidebar .previewCart-wrapper {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+  #halo-cart-sidebar .previewCart {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+  #halo-cart-sidebar .previewCartInfo {
+    flex-shrink: 0 !important;
+    padding-bottom: 20px !important;
+  }
+  #halo-cart-sidebar .previewCartTool {
+    flex-shrink: 0 !important;
+  }
+  #halo-cart-sidebar .previewCartMessage {
+    flex-shrink: 0 !important;
+  }
+  @media (max-width: 551px) {
+    #halo-cart-sidebar .previewCartInfo {
+      padding-bottom: 15px !important;
+    }
+  }
+</style>
 <div class="halo-sidebar halo-sidebar-right halo-cart-sidebar" id="halo-cart-sidebar">
     <button type="button" class="halo-sidebar-close button-effect" data-close-cart-sidebar aria-label="{{ 'general.common.close' | t }}">{% render 'icon-close' %} {{ 'general.common.close' | t }}</button>
     <div class="halo-sidebar-header text-left">
