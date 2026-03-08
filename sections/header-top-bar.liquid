@@ -335,7 +335,7 @@
   }
 </style>
 
-{%- if customer and customer.company and section.settings.show_b2b_banner -%}
+{%- if customer.b2b? and section.settings.show_b2b_banner -%}
   <div class="b2b-banner">
     <div class="container container-{{ section.settings.container_width }}">
       <div class="b2b-banner__inner">
