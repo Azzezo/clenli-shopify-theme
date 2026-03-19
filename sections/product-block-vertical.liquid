@@ -230,19 +230,23 @@
                                 {%- endif -%}
                                     <div class="price-wrapper">
                                     {%- if product.compare_at_price > product.price -%}
+                                        {%- assign compare_incl_vat = product.compare_at_price | times: 1.23 -%}
+                                        {%- assign price_incl_vat = product.price | times: 1.23 -%}
                                         <div class="price-row">
-                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ product.compare_at_price | money }}</span>
-                                            <span class="price-label vat-label-incl">Incl. VAT</span>
+                                            <s class="price-item--vat price-item--vat-incl">{{ compare_incl_vat | money }}</s>
+                                            <s class="price-item--vat price-item--vat-excl">{{ product.compare_at_price | money }}</s>
                                         </div>
                                         <div class="price-row">
+                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ price_incl_vat | money }}</span>
                                             <span class="price-excl price-item--vat price-item--vat-excl">{{ product.price | money }}</span>
+                                            <span class="price-label vat-label-incl">Incl. VAT</span>
                                             <span class="price-label vat-label-excl">Excl. VAT</span>
                                         </div>
                                     {%- elsif product.price > 0 -%}
                                         <div class="price-row">
-                                            {%- assign price_excl_vat = product.price | divided_by: 1.23 -%}
-                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ product.price | money }}</span>
-                                            <span class="price-excl price-item--vat price-item--vat-excl">{{ price_excl_vat | money }}</span>
+                                            {%- assign price_incl_vat = product.price | times: 1.23 -%}
+                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ price_incl_vat | money }}</span>
+                                            <span class="price-excl price-item--vat price-item--vat-excl">{{ product.price | money }}</span>
                                             <span class="price-label vat-label-incl">Incl. VAT</span>
                                             <span class="price-label vat-label-excl">Excl. VAT</span>
                                         </div>
@@ -305,19 +309,23 @@
                                 </div>
                                 <div class="price-wrapper">
                                     {%- if product.compare_at_price > product.price -%}
+                                        {%- assign compare_incl_vat = product.compare_at_price | times: 1.23 -%}
+                                        {%- assign price_incl_vat = product.price | times: 1.23 -%}
                                         <div class="price-row">
-                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ product.compare_at_price | money }}</span>
-                                            <span class="price-label vat-label-incl">Incl. VAT</span>
+                                            <s class="price-item--vat price-item--vat-incl">{{ compare_incl_vat | money }}</s>
+                                            <s class="price-item--vat price-item--vat-excl">{{ product.compare_at_price | money }}</s>
                                         </div>
                                         <div class="price-row">
+                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ price_incl_vat | money }}</span>
                                             <span class="price-excl price-item--vat price-item--vat-excl">{{ product.price | money }}</span>
+                                            <span class="price-label vat-label-incl">Incl. VAT</span>
                                             <span class="price-label vat-label-excl">Excl. VAT</span>
                                         </div>
                                     {%- else -%}
                                         <div class="price-row">
-                                            {%- assign price_excl_vat = product.price | divided_by: 1.23 -%}
-                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ product.price | money }}</span>
-                                            <span class="price-excl price-item--vat price-item--vat-excl">{{ price_excl_vat | money }}</span>
+                                            {%- assign price_incl_vat = product.price | times: 1.23 -%}
+                                            <span class="price-incl price-item--vat price-item--vat-incl">{{ price_incl_vat | money }}</span>
+                                            <span class="price-excl price-item--vat price-item--vat-excl">{{ product.price | money }}</span>
                                             <span class="price-label vat-label-incl">Incl. VAT</span>
                                             <span class="price-label vat-label-excl">Excl. VAT</span>
                                         </div>

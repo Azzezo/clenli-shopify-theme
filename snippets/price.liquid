@@ -40,19 +40,19 @@
         assign money_price = price | money
     endif 
 
-    assign price_excl_vat = price | divided_by: 1.23
+    assign price_incl_vat = price | times: 1.23
     if settings.currency_format_enable
-        assign money_price_excl = price_excl_vat | money_with_currency
+        assign money_price_incl = price_incl_vat | money_with_currency
     else
-        assign money_price_excl = price_excl_vat | money
+        assign money_price_incl = price_incl_vat | money
     endif
 
     if target == product and product.price_varies
         assign money_price = 'products.product.price.from_price_html' | t: price: money_price
-        assign money_price_excl = 'products.product.price.from_price_html' | t: price: money_price_excl
+        assign money_price_incl = 'products.product.price.from_price_html' | t: price: money_price_incl
     endif
 
-    assign compare_at_price_excl = compare_at_price | divided_by: 1.23
+    assign compare_at_price_incl = compare_at_price | times: 1.23
 -%}
 
 <div class="price
@@ -75,8 +75,8 @@
                 </dt>
             {%- endcomment -%}
             <dd class="price__last">
-                <span class="price-item price-item--regular price-item--vat price-item--vat-incl">{{ money_price }}</span>
-                <span class="price-item price-item--regular price-item--vat price-item--vat-excl">{{ money_price_excl }}</span>
+                <span class="price-item price-item--regular price-item--vat price-item--vat-incl">{{ money_price_incl }}</span>
+                <span class="price-item price-item--regular price-item--vat price-item--vat-excl">{{ money_price }}</span>
             </dd>
         </div>
         <div class="price__sale{% if settings.show_saved_price %} show_saved_price{% endif %}">
@@ -87,8 +87,8 @@
             {%- endcomment -%}
             
             <dd class="price__compare" data-compare="{{compare_at_price}}">
-                <s class="price-item price-item--regular price-item--vat price-item--vat-incl">{% if settings.currency_format_enable %}{{ compare_at_price | money_with_currency }}{% else %}{{ compare_at_price | money }}{% endif %}</s>
-                <s class="price-item price-item--regular price-item--vat price-item--vat-excl">{% if settings.currency_format_enable %}{{ compare_at_price_excl | money_with_currency }}{% else %}{{ compare_at_price_excl | money }}{% endif %}</s>
+                <s class="price-item price-item--regular price-item--vat price-item--vat-incl">{% if settings.currency_format_enable %}{{ compare_at_price_incl | money_with_currency }}{% else %}{{ compare_at_price_incl | money }}{% endif %}</s>
+                <s class="price-item price-item--regular price-item--vat price-item--vat-excl">{% if settings.currency_format_enable %}{{ compare_at_price | money_with_currency }}{% else %}{{ compare_at_price | money }}{% endif %}</s>
             </dd>
             {%- comment -%}
                 <dt>
@@ -96,8 +96,8 @@
                 </dt>
             {%- endcomment -%}
             <dd class="price__last{% if settings.show_price_percent %} price_percent{% endif %}" data-last="{{price}}">
-                <span class="price-item price-item--sale price-item--vat price-item--vat-incl">{{ money_price }}</span>
-                <span class="price-item price-item--sale price-item--vat price-item--vat-excl">{{ money_price_excl }}</span>
+                <span class="price-item price-item--sale price-item--vat price-item--vat-incl">{{ money_price_incl }}</span>
+                <span class="price-item price-item--sale price-item--vat price-item--vat-excl">{{ money_price }}</span>
             </dd>
             {%- if settings.show_saved_price and price != nil and price != blank and compare_at_price != nil and compare_at_price != blank -%}
                 {%- assign saved_price = compare_at_price | minus: price | money -%}

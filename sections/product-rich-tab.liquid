@@ -523,11 +523,9 @@
                                                     <div class="custom-card-footer">
                                                         <div class="custom-card-price-row">
                                                             <div class="custom-card-price">
-                                                                <!-- Price with VAT (Incl.) -->
-                                                                <span class="price-current price-incl-vat">{{ product.price | money }}</span>
-                                                                <!-- Price without VAT (Excl.) - 23% VAT for Ireland -->
-                                                                {%- assign price_excl_vat = product.price | divided_by: 1.23 -%}
-                                                                <span class="price-current price-excl-vat">{{ price_excl_vat | money }}</span>
+                                                                {%- assign price_incl_vat = product.price | times: 1.23 -%}
+                                                                <span class="price-current price-incl-vat">{{ price_incl_vat | money }}</span>
+                                                                <span class="price-current price-excl-vat">{{ product.price | money }}</span>
                                                                 <!-- VAT Labels -->
                                                                 <span class="price-vat vat-label-incl">Incl. VAT</span>
                                                                 <span class="price-vat vat-label-excl">Excl. VAT</span>
