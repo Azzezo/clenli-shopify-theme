@@ -330,13 +330,12 @@
   font-weight: 400;
 }
 
-/* Excl. VAT note */
-.product-details .productView-price .price-tax-note,
-.product-details .productView-price::after {
-  content: "Excl. VAT";
+/* VAT note - styled via toggleable labels in price.liquid */
+.product-details .productView-price .vat-label {
   font-size: 14px;
   color: var(--clenli-text);
   font-weight: 400;
+  margin-left: 4px;
 }
 
 /* ============================================
