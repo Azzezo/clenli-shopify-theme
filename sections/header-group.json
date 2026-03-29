@@ -1166,7 +1166,7 @@
           "type": "nav_dropdown",
           "settings": {
             "title": "I-Mop",
-            "link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer"
+            "link": "shopify://pages/i-mop-characteristics"
           }
         },
         "nav_dropdown_dLd8Bj": {
@@ -1187,21 +1187,21 @@
           "type": "nav_dropdown",
           "settings": {
             "title": "Comac",
-            "link": "shopify://pages/comac-floor-scrubber-dryers"
+            "link": "shopify://pages/comac"
           }
         },
         "nav_dropdown_jkRKBg": {
           "type": "nav_dropdown",
           "settings": {
             "title": "Egholm",
-            "link": "shopify://pages/egholm-utility-outdoor-maintenance-machines"
+            "link": "shopify://pages/egholm"
           }
         },
         "nav_dropdown_nKUUbB": {
           "type": "nav_dropdown",
           "settings": {
             "title": "Numatic ERP180",
-            "link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer-1"
+            "link": "shopify://pages/numatic-erp180-sustainable-eco-powerful-hoover-vacuum"
           }
         },
         "nav_item_YdF9ka": {

@@ -27,6 +27,10 @@
 
         {%- if page_description -%}
             <meta name="description" content="{{ page_description | escape }}">
+        {%- elsif request.page_type == 'index' -%}
+            <meta name="description" content="{{ shop.description | default: shop.name | escape }}">
+        {%- elsif request.page_type == 'list-collections' -%}
+            <meta name="description" content="Browse our full range of professional cleaning equipment, machines, and supplies at {{ shop.name }}. From scrubber dryers to window cleaning equipment, find everything you need.">
         {%- endif -%}
         {% render 'meta-tags' %}
         {{ content_for_header }}

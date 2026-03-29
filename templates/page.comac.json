@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/Comac_Antea_d5d3d473-72c7-4127-b13e-538a191ca6da.png",
             "name": "Comac Antea",
             "type": "Walk Behind Scrubber Dryer",
-            "link": "/products/comac-antea"
+            "link": "/products/comac-antea-range"
           }
         },
         "product-2": {
@@ -27,7 +27,7 @@
             "image": "shopify://shop_images/5_910.79_11_020.29_68_529.26_4.png",
             "name": "Comac Versa",
             "type": "Walk Behind Scrubber Dryer",
-            "link": "/products/comac-versa"
+            "link": "/products/comac-versa-range-1"
           }
         },
         "product-3": {
@@ -45,7 +45,7 @@
             "image": "shopify://shop_images/Comac_Innova_55_e2b613af-e5bb-47dc-9363-1bedbbe181db.png",
             "name": "Comac C85",
             "type": "Ride On Scrubber Dryer",
-            "link": "/products/comac-c85"
+            "link": "/products/comac-c85-1"
           }
         }
       },
@@ -66,7 +66,7 @@
         "feature3_title": "Tailored cleaning solutions:",
         "feature3_text": "From expansive warehouses to small offices, our selection of walk-behind and ride-on scrubber dryers ensures there's an option suited to every environment.",
         "hero_btn_text": "Explore Comac Range",
-        "hero_btn_link": "/collections/comac",
+        "hero_btn_link": "/collections/brands-comac",
         "about_title": "About Comac",
         "about_text": "Synonymous with quality, Comac are a leading provider of scrubber dryers worldwide. Robust and hardworking, Comac floor scrubbers make light work of cleaning, and come with some great features including Eco Mode, Stop & Go System, Anti-Bacterial Tanks, and much more. Through our exclusive partnership, Clenli Direct offer a range of Comac scrubber dryers to suit all needs and sizes!",
         "carbon_title": "Carbon Passports",
@@ -98,7 +98,7 @@
         "models_title": "Most Popular Comac Models",
         "models_text": "See our most popular options below or browse our full range to find the perfect scrubber dryer for you!",
         "models_btn_text": "Explore Comac Range",
-        "models_btn_link": "/collections/comac"
+        "models_btn_link": "/collections/brands-comac"
       }
     },
     "featured_product_we_Lrf7aG": {

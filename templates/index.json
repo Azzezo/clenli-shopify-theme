@@ -116,7 +116,7 @@
           "type": "ad_banner",
           "settings": {
             "banner_image": "shopify://shop_images/i-mop_1.webp",
-            "banner_link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer"
+            "banner_link": "shopify://pages/i-mop-characteristics"
           }
         }
       },
@@ -451,7 +451,7 @@
             "enable_des_hover": false,
             "button_style": "button_1",
             "button": "Read More",
-            "link": "shopify://pages/tersone",
+            "link": "shopify://pages/tersano",
             "fontsize_btn": 14,
             "button_width": 135,
             "bg_opacity_button": 1,
@@ -507,7 +507,7 @@
             "enable_des_hover": false,
             "button_style": "button_1",
             "button": "Read More",
-            "link": "shopify://pages/flexible-powerful-i-mop-floor-scrubber-dryer",
+            "link": "shopify://pages/i-mop-characteristics",
             "fontsize_btn": 14,
             "button_width": 160,
             "bg_opacity_button": 1,
