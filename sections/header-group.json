@@ -964,7 +964,7 @@
           "settings": {
             "level": "1",
             "title": "Carpet Cleaning",
-            "link": "shopify://collections/carpet-cleaning-1",
+            "link": "shopify://collections/carpet-cleaning",
             "submenu_style": "simple"
           }
         },
