@@ -19,13 +19,27 @@
     <div class="mobile-drawer-content">
       <div class="mobile-section">
         <h3 class="mobile-section-title">{{ section.settings.button_text | default: 'Categories' }}</h3>
-        <ul class="mobile-menu-list" id="mobile-menu-{{ section.id }}"></ul>
+        <ul class="mobile-menu-list" id="mobile-menu-{{ section.id }}">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'menu_item' and block.settings.link != blank -%}
+              <li class="mobile-item"><div class="mobile-item-wrap"><a href="{{ block.settings.link }}" class="mobile-link">{{ block.settings.title }}</a></div></li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
       </div>
 
       {%- if section.settings.show_main_nav -%}
         <div class="mobile-section">
           <h3 class="mobile-section-title">{{ section.settings.nav_mobile_title | default: 'Menu' }}</h3>
-          <ul class="mobile-menu-list" id="mobile-nav-{{ section.id }}"></ul>
+          <ul class="mobile-menu-list" id="mobile-nav-{{ section.id }}">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'nav_item' or block.type == 'nav_dropdown' -%}
+                {%- if block.settings.link != blank -%}
+                  <li class="mobile-item"><div class="mobile-item-wrap"><a href="{{ block.settings.link }}" class="mobile-link">{{ block.settings.title }}</a></div></li>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
         </div>
       {%- endif -%}
     </div>
@@ -45,12 +59,26 @@
       </div>
 
       <div class="categories-dropdown">
-        <div class="categories-menu-left" id="desktop-menu-{{ section.id }}"></div>
+        <div class="categories-menu-left" id="desktop-menu-{{ section.id }}">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'menu_item' and block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="ssr-link">{{ block.settings.title }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
       </div>
     </div>
 
     {%- if section.settings.show_main_nav -%}
-      <nav class="main-nav-horizontal" id="main-nav-{{ section.id }}"></nav>
+      <nav class="main-nav-horizontal" id="main-nav-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'nav_item' or block.type == 'nav_dropdown' -%}
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="ssr-link">{{ block.settings.title }}</a>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </nav>
     {%- endif -%}
   </div>
 </div>
@@ -93,6 +121,13 @@
 </script>
 
 <style>
+.section-{{ section.id }} .ssr-link {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 13px;
+  color: {{ section.settings.menu_text | default: '#333' }};
+  text-decoration: none;
+}
 .section-{{ section.id }} {
   --button-bg: {{ section.settings.button_bg }};
   --button-color: {{ section.settings.button_color }};
@@ -1124,7 +1159,7 @@
         { "type": "nav_dropdown", "settings": { "title": "Residential Cleaning", "link": "/pages/residential" } },
         { "type": "nav_dropdown", "settings": { "title": "Industrial Cleaning", "link": "/pages/industrial" } },
         { "type": "nav_item", "settings": { "title": "Blog", "link": "/blogs/news" } },
-        { "type": "nav_item", "settings": { "title": "Contact Us", "link": "/pages/contact" } }
+        { "type": "nav_item", "settings": { "title": "Contact Us", "link": "/pages/contact-us" } }
       ]
     }
   ]

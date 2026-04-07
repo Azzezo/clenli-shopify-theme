@@ -864,7 +864,7 @@
       "name": "Two Images",
       "settings": {
         "image_1": "shopify://shop_images/tersano-bottom-banner_1.jpg",
-        "link_1": "shopify://collections/cleaning-products-tersano",
+        "link_1": "shopify://pages/tersano",
         "image_2": "shopify://shop_images/prochem-bottom-banner.jpg",
         "link_2": "shopify://collections/prochem",
         "image_height": 200,
@@ -989,6 +989,196 @@
         "padding_x": 15
       }
     },
+    "seo_links_categories": {
+      "type": "seo-internal-links",
+      "blocks": {
+        "link_scrubbers": {
+          "type": "link",
+          "settings": {
+            "title": "Scrubber Dryers",
+            "link": "shopify://collections/machines-scrubber-dryers"
+          }
+        },
+        "link_carpet": {
+          "type": "link",
+          "settings": {
+            "title": "Carpet Cleaning Machines",
+            "link": "shopify://collections/machines-carpet-cleaning-machines"
+          }
+        },
+        "link_hoovers": {
+          "type": "link",
+          "settings": {
+            "title": "Hoovers & Vacuums",
+            "link": "shopify://collections/machines-hoovers-and-vacuums"
+          }
+        },
+        "link_sweepers": {
+          "type": "link",
+          "settings": {
+            "title": "Road Sweepers",
+            "link": "shopify://collections/machines-sweepers-road-sweepers"
+          }
+        },
+        "link_steam": {
+          "type": "link",
+          "settings": {
+            "title": "Steam Cleaners",
+            "link": "shopify://collections/machines-steam-cleaners"
+          }
+        },
+        "link_rotary": {
+          "type": "link",
+          "settings": {
+            "title": "Rotary Cleaning Machines",
+            "link": "shopify://collections/machines-rotary-cleaning-machines"
+          }
+        },
+        "link_escalator": {
+          "type": "link",
+          "settings": {
+            "title": "Escalator Cleaners",
+            "link": "shopify://collections/machines-escalator"
+          }
+        },
+        "link_floor_care": {
+          "type": "link",
+          "settings": {
+            "title": "Floor Care",
+            "link": "shopify://collections/floor-care"
+          }
+        },
+        "link_litter": {
+          "type": "link",
+          "settings": {
+            "title": "Litter Pickers",
+            "link": "shopify://collections/cleaning-equipment-litter-pickers"
+          }
+        },
+        "link_machine_hire": {
+          "type": "link",
+          "settings": {
+            "title": "Machine Hire",
+            "link": "shopify://pages/machine-hire"
+          }
+        },
+        "link_numatic": {
+          "type": "link",
+          "settings": {
+            "title": "Numatic",
+            "link": "shopify://collections/brands-numatic"
+          }
+        },
+        "link_window": {
+          "type": "link",
+          "settings": {
+            "title": "Window Cleaning Equipment",
+            "link": "shopify://collections/cleaning-equipment-window-cleaning-equipment"
+          }
+        }
+      },
+      "block_order": [
+        "link_scrubbers",
+        "link_carpet",
+        "link_hoovers",
+        "link_sweepers",
+        "link_steam",
+        "link_rotary",
+        "link_escalator",
+        "link_floor_care",
+        "link_litter",
+        "link_machine_hire",
+        "link_numatic",
+        "link_window"
+      ],
+      "settings": {
+        "heading": "Popular Categories",
+        "container_width": "1570",
+        "bg_color": "#f9f9f9",
+        "hover_color": "#6fb31a",
+        "padding_top": 40,
+        "padding_bottom": 15
+      }
+    },
+    "seo_links_guides": {
+      "type": "seo-internal-links",
+      "blocks": {
+        "guide_scrubbers": {
+          "type": "link",
+          "settings": {
+            "title": "Best Scrubber Dryers Ireland",
+            "link": "shopify://pages/best-scrubber-dryers-ireland"
+          }
+        },
+        "guide_carpet": {
+          "type": "link",
+          "settings": {
+            "title": "Best Carpet Cleaning Machines",
+            "link": "shopify://pages/best-carpet-upholstery-cleaning-machines-ireland"
+          }
+        },
+        "guide_hoovers": {
+          "type": "link",
+          "settings": {
+            "title": "Best Hoovers & Vacuums",
+            "link": "shopify://pages/best-hoovers-vacuums-ireland"
+          }
+        },
+        "guide_sweepers": {
+          "type": "link",
+          "settings": {
+            "title": "Road Sweepers Ireland",
+            "link": "shopify://pages/street-road-sweepers-ireland"
+          }
+        },
+        "guide_robotics": {
+          "type": "link",
+          "settings": {
+            "title": "Robotic Cleaning Solutions",
+            "link": "shopify://pages/best-robotic-cleaning-solutions-ireland"
+          }
+        },
+        "guide_comac": {
+          "type": "link",
+          "settings": {
+            "title": "Comac Floor Scrubber Dryers",
+            "link": "shopify://pages/comac"
+          }
+        },
+        "guide_egholm": {
+          "type": "link",
+          "settings": {
+            "title": "Egholm Outdoor Machines",
+            "link": "shopify://pages/egholm"
+          }
+        },
+        "guide_imop": {
+          "type": "link",
+          "settings": {
+            "title": "i-Mop Scrubber Dryer",
+            "link": "shopify://pages/i-mop-characteristics"
+          }
+        }
+      },
+      "block_order": [
+        "guide_scrubbers",
+        "guide_carpet",
+        "guide_hoovers",
+        "guide_sweepers",
+        "guide_robotics",
+        "guide_comac",
+        "guide_egholm",
+        "guide_imop"
+      ],
+      "settings": {
+        "heading": "Buyer's Guides",
+        "container_width": "1570",
+        "bg_color": "#f9f9f9",
+        "hover_color": "#6fb31a",
+        "padding_top": 15,
+        "padding_bottom": 40
+      }
+    },
     "newsletter_apDUBm": {
       "type": "newsletter",
       "blocks": {
@@ -1094,6 +1284,8 @@
     "cleaning-products",
     "tow_banner_image_3BxHz4",
     "product_block_vertical_fxFxYn",
+    "seo_links_categories",
+    "seo_links_guides",
     "newsletter_apDUBm"
   ]
 }
