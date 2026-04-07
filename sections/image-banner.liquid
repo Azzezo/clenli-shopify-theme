@@ -624,7 +624,7 @@
                                                 {%- if image_custom != blank -%}
                                                     <a class="image image-custom image-adapt{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--fade-in{% endif %}"{% if link == blank %} role="link" aria-disabled="true"{% else %} href="{{ link }}"{% endif %} style="padding-top: {% unless image_custom.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: image_custom.aspect_ratio | times: 200 | append: '%' }}{% else %}{{ 1 | divided_by: image_custom.aspect_ratio | times: 100 | append: '%' }}{% endunless %}" title="{{ image.alt | default: shop.name | escape }}">
                                                     {%- assign preview_img = block.settings.image_custom -%}
-                                                    <img width="100%" height="100%" {% render 'lazyload',preview_img: preview_img %} />
+                                                    <img alt="Clenli Direct" width="100%" height="100%" {% render 'lazyload',preview_img: preview_img %} />
                                                     {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
                                                     </a>
                                                 {%- else -%}
@@ -706,7 +706,7 @@
                                                             {%- if block.settings.image_sub_title != blank -%}
                                                                 <div class="sub-title-icon" style="--mg-bottom-icon-style: {{ block.settings.mg_bottom_icon | append: 'px' }};">
                                                                     {%- assign preview_img = block.settings.image_sub_title -%}
-                                                                    <img {% render 'lazyload',preview_img: preview_img  %} />
+                                                                    <img alt="Clenli Direct" {% render 'lazyload',preview_img: preview_img  %} />
                                                                     {%- if settings.enable_lazyload -%}<span class="data-lazy-loading"></span>{%- endif -%}
                                                                 </div>
                                                             {%- endif -%}

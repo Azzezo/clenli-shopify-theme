@@ -41,7 +41,7 @@
                                 {% if block.settings.image != blank %}
                                     {%- assign preview_img = block.settings.image -%}
                                     <a {% if block.settings.url == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.url }}"{% endif %} class="image-zoom adaptive_height" style="padding-top: {% unless preview_img.presentation.focal_point == '50.0% 50.0%' %}{{ 1 | divided_by: preview_img.aspect_ratio | times: 120 | append: '%' }}{% else %}{{ 1 | divided_by: preview_img.aspect_ratio | times: 100 | append: '%' }}{% endunless %}">
-                                        <img {% render 'lazyload',preview_img: preview_img %}{% unless preview_img.presentation.focal_point == '50.0% 50.0%' %} style="object-position: {{ preview_img.presentation.focal_point }}"{% endunless %} />
+                                        <img alt="Clenli Direct" {% render 'lazyload',preview_img: preview_img %}{% unless preview_img.presentation.focal_point == '50.0% 50.0%' %} style="object-position: {{ preview_img.presentation.focal_point }}"{% endunless %} />
                                         {% if settings.enable_lazyload %}<span class="data-lazy-loading"></span>{% endif %}
                                     </a>
                                 {% else %}
