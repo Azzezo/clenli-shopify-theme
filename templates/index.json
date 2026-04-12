@@ -638,7 +638,7 @@
           "type": "tab",
           "settings": {
             "tab_title": "Hoovers and Vacuums",
-            "collection": "machines-hoovers-and-vacuums",
+            "collection": "industrial-commercial-hoover-vacuum-cleaners",
             "show_badge": false
           }
         },
@@ -1010,7 +1010,7 @@
           "type": "link",
           "settings": {
             "title": "Hoovers & Vacuums",
-            "link": "shopify://collections/machines-hoovers-and-vacuums"
+            "link": "shopify://collections/industrial-commercial-hoover-vacuum-cleaners"
           }
         },
         "link_sweepers": {
