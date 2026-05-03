@@ -13,6 +13,7 @@
 {% endcomment %}
 
 {%- liquid
+    assign card_heading_tag = heading_tag
     assign product_swatch_option = settings.swatch | downcase
     assign isColor = false
     assign variant_img = ''
@@ -201,14 +202,14 @@
                     </div>
                 {%- endif -%}
                
-                <a class="card-title link-underline{% if settings.product_title_line_text != 'full' %} card-title-ellipsis{% endif %}{% if variant_selected != blank %} card-title-change{% endif %}" href="{{ product_card_product.url }}" data-product-title="{{ product_card_product.title | escape }}" data-product-url="{{ product_card_product.url }}">
+                {%- if card_heading_tag != blank -%}<{{ card_heading_tag }} class="card__heading">{%- endif -%}<a class="card-title link-underline{% if settings.product_title_line_text != 'full' %} card-title-ellipsis{% endif %}{% if variant_selected != blank %} card-title-change{% endif %}" href="{{ product_card_product.url }}" data-product-title="{{ product_card_product.title | escape }}" data-product-url="{{ product_card_product.url }}">
                     <span class="text">
                         {{ product_card_product.title | escape }}
                         {% if variant_selected != blank %}
                             <span data-change-title> {% if settings.style_text_color_varriant == '01' %}-{% endif %} {{ variant_selected }}</span>
                         {% endif %}
                     </span>
-                </a>
+                </a>{%- if card_heading_tag != blank -%}</{{ card_heading_tag }}>{%- endif -%}
 
                 {% render 'product-card-summary',
                     product: product_card_product,
