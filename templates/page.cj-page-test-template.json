@@ -833,7 +833,7 @@
         "button_bg": "#6fb31a",
         "button_hover_bg": "#5a9216",
         "button_color": "#ffffff",
-        "padding_top": 60,
+        "padding_top": 0,
         "padding_bottom": 60
       }
     },
@@ -1016,9 +1016,9 @@
       ],
       "name": "Content Image Slider",
       "settings": {
-        "label": "SENSOR RANGE",
-        "heading": "All-Seeing Cleaner",
-        "description": "<p>Complete vision of all. Great range of sensors. Blah blah blah. Make this longer. 2D and 3D Lidar</p>",
+        "label": "SENSORS",
+        "heading": "Smarter Cleaning",
+        "description": "<p>Packed with advanced sensors and AI-powered technology designed to navigate safely, avoid obstacles, and clean with precision. From 3D LiDAR and depth cameras to ultrasonic sensors, every sensor works together to deliver reliable autonomous cleaning with minimal intervention.</p>",
         "feature_1": "4 Sonar Sensors",
         "feature_2": "3 RGB Cameras",
         "feature_3": "2 Depth Cameras",
