@@ -38,7 +38,7 @@
             "sub_title_position": "sub_title_above",
             "color_sub_title": "#232323",
             "color_sub_title_mb": "#ffffff",
-            "heading": "R5",
+            "heading": "LionsBot R5",
             "special_text": "",
             "letter_spacing_heading": "",
             "enable_style_italic": false,
@@ -51,8 +51,8 @@
             "border_title": "border_s1",
             "border_color_title": "#6fb31a",
             "border_color_title_mobile": "#ffffff",
-            "text": "Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an tincidunt risus an consequat delit quisquemos.",
-            "font_size_des": 12,
+            "text": "<b>AI-Native\nAutonomous\nScrubber Dryer</b>",
+            "font_size_des": 16,
             "font_size_des_mb": 12,
             "line_height_des": 26,
             "margin_bottom_des": 35,
@@ -74,8 +74,8 @@
             "position": "left",
             "custom_horizontal": "",
             "custom_vertical": "",
-            "btn_text": "LEARN MORE",
-            "link": "",
+            "btn_text": "REQUEST QUOTE",
+            "link": "https://clenlidirect.com/products/lionsbot-r5",
             "btn_icon": "",
             "button_1_width": 235,
             "enable_button_custom_border": false,
@@ -113,6 +113,197 @@
       },
       "block_order": [
         "large_img_CU89eE"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "id_section": "",
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "display_type": "slide",
+        "enable_arrows": false,
+        "arrows_position": "",
+        "enable_dots": false,
+        "enable_autoplay": false,
+        "list_gap": 0,
+        "image_banner_title": "",
+        "enable_border_title": false,
+        "color_title": "#202020",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 25,
+        "image_banner_des": "",
+        "color_des": "#202020",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "style_bg": "none",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "video_block_WVxrUj": {
+      "type": "video-block",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "container": "container",
+        "spotlight_bg": "#fff",
+        "spotlight_bg_gradient": "",
+        "video_block_title": "Engineered to Outperform",
+        "color_title": "#6fb31a",
+        "fontsize_title": 22,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 10,
+        "video_block_des": "<b>The professional cleaning robot designed to navigate the most complex environments with true 360° turn-in-place mobility — no dead-ends, no reversing, no intervention.</b>",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "autoplay": false,
+        "video_sound": false,
+        "video_height": "54",
+        "video_height_mb": "100",
+        "style_video": "youtube",
+        "video_url": "https://www.youtube.com/watch?v=4fylYilNaYk",
+        "video_url_mb": "https://www.youtube.com/watch?v=4fylYilNaYk",
+        "url_mp4": "",
+        "url_mp4_mb": "",
+        "description": "",
+        "full_width": false,
+        "position_icon": "center",
+        "heading": "",
+        "font_size_heading": 40,
+        "font_size_heading_mb": 24,
+        "margin_bottom_heading": 20,
+        "color_heading": "#232323",
+        "text": "",
+        "font_size_des": 12,
+        "font_size_des_mb": 12,
+        "margin_bottom_des": 35,
+        "color_des_content": "#232323",
+        "content_width": 475,
+        "align": "center",
+        "position": "left",
+        "btn_text": "",
+        "link": "",
+        "button_width": 235,
+        "button_color": "#fff",
+        "button_border": "#232323",
+        "button_background": "#232323",
+        "button_background_gradient": "",
+        "button_color_hover": "#fff",
+        "button_border_hover": "#232323",
+        "button_background_hover": "#232323",
+        "button_background_gradient_hover": "",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "image_banner_DyjedE": {
+      "type": "image-banner",
+      "blocks": {
+        "large_img_Vdbim7": {
+          "type": "largeImg",
+          "settings": {
+            "image": "shopify://shop_images/R5_wide_shot_edited.jpg",
+            "enable_max_width_image": false,
+            "custom_width_image": 1170,
+            "border_radius": 0,
+            "enable_scroll_down": false,
+            "enable_custom_image": false,
+            "image_behavior": "none",
+            "sub_title": "",
+            "border_sub_title": false,
+            "font_size_sub_title": 14,
+            "font_size_sub_title_mb": 14,
+            "margin_bottom_sub_title": 14,
+            "sub_heading_font": "font_1",
+            "font_weight_sub_title": "700",
+            "sub_title_position": "sub_title_above",
+            "color_sub_title": "#232323",
+            "color_sub_title_mb": "#ffffff",
+            "heading": "",
+            "special_text": "",
+            "letter_spacing_heading": "",
+            "enable_style_italic": false,
+            "font_size_heading": 40,
+            "font_size_heading_mb": 24,
+            "margin_bottom_heading": 20,
+            "font_weight_heading": "700",
+            "color_heading": "#ffffff",
+            "color_heading_mb": "#ffffff",
+            "border_title": "border_s1",
+            "border_color_title": "#6fb31a",
+            "border_color_title_mobile": "#ffffff",
+            "text": "",
+            "font_size_des": 16,
+            "font_size_des_mb": 12,
+            "line_height_des": 26,
+            "margin_bottom_des": 35,
+            "color_des": "#ffffff",
+            "color_des_mb": "#ffffff",
+            "countdown": "",
+            "hide_countdown_fc": "countdown",
+            "countdown_style": "round",
+            "countdown_position": "countdown_below_desc",
+            "font_size_countdown_number": 30,
+            "font_size_countdown_text": 14,
+            "color_countdown": "#232323",
+            "color_countdown_mb": "#ffffff",
+            "countdown_margin_bottom": 35,
+            "content_width": 475,
+            "bg_color_content": "",
+            "align": "center",
+            "align_items": "center",
+            "position": "left",
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "btn_text": "",
+            "link": "",
+            "btn_icon": "",
+            "button_1_width": 235,
+            "enable_button_custom_border": false,
+            "button_color": "#ffffff",
+            "button_border": "#6fb31a",
+            "button_background": "#6fb31a",
+            "button_background_gradient": "",
+            "button_color_hover": "#ffffff",
+            "button_border_hover": "#6c6366",
+            "button_background_hover": "#6c6366",
+            "button_background_gradient_hover": "",
+            "btn_text_2": "",
+            "link_2": "",
+            "btn_icon_2": "",
+            "button_color_2": "#ffffff",
+            "button_border_2": "#232323",
+            "button_background_2": "#232323",
+            "button_background_2_gradient": "",
+            "button_color_hover_2": "#ffffff",
+            "button_border_hover_2": "#232323",
+            "button_background_hover_2": "#232323",
+            "button_background_gradient_hover_2": "",
+            "video_link": "",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "large_img_Vdbim7"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -458,281 +649,65 @@
         "padding_bottom_mobile": 40
       }
     },
-    "service_machine_2_XbYwzy": {
-      "type": "service-machine-2",
-      "blocks": {
-        "service_item_HTmw6j": {
-          "type": "service_item",
-          "settings": {
-            "item_text": "Nationwide Engineer Coverage"
-          }
-        },
-        "service_item_Pzt3wj": {
-          "type": "service_item",
-          "settings": {
-            "item_text": "26,752 Cleaning Equipment Under Care"
-          }
-        },
-        "service_item_C6mAx4": {
-          "type": "service_item",
-          "settings": {
-            "item_text": "€500,000 Worth of Spare Parts in Stock"
-          }
-        },
-        "service_item_8q6byP": {
-          "type": "service_item",
-          "settings": {
-            "item_text": "Asset Management Software"
-          }
-        },
-        "service_item_qjTb7W": {
-          "type": "service_item",
-          "settings": {
-            "item_text": "Job Scheduling Optimisation"
-          }
-        },
-        "service_item_Xdz8A3": {
-          "type": "service_item",
-          "settings": {
-            "item_text": "PAT Testing"
-          }
-        },
-        "coverage_feature_E79nLy": {
-          "type": "coverage_feature",
-          "settings": {
-            "feature_title": "Service Fleet",
-            "feature_description": "Our Engineers can have access to all of Ireland no matter how remote. Thanks to our engineer and distribution network we can offer our exceptional service nationwide.",
-            "feature_icon": "truck"
-          }
-        },
-        "coverage_feature_G3pKaV": {
-          "type": "coverage_feature",
-          "settings": {
-            "feature_title": "Job Scheduling Optimisation",
-            "feature_description": "Our service jobs are scheduled for maximum efficiency to prevent delays. Jobs can be tracked through our software SAM.",
-            "feature_icon": "calendar"
-          }
-        },
-        "coverage_feature_pnYdFU": {
-          "type": "coverage_feature",
-          "settings": {
-            "feature_title": "Fully Stocked Vans",
-            "feature_description": "Our service engineer's vans are fully stocked to fix problems on first-time call-outs. This allows them to fix problems on the spot without long lead times.",
-            "feature_icon": "tools"
-          }
-        },
-        "feature_box_Virkf7": {
-          "type": "feature_box",
-          "settings": {
-            "box_title": "Emergency Call Outs",
-            "box_description": "At Clenli Direct we understand how important cleaning machines are and how smooth operation is essential. That is why we have a reactive service team for emergency call outs to fix issues fast.",
-            "box_icon": "phone"
-          }
-        },
-        "feature_box_EzWNkg": {
-          "type": "feature_box",
-          "settings": {
-            "box_title": "Instant Call Logging",
-            "box_description": "Using SAM, service jobs can be logged and assigned to an engineer. Within minutes, you'll have a service call logged and an engineer assigned with a date of arrival.",
-            "box_icon": "clipboard"
-          }
-        },
-        "feature_box_gyXMKz": {
-          "type": "feature_box",
-          "settings": {
-            "box_title": "Portable Appliance Testing",
-            "box_description": "Our Service Team can PAT test any machine on sites with a pass/fail. If the appliance happens to fail, our engineers can fix the appliance on-site until it passes.",
-            "box_icon": "bolt"
-          }
-        },
-        "feature_box_GGmkta": {
-          "type": "feature_box",
-          "settings": {
-            "box_title": "Service Reporting",
-            "box_description": "Transparency and analytics are extremely important in managing a fleet of machinery. That's why we have detailed & custom reports for our clients and their cleaning machine fleet.",
-            "box_icon": "chart"
-          }
-        },
-        "sam_feature_b4f4Fy": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "Asset Management System",
-            "feature_column": "left"
-          }
-        },
-        "sam_feature_RwGFkW": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "Prevents Cash leakage",
-            "feature_column": "left"
-          }
-        },
-        "sam_feature_Dd3ar9": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "View Service History",
-            "feature_column": "left"
-          }
-        },
-        "sam_feature_nAAGmC": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "Detailed Reports",
-            "feature_column": "left"
-          }
-        },
-        "sam_feature_MFV6F4": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "Track Equipment by Location",
-            "feature_column": "right"
-          }
-        },
-        "sam_feature_FR4gEx": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "Easily Log Service Calls",
-            "feature_column": "right"
-          }
-        },
-        "sam_feature_KRT4wJ": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "PAT Testing Management",
-            "feature_column": "right"
-          }
-        },
-        "sam_feature_jmGHtj": {
-          "type": "sam_feature",
-          "settings": {
-            "sam_feature_text": "Traffic Light System",
-            "feature_column": "right"
-          }
-        }
-      },
-      "block_order": [
-        "service_item_HTmw6j",
-        "service_item_Pzt3wj",
-        "service_item_C6mAx4",
-        "service_item_8q6byP",
-        "service_item_qjTb7W",
-        "service_item_Xdz8A3",
-        "coverage_feature_E79nLy",
-        "coverage_feature_G3pKaV",
-        "coverage_feature_pnYdFU",
-        "feature_box_Virkf7",
-        "feature_box_EzWNkg",
-        "feature_box_gyXMKz",
-        "feature_box_GGmkta",
-        "sam_feature_b4f4Fy",
-        "sam_feature_RwGFkW",
-        "sam_feature_Dd3ar9",
-        "sam_feature_nAAGmC",
-        "sam_feature_MFV6F4",
-        "sam_feature_FR4gEx",
-        "sam_feature_KRT4wJ",
-        "sam_feature_jmGHtj"
-      ],
-      "name": "Service & Maintenance",
-      "settings": {
-        "primary_color": "#6fb31a",
-        "hero_image": "shopify://shop_images/service-fleet-new.jpg",
-        "hero_title": "Service & Maintenance",
-        "hero_description": "Our Service team protects and maintains cleaning machines and equipment to ensure longevity and optimal performance.",
-        "info_box_image": "shopify://shop_images/servicing-outdoor-sweeper_66219433-5174-4c1e-ba51-7ad98c715856.jpg",
-        "info_box_title": "Service Overview",
-        "about_title": "About Service",
-        "about_content": "<p>Clenli Direct has a fully qualified service and maintenance team with over 20 years of industry experience. We provide our clients with a 24-hour emergency response service to ensure that you can contact someone in case of emergency any time, day or night.</p><p>At Clenli Direct we are acutely aware of the importance of after-sales service and you will find us to be very client-focused. Our commitment to our customers has served us well, as is evident from our very loyal customer base. We will be there when you need us, and if required we can even provide you with replacement machinery.</p>",
-        "coverage_title": "Nationwide Engineer Coverage",
-        "coverage_map": "shopify://shop_images/Service-ireland-coverage.webp",
-        "show_sam_section": true,
-        "sam_section_title": "Service & Maintenance Software",
-        "sam_image": "shopify://shop_images/engineer-using-sam-tablet.webp",
-        "sam_logo": "shopify://shop_images/sam-logo.webp",
-        "sam_title": "About SAM",
-        "sam_description": "SAM is Clenli Direct's in-house custom-built service management software. SAM manages our service fleet, optimises job scheduling & provides detailed analytics to our customers.",
-        "show_contact_form": true,
-        "contact_title": "Get In Touch With Our Service Team",
-        "form_button_text": "Submit",
-        "form_success_message": "Thank you for your message. We will get back to you soon!",
-        "show_products": false,
-        "product_collection": "brands-comac",
-        "products_limit": 4
-      }
-    },
-    "collapsible_content_j4pqKN": {
-      "type": "collapsible-content",
-      "blocks": {
-        "content_MhxgVU": {
-          "type": "content",
-          "settings": {
-            "heading": "Collapsible Row",
-            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
-            "page": ""
-          }
-        },
-        "content_qyjczp": {
-          "type": "content",
-          "settings": {
-            "heading": "Collapsible Row",
-            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_MhxgVU",
-        "content_qyjczp"
-      ],
-      "name": "t:sections.collapsible_content.settings.collapsible_row",
-      "settings": {
-        "id_section": "",
-        "container": "container",
-        "padding_full_width": 0,
-        "collapsible_bg": "#ffffff",
-        "collapsible_bg_gradient": "",
-        "collapsible_title": "",
-        "color_title": "#232323",
-        "fontsize_title": 16,
-        "fontsize_title_mb": 16,
-        "collapsible_des": "",
-        "color_des": "#3c3c3c",
-        "fontsize_des": 16,
-        "fontsize_des_mb": 12,
-        "max_width_des": 700,
-        "title_align": "center",
-        "enable_image_right": true,
-        "bg_content_color": "#ffffff",
-        "content_color": "#232323",
-        "title_color": "#232323",
-        "icon_color": "#232323",
-        "border_color": "#232323",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
-      }
-    },
     "sachet_system_benehit_RMCekP": {
       "type": "sachet-system-benehit",
       "blocks": {
         "card_zBexjn": {
           "type": "card",
           "settings": {
+            "title": "Never Gets Stuck",
+            "text": "True 360° turn-in-place mobility means the R5 navigates dead-ends, tight corners, and complex layouts without ever reversing or getting stuck."
+          }
+        },
+        "card_KAwyj3": {
+          "type": "card",
+          "settings": {
+            "title": "Pro Power",
+            "text": "Everything your walk-behind scrubber does — same cleaning power, same footprint — with industrial 34 g/cm² brush pressure and a Gap-Free Tri-Brush system that leaves no strip unclean."
+          }
+        }
+      },
+      "block_order": [
+        "card_zBexjn",
+        "card_KAwyj3"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "Engineered to Outperform",
+        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 2,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#6fb31a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "sachet_system_benehit_cnnH3V": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_rzBhEe": {
+          "type": "card",
+          "settings": {
             "title": "Recyclable Packaging",
             "text": "All packaging is recyclable, and the pouches are also compostable."
           }
         },
-        "card_AH9nHL": {
+        "card_x73h9V": {
           "type": "card",
           "settings": {
             "title": "No Single Use Plastic",
             "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%. XXXXX"
           }
         },
-        "card_KAwyj3": {
+        "card_hKKeRw": {
           "type": "card",
           "settings": {
             "title": "Less Deliveries Needed",
@@ -741,16 +716,16 @@
         }
       },
       "block_order": [
-        "card_zBexjn",
-        "card_AH9nHL",
-        "card_KAwyj3"
+        "card_rzBhEe",
+        "card_x73h9V",
+        "card_hKKeRw"
       ],
       "name": "Benefits Cards",
       "settings": {
         "heading": "PVA Sustainable Benefits",
         "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
-        "bottom_heading": "PVA Safety Benefits",
-        "bottom_text": "PVA Hygiene sachets allow businesses to reduce and eliminate risks associated with the use of cleaning chemicals. With PVA sachets, you significantly reduce your exposure to chemicals, spills and the chance of manual handling injuries.",
+        "bottom_heading": "",
+        "bottom_text": "",
         "columns": 3,
         "card_gap": 30,
         "heading_size": 32,
@@ -928,6 +903,356 @@
         "mg_bottom_mobile": 55
       }
     },
+    "image_2_bwHMcD": {
+      "type": "image-2",
+      "name": "Alternating Content",
+      "settings": {
+        "row1_image_alt": "Image 1",
+        "row1_heading": "Row 1 Heading",
+        "row1_description": "<p>Add your description text here for row 1.</p>",
+        "row1_button_text": "",
+        "row1_button_link": "",
+        "row2_image_alt": "Image 2",
+        "row2_heading": "Row 2 Heading",
+        "row2_description": "<p>Add your description text here for row 2.</p>",
+        "row2_button_text": "Learn More",
+        "row2_button_link": "",
+        "underline_color": "#6fb31a",
+        "underline_height": 3,
+        "heading_color": "#232323",
+        "heading_size": 28,
+        "desc_color": "#555555",
+        "desc_size": 16,
+        "button_bg_color": "#6fb31a",
+        "button_text_color": "#ffffff",
+        "button_hover_color": "#5a9216",
+        "image_width": 50,
+        "image_radius": 0,
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "content_gap": 50,
+        "row_spacing": 50,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "sachet_system_1_xY9Ged": {
+      "type": "sachet-system-1",
+      "blocks": {
+        "row_wHiLcd": {
+          "type": "row",
+          "settings": {
+            "label": "OUR SERVICES",
+            "heading": "Professional Cleaning Equipment",
+            "text": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "row_XmTKGF": {
+          "type": "row",
+          "settings": {
+            "label": "WHY CHOOSE US",
+            "heading": "Expert Support & Training",
+            "text": "<p>Our dedicated team provides comprehensive training and ongoing support.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "row_MUmKzz": {
+          "type": "row",
+          "settings": {
+            "label": "SUSTAINABILITY",
+            "heading": "Eco-Friendly Solutions",
+            "text": "<p>We're committed to sustainability with our range of environmentally friendly products.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_wHiLcd",
+        "row_XmTKGF",
+        "row_MUmKzz"
+      ],
+      "name": "Alternating Content",
+      "settings": {
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "underline_color": "#6fb31a",
+        "underline_height": 3,
+        "underline_spacing": 50,
+        "hide_last_underline": true,
+        "bg_color": "#ffffff",
+        "accent_color": "#6fb31a",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "lookbook_with_collection_fDfhGW": {
+      "type": "lookbook-with-collection",
+      "blocks": {
+        "lookbook_image_tBp9GG": {
+          "type": "lookbook_image",
+          "settings": {
+            "lookbook_image_action": "popup_image",
+            "lookbook_image_link": "",
+            "product_1": "",
+            "horizontal_pos_1": 0,
+            "vertical_pos_1": 0,
+            "lookbook_pos_1": "right",
+            "product_2": "",
+            "horizontal_pos_2": 0,
+            "vertical_pos_2": 0,
+            "lookbook_pos_2": "right",
+            "product_3": "",
+            "horizontal_pos_3": 0,
+            "vertical_pos_3": 0,
+            "lookbook_pos_3": "right",
+            "product_4": "",
+            "horizontal_pos_4": 0,
+            "vertical_pos_4": 0,
+            "lookbook_pos_4": "right",
+            "link_text": "",
+            "link": "",
+            "link_underline": true,
+            "link_color": "#3c3c3c",
+            "link_color_hover": "#2a6876",
+            "link_margin_top": 18,
+            "link_fs": 16,
+            "link_fs_mb": 12,
+            "text_align": "left",
+            "link_width": 335
+          }
+        },
+        "lookbook_image_6EEMcz": {
+          "type": "lookbook_image",
+          "settings": {
+            "lookbook_image_action": "popup_image",
+            "lookbook_image_link": "",
+            "product_1": "",
+            "horizontal_pos_1": 0,
+            "vertical_pos_1": 0,
+            "lookbook_pos_1": "right",
+            "product_2": "",
+            "horizontal_pos_2": 0,
+            "vertical_pos_2": 0,
+            "lookbook_pos_2": "right",
+            "product_3": "",
+            "horizontal_pos_3": 0,
+            "vertical_pos_3": 0,
+            "lookbook_pos_3": "right",
+            "product_4": "",
+            "horizontal_pos_4": 0,
+            "vertical_pos_4": 0,
+            "lookbook_pos_4": "right",
+            "link_text": "",
+            "link": "",
+            "link_underline": true,
+            "link_color": "#3c3c3c",
+            "link_color_hover": "#2a6876",
+            "link_margin_top": 18,
+            "link_fs": 16,
+            "link_fs_mb": 12,
+            "text_align": "left",
+            "link_width": 335
+          }
+        },
+        "lookbook_image_mWBwnA": {
+          "type": "lookbook_image",
+          "settings": {
+            "lookbook_image_action": "popup_image",
+            "lookbook_image_link": "",
+            "product_1": "",
+            "horizontal_pos_1": 0,
+            "vertical_pos_1": 0,
+            "lookbook_pos_1": "right",
+            "product_2": "",
+            "horizontal_pos_2": 0,
+            "vertical_pos_2": 0,
+            "lookbook_pos_2": "right",
+            "product_3": "",
+            "horizontal_pos_3": 0,
+            "vertical_pos_3": 0,
+            "lookbook_pos_3": "right",
+            "product_4": "",
+            "horizontal_pos_4": 0,
+            "vertical_pos_4": 0,
+            "lookbook_pos_4": "right",
+            "link_text": "",
+            "link": "",
+            "link_underline": true,
+            "link_color": "#3c3c3c",
+            "link_color_hover": "#2a6876",
+            "link_margin_top": 18,
+            "link_fs": 16,
+            "link_fs_mb": 12,
+            "text_align": "left",
+            "link_width": 335
+          }
+        },
+        "lookbook_image_KFpiBe": {
+          "type": "lookbook_image",
+          "settings": {
+            "lookbook_image_action": "popup_image",
+            "lookbook_image_link": "",
+            "product_1": "",
+            "horizontal_pos_1": 0,
+            "vertical_pos_1": 0,
+            "lookbook_pos_1": "right",
+            "product_2": "",
+            "horizontal_pos_2": 0,
+            "vertical_pos_2": 0,
+            "lookbook_pos_2": "right",
+            "product_3": "",
+            "horizontal_pos_3": 0,
+            "vertical_pos_3": 0,
+            "lookbook_pos_3": "right",
+            "product_4": "",
+            "horizontal_pos_4": 0,
+            "vertical_pos_4": 0,
+            "lookbook_pos_4": "right",
+            "link_text": "",
+            "link": "",
+            "link_underline": true,
+            "link_color": "#3c3c3c",
+            "link_color_hover": "#2a6876",
+            "link_margin_top": 18,
+            "link_fs": 16,
+            "link_fs_mb": 12,
+            "text_align": "left",
+            "link_width": 335
+          }
+        }
+      },
+      "block_order": [
+        "lookbook_image_tBp9GG",
+        "lookbook_image_6EEMcz",
+        "lookbook_image_mWBwnA",
+        "lookbook_image_KFpiBe"
+      ],
+      "name": "t:sections.collection_lookbook.name",
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 60,
+        "section_bg": "#ffffff",
+        "section_gradient": "",
+        "title": "Style & Design Inspirations",
+        "color_title": "#232323",
+        "mg_bottom_title": 25,
+        "fontsize_title": 30,
+        "fontsize_title_mb": 24,
+        "des": "Temporibus autem quibusdam et officiis debitis aut rerum necessitatibus saepe del eveniet ut deluxa voluptates repudiandae sint et molestiae.",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 35,
+        "fontsize_des": 16,
+        "fontsize_des_mb": 12,
+        "title_align": "center",
+        "content_width": 700,
+        "view_more": "",
+        "view_all_link": "",
+        "view_all_color": "#2a6876",
+        "view_all_enable_border": true,
+        "view_all_font_size": 16,
+        "view_all_font_weight": "400",
+        "view_all_pos": "right",
+        "view_more_mg_top": 24,
+        "image_behavior": "ambient",
+        "lookbook_style": "1",
+        "enable_lookbook_width": true,
+        "lookbook_width": 270,
+        "dot_desktop_size": 24,
+        "dot_mobile_size": 18,
+        "dot_shadow_color": "#ffffff",
+        "dot_outer_color": "#ffffff",
+        "show_dot_number": true,
+        "show_dot_number_mobile": false,
+        "dot_inner_color": "#000000",
+        "number_desktop_size": 12,
+        "number_mobile_size": 11,
+        "lookbook_truncate": "1",
+        "show_text": "Show Products",
+        "hide_text": "Hide Products",
+        "show_btn_bg_color": "",
+        "show_btn_gradient": "rgba(0,0,0,0.5)",
+        "show_btn_text_color": "#ffffff",
+        "show_btn_height": 30,
+        "show_btn_width": 135,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 25,
+        "mg_top_mobile": 20,
+        "mg_bottom_desktop": 75,
+        "mg_bottom_tablet": 60,
+        "mg_bottom_mobile": 45
+      }
+    },
+    "collapsible_content_j4pqKN": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_MhxgVU": {
+          "type": "content",
+          "settings": {
+            "heading": "Collapsible Row",
+            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
+            "page": ""
+          }
+        },
+        "content_qyjczp": {
+          "type": "content",
+          "settings": {
+            "heading": "Collapsible Row",
+            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_MhxgVU",
+        "content_qyjczp"
+      ],
+      "name": "t:sections.collapsible_content.settings.collapsible_row",
+      "settings": {
+        "id_section": "",
+        "container": "container",
+        "padding_full_width": 0,
+        "collapsible_bg": "#ffffff",
+        "collapsible_bg_gradient": "",
+        "collapsible_title": "",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 16,
+        "collapsible_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "fontsize_des_mb": 12,
+        "max_width_des": 700,
+        "title_align": "center",
+        "enable_image_right": true,
+        "bg_content_color": "#ffffff",
+        "content_color": "#232323",
+        "title_color": "#232323",
+        "icon_color": "#232323",
+        "border_color": "#232323",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
     "featured_product_we_xexHeF": {
       "type": "featured-product-we",
       "name": "Product Columns",
@@ -1040,19 +1365,24 @@
   "order": [
     "main",
     "image_banner_enRdBk",
+    "video_block_WVxrUj",
+    "image_banner_DyjedE",
     "banner_copy_kTD6Fw",
     "custom_liquid_MfDecQ",
     "service1_wrfXK7",
     "service_2_BayaEJ",
     "massage_akxeVz",
     "about_form_LGXz6n",
-    "service_machine_2_XbYwzy",
-    "collapsible_content_j4pqKN",
     "sachet_system_benehit_RMCekP",
+    "sachet_system_benehit_cnnH3V",
     "about_vichen_4_FFYdYy",
     "image_1_FfHein",
     "tersano_image_slider_yzFynG",
     "large_lookbook_banners_yPNXgn",
+    "image_2_bwHMcD",
+    "sachet_system_1_xY9Ged",
+    "lookbook_with_collection_fDfhGW",
+    "collapsible_content_j4pqKN",
     "featured_product_we_xexHeF",
     "newsletter_zzxQnA"
   ]
