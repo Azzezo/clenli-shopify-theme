@@ -146,6 +146,44 @@
         "mg_bottom_mobile": 50
       }
     },
+    "sachet_system_1_xY9Ged": {
+      "type": "sachet-system-1",
+      "blocks": {
+        "row_MUmKzz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/R5_Screenshots.png",
+            "label": "ABOUT",
+            "heading": "The R5",
+            "text": "<p>Built from real feedback from cleaning professionals — the R5 is designed around the challenges that matter most.</p><ul><li><strong>Direct Walk-Behind Scrubber Replacement</strong></li><li><strong>AI-Native Intelligence</strong></li><li><strong>Reliable, Day After Day</strong></li></ul>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_MUmKzz"
+      ],
+      "name": "Alternating Content",
+      "settings": {
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "underline_color": "#6fb31a",
+        "underline_height": 3,
+        "underline_spacing": 50,
+        "hide_last_underline": true,
+        "bg_color": "#e8e8e8",
+        "accent_color": "#6fb31a",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "video_block_WVxrUj": {
       "type": "video-block",
       "name": "t:sections.video.presets.name",
@@ -957,65 +995,6 @@
         "padding_bottom_mobile": 40
       }
     },
-    "sachet_system_1_xY9Ged": {
-      "type": "sachet-system-1",
-      "blocks": {
-        "row_wHiLcd": {
-          "type": "row",
-          "settings": {
-            "label": "OUR SERVICES",
-            "heading": "Professional Cleaning Equipment",
-            "text": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use.</p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        },
-        "row_XmTKGF": {
-          "type": "row",
-          "settings": {
-            "label": "WHY CHOOSE US",
-            "heading": "Expert Support & Training",
-            "text": "<p>Our dedicated team provides comprehensive training and ongoing support.</p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        },
-        "row_MUmKzz": {
-          "type": "row",
-          "settings": {
-            "label": "SUSTAINABILITY",
-            "heading": "Eco-Friendly Solutions",
-            "text": "<p>We're committed to sustainability with our range of environmentally friendly products.</p>",
-            "button_text": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_wHiLcd",
-        "row_XmTKGF",
-        "row_MUmKzz"
-      ],
-      "name": "Alternating Content",
-      "settings": {
-        "heading_size": 36,
-        "image_radius": 8,
-        "button_radius": 4,
-        "underline_color": "#6fb31a",
-        "underline_height": 3,
-        "underline_spacing": 50,
-        "hide_last_underline": true,
-        "bg_color": "#ffffff",
-        "accent_color": "#6fb31a",
-        "heading_color": "#1a1a1a",
-        "text_color": "#555555",
-        "button_bg": "#6fb31a",
-        "button_hover_bg": "#5a9216",
-        "button_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "lookbook_with_collection_fDfhGW": {
       "type": "lookbook-with-collection",
       "blocks": {
@@ -1384,6 +1363,7 @@
   "order": [
     "main",
     "image_banner_enRdBk",
+    "sachet_system_1_xY9Ged",
     "video_block_WVxrUj",
     "image_banner_DyjedE",
     "banner_copy_kTD6Fw",
@@ -1399,7 +1379,6 @@
     "tersano_image_slider_yzFynG",
     "large_lookbook_banners_yPNXgn",
     "image_2_bwHMcD",
-    "sachet_system_1_xY9Ged",
     "lookbook_with_collection_fDfhGW",
     "collapsible_content_j4pqKN",
     "featured_product_we_xexHeF",
