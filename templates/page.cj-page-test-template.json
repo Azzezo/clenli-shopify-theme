@@ -151,7 +151,7 @@
       "name": "t:sections.video.presets.name",
       "settings": {
         "container": "container",
-        "spotlight_bg": "#fff",
+        "spotlight_bg": "#ffffff",
         "spotlight_bg_gradient": "",
         "video_block_title": "Engineered to Outperform",
         "color_title": "#6fb31a",
@@ -190,11 +190,11 @@
         "btn_text": "",
         "link": "",
         "button_width": 235,
-        "button_color": "#fff",
+        "button_color": "#ffffff",
         "button_border": "#232323",
         "button_background": "#232323",
         "button_background_gradient": "",
-        "button_color_hover": "#fff",
+        "button_color_hover": "#ffffff",
         "button_border_hover": "#232323",
         "button_background_hover": "#232323",
         "button_background_gradient_hover": "",
@@ -797,37 +797,56 @@
         "slide_nehkWz": {
           "type": "slide",
           "settings": {
-            "caption": "Professional Cleaning Equipment"
+            "image": "shopify://shop_images/2D_and_3D_Lidar.png",
+            "caption": ""
+          }
+        },
+        "slide_RDDX6Q": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sonars.png",
+            "caption": ""
           }
         },
         "slide_3VQU3Q": {
           "type": "slide",
           "settings": {
-            "caption": "Industrial Solutions"
+            "image": "shopify://shop_images/RGB_Cameras.png",
+            "caption": ""
           }
         },
         "slide_6KW94e": {
           "type": "slide",
           "settings": {
-            "caption": "Expert Support"
+            "image": "shopify://shop_images/Depth_Cameras.png",
+            "caption": ""
+          }
+        },
+        "slide_fJ3LF9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Time-of-Flight_Sensors.png",
+            "caption": ""
           }
         }
       },
       "block_order": [
         "slide_nehkWz",
+        "slide_RDDX6Q",
         "slide_3VQU3Q",
-        "slide_6KW94e"
+        "slide_6KW94e",
+        "slide_fJ3LF9"
       ],
       "name": "Content Image Slider",
       "settings": {
-        "label": "OUR SERVICES",
-        "heading": "Professional Cleaning Solutions",
-        "description": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use. Our solutions help businesses maintain cleaner, healthier environments.</p>",
-        "feature_1": "High-quality cleaning equipment",
-        "feature_2": "Expert support & training",
-        "feature_3": "Eco-friendly solutions",
-        "feature_4": "Nationwide coverage",
-        "button_text": "Learn More",
+        "label": "SENSOR RANGE",
+        "heading": "All-Seeing Cleaner",
+        "description": "<p>Complete vision of all. Great range of sensors. Blah blah blah. Make this longer. 2D and 3D Lidar</p>",
+        "feature_1": "4 Sonar Sensors",
+        "feature_2": "3 RGB Cameras",
+        "feature_3": "2 Depth Cameras",
+        "feature_4": "2 Time-of-Flight Sensors",
+        "button_text": "",
         "button_link": "",
         "button_radius": 4,
         "autoplay": true,
