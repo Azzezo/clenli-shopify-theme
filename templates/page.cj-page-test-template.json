@@ -37,7 +37,7 @@
             "font_weight_sub_title": "700",
             "sub_title_position": "sub_title_above",
             "color_sub_title": "#232323",
-            "color_sub_title_mb": "#fff",
+            "color_sub_title_mb": "#ffffff",
             "heading": "R5",
             "special_text": "",
             "letter_spacing_heading": "",
@@ -46,18 +46,18 @@
             "font_size_heading_mb": 24,
             "margin_bottom_heading": 20,
             "font_weight_heading": "700",
-            "color_heading": "#FFFFFF",
-            "color_heading_mb": "#fff",
+            "color_heading": "#ffffff",
+            "color_heading_mb": "#ffffff",
             "border_title": "border_s1",
             "border_color_title": "#6fb31a",
-            "border_color_title_mobile": "#fff",
+            "border_color_title_mobile": "#ffffff",
             "text": "Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an tincidunt risus an consequat delit quisquemos.",
             "font_size_des": 12,
             "font_size_des_mb": 12,
             "line_height_des": 26,
             "margin_bottom_des": 35,
-            "color_des": "#FFFFFF",
-            "color_des_mb": "#fff",
+            "color_des": "#ffffff",
+            "color_des_mb": "#ffffff",
             "countdown": "",
             "hide_countdown_fc": "countdown",
             "countdown_style": "round",
@@ -65,7 +65,7 @@
             "font_size_countdown_number": 30,
             "font_size_countdown_text": 14,
             "color_countdown": "#232323",
-            "color_countdown_mb": "#fff",
+            "color_countdown_mb": "#ffffff",
             "countdown_margin_bottom": 35,
             "content_width": 475,
             "bg_color_content": "",
@@ -79,29 +79,30 @@
             "btn_icon": "",
             "button_1_width": 235,
             "enable_button_custom_border": false,
-            "button_color": "#FFFFFF",
+            "button_color": "#ffffff",
             "button_border": "#6fb31a",
             "button_background": "#6fb31a",
             "button_background_gradient": "",
-            "button_color_hover": "#fff",
+            "button_color_hover": "#ffffff",
             "button_border_hover": "#6c6366",
             "button_background_hover": "#6c6366",
             "button_background_gradient_hover": "",
             "btn_text_2": "",
             "link_2": "",
             "btn_icon_2": "",
-            "button_color_2": "#fff",
+            "button_color_2": "#ffffff",
             "button_border_2": "#232323",
             "button_background_2": "#232323",
             "button_background_2_gradient": "",
-            "button_color_hover_2": "#fff",
+            "button_color_hover_2": "#ffffff",
             "button_border_hover_2": "#232323",
             "button_background_hover_2": "#232323",
             "button_background_gradient_hover_2": "",
+            "video_link": "",
             "adaptive_height_video": "56",
             "icon_style": "style_1",
-            "color_icon": "#fff",
-            "bg_color_icon": "#000",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
             "enable_custom_video_icon_position": false,
             "video_icon_horizontal_position": "",
             "video_icon_vertical_position": "",
@@ -688,7 +689,7 @@
         "id_section": "",
         "container": "container",
         "padding_full_width": 0,
-        "collapsible_bg": "#fff",
+        "collapsible_bg": "#ffffff",
         "collapsible_bg_gradient": "",
         "collapsible_title": "",
         "color_title": "#232323",
@@ -712,6 +713,219 @@
         "mg_bottom_desktop": 50,
         "mg_bottom_tablet": 50,
         "mg_bottom_mobile": 50
+      }
+    },
+    "sachet_system_benehit_RMCekP": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_zBexjn": {
+          "type": "card",
+          "settings": {
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_AH9nHL": {
+          "type": "card",
+          "settings": {
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%. XXXXX"
+          }
+        },
+        "card_KAwyj3": {
+          "type": "card",
+          "settings": {
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_zBexjn",
+        "card_AH9nHL",
+        "card_KAwyj3"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "PVA Sustainable Benefits",
+        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+        "bottom_heading": "PVA Safety Benefits",
+        "bottom_text": "PVA Hygiene sachets allow businesses to reduce and eliminate risks associated with the use of cleaning chemicals. With PVA sachets, you significantly reduce your exposure to chemicals, spills and the chance of manual handling injuries.",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "about_vichen_4_FFYdYy": {
+      "type": "about-vichen-4",
+      "name": "CTA Contact Form",
+      "settings": {
+        "heading": "Don't Get Left Behind",
+        "description": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.",
+        "heading_size": 32,
+        "call_now_text": "CALL NOW",
+        "phone_number": "+1234567890",
+        "form_title": "GO GREEN TODAY ENQUIRE NOW",
+        "submit_text": "SUBMIT",
+        "success_message": "Thank you! We will contact you soon.",
+        "bg_color": "#f5f5f5",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "accent_color": "#2d5a27",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "image_1_FfHein": {
+      "type": "image-1",
+      "name": "Content With Image",
+      "settings": {
+        "heading": "Your Heading Here",
+        "heading_color": "#232323",
+        "heading_size": 28,
+        "description": "<p>Add your description text here. This text will appear below the heading on the left side of the section.</p>",
+        "desc_color": "#555555",
+        "desc_size": 16,
+        "image_alt": "Image",
+        "image_width": 50,
+        "image_border_color": "#6fb31a",
+        "image_border_width": 3,
+        "image_border_radius": 8,
+        "image_padding": 0,
+        "show_underline": true,
+        "underline_color": "#6fb31a",
+        "underline_height": 4,
+        "underline_margin_top": 50,
+        "bg_color": "#ffffff",
+        "container": "1170",
+        "content_gap": 50,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "tersano_image_slider_yzFynG": {
+      "type": "tersano-image-slider",
+      "blocks": {
+        "slide_nehkWz": {
+          "type": "slide",
+          "settings": {
+            "caption": "Professional Cleaning Equipment"
+          }
+        },
+        "slide_3VQU3Q": {
+          "type": "slide",
+          "settings": {
+            "caption": "Industrial Solutions"
+          }
+        },
+        "slide_6KW94e": {
+          "type": "slide",
+          "settings": {
+            "caption": "Expert Support"
+          }
+        }
+      },
+      "block_order": [
+        "slide_nehkWz",
+        "slide_3VQU3Q",
+        "slide_6KW94e"
+      ],
+      "name": "Content Image Slider",
+      "settings": {
+        "label": "OUR SERVICES",
+        "heading": "Professional Cleaning Solutions",
+        "description": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use. Our solutions help businesses maintain cleaner, healthier environments.</p>",
+        "feature_1": "High-quality cleaning equipment",
+        "feature_2": "Expert support & training",
+        "feature_3": "Eco-friendly solutions",
+        "feature_4": "Nationwide coverage",
+        "button_text": "Learn More",
+        "button_link": "",
+        "button_radius": 4,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "slider_radius": 12,
+        "heading_size": 36,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "accent_color": "#6fb31a",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "large_lookbook_banners_yPNXgn": {
+      "type": "large-lookbook-banners",
+      "name": "t:sections.large_lookbook_banner.name",
+      "settings": {
+        "container": "1770",
+        "padding_full_width": 60,
+        "section_bg": "#ffffff",
+        "section_gradient": "",
+        "title": "Room Ideas",
+        "color_title": "#232323",
+        "mg_bottom_title": 23,
+        "mg_top_title": 62,
+        "fontsize_title": 30,
+        "fontsize_title_mb": 24,
+        "des": "Pellentesque ante neque, faucibus et delito an pretium vestibulum del varius quam. Proin eget euismod neque. Nunc dignissim lectus neque, nec mattis nunc laoreet.",
+        "color_des": "#3c3c3c",
+        "margin_bottom_des": 20,
+        "fontsize_des": 16,
+        "fontsize_des_mb": 12,
+        "title_align": "left",
+        "content_width": 360,
+        "view_more": "View All Rooms",
+        "view_all_link": "shopify://collections/home-19-featured-products",
+        "view_all_color": "#2a6876",
+        "view_all_enable_border": true,
+        "view_all_font_size": 16,
+        "view_all_font_weight": "400",
+        "view_all_pos": "left",
+        "view_more_mg_top": 12,
+        "image_behavior": "ambient",
+        "lookbook_style": "1",
+        "enable_lookbook_width": false,
+        "lookbook_width": 250,
+        "dot_desktop_size": 24,
+        "dot_mobile_size": 18,
+        "dot_shadow_color": "#2d2d2d",
+        "dot_outer_color": "#2d2d2d",
+        "show_dot_number": false,
+        "show_dot_number_mobile": false,
+        "dot_inner_color": "#ffffff",
+        "number_desktop_size": 14,
+        "number_mobile_size": 11,
+        "lookbook_truncate": "1",
+        "show_text": "Show Products",
+        "hide_text": "Hide Products",
+        "show_btn_bg_color": "",
+        "show_btn_gradient": "rgba(0,0,0,0.5)",
+        "show_btn_text_color": "#ffffff",
+        "show_btn_height": 30,
+        "show_btn_width": 135,
+        "mg_top_desktop": 30,
+        "mg_top_tablet": 20,
+        "mg_top_mobile": 15,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 70,
+        "mg_bottom_mobile": 55
       }
     },
     "featured_product_we_xexHeF": {
@@ -834,6 +1048,11 @@
     "about_form_LGXz6n",
     "service_machine_2_XbYwzy",
     "collapsible_content_j4pqKN",
+    "sachet_system_benehit_RMCekP",
+    "about_vichen_4_FFYdYy",
+    "image_1_FfHein",
+    "tersano_image_slider_yzFynG",
+    "large_lookbook_banners_yPNXgn",
     "featured_product_we_xexHeF",
     "newsletter_zzxQnA"
   ]
