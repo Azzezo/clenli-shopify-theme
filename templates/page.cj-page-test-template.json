@@ -707,6 +707,7 @@
         "card_KAwyj3": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/R5_AI_NaviSense.png",
             "title": "AI NavSense",
             "text": "Spots obstacles, finds the best way around, and gets back on track on its own — so your team can focus on other cleaning tasks."
           }
@@ -805,6 +806,7 @@
         "row_FNa4cE": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/R5_Pro_Power.png",
             "label": "PERFORMANCE",
             "heading": "Pro Power",
             "text": "<p>Everything your walk-behind scrubber does — same cleaning power, same footprint — with industrial 34 g/cm² brush pressure and a Gap-Free Tri-Brush system that leaves no strip unclean.</p><ul><li><strong>Direct Walk-Behind Scrubber Replacement</strong></li><li><strong>34 g/cm² brush pressure</strong></li><li><strong>Gap-Free Tri-Brush system</strong></li><li><strong>Brush downward force up to 29kg</strong></li></ul>",
