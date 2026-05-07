@@ -375,6 +375,79 @@
         "mg_bottom_mobile": 50
       }
     },
+    "tersano_image_slider_yzFynG": {
+      "type": "tersano-image-slider",
+      "blocks": {
+        "slide_nehkWz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2D_and_3D_Lidar.png",
+            "caption": ""
+          }
+        },
+        "slide_RDDX6Q": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sonars.png",
+            "caption": ""
+          }
+        },
+        "slide_3VQU3Q": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/RGB_Cameras.png",
+            "caption": ""
+          }
+        },
+        "slide_6KW94e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Depth_Cameras.png",
+            "caption": ""
+          }
+        },
+        "slide_fJ3LF9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Time-of-Flight_Sensors.png",
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_nehkWz",
+        "slide_RDDX6Q",
+        "slide_3VQU3Q",
+        "slide_6KW94e",
+        "slide_fJ3LF9"
+      ],
+      "name": "Content Image Slider",
+      "settings": {
+        "label": "SENSOR RANGE",
+        "heading": "All-Seeing Cleaner",
+        "description": "<p>Complete vision of all. Great range of sensors. Blah blah blah. Make this longer. 2D and 3D Lidar</p>",
+        "feature_1": "4 Sonar Sensors",
+        "feature_2": "3 RGB Cameras",
+        "feature_3": "2 Depth Cameras",
+        "feature_4": "2 Time-of-Flight Sensors",
+        "button_text": "",
+        "button_link": "",
+        "button_radius": 4,
+        "autoplay": true,
+        "autoplay_speed": 3,
+        "slider_radius": 12,
+        "heading_size": 36,
+        "bg_color": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "accent_color": "#6fb31a",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "banner_copy_kTD6Fw": {
       "type": "banner-copy",
       "blocks": {
@@ -690,32 +763,40 @@
     "sachet_system_benehit_RMCekP": {
       "type": "sachet-system-benehit",
       "blocks": {
+        "card_V8CHeB": {
+          "type": "card",
+          "settings": {
+            "title": "360° Turn In Place Mobility",
+            "text": "Turns on the spot to navigate dead-end corners and complex layouts — built to handle dynamic floor plans."
+          }
+        },
         "card_zBexjn": {
           "type": "card",
           "settings": {
-            "title": "Never Gets Stuck",
-            "text": "True 360° turn-in-place mobility means the R5 navigates dead-ends, tight corners, and complex layouts without ever reversing or getting stuck."
+            "title": "AI Adaptive Map",
+            "text": "The R5 continuously learns your space and adapts from each cleaning run to navigate and clean more efficiently."
           }
         },
         "card_KAwyj3": {
           "type": "card",
           "settings": {
-            "title": "Pro Power",
-            "text": "Everything your walk-behind scrubber does — same cleaning power, same footprint — with industrial 34 g/cm² brush pressure and a Gap-Free Tri-Brush system that leaves no strip unclean."
+            "title": "AI NavSense",
+            "text": "Spots obstacles, finds the best way around, and gets back on track on its own — so your team can focus on other cleaning tasks."
           }
         }
       },
       "block_order": [
+        "card_V8CHeB",
         "card_zBexjn",
         "card_KAwyj3"
       ],
       "name": "Benefits Cards",
       "settings": {
-        "heading": "Engineered to Outperform",
-        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
+        "heading": "Intuitive Intelligence",
+        "subtext": "AI-powered navigation that thinks ahead — avoiding obstacles, planning efficient routes, and recovering from disruptions without any manual intervention.",
         "bottom_heading": "",
         "bottom_text": "",
-        "columns": 2,
+        "columns": 3,
         "card_gap": 30,
         "heading_size": 32,
         "card_radius": 8,
@@ -728,51 +809,51 @@
         "padding_bottom": 60
       }
     },
-    "sachet_system_benehit_cnnH3V": {
-      "type": "sachet-system-benehit",
+    "sachet_system_1_RfKDmj": {
+      "type": "sachet-system-1",
       "blocks": {
-        "card_rzBhEe": {
-          "type": "card",
+        "row_X7bNMy": {
+          "type": "row",
           "settings": {
-            "title": "Recyclable Packaging",
-            "text": "All packaging is recyclable, and the pouches are also compostable."
+            "image": "shopify://shop_images/R5_Screenshots.png",
+            "label": "MOBILITY",
+            "heading": "Never Gets Stuck",
+            "text": "<p>True 360° turn-in-place mobility means the R5 navigates dead-ends, tight corners, and complex layouts without ever reversing or getting stuck.</p><ul><li><strong>360° turn-in-place mobility</strong></li><li><strong>Zero dead-end reversals</strong></li></ul>",
+            "button_text": "",
+            "button_link": ""
           }
         },
-        "card_x73h9V": {
-          "type": "card",
+        "row_FNa4cE": {
+          "type": "row",
           "settings": {
-            "title": "No Single Use Plastic",
-            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%. XXXXX"
-          }
-        },
-        "card_hKKeRw": {
-          "type": "card",
-          "settings": {
-            "title": "Less Deliveries Needed",
-            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+            "label": "PERFORMANCE",
+            "heading": "Pro Power",
+            "text": "<p>Everything your walk-behind scrubber does — same cleaning power, same footprint — with industrial 34 g/cm² brush pressure and a Gap-Free Tri-Brush system that leaves no strip unclean.</p><ul><li><strong>Direct Walk-Behind Scrubber Replacement</strong></li><li><strong>34 g/cm² brush pressure</strong></li><li><strong>Gap-Free Tri-Brush system</strong></li><li><strong>Brush downward force up to 29kg</strong></li></ul>",
+            "button_text": "",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "card_rzBhEe",
-        "card_x73h9V",
-        "card_hKKeRw"
+        "row_X7bNMy",
+        "row_FNa4cE"
       ],
-      "name": "Benefits Cards",
+      "name": "Alternating Content",
       "settings": {
-        "heading": "PVA Sustainable Benefits",
-        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
-        "bottom_heading": "",
-        "bottom_text": "",
-        "columns": 3,
-        "card_gap": 30,
-        "heading_size": 32,
-        "card_radius": 8,
-        "bg_color": "#ffffff",
-        "card_bg": "#ffffff",
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "underline_color": "#6fb31a",
+        "underline_height": 3,
+        "underline_spacing": 50,
+        "hide_last_underline": true,
+        "bg_color": "#e8e8e8",
+        "accent_color": "#6fb31a",
         "heading_color": "#1a1a1a",
         "text_color": "#555555",
-        "divider_color": "#6fb31a",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -827,79 +908,6 @@
         "padding_bottom": 60,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
-      }
-    },
-    "tersano_image_slider_yzFynG": {
-      "type": "tersano-image-slider",
-      "blocks": {
-        "slide_nehkWz": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/2D_and_3D_Lidar.png",
-            "caption": ""
-          }
-        },
-        "slide_RDDX6Q": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Sonars.png",
-            "caption": ""
-          }
-        },
-        "slide_3VQU3Q": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/RGB_Cameras.png",
-            "caption": ""
-          }
-        },
-        "slide_6KW94e": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Depth_Cameras.png",
-            "caption": ""
-          }
-        },
-        "slide_fJ3LF9": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Time-of-Flight_Sensors.png",
-            "caption": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_nehkWz",
-        "slide_RDDX6Q",
-        "slide_3VQU3Q",
-        "slide_6KW94e",
-        "slide_fJ3LF9"
-      ],
-      "name": "Content Image Slider",
-      "settings": {
-        "label": "SENSOR RANGE",
-        "heading": "All-Seeing Cleaner",
-        "description": "<p>Complete vision of all. Great range of sensors. Blah blah blah. Make this longer. 2D and 3D Lidar</p>",
-        "feature_1": "4 Sonar Sensors",
-        "feature_2": "3 RGB Cameras",
-        "feature_3": "2 Depth Cameras",
-        "feature_4": "2 Time-of-Flight Sensors",
-        "button_text": "",
-        "button_link": "",
-        "button_radius": 4,
-        "autoplay": true,
-        "autoplay_speed": 3,
-        "slider_radius": 12,
-        "heading_size": 36,
-        "bg_color": "#ffffff",
-        "heading_color": "#1a1a1a",
-        "text_color": "#555555",
-        "accent_color": "#6fb31a",
-        "button_bg": "#6fb31a",
-        "button_hover_bg": "#5a9216",
-        "button_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "large_lookbook_banners_yPNXgn": {
@@ -1373,10 +1381,10 @@
     "massage_akxeVz",
     "about_form_LGXz6n",
     "sachet_system_benehit_RMCekP",
-    "sachet_system_benehit_cnnH3V",
+    "sachet_system_1_RfKDmj",
+    "tersano_image_slider_yzFynG",
     "about_vichen_4_FFYdYy",
     "image_1_FfHein",
-    "tersano_image_slider_yzFynG",
     "large_lookbook_banners_yPNXgn",
     "image_2_bwHMcD",
     "lookbook_with_collection_fDfhGW",
