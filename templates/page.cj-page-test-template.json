@@ -246,13 +246,13 @@
         "mg_bottom_mobile": 50
       }
     },
-    "image_banner_DyjedE": {
+    "image_banner_WJ3ccF": {
       "type": "image-banner",
       "blocks": {
-        "large_img_Vdbim7": {
+        "large_img_cP7h3C": {
           "type": "largeImg",
           "settings": {
-            "image": "shopify://shop_images/R5_wide_shot_edited.jpg",
+            "image": "shopify://shop_images/R5_LionsBot_Logo.png",
             "enable_max_width_image": false,
             "custom_width_image": 1170,
             "border_radius": 0,
@@ -343,7 +343,7 @@
         }
       },
       "block_order": [
-        "large_img_Vdbim7"
+        "large_img_cP7h3C"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -531,13 +531,13 @@
         "padding_bottom": 60
       }
     },
-    "image_banner_WJ3ccF": {
+    "image_banner_DyjedE": {
       "type": "image-banner",
       "blocks": {
-        "large_img_cP7h3C": {
+        "large_img_Vdbim7": {
           "type": "largeImg",
           "settings": {
-            "image": "shopify://shop_images/R5_LionsBot_Logo.png",
+            "image": "shopify://shop_images/R5_wide_shot_edited.jpg",
             "enable_max_width_image": false,
             "custom_width_image": 1170,
             "border_radius": 0,
@@ -628,7 +628,7 @@
         }
       },
       "block_order": [
-        "large_img_cP7h3C"
+        "large_img_Vdbim7"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -985,412 +985,11 @@
         "mg_bottom_mobile": 50
       }
     },
-    "about_vichen_4_FFYdYy": {
-      "type": "about-vichen-4",
-      "name": "CTA Contact Form",
-      "settings": {
-        "heading": "Don't Get Left Behind",
-        "description": "Embrace the future be a part of the new green cleaning revolution! No matter your industry, contact us today to learn how Addax Electric Utility Vehicles can revolutionize your business.",
-        "heading_size": 32,
-        "call_now_text": "CALL NOW",
-        "phone_number": "+1234567890",
-        "form_title": "GO GREEN TODAY ENQUIRE NOW",
-        "submit_text": "SUBMIT",
-        "success_message": "Thank you! We will contact you soon.",
-        "bg_color": "#f5f5f5",
-        "heading_color": "#1a1a1a",
-        "text_color": "#555555",
-        "accent_color": "#2d5a27",
-        "button_bg": "#6fb31a",
-        "button_hover_bg": "#5a9216",
-        "button_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "image_1_FfHein": {
-      "type": "image-1",
-      "name": "Content With Image",
-      "settings": {
-        "heading": "Your Heading Here",
-        "heading_color": "#232323",
-        "heading_size": 28,
-        "description": "<p>Add your description text here. This text will appear below the heading on the left side of the section.</p>",
-        "desc_color": "#555555",
-        "desc_size": 16,
-        "image_alt": "Image",
-        "image_width": 50,
-        "image_border_color": "#6fb31a",
-        "image_border_width": 3,
-        "image_border_radius": 8,
-        "image_padding": 0,
-        "show_underline": true,
-        "underline_color": "#6fb31a",
-        "underline_height": 4,
-        "underline_margin_top": 50,
-        "bg_color": "#ffffff",
-        "container": "1170",
-        "content_gap": 50,
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
     "custom_liquid_MfDecQ": {
       "type": "custom-liquid",
       "disabled": true,
       "name": "Contact Page",
       "settings": {}
-    },
-    "large_lookbook_banners_yPNXgn": {
-      "type": "large-lookbook-banners",
-      "name": "t:sections.large_lookbook_banner.name",
-      "settings": {
-        "container": "1770",
-        "padding_full_width": 60,
-        "section_bg": "#ffffff",
-        "section_gradient": "",
-        "title": "Room Ideas",
-        "color_title": "#232323",
-        "mg_bottom_title": 23,
-        "mg_top_title": 62,
-        "fontsize_title": 30,
-        "fontsize_title_mb": 24,
-        "des": "Pellentesque ante neque, faucibus et delito an pretium vestibulum del varius quam. Proin eget euismod neque. Nunc dignissim lectus neque, nec mattis nunc laoreet.",
-        "color_des": "#3c3c3c",
-        "margin_bottom_des": 20,
-        "fontsize_des": 16,
-        "fontsize_des_mb": 12,
-        "title_align": "left",
-        "content_width": 360,
-        "view_more": "View All Rooms",
-        "view_all_link": "shopify://collections/home-19-featured-products",
-        "view_all_color": "#2a6876",
-        "view_all_enable_border": true,
-        "view_all_font_size": 16,
-        "view_all_font_weight": "400",
-        "view_all_pos": "left",
-        "view_more_mg_top": 12,
-        "image_behavior": "ambient",
-        "lookbook_style": "1",
-        "enable_lookbook_width": false,
-        "lookbook_width": 250,
-        "dot_desktop_size": 24,
-        "dot_mobile_size": 18,
-        "dot_shadow_color": "#2d2d2d",
-        "dot_outer_color": "#2d2d2d",
-        "show_dot_number": false,
-        "show_dot_number_mobile": false,
-        "dot_inner_color": "#ffffff",
-        "number_desktop_size": 14,
-        "number_mobile_size": 11,
-        "lookbook_truncate": "1",
-        "show_text": "Show Products",
-        "hide_text": "Hide Products",
-        "show_btn_bg_color": "",
-        "show_btn_gradient": "rgba(0,0,0,0.5)",
-        "show_btn_text_color": "#ffffff",
-        "show_btn_height": 30,
-        "show_btn_width": 135,
-        "mg_top_desktop": 30,
-        "mg_top_tablet": 20,
-        "mg_top_mobile": 15,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 70,
-        "mg_bottom_mobile": 55
-      }
-    },
-    "image_2_bwHMcD": {
-      "type": "image-2",
-      "name": "Alternating Content",
-      "settings": {
-        "row1_image_alt": "Image 1",
-        "row1_heading": "Row 1 Heading",
-        "row1_description": "<p>Add your description text here for row 1.</p>",
-        "row1_button_text": "",
-        "row1_button_link": "",
-        "row2_image_alt": "Image 2",
-        "row2_heading": "Row 2 Heading",
-        "row2_description": "<p>Add your description text here for row 2.</p>",
-        "row2_button_text": "Learn More",
-        "row2_button_link": "",
-        "underline_color": "#6fb31a",
-        "underline_height": 3,
-        "heading_color": "#232323",
-        "heading_size": 28,
-        "desc_color": "#555555",
-        "desc_size": 16,
-        "button_bg_color": "#6fb31a",
-        "button_text_color": "#ffffff",
-        "button_hover_color": "#5a9216",
-        "image_width": 50,
-        "image_radius": 0,
-        "bg_color": "#ffffff",
-        "container": "1170",
-        "content_gap": 50,
-        "row_spacing": 50,
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
-    },
-    "lookbook_with_collection_fDfhGW": {
-      "type": "lookbook-with-collection",
-      "blocks": {
-        "lookbook_image_tBp9GG": {
-          "type": "lookbook_image",
-          "settings": {
-            "lookbook_image_action": "popup_image",
-            "lookbook_image_link": "",
-            "product_1": "",
-            "horizontal_pos_1": 0,
-            "vertical_pos_1": 0,
-            "lookbook_pos_1": "right",
-            "product_2": "",
-            "horizontal_pos_2": 0,
-            "vertical_pos_2": 0,
-            "lookbook_pos_2": "right",
-            "product_3": "",
-            "horizontal_pos_3": 0,
-            "vertical_pos_3": 0,
-            "lookbook_pos_3": "right",
-            "product_4": "",
-            "horizontal_pos_4": 0,
-            "vertical_pos_4": 0,
-            "lookbook_pos_4": "right",
-            "link_text": "",
-            "link": "",
-            "link_underline": true,
-            "link_color": "#3c3c3c",
-            "link_color_hover": "#2a6876",
-            "link_margin_top": 18,
-            "link_fs": 16,
-            "link_fs_mb": 12,
-            "text_align": "left",
-            "link_width": 335
-          }
-        },
-        "lookbook_image_6EEMcz": {
-          "type": "lookbook_image",
-          "settings": {
-            "lookbook_image_action": "popup_image",
-            "lookbook_image_link": "",
-            "product_1": "",
-            "horizontal_pos_1": 0,
-            "vertical_pos_1": 0,
-            "lookbook_pos_1": "right",
-            "product_2": "",
-            "horizontal_pos_2": 0,
-            "vertical_pos_2": 0,
-            "lookbook_pos_2": "right",
-            "product_3": "",
-            "horizontal_pos_3": 0,
-            "vertical_pos_3": 0,
-            "lookbook_pos_3": "right",
-            "product_4": "",
-            "horizontal_pos_4": 0,
-            "vertical_pos_4": 0,
-            "lookbook_pos_4": "right",
-            "link_text": "",
-            "link": "",
-            "link_underline": true,
-            "link_color": "#3c3c3c",
-            "link_color_hover": "#2a6876",
-            "link_margin_top": 18,
-            "link_fs": 16,
-            "link_fs_mb": 12,
-            "text_align": "left",
-            "link_width": 335
-          }
-        },
-        "lookbook_image_mWBwnA": {
-          "type": "lookbook_image",
-          "settings": {
-            "lookbook_image_action": "popup_image",
-            "lookbook_image_link": "",
-            "product_1": "",
-            "horizontal_pos_1": 0,
-            "vertical_pos_1": 0,
-            "lookbook_pos_1": "right",
-            "product_2": "",
-            "horizontal_pos_2": 0,
-            "vertical_pos_2": 0,
-            "lookbook_pos_2": "right",
-            "product_3": "",
-            "horizontal_pos_3": 0,
-            "vertical_pos_3": 0,
-            "lookbook_pos_3": "right",
-            "product_4": "",
-            "horizontal_pos_4": 0,
-            "vertical_pos_4": 0,
-            "lookbook_pos_4": "right",
-            "link_text": "",
-            "link": "",
-            "link_underline": true,
-            "link_color": "#3c3c3c",
-            "link_color_hover": "#2a6876",
-            "link_margin_top": 18,
-            "link_fs": 16,
-            "link_fs_mb": 12,
-            "text_align": "left",
-            "link_width": 335
-          }
-        },
-        "lookbook_image_KFpiBe": {
-          "type": "lookbook_image",
-          "settings": {
-            "lookbook_image_action": "popup_image",
-            "lookbook_image_link": "",
-            "product_1": "",
-            "horizontal_pos_1": 0,
-            "vertical_pos_1": 0,
-            "lookbook_pos_1": "right",
-            "product_2": "",
-            "horizontal_pos_2": 0,
-            "vertical_pos_2": 0,
-            "lookbook_pos_2": "right",
-            "product_3": "",
-            "horizontal_pos_3": 0,
-            "vertical_pos_3": 0,
-            "lookbook_pos_3": "right",
-            "product_4": "",
-            "horizontal_pos_4": 0,
-            "vertical_pos_4": 0,
-            "lookbook_pos_4": "right",
-            "link_text": "",
-            "link": "",
-            "link_underline": true,
-            "link_color": "#3c3c3c",
-            "link_color_hover": "#2a6876",
-            "link_margin_top": 18,
-            "link_fs": 16,
-            "link_fs_mb": 12,
-            "text_align": "left",
-            "link_width": 335
-          }
-        }
-      },
-      "block_order": [
-        "lookbook_image_tBp9GG",
-        "lookbook_image_6EEMcz",
-        "lookbook_image_mWBwnA",
-        "lookbook_image_KFpiBe"
-      ],
-      "name": "t:sections.collection_lookbook.name",
-      "settings": {
-        "container": "1770",
-        "padding_full_width": 60,
-        "section_bg": "#ffffff",
-        "section_gradient": "",
-        "title": "Style & Design Inspirations",
-        "color_title": "#232323",
-        "mg_bottom_title": 25,
-        "fontsize_title": 30,
-        "fontsize_title_mb": 24,
-        "des": "Temporibus autem quibusdam et officiis debitis aut rerum necessitatibus saepe del eveniet ut deluxa voluptates repudiandae sint et molestiae.",
-        "color_des": "#3c3c3c",
-        "margin_bottom_des": 35,
-        "fontsize_des": 16,
-        "fontsize_des_mb": 12,
-        "title_align": "center",
-        "content_width": 700,
-        "view_more": "",
-        "view_all_link": "",
-        "view_all_color": "#2a6876",
-        "view_all_enable_border": true,
-        "view_all_font_size": 16,
-        "view_all_font_weight": "400",
-        "view_all_pos": "right",
-        "view_more_mg_top": 24,
-        "image_behavior": "ambient",
-        "lookbook_style": "1",
-        "enable_lookbook_width": true,
-        "lookbook_width": 270,
-        "dot_desktop_size": 24,
-        "dot_mobile_size": 18,
-        "dot_shadow_color": "#ffffff",
-        "dot_outer_color": "#ffffff",
-        "show_dot_number": true,
-        "show_dot_number_mobile": false,
-        "dot_inner_color": "#000000",
-        "number_desktop_size": 12,
-        "number_mobile_size": 11,
-        "lookbook_truncate": "1",
-        "show_text": "Show Products",
-        "hide_text": "Hide Products",
-        "show_btn_bg_color": "",
-        "show_btn_gradient": "rgba(0,0,0,0.5)",
-        "show_btn_text_color": "#ffffff",
-        "show_btn_height": 30,
-        "show_btn_width": 135,
-        "scroll_height": 4,
-        "scroll_track_bg": "#f1f1f1",
-        "scroll_thumb_color": "#000000",
-        "scroll_thumb_hover_color": "#444444",
-        "mg_top_desktop": 30,
-        "mg_top_tablet": 25,
-        "mg_top_mobile": 20,
-        "mg_bottom_desktop": 75,
-        "mg_bottom_tablet": 60,
-        "mg_bottom_mobile": 45
-      }
-    },
-    "collapsible_content_j4pqKN": {
-      "type": "collapsible-content",
-      "blocks": {
-        "content_MhxgVU": {
-          "type": "content",
-          "settings": {
-            "heading": "Collapsible Row",
-            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
-            "page": ""
-          }
-        },
-        "content_qyjczp": {
-          "type": "content",
-          "settings": {
-            "heading": "Collapsible Row",
-            "content": "<p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_MhxgVU",
-        "content_qyjczp"
-      ],
-      "name": "t:sections.collapsible_content.settings.collapsible_row",
-      "settings": {
-        "id_section": "",
-        "container": "container",
-        "padding_full_width": 0,
-        "collapsible_bg": "#ffffff",
-        "collapsible_bg_gradient": "",
-        "collapsible_title": "",
-        "color_title": "#232323",
-        "fontsize_title": 16,
-        "fontsize_title_mb": 16,
-        "collapsible_des": "",
-        "color_des": "#3c3c3c",
-        "fontsize_des": 16,
-        "fontsize_des_mb": 12,
-        "max_width_des": 700,
-        "title_align": "center",
-        "enable_image_right": true,
-        "bg_content_color": "#ffffff",
-        "content_color": "#232323",
-        "title_color": "#232323",
-        "icon_color": "#232323",
-        "border_color": "#232323",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 50,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
-      }
     },
     "featured_product_we_xexHeF": {
       "type": "featured-product-we",
@@ -1515,13 +1114,7 @@
     "sachet_system_1_hYiyBC",
     "image_banner_hECY4F",
     "rich_text_VYxUyz",
-    "about_vichen_4_FFYdYy",
-    "image_1_FfHein",
     "custom_liquid_MfDecQ",
-    "large_lookbook_banners_yPNXgn",
-    "image_2_bwHMcD",
-    "lookbook_with_collection_fDfhGW",
-    "collapsible_content_j4pqKN",
     "featured_product_we_xexHeF",
     "newsletter_zzxQnA"
   ]
