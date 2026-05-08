@@ -201,6 +201,7 @@
         "color_des": "#555555",
         "fontsize_des": 16,
         "title_align": "center",
+        "cover_image": "shopify://shop_images/R5_Close_Up_Eyes.png",
         "autoplay": false,
         "video_sound": false,
         "video_height": "54",
@@ -375,12 +376,6 @@
         "mg_bottom_tablet": 50,
         "mg_bottom_mobile": 50
       }
-    },
-    "custom_liquid_MfDecQ": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "Contact Page",
-      "settings": {}
     },
     "sachet_system_benehit_RMCekP": {
       "type": "sachet-system-benehit",
@@ -829,6 +824,12 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
+    },
+    "custom_liquid_MfDecQ": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "Contact Page",
+      "settings": {}
     },
     "large_lookbook_banners_yPNXgn": {
       "type": "large-lookbook-banners",
@@ -1294,7 +1295,6 @@
     "sachet_system_1_xY9Ged",
     "video_block_WVxrUj",
     "image_banner_DyjedE",
-    "custom_liquid_MfDecQ",
     "sachet_system_benehit_RMCekP",
     "rich_text_PUNNpF",
     "sachet_system_1_RfKDmj",
@@ -1303,6 +1303,7 @@
     "sachet_system_1_hYiyBC",
     "about_vichen_4_FFYdYy",
     "image_1_FfHein",
+    "custom_liquid_MfDecQ",
     "large_lookbook_banners_yPNXgn",
     "image_2_bwHMcD",
     "lookbook_with_collection_fDfhGW",
