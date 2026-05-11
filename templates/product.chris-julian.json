@@ -829,7 +829,8 @@
         "card_7bwETp": {
           "type": "card",
           "settings": {
-            "title": "Recyclable Packaging",
+            "image": "shopify://shop_images/R5_Close_Up_Eyes.png",
+            "title": "All Seeing Solution",
             "text": "From 3D LiDAR and depth cameras to ultrasonic sensors and sonar, The R5 sees everything and misses nothing."
           }
         },
