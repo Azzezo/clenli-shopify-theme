@@ -421,7 +421,7 @@
         "text_bzyH69": {
           "type": "text",
           "settings": {
-            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #E8E8E8; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
             "text_size": 16,
             "text_size_mb": 12,
             "text_font_weight": "400",
