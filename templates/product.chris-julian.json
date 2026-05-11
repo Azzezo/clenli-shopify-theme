@@ -462,6 +462,7 @@
         "row_Ug7MTp": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/1.png",
             "label": "ABOUT",
             "heading": "The R5",
             "text": "<p>The <strong>LionsBot R5</strong> is an intelligent robotic floor cleaning solution built to transform daily cleaning operations in retail, healthcare, transport hubs, offices, and other high-traffic facilities. Combining the footprint of a walk-behind scrubber dryer with autonomous technology, the R5 offers professional-grade cleaning performance in a compact and highly manoeuvrable design.</p><p> </p><p>Its standout 360° turning capability allows the machine to clean confidently in tight spaces, narrow aisles, dead ends, and complex layouts without the need for reversing or constant operator intervention. Powered by AI navigation and obstacle detection systems, the R5 can move safely through dynamic environments while continuously optimising its cleaning routes.</p><p> </p><p>The R5 is engineered for productivity, delivering strong brush pressure for deep cleaning and streak-free results across hard floors. With extended runtime, large solution tanks, and smart fleet management via LionsBot’s cloud platform, businesses can monitor performance, schedule tasks, and manage multiple units with ease.</p><p> </p><p>Designed to help tackle labour shortages and improve operational efficiency, the LionsBot R5 enables cleaning teams to work smarter, save time, and maintain consistently high cleaning standards.</p>",
