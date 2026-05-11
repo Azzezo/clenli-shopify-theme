@@ -600,7 +600,7 @@
             "text_line_height": 1.5,
             "margin_top_text": 20,
             "text_color": "#000000",
-            "text_width": "100%"
+            "text_width": "90%"
           }
         }
       },
@@ -803,79 +803,6 @@
         "mg_bottom_mobile": 0
       }
     },
-    "sachet_system_benehit_rd8x7w": {
-      "type": "sachet-system-benehit",
-      "blocks": {
-        "card_6Mwiax": {
-          "type": "card",
-          "settings": {
-            "title": "Powerful Performer",
-            "text": "Strong 34 g/cm² brush pressure makes cleaning look easy, lifting dirt and grime hidden deep within floors in one pass."
-          }
-        },
-        "card_cChQDF": {
-          "type": "card",
-          "settings": {
-            "title": "Complete Cleaning",
-            "text": "The R5's Tri-Brush system delivers consistent, gap-free performance that leaves no uncleaned strips behind."
-          }
-        },
-        "card_FbbPGC": {
-          "type": "card",
-          "settings": {
-            "title": "Never Gets Stuck",
-            "text": "360° turning capabilities allows the R5 to easily navigate tight spaces and dead-end corners without ever getting stuck."
-          }
-        },
-        "card_h9TkPH": {
-          "type": "card",
-          "settings": {
-            "title": "All Seeing Solution",
-            "text": "From 3D LiDAR and depth cameras to ultrasonic sensors and sonar, The R5 sees everything and misses nothing."
-          }
-        },
-        "card_eqmR8p": {
-          "type": "card",
-          "settings": {
-            "title": "AI Adaptive Map",
-            "text": "The R5 never stops learning your space, adapting from each cleaning run to navigate and clean more efficiently next time."
-          }
-        },
-        "card_YkExfX": {
-          "type": "card",
-          "settings": {
-            "title": "Marathon Cleaner",
-            "text": "With a run time over 4 hours and a 50L solution tank, the R5 can clean up to 5,000 m² per charge, leaving you to focus on more important tasks."
-          }
-        }
-      },
-      "block_order": [
-        "card_6Mwiax",
-        "card_cChQDF",
-        "card_FbbPGC",
-        "card_h9TkPH",
-        "card_eqmR8p",
-        "card_YkExfX"
-      ],
-      "name": "Benefits Cards",
-      "settings": {
-        "heading": "PVA Sustainable Benefits",
-        "subtext": "Every business has a responsibility to the environment and future generations. PVA Hygiene sachets allow businesses to eliminate single-use plastic and significantly reduce their carbon emissions, without compromising on effective cleaning.",
-        "bottom_heading": "PVA Safety Benefits",
-        "bottom_text": "PVA Hygiene sachets allow businesses to reduce and eliminate risks associated with the use of cleaning chemicals. With PVA sachets, you significantly reduce your exposure to chemicals, spills and the chance of manual handling injuries.",
-        "columns": 3,
-        "card_gap": 30,
-        "heading_size": 32,
-        "card_radius": 8,
-        "bg_color": "#ffffff",
-        "card_bg": "#ffffff",
-        "heading_color": "#1a1a1a",
-        "text_color": "#555555",
-        "divider_color": "#6fb31a",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "sachet_system_benehit_gftVd3": {
       "type": "sachet-system-benehit",
       "blocks": {
@@ -1048,7 +975,6 @@
     "rich_text_FX8e7t",
     "rich_text_PWY6aY",
     "rich_text_ncrCAe",
-    "sachet_system_benehit_rd8x7w",
     "sachet_system_benehit_gftVd3",
     "product-recommendations",
     "featured_products",
