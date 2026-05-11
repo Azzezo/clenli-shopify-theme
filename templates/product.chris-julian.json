@@ -808,29 +808,53 @@
         "card_tRbDT9": {
           "type": "card",
           "settings": {
-            "title": "Recyclable Packaging",
-            "text": "All packaging is recyclable, and the pouches are also compostable."
+            "title": "Never Gets Stuck",
+            "text": "360° turning capabilities allows the R5 to easily navigate tight spaces and dead-end corners without ever getting stuck."
           }
         },
         "card_DTwxhr": {
           "type": "card",
           "settings": {
-            "title": "No Single Use Plastic",
-            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+            "title": "Complete Cleaning",
+            "text": "The R5's Tri-Brush system delivers consistent, gap-free performance that leaves no uncleaned strips behind."
           }
         },
         "card_Lt44gB": {
           "type": "card",
           "settings": {
-            "title": "Less Deliveries Needed",
-            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+            "title": "Powerful Performer",
+            "text": "Strong 34 g/cm² brush pressure makes cleaning look easy, lifting dirt and grime hidden deep within floors in one pass."
+          }
+        },
+        "card_7bwETp": {
+          "type": "card",
+          "settings": {
+            "title": "Recyclable Packaging",
+            "text": "From 3D LiDAR and depth cameras to ultrasonic sensors and sonar, The R5 sees everything and misses nothing."
+          }
+        },
+        "card_fxT37R": {
+          "type": "card",
+          "settings": {
+            "title": "AI Adaptive Map",
+            "text": "The R5 never stops learning your space, adapting from each cleaning run to navigate and clean more efficiently next time."
+          }
+        },
+        "card_a8XQMH": {
+          "type": "card",
+          "settings": {
+            "title": "Marathon Cleaner",
+            "text": "With a run time over 4 hours and a 50L solution tank, the R5 can clean up to 5,000 m² per charge, leaving you to focus on more important tasks."
           }
         }
       },
       "block_order": [
         "card_tRbDT9",
         "card_DTwxhr",
-        "card_Lt44gB"
+        "card_Lt44gB",
+        "card_7bwETp",
+        "card_fxT37R",
+        "card_a8XQMH"
       ],
       "name": "Benefits Cards",
       "settings": {
