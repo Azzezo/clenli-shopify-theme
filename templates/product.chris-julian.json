@@ -155,6 +155,7 @@
         },
         "perks": {
           "type": "perks",
+          "disabled": true,
           "settings": {
             "show_size_chart": false,
             "size_chart_type": "custom_image",
@@ -222,6 +223,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "open_tab_mobile": true,
             "title": "Details",
@@ -231,6 +233,7 @@
         },
         "reviews_tab": {
           "type": "custom",
+          "disabled": true,
           "settings": {
             "open_tab_mobile": false,
             "title": "Reviews",
@@ -244,6 +247,7 @@
         },
         "shipping_tab": {
           "type": "custom",
+          "disabled": true,
           "settings": {
             "open_tab_mobile": false,
             "title": "Shipping",
@@ -399,6 +403,77 @@
         "mg_bottom_mobile": 0
       }
     },
+    "1778499418db3b0f3a": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "1778500369cb010808": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "sachet_system_1_w7Ubhp": {
+      "type": "sachet-system-1",
+      "blocks": {
+        "row_rNErUG": {
+          "type": "row",
+          "settings": {
+            "label": "OUR SERVICES",
+            "heading": "Professional Cleaning Equipment",
+            "text": "<p>We provide top-quality cleaning machines and equipment for commercial and industrial use.</p>",
+            "button_text": "View Products",
+            "button_link": ""
+          }
+        },
+        "row_4BkXPt": {
+          "type": "row",
+          "settings": {
+            "label": "WHY CHOOSE US",
+            "heading": "Expert Support & Training",
+            "text": "<p>Our dedicated team provides comprehensive training and ongoing support.</p>",
+            "button_text": "Contact Us",
+            "button_link": ""
+          }
+        },
+        "row_RYayzn": {
+          "type": "row",
+          "settings": {
+            "label": "SUSTAINABILITY",
+            "heading": "Eco-Friendly Solutions",
+            "text": "<p>We're committed to sustainability with our range of environmentally friendly products.</p>",
+            "button_text": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_rNErUG",
+        "row_4BkXPt",
+        "row_RYayzn"
+      ],
+      "name": "Alternating Content",
+      "settings": {
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "underline_color": "#6fb31a",
+        "underline_height": 3,
+        "underline_spacing": 50,
+        "hide_last_underline": true,
+        "bg_color": "#ffffff",
+        "accent_color": "#6fb31a",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -481,6 +556,9 @@
   },
   "order": [
     "main",
+    "1778499418db3b0f3a",
+    "1778500369cb010808",
+    "sachet_system_1_w7Ubhp",
     "product-recommendations",
     "featured_products",
     "apps",
