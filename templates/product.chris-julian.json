@@ -535,58 +535,6 @@
         "mg_bottom_mobile": 0
       }
     },
-    "rich_text_R4etPa": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_bnYBwd": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why Invest in Robotics?",
-            "heading_size": 30,
-            "heading_size_mb": 30,
-            "heading_line_height": 1.3,
-            "heading_color": "#6fb31a"
-          }
-        },
-        "text_4rqGgH": {
-          "type": "text",
-          "settings": {
-            "text": "<p><b>While there is no “one answer” for everybody, if you are interested in increasing productivity, having a cleaner facility, giving time back to your cleaners to focus on the finer details, or lowering your environmental impact, robotic cleaning solutions can hold the key!\n<br>\n<br>Below are some of the common reasons why you should consider automating your cleaning process.</p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#555555",
-            "text_width": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_bnYBwd",
-        "text_4rqGgH"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#ffffff",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 10,
-        "mg_top_tablet": 10,
-        "mg_top_mobile": 10,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
     "rich_text_6nekzj": {
       "type": "rich-text",
       "blocks": {
@@ -882,6 +830,58 @@
         "padding_bottom": 10
       }
     },
+    "rich_text_R4etPa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bnYBwd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Invest in Robotics?",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1.3,
+            "heading_color": "#6fb31a"
+          }
+        },
+        "text_4rqGgH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><b>While there is no “one answer” for everybody, if you are interested in increasing productivity, having a cleaner facility, giving time back to your cleaners to focus on the finer details, or lowering your environmental impact, robotic cleaning solutions can hold the key!\n<br>\n<br>Below are some of the common reasons why you should consider automating your cleaning process.</p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#555555",
+            "text_width": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_bnYBwd",
+        "text_4rqGgH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#ffffff",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 10,
+        "mg_top_mobile": 10,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
     "rich_text_pkVCE6": {
       "type": "rich-text",
       "blocks": {
@@ -1090,14 +1090,14 @@
     "1778500369cb010808",
     "rich_text_VPtywK",
     "sachet_system_1_Gd9Xpw",
-    "rich_text_kiRCk3",
-    "rich_text_R4etPa",
-    "rich_text_6nekzj",
     "rich_text_3UFqTL",
     "rich_text_FX8e7t",
     "rich_text_PWY6aY",
     "rich_text_ncrCAe",
     "sachet_system_benehit_gftVd3",
+    "rich_text_kiRCk3",
+    "rich_text_R4etPa",
+    "rich_text_6nekzj",
     "rich_text_pkVCE6",
     "rich_text_z8p7Yn",
     "product-recommendations",
