@@ -579,9 +579,9 @@
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 10,
+        "mg_top_mobile": 10,
         "mg_bottom_desktop": 0,
         "mg_bottom_tablet": 0,
         "mg_bottom_mobile": 0
@@ -713,9 +713,9 @@
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
-        "mg_top_desktop": 50,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 10,
+        "mg_top_mobile": 10,
         "mg_bottom_desktop": 0,
         "mg_bottom_tablet": 0,
         "mg_bottom_mobile": 0
@@ -878,8 +878,8 @@
         "heading_color": "#6fb31a",
         "text_color": "#555555",
         "divider_color": "#6fb31a",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 10,
+        "padding_bottom": 10
       }
     },
     "rich_text_pkVCE6": {
