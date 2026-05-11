@@ -802,6 +802,55 @@
         "mg_bottom_mobile": 0
       }
     },
+    "sachet_system_benehit_gftVd3": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_tRbDT9": {
+          "type": "card",
+          "settings": {
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_DTwxhr": {
+          "type": "card",
+          "settings": {
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+          }
+        },
+        "card_Lt44gB": {
+          "type": "card",
+          "settings": {
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        }
+      },
+      "block_order": [
+        "card_tRbDT9",
+        "card_DTwxhr",
+        "card_Lt44gB"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "R5 Features",
+        "subtext": "",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#6fb31a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -895,6 +944,7 @@
     "rich_text_FX8e7t",
     "rich_text_PWY6aY",
     "rich_text_ncrCAe",
+    "sachet_system_benehit_gftVd3",
     "product-recommendations",
     "featured_products",
     "apps",
