@@ -415,6 +415,47 @@
         "include_margins": false
       }
     },
+    "rich_text_VPtywK": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bzyH69": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_bzyH69"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
     "sachet_system_1_w7Ubhp": {
       "type": "sachet-system-1",
       "blocks": {
@@ -558,6 +599,7 @@
     "main",
     "1778499418db3b0f3a",
     "1778500369cb010808",
+    "rich_text_VPtywK",
     "sachet_system_1_w7Ubhp",
     "product-recommendations",
     "featured_products",
