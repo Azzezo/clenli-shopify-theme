@@ -427,7 +427,7 @@
             "text_font_weight": "400",
             "text_line_height": 1.5,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "100%"
           }
         }
@@ -444,7 +444,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -506,7 +506,7 @@
             "text_font_weight": "400",
             "text_line_height": 1.5,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "100%"
           }
         }
@@ -523,7 +523,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -572,10 +572,10 @@
         "padding_full_width": 0,
         "enable_border_top": false,
         "enable_border_bottom": false,
-        "color_border_bottom": "#FFFFFF",
+        "color_border_bottom": "#ffffff",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#FFFFFF",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -599,7 +599,7 @@
             "text_font_weight": "400",
             "text_line_height": 1.5,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "100%"
           }
         }
@@ -616,7 +616,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -640,7 +640,7 @@
             "text_font_weight": "400",
             "text_line_height": 1.5,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "100%"
           }
         }
@@ -657,7 +657,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -706,10 +706,10 @@
         "padding_full_width": 0,
         "enable_border_top": false,
         "enable_border_bottom": false,
-        "color_border_bottom": "#FFFFFF",
+        "color_border_bottom": "#ffffff",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#FFFFFF",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -733,8 +733,8 @@
             "text_font_weight": "400",
             "text_line_height": 1.5,
             "margin_top_text": 20,
-            "text_color": "#000",
-            "text_width": "100%"
+            "text_color": "#000000",
+            "text_width": "80%"
           }
         }
       },
@@ -750,7 +750,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
@@ -774,7 +774,7 @@
             "text_font_weight": "400",
             "text_line_height": 1.5,
             "margin_top_text": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_width": "100%"
           }
         }
@@ -791,7 +791,7 @@
         "color_border_bottom": "#e8e8e8",
         "enable_minus_mg_top": false,
         "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
+        "rich_text_bg": "#ffffff",
         "rich_text_bg_gradient": "",
         "enable_column": false,
         "content_align": "center",
