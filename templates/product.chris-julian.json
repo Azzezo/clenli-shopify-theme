@@ -534,10 +534,10 @@
         "mg_bottom_mobile": 0
       }
     },
-    "rich_text_ncrCAe": {
+    "rich_text_3UFqTL": {
       "type": "rich-text",
       "blocks": {
-        "text_bApFNQ": {
+        "text_Dpxchy": {
           "type": "text",
           "settings": {
             "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
@@ -552,7 +552,7 @@
         }
       },
       "block_order": [
-        "text_bApFNQ"
+        "text_Dpxchy"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -668,6 +668,118 @@
         "mg_bottom_mobile": 0
       }
     },
+    "rich_text_ncrCAe": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bApFNQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_bApFNQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "custom_section_MAkEk4": {
+      "type": "custom-section",
+      "blocks": {
+        "media_UTY7b9": {
+          "type": "media",
+          "name": "t:flex_section.names.media",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "background_media": "image",
+            "style_video": "mp4",
+            "video_position": "cover",
+            "video_ytb": "eTCtDW7O1aM",
+            "video_ytb_mb": "",
+            "autoplay_video": true,
+            "background_image": "shopify://shop_images/Why_Invest_in_Robotics.png",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "container": "full",
+            "padding_full_width": 0,
+            "section_height": "",
+            "section_height_custom": 50,
+            "pd-top-desktop": 0,
+            "pd-top-tablet": 0,
+            "pd-top-mobile": 0,
+            "pd-bottom-desktop": 0,
+            "pd-bottom-tablet": 0,
+            "pd-bottom-mobile": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "media_UTY7b9"
+      ],
+      "name": "t:flex_section.names.custom_section",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "section_height": "",
+        "section_height_custom": 50,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "background_media": "none",
+        "style_video": "mp4",
+        "video_position": "cover",
+        "video_ytb": "eTCtDW7O1aM",
+        "video_ytb_mb": "",
+        "autoplay_video": true,
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "pd-top-desktop": 50,
+        "pd-top-tablet": 50,
+        "pd-top-mobile": 50,
+        "pd-bottom-desktop": 50,
+        "pd-bottom-tablet": 50,
+        "pd-bottom-mobile": 50
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -755,9 +867,11 @@
     "rich_text_VPtywK",
     "sachet_system_1_Gd9Xpw",
     "rich_text_kiRCk3",
+    "rich_text_3UFqTL",
     "rich_text_FX8e7t",
     "rich_text_PWY6aY",
     "rich_text_ncrCAe",
+    "custom_section_MAkEk4",
     "product-recommendations",
     "featured_products",
     "apps",
