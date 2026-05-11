@@ -805,25 +805,28 @@
     "sachet_system_benehit_gftVd3": {
       "type": "sachet-system-benehit",
       "blocks": {
-        "card_tRbDT9": {
+        "card_Lt44gB": {
           "type": "card",
           "settings": {
-            "title": "Never Gets Stuck",
-            "text": "360° turning capabilities allows the R5 to easily navigate tight spaces and dead-end corners without ever getting stuck."
+            "image": "shopify://shop_images/R5_wide_shot.jpg",
+            "title": "Powerful Performer",
+            "text": "Strong 34 g/cm² brush pressure makes cleaning look easy, lifting dirt and grime hidden deep within floors in one pass."
           }
         },
         "card_DTwxhr": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/R5_Pro_Power.png",
             "title": "Complete Cleaning",
             "text": "The R5's Tri-Brush system delivers consistent, gap-free performance that leaves no uncleaned strips behind."
           }
         },
-        "card_Lt44gB": {
+        "card_tRbDT9": {
           "type": "card",
           "settings": {
-            "title": "Powerful Performer",
-            "text": "Strong 34 g/cm² brush pressure makes cleaning look easy, lifting dirt and grime hidden deep within floors in one pass."
+            "image": "shopify://shop_images/R5_360_Turning.png",
+            "title": "Never Gets Stuck",
+            "text": "360° turning capabilities allows the R5 to easily navigate tight spaces and dead-end corners without ever getting stuck."
           }
         },
         "card_7bwETp": {
@@ -837,6 +840,7 @@
         "card_fxT37R": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/R5_AI_Adaptive_Map.png",
             "title": "AI Adaptive Map",
             "text": "The R5 never stops learning your space, adapting from each cleaning run to navigate and clean more efficiently next time."
           }
@@ -844,15 +848,16 @@
         "card_a8XQMH": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/R5_Screenshots.png",
             "title": "Marathon Cleaner",
             "text": "With a run time over 4 hours and a 50L solution tank, the R5 can clean up to 5,000 m² per charge, leaving you to focus on more important tasks."
           }
         }
       },
       "block_order": [
-        "card_tRbDT9",
-        "card_DTwxhr",
         "card_Lt44gB",
+        "card_DTwxhr",
+        "card_tRbDT9",
         "card_7bwETp",
         "card_fxT37R",
         "card_a8XQMH"
