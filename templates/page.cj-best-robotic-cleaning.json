@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "robotics-main": {
+      "type": "robotics-page",
+      "blocks": {
+        "robot-1": {
+          "type": "robot",
+          "settings": {
+            "image": "shopify://shop_images/migrated_262_R3_Vac_Quiet_Operator3.png",
+            "name": "R3 Vac",
+            "description": "Say hello to the R3 Vac, the complete vacuum solution. Specially designed for offices, retail stores, community spaces and other indoor areas with high traffic. The R3 Vac is a robotic vacuum that leaves your floors and air cleaner thanks to its HEPA filter.",
+            "link": "shopify://products/r3-vac"
+          }
+        },
+        "robot-2": {
+          "type": "robot",
+          "settings": {
+            "image": "shopify://shop_images/migrated_263_R3_Vac_Zero_Click_Start3.png",
+            "name": "R3 Scrub Pro",
+            "description": "Introducing the R3 Scrub Pro, pro cleaning made easy. The R3 Scrub Pro makes heavy-duty cleaning possible even in tight spaces in airports, supermarkets and healthcare establishments. The R3 Scrub Pro washes, scrubs and dries floors in one movement.",
+            "link": "shopify://products/r3-scrub-pro-lionsbot-robotic-scrubber-dryer"
+          }
+        },
+        "robot-3": {
+          "type": "robot",
+          "settings": {
+            "image": "shopify://shop_images/migrated_247_R12_Rex_Scrub_Super_Fast.png",
+            "name": "R12 Rex Scrub",
+            "description": "With up to 80kg of unadulterated scrubbing power, the Rex is a cleaning powerhouse, delivering dramatic results in just one pass. With two highly-efficient 16-inch brushes, that power is distributed evenly over a larger surface area.",
+            "link": "shopify://products/r12-rex-scrub-lionsbot-robotic-scrubber-drying"
+          }
+        }
+      },
+      "block_order": [
+        "robot-1",
+        "robot-2",
+        "robot-3"
+      ],
+      "settings": {
+        "hero_tag": "AUTONOMOUS CLEANING",
+        "hero_title": "Robotic Cleaning Solutions Ireland",
+        "hero_desc": "Boost efficiency, save time, and improve results with robotic cleaning solutions.",
+        "feature1_title": "Time management:",
+        "feature1_text": "Give you and your team time back to focus on the more detailed parts of your daily tasks. Our robots will do the most time-consuming parts of the cleaning process, so you won't have to!",
+        "feature2_title": "Boost productivity:",
+        "feature2_text": "Enjoy data driven, highly efficient cleaning results with our fleet of robotic cleaning solutions.",
+        "feature3_title": "Turnkey solutions:",
+        "feature3_text": "No matter what sector you work in, our robots are ready to instantly make life easier for you and your cleaners.",
+        "hero_btn_text": "Explore Robotics Range",
+        "hero_btn_link": "shopify://collections/machines-robotic-cleaning-solutions",
+        "invest_title": "Why Invest in Robotic Cleaning?",
+        "invest_text": "In today's fast-paced business world, staying ahead means keeping up with the times. Upgrade your business with state-of-the-art robotic cleaning solutions to ensure top-notch cleanliness that impresses customers. Save money by using resources more efficiently and get real-time information about your cleaning operations for better decision-making. Let automated cleaning handle mundane tasks, so you can focus on more important things. Investing in robotic cleaning solutions also supports sustainability and shows your business cares about the environment. Stand out as an industry leader by embracing the latest in cleaning technology and take your business to the next level.",
+        "invest_btn_text": "Learn More",
+        "invest_btn_link": "shopify://pages/robotic-33",
+        "about_title": "About LionsBot",
+        "about_text": "Founded in Singapore in 2018, LionsBot are industry leaders in autonomous cleaning robots. What started as a dream soon turned to reality, with LionsBot having provided hundreds of their award winning cleaning robots across 30 countries and counting!",
+        "highlights_title": "Highlights",
+        "highlight1_title": "Sustainability",
+        "highlight1_text": "Aware of the potential impact that their robots could have on the environment, LionsBot are committed to reducing this both through designing their robots to be as sustainability as possible, and through charitable partnerships with environmental organisations like EverTreen, and humanitarian organisations such as Charity:Water!",
+        "highlight1_link": "shopify://pages/drive-sustainability-with-robotic-cleaning-solutions",
+        "highlight2_title": "Serving All Sectors",
+        "highlight2_text": "From healthcare to hospitality, manufacturing to offices, our cutting-edge robotic cleaning solutions cover all industries. The beauty of our robots lies in their unparalleled adaptability. They are not limited by sector, instead they seamlessly integrate into various industries, ensuring every environment remains pristine and sanitized.",
+        "highlight2_link": "shopify://pages/addax-electric-utility-vehicles-sectors-1",
+        "highlight3_title": "Data Driven Cleaning",
+        "highlight3_text": "Each Robot is connected online to get real time updates. You can access the LionsBot dashboard through your phone, computer, or the on-board screen of their robots. The LionsBot App will allow users to check & set up their cleaning schedule, get analytics of cleaning done and control their robot entirely from the palm of their hand!",
+        "highlight3_link": "shopify://pages/robotic-custam",
+        "clenli_title": "Why Choose Clenli Direct",
+        "clenli_text": "When investing in robotic cleaning in Ireland, there's only one place to look. With over 30 years of experience in the industry, Clenli Direct has established itself as the market leader, offering award-winning robotic cleaning solutions and comprehensive support. Our deep expertise ensures that you receive the best products tailored to your needs, backed by exceptional customer service.",
+        "clenli_btn_text": "Learn More",
+        "clenli_btn_link": "/pages/why-choose-clenli",
+        "range_title": "The LionsBot Range",
+        "cta_title": "Don't Get Left Behind",
+        "cta_text": "Embrace the future of cleaning and be a part of the new cleaning revolution! No matter your industry, contact us today to learn how our robotic solutions can revolutionize your business.",
+        "phone_number": "01 811 89 20"
+      }
+    },
+    "featured_product_we_t7PKjU": {
+      "type": "featured-product-we",
+      "name": "Product Columns",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "brands-numatic",
+        "new_title": "New Products",
+        "new_collection": "bcc",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "best-sellers",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "newsletter_Gd8Hkg": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_j7bBNa": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "row",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "",
+            "section_title": "Sign up for our newsletter",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 18,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#191919",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 24,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#191919",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#191919",
+            "margin_bottom_des": 45,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 0,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#232323",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 450,
+            "input_border_radius": 0,
+            "input_placeholder_color": "#191919",
+            "input_background_color": "rgba(0,0,0,0)",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "restricted",
+            "show_box_shadow_input": false,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_j7bBNa"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "left",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "robotics-main",
+    "featured_product_we_t7PKjU",
+    "newsletter_Gd8Hkg"
+  ]
+}
