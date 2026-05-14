@@ -16,6 +16,7 @@
           "type": "largeImg",
           "settings": {
             "image": "shopify://shop_images/Robotics_Page.png",
+            "mobile_image": "shopify://shop_images/Robotics_Page_MOBILE.png",
             "enable_max_width_image": false,
             "custom_width_image": 1170,
             "border_radius": 0,
