@@ -1,0 +1,44 @@
+{%- comment -%}
+  Renders an embedded HubSpot form.
+
+  Accepts:
+    - form_id  {String}  HubSpot form UUID. Defaults to the Get In Touch form.
+    - portal_id {String} HubSpot portal ID. Defaults to the Clenli portal.
+    - region   {String}  HubSpot region (e.g. 'eu1'). Defaults to 'eu1'.
+    - target_id {String} DOM id for the form container. Should be unique
+                         per render to avoid collisions when multiple
+                         HubSpot forms appear on a single page.
+
+  Usage:
+    {% render 'hubspot-form',
+       form_id: '1f8cb1c7-b079-4c2f-ae2b-da995b4df40e',
+       target_id: 'hubspot-form-contact'
+    %}
+{%- endcomment -%}
+
+{%- assign hs_form_id = form_id | default: '6c9b927e-bed0-4661-b84f-0c2ea263ad4b' -%}
+{%- assign hs_portal_id = portal_id | default: '146843494' -%}
+{%- assign hs_region = region | default: 'eu1' -%}
+{%- assign hs_target_id = target_id | default: 'hubspot-form' -%}
+
+<div class="hubspot-form-wrapper">
+  <div id="{{ hs_target_id }}"></div>
+  <script charset="utf-8" type="text/javascript" src="//js-{{ hs_region }}.hsforms.net/forms/embed/v2.js" defer></script>
+  <script>
+    (function () {
+      function renderHubspotForm() {
+        if (window.hbspt && window.hbspt.forms) {
+          window.hbspt.forms.create({
+            portalId: '{{ hs_portal_id }}',
+            formId: '{{ hs_form_id }}',
+            region: '{{ hs_region }}',
+            target: '#{{ hs_target_id }}'
+          });
+        } else {
+          setTimeout(renderHubspotForm, 250);
+        }
+      }
+      renderHubspotForm();
+    })();
+  </script>
+</div>

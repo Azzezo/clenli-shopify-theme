@@ -215,6 +215,15 @@
         {%- endif -%}
         
         <!-- Contact Form -->
+        {%- if section.settings.show_hubspot_form -%}
+            {%- assign hs_target_about_form = 'hubspot-form-getintouch-' | append: section_id -%}
+            <div class="cf-form cf-form--hubspot">
+                {% render 'hubspot-form',
+                    form_id: '6c9b927e-bed0-4661-b84f-0c2ea263ad4b',
+                    target_id: hs_target_about_form
+                %}
+            </div>
+        {%- else -%}
         {%- form 'contact', class: 'cf-form' -%}
             {%- if form.posted_successfully? -%}
                 <div class="cf-message success">
@@ -303,6 +312,7 @@
                 <button type="submit">{{ section.settings.button_text }}</button>
             </div>
         {%- endform -%}
+        {%- endif -%}
     </div>
 </section>
 
@@ -312,6 +322,17 @@
     "tag": "section",
     "class": "contact-form-block",
     "settings": [
+        {
+            "type": "header",
+            "content": "HubSpot Form"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_hubspot_form",
+            "label": "Use HubSpot Form",
+            "info": "Replaces the default Shopify contact form with the HubSpot 'Get In Touch' embed.",
+            "default": true
+        },
         {
             "type": "header",
             "content": "Section Heading"

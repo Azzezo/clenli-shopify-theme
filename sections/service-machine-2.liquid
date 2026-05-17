@@ -913,6 +913,15 @@
       <div class="service-divider service-divider--center"></div>
       
       <div class="service-contact-form">
+        {%- if section.settings.show_hubspot_form -%}
+          {%- assign hs_target_svc2 = 'hubspot-form-service2-' | append: section.id -%}
+          <div class="service-form service-form--hubspot">
+            {% render 'hubspot-form',
+              form_id: '6c9b927e-bed0-4661-b84f-0c2ea263ad4b',
+              target_id: hs_target_svc2
+            %}
+          </div>
+        {%- else -%}
         {%- form 'contact', class: 'service-form' -%}
           {%- if form.posted_successfully? -%}
             <div class="service-form__success">
@@ -957,6 +966,7 @@
             <button type="submit" class="service-btn">{{ section.settings.form_button_text }}</button>
           </div>
         {%- endform -%}
+        {%- endif -%}
       </div>
     </div>
   </section>
@@ -1125,6 +1135,13 @@
       "type": "checkbox",
       "id": "show_contact_form",
       "label": "Show Contact Form",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify contact form with the HubSpot 'Get In Touch' embed.",
       "default": true
     },
     {

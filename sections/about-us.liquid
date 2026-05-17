@@ -300,6 +300,15 @@
       <h2 class="section-title">Get In Touch</h2>
       <div class="divider-center"></div>
       <div class="contact-form-wrapper">
+        {% if section.settings.show_hubspot_form %}
+          {%- assign hs_target_aboutus = 'hubspot-form-aboutus-' | append: section.id -%}
+          <div class="contact-form contact-form--hubspot">
+            {% render 'hubspot-form',
+              form_id: '6c9b927e-bed0-4661-b84f-0c2ea263ad4b',
+              target_id: hs_target_aboutus
+            %}
+          </div>
+        {% else %}
         {% form 'contact', class: 'contact-form' %}
           {% if form.posted_successfully? %}
             <div class="form-success">
@@ -340,6 +349,7 @@
             </div>
           </div>
         {% endform %}
+        {% endif %}
       </div>
     </div>
   </section>
@@ -349,6 +359,14 @@
 {
   "name": "About Us Page",
   "settings": [
+    { "type": "header", "content": "Get In Touch Form" },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify contact form with the HubSpot 'Get In Touch' embed.",
+      "default": true
+    },
     { "type": "header", "content": "Hero Section" },
     { "type": "image_picker", "id": "hero_bg", "label": "Hero Background" },
     { "type": "text", "id": "hero_title", "label": "Title", "default": "About Clenli Direct" },
