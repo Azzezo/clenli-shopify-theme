@@ -746,7 +746,14 @@
                 
                 <div class="sp-form-box">
                     <h5 class="sp-form-title">{{ section.settings.form_title }}</h5>
-                    
+
+                    {%- if section.settings.show_hubspot_form -%}
+                        {%- assign hs_target_sachet = 'hubspot-form-gogreen-sachet-' | append: section.id -%}
+                        {% render 'hubspot-form',
+                            form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+                            target_id: hs_target_sachet
+                        %}
+                    {%- else -%}
                     {%- form 'contact', class: 'sp-quote-form' -%}
                         {%- if form.posted_successfully? -%}
                             <div class="sp-message success">
@@ -782,6 +789,7 @@
                             <button type="submit">{{ section.settings.submit_btn_text }}</button>
                         </div>
                     {%- endform -%}
+                    {%- endif -%}
                 </div>
             </div>
         </section>
@@ -795,6 +803,17 @@
     "tag": "section",
     "class": "sachet-system-page",
     "settings": [
+        {
+            "type": "header",
+            "content": "Enquiry Form"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_hubspot_form",
+            "label": "Use HubSpot Form",
+            "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+            "default": true
+        },
         {
             "type": "header",
             "content": "Layout Settings"

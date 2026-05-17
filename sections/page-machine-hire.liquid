@@ -531,6 +531,13 @@
       <!-- Enquiry Form -->
       <div class="hire-enquiry-form">
         <h3>GO GREEN TODAY ENQUIRE NOW</h3>
+        {% if section.settings.show_hubspot_form %}
+          {%- assign hs_target_mh = 'hubspot-form-gogreen-mh-' | append: section.id -%}
+          {% render 'hubspot-form',
+            form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+            target_id: hs_target_mh
+          %}
+        {% else %}
         {% form 'contact' %}
           <div class="form-row">
             <div class="form-group">
@@ -553,6 +560,7 @@
           </div>
           <button type="submit">Submit</button>
         {% endform %}
+        {% endif %}
       </div>
     </div>
 
@@ -565,6 +573,17 @@
   "tag": "section",
   "class": "section-machine-hire",
   "settings": [
+    {
+      "type": "header",
+      "content": "Enquiry Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Hero Section"

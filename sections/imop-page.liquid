@@ -365,6 +365,13 @@
           <a href="tel:{{ section.settings.phone }}" class="imop-call-btn">CALL NOW</a>
           <div class="imop-enquiry-form">
             <h3>{{ section.settings.form_title }}</h3>
+            {% if section.settings.show_hubspot_form %}
+              {%- assign hs_target_imop = 'hubspot-form-gogreen-imop-' | append: section.id -%}
+              {% render 'hubspot-form',
+                form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+                target_id: hs_target_imop
+              %}
+            {% else %}
             {% form 'contact' %}
               <div class="imop-form-group">
                 <input type="text" name="contact[name]" placeholder="NAME" required>
@@ -380,6 +387,7 @@
               </div>
               <button type="submit" class="imop-btn imop-btn--full">Submit</button>
             {% endform %}
+            {% endif %}
           </div>
         </div>
       </div>
@@ -824,6 +832,17 @@
 {
   "name": "i-Mop Page",
   "settings": [
+    {
+      "type": "header",
+      "content": "Enquiry Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Hero Section"

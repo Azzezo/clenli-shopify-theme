@@ -236,6 +236,13 @@
           <a href="tel:{{ section.settings.phone_number }}" class="robotics-btn robotics-btn--call">CALL NOW</a>
           <div class="robotics-enquiry-form">
             <h3>GO GREEN TODAY ENQUIRE NOW</h3>
+            {% if section.settings.show_hubspot_form %}
+              {%- assign hs_target_robotics = 'hubspot-form-gogreen-robotics-' | append: section.id -%}
+              {% render 'hubspot-form',
+                form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+                target_id: hs_target_robotics
+              %}
+            {% else %}
             {% form 'contact' %}
               <div class="robotics-form-group">
                 <input type="text" name="contact[name]" placeholder="NAME" required>
@@ -251,6 +258,7 @@
               </div>
               <button type="submit" class="robotics-btn robotics-btn--submit">Submit</button>
             {% endform %}
+            {% endif %}
           </div>
         </div>
       </div>
@@ -616,6 +624,17 @@
 {
   "name": "Robotics Page",
   "settings": [
+    {
+      "type": "header",
+      "content": "Enquiry Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Hero Section"

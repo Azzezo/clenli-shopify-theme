@@ -391,7 +391,14 @@
         {% comment %} Enquiry Form {% endcomment %}
         <div class="gc-enquiry-form">
           <h5>{{ section.settings.form_heading }}</h5>
-          
+
+          {% if section.settings.show_hubspot_form %}
+            {%- assign hs_target_gcleaning = 'hubspot-form-gogreen-gcleaning-' | append: section.id -%}
+            {% render 'hubspot-form',
+              form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+              target_id: hs_target_gcleaning
+            %}
+          {% else %}
           {% form 'contact', id: 'green-enquiry-form' %}
             {% if form.posted_successfully? %}
               <div class="gc-form-success">
@@ -438,6 +445,7 @@
             
             <button type="submit" class="gc-submit-btn">Submit</button>
           {% endform %}
+          {% endif %}
         </div>
         
       </div>
@@ -452,6 +460,17 @@
   "tag": "section",
   "class": "green-cleaning-section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Enquiry Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Hero Banner"

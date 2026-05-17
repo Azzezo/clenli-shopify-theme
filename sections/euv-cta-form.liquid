@@ -35,7 +35,14 @@
                 <!-- Form Box -->
                 <div class="form-box">
                     <h5 class="form-title">{{ section.settings.form_title }}</h5>
-                    
+
+                    {% if section.settings.show_hubspot_form %}
+                        {%- assign hs_target_euv = 'hubspot-form-gogreen-euv-' | append: section.id -%}
+                        {% render 'hubspot-form',
+                            form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+                            target_id: hs_target_euv
+                        %}
+                    {% else %}
                     {% form 'contact', class: 'euv-contact-form' %}
                         
                         {%- if form.posted_successfully? -%}
@@ -69,6 +76,7 @@
                         <button type="submit" class="submit-btn">{{ section.settings.submit_text }}</button>
                         
                     {% endform %}
+                    {% endif %}
                 </div>
             </div>
             
@@ -293,6 +301,17 @@
     "name": "EUV CTA Form 50-50",
     "tag": "section",
     "settings": [
+        {
+            "type": "header",
+            "content": "Enquiry Form"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_hubspot_form",
+            "label": "Use HubSpot Form",
+            "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+            "default": true
+        },
         {
             "type": "header",
             "content": "Left Content (50%)"

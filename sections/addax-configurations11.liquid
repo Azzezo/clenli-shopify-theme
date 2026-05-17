@@ -67,6 +67,13 @@ Upload to: Shopify Admin > Themes > Edit Code > Sections
       "content": "Contact Form Settings"
     },
     {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+      "default": true
+    },
+    {
       "type": "text",
       "id": "contact_title",
       "label": "Contact Form Title",
@@ -800,6 +807,13 @@ Upload to: Shopify Admin > Themes > Edit Code > Sections
 
                 <div class="contact-form">
                     <h3>Request a Quote</h3>
+                    {% if section.settings.show_hubspot_form %}
+                        {%- assign hs_target_addaxcfg = 'hubspot-form-gogreen-addaxcfg-' | append: section.id -%}
+                        {% render 'hubspot-form',
+                            form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+                            target_id: hs_target_addaxcfg
+                        %}
+                    {% else %}
                     {% form 'contact' %}
                         {% if form.posted_successfully? %}
                             <div class="success-message">
@@ -844,6 +858,7 @@ Upload to: Shopify Admin > Themes > Edit Code > Sections
 
                         <button type="submit" class="btn-submit">Submit Enquiry</button>
                     {% endform %}
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -354,6 +354,14 @@
           {% endif %}
           
           <div class="sidebar-enquire">
+            {% if section.settings.show_hubspot_form %}
+              <h5>{{ section.settings.form_heading | default: 'GO GREEN TODAY ENQUIRE NOW' }}</h5>
+              {%- assign hs_target_about1122 = 'hubspot-form-gogreen-about1122-' | append: section.id -%}
+              {% render 'hubspot-form',
+                form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+                target_id: hs_target_about1122
+              %}
+            {% else %}
             {% form 'contact' %}
               <h5>{{ section.settings.form_heading | default: 'GO GREEN TODAY ENQUIRE NOW' }}</h5>
               
@@ -413,6 +421,7 @@
                 </button>
               </div>
             {% endform %}
+            {% endif %}
           </div>
         </div>
       </div>
@@ -705,6 +714,17 @@ p {
 {
   "name": "Addax Utility Vehicles",
   "settings": [
+    {
+      "type": "header",
+      "content": "Enquiry Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Section Spacing"

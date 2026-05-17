@@ -148,6 +148,13 @@
           
           <div class="quote-form-box">
             <h5>{{ section.settings.form_title | default: 'GO GREEN TODAY ENQUIRE NOW' }}</h5>
+            {% if section.settings.show_hubspot_form %}
+              {%- assign hs_target_ctersone = 'hubspot-form-gogreen-ctersone-' | append: section.id -%}
+              {% render 'hubspot-form',
+                form_id: '03da5c3c-6669-4ae1-843b-985c17935c7f',
+                target_id: hs_target_ctersone
+              %}
+            {% else %}
             {% form 'contact', class: 'quote-form' %}
               <div class="form-group">
                 <input type="text" name="contact[name]" placeholder="NAME" required>
@@ -164,6 +171,7 @@
               <input type="hidden" name="contact[subject]" value="Tersano Enquiry">
               <button type="submit" class="btn-submit">Submit</button>
             {% endform %}
+            {% endif %}
           </div>
         </div>
         <div class="tersano-col-6">
@@ -746,6 +754,17 @@ document.addEventListener('DOMContentLoaded', function() {
   "tag": "section",
   "class": "tersano-landing-section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Enquiry Form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify enquiry form with the HubSpot 'Go Green Today' embed.",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Colors"
