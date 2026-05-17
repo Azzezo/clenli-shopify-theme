@@ -373,77 +373,83 @@
           <h3 class="title">{{ section.settings.form_heading | default: 'Leave us a Message' }}</h3>
         </div>
 
-        {% form 'contact', class: 'contact-form' %}
-          {% if form.posted_successfully? %}
-            <div class="form-success">
-              <p>
-                {{
-                  section.settings.success_message
-                  | default: 'Thank you for your message. We will get back to you shortly.'
-                }}
-              </p>
+        {% if section.settings.form_embed != blank %}
+          <div class="contact-form contact-form--embed">
+            {{ section.settings.form_embed }}
+          </div>
+        {% else %}
+          {% form 'contact', class: 'contact-form' %}
+            {% if form.posted_successfully? %}
+              <div class="form-success">
+                <p>
+                  {{
+                    section.settings.success_message
+                    | default: 'Thank you for your message. We will get back to you shortly.'
+                  }}
+                </p>
+              </div>
+            {% endif %}
+
+            {% if form.errors %}
+              <div class="form-errors">
+                {{ form.errors | default_errors }}
+              </div>
+            {% endif %}
+
+            <div class="form-field required">
+              <label for="contact-name">Name</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="contact[name]"
+                placeholder="Your Name"
+                required
+                value="{{ form.name }}"
+              >
             </div>
-          {% endif %}
 
-          {% if form.errors %}
-            <div class="form-errors">
-              {{ form.errors | default_errors }}
+            <div class="form-field required">
+              <label for="contact-email">Email</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="contact[email]"
+                placeholder="Your Email"
+                required
+                autocomplete="email"
+                value="{{ form.email }}"
+              >
             </div>
-          {% endif %}
 
-          <div class="form-field required">
-            <label for="contact-name">Name</label>
-            <input
-              type="text"
-              id="contact-name"
-              name="contact[name]"
-              placeholder="Your Name"
-              required
-              value="{{ form.name }}"
-            >
-          </div>
+            <div class="form-field">
+              <label for="contact-phone">Phone Number</label>
+              <input
+                type="tel"
+                id="contact-phone"
+                name="contact[phone]"
+                placeholder="Your Phone Number"
+                value="{{ form.phone }}"
+              >
+            </div>
 
-          <div class="form-field required">
-            <label for="contact-email">Email</label>
-            <input
-              type="email"
-              id="contact-email"
-              name="contact[email]"
-              placeholder="Your Email"
-              required
-              autocomplete="email"
-              value="{{ form.email }}"
-            >
-          </div>
+            <div class="form-field required">
+              <label for="contact-message">What's on your mind?</label>
+              <textarea
+                id="contact-message"
+                name="contact[body]"
+                placeholder="Your Message"
+                rows="5"
+                required
+              >{{ form.body }}</textarea>
+            </div>
 
-          <div class="form-field">
-            <label for="contact-phone">Phone Number</label>
-            <input
-              type="tel"
-              id="contact-phone"
-              name="contact[phone]"
-              placeholder="Your Phone Number"
-              value="{{ form.phone }}"
-            >
-          </div>
-
-          <div class="form-field required">
-            <label for="contact-message">What's on your mind?</label>
-            <textarea
-              id="contact-message"
-              name="contact[body]"
-              placeholder="Your Message"
-              rows="5"
-              required
-            >{{ form.body }}</textarea>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">
-              {{ section.settings.button_text | default: 'Submit' }}
-            </button>
-          </div>
-        {% endform %}
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                {{ section.settings.button_text | default: 'Submit' }}
+              </button>
+            </div>
+          {% endform %}
+        {% endif %}
       </div>
 
       <!-- Contact Info -->
@@ -630,6 +636,12 @@
       "id": "form_heading",
       "label": "Form Heading",
       "default": "Leave us a Message"
+    },
+    {
+      "type": "html",
+      "id": "form_embed",
+      "label": "Custom Form Embed",
+      "info": "Paste a third-party form embed here to replace the default Shopify contact form."
     },
     {
       "type": "text",
