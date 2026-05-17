@@ -373,7 +373,29 @@
           <h3 class="title">{{ section.settings.form_heading | default: 'Leave us a Message' }}</h3>
         </div>
 
-        {% if section.settings.form_embed != blank %}
+        {% if section.settings.show_hubspot_form %}
+          <div class="contact-form contact-form--embed contact-form--hubspot">
+            <div id="hubspot-form-{{ section.id }}"></div>
+            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js" defer></script>
+            <script>
+              (function () {
+                function renderHubspotForm() {
+                  if (window.hbspt && window.hbspt.forms) {
+                    window.hbspt.forms.create({
+                      portalId: '146843494',
+                      formId: '1f8cb1c7-b079-4c2f-ae2b-da995b4df40e',
+                      region: 'eu1',
+                      target: '#hubspot-form-{{ section.id }}'
+                    });
+                  } else {
+                    setTimeout(renderHubspotForm, 250);
+                  }
+                }
+                renderHubspotForm();
+              })();
+            </script>
+          </div>
+        {% elsif section.settings.form_embed != blank %}
           <div class="contact-form contact-form--embed">
             {{ section.settings.form_embed }}
           </div>
@@ -638,10 +660,17 @@
       "default": "Leave us a Message"
     },
     {
+      "type": "checkbox",
+      "id": "show_hubspot_form",
+      "label": "Use HubSpot Form",
+      "info": "Replaces the default Shopify contact form with the HubSpot embed.",
+      "default": false
+    },
+    {
       "type": "html",
       "id": "form_embed",
       "label": "Custom Form Embed",
-      "info": "Paste a third-party form embed here to replace the default Shopify contact form."
+      "info": "Optional fallback. Used only when 'Use HubSpot Form' is off. Note: Shopify may strip <script> tags from HTML settings."
     },
     {
       "type": "text",

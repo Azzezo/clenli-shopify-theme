@@ -14,7 +14,8 @@
       "settings": {
         "heading": "Contact Us",
         "form_heading": "Leave us a Message",
-        "form_embed": "<script charset=\"utf-8\" type=\"text/javascript\" src=\"//js-eu1.hsforms.net/forms/embed/v2.js\"></script>\n<script>\n  hbspt.forms.create({\n    portalId: \"146843494\",\n    formId: \"1f8cb1c7-b079-4c2f-ae2b-da995b4df40e\",\n    region: \"eu1\"\n  });\n</script>",
+        "show_hubspot_form": true,
+        "form_embed": "",
         "button_text": "Submit",
         "success_message": "Thank you for your message. We will get back to you shortly.",
         "info_heading": "Our Address",
