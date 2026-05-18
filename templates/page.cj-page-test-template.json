@@ -203,7 +203,7 @@
         "title_align": "center",
         "cover_image": "shopify://shop_images/R5_Close_Up_Eyes.png",
         "autoplay": false,
-        "video_sound": false,
+        "video_sound": true,
         "video_height": "54",
         "video_height_mb": "54",
         "style_video": "youtube",
@@ -401,7 +401,7 @@
           "settings": {
             "image": "shopify://shop_images/R5_AI_NaviSense.png",
             "title": "AI NavSense",
-            "text": "The R5's advacned sensor network spots obstacles, finds the best way around, and gets back on track on its own."
+            "text": "The R5's advanced sensor network spots obstacles, finds the best way around, and gets back on track on its own."
           }
         }
       },
@@ -1047,6 +1047,7 @@
       "type": "about-form",
       "name": "Contact Form",
       "settings": {
+        "show_hubspot_form": true,
         "heading": "",
         "heading_color": "#6fb31a",
         "heading_size": 32,
