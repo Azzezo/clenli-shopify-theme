@@ -261,6 +261,7 @@
         },
         "custom_8gEkyC": {
           "type": "custom",
+          "disabled": true,
           "settings": {
             "open_tab_mobile": false,
             "title": "Features & Benefits",
@@ -274,6 +275,7 @@
         },
         "custom_X7jVHX": {
           "type": "custom",
+          "disabled": true,
           "settings": {
             "open_tab_mobile": false,
             "title": "Specifications",
@@ -541,7 +543,7 @@
         "heading_ACJJ3U": {
           "type": "heading",
           "settings": {
-            "heading": "What Makes the R5 Special?",
+            "heading": "Simple to Use",
             "heading_size": 30,
             "heading_size_mb": 30,
             "heading_line_height": 1.3,
@@ -551,7 +553,7 @@
         "text_7pEYBE": {
           "type": "text",
           "settings": {
-            "text": "<p><b>See the R5 in action, and learn why it is a must for large open areas!</p>",
+            "text": "<p><b>See how simple it is to use PVA with our handy video below!</p>",
             "text_size": 16,
             "text_size_mb": 12,
             "text_font_weight": "400",
