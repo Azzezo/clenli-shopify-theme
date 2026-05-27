@@ -688,7 +688,7 @@
             "heading_weight": "700",
             "heading_transform": "none",
             "heading_letter_spacing": "0em",
-            "heading_color": "#1a1a1a",
+            "heading_color": "#6fb31a",
             "heading_spacing": 40,
             "column_1_content": "<table width=\"100%\" style=\"width: 100%%; color: #555555; border-collapse: collapse;\" cellpadding=\"10\">\n<tbody>\n<tr style=\"color: #ffffff; background-color: #6fb31a;\">\n<td style=\"width: 50%;\"><strong> Specification</strong></td>\n<td style=\"width: 50%; text-align: center;\"><strong>Measurement</strong></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Run Time</td>\n<td style=\"width: 50%; text-align: center;\">4 hours 20 mins</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Charge Time</td>\n<td style=\"width: 50%; text-align: center;\">3.5 hours</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Cleaning Speed</td>\n<td style=\"width: 50%; text-align: center;\">Up to 1.1 m/sec</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Pressure</td>\n<td style=\"width: 50%; text-align: center;\">34 g/cm<span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">²</span>\n</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Performance</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">Up to 2059 m²/h</span></td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Debris Filter</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">1.25 L</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Recovery Tank</td>\n<td style=\"width: 50%; text-align: center;\">42 L</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Solution Tank</td>\n<td style=\"width: 50%; text-align: center;\">50 L</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Average Sound Level</td>\n<td style=\"width: 50%; text-align: center;\">70 dB</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Width</td>\n<td style=\"width: 50%; text-align: center;\">530 mm</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Weight</td>\n<td style=\"width: 50%; text-align: center;\">200 kg</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Dimensions (mm)</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">690 x 690 x 1125</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Manufacturer</td>\n<td style=\"width: 50%; text-align: center;\">LionsBot</td>\n</tr>\n</tbody>\n</table>",
             "column_2_content": "<table width=\"100%\" style=\"width: 100%%; color: #555555; border-collapse: collapse;\" cellpadding=\"10\">\n<tbody>\n<tr style=\"color: #ffffff; background-color: #6fb31a;\">\n<td style=\"width: 50%;\"><strong> Specification</strong></td>\n<td style=\"width: 50%; text-align: center;\"><strong>Measurement</strong></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Run Time</td>\n<td style=\"width: 50%; text-align: center;\">4 hours 20 mins</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Charge Time</td>\n<td style=\"width: 50%; text-align: center;\">3.5 hours</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Cleaning Speed</td>\n<td style=\"width: 50%; text-align: center;\">Up to 1.1 m/sec</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Pressure</td>\n<td style=\"width: 50%; text-align: center;\">34 g/cm<span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">²</span>\n</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Performance</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">Up to 2059 m²/h</span></td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Debris Filter</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">1.25 L</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Recovery Tank</td>\n<td style=\"width: 50%; text-align: center;\">42 L</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Solution Tank</td>\n<td style=\"width: 50%; text-align: center;\">50 L</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Average Sound Level</td>\n<td style=\"width: 50%; text-align: center;\">70 dB</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Width</td>\n<td style=\"width: 50%; text-align: center;\">530 mm</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Weight</td>\n<td style=\"width: 50%; text-align: center;\">200 kg</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Dimensions (mm)</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">690 x 690 x 1125</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Manufacturer</td>\n<td style=\"width: 50%; text-align: center;\">LionsBot</td>\n</tr>\n</tbody>\n</table>",
@@ -773,126 +773,6 @@
       ],
       "settings": {}
     },
-    "rich_text_3UFqTL": {
-      "type": "rich-text",
-      "blocks": {
-        "text_Dpxchy": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000000",
-            "text_width": "100%"
-          }
-        }
-      },
-      "block_order": [
-        "text_Dpxchy"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "sachet_system_benehit_gftVd3": {
-      "type": "sachet-system-benehit",
-      "blocks": {
-        "card_Lt44gB": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/R5_wide_shot.jpg",
-            "title": "Powerful Performer",
-            "text": "Strong 34 g/cm² brush pressure makes cleaning look easy, lifting dirt and grime hidden deep within floors in one pass."
-          }
-        },
-        "card_DTwxhr": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/R5_Pro_Power.png",
-            "title": "Complete Cleaning",
-            "text": "The R5's Tri-Brush system delivers consistent, gap-free performance that leaves no uncleaned strips behind."
-          }
-        },
-        "card_tRbDT9": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/R5_360_Turning.png",
-            "title": "Never Gets Stuck",
-            "text": "360° turning capabilities allows the R5 to easily navigate tight spaces and dead-end corners without ever getting stuck."
-          }
-        },
-        "card_7bwETp": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/R5_Close_Up_Eyes.png",
-            "title": "All Seeing Solution",
-            "text": "From 3D LiDAR and depth cameras to ultrasonic sensors and sonar, The R5 sees everything and misses nothing."
-          }
-        },
-        "card_fxT37R": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/R5_AI_Adaptive_Map.png",
-            "title": "AI Adaptive Map",
-            "text": "The R5 never stops learning your space, adapting from each cleaning run to navigate and clean more efficiently next time."
-          }
-        },
-        "card_a8XQMH": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/R5_Screenshots.png",
-            "title": "Marathon Cleaner",
-            "text": "With a run time over 4 hours and a 50L solution tank, the R5 can clean up to 5,000 m² per charge, leaving you to focus on more important tasks."
-          }
-        }
-      },
-      "block_order": [
-        "card_Lt44gB",
-        "card_DTwxhr",
-        "card_tRbDT9",
-        "card_7bwETp",
-        "card_fxT37R",
-        "card_a8XQMH"
-      ],
-      "name": "Benefits Cards",
-      "settings": {
-        "heading": "R5 Features",
-        "subtext": "",
-        "bottom_heading": "",
-        "bottom_text": "",
-        "columns": 3,
-        "card_gap": 30,
-        "heading_size": 32,
-        "card_radius": 8,
-        "bg_color": "#ffffff",
-        "card_bg": "#ffffff",
-        "heading_color": "#6fb31a",
-        "text_color": "#555555",
-        "divider_color": "#6fb31a",
-        "padding_top": 10,
-        "padding_bottom": 10
-      }
-    },
     "rich_text_kiRCk3": {
       "type": "rich-text",
       "name": "t:sections.rich-text.presets.name",
@@ -935,87 +815,6 @@
       },
       "block_order": [
         "text_DVP4ac"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_z8p7Yn": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_EeRUYR": {
-          "type": "heading",
-          "settings": {
-            "heading": "R5 Technical Specifications",
-            "heading_size": 30,
-            "heading_size_mb": 30,
-            "heading_line_height": 1.3,
-            "heading_color": "#6fb31a"
-          }
-        },
-        "content_MEJi8b": {
-          "type": "content",
-          "settings": {
-            "content_top": "<b>With long run times and high productivity, discover why the R5 is the only option in autonomous cleaning.</p>",
-            "content_bottom": "",
-            "alignment_content": "center",
-            "content_size": 16,
-            "margin_top_content": 20,
-            "content_color": "#555555",
-            "content_width": "100%",
-            "button_text_more": "",
-            "button_text_less": "",
-            "button_text_font_size": 14,
-            "button_text_font_weight": "500",
-            "margin_top_button_text": 30,
-            "button_text_color": "#ffffff",
-            "button_text_border_color": "#000000",
-            "button_text_bg_color": "#000000",
-            "button_text_bg_color_gradient": "",
-            "button_text_color_hover": "#000000",
-            "button_text_border_color_hover": "#000000",
-            "button_text_bg_color_hover": "#ffffff",
-            "button_text_bg_color_hover_gradient": "",
-            "button_text_more_width": 270,
-            "pd_top_button_text": 12,
-            "pd_bottom_button_text": 12
-          }
-        },
-        "text_UJUmMf": {
-          "type": "text",
-          "settings": {
-            "text": "<table width=\"100%\" style=\"width: 100%%; color: #555555; border-collapse: collapse;\" cellpadding=\"10\">\n<tbody>\n<tr style=\"color: #ffffff; background-color: #6fb31a;\">\n<td style=\"width: 50%;\"><strong> Specification</strong></td>\n<td style=\"width: 50%; text-align: center;\"><strong>Measurement</strong></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Run Time</td>\n<td style=\"width: 50%; text-align: center;\">4 hours 20 mins</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Charge Time</td>\n<td style=\"width: 50%; text-align: center;\">3.5 hours</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Cleaning Speed</td>\n<td style=\"width: 50%; text-align: center;\">Up to 1.1 m/sec</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Pressure</td>\n<td style=\"width: 50%; text-align: center;\">34 g/cm<span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">²</span>\n</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Performance</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">Up to 2059 m²/h</span></td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Debris Filter</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">1.25 L</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Recovery Tank</td>\n<td style=\"width: 50%; text-align: center;\">42 L</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Solution Tank</td>\n<td style=\"width: 50%; text-align: center;\">50 L</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Average Sound Level</td>\n<td style=\"width: 50%; text-align: center;\">70 dB</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Width</td>\n<td style=\"width: 50%; text-align: center;\">530 mm</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Weight</td>\n<td style=\"width: 50%; text-align: center;\">200 kg</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Dimensions (mm)</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">690 x 690 x 1125</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Manufacturer</td>\n<td style=\"width: 50%; text-align: center;\">LionsBot</td>\n</tr>\n</tbody>\n</table>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000000",
-            "text_width": "100%"
-          }
-        }
-      },
-      "block_order": [
-        "heading_EeRUYR",
-        "content_MEJi8b",
-        "text_UJUmMf"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -1126,11 +925,8 @@
     "sachet_system_benehit_dwwn4V",
     "1779875547515574d1",
     "1779877912ceb0046d",
-    "rich_text_3UFqTL",
-    "sachet_system_benehit_gftVd3",
     "rich_text_kiRCk3",
     "rich_text_pkVCE6",
-    "rich_text_z8p7Yn",
     "product-recommendations",
     "featured_products",
     "apps",
