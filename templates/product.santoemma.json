@@ -506,7 +506,7 @@
         "card_radius": 8,
         "bg_color": "#f8f9fa",
         "card_bg": "#ffffff",
-        "heading_color": "#1a1a1a",
+        "heading_color": "#6fb31a",
         "text_color": "#555555",
         "divider_color": "#6fb31a",
         "padding_top": 60,
@@ -566,14 +566,6 @@
       ],
       "settings": {}
     },
-    "1779870649df98a3f5": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "177987231543cc609e": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "1779877912ceb0046d": {
       "type": "_blocks",
       "blocks": {
@@ -628,9 +620,9 @@
             "label_margin_bottom": 8,
             "description_font_size": 13,
             "background_color": "#f5f5f5",
-            "heading_color": "#000000",
-            "value_color": "#000000",
-            "label_color": "#333333",
+            "heading_color": "#6fb31a",
+            "value_color": "#6fb31a",
+            "label_color": "#555555",
             "description_color": "#666666",
             "section_padding_top": 60,
             "section_padding_bottom": 60,
@@ -646,7 +638,7 @@
             "heading_size": 36,
             "heading_weight": "700",
             "heading_transform": "none",
-            "heading_color": "#1a1a1a",
+            "heading_color": "#6fb31a",
             "heading_margin_bottom": 40,
             "desktop_width_percent": 100,
             "section_padding_top": 60,
@@ -664,14 +656,14 @@
             "image_border_radius": 4,
             "feature_heading_size": 18,
             "feature_heading_weight": "600",
-            "feature_heading_color": "#1a1a1a",
+            "feature_heading_color": "#6fb31a",
             "feature_heading_margin": 10,
             "feature_text_size": 14,
-            "feature_text_color": "#666666",
+            "feature_text_color": "#555555",
             "feature_text_margin": 12,
             "bullet_text_size": 13,
-            "bullet_text_color": "#666666",
-            "bullet_color": "#1a1a1a",
+            "bullet_text_color": "#555555",
+            "bullet_color": "#6fb31a",
             "feature_1_enabled": true,
             "feature_1_heading": "Ergonomic Operation",
             "feature_1_text": "<p>Designed for extended use with minimal operator fatigue.</p>",
@@ -694,10 +686,6 @@
       ],
       "settings": {}
     },
-    "1779879288d704e0f3": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "rich_text_3UFqTL": {
       "type": "rich-text",
       "blocks": {
@@ -717,144 +705,6 @@
       },
       "block_order": [
         "text_Dpxchy"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_FX8e7t": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ACJJ3U": {
-          "type": "heading",
-          "settings": {
-            "heading": "What Makes the R5 Special?",
-            "heading_size": 30,
-            "heading_size_mb": 30,
-            "heading_line_height": 1.3,
-            "heading_color": "#6fb31a"
-          }
-        },
-        "text_7pEYBE": {
-          "type": "text",
-          "settings": {
-            "text": "<p><b>See the R5 in action, and learn why it is a must for large open areas!</p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#555555",
-            "text_width": "800px"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ACJJ3U",
-        "text_7pEYBE"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#ffffff",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 10,
-        "mg_top_tablet": 10,
-        "mg_top_mobile": 10,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_PWY6aY": {
-      "type": "rich-text",
-      "blocks": {
-        "text_dKQ4BP": {
-          "type": "text",
-          "settings": {
-            "text": "<div class=\"row\">\n<div class=\"col-sm-1\"><br></div>\n<div class=\"col-sm-10\">\n<div style=\"text-align: center;\" class=\"videoWrapper\"><iframe title=\"LionsBot R5 | Robotic Scrubber Dryer | Autonomous Floor Cleaning\" src=\"https://www.youtube.com/embed/ZBD0c7OGu2E\" height=\"695\" width=\"1236\"></iframe></div>\n</div>\n</div>\n<style>.videoWrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0; overflow: hidden; } .videoWrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } </style>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000000",
-            "text_width": "80%"
-          }
-        }
-      },
-      "block_order": [
-        "text_dKQ4BP"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "17798830492c254d25": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "rich_text_ncrCAe": {
-      "type": "rich-text",
-      "blocks": {
-        "text_bApFNQ": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000000",
-            "text_width": "100%"
-          }
-        }
-      },
-      "block_order": [
-        "text_bApFNQ"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -958,117 +808,6 @@
     },
     "rich_text_kiRCk3": {
       "type": "rich-text",
-      "blocks": {
-        "text_k7TKd8": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000000",
-            "text_width": "100%"
-          }
-        }
-      },
-      "block_order": [
-        "text_k7TKd8"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_R4etPa": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_bnYBwd": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why Invest in Robotics?",
-            "heading_size": 30,
-            "heading_size_mb": 30,
-            "heading_line_height": 1.3,
-            "heading_color": "#6fb31a"
-          }
-        },
-        "text_4rqGgH": {
-          "type": "text",
-          "settings": {
-            "text": "<p><b>While there is no “one answer” for everybody, if you are interested in increasing productivity, having a cleaner facility, giving time back to your cleaners to focus on the finer details, or lowering your environmental impact, robotic cleaning solutions can hold the key!\n<br>\n<br>Below are some of the common reasons why you should consider automating your cleaning process.</p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#555555",
-            "text_width": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_bnYBwd",
-        "text_4rqGgH"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#ffffff",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 10,
-        "mg_top_tablet": 10,
-        "mg_top_mobile": 10,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_6nekzj": {
-      "type": "rich-text",
-      "blocks": {
-        "text_rJXYrd": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0948/6378/6359/files/Why_Invest_in_Robotics.png?v=1778505800\" alt=\"\"></p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000000",
-            "text_width": "90%"
-          }
-        }
-      },
-      "block_order": [
-        "text_rJXYrd"
-      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "container": "container",
@@ -1299,19 +1038,10 @@
     "rich_text_VPtywK",
     "sachet_system_benehit_dwwn4V",
     "1779875547515574d1",
-    "1779870649df98a3f5",
-    "177987231543cc609e",
     "1779877912ceb0046d",
-    "1779879288d704e0f3",
     "rich_text_3UFqTL",
-    "rich_text_FX8e7t",
-    "rich_text_PWY6aY",
-    "17798830492c254d25",
-    "rich_text_ncrCAe",
     "sachet_system_benehit_gftVd3",
     "rich_text_kiRCk3",
-    "rich_text_R4etPa",
-    "rich_text_6nekzj",
     "rich_text_pkVCE6",
     "rich_text_z8p7Yn",
     "product-recommendations",
