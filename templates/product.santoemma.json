@@ -682,7 +682,7 @@
         "ai_gen_block_e2232ce_xhmf6T": {
           "type": "ai_gen_block_e2232ce",
           "settings": {
-            "heading": "Professional cleaning solutions",
+            "heading": "TECHNICAL SPECIFICATIONS",
             "heading_alignment": "center",
             "heading_size": 32,
             "heading_weight": "700",
@@ -698,7 +698,7 @@
             "text_size": 15,
             "text_line_height": 1.6,
             "column_padding": 30,
-            "column_gap": 30,
+            "column_gap": 15,
             "mobile_column_gap": 20,
             "border_width": 0,
             "border_color": "#FFFFFF",
