@@ -509,8 +509,8 @@
         "heading_color": "#6fb31a",
         "text_color": "#555555",
         "divider_color": "#6fb31a",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 30,
+        "padding_bottom": 15
       }
     },
     "1779875547515574d1": {
@@ -678,11 +678,42 @@
             "feature_3_bullets": ""
           },
           "blocks": {}
+        },
+        "ai_gen_block_e2232ce_xhmf6T": {
+          "type": "ai_gen_block_e2232ce",
+          "settings": {
+            "heading": "Professional cleaning solutions",
+            "heading_alignment": "center",
+            "heading_size": 32,
+            "heading_weight": "700",
+            "heading_transform": "none",
+            "heading_letter_spacing": "0em",
+            "heading_color": "#1a1a1a",
+            "heading_spacing": 40,
+            "column_1_content": "<table width=\"100%\" style=\"width: 100%%; color: #555555; border-collapse: collapse;\" cellpadding=\"10\">\n<tbody>\n<tr style=\"color: #ffffff; background-color: #6fb31a;\">\n<td style=\"width: 50%;\"><strong> Specification</strong></td>\n<td style=\"width: 50%; text-align: center;\"><strong>Measurement</strong></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Run Time</td>\n<td style=\"width: 50%; text-align: center;\">4 hours 20 mins</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Charge Time</td>\n<td style=\"width: 50%; text-align: center;\">3.5 hours</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Cleaning Speed</td>\n<td style=\"width: 50%; text-align: center;\">Up to 1.1 m/sec</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Pressure</td>\n<td style=\"width: 50%; text-align: center;\">34 g/cm<span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">²</span>\n</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Performance</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">Up to 2059 m²/h</span></td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Debris Filter</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">1.25 L</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Recovery Tank</td>\n<td style=\"width: 50%; text-align: center;\">42 L</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Solution Tank</td>\n<td style=\"width: 50%; text-align: center;\">50 L</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Average Sound Level</td>\n<td style=\"width: 50%; text-align: center;\">70 dB</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Width</td>\n<td style=\"width: 50%; text-align: center;\">530 mm</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Weight</td>\n<td style=\"width: 50%; text-align: center;\">200 kg</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Dimensions (mm)</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">690 x 690 x 1125</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Manufacturer</td>\n<td style=\"width: 50%; text-align: center;\">LionsBot</td>\n</tr>\n</tbody>\n</table>",
+            "column_2_content": "",
+            "column_3_content": "",
+            "column_bg_color": "#ffffff",
+            "text_color": "#4a4a4a",
+            "text_size": 15,
+            "text_line_height": 1.6,
+            "column_padding": 30,
+            "column_gap": 30,
+            "mobile_column_gap": 20,
+            "border_width": 0,
+            "border_color": "#FFFFFF",
+            "border_radius": 0,
+            "desktop_width_percent": 100,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "ai_gen_block_83dd2a0_zdCJPV",
-        "ai_gen_block_6377366_nAKp9N"
+        "ai_gen_block_6377366_nAKp9N",
+        "ai_gen_block_e2232ce_xhmf6T"
       ],
       "settings": {}
     },
