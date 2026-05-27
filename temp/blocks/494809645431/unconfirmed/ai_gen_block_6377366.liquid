@@ -1,6 +1,732 @@
+{% doc %}
+  @prompt
+    Create a premium content section for a professional cleaning machine webpage.
+    
+    Start with a heading. Then divide the space below horizontally into three features blocks, with each of the three feature blocks to have an image to the left and a heading and text to the right. All blocks must fit horizontally across the page without stacking on desktop. 
+    
+    
+    Each feature block should contain:
+    - Large clean supporting image
+    - Bold feature heading
+    - Short explanatory paragraph
+    - Optional supporting bullet points
+    
+    Feature topics should include:
+    - Ergonomic operation
+    - High extraction performance
+    - Durable commercial construction
+    - Ease of maintenance
+    - Professional usability
+    
+    Design requirements:
+    - Large clean imagery
+    - Alternating image/text layout
+    - Premium industrial aesthetic
+    - Minimalist typography
+    - Soft grey backgrounds
+    - Modern commercial styling
+    - White space between sections
+    - Responsive stacking on mobile
+    
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-premium-features-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-premium-features__heading-{{ ai_gen_id }} {
+    text-align: {{ block.settings.heading_alignment }};
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: {{ block.settings.heading_weight }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_margin_bottom }}px;
+    text-transform: {{ block.settings.heading_transform }};
+    letter-spacing: 0.02em;
+  }
+
+  .ai-premium-features__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    margin-top: {{ block.settings.grid_margin_top }}px;
+  }
+
+  .ai-premium-features__feature-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: {{ block.settings.feature_gap }}px;
+    background-color: {{ block.settings.feature_background }};
+    padding: {{ block.settings.feature_padding }}px;
+    border-radius: {{ block.settings.feature_border_radius }}px;
+  }
+
+  .ai-premium-features__image-wrapper-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.image_width }}px;
+    height: {{ block.settings.image_height }}px;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-premium-features__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-premium-features__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-premium-features__image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-premium-features__content-{{ ai_gen_id }} {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ai-premium-features__feature-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.feature_heading_size }}px;
+    font-weight: {{ block.settings.feature_heading_weight }};
+    color: {{ block.settings.feature_heading_color }};
+    margin: 0 0 {{ block.settings.feature_heading_margin }}px;
+    line-height: 1.3;
+  }
+
+  .ai-premium-features__text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.feature_text_size }}px;
+    color: {{ block.settings.feature_text_color }};
+    line-height: 1.6;
+    margin: 0 0 {{ block.settings.feature_text_margin }}px;
+  }
+
+  .ai-premium-features__text-{{ ai_gen_id }} p {
+    margin: 0;
+  }
+
+  .ai-premium-features__bullets-{{ ai_gen_id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ai-premium-features__bullets-{{ ai_gen_id }} li {
+    font-size: {{ block.settings.bullet_text_size }}px;
+    color: {{ block.settings.bullet_text_color }};
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .ai-premium-features__bullets-{{ ai_gen_id }} li:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-premium-features__bullets-{{ ai_gen_id }} li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: {{ block.settings.bullet_color }};
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-premium-features__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-premium-features__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+
+    .ai-premium-features__feature-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-premium-features__image-wrapper-{{ ai_gen_id }} {
+      width: 100%;
+      height: 200px;
+    }
+  }
+{% endstyle %}
+
+<premium-features-{{ ai_gen_id }} class="ai-premium-features-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.main_heading != blank %}
+    <h2 class="ai-premium-features__heading-{{ ai_gen_id }}">
+      {{ block.settings.main_heading }}
+    </h2>
+  {% endif %}
+
+  <div class="ai-premium-features__grid-{{ ai_gen_id }}">
+    {% for i in (1..3) %}
+      {% liquid
+        assign feature_enabled_key = 'feature_' | append: i | append: '_enabled'
+        assign feature_image_key = 'feature_' | append: i | append: '_image'
+        assign feature_heading_key = 'feature_' | append: i | append: '_heading'
+        assign feature_text_key = 'feature_' | append: i | append: '_text'
+        assign feature_bullets_key = 'feature_' | append: i | append: '_bullets'
+
+        assign feature_enabled = block.settings[feature_enabled_key]
+        assign feature_image = block.settings[feature_image_key]
+        assign feature_heading = block.settings[feature_heading_key]
+        assign feature_text = block.settings[feature_text_key]
+        assign feature_bullets = block.settings[feature_bullets_key]
+      %}
+
+      {% if feature_enabled %}
+        <div class="ai-premium-features__feature-{{ ai_gen_id }}">
+          <div class="ai-premium-features__image-wrapper-{{ ai_gen_id }}">
+            {% if feature_image %}
+              <img
+                src="{{ feature_image | image_url: width: 400 }}"
+                alt="{{ feature_image.alt | escape }}"
+                class="ai-premium-features__image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              <div class="ai-premium-features__image-placeholder-{{ ai_gen_id }}">
+                {{ 'product-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="ai-premium-features__content-{{ ai_gen_id }}">
+            {% if feature_heading != blank %}
+              <h3 class="ai-premium-features__feature-heading-{{ ai_gen_id }}">
+                {{ feature_heading }}
+              </h3>
+            {% endif %}
+
+            {% if feature_text != blank %}
+              <div class="ai-premium-features__text-{{ ai_gen_id }}">
+                {{ feature_text }}
+              </div>
+            {% endif %}
+
+            {% if feature_bullets != blank %}
+              <ul class="ai-premium-features__bullets-{{ ai_gen_id }}">
+                {% assign bullet_lines = feature_bullets | newline_to_br | split: '<br />' %}
+                {% for bullet in bullet_lines %}
+                  {% assign trimmed_bullet = bullet | strip %}
+                  {% if trimmed_bullet != blank %}
+                    <li>{{ trimmed_bullet }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</premium-features-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class PremiumFeatures{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+      }
+    }
+
+    customElements.define('premium-features-{{ ai_gen_id }}', PremiumFeatures{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Premium features",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "main_heading",
+      "label": "Heading",
+      "default": "Professional Performance"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "heading_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap between features",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Mobile gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "grid_margin_top",
+      "label": "Grid top margin",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "feature_background",
+      "label": "Feature background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "header",
+      "content": "Feature style"
+    },
+    {
+      "type": "range",
+      "id": "feature_padding",
+      "label": "Padding",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "feature_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "feature_gap",
+      "label": "Image to text gap",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Image style"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Width",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Height",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Feature heading"
+    },
+    {
+      "type": "range",
+      "id": "feature_heading_size",
+      "label": "Size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "feature_heading_weight",
+      "label": "Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "feature_heading_color",
+      "label": "Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "feature_heading_margin",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Feature text"
+    },
+    {
+      "type": "range",
+      "id": "feature_text_size",
+      "label": "Size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "feature_text_color",
+      "label": "Color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "feature_text_margin",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Bullet points"
+    },
+    {
+      "type": "range",
+      "id": "bullet_text_size",
+      "label": "Size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "bullet_text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "bullet_color",
+      "label": "Bullet color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Feature 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_enabled",
+      "label": "Enable feature 1",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_1_heading",
+      "label": "Heading",
+      "default": "Ergonomic Operation"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_1_text",
+      "label": "Description",
+      "default": "<p>Designed for extended use with minimal operator fatigue.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_bullets",
+      "label": "Bullet points",
+      "info": "One bullet per line"
+    },
+    {
+      "type": "header",
+      "content": "Feature 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_enabled",
+      "label": "Enable feature 2",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_2_heading",
+      "label": "Heading",
+      "default": "High Extraction Power"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_2_text",
+      "label": "Description",
+      "default": "<p>Superior suction removes more water for faster drying times.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_bullets",
+      "label": "Bullet points",
+      "info": "One bullet per line"
+    },
+    {
+      "type": "header",
+      "content": "Feature 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_enabled",
+      "label": "Enable feature 3",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_3_heading",
+      "label": "Heading",
+      "default": "Commercial Durability"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_3_text",
+      "label": "Description",
+      "default": "<p>Built to withstand demanding professional environments.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_bullets",
+      "label": "Bullet points",
+      "info": "One bullet per line"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Premium features"
+    }
+  ]
+}
 {% endschema %}
