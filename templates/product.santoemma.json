@@ -1,0 +1,1108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product-left-thumbs",
+      "blocks": {
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "settings": {
+            "breadcrumb_layout": "full",
+            "breadcrumb_alignment": "left",
+            "breadcrumb_bg": "",
+            "breadcrumb_gradient": "",
+            "breadcrumb_bg_mb": "",
+            "breadcrumb_gradient_mb": "",
+            "breadcrumb_mg_top_desktop": 15,
+            "breadcrumb_mg_top_mobile": 10,
+            "breadcrumb_mg_bottom_desktop": 20,
+            "breadcrumb_mg_bottom_mobile": 15
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "fontsize_text": 24,
+            "fontsize_text_mb": 20,
+            "color_title": "#333333",
+            "spacing_top": 0,
+            "spacing_bottom": 8
+          }
+        },
+        "meta": {
+          "type": "meta",
+          "settings": {
+            "show_sold_in": false,
+            "sold_in_number": "",
+            "sold_in_hours": "",
+            "color_text_sold_in": "#e95144",
+            "spacing_top": 0,
+            "spacing_bottom": 10
+          }
+        },
+        "short_description": {
+          "type": "short_description",
+          "settings": {
+            "show_short_description": true,
+            "word_number": "35",
+            "fontsize_text": 14,
+            "color_text": "#666666",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "info": {
+          "type": "info",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_availability": true,
+            "show_product_type": false,
+            "stock_level_display": "none",
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "fontsize_text": 24,
+            "spacing_top": 0,
+            "spacing_bottom": 20
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "show_variant_image_group": false,
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "qty_style": "1",
+            "qty_layout": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "atc_animation": "horizontal-shaking",
+            "atc_color": "#ffffff",
+            "atc_border_color": "#6fb31a",
+            "atc_bg_color": "#6fb31a",
+            "atc_bg_color_gradient": "",
+            "atc_color_hover": "#ffffff",
+            "atc_border_color_hover": "#5a9315",
+            "atc_bg_color_hover": "#5a9315",
+            "atc_bg_color_gradient_hover": "",
+            "bin_color": "#333333",
+            "bin_border_color": "#cccccc",
+            "bin_bg_color": "#ffffff",
+            "bin_bg_color_gradient": "",
+            "bin_color_hover": "#ffffff",
+            "bin_border_color_hover": "#6fb31a",
+            "bin_bg_color_hover": "#6fb31a",
+            "bin_bg_color_hover_gradient": "",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "request_quote": {
+          "type": "shopify://apps/request-a-quote/blocks/rfq-button/019b76a7-9e70-7f6e-8ecb-b96292d760bc",
+          "settings": {
+            "button_text": "Request a Quote",
+            "response_time_text": "Response within an hour",
+            "button_style": "primary",
+            "button_color": "#6fb31a",
+            "button_text_color": "#ffffff",
+            "modal_title": "Request a Quote",
+            "phone_number": "+353 (0)1 8118920",
+            "show_phone_field": true,
+            "phone_required": false,
+            "show_company_field": false,
+            "company_required": false,
+            "show_quantity_field": false,
+            "quantity_required": false,
+            "show_details_field": true,
+            "details_label": "Request Details",
+            "details_placeholder": "Please describe what you're looking for...",
+            "submit_button_text": "Submit Request",
+            "success_message": "We have received your quote request and will get back to you shortly."
+          }
+        },
+        "perks": {
+          "type": "perks",
+          "disabled": true,
+          "settings": {
+            "show_size_chart": false,
+            "size_chart_type": "custom_image",
+            "size_chart_page": "",
+            "size_chart_image_type": "jpg",
+            "show_compare_color": true,
+            "show_compare_color_drop_drap": false,
+            "compare_layout": "1",
+            "spacing_top": 10,
+            "spacing_bottom": 15
+          }
+        },
+        "delivery_info": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"1\" y=\"3\" width=\"15\" height=\"13\"></rect><polygon points=\"16 8 20 8 23 11 23 16 16 16 16 8\"></polygon><circle cx=\"5.5\" cy=\"18.5\" r=\"2.5\"></circle><circle cx=\"18.5\" cy=\"18.5\" r=\"2.5\"></circle></svg>",
+            "color_icon": "#6fb31a",
+            "text": "Delivery Information",
+            "color_title": "#6fb31a",
+            "text_description": "",
+            "color_des": "#999999",
+            "fontsize_text": 13,
+            "content_popup": "<h3>Delivery Costs</h3><h4>Ireland:</h4><p>All orders above €100 are delivered free in Ireland. For orders below €100, a delivery fee of €15 gets added.</p><h4>UK:</h4><p>Customers need to pay a delivery fee €30 across UK for all orders.</p><h4>Globe:</h4><p>For orders shipped across the globe, customers need to pay a delivery fee of €60.</p>",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "payment_info": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\"></rect><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"></line></svg>",
+            "color_icon": "#6fb31a",
+            "text": "Payment Methods",
+            "color_title": "#6fb31a",
+            "text_description": "",
+            "color_des": "#999999",
+            "fontsize_text": 13,
+            "content_popup": "<h3>Payment Methods</h3><h4>Credit/Debit Cards</h4><p>We accept Visa, MasterCard, American Express, and Discover.</p><h4>PayPal</h4><p>PayPal is a popular online payment service.</p>",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "returns_info": {
+          "type": "custom_information",
+          "settings": {
+            "icon": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polyline points=\"1 4 1 10 7 10\"></polyline><path d=\"M3.51 15a9 9 0 1 0 2.13-9.36L1 10\"></path></svg>",
+            "color_icon": "#6fb31a",
+            "text": "Return & Refunds",
+            "color_title": "#6fb31a",
+            "text_description": "",
+            "color_des": "#999999",
+            "fontsize_text": 13,
+            "content_popup": "<h3>Return & Refund Policy</h3><h5>Problem with any of our products?</h5><ul><li>Within 30 Days of Purchase</li><li>With proof of purchase</li></ul><p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "trust_image": {
+          "type": "trust_image",
+          "settings": {
+            "show_trust_image": true,
+            "spacing_top": 10,
+            "spacing_bottom": 20
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "open_tab_mobile": true,
+            "title": "Details",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 500
+          }
+        },
+        "reviews_tab": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Reviews",
+            "type": "all",
+            "content": "<!-- Start of Judge.me code -->{% assign has_legacy = false %}{% if product.metafields.judgeme.widget.size > 20 %}{% assign has_legacy = true %}{% endif %}<div style='clear:both'></div><div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-product-id='{{ product.id }}' data-widget='review' data-auto-install='false' data-shop-reviews-count='{{ shop.metafields.judgeme.shop_reviews_count | default: 0 | escape }}' data-entry-point='review_widget.js' data-entry-key='review-widget/main.js'>{% if has_legacy %}<div class='jdgm-legacy-widget-content' style='display: none;'>{{ product.metafields.judgeme.widget }}</div>{% endif %}</div>{% if product.metafields.judgeme.review_widget_data %}<script>jdgm.data ||= {}; jdgm.data.reviewWidget ||= {}; jdgm.data.reviewWidget[{{ product.id }}] = {{ product.metafields.judgeme.review_widget_data }}</script>{% endif %}<!-- End of Judge.me code -->",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "shipping_tab": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Shipping",
+            "type": "all",
+            "content": "<h4>Ireland:</h4><p>All orders above €100 are delivered free in Ireland. For orders below €100, a delivery fee of €15 gets added.</p><h4>UK:</h4><p>Customers need to pay a delivery fee €30 across UK for all orders.</p><h4>Globe:</h4><p>For orders shipped across the globe, customers need to pay a delivery fee of €60.</p>",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "custom_8gEkyC": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Features & Benefits",
+            "type": "metafield",
+            "content": "",
+            "product_custom_source": "key_text",
+            "product_tab_key_metafield": "benefits",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "custom_X7jVHX": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Specifications",
+            "type": "metafield",
+            "content": "",
+            "product_custom_source": "key_text",
+            "product_tab_key_metafield": "specifications",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "show_share": false,
+            "share_layout": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumb",
+        "title",
+        "meta",
+        "short_description",
+        "info",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "request_quote",
+        "perks",
+        "delivery_info",
+        "payment_info",
+        "returns_info",
+        "trust_image",
+        "description",
+        "reviews_tab",
+        "shipping_tab",
+        "custom_8gEkyC",
+        "custom_X7jVHX",
+        "share"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "show_sticky_info": true,
+        "media_fit": "contain",
+        "product_image_ratio": "adapt",
+        "portrait_aspect_ratio": 125,
+        "video_layout": "thumbnail",
+        "zoomed_image": true,
+        "product_image_popup": "fancybox",
+        "main_image_show_custom_cursor": false,
+        "icon_color": "#333333",
+        "main_image_position": "left",
+        "main_image_layout": "1",
+        "main_image_arrows_desktop": true,
+        "main_image_arrows_mobile": true,
+        "main_image_counter_mobile": true,
+        "main_image_enable_parallax_mb": false,
+        "main_image_show_zoom_icon_mb": true,
+        "show_thumbnail_mobile": true,
+        "thumnail_layout": "1",
+        "thumbnail_to_show": 5,
+        "enable_sticky": false,
+        "sidebar_layout": "layout_1",
+        "sidebar_collapse": "collapse",
+        "sidebar_collapse_default": "expand",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
+        "show_badge": true,
+        "show_subtotal": false,
+        "subtotal_style": "1",
+        "show_sticky_add_to_cart": true,
+        "sticky_atc_layout": "1",
+        "enable_sticky_add_to_cart_always_mobile": false,
+        "show_sticky_vendor": false,
+        "show_quick_order_list": false,
+        "show_image": false,
+        "show_sku": true,
+        "show_tab": true,
+        "tab_layout": "horizontal",
+        "tab_layout_mobile": "accordion",
+        "icon_style_layout": "style_1",
+        "title_font_size": 14,
+        "title_font_size_mb": 13,
+        "font_weight_title": "600",
+        "title_text_transform": "uppercase",
+        "title_padding_top_bottom": 12,
+        "tab_border_color": "#6fb31a",
+        "tab_border_color_rgb": "",
+        "show_product_bundle": false,
+        "background_color": "#f8f8f8",
+        "block_title": "Frequently Bought Together",
+        "block_title_align": "center",
+        "product_style": "2",
+        "block_image_ratio": "adapt",
+        "bundle_discount": true,
+        "bundle_discount_text": "Get a [discount]% discount buying these products together",
+        "bundle_discount_text_color": "#232323",
+        "total_btn_color": "#ffffff",
+        "total_btn_border": "#000000",
+        "total_btn_bg": "#000000",
+        "total_btn_bg_gradient": "",
+        "total_btn_color_hover": "#ffffff",
+        "total_btn_border_hover": "#d12442",
+        "total_btn_bg_hover": "#d12442",
+        "total_btn_bg_gradient_hover": "",
+        "block_dots": false,
+        "block_arrows": true,
+        "padding_top": 30,
+        "padding_top_tablet": 30,
+        "padding_top_mobile": 30,
+        "padding_bottom": 70,
+        "padding_bottom_tablet": 40,
+        "padding_bottom_mobile": 30,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "1778499418db3b0f3a": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "1778500369cb010808": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "rich_text_VPtywK": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bzyH69": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #E8E8E8; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_bzyH69"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "sachet_system_1_Gd9Xpw": {
+      "type": "sachet-system-1",
+      "blocks": {
+        "row_Ug7MTp": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/R5_Mobile.png",
+            "label": "ABOUT",
+            "heading": "The R5",
+            "text": "<p>The <strong>LionsBot R5</strong> is an intelligent robotic floor cleaning solution built to transform daily cleaning operations in retail, healthcare, transport hubs, offices, and other high-traffic facilities. Combining the footprint of a walk-behind scrubber dryer with autonomous technology, the R5 offers professional-grade cleaning performance in a compact and highly manoeuvrable design.</p><p> </p><p>Its standout 360° turning capability allows the machine to clean confidently in tight spaces, narrow aisles, dead ends, and complex layouts without the need for reversing or constant operator intervention. Powered by AI navigation and obstacle detection systems, the R5 can move safely through dynamic environments while continuously optimising its cleaning routes.</p><p> </p><p>The R5 is engineered for productivity, delivering strong brush pressure for deep cleaning and streak-free results across hard floors. With extended runtime, large solution tanks, and smart fleet management via LionsBot’s cloud platform, businesses can monitor performance, schedule tasks, and manage multiple units with ease.</p><p> </p><p>Designed to help tackle labour shortages and improve operational efficiency, the LionsBot R5 enables cleaning teams to work smarter, save time, and maintain consistently high cleaning standards.</p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_Ug7MTp"
+      ],
+      "name": "Alternating Content",
+      "settings": {
+        "heading_size": 36,
+        "image_radius": 8,
+        "button_radius": 4,
+        "underline_color": "#6fb31a",
+        "underline_height": 3,
+        "underline_spacing": 50,
+        "hide_last_underline": true,
+        "bg_color": "#ffffff",
+        "accent_color": "#6fb31a",
+        "heading_color": "#555555",
+        "text_color": "#555555",
+        "button_bg": "#6fb31a",
+        "button_hover_bg": "#5a9216",
+        "button_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "rich_text_3UFqTL": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Dpxchy": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_Dpxchy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_FX8e7t": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ACJJ3U": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Makes the R5 Special?",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1.3,
+            "heading_color": "#6fb31a"
+          }
+        },
+        "text_7pEYBE": {
+          "type": "text",
+          "settings": {
+            "text": "<p><b>See the R5 in action, and learn why it is a must for large open areas!</p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#555555",
+            "text_width": "800px"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ACJJ3U",
+        "text_7pEYBE"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#ffffff",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 10,
+        "mg_top_mobile": 10,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_PWY6aY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_dKQ4BP": {
+          "type": "text",
+          "settings": {
+            "text": "<div class=\"row\">\n<div class=\"col-sm-1\"><br></div>\n<div class=\"col-sm-10\">\n<div style=\"text-align: center;\" class=\"videoWrapper\"><iframe title=\"LionsBot R5 | Robotic Scrubber Dryer | Autonomous Floor Cleaning\" src=\"https://www.youtube.com/embed/ZBD0c7OGu2E\" height=\"695\" width=\"1236\"></iframe></div>\n</div>\n</div>\n<style>.videoWrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0; overflow: hidden; } .videoWrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } </style>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "80%"
+          }
+        }
+      },
+      "block_order": [
+        "text_dKQ4BP"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_ncrCAe": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bApFNQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_bApFNQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "sachet_system_benehit_gftVd3": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_Lt44gB": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/R5_wide_shot.jpg",
+            "title": "Powerful Performer",
+            "text": "Strong 34 g/cm² brush pressure makes cleaning look easy, lifting dirt and grime hidden deep within floors in one pass."
+          }
+        },
+        "card_DTwxhr": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/R5_Pro_Power.png",
+            "title": "Complete Cleaning",
+            "text": "The R5's Tri-Brush system delivers consistent, gap-free performance that leaves no uncleaned strips behind."
+          }
+        },
+        "card_tRbDT9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/R5_360_Turning.png",
+            "title": "Never Gets Stuck",
+            "text": "360° turning capabilities allows the R5 to easily navigate tight spaces and dead-end corners without ever getting stuck."
+          }
+        },
+        "card_7bwETp": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/R5_Close_Up_Eyes.png",
+            "title": "All Seeing Solution",
+            "text": "From 3D LiDAR and depth cameras to ultrasonic sensors and sonar, The R5 sees everything and misses nothing."
+          }
+        },
+        "card_fxT37R": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/R5_AI_Adaptive_Map.png",
+            "title": "AI Adaptive Map",
+            "text": "The R5 never stops learning your space, adapting from each cleaning run to navigate and clean more efficiently next time."
+          }
+        },
+        "card_a8XQMH": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/R5_Screenshots.png",
+            "title": "Marathon Cleaner",
+            "text": "With a run time over 4 hours and a 50L solution tank, the R5 can clean up to 5,000 m² per charge, leaving you to focus on more important tasks."
+          }
+        }
+      },
+      "block_order": [
+        "card_Lt44gB",
+        "card_DTwxhr",
+        "card_tRbDT9",
+        "card_7bwETp",
+        "card_fxT37R",
+        "card_a8XQMH"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "R5 Features",
+        "subtext": "",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 3,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#ffffff",
+        "card_bg": "#ffffff",
+        "heading_color": "#6fb31a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "rich_text_kiRCk3": {
+      "type": "rich-text",
+      "blocks": {
+        "text_k7TKd8": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_k7TKd8"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_R4etPa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bnYBwd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Invest in Robotics?",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1.3,
+            "heading_color": "#6fb31a"
+          }
+        },
+        "text_4rqGgH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><b>While there is no “one answer” for everybody, if you are interested in increasing productivity, having a cleaner facility, giving time back to your cleaners to focus on the finer details, or lowering your environmental impact, robotic cleaning solutions can hold the key!\n<br>\n<br>Below are some of the common reasons why you should consider automating your cleaning process.</p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#555555",
+            "text_width": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_bnYBwd",
+        "text_4rqGgH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#ffffff",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 10,
+        "mg_top_mobile": 10,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_6nekzj": {
+      "type": "rich-text",
+      "blocks": {
+        "text_rJXYrd": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"><img src=\"https://cdn.shopify.com/s/files/1/0948/6378/6359/files/Why_Invest_in_Robotics.png?v=1778505800\" alt=\"\"></p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "90%"
+          }
+        }
+      },
+      "block_order": [
+        "text_rJXYrd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_pkVCE6": {
+      "type": "rich-text",
+      "blocks": {
+        "text_DVP4ac": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_DVP4ac"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "rich_text_z8p7Yn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EeRUYR": {
+          "type": "heading",
+          "settings": {
+            "heading": "R5 Technical Specifications",
+            "heading_size": 30,
+            "heading_size_mb": 30,
+            "heading_line_height": 1.3,
+            "heading_color": "#6fb31a"
+          }
+        },
+        "content_MEJi8b": {
+          "type": "content",
+          "settings": {
+            "content_top": "<b>With long run times and high productivity, discover why the R5 is the only option in autonomous cleaning.</p>",
+            "content_bottom": "",
+            "alignment_content": "center",
+            "content_size": 16,
+            "margin_top_content": 20,
+            "content_color": "#555555",
+            "content_width": "100%",
+            "button_text_more": "",
+            "button_text_less": "",
+            "button_text_font_size": 14,
+            "button_text_font_weight": "500",
+            "margin_top_button_text": 30,
+            "button_text_color": "#ffffff",
+            "button_text_border_color": "#000000",
+            "button_text_bg_color": "#000000",
+            "button_text_bg_color_gradient": "",
+            "button_text_color_hover": "#000000",
+            "button_text_border_color_hover": "#000000",
+            "button_text_bg_color_hover": "#ffffff",
+            "button_text_bg_color_hover_gradient": "",
+            "button_text_more_width": 270,
+            "pd_top_button_text": 12,
+            "pd_bottom_button_text": 12
+          }
+        },
+        "text_UJUmMf": {
+          "type": "text",
+          "settings": {
+            "text": "<table width=\"100%\" style=\"width: 100%%; color: #555555; border-collapse: collapse;\" cellpadding=\"10\">\n<tbody>\n<tr style=\"color: #ffffff; background-color: #6fb31a;\">\n<td style=\"width: 50%;\"><strong> Specification</strong></td>\n<td style=\"width: 50%; text-align: center;\"><strong>Measurement</strong></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Run Time</td>\n<td style=\"width: 50%; text-align: center;\">4 hours 20 mins</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Charge Time</td>\n<td style=\"width: 50%; text-align: center;\">3.5 hours</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Maximum Cleaning Speed</td>\n<td style=\"width: 50%; text-align: center;\">Up to 1.1 m/sec</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Pressure</td>\n<td style=\"width: 50%; text-align: center;\">34 g/cm<span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">²</span>\n</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Performance</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">Up to 2059 m²/h</span></td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Debris Filter</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">1.25 L</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Recovery Tank</td>\n<td style=\"width: 50%; text-align: center;\">42 L</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Solution Tank</td>\n<td style=\"width: 50%; text-align: center;\">50 L</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Average Sound Level</td>\n<td style=\"width: 50%; text-align: center;\">70 dB</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Cleaning Width</td>\n<td style=\"width: 50%; text-align: center;\">530 mm</td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Weight</td>\n<td style=\"width: 50%; text-align: center;\">200 kg</td>\n</tr>\n<tr style=\"background-color: #E8E8E8;\">\n<td style=\"width: 50%;\">Dimensions (mm)</td>\n<td style=\"width: 50%; text-align: center;\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off font-feature-calt-off text-decoration-none text-strikethrough-none\">690 x 690 x 1125</span></td>\n</tr>\n<tr>\n<td style=\"width: 50%;\">Manufacturer</td>\n<td style=\"width: 50%; text-align: center;\">LionsBot</td>\n</tr>\n</tbody>\n</table>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EeRUYR",
+        "content_MEJi8b",
+        "text_UJUmMf"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "display_product_block": true,
+        "product_block_container": "1770",
+        "padding_full_width": 15,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 40,
+        "mg_top_tablet": 30,
+        "mg_top_mobile": 25,
+        "mg_bottom_desktop": 40,
+        "mg_bottom_tablet": 30,
+        "mg_bottom_mobile": 25,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "style_block_header": "style1",
+        "product_block_title": "Related Products",
+        "enable_border_title": false,
+        "mg_top_title": 25,
+        "mg_bottom_title": 20,
+        "fontsize_title": 18,
+        "fontsize_title_mb": 16,
+        "color_title": "#333333",
+        "border_color_title": "#6fb31a",
+        "product_block_title_align": "left",
+        "product_block_limit": 6,
+        "grid_gap": 20,
+        "product_block_per_row": "5",
+        "product_block_swipe_on_mobile": true,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "5",
+        "product_block_per_view": "5",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "featured_products": {
+      "type": "featured-product-we",
+      "settings": {
+        "featured_title": "Featured Products",
+        "featured_collection": "",
+        "new_title": "New Products",
+        "new_collection": "",
+        "bestseller_title": "Best Seller",
+        "bestseller_collection": "",
+        "products_to_show": 3,
+        "margin_top": 40,
+        "padding_y": 50,
+        "padding_x": 15
+      }
+    },
+    "apps": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17711722155df71f5c": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1778499418db3b0f3a",
+    "1778500369cb010808",
+    "rich_text_VPtywK",
+    "sachet_system_1_Gd9Xpw",
+    "rich_text_3UFqTL",
+    "rich_text_FX8e7t",
+    "rich_text_PWY6aY",
+    "rich_text_ncrCAe",
+    "sachet_system_benehit_gftVd3",
+    "rich_text_kiRCk3",
+    "rich_text_R4etPa",
+    "rich_text_6nekzj",
+    "rich_text_pkVCE6",
+    "rich_text_z8p7Yn",
+    "product-recommendations",
+    "featured_products",
+    "apps",
+    "17711722155df71f5c"
+  ]
+}
