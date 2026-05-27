@@ -1,6 +1,683 @@
+{% doc %}
+  @prompt
+    Create a premium alternating content section for a professional cleaning machine webpage.
+    
+    Use alternating left-right layouts with image and text combinations.
+    
+    Each feature block should contain:
+    - Large clean supporting image
+    - Bold feature heading
+    - Short explanatory paragraph
+    - Optional supporting bullet points
+    
+    Feature topics should include:
+    - Ergonomic operation
+    - High extraction performance
+    - Durable commercial construction
+    - Ease of maintenance
+    - Professional usability
+    
+    Design requirements:
+    - Large clean imagery
+    - Alternating image/text layout
+    - Premium industrial aesthetic
+    - Minimalist typography
+    - Soft grey backgrounds
+    - Modern commercial styling
+    - White space between sections
+    - Responsive stacking on mobile
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-alternating-features-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-alternating-features__item-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.gap_size }}px;
+    align-items: center;
+    margin-bottom: {{ block.settings.section_spacing }}px;
+    background-color: {{ block.settings.item_background_color }};
+    padding: {{ block.settings.item_padding }}px;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-alternating-features__item-{{ ai_gen_id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-alternating-features__item--reverse-{{ ai_gen_id }} .ai-alternating-features__image-{{ ai_gen_id }} {
+    order: 2;
+  }
+
+  .ai-alternating-features__item--reverse-{{ ai_gen_id }} .ai-alternating-features__content-{{ ai_gen_id }} {
+    order: 1;
+  }
+
+  .ai-alternating-features__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-alternating-features__image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-alternating-features__image-placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-alternating-features__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-alternating-features__content-{{ ai_gen_id }} {
+    padding: {{ block.settings.content_padding }}px;
+  }
+
+  .ai-alternating-features__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: {{ block.settings.heading_weight }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_margin_bottom }}px 0;
+    line-height: 1.2;
+  }
+
+  .ai-alternating-features__text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin: 0 0 {{ block.settings.text_margin_bottom }}px 0;
+  }
+
+  .ai-alternating-features__text-{{ ai_gen_id }} p {
+    margin: 0;
+  }
+
+  .ai-alternating-features__bullets-{{ ai_gen_id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ai-alternating-features__bullet-{{ ai_gen_id }} {
+    font-size: {{ block.settings.bullet_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin-bottom: {{ block.settings.bullet_spacing }}px;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .ai-alternating-features__bullet-{{ ai_gen_id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-alternating-features__bullet-{{ ai_gen_id }}::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: {{ block.settings.bullet_color }};
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-alternating-features__item-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.gap_size | times: 0.6 }}px;
+      padding: {{ block.settings.item_padding | times: 0.6 }}px;
+      margin-bottom: {{ block.settings.section_spacing | times: 0.6 }}px;
+    }
+
+    .ai-alternating-features__item--reverse-{{ ai_gen_id }} .ai-alternating-features__image-{{ ai_gen_id }} {
+      order: 1;
+    }
+
+    .ai-alternating-features__item--reverse-{{ ai_gen_id }} .ai-alternating-features__content-{{ ai_gen_id }} {
+      order: 2;
+    }
+
+    .ai-alternating-features__content-{{ ai_gen_id }} {
+      padding: {{ block.settings.content_padding | times: 0.5 }}px;
+    }
+
+    .ai-alternating-features__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+
+    .ai-alternating-features__text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+
+    .ai-alternating-features__bullet-{{ ai_gen_id }} {
+      font-size: {{ block.settings.bullet_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<alternating-features-{{ ai_gen_id }} class="ai-alternating-features-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% for i in (1..5) %}
+    {% liquid
+      assign feature_enabled_key = 'feature_' | append: i | append: '_enabled'
+      assign feature_image_key = 'feature_' | append: i | append: '_image'
+      assign feature_heading_key = 'feature_' | append: i | append: '_heading'
+      assign feature_text_key = 'feature_' | append: i | append: '_text'
+      assign feature_bullet_1_key = 'feature_' | append: i | append: '_bullet_1'
+      assign feature_bullet_2_key = 'feature_' | append: i | append: '_bullet_2'
+      assign feature_bullet_3_key = 'feature_' | append: i | append: '_bullet_3'
+
+      assign feature_enabled = block.settings[feature_enabled_key]
+      assign feature_image = block.settings[feature_image_key]
+      assign feature_heading = block.settings[feature_heading_key]
+      assign feature_text = block.settings[feature_text_key]
+      assign feature_bullet_1 = block.settings[feature_bullet_1_key]
+      assign feature_bullet_2 = block.settings[feature_bullet_2_key]
+      assign feature_bullet_3 = block.settings[feature_bullet_3_key]
+
+      assign is_reverse = false
+      assign remainder = i | modulo: 2
+      if remainder == 0
+        assign is_reverse = true
+      endif
+    %}
+
+    {% if feature_enabled %}
+      <div class="ai-alternating-features__item-{{ ai_gen_id }} {% if is_reverse %}ai-alternating-features__item--reverse-{{ ai_gen_id }}{% endif %}">
+        <div class="ai-alternating-features__image-{{ ai_gen_id }}">
+          <div class="ai-alternating-features__image-wrapper-{{ ai_gen_id }}">
+            {% if feature_image %}
+              <img
+                src="{{ feature_image | image_url: width: 1200 }}"
+                alt="{{ feature_image.alt | escape }}"
+                loading="lazy"
+                width="{{ feature_image.width }}"
+                height="{{ feature_image.height }}"
+              >
+            {% else %}
+              <div class="ai-alternating-features__image-placeholder-{{ ai_gen_id }}">
+                {{ 'product-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="ai-alternating-features__content-{{ ai_gen_id }}">
+          {% if feature_heading != blank %}
+            <h3 class="ai-alternating-features__heading-{{ ai_gen_id }}">{{ feature_heading }}</h3>
+          {% endif %}
+
+          {% if feature_text != blank %}
+            <div class="ai-alternating-features__text-{{ ai_gen_id }}">
+              {{ feature_text }}
+            </div>
+          {% endif %}
+
+          {% if feature_bullet_1 != blank or feature_bullet_2 != blank or feature_bullet_3 != blank %}
+            <ul class="ai-alternating-features__bullets-{{ ai_gen_id }}">
+              {% if feature_bullet_1 != blank %}
+                <li class="ai-alternating-features__bullet-{{ ai_gen_id }}">{{ feature_bullet_1 }}</li>
+              {% endif %}
+              {% if feature_bullet_2 != blank %}
+                <li class="ai-alternating-features__bullet-{{ ai_gen_id }}">{{ feature_bullet_2 }}</li>
+              {% endif %}
+              {% if feature_bullet_3 != blank %}
+                <li class="ai-alternating-features__bullet-{{ ai_gen_id }}">{{ feature_bullet_3 }}</li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</alternating-features-{{ ai_gen_id }}>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Alternating features",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_spacing",
+      "label": "Space between features",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "gap_size",
+      "label": "Gap between image and text",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "label": "Item padding",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "label": "Content padding",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "item_background_color",
+      "label": "Item background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Item border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Heading weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "label": "Heading bottom spacing",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#4a4a4a"
+    },
+    {
+      "type": "range",
+      "id": "text_margin_bottom",
+      "label": "Text bottom spacing",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bullet_size",
+      "label": "Bullet text size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "bullet_spacing",
+      "label": "Bullet spacing",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "bullet_color",
+      "label": "Bullet point color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Feature 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_1_enabled",
+      "label": "Enable feature 1",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_1_heading",
+      "label": "Heading",
+      "default": "Ergonomic operation"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_1_text",
+      "label": "Description",
+      "default": "<p>Designed for extended use with minimal operator fatigue. Intuitive controls and balanced weight distribution ensure comfortable handling throughout the workday.</p>"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_bullet_1",
+      "label": "Bullet point 1",
+      "default": "Adjustable handle height"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_bullet_2",
+      "label": "Bullet point 2",
+      "default": "Lightweight construction"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_bullet_3",
+      "label": "Bullet point 3",
+      "default": "Reduced vibration design"
+    },
+    {
+      "type": "header",
+      "content": "Feature 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_2_enabled",
+      "label": "Enable feature 2",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_2_heading",
+      "label": "Heading",
+      "default": "High extraction performance"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_2_text",
+      "label": "Description",
+      "default": "<p>Powerful suction technology removes up to 95% of moisture, significantly reducing drying times and improving cleaning efficiency across all surface types.</p>"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_bullet_1",
+      "label": "Bullet point 1",
+      "default": "1200W motor power"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_bullet_2",
+      "label": "Bullet point 2",
+      "default": "95% moisture extraction"
+    },
+    {
+      "type": "text",
+      "id": "feature_2_bullet_3",
+      "label": "Bullet point 3",
+      "default": "Fast drying times"
+    },
+    {
+      "type": "header",
+      "content": "Feature 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_3_enabled",
+      "label": "Enable feature 3",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_3_heading",
+      "label": "Heading",
+      "default": "Durable commercial construction"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_3_text",
+      "label": "Description",
+      "default": "<p>Built to withstand the demands of daily commercial use. Premium materials and reinforced components ensure reliable performance year after year.</p>"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_bullet_1",
+      "label": "Bullet point 1",
+      "default": "Heavy-duty steel frame"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_bullet_2",
+      "label": "Bullet point 2",
+      "default": "Impact-resistant housing"
+    },
+    {
+      "type": "text",
+      "id": "feature_3_bullet_3",
+      "label": "Bullet point 3",
+      "default": "5-year warranty"
+    },
+    {
+      "type": "header",
+      "content": "Feature 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_4_enabled",
+      "label": "Enable feature 4",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_4_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_4_heading",
+      "label": "Heading",
+      "default": "Ease of maintenance"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_4_text",
+      "label": "Description",
+      "default": "<p>Simple maintenance procedures minimize downtime. Tool-free access to key components and clear service indicators keep your equipment running at peak performance.</p>"
+    },
+    {
+      "type": "text",
+      "id": "feature_4_bullet_1",
+      "label": "Bullet point 1",
+      "default": "Quick-release tanks"
+    },
+    {
+      "type": "text",
+      "id": "feature_4_bullet_2",
+      "label": "Bullet point 2",
+      "default": "Accessible filter system"
+    },
+    {
+      "type": "text",
+      "id": "feature_4_bullet_3",
+      "label": "Bullet point 3",
+      "default": "Service indicator lights"
+    },
+    {
+      "type": "header",
+      "content": "Feature 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "feature_5_enabled",
+      "label": "Enable feature 5",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_5_image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "feature_5_heading",
+      "label": "Heading",
+      "default": "Professional usability"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_5_text",
+      "label": "Description",
+      "default": "<p>Engineered for professional cleaning teams. Versatile attachments and intelligent features adapt to any cleaning challenge with precision and efficiency.</p>"
+    },
+    {
+      "type": "text",
+      "id": "feature_5_bullet_1",
+      "label": "Bullet point 1",
+      "default": "Multiple cleaning modes"
+    },
+    {
+      "type": "text",
+      "id": "feature_5_bullet_2",
+      "label": "Bullet point 2",
+      "default": "Wide range of attachments"
+    },
+    {
+      "type": "text",
+      "id": "feature_5_bullet_3",
+      "label": "Bullet point 3",
+      "default": "Auto-adjust technology"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alternating features"
+    }
+  ]
+}
 {% endschema %}
