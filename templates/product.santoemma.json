@@ -456,6 +456,128 @@
         "mg_bottom_mobile": 0
       }
     },
+    "sachet_system_benehit_dwwn4V": {
+      "type": "sachet-system-benehit",
+      "blocks": {
+        "card_HUpC9q": {
+          "type": "card",
+          "settings": {
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        },
+        "card_c39KjN": {
+          "type": "card",
+          "settings": {
+            "title": "No Single Use Plastic",
+            "text": "Our bottles are designed to be durable and last a lifetime, reducing plastic waste by 90%."
+          }
+        },
+        "card_tFCBLD": {
+          "type": "card",
+          "settings": {
+            "title": "Less Deliveries Needed",
+            "text": "PVA Soluble Sachets result in no transportation of water, reducing carbon footprint by 95%."
+          }
+        },
+        "card_TKr8eM": {
+          "type": "card",
+          "settings": {
+            "title": "Recyclable Packaging",
+            "text": "All packaging is recyclable, and the pouches are also compostable."
+          }
+        }
+      },
+      "block_order": [
+        "card_HUpC9q",
+        "card_c39KjN",
+        "card_tFCBLD",
+        "card_TKr8eM"
+      ],
+      "name": "Benefits Cards",
+      "settings": {
+        "heading": "WHY CHOOSE THE SABRINA?",
+        "subtext": "",
+        "bottom_heading": "",
+        "bottom_text": "",
+        "columns": 4,
+        "card_gap": 30,
+        "heading_size": 32,
+        "card_radius": 8,
+        "bg_color": "#f8f9fa",
+        "card_bg": "#ffffff",
+        "heading_color": "#1a1a1a",
+        "text_color": "#555555",
+        "divider_color": "#6fb31a",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "1779870649df98a3f5": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "177987231543cc609e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e5d7350_Nc9RWV": {
+          "type": "ai_gen_block_e5d7350",
+          "settings": {
+            "heading": "Ideal Applications",
+            "subheading": "Professional cleaning solutions for demanding environments",
+            "item_1_enabled": true,
+            "item_1_text": "Commercial Office Buildings",
+            "item_2_enabled": true,
+            "item_2_text": "Healthcare Facilities",
+            "item_3_enabled": true,
+            "item_3_text": "Educational Institutions",
+            "item_4_enabled": true,
+            "item_4_text": "Retail & Shopping Centers",
+            "item_5_enabled": true,
+            "item_5_text": "Industrial Warehouses",
+            "item_6_enabled": true,
+            "item_6_text": "Hospitality & Hotels",
+            "item_7_enabled": false,
+            "item_7_text": "",
+            "item_8_enabled": false,
+            "item_8_text": "",
+            "image_aspect_ratio": "4/3",
+            "image_border_radius": 8,
+            "heading_size": 42,
+            "heading_weight": "700",
+            "heading_margin_bottom": 20,
+            "subheading_size": 16,
+            "subheading_margin_bottom": 32,
+            "item_text_size": 16,
+            "item_text_weight": "400",
+            "icon_size": 24,
+            "icon_stroke_width": 2,
+            "icon_color": "#2563eb",
+            "icon_text_gap": 16,
+            "list_item_gap": 0,
+            "item_padding": 16,
+            "item_border_width": 1,
+            "item_border_color": "#e5e7eb",
+            "background_color": "#ffffff",
+            "heading_color": "#111827",
+            "subheading_color": "#6b7280",
+            "item_text_color": "#374151",
+            "container_max_width": 1200,
+            "grid_gap": 60,
+            "mobile_grid_gap": 40,
+            "content_padding_right": 40,
+            "section_padding_top": 80,
+            "section_padding_bottom": 80,
+            "section_padding_horizontal": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e5d7350_Nc9RWV"
+      ],
+      "settings": {}
+    },
     "sachet_system_1_Gd9Xpw": {
       "type": "sachet-system-1",
       "blocks": {
@@ -1089,6 +1211,9 @@
     "1778499418db3b0f3a",
     "1778500369cb010808",
     "rich_text_VPtywK",
+    "sachet_system_benehit_dwwn4V",
+    "1779870649df98a3f5",
+    "177987231543cc609e",
     "sachet_system_1_Gd9Xpw",
     "rich_text_3UFqTL",
     "rich_text_FX8e7t",
