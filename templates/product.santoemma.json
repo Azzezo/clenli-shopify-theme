@@ -519,8 +519,8 @@
         "ai_gen_block_964b656_t4XrtX": {
           "type": "ai_gen_block_964b656",
           "settings": {
-            "heading": "Ideal Applications",
-            "subtext": "Professional cleaning solutions designed for demanding commercial environments",
+            "heading": "IDEAL FOR PROFESSIONAL CLEANING",
+            "subtext": "Perfect for cleaning small to medium areas in a wide range of environments.",
             "heading_margin_bottom": 12,
             "item_1_text": "Commercial Offices",
             "item_1_icon": "building",
@@ -546,7 +546,7 @@
             "section_padding_top": 80,
             "section_padding_bottom": 80,
             "header_margin_bottom": 40,
-            "heading_size": 42,
+            "heading_size": 28,
             "heading_weight": "700",
             "subtext_size": 16,
             "item_text_size": 16,
