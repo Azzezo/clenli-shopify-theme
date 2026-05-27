@@ -520,6 +520,43 @@
     "177987231543cc609e": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_3a2f4c1_kc9Mme": {
+          "type": "ai_gen_block_3a2f4c1",
+          "settings": {
+            "heading": "Ideal Applications",
+            "heading_size": 36,
+            "heading_weight": "700",
+            "heading_transform": "none",
+            "heading_letter_spacing": "-0.02em",
+            "heading_color": "#1a1a1a",
+            "heading_margin_bottom": 20,
+            "application_1_text": "Healthcare Facilities",
+            "application_2_text": "Commercial Buildings",
+            "application_3_text": "Educational Institutions",
+            "application_4_text": "Industrial Facilities",
+            "application_5_text": "Hospitality Sector",
+            "application_6_text": "Retail Environments",
+            "icon_size": 40,
+            "icon_placeholder_bg": "#f5f5f5",
+            "icon_text_gap": 16,
+            "list_gap_horizontal": 40,
+            "list_gap_vertical": 32,
+            "text_size": 16,
+            "text_weight": "500",
+            "text_color": "#333333",
+            "image_aspect_ratio": "16/9",
+            "image_border_radius": 8,
+            "image_placeholder_bg": "#f8f8f8",
+            "layout_gap": 80,
+            "mobile_layout_gap": 40,
+            "max_width": 1400,
+            "section_padding_top": 80,
+            "section_padding_bottom": 80,
+            "section_padding_horizontal": 20,
+            "background_color": "#ffffff"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_e5d7350_Nc9RWV": {
           "type": "ai_gen_block_e5d7350",
           "settings": {
@@ -574,6 +611,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_3a2f4c1_kc9Mme",
         "ai_gen_block_e5d7350_Nc9RWV"
       ],
       "settings": {}
