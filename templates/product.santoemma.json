@@ -633,8 +633,17 @@
             "section_padding_horizontal": 20
           },
           "blocks": {}
-        },
-        "ai_gen_block_6377366_nAKp9N": {
+        }
+      },
+      "block_order": [
+        "ai_gen_block_83dd2a0_zdCJPV"
+      ],
+      "settings": {}
+    },
+    "blocks_dPUAf9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6377366_jYGpg7": {
           "type": "ai_gen_block_6377366",
           "settings": {
             "main_heading": "Professional Performance",
@@ -685,8 +694,17 @@
             "feature_3_bullets": ""
           },
           "blocks": {}
-        },
-        "ai_gen_block_e2232ce_xhmf6T": {
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6377366_jYGpg7"
+      ],
+      "settings": {}
+    },
+    "blocks_qeQgqY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e2232ce_JGDHRW": {
           "type": "ai_gen_block_e2232ce",
           "settings": {
             "heading": "TECHNICAL SPECIFICATIONS",
@@ -715,8 +733,17 @@
             "section_padding_bottom": 60
           },
           "blocks": {}
-        },
-        "ai_gen_block_20d1814_JFCVdJ": {
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e2232ce_JGDHRW"
+      ],
+      "settings": {}
+    },
+    "blocks_nCnLiy": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_20d1814_ftfw4f": {
           "type": "ai_gen_block_20d1814",
           "settings": {
             "main_heading": "INCLUDED ACCESSORIES",
@@ -772,8 +799,17 @@
             "button_border_color_hover": "#555555"
           },
           "blocks": {}
-        },
-        "ai_gen_block_6377366_FdXddk": {
+        }
+      },
+      "block_order": [
+        "ai_gen_block_20d1814_ftfw4f"
+      ],
+      "settings": {}
+    },
+    "blocks_cb6mnD": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6377366_mitGKf": {
           "type": "ai_gen_block_6377366",
           "settings": {
             "main_heading": "WHY CHOOSE CLENLI DIRECT?",
@@ -827,11 +863,7 @@
         }
       },
       "block_order": [
-        "ai_gen_block_83dd2a0_zdCJPV",
-        "ai_gen_block_6377366_nAKp9N",
-        "ai_gen_block_e2232ce_xhmf6T",
-        "ai_gen_block_20d1814_JFCVdJ",
-        "ai_gen_block_6377366_FdXddk"
+        "ai_gen_block_6377366_mitGKf"
       ],
       "settings": {}
     },
@@ -887,6 +919,88 @@
         "border_color_card": "#f0f1f4"
       }
     },
+    "rich_text_KEFai3": {
+      "type": "rich-text",
+      "blocks": {
+        "text_fMYVeb": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_fMYVeb"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 30,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "rich_text_6Nf6Bq": {
+      "type": "rich-text",
+      "blocks": {
+        "text_fzCx8C": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_fzCx8C"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 30,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
     "featured_products": {
       "type": "featured-product-we",
       "settings": {
@@ -923,6 +1037,12 @@
     "sachet_system_benehit_dwwn4V",
     "1779875547515574d1",
     "1779877912ceb0046d",
+    "blocks_dPUAf9",
+    "rich_text_6Nf6Bq",
+    "blocks_qeQgqY",
+    "rich_text_KEFai3",
+    "blocks_nCnLiy",
+    "blocks_cb6mnD",
     "product-recommendations",
     "featured_products",
     "apps",
