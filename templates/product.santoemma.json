@@ -729,6 +729,7 @@
             "feature_1_text": "Vacuum and solution hose with metal couplings. Compatible with the Santoemma Sabrina.",
             "feature_1_button_text": "Learn More",
             "feature_1_button_link": "",
+            "feature_2_image": "shopify://shop_images/NS270N-M.png",
             "feature_2_heading": "Rotating Brush",
             "feature_2_text": "Optional rotating Brush for improved cleaning on carpeted surfaces.",
             "feature_2_button_text": "Learn More",
@@ -828,70 +829,6 @@
       ],
       "settings": {}
     },
-    "rich_text_kiRCk3": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
-    "rich_text_pkVCE6": {
-      "type": "rich-text",
-      "blocks": {
-        "text_DVP4ac": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000000",
-            "text_width": "100%"
-          }
-        }
-      },
-      "block_order": [
-        "text_DVP4ac"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#ffffff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 0,
-        "mg_top_tablet": 0,
-        "mg_top_mobile": 0,
-        "mg_bottom_desktop": 0,
-        "mg_bottom_tablet": 0,
-        "mg_bottom_mobile": 0
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -980,8 +917,6 @@
     "sachet_system_benehit_dwwn4V",
     "1779875547515574d1",
     "1779877912ceb0046d",
-    "rich_text_kiRCk3",
-    "rich_text_pkVCE6",
     "product-recommendations",
     "featured_products",
     "apps",
