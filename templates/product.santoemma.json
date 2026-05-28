@@ -542,6 +542,7 @@
             "item_7_icon": "shopping-cart",
             "item_8_text": "Hard Floor Maintenance",
             "item_8_icon": "check",
+            "image": "shopify://shop_images/SANSAB222.png",
             "image_border_radius": 8,
             "container_width": 1200,
             "column_gap": 60,
