@@ -646,7 +646,7 @@
         "ai_gen_block_6377366_jYGpg7": {
           "type": "ai_gen_block_6377366",
           "settings": {
-            "main_heading": "Professional Performance",
+            "main_heading": "Key Features",
             "heading_alignment": "center",
             "heading_size": 28,
             "heading_weight": "700",
@@ -701,6 +701,47 @@
       ],
       "settings": {}
     },
+    "rich_text_6Nf6Bq": {
+      "type": "rich-text",
+      "blocks": {
+        "text_fzCx8C": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_fzCx8C"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 30,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
     "blocks_qeQgqY": {
       "type": "_blocks",
       "blocks": {
@@ -729,7 +770,7 @@
             "border_color": "#ffffff",
             "border_radius": 0,
             "desktop_width_percent": 100,
-            "section_padding_top": 60,
+            "section_padding_top": 30,
             "section_padding_bottom": 60
           },
           "blocks": {}
@@ -739,6 +780,47 @@
         "ai_gen_block_e2232ce_JGDHRW"
       ],
       "settings": {}
+    },
+    "rich_text_KEFai3": {
+      "type": "rich-text",
+      "blocks": {
+        "text_fMYVeb": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000",
+            "text_width": "100%"
+          }
+        }
+      },
+      "block_order": [
+        "text_fMYVeb"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#fff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 10,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 30,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
     },
     "blocks_nCnLiy": {
       "type": "_blocks",
@@ -917,88 +999,6 @@
         "border_layout_card": "full",
         "border_width_card": 5,
         "border_color_card": "#f0f1f4"
-      }
-    },
-    "rich_text_KEFai3": {
-      "type": "rich-text",
-      "blocks": {
-        "text_fMYVeb": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000",
-            "text_width": "100%"
-          }
-        }
-      },
-      "block_order": [
-        "text_fMYVeb"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 10,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 30,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
-      }
-    },
-    "rich_text_6Nf6Bq": {
-      "type": "rich-text",
-      "blocks": {
-        "text_fzCx8C": {
-          "type": "text",
-          "settings": {
-            "text": "<p style=\"text-align: center;\"> </p>\n<hr style=\"width: 100%; border-bottom: 1px solid #6fb31a; margin: 0 auto;\">\n<p style=\"text-align: center;\"> </p>",
-            "text_size": 16,
-            "text_size_mb": 12,
-            "text_font_weight": "400",
-            "text_line_height": 1.5,
-            "margin_top_text": 20,
-            "text_color": "#000",
-            "text_width": "100%"
-          }
-        }
-      },
-      "block_order": [
-        "text_fzCx8C"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "enable_border_top": false,
-        "enable_border_bottom": false,
-        "color_border_bottom": "#e8e8e8",
-        "enable_minus_mg_top": false,
-        "minus_spacing_top": -100,
-        "rich_text_bg": "#fff",
-        "rich_text_bg_gradient": "",
-        "enable_column": false,
-        "content_align": "center",
-        "mg_top_desktop": 10,
-        "mg_top_tablet": 50,
-        "mg_top_mobile": 50,
-        "mg_bottom_desktop": 30,
-        "mg_bottom_tablet": 50,
-        "mg_bottom_mobile": 50
       }
     },
     "featured_products": {
