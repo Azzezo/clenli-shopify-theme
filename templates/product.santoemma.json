@@ -462,6 +462,7 @@
         "card_HUpC9q": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/SANT_-_Compact_8d2d0fe3-9ba0-4534-b61d-2a84dd183ef2.png",
             "title": "Compact & Portable",
             "text": "Small size with large tank capacity. Easy to carry and fits in any vehicle."
           }
@@ -469,30 +470,33 @@
         "card_c39KjN": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/SANT_-_Fast_Drying.png",
             "title": "Fast Drying Times",
             "text": "High waterlift vacuum extracts more moisture. Carpet dries in 1 hour."
-          }
-        },
-        "card_tFCBLD": {
-          "type": "card",
-          "settings": {
-            "title": "Professional Power",
-            "text": "Powerful performance extraction for high cleaning results with every pass."
           }
         },
         "card_TKr8eM": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/SANT_-_Floors.png",
             "title": "Carpet & Hard Floors",
             "text": "Cleans both carpet and hard floors with the same tool. Easily switch between modes."
+          }
+        },
+        "card_tFCBLD": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/SANT_-_Power.png",
+            "title": "Professional Power",
+            "text": "Powerful performance extraction for high cleaning results with every pass."
           }
         }
       },
       "block_order": [
         "card_HUpC9q",
         "card_c39KjN",
-        "card_tFCBLD",
-        "card_TKr8eM"
+        "card_TKr8eM",
+        "card_tFCBLD"
       ],
       "name": "Benefits Cards",
       "settings": {
