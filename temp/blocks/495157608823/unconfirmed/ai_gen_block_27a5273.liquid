@@ -1,6 +1,68 @@
+{% doc %}
+  @prompt
+    Add custom CSS to the Premium features block (block ID: ai_gen_block_6377366) so that images use object-fit: contain instead of cover, preventing them from cropping on mobile devices. The CSS should target images within this specific block and ensure they maintain their full dimensions and aspect ratio on all screen sizes, especially mobile.
+{% enddoc %}
+{% assign ai_gen_id = 'aigenblock6377366' %}
+
+{% style %}
+  .ai-premium-features-{{ ai_gen_id }} img {
+    object-fit: contain !important;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-premium-features-{{ ai_gen_id }} img {
+      object-fit: contain !important;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-premium-features-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <p style="padding: 20px; text-align: center; color: #666;">
+    This is a CSS override block for the Premium features block (ID: ai_gen_block_6377366).
+    <br><br>
+    <strong>Instructions:</strong> Add this block to the same section as your Premium features block. The CSS will automatically target images in block ai_gen_block_6377366 and apply object-fit: contain to prevent cropping on all devices, especially mobile.
+  </p>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Premium features CSS",
+  "settings": [
+    {
+      "type": "header",
+      "content": "CSS override information"
+    },
+    {
+      "type": "paragraph",
+      "content": "This block adds custom CSS to make images in the Premium features block (ai_gen_block_6377366) use object-fit: contain instead of cover, preventing image cropping on mobile devices."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Premium features CSS"
+    }
+  ]
+}
 {% endschema %}
+
+<style>
+  [data-block-id="ai_gen_block_6377366"] img,
+  .ai_gen_block_6377366 img {
+    object-fit: contain !important;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 749px) {
+    [data-block-id="ai_gen_block_6377366"] img,
+    .ai_gen_block_6377366 img {
+      object-fit: contain !important;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+</style>
